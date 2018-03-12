@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>Web Browser Support For Miscellaneous CSS Selectors, Styles, Properties, Values, And Units: Tests And Results</title>
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Steve Taylor" />
+  <meta name="Keywords" content="web browser, support, miscellaneous, CSS, selector, style, property, value, unit, Internet Explorer, Edge, Firefox, Safari, Chrome, Opera" />
+  <meta name="Description" content="Tests to determine web browser support for miscellaneous CSS selectors, styles, properties, values, and units, and the results." />
+  <style type="text/css">
+   html { font-size: 16px; } /* Since this example involves rem, and rem is a unit of relative length equal to the font-size property value on the html element (a.k.a., the root element), explicitly set font-size property value on html. */
+   .background-linear-gradient { background: linear-gradient(#777 0%, #fff 33%, #fff 67%, #777 100%); }
+   .border-radius { border-radius: 5px; border: 1px solid black; }
+   .box-shadow { box-shadow: 5px 5px 5px 5px #777; border: 1px solid black; }
+   .rem { font-size: 2rem; }
+   .text-shadow { text-shadow: 5px 5px 5px #777; }
+   .vh { height: 50vh; border: 1px solid black; }
+   .vw { width: 50vw; border: 1px solid black; }
+  </style>
+ </head>
+ <body>
+
+  <h1>Web Browser Support For Miscellaneous CSS Selectors, Styles, Properties, Values, And Units: Tests And Results</h1>
+
+  <ol>
+   <li><a href="#backgroundLinearGradient">Web Browser Support For The <code>background: linear-gradient()</code> Style: Test And Result</a></li>
+   <li><a href="#borderRadius">Web Browser Support For The <code>border-radius</code> Property: Test And Result</a></li>
+   <li><a href="#boxShadow">Web Browser Support For The <code>box-shadow</code> Property: Test And Result</a></li>
+   <li><a href="#rem">Web Browser Support For The <code>rem</code> Unit: Test And Result</a></li>
+   <li><a href="#textShadow">Web Browser Support For The <code>text-shadow</code> Property: Test And Result</a></li>
+   <li><a href="#vh">Web Browser Support For The <code>vh</code> Unit: Test And Result</a></li>
+   <li><a href="#vw">Web Browser Support For The <code>vw</code> Unit: Test And Result</a></li>
+  </ol>
+
+  <hr />
+
+  <h3><a id="backgroundLinearGradient"></a>1. Web Browser Support For The <code>background: linear-gradient()</code> Style: Test And Result</h3>
+
+  <h4>Test CSS</h4>
+
+<pre>
+.background-linear-gradient {
+  background: linear-gradient(#777 0%, #fff 33%, #fff 67%, #777 100%);
+}
+</pre>
+
+  <h4>Test HTML</h4>
+
+<pre>
+&lt;p class=&quot;background-linear-gradient&quot;&gt;Paragraph styled with &lt;code&gt;background: linear-gradient(#777 0%, #fff 33%, #fff 67%, #777 100%);&lt;/code&gt;.&lt;/p&gt;
+</pre>
+
+  <h4>Test</h4>
+
+  <p class="background-linear-gradient">Paragraph styled with <code>background: linear-gradient(#777 0%, #fff 33%, #fff 67%, #777 100%);</code>.</p>
+
+  <h4>Result</h4>
+
+  <p>Web browser support for the <code>background: linear-gradient()</code> style: IE10+, ED12+, FF16+, Not SF5.1.7-, CH26+, OP12.10+.</p>
+
+  <hr />
+
+  <h3><a id="borderRadius"></a>2. Web Browser Support For The <code>border-radius</code> Property: Test And Result</h3>
+
+  <h4>Test CSS</h4>
+
+<pre>
+.border-radius {
+  border-radius: 5px;
+  border: 1px solid black;
+}
+</pre>
+
+  <h4>Test HTML</h4>
+
+<pre>
+&lt;p class=&quot;border-radius&quot;&gt;Paragraph styled with &lt;code&gt;border-radius: 5px; border: 1px solid black;&lt;/code&gt;.&lt;/p&gt;
+</pre>
+
+  <h4>Test</h4>
+
+  <p class="border-radius">Paragraph styled with <code>border-radius: 5px; border: 1px solid black;</code>.</p>
+
+  <h4>Result</h4>
+
+  <p>Web browser support for the <code>border-radius</code> property: IE9+, ED12+, FF4+, SF5+, CH4+, OP10.50+.</p>
+
+  <hr />
+
+  <h3><a id="boxShadow"></a>3. Web Browser Support For The <code>box-shadow</code> Property: Test And Result</h3>
+
+  <h4>Test CSS</h4>
+
+<pre>
+.box-shadow {
+  box-shadow: 5px 5px 5px 5px #777;
+  border: 1px solid black;
+}
+</pre>
+
+  <h4>Test HTML</h4>
+
+<pre>
+&lt;p class=&quot;box-shadow&quot;&gt;Paragraph styled with &lt;code&gt;box-shadow: 5px 5px 5px 5px #777; border: 1px solid black;&lt;/code&gt;.&lt;/p&gt;
+</pre>
+
+  <h4>Test</h4>
+
+  <p class="box-shadow">Paragraph styled with <code>box-shadow: 5px 5px 5px 5px #777; border: 1px solid black;</code>.</p>
+
+  <h4>Result</h4>
+
+  <p>Web browser support for the <code>box-shadow</code> property: IE9+, ED12+, FF4+, SF5.1+, CH10+, OP10.50+.</p>
+
+  <hr />
+
+  <h3><a id="rem"></a>4. Web Browser Support For The <code>rem</code> Unit: Test And Result</h3>
+
+  <h4>Test CSS</h4>
+
+<pre>
+html {
+  font-size: 16px;
+}
+.two-rem {
+  font-size: 2rem;
+}
+</pre>
+
+  <h4>Test HTML</h4>
+
+<pre>
+&lt;p class=&quot;two-rem&quot;&gt;Paragraph styled with &lt;code&gt;font-size: 2rem&lt;/code&gt;. &lt;span class=&quot;two-rem&quot;&gt;Span styled with &lt;code&gt;font-size: 2rem&lt;/code&gt;.&lt;/span&gt; Paragraph styled with &lt;code&gt;font-size: 2rem&lt;/code&gt;.&lt;/p&gt;
+</pre>
+
+  <h4>Test</h4>
+
+  <p class="two-rem">Paragraph styled with <code>font-size: 2rem</code>. <span class="two-rem">Span styled with <code>font-size: 2rem</code>.</span> Paragraph styled with <code>font-size: 2rem</code>.</p>
+
+  <h4>Result</h4>
+
+  <p>Web browser support for the <code>rem</code> unit: .</p>
+
+  <hr />
+
+  <h3><a id="textShadow"></a>5. Web Browser Support For The <code>text-shadow</code> Property: Test And Result</h3>
+
+  <h4>Test CSS</h4>
+
+<pre>
+.text-shadow {
+  text-shadow: 5px 5px 5px #777;
+}
+</pre>
+
+  <h4>Test HTML</h4>
+
+<pre>
+&lt;p class=&quot;text-shadow&quot;&gt;Paragraph styled with &lt;code&gt;text-shadow: 5px 5px 5px #777;&lt;/code&gt;.&lt;/p&gt;
+</pre>
+
+  <h4>Test</h4>
+
+  <p class="text-shadow">Paragraph styled with <code>text-shadow: 5px 5px 5px #777;</code>.</p>
+
+  <h4>Result</h4>
+
+  <p>Web browser support for the <code>text-shadow</code> property: IE10+, ED12+, FF3.5+, SF3.1+, CH2+, OP10+.</p>
+
+  <hr />
+
+  <h3><a id="vh"></a>6. Web Browser Support For The <code>vh</code> Unit: Test And Result</h3>
+
+  <h4>Test CSS</h4>
+
+<pre>
+.vh {
+  height: 50vh;
+  border: 1px solid black;
+}
+</pre>
+
+  <h4>Test HTML</h4>
+
+<pre>
+&lt;p class=&quot;vh&quot;&gt;Paragraph styled with &lt;code&gt;height: 50vh; border: 1px solid black;&lt;/code&gt;.&lt;/p&gt;
+</pre>
+
+  <h4>Test</h4>
+
+  <p class="vh">Paragraph styled with <code>height: 50vh; border: 1px solid black;</code>.</p>
+
+  <h4>Result</h4>
+
+  <p>Web browser support for the <code>vh</code> unit: IE9+, ED12+, FF19+, Not SF5.1.7-, CH19+, OP15+.</p>
+
+  <hr />
+
+  <h3><a id="vw"></a>7. Web Browser Support For The <code>vw</code> Unit: Test And Result</h3>
+
+  <h4>Test CSS</h4>
+
+<pre>
+.vw {
+  width: 50vw;
+  border: 1px solid black;
+}
+</pre>
+
+  <h4>Test HTML</h4>
+
+<pre>
+&lt;p class=&quot;vw&quot;&gt;Paragraph styled with &lt;code&gt;width: 50vw; border: 1px solid black;&lt;/code&gt;.&lt;/p&gt;
+</pre>
+
+  <h4>Test</h4>
+
+  <p class="vw">Paragraph styled with <code>width: 50vw; border: 1px solid black;</code>.</p>
+
+  <h4>Result</h4>
+
+  <p>Web browser support for the <code>vw</code> unit: IE9+, ED12+, FF19+, Not SF5.1.7-, CH19+, OP15+.</p>
+
+  <p>Last reviewed/updated: 10 Nov 2017 | Published: 26 Oct 2016 | Status: Active</p>
+
+  <p><a href="http://www.learnwebcoding.com/">Learn Web Coding</a></p>
+
+  <p><a href="https://validator.w3.org/check?uri=referer"><img src="/images/HTML5_Logo_48.gif" alt="Valid HTML5" /></a>&nbsp;<a href="https://jigsaw.w3.org/css-validator/check?uri=referer&amp;profile=css3"><img src="/images/valid-css.gif" alt="Valid CSS Level 3" /></a></p>
+
+ </body>
+</html>

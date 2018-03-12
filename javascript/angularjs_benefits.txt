@@ -1,0 +1,16 @@
+AngularJS Benefits
+
+1.) Eliminate JS event registration (ng-click).
+2.) Eliminate HTML repetitive table row code and JS for loops (ng-repeat).
+3.) Eliminate HTML id attributes and JS getElementById() method (ng-model and angular data binding).
+4.) Eliminate JS returning boolean value.
+5.) Eliminates JS form validation routine.
+6.) Eliminates need to explicitly get and set form values on form object properties in order to save and use them later. Instead, they are implicitly/automatically saved to ng-model directive properties.
+7.) Eliminate JS as means to apply logic for the display of HTML content (ng-show). Eliminate conditional based HTML from JS.
+8.) Eliminate JS have to get/set values on properties (ng-model). Eliminates having to use JS getElementById() method to get form element values, and having to explicitly set the values on JS properties.
+9.) Reduces comments as the AngularJS syntax is self explanatory.
+10.) Eliminates JS need to explicitly send form off for validation.
+11.) Eliminates HTML id attribute references by using AngularJS data binding.
+12.) AngularJS directly references forms via form name attribute and form element name attributes, not form id attribute and form element id attributes.
+13.) Less likely need to pass event object.
+

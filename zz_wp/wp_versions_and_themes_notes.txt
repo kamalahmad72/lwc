@@ -1,0 +1,48 @@
+NOTE: Starting Apr/May 2015 change LWC from fixed width style to responsive style including Bootstrap header. This means using new WP EverBox theme.
+
+-----------------
+WP Default Styles
+-----------------
+
+wp 4.2.1 (27Apr15) includes three themes; 1.) Twenty Fifteen v1.1 (default), 2.) Twenty Fourteen v1.4, 3.) Twenty Thirteen v1.5. Not compared to wp v4.2.
+wp 4.2.2 (07May15) includes three themes; 1.) Twenty Fifteen v1.2 (default), 2.) Twenty Fourteen v1.4, 3.) Twenty Thirteen v1.5.
+wp 4.3   (18Aug15) includes three themes; 1.) Twenty Fifteen v1.3 (default), 2.) Twenty Fourteen v1.5, 3.) Twenty Thirteen v1.6.
+wp 4.3.1 (15Sep15) includes three themes; 1.) Twenty Fifteen v1.3 (default), 2.) Twenty Fourteen v1.5, 3.) Twenty Thirteen v1.6.
+wp 4.4   (08Dec15) includes three themes; 1.) Twenty Sixteen v1.0 (default), 2.) Twenty Fifteen v1.4, 3.) Twenty Fourteen v1.6.
+wp 4.4.1 (06Jan16) includes three themes; 1.) Twenty Sixteen v1.1 (default), 2.) Twenty Fifteen v1.4, 3.) Twenty Fourteen v1.6.
+wp 4.4.2 (02Feb16) includes three themes; 1.) Twenty Sixteen v1.1 (default), 2.) Twenty Fifteen v1.4, 3.) Twenty Fourteen v1.6.
+wp 4.5   (12Apr16) includes three themes; 1.) Twenty Sixteen v1.2 (default), 2.) Twenty Fifteen v1.5, 3.) Twenty Fourteen v1.7.
+wp 4.5.1 (16Apr16) includes three themes; 1.) Twenty Sixteen v1.2 (default), 2.) Twenty Fifteen v1.5, 3.) Twenty Fourteen v1.7.
+wp 4.5.2 (06May16) includes three themes; 1.) Twenty Sixteen v1.2 (default), 2.) Twenty Fifteen v1.5, 3.) Twenty Fourteen v1.7.
+wp 4.5.3 (18Jun16) includes three themes; 1.) Twenty Sixteen v1.2 (default), 2.) Twenty Fifteen v1.5, 3.) Twenty Fourteen v1.7.
+wp 4.6	 (16Aug16) includes three themes; 1.) Twenty Sixteen v1.3 (default), 2.) Twenty Fifteen v1.6, 3.) Twenty Fourteen v1.8.
+wp 4.6.1 (07Sep16) includes three themes; 1.) Twenty Sixteen v1.3 (default), 2.) Twenty Fifteen v1.6, 3.) Twenty Fourteen v1.8.
+wp 4.7   (06Dec16) includes three themes; 1.) Twenty Seventeen v1.0 (default), 2.) Twenty Sixteen v1.3, 3.) Twenty Fifteen v1.7.
+wp 4.7.1 (11Jan17) includes three themes; 1.) Twenty Seventeen v1.1 (default), 2.) Twenty Sixteen v1.3, 3.) Twenty Fifteen v1.7.
+wp 4.7.2 (26Jan17) includes three themes; 1.) Twenty Seventeen v1.1 (default), 2.) Twenty Sixteen v1.3, 3.) Twenty Fifteen v1.7.
+wp 4.7.3 (06Mar17) includes three themes; 1.) Twenty Seventeen v1.1 (default), 2.) Twenty Sixteen v1.3, 3.) Twenty Fifteen v1.7.
+wp 4.7.4 (20Apr17) includes three themes; 1.) Twenty Seventeen v1.2 (default), 2.) Twenty Sixteen v1.3, 3.) Twenty Fifteen v1.7.
+wp 4.7.5 (16May17) includes three themes; 1.) Twenty Seventeen v1.2 (default), 2.) Twenty Sixteen v1.3, 3.) Twenty Fifteen v1.7.
+wp 4.8   (08Jun17) includes three themes; 1.) Twenty Seventeen v1.3 (default), 2.) Twenty Sixteen v1.3, 3.) Twenty Fifteen v1.8.
+wp 4.8.1 (02Aug17) includes three themes; 1.) Twenty Seventeen v1.3 (default), 2.) Twenty Sixteen v1.3, 3.) Twenty Fifteen v1.8.
+wp 4.8.2 (19Sep17) includes three themes; 1.) Twenty Seventeen v1.3 (default), 2.) Twenty Sixteen v1.3, 3.) Twenty Fifteen v1.8.
+wp 4.8.3 (31Oct17) includes three themes; 1.) Twenty Seventeen v1.3 (default), 2.) Twenty Sixteen v1.3, 3.) Twenty Fifteen v1.8.
+wp 4.9   (16Nov17) includes three themes; 1.) Twenty Seventeen v1.4 (default), 2.) Twenty Sixteen v1.4, 3.) Twenty Fifteen v1.9.
+wp 4.9.1 (29Nov17) includes three themes; 1.) Twenty Seventeen v1.4 (default), 2.) Twenty Sixteen v1.4, 3.) Twenty Fifteen v1.9.
+wp 4.9.2 (16Jan18) includes three themes; 1.) Twenty Seventeen v1.4 (default), 2.) Twenty Sixteen v1.4, 3.) Twenty Fifteen v1.9.
+wp 4.9.3 (05Feb18) includes three themes; 1.) Twenty Seventeen v1.4 (default), 2.) Twenty Sixteen v1.4, 3.) Twenty Fifteen v1.9.
+wp 4.9.4 (06Feb18) includes three themes; 1.) Twenty Seventeen v1.4 (default), 2.) Twenty Sixteen v1.4, 3.) Twenty Fifteen v1.9.
+
+-------------------
+WP Alternate Themes
+-------------------
+
+EverBox v1.1.6 is for WP v4.1+.
+
+-----------------------------------
+My Edited Theme Web Browser Support
+-----------------------------------
+
+everbox_116_st_10 web browser support:
+1.) at least Internet Explorer 9.0+ | Firefox 4.0+ | SeaMonkey 2.1+ | Safari 5.0+ | Chrome 13.0+ | Opera 12.10+, which is LWC web browser support when added social navbar to LWC header on 14 Nov 2015.
+2.) most likely Internet Explorer 9.0+ | Firefox 4.0+ | SeaMonkey 2.1+ | Safari 5.0+ | Chrome 5.0+ | Opera 11.60+, which is LWC web browser support when first used Everbox v116 for LWCB on 08 May 2015.

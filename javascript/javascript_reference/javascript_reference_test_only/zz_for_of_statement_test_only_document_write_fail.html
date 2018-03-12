@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>for...of Statement Web Browser Support Test</title>
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Steve Taylor" />
+  <meta name="Keywords" content="JavaScript, for...of statement, web browser support, test" />
+  <meta name="Description" content="A JavaScript that tests and reports if the web browser supports the JavaScript for...of statement." />
+  <script></script>
+ </head>
+ <body>
+
+  <h1><code>for...of</code> Statement Web Browser Support Test</h1>
+
+<script>
+var iterable = ["a", "b", "c"];
+var iterableString = "";
+for (var item of iterable){ // IE11 error: SCRIPT1004: Expected ';'.
+ iterableString += item;
+}
+if (iterableString === "abc"){
+ document.write("<p><b>Pass</b> (at least partial/possibly full support): The web browser recognizes the JavaScript <code>for...of</code> statement. The web browser at least partially/possibly fully supports the JavaScript <code>for...of</code> statement. Positive determination of full web browser support is beyond the scope of this test.</p>");
+} else {
+ document.write("<p><b>Fail</b> (no support): The web browser does not recognize the JavaScript <code>for...of</code> statement. The web browser does not support the JavaScript <code>for...of</code> statement.</p>");
+}
+</script>
+
+ </body>
+</html>

@@ -1,0 +1,50 @@
+<html>
+ <head>
+  <title>Web Page Styled Via The Original Embedded Style Sheet And External Style Sheet</title>
+  <style type="text/css">
+   body {
+     font-family: arial, verdana, "times new roman";
+     font-size: 12px;
+     background-color: #eee;
+   }
+   h1 {
+     text-decoration: underline;
+   }
+   p {
+     margin-left: 1em;
+   }
+   a {
+     font-style: italic;
+     background-color: #fff;
+     text-decoration: underline;
+   }
+   a:link {
+     color: red;
+   }
+   a:visited {
+     color: grey;
+   }
+   .special {
+     font-size: 12px;
+     font-family: "times new roman";
+     border: 2px #00f solid;
+     padding: 0px 6px;
+     margin-right: 10%;
+   }
+  </style>
+  <link rel="stylesheet" type="text/css" href="cascade_in_action_external_style_sheet.css" />
+ </head>
+ <body>
+  <div class="special">div .special</div>
+  <h1>Heading 1</h1>
+  <p>paragraph</p>
+  <a href="cascade_in_action_dummy_web_document1.html">Link 1</a><br />
+  <a href="cascade_in_action_dummy_web_document2.html">Link 2</a><br />
+  <a href="cascade_in_action_dummy_web_document3.html">Link 3</a><br />
+  <h1>Heading 1</h1>
+  <p>paragraph</p>
+  <p class="special">paragraph .special</p>
+  <p class="green">paragraph .green</p>
+<!-- In an apparently internal fashion, unless a margin top is specified by the author or user, the Firefox 3.5 rendering engine eliminates the Firefox 3.5 user agent margin top from the initial instance of the first element inside the web page's body tags. Since the web page styled via The Cascade In Action By Example's master style sheet specifies a margin top for the structured block-level elements, h1 and p, but the web page styled via the original embedded style sheet and external style sheet does not specify a margin-top for the structured block level elements, h1 and p, to avoid the false impression that the description of CSS is inaccurate, the generic block-level element, div, is used as the first element inside this web page's body tags. -->
+ </body>
+</html>

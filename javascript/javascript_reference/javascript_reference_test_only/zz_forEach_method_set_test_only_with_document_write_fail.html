@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>forEach() Method On Sets Web Browser Support Test</title>
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Steve Taylor" />
+  <meta name="Keywords" content="JavaScript, forEach() method, set, web browser support, test" />
+  <meta name="Description" content="A JavaScript that tests and reports if the web browser supports the JavaScript forEach() method on sets." />
+  <script></script>
+ </head>
+ <body>
+
+  <h1><code>forEach()</code> Method On Sets Web Browser Support Test</h1>
+
+<script>
+var testSet = new Set(); // IE11 does not support sets initialized with an iterable. Therefore, create testSet using Set constructor and add() method. IE10 error: SCRIPT5009: 'Set' is undefined.
+testSet.add("a");
+testSet.add("b");
+testSet.add("c"); // testSet is Set(3) {"a", "b", "c"}.
+var valueString = "",
+ valueRepeatedString = "",
+ setArgument = null;
+propertyOne = "window object propertyOne value"; // Identical to window.propertyOne = "window object propertyOne value";.
+var objectLiteral = {
+ propertyOne: "objectLiteral propertyOne value"
+},
+ thisValue = null,
+ thisPropertyOne = "";
+if (testSet.forEach){
+ testSet.forEach(function(value, valueRepeated, set){
+  valueString += value; // After final iteration: "abc".
+  valueRepeatedString += valueRepeated; // After final iteration: "abc".
+  setArgument = set; // testSet.
+  thisValue = this; // objectLiteral.
+  thisPropertyOne = this.propertyOne; // "objectLiteral propertyOne value".
+ }, objectLiteral); // Set this to objectLiteral.
+ if ((valueString === "abc") && (valueRepeatedString === "abc") && (setArgument === testSet) && (thisValue === objectLiteral) && (thisPropertyOne === "objectLiteral propertyOne value")){
+  document.write("<p><b>Pass</b> (at least partial/possibly full support): The web browser recognizes the JavaScript <code>forEach()</code> method on sets, and supports at least one <code>forEach()</code> method on sets capability. The web browser at least partially/possibly fully supports the JavaScript <code>forEach()</code> method on sets. Positive determination of full web browser support is beyond the scope of this test.</p>");
+ } else {
+  document.write("<p><b>Pass/Fail</b> (partial support): The web browser recognizes the JavaScript <code>forEach()</code> method on sets, but does not support at least one <code>forEach()</code> method on sets capability. The web browser partially supports the JavaScript <code>forEach()</code> method on sets.</p>");
+ }
+} else {
+ document.write("<p><b>Fail</b> (no support): The web browser does not recognize the JavaScript <code>forEach()</code> method on sets. The web browser does not support the JavaScript <code>forEach()</code> method on sets.</p>");
+}
+</script>
+
+ </body>
+</html>

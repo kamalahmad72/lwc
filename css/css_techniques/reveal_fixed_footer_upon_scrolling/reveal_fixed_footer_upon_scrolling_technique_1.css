@@ -1,0 +1,26 @@
+* {
+  line-height: 1.15;
+  text-align: center;
+  margin: 0;
+}
+header, main, footer {
+  display: block;
+}
+header {
+  height: 150px;
+  background-color: #fcc;
+}
+main {
+  position: relative;
+  z-index: 1;
+  background-color: #cfc;
+  margin-bottom: 430px;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 430px;
+  background-color: #ccf;
+}

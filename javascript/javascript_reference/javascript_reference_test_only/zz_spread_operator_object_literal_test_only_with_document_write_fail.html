@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>Spread Operator In Object Literals Web Browser Support Test</title>
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Steve Taylor" />
+  <meta name="Keywords" content="JavaScript, spread operator, object literal, web browser support, test" />
+  <meta name="Description" content="A JavaScript that tests and reports if the web browser supports the JavaScript spread operator in object literals." />
+  <script></script>
+ </head>
+ <body>
+
+  <h1>Spread Operator In Object Literals Web Browser Support Test</h1>
+
+<script>
+var objectLiteralOne = {propertyOne: "propertyOne value", propertyTwo: "propertyTwo value", propertyThree: "propertyThree value"};
+var objectLiteralTwo = {propertySeven: "propertySeven value", propertyEight: "propertyEight value", propertyNine: "propertyNine value"};
+var objectLiteralTest = {propertyZero: "propertyZero value", ...objectLiteralOne, propertyFour: "propertyFour value", propertyFive: "propertyFive value", propertySix: "propertySix value", ...objectLiteralTwo, propertyTen: "propertyTen value"};
+if ((objectLiteralTest.propertyZero === "propertyZero value") && (objectLiteralTest.propertyTwo === "propertyTwo value") && (objectLiteralTest.propertyFive === "propertyFive value") && (objectLiteralTest.propertyEight === "propertyEight value") && (objectLiteralTest.propertyTen === "propertyTen value")){
+ document.write("<p><b>Pass</b> (at least partial/possibly full support): The web browser recognizes the JavaScript spread operator in object literals. The web browser at least partially/possibly fully supports the JavaScript spread operator in object literals. Positive determination of full web browser support is beyond the scope of this test.</p>");
+} else {
+ document.write("<p><b>Fail</b> (no support): The web browser does not recognize the JavaScript spread operator in object literals. The web browser does not support the JavaScript spread operator in object literals.</p>");
+}
+</script>
+
+ </body>
+</html>

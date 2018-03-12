@@ -1,0 +1,12 @@
+Last reviewed/updated: 06 Jul 2016.
+1.) Place *.js files to minify online at http://www.learnwebcoding.com/javascripts/zz_abc_unmin/*.js
+2.) Go to Google Closure Compiler at http://closure-compiler.appspot.com/home.
+3.) For Add a URL, enter URL for .js file, which is http://www.learnwebcoding.com/javascripts/zz_abc_unmin/*.js, and click Add. In textarea, //@code_url line added.
+For Optimization, select Whitespace.
+For Formatting, leave default, which is none checked.
+4.) In textarea, change // @output_file_name default.js to // @output_file_name *.js and remove the // ADD YOUR CODE HERE section.
+NOTE: For subsequent compiles, in textarea simply change the filename for the two reference to *.js.
+5.) Click Compile.
+6.) In right pane, click file download link and save file to /public_html/javascripts/zz_abc_min/*.js
+7.) Copy the minified *.js files from /public_html/javascripts/zz_abc_min/ to /public_html/javascripts/abc/. In other words, directories /public_html/javascripts/zz_abc_unmin/ and /public_html/javascripts/zz_abc_min/ are simply working directories, not destination directories, for creating *.js files (/public_html/javascripts/zz_abc_unmin/) and for minifying *.js files (/public_html/javascripts/zz_abc_min/) without overwriting any *.js files.
+8.) Place the minified /public_html/javascripts/abc/*.js files online as /public_html/stylesheets/abc/*.js.

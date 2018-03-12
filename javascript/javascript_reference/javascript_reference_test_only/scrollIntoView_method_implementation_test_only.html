@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>scrollIntoView() Method Implementation Web Browser Support Test</title>
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Steve Taylor" />
+  <meta name="Keywords" content="JavaScript, scrollIntoView() method, web browser support, implementation, test" />
+  <meta name="Description" content="A JavaScript that tests and reports if the web browser supports the JavaScript scrollIntoView() method." />
+  <script></script>
+ </head>
+ <body>
+
+  <h1><code>scrollIntoView()</code> Method Implementation Web Browser Support Test</h1>
+
+<p id='testId'></p>
+
+<script>
+var element = document.getElementById("testId");
+if (element.scrollIntoView){
+ document.write("<p><b>Pass</b> (at least partial/possibly full support): The web browser recognizes the JavaScript <code>scrollIntoView()</code> method. The web browser at least partially/possibly fully supports the JavaScript <code>scrollIntoView()</code> method. Positive determination of full web browser support is beyond the scope of this test.</p>");
+} else {
+ document.write("<p><b>Fail</b> (no support): The web browser does not recognize the JavaScript <code>scrollIntoView()</code> method. The web browser does not support the JavaScript <code>scrollIntoView()</code> method.</p>");
+}
+</script>
+
+ </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>instanceof Operator Web Browser Support Test</title>
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Steve Taylor" />
+  <meta name="Keywords" content="JavaScript, instanceof operator, web browser support, test" />
+  <meta name="Description" content="A JavaScript that tests and reports if the web browser supports the JavaScript instanceof operator." />
+  <script></script>
+ </head>
+ <body>
+
+  <h1><code>instanceof</code> Operator Web Browser Support Test</h1>
+
+<script>
+var booleanLiteral = true,
+ booleanViaBooleanConstructor = new Boolean(false),
+ numberLiteral = 1,
+ numberViaNumberConstructor = new Number(2),
+ stringLiteral = "abc",
+ stringViaStringConstructor = new String("def"),
+ nullLiteral = null,
+ undefinedLiteral = undefined,
+ undefinedVariable;
+function functionDeclaration(){}
+var functionExpression = function(){},
+ functionViaFunctionConstructor = new Function(),
+ arrayLiteral = [],
+ arrayViaArrayConstructor = new Array(),
+ objectLiteral = {},
+ objectViaObjectConstructor = new Object();
+function CustomConstructor(){}
+var objectViaCustomConstructor = new CustomConstructor();
+// In IE8-, FF3 - 3.6.6, and OP8.54-, window instanceof Object === false. In IE9+, FF1.5 - 2.0.0.20, FF3.6.7+, SF3.1+, CH2+, and OP9+, window instanceof Object === true.
+if (!(booleanLiteral instanceof Boolean) && !(booleanLiteral instanceof Object) && booleanViaBooleanConstructor instanceof Boolean && booleanViaBooleanConstructor instanceof Object && !(numberLiteral instanceof Number) && !(numberLiteral instanceof Object) && numberViaNumberConstructor instanceof Number && numberViaNumberConstructor instanceof Object && !(stringLiteral instanceof String) && !(stringLiteral instanceof Object) && stringViaStringConstructor instanceof String && stringViaStringConstructor instanceof Object && !(nullLiteral instanceof Object) && !(undefinedLiteral instanceof Object) && !(undefinedVariable instanceof Object) && functionDeclaration instanceof Function && functionDeclaration instanceof Object && functionExpression instanceof Function && functionExpression instanceof Object && functionViaFunctionConstructor instanceof Function && functionViaFunctionConstructor instanceof Object && arrayLiteral instanceof Array && arrayLiteral instanceof Object && arrayViaArrayConstructor instanceof Array && arrayViaArrayConstructor instanceof Object && objectLiteral instanceof Object && objectViaObjectConstructor instanceof Object && objectViaCustomConstructor instanceof Object){
+ document.write("<p><b>Pass</b> (at least partial/possibly full support): The web browser recognizes the JavaScript <code>instanceof</code> operator. The web browser at least partially/possibly fully supports the JavaScript <code>instanceof</code> operator. Positive determination of full web browser support is beyond the scope of this test.</p>");
+} else {
+ document.write("<p><b>Fail</b> (no support): The web browser does not recognize the JavaScript <code>instanceof</code> operator. The web browser does not support the JavaScript <code>instanceof</code> operator.</p>");
+}
+</script>
+
+ </body>
+</html>

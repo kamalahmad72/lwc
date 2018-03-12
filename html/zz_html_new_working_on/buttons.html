@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>Valid HTML5 Web Page Template</title>
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Steve Taylor" />
+  <meta name="Keywords" content="valid, HTML5, web page, template" />
+  <meta name="Description" content="A valid HTML5 web page template." />
+  <link rel="stylesheet" type="text/css" media="all" href="/fonts/font-awesome/font-awesome.css" />
+  <link rel="stylesheet" type="text/css" media="all" href="/stylesheets/bootstrap/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" media="all" href="/stylesheets/lwc/lwc.css" />
+  <style type="text/css">
+/* Pseudo-class proper order: link, visited, hover, active, focus. */
+/* button span:active does not work IE11 (natively provides similar, apparently cannot override), does not work FF39 (natively static, apparently cannot override), works CH43 (natively static). */
+/* .btn span:active works IE11 (natively static), FF39 (natively static), and CH43 (natively static). */
+/* For input element, IE11 natively provides active { position: relative; top: 1px; left: 1px; }. FF39 and CH43 natively static. */
+/* position: relative; top: 1px; left: 1px; */
+/* apparently user agent provides a font-size: ~13.33px on input and button element button text that is not overridden by author style sheet body { font-size: somevalue; } */
+
+input, button, .btn { background-color: #fff; color: #000; border: 1px solid #d6d6d6; border-radius: 3px; }
+input:hover, button:hover, .btn:hover { background-color: #eee; border-color: #999; cursor: pointer; }
+input:active, button:active, .btn:active { background-color: #d6d6d6; border-color: #000; cursor: pointer; }
+input:focus, button:focus, .btn:focus { background-color: #d6d6d6; border-color: #000; cursor: pointer; }
+.btn:hover { text-decoration: none; }
+.btn:focus { outline: 0; }
+.btn-xs { font-size: 0.7em; padding: 4px 8px; }
+.btn-sm { font-size: 0.85em; padding: 5px 10px; }
+.btn-md { font-size: 1.0em; padding: 6px 12px; }
+.btn-lg { font-size: 1.15em; padding: 7px 14px; }
+.btn-xl { font-size: 1.3em; padding: 8px 16px; }
+  </style>
+ </head>
+ <body>
+
+<p><input type="button" value="input type button" class="btn-xl" /> <input type="button" value="input type button" class="" /></p>
+
+<p><input type="submit" value="input type submit" class="btn-xl" /> <input type="submit" value="input type submit" class=""  /></p>
+
+<p><button type="submit" class="btn-xl" >button type submit</button> <button type="submit" class="" >button type submit</button></p>
+
+<p><button class="btn-xl" >button</button> <button class="" >button</button></p>
+
+<p><a href="#" class="btn btn-xl">a href .btn</a> <a href="#" class="btn">a href .btn</a></p>
+
+<p><a class="btn btn-xl">a .btn</a> <a class="btn">a .btn</a></p> <!-- no focus without href, which makes like other elements -->
+
+<p><span class="btn btn-xl">other</span> <span class="btn">other</span></p> <!-- no focus on other element, including if add href="#" attribute -->
+
+<hr />
+
+<input type="button" value="input type button" class="btn-xs" />
+<input type="button" value="input type button" class="btn-sm" />
+<input type="button" value="input type button" class="btn-md" />
+<input type="button" value="input type button" class="btn-lg" />
+<input type="button" value="input type button" class="btn-xl" />
+
+  <p>Last reviewed/updated: 27 May 2015 | Published: 19 Mar 2014 | Status: Active</p>
+
+  <p><a href="http://www.learnwebcoding.com/">Learn Web Coding</a></p>
+
+  <p><a href="http://validator.w3.org/check?uri=referer"><img src="/images/HTML5_Logo_48.gif" alt="Valid HTML5!" /></a></p>
+
+ </body>
+</html>

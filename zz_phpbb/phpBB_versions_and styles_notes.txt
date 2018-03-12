@@ -1,0 +1,46 @@
+NOTE: Starting Apr/May 2015 change LWC from fixed width style to responsive style including Bootstrap header. This means using new phpBB Simplicity style.
+
+--------------------
+phpBB default styles
+--------------------
+
+phpBB 3.1.3		(01Feb15) includes one style prosilver v3.1.3 (default).
+phpBB 3.1.4		(04May15) includes one style prosilver v3.1.4 (default).
+phpBB 3.1.5		(04May15) includes one style prosilver v3.1.5 (default).
+phpBB 3.1.6		(12Sep15) includes one style prosilver v3.1.6 (default).
+phpBB 3.1.7-PL1	(11Jan16) includes one style prosilver v3.1.7 (default).
+phpBB 3.1.8		(23Feb16) includes one style prosilver v3.1.8 (default).
+phpBB 3.1.9		(17Apr16) includes one style prosilver v3.1.9 (default).
+phpBB 3.1.10	(12Oct16) includes one style prosilver v3.1.10 (default).
+phpBB 3.1.11	(16Jul17) includes one style prosilver v3.1.11 (default).
+phpBB 3.2.0		(06Jan17) includes one style prosilver v3.2.0 (default).
+phpBB 3.2.1		(16Jul17) includes one style prosilver v3.2.1 (default).
+phpBB 3.2.2		(07Jan18) includes one style prosilver v3.2.2 (default).
+
+------------------
+phpBB child styles
+------------------
+
+simplicity v1.0.2 is for pbpBB v3.1.3.
+simplicity v1.0.3 is for pbpBB v3.1.4.
+simplicity v1.0.4 is for pbpBB v3.1.4.
+simplicity v1.0.5 is for pbpBB v3.1.5.
+simplicity v3.1.6 is for pbpBB v3.1.6.
+simplicity v3.1.7 is for pbpBB v3.1.7.
+simplicity v3.1.8 is for pbpBB v3.1.8.
+simplicity v3.1.9 is for pbpBB v3.1.9+ (Note: Arty has stop releasing/supporting pbpBB styles).
+
+------------
+QuickInstall
+------------
+
+QuickInstall 1.2.1 for phpBB 3.x and 3.1.x
+QuickInstall 1.2.3 for phpBB 3.x, 3.1.x, and 3.2.x
+QuickInstall 1.2.5 for phpBB 3.x, 3.1.x, and 3.2.x
+QuickInstall 1.3.0 for phpBB 3.x, 3.1.x, and 3.2.x
+
+-----------------------------------
+My edited theme web browser support
+-----------------------------------
+
+simplicity_v103_st_v10 web browser support is IE, FF, SM, SF, CH, OP. 

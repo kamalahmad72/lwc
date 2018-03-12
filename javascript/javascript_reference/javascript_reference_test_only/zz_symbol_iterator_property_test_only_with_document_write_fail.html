@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>[Symbol.iterator] Property Web Browser Support Test</title>
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Steve Taylor" />
+  <meta name="Keywords" content="JavaScript, [Symbol.iterator] property, web browser support, test" />
+  <meta name="Description" content="A JavaScript that tests and reports if the web browser supports the JavaScript [Symbol.iterator] property." />
+  <script></script>
+ </head>
+ <body>
+
+  <h1><code>[Symbol.iterator]</code> Property Web Browser Support Test</h1>
+
+<!-- Per LWC web browser support testing, TypedArray object supported by IE10+, ED12+, FF4+, SF5.1+, CH9+, OP11.60+ and [Symbol.iterator] property supported by ED12+, FF36+, CH38+, OP25+, no IE11-, SF5.1.7-. Therefore, in web browser support test below, TypedArray object does not skew test result. -->
+
+<script>
+var stringLiteral = ""; // An iterable.
+var arrayLiteral = []; // An iterable.
+var typedArray = new Int8Array(); // An iterable.
+var set = new Set(); // An iterable.
+var map = new Map(); // An iterable.
+var functionExpression = function(){}; // Not an iterable.
+var objectLiteral = {}; // Not an iterable.
+if (stringLiteral[Symbol.iterator] && arrayLiteral[Symbol.iterator] && typedArray[Symbol.iterator] && set[Symbol.iterator] && map[Symbol.iterator] && !functionExpression[Symbol.iterator] && !objectLiteral[Symbol.iterator]){ // IE11 error: SCRIPT5009: 'Symbol' is undefined.
+ document.write("<p><b>Pass</b> (at least partial/possibly full support): The web browser recognizes the JavaScript <code>[Symbol.iterator]</code> property. The web browser at least partially/possibly fully supports the JavaScript <code>[Symbol.iterator]</code> property. Positive determination of full web browser support is beyond the scope of this test.</p>");
+} else {
+ document.write("<p><b>Fail</b> (no support): The web browser does not recognize the JavaScript <code>[Symbol.iterator]</code> property. The web browser does not support the JavaScript <code>[Symbol.iterator]</code> property.</p>");
+}
+</script>
+
+ </body>
+</html>

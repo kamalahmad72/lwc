@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>arguments Object Web Browser Support Test</title>
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Steve Taylor" />
+  <meta name="Keywords" content="JavaScript, arguments object, web browser support, test" />
+  <meta name="Description" content="A JavaScript that tests and reports if the web browser supports the JavaScript arguments object." />
+  <script></script>
+ </head>
+ <body>
+
+  <h1><code>arguments</code> Object Web Browser Support Test</h1>
+
+<script>
+var objectLiteral = {
+ method: function(){
+  if (arguments){
+   if ((arguments.length === 3) && (arguments[0] === "argumentOne")){
+    document.write("<p><b>Pass</b> (at least partial/possibly full support): The web browser recognizes the JavaScript <code>arguments</code> object, and supports at least one <code>arguments</code> object capability. The web browser at least partially/possibly fully supports the JavaScript <code>arguments</code> object. Positive determination of full web browser support is beyond the scope of this test.</p>");
+   } else {
+    document.write("<p><b>Pass/Fail</b> (partial support): The web browser recognizes the JavaScript <code>arguments</code> object, but does not support at least one <code>arguments</code> object capability. The web browser partially supports the JavaScript <code>arguments</code> object.</p>");
+   }
+  } else {
+   document.write("<p><b>Fail</b> (no support): The web browser does not recognize the JavaScript <code>arguments</code> object. The web browser does not support the JavaScript <code>arguments</code> object.</p>");
+  }
+ }
+};
+objectLiteral.method("argumentOne", "argumentTwo", "argumentThree");
+</script>
+
+ </body>
+</html>

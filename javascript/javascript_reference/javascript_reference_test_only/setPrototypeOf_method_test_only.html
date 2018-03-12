@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>setPrototypeOf() Method Web Browser Support Test</title>
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Steve Taylor" />
+  <meta name="Keywords" content="JavaScript, setPrototypeOf() method, web browser support, test" />
+  <meta name="Description" content="A JavaScript that tests and reports if the web browser supports the JavaScript setPrototypeOf() method." />
+  <script></script>
+ </head>
+ <body>
+
+  <h1><code>setPrototypeOf()</code> Method Web Browser Support Test</h1>
+
+<!-- Similar comments getPrototypeOf() method, isPrototypeOf() method, and setPrototypeOf() method. -->
+<!-- CustomConstructorOne.setPrototypeOf(objectViaCustomConstructorTwo, null) does not work. FF57 reports: TypeError: CustomConstructorOne.setPrototypeOf is not a function. This implies setPrototypeOf() is a method of Object constructor, not AnyObject constructor. -->
+
+<script>
+if (Object.setPrototypeOf){
+ function CustomConstructorOne(){} // CustomConstructorOne constructor.
+ function CustomConstructorTwo(){} // CustomConstructorTwo constructor.
+ CustomConstructorOne.prototype.propertyOne = "CustomConstructorOne prototype propertyOne value"; // Set property on CustomConstructorOne prototype.
+ CustomConstructorTwo.prototype.propertyOne = "CustomConstructorTwo prototype propertyOne value"; // Set property on CustomConstructorTwo prototype.
+ var objectViaCustomConstructorOne = new CustomConstructorOne(); // Instantiate instance of CustomConstructorOne as objectViaCustomConstructorOne.
+ var objectViaCustomConstructorTwo = new CustomConstructorTwo(); // Instantiate instance of CustomConstructorTwo as objectViaCustomConstructorTwo.
+ Object.setPrototypeOf(objectViaCustomConstructorOne, objectViaCustomConstructorTwo) // Set objectViaCustomConstructorOne prototype to objectViaCustomConstructorTwo prototype.
+ if (objectViaCustomConstructorOne.propertyOne === "CustomConstructorTwo prototype propertyOne value"){
+  document.write("<p><b>Pass</b> (at least partial/possibly full support): The web browser recognizes the JavaScript <code>setPrototypeOf()</code> method, and supports at least one <code>setPrototypeOf()</code> method capability. The web browser at least partially/possibly fully supports the JavaScript <code>setPrototypeOf()</code> method. Positive determination of full web browser support is beyond the scope of this test.</p>");
+ } else {
+  document.write("<p><b>Pass/Fail</b> (partial support): The web browser recognizes the JavaScript <code>setPrototypeOf()</code> method, but does not support at least one <code>setPrototypeOf()</code> method capability. The web browser partially supports the JavaScript <code>setPrototypeOf()</code> method.</p>");
+ }
+} else {
+ document.write("<p><b>Fail</b> (no support): The web browser does not recognize the JavaScript <code>setPrototypeOf()</code> method. The web browser does not support the JavaScript <code>setPrototypeOf()</code> method.</p>");
+}
+</script>
+
+ </body>
+</html>

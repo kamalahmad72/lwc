@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>Generator Function Web Browser Support Test</title>
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Steve Taylor" />
+  <meta name="Keywords" content="JavaScript, generator function, web browser support, test" />
+  <meta name="Description" content="A JavaScript that tests and reports if the web browser supports the JavaScript generator function." />
+  <script></script>
+ </head>
+ <body>
+
+  <h1>Generator Function Web Browser Support Test</h1>
+
+<!-- Calling generator function does not execute generator function body. Instead, calling generator function returns Generator object. Calling Generator object next() method executes generator function body. However, calling Generator object next() method is best suited for Generator object web browser support test, not generator function web browser support test. Therefore, since cannot nest generator function web browser support tests in generator function, only reasonable implementation test to determine if web browser recognizes the JavaScript generator function is to call generator function and see if Generator object return value exists as a window property. -->
+
+<script>
+function* generatorFunctionDeclaration(){} // Generator function using function declaration syntax. IE11 error: SCRIPT1010: Expected identifier.
+var generatorFunctionExpression = function*(param){}; // Generator function using function expression syntax.
+objectLiteral = {
+ generatorFunctionMethod: function*(param){} // Generator function using object method syntax.
+};
+// Call generator functions. Each call returns a Generator object which inherits prototype from Object and is an iterator.
+var generatorObjectOne = generatorFunctionDeclaration();
+var generatorObjectTwo = generatorFunctionExpression();
+var generatorObjectThree = objectLiteral.generatorFunctionMethod();
+if ((window.generatorObjectOne) && (window.generatorObjectTwo) && (window.generatorObjectThree)){
+ if ((typeof generatorObjectOne === "object") && Object.prototype.isPrototypeOf(generatorObjectOne) && generatorObjectOne[Symbol.iterator] && (typeof generatorObjectTwo === "object") && Object.prototype.isPrototypeOf(generatorObjectTwo) && generatorObjectTwo[Symbol.iterator] && (typeof generatorObjectThree === "object") && Object.prototype.isPrototypeOf(generatorObjectThree) && generatorObjectThree[Symbol.iterator]){
+  document.write("<p><b>Pass</b> (at least partial/possibly full support): The web browser recognizes the JavaScript generator function, and supports at least one generator function capability. The web browser at least partially/possibly fully supports the JavaScript generator function. Positive determination of full web browser support is beyond the scope of this test.</p>");
+ } else {
+  document.write("<p><b>Pass/Fail</b> (partial support): The web browser recognizes the JavaScript generator function, but does not support at least one generator function capability. The web browser partially supports the JavaScript generator function.</p>");
+ }
+} else {
+ document.write("<p><b>Fail</b> (no support): The web browser does not recognize the JavaScript generator function. The web browser does not support the JavaScript generator function.</p>");
+}
+</script>
+
+ </body>
+</html>

@@ -1,0 +1,26 @@
+http://closure-compiler.appspot.com/home
+http://www.learnwebcoding.com/javascripts/zz_lwc_no_min/angularjs_shopping_cart_spa.js
+http://www.learnwebcoding.com/javascripts/zz_lwc_no_min/css_font_compare.js
+http://www.learnwebcoding.com/javascripts/zz_lwc_no_min/dummy_external_javascript.js
+http://www.learnwebcoding.com/javascripts/zz_lwc_no_min/footer_html.js
+http://www.learnwebcoding.com/javascripts/zz_lwc_no_min/header_html.js
+http://www.learnwebcoding.com/javascripts/zz_lwc_no_min/javascript_shopping_cart_spa.js
+http://www.learnwebcoding.com/javascripts/zz_lwc_no_min/javascript_web_browser_detection_update.js
+http://www.learnwebcoding.com/javascripts/zz_lwc_no_min/library_load_in_body.js
+http://www.learnwebcoding.com/javascripts/zz_lwc_no_min/shopping_library.js
+http://www.learnwebcoding.com/javascripts/zz_lwc_no_min/support_tools_html.js
+http://www.learnwebcoding.com/javascripts/zz_lwc_no_min/support_tools_no_toc_html.js
+http://www.learnwebcoding.com/javascripts/zz_lwc_no_min/web_browser_retain_remove_content_f5.js
+
+jsmin <G:\xampp7P\htdocs\public_html\javascripts\zz_lwc_no_min\angularjs_shopping_cart_spa.js> G:\xampp7P\htdocs\public_html\javascripts\zz_lwc_min\angularjs_shopping_cart_spa.min.js
+jsmin <G:\xampp7P\htdocs\public_html\javascripts\zz_lwc_no_min\css_font_compare.js> G:\xampp7P\htdocs\public_html\javascripts\zz_lwc_min\css_font_compare.min.js
+jsmin <G:\xampp7P\htdocs\public_html\javascripts\zz_lwc_no_min\dummy_external_javascript.js> G:\xampp7P\htdocs\public_html\javascripts\zz_lwc_min\dummy_external_javascript.min.js
+jsmin <G:\xampp7P\htdocs\public_html\javascripts\zz_lwc_no_min\footer_html.js> G:\xampp7P\htdocs\public_html\javascripts\zz_lwc_min\footer_html.min.js
+jsmin <G:\xampp7P\htdocs\public_html\javascripts\zz_lwc_no_min\header_html.js> G:\xampp7P\htdocs\public_html\javascripts\zz_lwc_min\header_html.min.js
+jsmin <G:\xampp7P\htdocs\public_html\javascripts\zz_lwc_no_min\javascript_shopping_cart_spa.js> G:\xampp7P\htdocs\public_html\javascripts\zz_lwc_min\javascript_shopping_cart_spa.min.js
+jsmin <G:\xampp7P\htdocs\public_html\javascripts\zz_lwc_no_min\javascript_web_browser_detection_update.js> G:\xampp7P\htdocs\public_html\javascripts\zz_lwc_min\javascript_web_browser_detection_update.min.js
+jsmin <G:\xampp7P\htdocs\public_html\javascripts\zz_lwc_no_min\library_load_in_body.js> G:\xampp7P\htdocs\public_html\javascripts\zz_lwc_min\library_load_in_body.min.js
+jsmin <G:\xampp7P\htdocs\public_html\javascripts\zz_lwc_no_min\shopping_library.js> G:\xampp7P\htdocs\public_html\javascripts\zz_lwc_min\shopping_library.min.js
+jsmin <G:\xampp7P\htdocs\public_html\javascripts\zz_lwc_no_min\support_tools_html.js> G:\xampp7P\htdocs\public_html\javascripts\zz_lwc_min\support_tools_html.min.js
+jsmin <G:\xampp7P\htdocs\public_html\javascripts\zz_lwc_no_min\support_tools_no_toc_html.js> G:\xampp7P\htdocs\public_html\javascripts\zz_lwc_min\support_tools_no_toc_html.min.js
+jsmin <G:\xampp7P\htdocs\public_html\javascripts\zz_lwc_no_min\web_browser_retain_remove_content_f5.js> G:\xampp7P\htdocs\public_html\javascripts\zz_lwc_min\web_browser_retain_remove_content_f5.min.js

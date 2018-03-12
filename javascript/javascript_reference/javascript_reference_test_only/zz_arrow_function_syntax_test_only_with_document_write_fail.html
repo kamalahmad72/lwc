@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>Arrow Function Syntax Web Browser Support Test</title>
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Steve Taylor" />
+  <meta name="Keywords" content="JavaScript, arrow function, syntax, web browser support, test" />
+  <meta name="Description" content="A JavaScript that tests and reports if the web browser supports the JavaScript arrow function syntax." />
+  <script></script>
+ </head>
+ <body>
+
+  <h1>Arrow Function Syntax Web Browser Support Test</h1>
+
+<script>
+var arrowFunctionOne = () => 1;
+var callArrowFunctionOne = arrowFunctionOne();
+var arrowFunctionTwo = param => param;
+var callArrowFunctionTwo = arrowFunctionTwo(2);
+var arrowFunctionThree = (param) => param;
+var callArrowFunctionThree = arrowFunctionThree(3);
+var arrowFunctionFour = (paramOne, paramTwo) => paramOne + paramTwo;
+var callArrowFunctionFour = arrowFunctionFour(1, 3);
+var arrowFunctionFive = (paramOne, paramTwo) => {
+ return paramOne + paramTwo;
+};
+var callArrowFunctionFive = arrowFunctionFive(1, 4);
+var arrowFunctionSix = () => ({keyOne: "keyOne value", keyTwo: "keyTwo value"}); // Return object literal.
+var callArrowFunctionSix = arrowFunctionSix();
+if ((typeof arrowFunctionOne === "function") && arrowFunctionOne instanceof Function && (typeof arrowFunctionTwo === "function") && arrowFunctionTwo instanceof Function && (typeof arrowFunctionThree === "function") && arrowFunctionThree instanceof Function && (typeof arrowFunctionFour === "function") && arrowFunctionFour instanceof Function && (typeof arrowFunctionFive === "function") && arrowFunctionFive instanceof Function && (typeof arrowFunctionSix === "function") && arrowFunctionSix instanceof Function && (callArrowFunctionOne === 1) && (callArrowFunctionTwo === 2) && (callArrowFunctionThree === 3) && (callArrowFunctionFour === 4) && (callArrowFunctionFive === 5) && (typeof callArrowFunctionSix === "object") && callArrowFunctionSix instanceof Object && (callArrowFunctionSix.keyOne === "keyOne value")){
+ document.write("<p><b>Pass</b> (at least partial/possibly full support): The web browser recognizes the JavaScript arrow function syntax. The web browser at least partially/possibly fully supports the JavaScript arrow function syntax. Positive determination of full web browser support is beyond the scope of this test.</p>");
+} else {
+ document.write("<p><b>Fail</b> (no support): The web browser does not recognize the JavaScript arrow function syntax. The web browser does not support the JavaScript arrow function syntax.</p>");
+}
+</script>
+
+ </body>
+</html>

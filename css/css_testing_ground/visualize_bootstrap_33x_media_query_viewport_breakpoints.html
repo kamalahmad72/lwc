@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>Visualize Bootstrap v3.3.x Media Query Viewport Breakpoints</title>
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Steve Taylor" />
+  <meta name="Keywords" content="visualize, Bootstrap, 3.3.x, media query, viewport, breakpoints" />
+  <meta name="Description" content="A demonstration of Bootstrap v3.3.x media query viewport breakpoints." />
+  <style type="text/css">
+   body {
+     margin: 0;
+     padding: 0;
+   }
+   .bar-common {
+     display: inline-block;
+     padding: 3px 0;
+     background-color: #000;
+     color: #fff;
+   }
+   .bar-sm-767px {
+     width: 767px;
+   }
+   .bar-md-991px {
+     width: 991px;
+   }
+   .bar-lg-1199px {
+     width: 1199px;
+   }
+   code {
+     font-family: "courier new", courier, monospace;
+     background-color: #eee;
+     border-radius: 3px;
+     padding: 1px 4px 0;
+   }
+   .align-right {
+     text-align: right;
+   }
+  </style>
+ </head>
+ <body>
+
+  <h1>Visualize Bootstrap v3.3.x Media Query Viewport Breakpoints</h1>
+
+<!-- Bootstrap 3.3.x media query viewport breakpoints via extracted Bootstrap source code including Less (bootstrap-3.3.x.zip); a.) /less/variables.less "Media queries breakpoints" section, and b.) /dist/css/bootstrap.css "@media (min-width:" queries. NOTE: To better visualize Bootstrap media query viewport breakpoints, use bootstrap code itself, not scratch CSS code using positioning/floats/etc. -->
+
+  <p>1.) Extra small screen. Phone. <code>xs</code>. No media query. Styles applied to content at all viewport widths.</p>
+
+  <p>2.) Small screen. Tablet. <code>sm</code>. <code>@media (min-width: 768px) { ... }</code>. Styles applied to content when viewport width is 768+ pixels.<br />
+  <span class="bar-common bar-sm-767px">Width 767px.</span></p>
+
+  <p>3.) Medium screen. Desktop. <code>md</code>. <code>@media (min-width: 992px) { ... }</code>. Styles applied to content when viewport width is 992+ pixels.<br />
+  <span class="bar-common bar-md-991px">Width 991px.</span></p>
+
+  <p>4.) Large screen. Wide desktop. <code>lg</code>. <code>@media (min-width: 1200px) { ... }</code>. Styles applied to content when viewport width is 1200+ pixels.<br />
+  <span class="bar-common bar-lg-1199px">Width 1199px.</span></p>
+
+  <p>Last reviewed/updated: 01 Aug 2016 | Published: 08 Jul 2015 | Status: Active</p>
+
+  <p><a href="http://www.learnwebcoding.com/">Learn Web Coding</a></p>
+
+  <p><a href="https://validator.w3.org/check?uri=referer"><img src="/images/HTML5_Logo_48.gif" alt="Valid HTML5" /></a>&nbsp;<a href="https://jigsaw.w3.org/css-validator/check?uri=referer&amp;profile=css3"><img src="/images/valid-css.gif" alt="Valid CSS Level 3" /></a></p>
+
+ </body>
+</html>

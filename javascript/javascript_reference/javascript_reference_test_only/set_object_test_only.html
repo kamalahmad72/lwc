@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>Set Object Web Browser Support Test</title>
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Steve Taylor" />
+  <meta name="Keywords" content="JavaScript, Set object, web browser support, test" />
+  <meta name="Description" content="A JavaScript that tests and reports if the web browser supports the JavaScript Set object." />
+  <script></script>
+ </head>
+ <body>
+
+  <h1><code>Set</code> Object Web Browser Support Test</h1>
+
+<p id='testId'><b>Fail</b> (no support): The web browser does not recognize the JavaScript <code>Set</code> object. The web browser does not support the JavaScript <code>Set</code> object.</p><!-- Hard code Fail because web browser no support error stops JavaScript execution. -->
+
+<script>
+var setOne = new Set(); // Empty set. Identical to var setOne = new Set(null);. setOne is Set(0) {}.
+var setTwo = new Set([1, 2, 3, 4]); // setTwo initialized with an array. setTwo is Set(4) {1, 2, 3, 4}. IE11 does not support sets initialized with an iterable. IE11 mistakenly reports sets initialized with an iterable as [object Object] {size: 0}. Hence, IE11 Pass/Fail (partial support).
+var arrayLiteralOne = [1, 2, 3, 4];
+var arrayLiteralTwo = [1, 2, 3, 1, 2, 4];
+var string = "123124";
+var setThree = new Set(arrayLiteralOne); // setThree initialized with an array. setThree is Set(4) {1, 2, 3, 4}.
+var setFour = new Set(arrayLiteralTwo); // setFour initialized with an array. Only unique values added. setFour is Set(4) {1, 2, 3, 4}.
+var setFive = new Set(string); // setFive initialized with a string. Only unique values added. setFive is Set(4) {"1", "2", "3", "4"}.
+var setSix = new Set(setTwo); // setSix initialized with a set. setSix is Set(4) {1, 2, 3, 4}.
+if (window.setOne){ // Identical to if (setOne).
+ var element = document.getElementById("testId");
+ setOne.add(1); // Item with value 1 added to setOne. setOne is Set(1) {1}.
+ setOne.add(2); // Item with value 2 added to setOne. setOne is Set(2) {1, 2}.
+ setOne.add(3); // Item with value 3 added to setOne. setOne is Set(3) {1, 2, 3}.
+ setOne.add(3); // setOne has item with value 3. Not unique. Nothing added. setOne is Set(3) {1, 2, 3}.
+ setOne.add("3"); // String, not Number. Unique. Item with value "3" added to setOne. setOne is Set(4) {1, 2, 3, "3"}.
+ var arrayLiteral = [1, 2, 3];
+ var objectLiteral = {propertyOne: 1, propertyTwo: 2, propertyThree: 3};
+ setOne.add(arrayLiteral); // Item with value arrayLiteral added to setOne. setOne is Set(5) {1, 2, 3, "3", arrayLiteral}.
+ setOne.add(objectLiteral); // Item with value objectLiteral added to setOne. setOne is Set(6) {1, 2, 3, "3", arrayLiteral, objectLiteral}.
+ setOne.delete(1); // Item with value 1 removed from setOne. setOne is Set(5) {2, 3, "3", arrayLiteral, objectLiteral}.
+ setOne.delete(3); // Item with value 3 removed from setOne. setOne is Set(4) {2, "3", arrayLiteral, objectLiteral}.
+ setOne.delete(3); // setOne does not have item with value 3. Nothing removed. setOne is Set(4) {2, "3", arrayLiteral, objectLiteral}.
+ setOne.delete(arrayLiteral); // Item with value arrayLiteral removed from setOne. setOne is Set(3) {2, "3", objectLiteral}.
+ setTwo.clear(); // Remove all items from setTwo. setTwo is Set(0) {}.
+ if ((setOne.size === 3) && (setOne.has(1) === false) && (setOne.has(2) === true) && (setOne.has(3) === false) && (setOne.has("3") === true) && (setOne.has(arrayLiteral) === false) && (setOne.has(objectLiteral) === true) && (setTwo.size === 0) && (setThree.size === 4) && (setFour.size === 4) && (setFive.size === 4) && (setSix.size === 4)){
+  element.innerHTML = "<b>Pass</b> (at least partial/possibly full support): The web browser recognizes the JavaScript <code>Set</code> object, and supports at least one <code>Set</code> object capability. The web browser at least partially/possibly fully supports the JavaScript <code>Set</code> object. Positive determination of full web browser support is beyond the scope of this test.";
+ } else {
+  element.innerHTML = "<b>Pass/Fail</b> (partial support): The web browser recognizes the JavaScript <code>Set</code> object, but does not support at least one <code>Set</code> object capability. The web browser partially supports the JavaScript <code>Set</code> object.";
+ }
+}
+</script>
+
+ </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>name Property Web Browser Support Test</title>
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Steve Taylor" />
+  <meta name="Keywords" content="JavaScript, name property, web browser support, test" />
+  <meta name="Description" content="A JavaScript that tests and reports if the web browser supports the JavaScript name property." />
+  <script></script>
+ </head>
+ <body>
+
+  <h1><code>name</code> Property Web Browser Support Test</h1>
+
+<!-- Web browser no support error for getOwnPropertyDescriptor() method, bind() method, and concise method syntax, not name property, stops JavaScript execution. -->
+<!-- Per MDN, getOwnPropertyDescriptor() method and bind() method added to ES2011 5.1 Edition and concise method syntax and name property added to ES2015 6th Edition. -->
+<!-- Per LWC web browser support testing, getOwnPropertyDescriptor() method supported by IE9+, ED12+, FF4+, SF5+, CH5+, OP11.60+, bind() method supported by IE9+, ED12+, FF4+, SF5.1.4+, CH7+, OP11.60+, concise method syntax supported by ED12+, FF34+, CH42+, OP29+, no IE11-, SF5.1.7-, and name property supported by FF53+, CH51+, OP38+, no IE11-, ED16-, SF5.1.7-. Therefore, in web browser support test below, getOwnPropertyDescriptor() method, bind() method, and concise method syntax do not skew test result. -->
+<!-- For examples of accessor properties, see defineProperty() method, name property, and object literal accessor property syntax. -->
+
+<script>
+function functionDeclaration(){}
+var functionExpression = function(){};
+var functionConstructor = new Function();
+function CustomConstructor(){}
+var boundFunctionDeclaration = functionDeclaration.bind();
+var objectLiteral = {
+ traditionalMethod: function(){},
+ conciseMethod(){}, // IE11 error: Expected ':'. Stops JavaScript execution.
+ get getterAndSetterFunction(){},
+ set getterAndSetterFunction(value){}
+};
+if (functionDeclaration.name && functionExpression.name && functionConstructor.name && CustomConstructor.name && boundFunctionDeclaration.name && objectLiteral.traditionalMethod.name){
+ if ((functionDeclaration.name === "functionDeclaration") && (functionExpression.name === "functionExpression") && (functionConstructor.name === "anonymous") && (CustomConstructor.name === "CustomConstructor") && (boundFunctionDeclaration.name === "bound functionDeclaration") && (objectLiteral.traditionalMethod.name === "traditionalMethod") && (objectLiteral.conciseMethod.name === "conciseMethod") && (Object.getOwnPropertyDescriptor(objectLiteral, "getterAndSetterFunction").get.name === "get getterAndSetterFunction") && (Object.getOwnPropertyDescriptor(objectLiteral, "getterAndSetterFunction").set.name === "set getterAndSetterFunction")){
+  document.write("<p><b>Pass</b> (at least partial/possibly full support): The web browser recognizes the JavaScript <code>name</code> property, and supports at least one <code>name</code> property capability. The web browser at least partially/possibly fully supports the JavaScript <code>name</code> property. Positive determination of full web browser support is beyond the scope of this test.</p>");
+ } else {
+  document.write("<p><b>Pass/Fail</b> (partial support): The web browser recognizes the JavaScript <code>name</code> property, but does not support at least one <code>name</code> property capability. The web browser partially supports the JavaScript <code>name</code> property.</p>");
+ }
+} else {
+ document.write("<p><b>Fail</b> (no support): The web browser does not recognize the JavaScript <code>name</code> property. The web browser does not support the JavaScript <code>name</code> property.</p>");
+}
+</script>
+
+ </body>
+</html>

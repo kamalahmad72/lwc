@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>bind() Method Web Browser Support Test</title>
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Steve Taylor" />
+  <meta name="Keywords" content="JavaScript, bind() method, web browser support, test" />
+  <meta name="Description" content="A JavaScript that tests and reports if the web browser supports the JavaScript bind() method." />
+  <script></script>
+ </head>
+ <body>
+
+  <h1><code>bind()</code> Method Web Browser Support Test</h1>
+
+<p id='testId'><b>Fail</b> (no support): The web browser does not recognize the JavaScript <code>bind()</code> method. The web browser does not support the JavaScript <code>bind()</code> method.</p><!-- Hard code Fail because web browser no support error stops JavaScript execution. -->
+
+<script>
+propertyOne = "window object propertyOne value"; // Identical to window.propertyOne = "window object propertyOne value";.
+var objectLiteral = {
+ propertyOne: "objectLiteral propertyOne value"
+}
+function functionDeclaration(){
+ return "Function declaration return " + this.propertyOne + ".";
+}
+var functionExpression = function(){
+ return "Function expression return " + this.propertyOne + ".";
+};
+function functionDeclarationWithParam(param){
+ return "Function declaration with param return " + this.propertyOne + " with " + param + ".";
+}
+var functionExpressionWithParam = function(param){
+ return "Function expression with param return " + this.propertyOne + " with " + param + ".";
+};
+var callFunctionDeclaration = functionDeclaration(); // "Function declaration return window object propertyOne value." For comparison. Not part of test.
+var callFunctionExpression = functionExpression(); // "Function expression return window object propertyOne value." For comparison. Not part of test.
+var boundFunctionDeclaration = functionDeclaration.bind(objectLiteral);
+var callBoundFunctionDeclaration = boundFunctionDeclaration(); // "Function declaration return objectLiteral propertyOne value."
+var boundFunctionExpression = functionExpression.bind(objectLiteral);
+var callBoundFunctionExpression = boundFunctionExpression(); // "Function expression return objectLiteral propertyOne value."
+var boundFunctionDeclarationWithParamOne = functionDeclarationWithParam.bind(objectLiteral);
+var callBoundFunctionDeclarationWithParamOne = boundFunctionDeclarationWithParamOne("passed value"); // "Function declaration with param return objectLiteral propertyOne value with passed value."
+var boundFunctionDeclarationWithParamTwo = functionDeclarationWithParam.bind(objectLiteral, "passed value"); // Bind param to "passed value". Therefore, can call bound function without argument (see next line).
+var callBoundFunctionDeclarationWithParamTwo = boundFunctionDeclarationWithParamTwo(); // "Function declaration with param return objectLiteral propertyOne value with passed value."
+var boundFunctionExpressionWithParamOne = functionExpressionWithParam.bind(objectLiteral);
+var callBoundFunctionExpressionWithParamOne = boundFunctionExpressionWithParamOne("passed value"); // "Function expression with param return objectLiteral propertyOne value with passed value."
+var boundFunctionExpressionWithParamTwo = functionExpressionWithParam.bind(objectLiteral, "passed value"); // Bind param to "passed value". Therefore, can call bound function without argument (see next line).
+var callBoundFunctionExpressionWithParamTwo = boundFunctionExpressionWithParamTwo(); // "Function expression with param return objectLiteral propertyOne value with passed value."
+function returnArray(){
+ return Array.prototype.slice.call(arguments);
+}
+var callReturnArray = returnArray(1, 2, 3); // Array [1, 2, 3]. For comparison. Not part of test.
+var boundReturnArray = returnArray.bind(null, 10, 11, 12); // Bind arguments object to passed values. Therefore, can call bound function without arguments (see next line).
+var callBoundReturnArrayOne = boundReturnArray(); // Array [10, 11, 12].
+var callBoundReturnArrayTwo = boundReturnArray(13, 14, 15); // Array [10, 11, 12, 13, 14, 15]. Arguments to bound function added to arguments object after those specified in bind() method statement.
+if ((functionDeclaration.bind) && (functionExpression.bind)){
+ var element = document.getElementById("testId");
+ if ((typeof boundFunctionDeclaration === "function") && boundFunctionDeclaration instanceof Function && (typeof boundFunctionExpression === "function") && boundFunctionExpression instanceof Function && (callBoundFunctionDeclaration === "Function declaration return objectLiteral propertyOne value.") && (callBoundFunctionExpression === "Function expression return objectLiteral propertyOne value.") && (callBoundFunctionDeclarationWithParamOne === "Function declaration with param return objectLiteral propertyOne value with passed value.") && (callBoundFunctionDeclarationWithParamTwo === "Function declaration with param return objectLiteral propertyOne value with passed value.") && (callBoundFunctionExpressionWithParamOne === "Function expression with param return objectLiteral propertyOne value with passed value.") && (callBoundFunctionExpressionWithParamTwo === "Function expression with param return objectLiteral propertyOne value with passed value.") && (callBoundReturnArrayOne.toString() === "10,11,12") && (callBoundReturnArrayTwo.toString() === "10,11,12,13,14,15")){
+  element.innerHTML = "<b>Pass</b> (at least partial/possibly full support): The web browser recognizes the JavaScript <code>bind()</code> method, and supports at least one <code>bind()</code> method capability. The web browser at least partially/possibly fully supports the JavaScript <code>bind()</code> method. Positive determination of full web browser support is beyond the scope of this test.";
+ } else {
+  element.innerHTML = "<b>Pass/Fail</b> (partial support): The web browser recognizes the JavaScript <code>bind()</code> method, but does not support at least one <code>bind()</code> method capability. The web browser partially supports the JavaScript <code>bind()</code> method.";
+ }
+}
+</script>
+
+ </body>
+</html>

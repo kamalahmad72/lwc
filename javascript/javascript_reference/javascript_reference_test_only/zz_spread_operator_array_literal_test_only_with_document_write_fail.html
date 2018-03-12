@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>Spread Operator In Array Literals Web Browser Support Test</title>
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Steve Taylor" />
+  <meta name="Keywords" content="JavaScript, spread operator, array literal, web browser support, test" />
+  <meta name="Description" content="A JavaScript that tests and reports if the web browser supports the JavaScript spread operator in array literals." />
+  <script></script>
+ </head>
+ <body>
+
+  <h1>Spread Operator In Array Literals Web Browser Support Test</h1>
+
+<script>
+var arrayLiteralOne = [1, 2, 3];
+var arrayLiteralTwo = [7, 8, 9];
+var arrayLiteralTest = [0, ...arrayLiteralOne, 4, 5, 6, ...arrayLiteralTwo, 10];
+if (arrayLiteralTest.toString() === "0,1,2,3,4,5,6,7,8,9,10"){
+ document.write("<p><b>Pass</b> (at least partial/possibly full support): The web browser recognizes the JavaScript spread operator in array literals. The web browser at least partially/possibly fully supports the JavaScript spread operator in array literals. Positive determination of full web browser support is beyond the scope of this test.</p>");
+} else {
+ document.write("<p><b>Fail</b> (no support): The web browser does not recognize the JavaScript spread operator in array literals. The web browser does not support the JavaScript spread operator in array literals.</p>");
+}
+</script>
+
+ </body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>em Inherits From Parent</title>
+<meta charset="UTF-8" />
+<meta name="Author" content="Steve Taylor" />
+<meta name="Keywords" content="unordered list" />
+<meta name="Description" content="A default unordered list." />
+<style type="text/css">
+body { font-size: 20px }
+.fontsize080em { font-size: 0.80em; }
+.fontsize100em { font-size: 1.00em; }
+.fontsize200px { font-size: 20px; }
+.fontsize160px { font-size: 16px; }
+.fontsize128px { font-size: 12.8px; }
+</style>
+</head>
+<body>
+
+<h1>em Inherits From Parent</h1>
+
+<p>Last Reviewed/Updated: 27 Jul 2014 | Published: 27 Jul 2014 | Status: Active</p>
+
+<p>
+<span class="fontsize200px">Font size 20px</span><br />
+Font size 20px</p>
+
+<p>
+<span class="fontsize160px">Font size 16px</span><br />
+<span class="fontsize080em">Font size 20px x 0.80em = 16px</span>
+</p>
+
+<p>
+<span class="fontsize128px">Font size 12.8px</span><br />
+<span class="fontsize080em"><span class="fontsize080em">Font size 20px x 0.80em x 0.80em = 12.8px</span></span>
+</p>
+
+
+	<table border="1">
+		<tr>
+			<td colspan="3">Optional Table Title First Letter Each Word Cap (Id: 10.1)</td>
+		</tr>
+		<tr>
+			<th>Example</th>
+			<th>HTML</th>
+			<th>CSS</th>
+		</tr>
+		<tr>
+			<td><span class="fontsize200px">Font size 20px</span></td>
+			<td><code>&lt;span class=&quot;fontsize200px&quot;&gt;Font size 20px&lt;/span&gt;</code></td>
+			<td><code>.fontsize200px { font-size: 20px; }</code></td>
+		</tr>
+		<tr>
+			<td>Font size 20px</td>
+			<td><code>Font size 20px</code></td>
+			<td><code>body { font-size: 20px; }</code></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><code>&lt;span class=&quot;fontsize200px&quot;&gt;Font size 20px&lt;/span&gt;</code></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><code>&lt;span class=&quot;fontsize200px&quot;&gt;Font size 20px&lt;/span&gt;</code></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+
+<p><a href="http://www.learnwebcoding.com/">Learn Web Coding<br />The Resource For Learning HTML, CSS, BOM, DOM, And JavaScript</a></p>
+
+<p><a href="http://validator.w3.org/check?uri=referer"><img src="../../images/HTML5_Logo_48.gif" alt="Valid HTML5" /></a></p>
+
+</body>
+</html>

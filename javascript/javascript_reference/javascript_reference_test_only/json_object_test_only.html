@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>JSON Object Web Browser Support Test</title>
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Steve Taylor" />
+  <meta name="Keywords" content="JavaScript, JSON object, web browser support, test" />
+  <meta name="Description" content="A JavaScript that tests and reports if the web browser supports the JavaScript JSON object." />
+  <script></script>
+ </head>
+ <body>
+
+  <h1><code>JSON</code> Object Web Browser Support Test</h1>
+
+<script>
+if (window.JSON){ // Identical to if (JSON).
+ var objectLiteral = {
+  propertyOne: "propertyOne value",
+  propertyTwo: "propertyTwo value",
+  propertyThree: "propertyThree value"
+ };
+ var objectLiteralToJsonString = JSON.stringify(objectLiteral);
+ var objectLiteralCopy = JSON.parse(objectLiteralToJsonString);
+ if ((typeof objectLiteralToJsonString === "string") && (typeof objectLiteralCopy === "object") && objectLiteralCopy instanceof Object && Object.prototype.isPrototypeOf(objectLiteralCopy)){
+  document.write("<p><b>Pass</b> (at least partial/possibly full support): The web browser recognizes the JavaScript <code>JSON</code> object, and supports at least one <code>JSON</code> object capability. The web browser at least partially/possibly fully supports the JavaScript <code>JSON</code> object. Positive determination of full web browser support is beyond the scope of this test.</p>");
+ } else {
+  document.write("<p><b>Pass/Fail</b> (partial support): The web browser recognizes the JavaScript <code>JSON</code> object, but does not support at least one <code>JSON</code> object capability. The web browser partially supports the JavaScript <code>JSON</code> object.</p>");
+ }
+} else {
+ document.write("<p><b>Fail</b> (no support): The web browser does not recognize the JavaScript <code>JSON</code> object. The web browser does not support the JavaScript <code>JSON</code> object.</p>");
+}
+</script>
+
+ </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>getPrototypeOf() Method Web Browser Support Test</title>
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Steve Taylor" />
+  <meta name="Keywords" content="JavaScript, getPrototypeOf() method, web browser support, test" />
+  <meta name="Description" content="A JavaScript that tests and reports if the web browser supports the JavaScript getPrototypeOf() method." />
+  <script></script>
+ </head>
+ <body>
+
+  <h1><code>getPrototypeOf()</code> Method Web Browser Support Test</h1>
+
+<!-- Similar comments getPrototypeOf() method, isPrototypeOf() method, and setPrototypeOf() method. -->
+<!-- CustomConstructor.getPrototypeOf(objectViaObjectConstructor) does not work. FF57 reports: TypeError: CustomConstructor.getPrototypeOf is not a function. This implies getPrototypeOf() is a method of Object constructor, not AnyObject constructor. -->
+
+<script>
+if (Object.getPrototypeOf){
+ Object.prototype.propertyOne = "Object prototype propertyOne value"; // Set property on Object prototype.
+ var objectViaObjectConstructor = new Object(); // Instantiate instance of Object as objectViaObjectConstructor.
+ function CustomConstructor(){} // CustomConstructor constructor.
+ CustomConstructor.prototype.propertyOne = "CustomConstructor prototype propertyOne value"; // Set property on CustomConstructor prototype.
+ var objectViaCustomConstructor = new CustomConstructor(); // Instantiate instance of CustomConstructor as objectViaCustomConstructor.
+ var objectLiteral = {}; // Instantiate instance of Object as objectLiteral.
+ if ((Object.getPrototypeOf(objectViaObjectConstructor) === Object.prototype) && (Object.getPrototypeOf(objectViaObjectConstructor).propertyOne === "Object prototype propertyOne value") && (Object.getPrototypeOf(objectViaCustomConstructor) === CustomConstructor.prototype) && (Object.getPrototypeOf(objectViaCustomConstructor).propertyOne === "CustomConstructor prototype propertyOne value") && (Object.getPrototypeOf(objectLiteral) === Object.prototype) && (Object.getPrototypeOf(objectLiteral).propertyOne === "Object prototype propertyOne value")){
+  document.write("<p><b>Pass</b> (at least partial/possibly full support): The web browser recognizes the JavaScript <code>getPrototypeOf()</code> method, and supports at least one <code>getPrototypeOf()</code> method capability. The web browser at least partially/possibly fully supports the JavaScript <code>getPrototypeOf()</code> method. Positive determination of full web browser support is beyond the scope of this test.</p>");
+ } else {
+  document.write("<p><b>Pass/Fail</b> (partial support): The web browser recognizes the JavaScript <code>getPrototypeOf()</code> method, but does not support at least one <code>getPrototypeOf()</code> method capability. The web browser partially supports the JavaScript <code>getPrototypeOf()</code> method.</p>");
+ }
+} else {
+ document.write("<p><b>Fail</b> (no support): The web browser does not recognize the JavaScript <code>getPrototypeOf()</code> method. The web browser does not support the JavaScript <code>getPrototypeOf()</code> method.</p>");
+}
+</script>
+
+ </body>
+</html>

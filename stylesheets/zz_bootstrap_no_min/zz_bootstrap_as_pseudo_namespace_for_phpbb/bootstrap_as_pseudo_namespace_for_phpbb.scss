@@ -1,0 +1,44 @@
+/* ------------------------------ ST EDIT. INTRODUCTION. ------------------------------ */
+
+/* File: /web_server_root_directory/stylesheets/zz_bootstrap_no_min/zz_bootstrap_as_pseudo_namespace_for_phpbb/bootstrap_as_pseudo_namespace_for_phpbb.scss for creating /web_server_root_directory/stylesheets/bootstrap/bootstrap_as_pseudo_namespace_for_phpbb.css.
+ * Purpose: Style sheet for Bootstrap v3.3.7 content at LWC Forums. For the style sheet for Bootstrap v3.3.7 content at LWC Home/Blog, see bootstrap.css.
+ * Used in: All LWC Forums web pages.
+ * Last reviewed/updated: 10 Mar 2018.
+ * Published: 28 Jul 2016.
+ * Web browser support: IE10+, ED12+, FF6+, CH30+, OP17+, which corresponds to the web browsers that LWC Home/Blog/Forums supports, which includes all of the code (PHP, HTML, CSS, JavaScript, etc) at LWC Home/Blog/Forums.
+ * NOTE:
+ * 1.) WANT: To add LWC Home Bootstrap navbar to LWC Forums phpBB v3.1.x Simplicity v3.1.x style (Simplicity). However, loading LWC Home Bootstrap style sheet in Simplicity overall_header.html causes following issues near top of Simplicity home page:
+ *     Issue 1: Glyphicon spacing in <div class="navbar tabbed not-static"> is too small. This is related to bootstrap.css line 18 * { box-sizing: border-box }. However, box-sizing: border-box is required for LWC Home Bootstrap navbar and LWC Home homepage panels to appear correctly.
+ *     Issue 1 resolved by:
+ *         a.) using style rule a { box-sizing: content-box } or by assigning .someclass { box-sizing: content-box } to all glyphicon a elements in phpBB Simplicity style code. However, this causes LWC Home Bootstrap navbar height to increase and does not resolve glyphicon dropdown Issue 2 below.
+ *         b.) pseudo-namespace the LWC Home Bootstrap style sheet and then apply the pseudo-namespaced LWC Home Bootstrap styles to ONLY the LWC Home Bootstrap navbar HTML code inserted into phpBB Simplicity style overall_header.html. This means changing link element line above to reference pseudo-namespaced LWC Home Bootstrap style sheet. This resolves issues 2.) and 3.) below. However, since pseudo-namespaced LWC Home Bootstrap styles are applied only to LWC Home Bootstrap navbar HTML code inserted into phpBB Simplicity style overall_header.html, the remaining phpBB Simplicity style content needs to be styled by LWC Home Bootstrap .container related style rules.
+ *     Issue 2: Glyphicon dropdowns do not appear. For example, Quick Links and Members dropdowns do not appear.
+ *     Issue 2 can be resolved by: did not investigate.
+ *     Issue 3: Vertical space of <div class="navbar secondary with-search"> is too large and vertical size of <div class="navbar nav-breadcrumbs"> is too large. These are related to bootstrap.css line 797 .navbar { min-height: 50px }. min-height: 50px is not required for LWC Bootstrap Navbar to appear correctly.
+ *     Issue 3 can be resolved by overriding with .navbar { min-height: 0 }.
+ *     WANT SUMMARY: Loading LWC Home Bootstrap style sheet in Simplicity style content causes style rule conflicts/issues. To avoid this, decide Decide to resolve by; 1.) pseudo-namespace LWC Home Bootstrap style sheet and then apply the pseudo-namespaced LWC Home Bootstrap styles to ONLY the LWC Home Bootstrap navbar HTML code inserted into Simplicity overall_header.html, and 2.) supplement/override any Simplicity styles via the Simplicity Sass mechanism, which means use Simplicity _custom.scss and _custom_config.scss.
+ * 2.) To use this style sheet (ie, bootstrap_as_pseudo_namespace_for_phpbb.css):
+ *     a.) Assign HTML class="bootstrap" attribute to a parent element of the LWC Home Bootstrap navbar HTML code inserted into Simplicity overall_header.html.
+ *     b.) Load this style sheet (ie, bootstrap_as_pseudo_namespace_for_phpbb.css) in Simplicity overall_header.html.
+ * 3.) To create this sheet (ie, bootstrap_as_pseudo_namespace_for_phpbb.css):
+ *     a.) Copy customized and then edited Bootstrap style sheet from /web_server_root_directory/stylesheets/bootstrap/v33x_cust_then_edit_02/bootstrap.css to /web_server_root_directory/stylesheets/zz_bootstrap_no_min/zz_bootstrap_as_pseudo_namespace_for_phpbb/bootstrap.scss, overwriting any existing bootstrap.scss file.
+ *         NOTE: File extension changed from .css to .scss.
+ *         NOTE: In /web_server_root_directory/stylesheets/zz_bootstrap_no_min/zz_bootstrap_as_pseudo_namespace_for_phpbb/ there is already a bootstrap_as_pseudo_namespace_for_phpbb.scss file and a config.rb file. Delete any existing bootstrap.css file.
+ *         NOTE: In config.rb, if necessary, suppress line comments by uncommenting out line_comments = false.
+ *         NOTE: The /web_server_root_directory/stylesheets/zz_bootstrap_no_min/zz_bootstrap_as_pseudo_namespace_for_phpbb/ folder is simply a working directory, not a destination directory, for generating bootstrap_as_pseudo_namespace_for_phpbb.css so as to avoid overwriting bootstrap.css.
+ *     b.) Point Start Command Prompt with Ruby to /web_server_root_directory/stylesheets/zz_bootstrap_no_min/zz_bootstrap_as_pseudo_namespace_for_phpbb/ and issue compass watch command. Compass takes the bootstrap_as_pseudo_namespace_for_phpbb.scss and bootstrap.scss files and writes the bootstrap_as_pseudo_namespace_for_phpbb.css and bootstrap.css files. Close Start Command Prompt with Ruby.
+ *     c.) Delete bootstrap.css and bootstrap.scss.
+ *     d.) In bootstrap_as_pseudo_namespace_for_phpbb.css, Compass has collated the comments. Move the ST EDIT. SUPPLEMENT/OVERRIDE BOOTSTRAP STYLES. comment and the ST EDIT. ADD LWC NAVBAR STYLES. comment (not the line level comments underneath these comments) to the correct location near the bottom of the file.
+ *     e.) In bootstrap_as_pseudo_namespace_for_phpbb.css, delete the .bootstrap { remaining Compass collated comments } style rule.
+ *     f.) Copy  /web_server_root_directory/stylesheets/zz_bootstrap_no_min/zz_bootstrap_as_pseudo_namespace_for_phpbb/bootstrap_as_pseudo_namespace_for_phpbb.css to /web_server_root_directory/stylesheets/zz_bootstrap_min/bootstrap_as_pseudo_namespace_for_phpbb.scss, overwriting any existing bootstrap_as_pseudo_namespace_for_phpbb.scss file.
+ *         NOTE: File extension changed from .css to .scss.
+ *         NOTE: In /web_server_root_directory/stylesheets/zz_bootstrap_min/, there is already a config.rb file. Delete any existing bootstrap_as_pseudo_namespace_for_phpbb.css file.
+ *         NOTE: In config.rb, if necessary, turn on compression by adding output_style = :compressed.
+ *     g.) Point Start Command Prompt with Ruby to /web_server_root_directory/stylesheets/zz_bootstrap_min/ and issue compass watch command. Compass takes the bootstrap_as_pseudo_namespace_for_phpbb.scss file and writes the bootstrap_as_pseudo_namespace_for_phpbb.css file. Close Start Command Prompt with Ruby.
+ *     h.) Copy /web_server_root_directory/stylesheets/zz_bootstrap_min/bootstrap_as_pseudo_namespace_for_phpbb.css to online as /web_server_root_directory/stylesheets/bootstrap/bootstrap_as_pseudo_namespace_for_phpbb.css.
+ *         NOTE: This style sheet (ie, bootstrap_as_pseudo_namespace_for_phpbb.css) contains all of, and only, the style rules in /web_server_root_directory/stylesheets/bootstrap/bootstrap.css as descendant selectors of the bootstrap selector.
+ *         NOTE: To supplement/override any Simplicity styles as required for inserting the LWC Home Bootstrap navbar into Simplicity, use the Simplicity Sass mechanism, which means use Simplicity _custom.scss and _custom_config.scss. */
+
+.bootstrap {
+  @import "bootstrap.scss";
+}

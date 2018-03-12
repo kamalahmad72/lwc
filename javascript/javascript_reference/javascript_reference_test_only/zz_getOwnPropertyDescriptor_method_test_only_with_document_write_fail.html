@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>getOwnPropertyDescriptor() Method Web Browser Support Test</title>
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Steve Taylor" />
+  <meta name="Keywords" content="JavaScript, getOwnPropertyDescriptor() method, web browser support, test" />
+  <meta name="Description" content="A JavaScript that tests and reports if the web browser supports the JavaScript getOwnPropertyDescriptor() method." />
+  <script></script>
+ </head>
+ <body>
+
+  <h1><code>getOwnPropertyDescriptor()</code> Method Web Browser Support Test</h1>
+
+<!-- Web browser no support error for object literal accessor property syntax, defineProperty() method, and getOwnPropertyDescriptor() method stops JavaScript execution. Therefore, accessor property not tested because web browser no support error for object literal accessor property syntax and defineProperty() method (both of which can be used to create accessor property) stops JavaScript execution, which masks web browser no support error for getOwnPropertyDescriptor() method. -->
+<!-- Per LWC web browser support testing, getOwnPropertyDescriptor() method and defineProperty() method supported by IE9+, ED12+, FF4+, SF5+, CH5+, OP11.60+. -->
+
+<script>
+var objectLiteral = {
+ propertyOne: "propertyOne value" // Data property. Here, property writable, enumerable, and configurable attributes default to boolean true.
+};
+if (Object.getOwnPropertyDescriptor){
+ var dataPropertyDescriptor = Object.getOwnPropertyDescriptor(objectLiteral, "propertyOne"); // IE8 error: Object expected.
+ if ((dataPropertyDescriptor.value === "propertyOne value") && (dataPropertyDescriptor.writable === true) && (dataPropertyDescriptor.enumerable === true) && (dataPropertyDescriptor.configurable === true)){
+  document.write("<p><b>Pass</b> (at least partial/possibly full support): The web browser recognizes the JavaScript <code>getOwnPropertyDescriptor()</code> method, and supports at least one <code>getOwnPropertyDescriptor()</code> method capability. The web browser at least partially/possibly fully supports the JavaScript <code>getOwnPropertyDescriptor()</code> method. Positive determination of full web browser support is beyond the scope of this test.</p>");
+ } else {
+  document.write("<p><b>Pass/Fail</b> (partial support): The web browser recognizes the JavaScript <code>getOwnPropertyDescriptor()</code> method, but does not support at least one <code>getOwnPropertyDescriptor()</code> method capability. The web browser partially supports the JavaScript <code>getOwnPropertyDescriptor()</code> method.</p>");
+ }
+} else {
+ document.write("<p><b>Fail</b> (no support): The web browser does not recognize the JavaScript <code>getOwnPropertyDescriptor()</code> method. The web browser does not support the JavaScript <code>getOwnPropertyDescriptor()</code> method.</p>");
+}
+</script>
+
+ </body>
+</html>

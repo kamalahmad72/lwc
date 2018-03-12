@@ -1,0 +1,7 @@
+Microsoft And Google Moving Their Web Docs To Mozilla MDN Web Docs
+
+Developers rejoice: Microsoft, Google, Mozilla are putting all their web API docs in one place
+http://www.zdnet.com/article/developers-rejoice-microsoft-google-mozilla-are-putting-all-their-web-api-docs-in-one-place/
+
+MDN Web Docs
+https://developer.mozilla.org/en-US/

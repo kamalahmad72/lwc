@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>Parameter Default Value Web Browser Support Test</title>
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Steve Taylor" />
+  <meta name="Keywords" content="JavaScript, parameter default value, web browser support, test" />
+  <meta name="Description" content="A JavaScript that tests and reports if the web browser supports the JavaScript parameter default value." />
+  <script></script>
+ </head>
+ <body>
+
+  <h1>Parameter Default Value Web Browser Support Test</h1>
+
+<!-- Similar testing scheme parameter default value and rest parameter. -->
+<!-- In this example, nesting functions would greatly reduce readability/maintainability. Therefore, did not nest functions below. -->
+
+<p id='testId'><b>Fail</b> (no support): The web browser does not recognize the JavaScript parameter default value. The web browser does not support the JavaScript parameter default value.</p><!-- Hard code Fail because web browser no support error stops JavaScript execution. -->
+
+<script>
+function implementationTest(param = "default value"){
+ implementationTestResult = (param === "default value") ? true : false;
+}
+function capabilityTestOne(paramOne, paramTwo = "paramTwo default value", paramThree = "paramThree default value", paramFour = "paramFour default value"){
+ capabilityTestOneResult = ((paramOne === "paramOne value") && (paramTwo === null) && (paramThree === "paramThree default value") && (paramFour === "paramFour new value")) ? true : false;
+}
+function capabilityTestTwo(paramOne, paramTwo = "paramTwo default value", paramThree = "paramThree default value", paramFour = "paramFour default value"){
+ capabilityTestTwoResult = ((arguments.length === 3) && (arguments[0] === paramOne) && (paramOne === "paramOne value") && (arguments[1] === undefined) && (paramTwo === "paramTwo default value") && (paramTwo !== undefined) && (arguments[2] === "paramThree new value") && (paramThree === "paramThree new value") && (arguments[3] === undefined) && (arguments[3] !== paramFour) && (paramFour === "paramFour default value")) ? true : false;
+}
+implementationTest();
+capabilityTestOne("paramOne value", null, undefined, "paramFour new value"); // "paramValueOne" passed to paramOne demonstrates traditional function argument/parameter behavior. null is valid value and is passed to paramTwo, replacing "paramTwo default value". undefined means use parameter default value. "paramFour new value" is passed to paramFour, replacing "paramFour default value".
+capabilityTestTwo("paramOne value", undefined, "paramThree new value"); // Parameter default values are not set on function arguments object. Note: arguments[3] is undefined, not paramFour. Arguments passed to parameters with default values are set on function arguments object (including undefined when undefined is passed) and are set on function parameter variables (except undefined when undefined is passed).
+if (implementationTestResult){
+ var element = document.getElementById("testId");
+ if (capabilityTestOneResult && capabilityTestTwoResult){
+  element.innerHTML = "<b>Pass</b> (at least partial/possibly full support): The web browser recognizes the JavaScript parameter default value, and supports at least one parameter default value capability. The web browser at least partially/possibly fully supports the JavaScript parameter default value. Positive determination of full web browser support is beyond the scope of this test.";
+ } else {
+  element.innerHTML = "<b>Pass/Fail</b> (partial support): The web browser recognizes the JavaScript parameter default value, but does not support at least one parameter default value capability. The web browser partially supports the JavaScript parameter default value.";
+ }
+}
+</script>
+
+ </body>
+</html>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>Browser Detection &amp; Update JavaScript</title>
+<meta name="Generator" content="" />
+<meta name="Author" content="" />
+<meta name="Keywords" content="" />
+<meta name="Description" content="" />
+<link rel="stylesheet" href="other_pages.css" />
+<script type="text/javascript">
+var appName = navigator.appName;
+var userAgent = navigator.userAgent.toLowerCase();
+var appVersion = navigator.appVersion;
+var parseFloatAppVersion = parseFloat(appVersion);
+var platform = navigator.platform;
+var isMSIE = false;
+var isMSIE_60 = false;
+var isMSIE_Old = false;
+var isOpera = false;
+var isOpera_60 = false;
+var isOpera_Old = false;
+var isNetscape = false;
+var isNetscape_479 = false;
+var isNetscape4_Old = false;
+var isNetscape_621 = false;
+var isNetscape6_Old = false;
+var isMozilla_098 = false;
+var isMozilla_Old = false;
+var browserName = "";
+var browserNameVersion = "";
+
+function checkBrowser() {
+
+	// Detect IE
+	if ((userAgent.indexOf("msie") != -1) && (userAgent.indexOf("opera") == -1)) {
+		isMSIE = true;
+		document.write("isMSIE: " + isMSIE + "<br />");
+		
+		// Detect IE 6.0
+		if (userAgent.indexOf("msie 6.0") != -1) {
+			isMSIE_60 = true;
+			browserName = "Internet Explorer";
+			browserNameVersion = "Internet Explorer 6.0";
+			document.write("isMSIE_60: " + isMSIE_60);
+			yourBrowser();
+		}
+		
+		// Detect IE Old
+		else if (userAgent.indexOf("msie 6.0") == -1) {
+			isMSIE_Old = true;
+			document.write("isMSIE_Old: " + isMSIE_Old);
+			document.write("<hr />" + 
+			"Your Browser is Internet Explorer.<br />" + 
+			"<a href='http://www.microsoft.com/windows/ie/default.htm'>IE 6.0</a>" + " is the current version of Internet Explorer");
+		}
+	}
+	
+	// Detect Opera 
+	else if (userAgent.indexOf("opera") != -1) {
+		isOpera = true;
+		document.write("isOpera: " + isOpera + "<br />");
+		
+		// Detect Opera 6.0
+		if (userAgent.indexOf("6.0") != -1) {
+			isOpera_60 = true;
+			browserName = "Opera";
+			browserNameVersion = "Opera 6.0";
+			document.write("isOpera_60: " + isOpera_60);
+			yourBrowser();
+		}
+		
+		// Detect Opera Old
+		else if (userAgent.indexOf("6.0") == -1) {
+			isOpera_Old = true;
+			document.write("isOpera_Old: " + isOpera_Old);
+			document.write("<hr />" + 
+			"Your Browser is Opera.<br />" + 
+			"<a href='http://www.opera.com/download/'>Opera 6.0</a>" + " is the current version of Opera.");
+		}
+	}
+	
+	// Detect Netscape 4.x, Netscape 6.x and Mozilla 0.x
+	else if ((appName == "Netscape") && (userAgent.indexOf("opera") == -1)) {
+		isNetscape = true;
+		document.write("isNetscape: " + isNetscape + "<br />");
+		
+		// Detect Netscape 4.79
+		if (userAgent.indexOf("4.79") != -1) {
+			isNetscape_479 = true;
+			browserName = "Netscape 4.x";
+			browserNameVersion = "Netscape 4.79";
+			document.write("isNetscape_479: " + isNetscape_479);
+			yourBrowser();
+		}
+		
+		// Detect Netscape 4 Old
+		else if ((userAgent.indexOf("4.79") == -1) && (userAgent.indexOf("4.") != -1)) {
+			isNetscape4_Old = true;
+			document.write("isNetscape4_Old: " + isNetscape4_Old);
+			document.write("<hr />" + 
+			"Your Browser is Netscape 4 and an update is available.<br />" + 
+			"<a href='http://home.netscape.com/download/index.html'>Netscape 4.79</a>" + " is the current version of Netscape 4.");
+		}
+		
+		// Detect Netscape 6.2.1
+		else if (userAgent.indexOf("netscape6/6.2.1") != -1) {
+			isNetscape_621 = true;
+			browserName = "Netscape 6.x";
+			browserNameVersion = "Netscape 6.2.1";
+			document.write("isNetscape_621: " + isNetscape_621);
+			yourBrowser();
+		}	
+		
+		// Detect Netscape 6 Old	
+		else if ((userAgent.indexOf("netscape6/6.2.1") == -1) && (userAgent.indexOf("netscape6") != -1)) {
+			isNetscape6_Old = true;
+			document.write("isNetscape6_Old: " + isNetscape6_Old);
+			document.write("<hr />" + 
+			"Your Browser is Netscape 6 and an update is available.<br />" + 
+			"<a href='http://home.netscape.com/computing/download/index.html'>Netscape 6.2.1</a>" + " is the current version of Netscape 6.");
+		}
+			
+		// Detect Mozilla 098
+		else if (userAgent.indexOf("rv:0.9.8") != -1) {
+			isMozilla_098 = true;
+			browserName = "Mozilla";
+			browserNameVersion = "Mozilla 0.9.8";
+			document.write("isMozilla_098: " + isMozilla_098);
+			yourBrowser();
+		}
+		
+		// Detect Mozilla Old
+		else if ((userAgent.indexOf("rv:0.9.8") == -1) && ((userAgent.indexOf("netscape") == -1) && (userAgent.indexOf("4.") == -1))) {
+			isMozilla_Old = true;
+			document.write("isMozilla_Old: " + isMozilla_Old);
+			document.write("<hr />" + 
+			"Your Browser is Mozilla and an update is available.<br />" + 
+			"<a href='http://www.mozilla.org/releases/'>Mozilla 0.9.8</a>" + " is the current version of Mozilla.");
+		}
+	}
+}
+
+// Report For Those Using Current Version Of Browser
+function yourBrowser() {
+	document.write("<hr>" + 
+	"Your Browser is " + browserNameVersion + ".<br />" +
+	browserNameVersion + " is the current version of " + browserName + ".<br />" +
+	"No " + browserName + " update is available.");
+}
+	
+</script>
+</head>
+
+<body>
+<script type="text/javascript">
+document.write("<b>appName: </b>" + appName + "<br />"); 
+document.write("<b>userAgent: </b>" + userAgent + "<br />"); 
+document.write("<b>appVersion: </b>" + appVersion + "<br />"); 
+document.write("<b>parseFloatAppVersion: </b>" + parseFloatAppVersion + "<br />"); 
+document.write("<b>platform: </b>" + platform + "<br />");
+checkBrowser();
+</script>
+
+<noscript>
+<ul>
+	<li>A JavaScript enabled Browser, with JavaScript turned on, is required to run JavaScripts.</li>
+	<li>You are receiving this message because either your Browser does not support JavaScript, or because JavaScript support has been turned off.</li>
+</ul>
+</noscript>
+
+</body>
+</html>

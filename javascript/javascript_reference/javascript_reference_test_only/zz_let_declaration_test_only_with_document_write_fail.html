@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>let Declaration Web Browser Support Test</title>
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Steve Taylor" />
+  <meta name="Keywords" content="JavaScript, let declaration, web browser support, test" />
+  <meta name="Description" content="A JavaScript that tests and reports if the web browser supports the JavaScript let declaration." />
+  <script></script>
+ </head>
+ <body>
+
+  <h1><code>let</code> Declaration Web Browser Support Test</h1>
+
+<!-- In this example, nesting functions would greatly reduce readability/maintainability. Therefore, did not nest functions below. -->
+
+<script>
+// Implementation test.
+var passImplementationTest = false;
+let implementationVariable = "value";
+if (implementationVariable){
+ passImplementationTest = true;
+}
+// Capability test one: global abatement.
+var passGlobalAbatementCapabilityTest = false;
+let globalAbatementVariableOne = "valueOne";
+window.globalAbatementVariableTwo = "let globalAbatementVariableTwo assignment below does not overwrite me";
+let globalAbatementVariableTwo = "valueTwo";
+if ((window.globalAbatementVariableOne === undefined) && (window.globalAbatementVariableTwo === "let globalAbatementVariableTwo assignment below does not overwrite me")){
+ passGlobalAbatementCapabilityTest = true;
+}
+// Capability test two: no hoisting.
+var passNoHoistingCapabilityTest = false;
+try {
+ noHoistingVariable;
+} catch (error){
+ passNoHoistingCapabilityTest = true;
+}
+let noHoistingVariable = "value";
+// Capability test three: block scope.
+var passBlockScopeCapabilityTest = false,
+ passBlockScopeCapabilityTestOne = false,
+ passBlockScopeCapabilityTestTwo = false,
+ passBlockScopeCapabilityTestThree = false,
+ passBlockScopeCapabilityTestFour = false,
+ passBlockScopeCapabilityTestFive = false,
+ passBlockScopeCapabilityTestSix = false;
+function blockScopeCapabilityTest(){
+ let blockScopeVariableOne = "valueOne"; // let inside function.
+ if (true){
+  if (blockScopeVariableOne){ // Determine if let inside function accessible inside if inside function.
+   passBlockScopeCapabilityTestThree = true;
+  }
+  let blockScopeVariableTwo = "valueTwo"; // let inside if.
+  if (blockScopeVariableTwo){ // Determine if let inside if accessible inside if.
+   passBlockScopeCapabilityTestFour = true;
+  }
+ }
+ if (blockScopeVariableOne){ // Determine if let inside function accessible inside function.
+  passBlockScopeCapabilityTestFive = true;
+ }
+ if (typeof blockScopeVariableTwo === "undefined"){ // Determine if let inside if not accessible outside if.
+  passBlockScopeCapabilityTestSix = true;
+ }
+}
+if (typeof blockScopeVariableOne === "undefined"){ // Determine if let inside function not accessible outside function.
+ passBlockScopeCapabilityTestOne = true;
+}
+if (typeof blockScopeVariableTwo === "undefined"){ // Determine if let inside if inside function not accessible outside function.
+ passBlockScopeCapabilityTestTwo = true;
+}
+blockScopeCapabilityTest();
+if (passBlockScopeCapabilityTestOne && passBlockScopeCapabilityTestTwo && passBlockScopeCapabilityTestThree && passBlockScopeCapabilityTestFour && passBlockScopeCapabilityTestFive && passBlockScopeCapabilityTestSix){
+ passBlockScopeCapabilityTest = true;
+}
+// Capability test four: for loop iterator variable block scope.
+var passForLoopIteratorCapabilityTest = false;
+for (let i = 0; i < 3; i++){
+}
+if (typeof i === "undefined"){
+ passForLoopIteratorCapabilityTest = true;
+}
+var passCapabilityTest = false;
+if (passGlobalAbatementCapabilityTest && passNoHoistingCapabilityTest && passBlockScopeCapabilityTest && passForLoopIteratorCapabilityTest){
+ passCapabilityTest = true;
+}
+if (passImplementationTest){
+ if (passCapabilityTest){
+  document.write("<p><b>Pass</b> (at least partial/possibly full support): The web browser recognizes the JavaScript <code>let</code> declaration, and supports at least one <code>let</code> declaration capability. The web browser at least partially/possibly fully supports the JavaScript <code>let</code> declaration. Positive determination of full web browser support is beyond the scope of this test.</p>");
+ } else {
+  document.write("<p><b>Pass/Fail</b> (partial support): The web browser recognizes the JavaScript <code>let</code> declaration, but does not support at least one <code>let</code> declaration capability. The web browser partially supports the JavaScript <code>let</code> declaration.</p>");
+ }
+} else {
+ document.write("<p><b>Fail</b> (no support): The web browser does not recognize the JavaScript <code>let</code> declaration. The web browser does not support the JavaScript <code>let</code> declaration.</p>");
+}
+</script>
+
+ </body>
+</html>

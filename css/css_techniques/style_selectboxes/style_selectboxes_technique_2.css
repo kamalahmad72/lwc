@@ -1,0 +1,19 @@
+select::-ms-expand {
+  display: none;
+}
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background: url("/images/style_selectboxes/dn_pnt_tri_8x4.gif") no-repeat 95%;
+  border: 2px solid #999;
+  border-radius: 3px;
+  padding: 4px 25px 4px 6px;
+}
+select:hover {
+  border-color: #666;
+}
+select:focus {
+  border-color: #666;
+  outline: 0;
+}

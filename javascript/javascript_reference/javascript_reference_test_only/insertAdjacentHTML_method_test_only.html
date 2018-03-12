@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>insertAdjacentHTML() Method Web Browser Support Test</title>
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Steve Taylor" />
+  <meta name="Keywords" content="JavaScript, insertAdjacentHTML() method, web browser support, test" />
+  <meta name="Description" content="A JavaScript that tests and reports if the web browser supports the JavaScript insertAdjacentHTML() method." />
+  <script></script>
+ </head>
+ <body>
+
+  <h1><code>insertAdjacentHTML()</code> Method Web Browser Support Test</h1>
+
+<p id='testId'></p>
+
+<script>
+var element = document.getElementById("testId");
+if (element.insertAdjacentHTML){
+ element.insertAdjacentHTML("afterbegin", "If the web browser supports the JavaScript <code>insertAdjacentHTML()</code> method <code>afterbegin</code> capability, this HTML code is inserted as the first child node of <code>element</code> on the DOM, which changes <code>element</code> from an element node without a child node to an element node with this HTML code as the child node, which changes the evaluation of <code>if (element.innerHTML)</code> from <code>false</code> to <code>true</code>.");
+ if (element.innerHTML){
+  document.write("<p><b>Pass</b> (at least partial/possibly full support): The web browser recognizes the JavaScript <code>insertAdjacentHTML()</code> method, and supports at least one <code>insertAdjacentHTML()</code> method capability. The web browser at least partially/possibly fully supports the JavaScript <code>insertAdjacentHTML()</code> method. Positive determination of full web browser support is beyond the scope of this test.</p>");
+ } else {
+  document.write("<p><b>Pass/Fail</b> (partial support): The web browser recognizes the JavaScript <code>insertAdjacentHTML()</code> method, but does not support at least one <code>insertAdjacentHTML()</code> method capability. The web browser partially supports the JavaScript <code>insertAdjacentHTML()</code> method.</p>");
+ }
+} else {
+ document.write("<p><b>Fail</b> (no support): The web browser does not recognize the JavaScript <code>insertAdjacentHTML()</code> method. The web browser does not support the JavaScript <code>insertAdjacentHTML()</code> method.</p>");
+}
+</script>
+
+ </body>
+</html>

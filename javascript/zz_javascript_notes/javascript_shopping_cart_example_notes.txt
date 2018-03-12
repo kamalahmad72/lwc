@@ -1,0 +1,31 @@
+1.) About registering event handlers on buttons/forms:
+
+//Alternative way. Instead of submitting/processing a form via submit event, which requires button to be nested in <form></form>, simply trigger event handler via button (which does not have to be a submit button) click event, which does not require button to be nested in <form></form>. Also, if trigger event handler via form submit event, will loose user entered form data after the submit event fires, which, to prevent from happening, requires addition of EventUtil.preventEventDefaultBehavior(event); statement at end of event handler method. Instead, if trigger event handler via button click event, will not loose user entered form data after the click event fires.
+
+//If button is input type="submit" and it is nested in form (not if it is outside form), regardless if event handler is attached to submit button submit event or click event, must use preventDefault to stop page from apparently reloading when presh the button. Alternatively, make button input type="button", button does not need to be nested in form, attach handler to button click event, and do not need preventDefault.
+
+//Get reference to elements in order to register event handler.
+shoppingAddItemsToCartBtn: document.getElementById("shoppingAddItemsToCartBtnId"),
+shoppingAddDeliveryMethodToCartRadioBtn: document.getElementById("shoppingAddDeliveryMethodToCartRadioBtnId"),
+processShopping_continueToShippingBtn: document.getElementById("processShopping_continueToShippingBtnId"),
+processShipping_continueToBillingBtn: document.getElementById("processShipping_continueToBillingBtnId"),
+billingEditShippingInfoToBillingInfoCheckbox: document.getElementById("billingEditShippingInfoToBillingInfoCheckboxId"),
+processBilling_continueToReviewOrderBtn: document.getElementById("processBilling_continueToReviewOrderBtnId"),
+};
+
+//Register event handler to elements.
+EventUtil.registerEventHandler(ShoppingCartUtil.shoppingAddItemsToCartBtn, "click", ShoppingCartUtil.shoppingAddItemsToCart);
+EventUtil.registerEventHandler(ShoppingCartUtil.shoppingAddDeliveryMethodToCartRadioBtn, "change", ShoppingCartUtil.shoppingAddDeliveryMethodToCart);//If use click, then clicking anywhere within paragragh block triggers handler.
+EventUtil.registerEventHandler(ShoppingCartUtil.processShopping_continueToShippingBtn, "click", ShoppingCartUtil.processShopping_continueToShipping);
+EventUtil.registerEventHandler(ShoppingCartUtil.processShipping_continueToBillingBtn, "click", ShoppingCartUtil.processShipping_continueToBilling);
+EventUtil.registerEventHandler(ShoppingCartUtil.billingEditShippingInfoToBillingInfoCheckbox, "click", ShoppingCartUtil.billingEditShippingInfoToBillingInfo);
+EventUtil.registerEventHandler(ShoppingCartUtil.processBilling_continueToReviewOrderBtn, "click", ShoppingCartUtil.processBilling_continueToReviewOrder);
+
+2.) About form length and display: none:
+
+//If displayNone = true, billingAddressId, billingAddress2Id, billingCityId, billingZipCodeId, billingPhoneId are not accessible by document.forms and getElementById. If displayNone = false, billingAddressId, billingAddress2Id, billingCityId, billingZipCodeId, billingPhoneId are accessible by document.forms and getElementById. However, if go from displayNone = false back to displayNone = true, billingAddressId, billingAddress2Id, billingCityId, billingZipCodeId, billingPhoneId remain accessible by docuemnt.forms and getElementByIdnless instead of going back to being not accessible. If displayNone = true or false, both document.forms and getElementById report billingForm.id.length: 13.
+
+3.) If return omitted, script does not stop at failed validation item, it keeps going on to next item. If return true, it is as if the page is reloaded and it looses values.
+
+If return true, or return omitted, form is submitted and form loses value. If return false, form is not submitted and it keeps values.
+

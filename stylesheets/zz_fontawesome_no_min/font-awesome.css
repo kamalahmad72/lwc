@@ -1,0 +1,56 @@
+/* ------------------------------ ST EDIT. INTRODUCTION ------------------------------ */
+
+/* File: /web_server_root_directory/stylesheets/fontawesome/font-awesome.css.
+ * Purpose: Style sheet for Font Awesome 4.7.0 content at LWC Home.
+ * Used in: All LWC Home web pages except specialty web pages.
+ * Last reviewed/updated: 10 Mar 2018.
+ * Published: 04 Feb 2017.
+ * Web browser support: IE10+, ED12+, FF6+, CH30+, OP17+, which corresponds to the web browsers that LWC Home/Blog/Forums supports, which includes all of the code (PHP, HTML, CSS, JavaScript, etc) at LWC Home/Blog/Forums.
+ * NOTE:
+ * Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome. License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License).
+ * Manually edited to; 1.) indicate path to Font Awesome fonts /web_server_root_directory/fonts/fontawesome/ directory (font-awesome_edit_01.css), 2.) remove invalid/unnecessary Font Awesome styles (font-awesome_edit_01.css), and 3.) comment out remaining invalid Font Awesome styles (see comments below) (font-awesome_edit_02.css). Otherwise, no Font Awesome style rules changed. */
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('/fonts/fontawesome/fontawesome-webfont.eot?v=4.7.0');
+  src: url('/fonts/fontawesome/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'),
+       url('/fonts/fontawesome/fontawesome-webfont.woff2?v=4.7.0') format('woff2'),
+       url('/fonts/fontawesome/fontawesome-webfont.woff?v=4.7.0') format('woff'),
+       url('/fonts/fontawesome/fontawesome-webfont.ttf?v=4.7.0') format('truetype'),
+       url('/fonts/fontawesome/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+/* ST edit. Comment out W3C CSS Validation error: Property text-rendering doesn't exist : auto. */
+/* text-rendering: auto; */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* makes the font 33% larger relative to the icon container */
+.fa-lg {
+  font-size: 1.33333333em;
+  line-height: 0.75em;
+  vertical-align: -15%;
+}
+.fa-check:before {
+  content: "\f00c";
+}
+.fa-cog:before {
+  content: "\f013";
+}
+.fa-book:before {
+  content: "\f02d";
+}
+.fa-pencil-square-o:before {
+  content: "\f044";
+}
+.fa-check-square-o:before {
+  content: "\f046";
+}
+.fa-shopping-cart:before {
+  content: "\f07a";
+}

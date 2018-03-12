@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Test Nesting Lists Inside Outside li Valid HTML 5</title>
+<meta charset="UTF-8" />
+<meta name="Author" content="Steve Taylor" />
+<meta name="Keywords" content="valid, HTML5, Web page, template" />
+<meta name="Description" content="A valid HTML5 Web page template." />
+<link rel="stylesheet" type="text/css" href="../library/external_style_sheet.css" />
+<style type="text/css"><!-- embedded style sheet --></style>
+<script type="text/javascript" src="../library/external_javascript.js"></script>
+<script type="text/javascript"><!-- embedded JavaScript --></script>
+</head>
+<body>
+
+<h3>Test Nesting Lists Inside Outside li Valid HTML 5</h3>
+
+<p>Nesting inside li (Valid HTML5)</p>
+
+  <ul>
+   <li>Unordered list for list items that do not occur in order.
+    <ul>
+     <li>Unordered list for list items that do not occur in order.</li>
+     <li>List items first letter first word Cap and end with period.</li>
+    </ul>
+   </li>
+   <li>List items first letter first word Cap and end with period.</li>
+  </ul>
+
+<p>Nesting outside li (Not Valid HTML5)</p>
+
+  <ul>
+   <li>Unordered list for list items that do not occur in order.</li>
+    <ul>
+     <li>Unordered list for list items that do not occur in order.</li>
+     <li>List items first letter first word Cap and end with period.</li>
+    </ul>
+   <li>List items first letter first word Cap and end with period.</li>
+  </ul>
+
+<p>Nesting not specified because not using closing li tags (Valid HTML5)</p>
+
+  <ul>
+   <li>Unordered list for list items that do not occur in order.
+    <ul>
+     <li>Unordered list for list items that do not occur in order.
+     <li>List items first letter first word Cap and end with period.
+    </ul>
+   <li>List items first letter first word Cap and end with period.
+  </ul>
+
+<hr />
+
+<h3>Validation Output: 1 Error </h3>
+<p>Error Line 34, Column 8: Element ul not allowed as child of element ul in this context. (Suppressing further errors from this subtree.)</p>
+
+<p><a href="http://www.learnwebcoding.com/">Learn Web Coding<br />The Resource For Learning HTML, CSS, BOM, DOM, And JavaScript</a></p>
+
+<p><a href="http://validator.w3.org/check?uri=referer"><img src="../images/HTML5_Logo_48.gif" alt="Valid HTML5!" /></a></p>
+
+</body>
+</html>

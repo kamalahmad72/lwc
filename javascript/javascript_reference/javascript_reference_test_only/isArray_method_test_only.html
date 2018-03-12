@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>isArray() Method Web Browser Support Test</title>
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Steve Taylor" />
+  <meta name="Keywords" content="JavaScript, isArray() method, web browser support, test" />
+  <meta name="Description" content="A JavaScript that tests and reports if the web browser supports the JavaScript isArray() method." />
+  <script></script>
+ </head>
+ <body>
+
+  <h1><code>isArray()</code> Method Web Browser Support Test</h1>
+
+<script>
+var booleanLiteral = true,
+ numberLiteral = 1,
+ stringLiteral = "abc",
+ nullLiteral = null,
+ undefinedLiteral = undefined,
+ undefinedVariable;
+function functionDeclaration(){}
+var functionExpression = function(){},
+ functionViaFunctionConstructor = new Function(),
+ objectLiteral = {},
+ objectViaObjectConstructor = new Object();
+function CustomConstructor(){}
+var objectViaCustomConstructor = new CustomConstructor(),
+ arrayLiteral = [],
+ arrayViaArrayConstructor = new Array();
+if (Array.isArray){
+ var element = document.getElementById("testId");
+ if (!Array.isArray(booleanLiteral) && !Array.isArray(numberLiteral) && !Array.isArray(stringLiteral) && !Array.isArray(nullLiteral) && !Array.isArray(undefinedLiteral) && !Array.isArray(undefinedVariable) && !Array.isArray(functionDeclaration) && !Array.isArray(functionExpression) && !Array.isArray(functionViaFunctionConstructor) && !Array.isArray(objectLiteral) && !Array.isArray(objectViaObjectConstructor) && !Array.isArray(objectViaCustomConstructor) && Array.isArray(arrayLiteral) && Array.isArray(arrayViaArrayConstructor)){
+  document.write("<p><b>Pass</b> (at least partial/possibly full support): The web browser recognizes the JavaScript <code>isArray()</code> method, and supports at least one <code>isArray()</code> method capability. The web browser at least partially/possibly fully supports the JavaScript <code>isArray()</code> method. Positive determination of full web browser support is beyond the scope of this test.</p>");
+ } else {
+  document.write("<p><b>Pass/Fail</b> (partial support): The web browser recognizes the JavaScript <code>isArray()</code> method, but does not support at least one <code>isArray()</code> method capability. The web browser partially supports the JavaScript <code>isArray()</code> method.</p>");
+ }
+} else {
+ document.write("<p><b>Fail</b> (no support): The web browser does not recognize the JavaScript <code>isArray()</code> method. The web browser does not support the JavaScript <code>isArray()</code> method.</p>");
+}
+</script>
+
+ </body>
+</html>

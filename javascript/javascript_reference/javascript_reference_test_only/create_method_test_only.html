@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>create() Method Web Browser Support Test</title>
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Steve Taylor" />
+  <meta name="Keywords" content="JavaScript, create() method, web browser support, test" />
+  <meta name="Description" content="A JavaScript that tests and reports if the web browser supports the JavaScript create() method." />
+  <script></script>
+ </head>
+ <body>
+
+  <h1><code>create()</code> Method Web Browser Support Test</h1>
+
+<script>
+if (Object.create){
+ var objectViaObjectConstructor = new Object();
+ function CustomConstructor(){}
+ var objectViaCustomConstructor = new CustomConstructor();
+ var objectLiteral = {};
+ objectLiteral.propertyOne = "objectLiteral propertyOne value", // Inherited by objectThreeViaObjectCreate below.
+ objectLiteral.propertyTwo = "objectLiteral propertyTwo value", // Inherited by objectThreeViaObjectCreate below.
+ objectLiteral.propertyThree = [1, 2, 3] // Inherited by objectThreeViaObjectCreate below.
+ var objectOneViaObjectCreate = Object.create(objectViaObjectConstructor);
+ var objectTwoViaObjectCreate = Object.create(objectViaCustomConstructor);
+ var objectThreeViaObjectCreate = Object.create(objectLiteral);
+ objectThreeViaObjectCreate.propertyTwo = "objectThreeViaObjectCreate propertyTwo value" // Primitive value shadows (aka, masks/overrides).
+ objectThreeViaObjectCreate.propertyThree.push(4); // Reference value shared.
+ objectLiteral.propertyThree.push(5); // Reference value shared.
+ if ((typeof objectOneViaObjectCreate === "object") && objectOneViaObjectCreate instanceof Object && objectViaObjectConstructor.isPrototypeOf(objectOneViaObjectCreate) && (typeof objectTwoViaObjectCreate === "object") && objectTwoViaObjectCreate instanceof Object && objectViaCustomConstructor.isPrototypeOf(objectTwoViaObjectCreate) && (typeof objectThreeViaObjectCreate === "object") && objectThreeViaObjectCreate instanceof Object && objectLiteral.isPrototypeOf(objectThreeViaObjectCreate) && (objectThreeViaObjectCreate.propertyOne === "objectLiteral propertyOne value") && (objectLiteral.propertyTwo === "objectLiteral propertyTwo value") && (objectThreeViaObjectCreate.propertyTwo === "objectThreeViaObjectCreate propertyTwo value") && (objectLiteral.propertyThree.length === 5) && (objectThreeViaObjectCreate.propertyThree.length === 5)){
+  document.write("<p><b>Pass</b> (at least partial/possibly full support): The web browser recognizes the JavaScript <code>create()</code> method, and supports at least one <code>create()</code> method capability. The web browser at least partially/possibly fully supports the JavaScript <code>create()</code> method. Positive determination of full web browser support is beyond the scope of this test.</p>");
+ } else {
+  document.write("<p><b>Pass/Fail</b> (partial support): The web browser recognizes the JavaScript <code>create()</code> method, but does not support at least one <code>create()</code> method capability. The web browser partially supports the JavaScript <code>create()</code> method.</p>");
+ }
+} else {
+ document.write("<p><b>Fail</b> (no support): The web browser does not recognize the JavaScript <code>create()</code> method. The web browser does not support the JavaScript <code>create()</code> method.</p>");
+}
+</script>
+
+ </body>
+</html>

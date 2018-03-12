@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>Generator Object Web Browser Support Test With Additional Comments</title>
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Steve Taylor" />
+  <meta name="Keywords" content="JavaScript, Generator object, web browser support, test, comments" />
+  <meta name="Description" content="A JavaScript that tests and reports if the web browser supports the JavaScript Generator object." />
+  <script></script>
+ </head>
+ <body>
+
+  <h1><code>Generator</code> Object Web Browser Support Test With Additional Comments</h1>
+
+  <h3>To view the comments, right click and select view source. Also, enable the web browser JavaScript console.</h3>
+
+  <p id='testId'><b>Fail</b> (no support): The web browser does not recognize the JavaScript <code>Generator</code> object. The web browser does not support the JavaScript <code>Generator</code> object.</p><!-- Hard code Fail because web browser no support error stops JavaScript execution. -->
+
+  <script>
+  function* generatorFunctionOne(){
+   yield 1; // First call to next() returns Object {value: 1, done: false}.
+   yield 2; // Second call to next() returns Object {value: 2, done: false}.
+   yield 3; // Third call to next() returns Object {value: 3, done: false}. Subsequent calls to next() return Object {value: undefined, done: true}.
+  }
+  function* generatorFunctionTwo(param){
+   yield param; // First call to next() returns Object {value: 1, done: false}. param = 1 throughout.
+   yield param + 1; // Second call to next() returns Object {value: 2, done: false}. param = 1 throughout.
+   yield param + 2; // Third call to next() returns Object {value: 3, done: false}. Subsequent calls to next() return Object {value: undefined, done: true}. param = 1 throughout.
+  }
+  function* generatorFunctionThree(param){
+   console.log("---------- console.logs for function* generatorFunctionThree(param){) ----------");
+   console.log("First call to next() executes generator function body code through first yield statement and then stops execution. Here, param: " + param); // 1.
+   yield param++; // param = 1. First call to next() returns Object {value: 1, done: false}. Then post increment param to 2.
+   console.log("Second call to next() executes generator function body code from after first yield statement through next yield statement and then stops execution. Here, param: " + param); // 2.
+   yield param++; // param = 2 from line above. Second call to next() returns Object {value: 2, done: false}. Then post increment param to 3.
+   console.log("Third call to next() executes generator function body code from after second yield statement through next yield statement and then stops execution. Here, param: " + param); // 3.
+   yield param++; // param = 3 from line above. Third call to next() returns Object {value: 3, done: false}. Then post increment param to 4. Subsequent calls to next() return Object {value: undefined, done: true}.
+   console.log("Subsequent call to next() executes generator function body code from after third yield statement to end of function body code without encountering a yield/return statement. Subsequent call to next() returns Object {value: undefined, done: true}. Here, param: " + param); // 4.
+   console.log("Subsequent calls to next() do not execute any generator function body code. Subsequent calls to next() return Object {value: undefined, done: true}.");
+  }
+  function* generatorFunctionFour(){
+   console.log("---------- console.logs for function* generatorFunctionFour(){) ----------");
+   console.log("First call to next() executes generator function body code through first yield statement and then stops execution.");
+   yield 1; // First call to next() returns Object {value: 1, done: false}.
+   console.log("Second call to next() executes generator function body code from after first yield statement through return statement and then stops execution.");
+   return 2; // Second call to next() returns Object {value: 2, done: true}. Subsequent calls to next() return Object {value: undefined, done: true}.
+   console.log("Because of return statement, subsequent calls to next() do not execute any generator function body code. As a result, this console.log is not reachable and is never displayed.");
+   yield 3; // Unreachable code after return statement.
+  }
+  // Call generator functions. Each call returns a Generator object which inherits prototype from Object (window.Generator property does not exist) and is an iterator. Generator object has next() method property.
+  var generatorObjectOne = generatorFunctionOne();
+  var generatorObjectTwo = generatorFunctionTwo(1);
+  var generatorObjectThree = generatorFunctionThree(1);
+  var generatorObjectFour = generatorFunctionFour();
+  // For generatorObjectOne capability tests.
+  var generatorObjectOneFirstNext = generatorObjectOne.next(); // First call to next() executes generator function body code through first yield statement and then stops execution. next() returns object with value property set to first yield expression value, and done property set to boolean indicating if value property was not set to a yield expression value. Object {value: 1, done: false}.
+  var generatorObjectOneFirstNextValue = generatorObjectOneFirstNext.value; // 1.
+  var generatorObjectOneFirstNextDone = generatorObjectOneFirstNext.done; // false.
+  var generatorObjectOneSecondNextValue = generatorObjectOne.next().value; // Second call to next() executes generator function body code from after first yield statement through next yield statement and then stops execution. next().value returns second yield expression value. 2.
+  var generatorObjectOneThirdNext = generatorObjectOne.next(); // Third call to next() executes generator function body code from after second yield statement through next yield statement and then stops execution. next() returns object with value property set to third yield expression value, and done property set to boolean indicating if value property value is NOT set from a yield expression value. Object {value: 3, done: false}.
+  var generatorObjectOneThirdNextValue = generatorObjectOneThirdNext.value; // 3.
+  var generatorObjectOneThirdNextDone = generatorObjectOneThirdNext.done; // false.
+  var generatorObjectOneSubsequentNext = generatorObjectOne.next(); // Subsequent calls to next() do not encounter a yield/return statement. next() returns object with value property set to undefined and done property set to true. Object {value: undefined, done: true}.
+  var generatorObjectOneSubsequentNextValue = generatorObjectOneSubsequentNext.value; // undefined.
+  var generatorObjectOneSubsequentNextDone = generatorObjectOneSubsequentNext.done; // true.
+  // For generatorObjectFour capability tests.
+  var generatorObjectFourFirstNext = generatorObjectFour.next(); // First call to next() executes generator function body code through first yield statement and then stops execution. next() returns object with value property set to first yield expression value, and done property set to boolean indicating if value property was not set to a yield expression value. Object {value: 1, done: false}.
+  var generatorObjectFourFirstNextValue = generatorObjectFourFirstNext.value; // 1.
+  var generatorObjectFourFirstNextDone = generatorObjectFourFirstNext.done; // false.
+  var generatorObjectFourSecondNext = generatorObjectFour.next(); // Second call to next() executes generator function body code from after first yield statement through return statement and then stops execution. next() returns object with value property set to return expression value, and done property set to boolean indicating if value property was not set to a yield expression value. Object {value: 2, done: true}.
+  var generatorObjectFourSecondNextValue = generatorObjectFourSecondNext.value; // 2.
+  var generatorObjectFourSecondNextDone = generatorObjectFourSecondNext.done; // true.
+  var generatorObjectFourSubsequentNext = generatorObjectFour.next(); // Because of return statement, subsequent calls to next() do not execute any generator function body code. next() returns object with value property set to undefined and done property set to true. Object {value: undefined, done: true}.
+  var generatorObjectFourSubsequentNextValue = generatorObjectFourSubsequentNext.value; // undefined.
+  var generatorObjectFourSubsequentNextDone = generatorObjectFourSubsequentNext.done; // true.
+  if (window.generatorObjectOne){ // Identical to if (generatorObjectOne).
+   var element = document.getElementById("testId");
+   if ((typeof generatorObjectOne === "object") && generatorObjectOne instanceof Object && Object.prototype.isPrototypeOf(generatorObjectOne) && generatorObjectOne[Symbol.iterator] && (typeof generatorObjectOneFirstNext === "object") && (generatorObjectOneFirstNextValue === 1) && (generatorObjectOneFirstNextDone === false) && (generatorObjectOneSecondNextValue === 2) && (generatorObjectOneThirdNextValue === 3) && (generatorObjectOneThirdNextDone === false) && (typeof generatorObjectOneSubsequentNext === "object") && (generatorObjectOneSubsequentNextValue === undefined) && (generatorObjectOneSubsequentNextDone === true) && (generatorObjectTwo.next().value === 1) && (generatorObjectTwo.next().value === 2) && (generatorObjectTwo.next().value === 3) && (generatorObjectThree.next().value === 1) && (generatorObjectThree.next().value === 2) && (generatorObjectThree.next().value === 3) && (generatorObjectThree.next().value === undefined) && (generatorObjectThree.next().value === undefined) && (generatorObjectFourFirstNextValue === 1) && (generatorObjectFourFirstNextDone === false) && (generatorObjectFourSecondNextValue === 2) && (generatorObjectFourSecondNextDone === true) && (generatorObjectFourSubsequentNextValue === undefined) && (generatorObjectFourSubsequentNextDone === true)){
+    element.innerHTML = "<b>Pass</b> (at least partial/possibly full support): The web browser recognizes the JavaScript <code>Generator</code> object, and supports at least one <code>Generator</code> object capability. The web browser at least partially/possibly fully supports the JavaScript <code>Generator</code> object. Positive determination of full web browser support is beyond the scope of this test.";
+   } else {
+    element.innerHTML = "<b>Pass/Fail</b> (partial support): The web browser recognizes the JavaScript <code>Generator</code> object, but does not support at least one <code>Generator</code> object capability. The web browser partially supports the JavaScript <code>Generator</code> object.";
+   }
+  }
+  </script>
+
+  <p>Web browser support: ED13+, FF29+, CH39+, OP26+. No IE11-, SF5.1.7-.</p>
+
+  <p>Last reviewed/updated: 01 Jan 2018 | Published: 01 Jan 2018 | Status: Active</p>
+
+  <p><a href="http://www.learnwebcoding.com/">Learn Web Coding</a></p>
+
+  <p><a href="https://validator.w3.org/check?uri=referer"><img src="/images/HTML5_Logo_48.gif" alt="Valid HTML5" /></a>&nbsp;<a href="https://jigsaw.w3.org/css-validator/check?uri=referer&amp;profile=css3"><img src="/images/valid-css.gif" alt="Valid CSS Level 3" /></a></p>
+
+ </body>
+</html>

@@ -1,0 +1,14 @@
+body {
+  font-size: 16px;
+  background-color: #ddd;
+}
+.interactive-object {
+  text-decoration: underline;
+}
+.interactive-object:visited {
+  color: #999;
+}
+.interactive-object:hover {
+  color: #999;
+  cursor: pointer;
+}

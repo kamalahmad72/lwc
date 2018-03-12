@@ -1,0 +1,31 @@
+input[type="text"], textarea {
+  font-family: "times new roman";
+  font-size: 15.33px;
+  color: #000;
+  border: 2px solid #999;
+  border-radius: 3px;
+  padding: 4px 6px;
+}
+textarea {
+  vertical-align: middle;
+}
+input[type="text"]:hover, textarea:hover {
+  border-color: #666;
+}
+input[type="text"]:focus, textarea:focus {
+  outline: 0;
+  border-color: #666;
+}
+input[type="text"]:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  color: #888;
+}
+input[type="text"]:-moz-placeholder, textarea:-moz-placeholder {
+  color: #888;
+}
+input[type="text"]::-moz-placeholder, textarea::-moz-placeholder {
+  color: #888;
+  opacity: 1;
+}
+input[type="text"]::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #888;
+}

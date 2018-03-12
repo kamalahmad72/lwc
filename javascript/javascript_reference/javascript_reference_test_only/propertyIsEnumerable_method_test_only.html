@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>propertyIsEnumerable() Method Web Browser Support Test</title>
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Steve Taylor" />
+  <meta name="Keywords" content="JavaScript, propertyIsEnumerable() method, web browser support, test" />
+  <meta name="Description" content="A JavaScript that tests and reports if the web browser supports the JavaScript propertyIsEnumerable() method." />
+  <script></script>
+ </head>
+ <body>
+
+  <h1><code>propertyIsEnumerable()</code> Method Web Browser Support Test</h1>
+
+<script>
+if (Object.propertyIsEnumerable){
+ function CustomConstructor(){
+  this.ownPropertyOne = "value"; // By default, author-defined own property is enumerable.
+  this.ownPropertyTwo = function(){}; // By default, author-defined own property is enumerable.
+ }
+ CustomConstructor.prototype.prototypePropertyOne = "value"; // By default, author-defined prototype property is not enumerable; however, is enumerated by for...in loop.
+ CustomConstructor.prototype.prototypePropertyTwo = function(){}; // By default, author-defined prototype property is not enumerable; however, is enumerated by for...in loop.
+ var objectViaCustomConstructor = new CustomConstructor();
+ objectViaCustomConstructor.ownPropertyThree = "value"; // By default, author-defined own property is enumerable.
+ objectViaCustomConstructor.ownPropertyFour = function(){}; // By default, author-defined own property is enumerable.
+ var objectLiteral = {
+  ownPropertyOne: "value", // By default, author-defined own property is enumerable.
+  ownPropertyTwo: function(){} // By default, author-defined own property is enumerable.
+ }
+ objectLiteral.ownPropertyThree = "value"; // By default, author-defined own property is enumerable.
+ objectLiteral.ownPropertyFour = function(){}; // By default, author-defined own property is enumerable.
+ if (objectViaCustomConstructor.propertyIsEnumerable("ownPropertyOne") && objectViaCustomConstructor.propertyIsEnumerable("ownPropertyTwo") && !objectViaCustomConstructor.propertyIsEnumerable("prototypePropertyOne") && !objectViaCustomConstructor.propertyIsEnumerable("prototypePropertyTwo") && objectViaCustomConstructor.propertyIsEnumerable("ownPropertyThree") && objectViaCustomConstructor.propertyIsEnumerable("ownPropertyFour") && !objectViaCustomConstructor.propertyIsEnumerable("propertyDoesNotExist") && !objectViaCustomConstructor.propertyIsEnumerable("constructor") && !objectViaCustomConstructor.propertyIsEnumerable("hasOwnProperty") && !objectViaCustomConstructor.propertyIsEnumerable("isPrototypeOf") && !objectViaCustomConstructor.propertyIsEnumerable("propertyIsEnumerable") && !objectViaCustomConstructor.propertyIsEnumerable("toLocaleString") && !objectViaCustomConstructor.propertyIsEnumerable("toString") && !objectViaCustomConstructor.propertyIsEnumerable("valueOf") && objectLiteral.propertyIsEnumerable("ownPropertyOne") && objectLiteral.propertyIsEnumerable("ownPropertyTwo") && objectLiteral.propertyIsEnumerable("ownPropertyThree") && objectLiteral.propertyIsEnumerable("ownPropertyFour") && !objectLiteral.propertyIsEnumerable("propertyDoesNotExist") && !objectLiteral.propertyIsEnumerable("constructor") && !objectLiteral.propertyIsEnumerable("hasOwnProperty") && !objectLiteral.propertyIsEnumerable("isPrototypeOf") && !objectLiteral.propertyIsEnumerable("propertyIsEnumerable") && !objectLiteral.propertyIsEnumerable("toLocaleString") && !objectLiteral.propertyIsEnumerable("toString") && !objectLiteral.propertyIsEnumerable("valueOf")){
+  document.write("<p><b>Pass</b> (at least partial/possibly full support): The web browser recognizes the JavaScript <code>propertyIsEnumerable()</code> method, and supports at least one <code>propertyIsEnumerable()</code> method capability. The web browser at least partially/possibly fully supports the JavaScript <code>propertyIsEnumerable()</code> method. Positive determination of full web browser support is beyond the scope of this test.</p>");
+ } else {
+  document.write("<p><b>Pass/Fail</b> (partial support): The web browser recognizes the JavaScript <code>propertyIsEnumerable()</code> method, but does not support at least one <code>propertyIsEnumerable()</code> method capability. The web browser partially supports the JavaScript <code>propertyIsEnumerable()</code> method.</p>");
+ }
+} else {
+ document.write("<p><b>Fail</b> (no support): The web browser does not recognize the JavaScript <code>propertyIsEnumerable()</code> method. The web browser does not support the JavaScript <code>propertyIsEnumerable()</code> method.</p>");
+}
+</script>
+
+ </body>
+</html>

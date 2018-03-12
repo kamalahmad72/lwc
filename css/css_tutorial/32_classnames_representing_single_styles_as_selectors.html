@@ -1,0 +1,25 @@
+<html>
+ <head>
+  <title>3.2. Class-Names Representing Single Styles As Selectors</title>
+  <style type="text/css">
+   .background-color {
+     background-color: yellow;
+   }
+   .margin-left {
+     margin-left: 20px;
+   }
+   .border {
+     border: 1px solid black;
+   }
+  </style>
+ </head>
+ <body>
+  <p class="background-color">p styled via the .background-color style rule.</p>
+  <p class="background-color margin-left">p styled via the .background-color and .margin-left style rules.</p>
+  <p class="background-color border">p styled via the .background-color and .border style rules.</p>
+  <p class="background-color margin-left border">p styled via the .background-color, .margin-left, and .border style rules.</p>
+  <p class="margin-left">p styled via the .margin-left style rule.</p>
+  <p class="margin-left border">p styled via the .margin-left and .border style rules.</p>
+  <p class="border">p styled via the .border style rule.</p>
+ </body>
+</html>

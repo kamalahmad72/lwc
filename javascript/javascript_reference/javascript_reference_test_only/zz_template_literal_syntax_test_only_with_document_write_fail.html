@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>Template Literal Syntax Web Browser Support Test</title>
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Steve Taylor" />
+  <meta name="Keywords" content="JavaScript, template literal, syntax, web browser support, test" />
+  <meta name="Description" content="A JavaScript that tests and reports if the web browser supports the JavaScript template literal syntax." />
+  <script></script>
+ </head>
+ <body>
+
+  <h1>Template Literal Syntax Web Browser Support Test</h1>
+
+<script>
+var templateLiteralOne = `abc def ghi`;
+var templateLiteralTwo = `jkl mno pqr`;
+var templateLiteralThree = `${templateLiteralOne} ${templateLiteralTwo}`;
+if ((typeof templateLiteralOne === "string") && (templateLiteralOne.length === 11)){
+ if ((typeof templateLiteralThree === "string") && (templateLiteralThree === `abc def ghi jkl mno pqr`) && (templateLiteralThree.length === 23)){
+  document.write("<p><b>Pass</b> (at least partial/possibly full support): The web browser recognizes the JavaScript template literal syntax, and supports at least one template literal syntax capability. The web browser at least partially/possibly fully supports the JavaScript template literal syntax. Positive determination of full web browser support is beyond the scope of this test.</p>");
+ } else {
+  document.write("<p><b>Pass/Fail</b> (partial support): The web browser recognizes the JavaScript template literal syntax, but does not support at least one template literal syntax capability. The web browser partially supports the JavaScript template literal syntax.</p>");
+ }
+} else {
+ document.write("<p><b>Fail</b> (no support): The web browser does not recognize the JavaScript template literal syntax. The web browser does not support the JavaScript template literal syntax.</p>");
+}
+</script>
+
+ </body>
+</html>

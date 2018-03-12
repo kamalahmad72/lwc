@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>Object Literal Accessor Property Syntax Web Browser Support Test</title>
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Steve Taylor" />
+  <meta name="Keywords" content="JavaScript, object literal, accessor property, syntax, web browser support, test" />
+  <meta name="Description" content="A JavaScript that tests and reports if the web browser supports the JavaScript object literal accessor property syntax." />
+  <script></script>
+ </head>
+ <body>
+
+  <h1>Object Literal Accessor Property Syntax Web Browser Support Test</h1>
+
+<!-- For examples of accessor properties, see defineProperty() method, name property, and object literal accessor property syntax. -->
+
+<p id='testId'><b>Fail</b> (no support): The web browser does not recognize the JavaScript object literal accessor property syntax. The web browser does not support the JavaScript object literal accessor property syntax.</p><!-- Hard code Fail because web browser no support error stops JavaScript execution. -->
+
+<script>
+var objectLiteral = {
+ propertyOne: "propertyOne value", // Data property.
+ propertyTwo: "propertyTwo value", // Data property.
+ get getterAndSetterFunction(){ // Accessor property. Getter function. IE8 error: Expected ':'.
+  return this.propertyOne;
+ },
+ set getterAndSetterFunction(value){ // Accessor property. Setter function.
+  this.propertyTwo += " with " + value;
+ }
+};
+// console.log(objectLiteral.getterAndSetterFunction); // "propertyOne value". Read from accessor property triggers getter. Return value set on accessor property.
+objectLiteral.getterAndSetterFunction = "passed value"; // Write to accessor property triggers setter. Assigned value passed as argument to setter function.
+if (objectLiteral.getterAndSetterFunction){
+ var element = document.getElementById("testId");
+ if ((objectLiteral.getterAndSetterFunction === "propertyOne value") && (objectLiteral.propertyTwo === "propertyTwo value with passed value")){
+  element.innerHTML = "<b>Pass</b> (at least partial/possibly full support): The web browser recognizes the JavaScript object literal accessor property syntax, and supports at least one object literal accessor property syntax capability. The web browser at least partially/possibly fully supports the JavaScript object literal accessor property syntax. Positive determination of full web browser support is beyond the scope of this test.";
+ } else {
+  element.innerHTML = "<b>Pass/Fail</b> (partial support): The web browser recognizes the JavaScript object literal accessor property syntax, but does not support at least one object literal accessor property syntax capability. The web browser partially supports the JavaScript object literal accessor property syntax.";
+ }
+}
+</script>
+
+ </body>
+</html>

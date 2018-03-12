@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>find() Method Web Browser Support Test</title>
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Steve Taylor" />
+  <meta name="Keywords" content="JavaScript, find() method, web browser support, test" />
+  <meta name="Description" content="A JavaScript that tests and reports if the web browser supports the JavaScript find() method." />
+  <script></script>
+ </head>
+ <body>
+
+  <h1><code>find()</code> Method Web Browser Support Test</h1>
+
+<script>
+var arrayLiteral = [10, 20, 30, 40];
+if (arrayLiteral.find){
+ var element = document.getElementById("testId");
+ var arrayElement,
+  elementIndex,
+  arr;
+ var objectLiteral = {propertyOne: 5};
+ var callbackFunction = function(element, index, array){ // Callback function passed three arguments; 1.) array element value (required), 2.) array element numeric index (optional), and 3.) array that find() method was called on (optional). The element, index, and array parameters are author-defined local variables; meaning, can use any valid identifier (eg, elementFoo, indexFoo, arrayFoo).
+  arrayElement = element; // Set callback function arguments on outer scoped variables for use in if conditional below.
+  elementIndex = index;
+  arr = array;
+  return (element + this.propertyOne) === 35; // Return statement can be any boolean expression; but, typically includes array element value. When callback function returns boolean true, find() method returns array element value. Otherwise, continue iterating over array elements. If no boolean expression evaluates to true, find() method returns undefined.
+ }
+ var findReturnValue = arrayLiteral.find(callbackFunction, objectLiteral); // Call find() method and set find() method return value on variable. Callback function this value is objectLiteral.
+ if ((findReturnValue === 30) && (arrayElement === 30) && (elementIndex === 2) && (arr === arrayLiteral)){
+  document.write("<p><b>Pass</b> (at least partial/possibly full support): The web browser recognizes the JavaScript <code>find()</code> method, and supports at least one <code>find()</code> method capability. The web browser at least partially/possibly fully supports the JavaScript <code>find()</code> method. Positive determination of full web browser support is beyond the scope of this test.</p>");
+ } else {
+  document.write("<p><b>Pass/Fail</b> (partial support): The web browser recognizes the JavaScript <code>find()</code> method, but does not support at least one <code>find()</code> method capability. The web browser partially supports the JavaScript <code>find()</code> method.</p>");
+ }
+} else {
+ document.write("<p><b>Fail</b> (no support): The web browser does not recognize the JavaScript <code>find()</code> method. The web browser does not support the JavaScript <code>find()</code> method.</p>");
+}
+</script>
+
+ </body>
+</html>

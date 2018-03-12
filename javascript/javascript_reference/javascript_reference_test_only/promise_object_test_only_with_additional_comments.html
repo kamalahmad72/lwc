@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>Promise Object Web Browser Support Test With Additional Comments</title>
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Steve Taylor" />
+  <meta name="Keywords" content="JavaScript, Promise object, web browser support, test, comments" />
+  <meta name="Description" content="A JavaScript that tests and reports if the web browser supports the JavaScript Promise object." />
+  <script></script>
+ </head>
+ <body>
+
+  <h1><code>Promise</code> Object Web Browser Support Test With Additional Comments</h1>
+
+  <h3>To view the comments, right click and select view source. Also, enable the web browser JavaScript console.</h3>
+
+  <p id='testId'><b>Fail</b> (no support): The web browser does not recognize the JavaScript <code>Promise</code> object. The web browser does not support the JavaScript <code>Promise</code> object.</p><!-- Hard code Fail because web browser no support error stops JavaScript execution. -->
+
+  <script>
+  var executionOrder = "";
+  var unsettledPromiseViaPromiseConstructor = new Promise(function(resolve, reject){ // Instantiate instance of Promise as unsettledPromiseViaPromiseConstructor. Promise constructor argument is a function known as executor function. Executor function is executed immediately/synchronously and typically awaits the result of an asynchronous operation. If asynchronous operation deemed to complete successfully, promise is to be considered in settled - fulfilled state, and executor function is to call resolve() function, which triggers promise object then() method argument (a function known as fulfillment handler). If asynchronous operation deemed to complete unsuccessfully, promise is to be considered in settled - rejected state, and executor function is to call reject() function, which triggers promise object catch() method argument (a function known as rejection handler). If asynchronous operation deemed not completed, promise is to be considered in unsettled - pending state, and executor function is not to call resolve() function or reject() function. Executor function did not call resolve() or reject() function; therefore, promise is in unsettled - pending state. [[PromiseState]]: "pending". [[PromiseValue]]: undefined. Executor function resolve and reject parameters can be any valid identifier (eg, resolveFoo and rejectFoo). IE11 error: SCRIPT5009: 'Promise' is undefined.
+   executionOrder += "Sync 001: Executing unsettledPromiseViaPromiseConstructor executor function. "; // Executor function executed synchronously.
+   console.log("Execution Order 01.) " + executionOrder); // "Sync 001: Executing unsettledPromiseViaPromiseConstructor executor function. ".
+  // Insert asynchronous operation that returns boolean value.
+  // if (value){ // Determine if asynchronous operation completed successfully.
+  //  resolve("Async 001: "); // Asynchronous operation completed successfully. Call resolve() function.
+  // } else {
+  //  reject("Async 001: "); // Asynchronous operation completed unsuccessfully. Call reject() function.
+  // }
+  });
+  unsettledPromiseViaPromiseConstructor.then(function(value){ // then() method argument is a function (fulfillment handler) whose body is executed asynchronously. Executor function resolve() function argument (typically a value) is passed to fulfillment handler value parameter. Fulfillment handler value parameter can be any valid identifier (eg, valueFoo). Executor function did not call resolve() function; therefore, fulfillment handler not triggered.
+   executionOrder += value + "Executing unsettledPromiseViaPromiseConstructor fulfillment handler. "; // Not executed.
+  });
+  unsettledPromiseViaPromiseConstructor.catch(function(reason){ // catch() method argument is a function (rejection handler) whose body is executed asynchronously. Executor function reject() function argument (typically an error object or value) is passed to rejection handler reason parameter. Rejection handler reason parameter can be any valid identifier (eg, reasonFoo). Executor function did not call reject() function; therefore, rejection handler not triggered.
+   executionOrder += reason + "Executing unsettledPromiseViaPromiseConstructor rejection handler. "; // Not executed.
+  });
+  var fulfilledPromiseViaPromiseConstructor = new Promise(function(resolve, reject){ // Instantiate instance of Promise as fulfilledPromiseViaPromiseConstructor. Executor function called resolve() function; therefore, promise is in settled - fulfilled state. [[PromiseState]]: "fulfilled". [[PromiseValue]]: "Async 102: ".
+   executionOrder += "Sync 002: Executing fulfilledPromiseViaPromiseConstructor executor function. "; // Executor function executed synchronously.
+   console.log("Execution Order 02.) " + executionOrder); // "Sync 001: Executing unsettledPromiseViaPromiseConstructor executor function. Sync 002: Executing fulfilledPromiseViaPromiseConstructor executor function. ".
+   resolve("Async 102: ");
+  });
+  fulfilledPromiseViaPromiseConstructor.then(function(value){ // Executor function called resolve() function; therefore, fulfillment handler triggered.
+   executionOrder += value + "Executing fulfilledPromiseViaPromiseConstructor fulfillment handler. "; // Fulfillment handler executed asynchronously. NOTE: Async 102 executed after Sync 004 below.
+   console.log("Execution Order 05.) " + executionOrder); // "Sync 001: Executing unsettledPromiseViaPromiseConstructor executor function. Sync 002: Executing fulfilledPromiseViaPromiseConstructor executor function. Sync 003: Executing rejectedPromiseViaPromiseConstructor executor function. Sync 004: Executing rejectedPromiseViaErrorThrownInExecutorFunction executor function. Async 102: Executing fulfilledPromiseViaPromiseConstructor fulfillment handler. ".
+  });
+  fulfilledPromiseViaPromiseConstructor.catch(function(reason){ // Executor function did not call reject() function; therefore, rejection handler not triggered.
+   executionOrder += reason + "Executing fulfilledPromiseViaPromiseConstructor rejection handler. "; // Not executed.
+  });
+  var rejectedPromiseViaPromiseConstructor = new Promise(function(resolve, reject){ // Instantiate instance of Promise as rejectedPromiseViaPromiseConstructor. Executor function called reject() function; therefore, promise is in settled - rejected state. [[PromiseState]]: "rejected". [[PromiseValue]]: "Async 103: ".
+   executionOrder += "Sync 003: Executing rejectedPromiseViaPromiseConstructor executor function. "; // Executor function executed synchronously. NOTE: Sync 003 executed before Async 102 above.
+   console.log("Execution Order 03.) " + executionOrder); // "Sync 001: Executing unsettledPromiseViaPromiseConstructor executor function. Sync 002: Executing fulfilledPromiseViaPromiseConstructor executor function. Sync 003: Executing rejectedPromiseViaPromiseConstructor executor function. ".
+   reject("Async 103: ");
+  });
+  rejectedPromiseViaPromiseConstructor.then(function(value){ // Executor function did not call resolve() function; therefore, fulfillment handler not triggered. Uncaught exception.
+   executionOrder += value + "Executing rejectedPromiseViaPromiseConstructor fulfillment handler. "; // Not executed.
+  });
+  rejectedPromiseViaPromiseConstructor.catch(function(reason){ // Executor function called reject() function; therefore, rejection handler triggered.
+   executionOrder += reason + "Executing rejectedPromiseViaPromiseConstructor rejection handler. "; // Rejection handler executed asynchronously.
+   console.log("Execution Order 06.) " + executionOrder); // "Sync 001: Executing unsettledPromiseViaPromiseConstructor executor function. Sync 002: Executing fulfilledPromiseViaPromiseConstructor executor function. Sync 003: Executing rejectedPromiseViaPromiseConstructor executor function. Sync 004: Executing rejectedPromiseViaErrorThrownInExecutorFunction executor function. Async 102: Executing fulfilledPromiseViaPromiseConstructor fulfillment handler. Async 103: Executing rejectedPromiseViaPromiseConstructor rejection handler. ".
+  });
+  var rejectedPromiseViaErrorThrownInExecutorFunction = new Promise(function(resolve, reject){ // Instantiate instance of Promise as rejectedPromiseViaErrorThrownInExecutorFunction. Executor function has built-in try-catch that catches error object on error. If error thrown in executor function, promise is to be considered in settled - rejected state, and executor function triggers promise object catch() method argument (a function known as rejection handler). Error thrown in executor function; therefore, promise is in settled - rejected state. [[PromiseState]]: "rejected". [[PromiseValue]]: "Async 104: ".
+   executionOrder += "Sync 004: Executing rejectedPromiseViaErrorThrownInExecutorFunction executor function. "; // Executor function executed synchronously.
+   console.log("Execution Order 04.) " + executionOrder); // "Sync 001: Executing unsettledPromiseViaPromiseConstructor executor function. Sync 002: Executing fulfilledPromiseViaPromiseConstructor executor function. Sync 003: Executing rejectedPromiseViaPromiseConstructor executor function. Sync 004: Executing rejectedPromiseViaErrorThrownInExecutorFunction executor function. ".
+   throw new Error("Async 104: ");
+  });
+  rejectedPromiseViaErrorThrownInExecutorFunction.then(function(value){ // Error thrown in executor function; therefore, fulfillment handler not triggered.
+   executionOrder += value + "Executing rejectedPromiseViaErrorThrownInExecutorFunction fulfillment handler. "; // Not executed.
+  });
+  rejectedPromiseViaErrorThrownInExecutorFunction.catch(function(reason){ // Error thrown in executor function; therefore, rejection handler triggered.
+   executionOrder += reason.message + "Executing rejectedPromiseViaErrorThrownInExecutorFunction rejection handler. "; // Rejection handler executed asynchronously.
+   console.log("Execution Order 07.) " + executionOrder); // "Sync 001: Executing unsettledPromiseViaPromiseConstructor executor function. Sync 002: Executing fulfilledPromiseViaPromiseConstructor executor function. Sync 003: Executing rejectedPromiseViaPromiseConstructor executor function. Sync 004: Executing rejectedPromiseViaErrorThrownInExecutorFunction executor function. Async 102: Executing fulfilledPromiseViaPromiseConstructor fulfillment handler. Async 103: Executing rejectedPromiseViaPromiseConstructor rejection handler. Async 104: Executing rejectedPromiseViaErrorThrownInExecutorFunction rejection handler. ".
+  });
+  var fulfilledPromiseViaPromiseResolveMethod = Promise.resolve("Async 105: "); // Promise.resolve() method returns a promise in settled - fulfilled (never in settled - rejected) state and triggers promise object then() method argument (a function known as fulfillment handler). Because Promise.resolve() never returns a rejected promise, there is no need for catch() method/rejection handler. [[PromiseState]]: "fulfilled". [[PromiseValue]]: "Async 105: ".
+  fulfilledPromiseViaPromiseResolveMethod.then(function(value){ // Promise.resolve() method triggers fulfillment handler. Promise.resolve() method argument (typically a value) is passed to fulfillment handler value parameter. Fulfillment handler value parameter can be any valid identifier (eg, valueFoo).
+   executionOrder += value + "Executing fulfilledPromiseViaPromiseResolveMethod fulfillment handler. "; // Fulfillment handler executed asynchronously.
+   console.log("Execution Order 08.) " + executionOrder); // "Sync 001: Executing unsettledPromiseViaPromiseConstructor executor function. Sync 002: Executing fulfilledPromiseViaPromiseConstructor executor function. Sync 003: Executing rejectedPromiseViaPromiseConstructor executor function. Sync 004: Executing rejectedPromiseViaErrorThrownInExecutorFunction executor function. Async 102: Executing fulfilledPromiseViaPromiseConstructor fulfillment handler. Async 103: Executing rejectedPromiseViaPromiseConstructor rejection handler. Async 104: Executing rejectedPromiseViaErrorThrownInExecutorFunction rejection handler. Async 105: Executing fulfilledPromiseViaPromiseResolveMethod fulfillment handler. ".
+  });
+  var rejectedPromiseViaPromiseRejectMethod = Promise.reject("Async 106: "); // Promise.reject() method returns a promise in settled - rejected (never in settled - fulfilled) state and triggers promise object catch() method argument (a function known as rejection handler). Because Promise.reject() never returns a fulfilled promise, there is no need for then() method/fulfillment handler. [[PromiseState]]: "rejected". [[PromiseValue]]: "Async 106: ".
+  rejectedPromiseViaPromiseRejectMethod.catch(function(reason){ // Promise.reject() method triggers rejection handler. Promise.reject() method argument (typically an error object or value) is passed to rejection handler reason parameter. Rejection handler reason parameter can be any valid identifier (eg, reasonFoo).
+   executionOrder += reason + "Executing rejectedPromiseViaPromiseRejectMethod rejection handler. "; // Rejection handler executed asynchronously.
+   console.log("Execution Order 09.) " + executionOrder); // "Sync 001: Executing unsettledPromiseViaPromiseConstructor executor function. Sync 002: Executing fulfilledPromiseViaPromiseConstructor executor function. Sync 003: Executing rejectedPromiseViaPromiseConstructor executor function. Sync 004: Executing rejectedPromiseViaErrorThrownInExecutorFunction executor function. Async 102: Executing fulfilledPromiseViaPromiseConstructor fulfillment handler. Async 103: Executing rejectedPromiseViaPromiseConstructor rejection handler. Async 104: Executing rejectedPromiseViaErrorThrownInExecutorFunction rejection handler. Async 105: Executing fulfilledPromiseViaPromiseResolveMethod fulfillment handler. Async 106: Executing rejectedPromiseViaPromiseRejectMethod rejection handler. ".
+  });
+  var thenableResolveOne = { // A thenable is an object with a then() method that accepts resolve function and reject function arguments. Thenable plays role similar to Promise constructor executor function in that: 1.) when passed to Promise.resolve() method, calling resolve()/reject() function triggers fulfillment/rejection handler, respectively; 2.) when passed to Promise.resolve() method, resolve()/reject() function argument is passed to fulfillment/rejection handler parameter, respectively, and 3.) resolve and reject can be any valid identifier (eg, resolveFoo and RejectFoo).
+   then: function(resolve, reject){
+    resolve("Async 107: ");
+   }
+  };
+  var fulfilledPromiseViaPromiseResolveMethodPassedThenableResolve = Promise.resolve(thenableResolveOne); // Promise.resolve() method passed a non-promise thenable returns a promise in the state specified by the non-promise thenable, not per the Promise.resolve() method. Promise.resolve() method passed a non-promise thenable that calls resolve() function returns a promise in settled - fulfilled state and triggers promise object then() method argument (a function known as fulfillment handler). [[PromiseState]]: "fulfilled". [[PromiseValue]]: "Async 107: ".
+  fulfilledPromiseViaPromiseResolveMethodPassedThenableResolve.then(function(value){ // Promise.resolve() method passed a non-promise thenable that calls resolve() function triggers fulfillment handler. Thenable resolve() function argument (typically a value) is passed to fulfillment handler value parameter. Fulfillment handler value parameter can be any valid identifier (eg, valueFoo).
+   executionOrder += value + "Executing fulfilledPromiseViaPromiseResolveMethodPassedThenableResolve fulfillment handler. "; // Fulfillment handler executed asynchronously. NOTE: Async 107 executed after Async 110 below.
+   console.log("Execution Order 12.) " + executionOrder); // "Sync 001: Executing unsettledPromiseViaPromiseConstructor executor function. Sync 002: Executing fulfilledPromiseViaPromiseConstructor executor function. Sync 003: Executing rejectedPromiseViaPromiseConstructor executor function. Sync 004: Executing rejectedPromiseViaErrorThrownInExecutorFunction executor function. Async 102: Executing fulfilledPromiseViaPromiseConstructor fulfillment handler. Async 103: Executing rejectedPromiseViaPromiseConstructor rejection handler. Async 104: Executing rejectedPromiseViaErrorThrownInExecutorFunction rejection handler. Async 105: Executing fulfilledPromiseViaPromiseResolveMethod fulfillment handler. Async 106: Executing rejectedPromiseViaPromiseRejectMethod rejection handler. Async 109: Executing rejectedPromiseViaPromiseRejectMethodPassedThenableResolve rejection handler. Async 110: Executing rejectedPromiseViaPromiseRejectMethodPassedThenableReject rejection handler. Async 107: Executing fulfilledPromiseViaPromiseResolveMethodPassedThenableResolve fulfillment handler. ".
+  });
+  fulfilledPromiseViaPromiseResolveMethodPassedThenableResolve.catch(function(reason){ // Promise.resolve() method passed a non-promise thenable that calls resolve() function does not trigger rejection handler.
+   executionOrder += reason + "Executing fulfilledPromiseViaPromiseResolveMethodPassedThenableResolve rejection handler. "; // Not executed.
+  });
+  var thenableRejectOne = {
+   then: function(resolve, reject){
+    reject("Async 108: ");
+   }
+  };
+  var rejectedPromiseViaPromiseResolveMethodPassedThenableReject = Promise.resolve(thenableRejectOne); // Promise.resolve() method passed a non-promise thenable returns a promise in the state specified by the non-promise thenable, not per the Promise.resolve() method. Promise.resolve() method passed a non-promise thenable that calls reject() function returns a promise in settled - rejected state and triggers promise object catch() method argument (a function known as rejection handler). [[PromiseState]]: "rejected". [[PromiseValue]]: "Async 108: ".
+  rejectedPromiseViaPromiseResolveMethodPassedThenableReject.then(function(value){ // Promise.resolve() method passed a non-promise thenable that calls reject() function does not trigger fulfillment handler. Uncaught exception.
+   executionOrder += value + "Executing rejectedPromiseViaPromiseResolveMethodPassedThenableReject fulfillment handler. "; // Not executed.
+  });
+  rejectedPromiseViaPromiseResolveMethodPassedThenableReject.catch(function(reason){ // Promise.resolve() method passed a non-promise thenable that calls reject() function triggers rejection handler. Thenable reject() function argument (typically an error object or value) is passed to rejection handler reason parameter. Rejection handler reason parameter can be any valid identifier (eg, reasonFoo).
+   executionOrder += reason + "Executing rejectedPromiseViaPromiseResolveMethodPassedThenableReject rejection handler. "; // Rejection handler executed asynchronously.
+   console.log("Execution Order 13.) " + executionOrder); // "Sync 001: Executing unsettledPromiseViaPromiseConstructor executor function. Sync 002: Executing fulfilledPromiseViaPromiseConstructor executor function. Sync 003: Executing rejectedPromiseViaPromiseConstructor executor function. Sync 004: Executing rejectedPromiseViaErrorThrownInExecutorFunction executor function. Async 102: Executing fulfilledPromiseViaPromiseConstructor fulfillment handler. Async 103: Executing rejectedPromiseViaPromiseConstructor rejection handler. Async 104: Executing rejectedPromiseViaErrorThrownInExecutorFunction rejection handler. Async 105: Executing fulfilledPromiseViaPromiseResolveMethod fulfillment handler. Async 106: Executing rejectedPromiseViaPromiseRejectMethod rejection handler. Async 109: Executing rejectedPromiseViaPromiseRejectMethodPassedThenableResolve rejection handler. Async 110: Executing rejectedPromiseViaPromiseRejectMethodPassedThenableReject rejection handler. Async 107: Executing fulfilledPromiseViaPromiseResolveMethodPassedThenableResolve fulfillment handler. Async 108: Executing rejectedPromiseViaPromiseResolveMethodPassedThenableReject rejection handler. ".
+  }).then(function(value){
+   // Web browser support feature implementation test and feature capability test if conditionals.
+   if (window.Promise && window.unsettledPromiseViaPromiseConstructor && window.fulfilledPromiseViaPromiseConstructor && window.rejectedPromiseViaPromiseConstructor && window.rejectedPromiseViaErrorThrownInExecutorFunction && window.fulfilledPromiseViaPromiseResolveMethod && window.rejectedPromiseViaPromiseRejectMethod && window.fulfilledPromiseViaPromiseResolveMethodPassedThenableResolve && window.rejectedPromiseViaPromiseResolveMethodPassedThenableReject && window.rejectedPromiseViaPromiseRejectMethodPassedThenableResolve && window.rejectedPromiseViaPromiseRejectMethodPassedThenableReject){ // Identical to if (Promise && unsettledPromiseViaPromiseConstructor && fulfilledPromiseViaPromiseConstructor && rejectedPromiseViaPromiseConstructor && rejectedPromiseViaErrorThrownInExecutorFunction && fulfilledPromiseViaPromiseResolveMethod && rejectedPromiseViaPromiseRejectMethod && fulfilledPromiseViaPromiseResolveMethodPassedThenableResolve && rejectedPromiseViaPromiseResolveMethodPassedThenableReject && rejectedPromiseViaPromiseRejectMethodPassedThenableResolve && rejectedPromiseViaPromiseRejectMethodPassedThenableReject).
+    var element = document.getElementById("testId");
+    if ((typeof unsettledPromiseViaPromiseConstructor === "object") && unsettledPromiseViaPromiseConstructor instanceof Object && unsettledPromiseViaPromiseConstructor instanceof Promise && Object.prototype.isPrototypeOf(unsettledPromiseViaPromiseConstructor) && Promise.prototype.isPrototypeOf(unsettledPromiseViaPromiseConstructor) && (typeof unsettledPromiseViaPromiseConstructor.then === "function") && (typeof unsettledPromiseViaPromiseConstructor.catch === "function") && Promise.prototype.isPrototypeOf(fulfilledPromiseViaPromiseConstructor) && Promise.prototype.isPrototypeOf(rejectedPromiseViaPromiseConstructor) && Promise.prototype.isPrototypeOf(rejectedPromiseViaErrorThrownInExecutorFunction) && Promise.prototype.isPrototypeOf(fulfilledPromiseViaPromiseResolveMethod) && Promise.prototype.isPrototypeOf(rejectedPromiseViaPromiseRejectMethod) && Promise.prototype.isPrototypeOf(fulfilledPromiseViaPromiseResolveMethodPassedThenableResolve) && Promise.prototype.isPrototypeOf(rejectedPromiseViaPromiseResolveMethodPassedThenableReject) && Promise.prototype.isPrototypeOf(rejectedPromiseViaPromiseRejectMethodPassedThenableResolve) && Promise.prototype.isPrototypeOf(rejectedPromiseViaPromiseRejectMethodPassedThenableReject) && (executionOrder === "Sync 001: Executing unsettledPromiseViaPromiseConstructor executor function. Sync 002: Executing fulfilledPromiseViaPromiseConstructor executor function. Sync 003: Executing rejectedPromiseViaPromiseConstructor executor function. Sync 004: Executing rejectedPromiseViaErrorThrownInExecutorFunction executor function. Async 102: Executing fulfilledPromiseViaPromiseConstructor fulfillment handler. Async 103: Executing rejectedPromiseViaPromiseConstructor rejection handler. Async 104: Executing rejectedPromiseViaErrorThrownInExecutorFunction rejection handler. Async 105: Executing fulfilledPromiseViaPromiseResolveMethod fulfillment handler. Async 106: Executing rejectedPromiseViaPromiseRejectMethod rejection handler. Async 109: Executing rejectedPromiseViaPromiseRejectMethodPassedThenableResolve rejection handler. Async 110: Executing rejectedPromiseViaPromiseRejectMethodPassedThenableReject rejection handler. Async 107: Executing fulfilledPromiseViaPromiseResolveMethodPassedThenableResolve fulfillment handler. Async 108: Executing rejectedPromiseViaPromiseResolveMethodPassedThenableReject rejection handler. ")){ // Omit (typeof identifier === "object"), identifier instanceof Object, identifier instanceof Promise, and Object.prototype.isPrototypeOf(identifier) for all promises except first to reduce amount of code and because they all return true.
+     element.innerHTML = "<b>Pass</b> (at least partial/possibly full support): The web browser recognizes the JavaScript <code>Promise</code> object, and supports at least one <code>Promise</code> object capability. The web browser at least partially/possibly fully supports the JavaScript <code>Promise</code> object. Positive determination of full web browser support is beyond the scope of this test.";
+    } else {
+     element.innerHTML = "<b>Pass/Fail</b> (partial support): The web browser recognizes the JavaScript <code>Promise</code> object, but does not support at least one <code>Promise</code> object capability. The web browser partially supports the JavaScript <code>Promise</code> object.";
+    }
+   }
+  });
+  var thenableResolveTwo = {
+   then: function(resolve, reject){
+    resolve("This thenable, not this value, passed to rejection handler.");
+   },
+   value: "Async 109: "
+  };
+  var rejectedPromiseViaPromiseRejectMethodPassedThenableResolve = Promise.reject(thenableResolveTwo); // Promise.reject() method passed a non-promise thenable returns a promise in settled - rejected (never in settled - fulfilled) state and triggers promise object catch() method argument (a function known as rejection handler). Because Promise.reject() passed a non-promise thenable never returns a fulfilled promise, there is no need for then() method/fulfillment handler. [[PromiseState]]: "rejected". [[PromiseValue]]: Object.
+  rejectedPromiseViaPromiseRejectMethodPassedThenableResolve.catch(function(reason){ // Promise.reject() method passed a non-promise thenable triggers rejection handler. The thenable is passed to rejection handler reason parameter. Rejection handler reason parameter can be any valid identifier (eg, reasonFoo).
+   executionOrder += reason.value + "Executing rejectedPromiseViaPromiseRejectMethodPassedThenableResolve rejection handler. "; // Rejection handler executed asynchronously. NOTE: Async 109 executed before Async 107 above.
+   console.log("Execution Order 10.) " + executionOrder); // "Sync 001: Executing unsettledPromiseViaPromiseConstructor executor function. Sync 002: Executing fulfilledPromiseViaPromiseConstructor executor function. Sync 003: Executing rejectedPromiseViaPromiseConstructor executor function. Sync 004: Executing rejectedPromiseViaErrorThrownInExecutorFunction executor function. Async 102: Executing fulfilledPromiseViaPromiseConstructor fulfillment handler. Async 103: Executing rejectedPromiseViaPromiseConstructor rejection handler. Async 104: Executing rejectedPromiseViaErrorThrownInExecutorFunction rejection handler. Async 105: Executing fulfilledPromiseViaPromiseResolveMethod fulfillment handler. Async 106: Executing rejectedPromiseViaPromiseRejectMethod rejection handler. Async 109: Executing rejectedPromiseViaPromiseRejectMethodPassedThenableResolve rejection handler. ".
+  // console.log(reason === thenableResolveTwo); // true.
+  });
+  var thenableRejectTwo = {
+   then: function(resolve, reject){
+    reject("This thenable, not this value, passed to rejection handler.");
+   },
+   value: "Async 110: "
+  };
+  var rejectedPromiseViaPromiseRejectMethodPassedThenableReject = Promise.reject(thenableRejectTwo); // Promise.resolve() method passed a non-promise thenable returns a promise in settled - rejected (never in settled - fulfilled) state and triggers promise object catch() method argument (a function known as rejection handler). Because Promise.reject() passed a non-promise thenable never returns a fulfilled promise, there is no need for then() method/fulfillment handler. [[PromiseState]]: "rejected". [[PromiseValue]]: Object.
+  rejectedPromiseViaPromiseRejectMethodPassedThenableReject.catch(function(reason){ // Promise.reject() method passed a non-promise thenable triggers rejection handler. The thenable is passed to rejection handler reason parameter. Rejection handler reason parameter can be any valid identifier (eg, reasonFoo).
+   executionOrder += reason.value + "Executing rejectedPromiseViaPromiseRejectMethodPassedThenableReject rejection handler. "; // Rejection handler executed asynchronously.
+   console.log("Execution Order 11.) " + executionOrder); // "Sync 001: Executing unsettledPromiseViaPromiseConstructor executor function. Sync 002: Executing fulfilledPromiseViaPromiseConstructor executor function. Sync 003: Executing rejectedPromiseViaPromiseConstructor executor function. Sync 004: Executing rejectedPromiseViaErrorThrownInExecutorFunction executor function. Async 102: Executing fulfilledPromiseViaPromiseConstructor fulfillment handler. Async 103: Executing rejectedPromiseViaPromiseConstructor rejection handler. Async 104: Executing rejectedPromiseViaErrorThrownInExecutorFunction rejection handler. Async 105: Executing fulfilledPromiseViaPromiseResolveMethod fulfillment handler. Async 106: Executing rejectedPromiseViaPromiseRejectMethod rejection handler. Async 109: Executing rejectedPromiseViaPromiseRejectMethodPassedThenableResolve rejection handler. Async 110: Executing rejectedPromiseViaPromiseRejectMethodPassedThenableReject rejection handler. ".
+  // console.log(reason === thenableRejectTwo); // true.
+  });
+  // For web browser support feature implementation test and feature capability test if conditionals, see chained promise rejectedPromiseViaPromiseResolveMethodPassedThenableReject.catch().then above (Execution Order 13).
+  </script>
+
+  <p>Web browser support: ED12+, FF32+, CH32+, OP19+. Partial FF29 - 31. No IE11-, SF5.1.7-.</p>
+
+  <p>Last reviewed/updated: 24 Feb 2018 | Published: 22 Feb 2018 | Status: Active</p>
+
+  <p><a href="http://www.learnwebcoding.com/">Learn Web Coding</a></p>
+
+  <p><a href="https://validator.w3.org/check?uri=referer"><img src="/images/HTML5_Logo_48.gif" alt="Valid HTML5" /></a>&nbsp;<a href="https://jigsaw.w3.org/css-validator/check?uri=referer&amp;profile=css3"><img src="/images/valid-css.gif" alt="Valid CSS Level 3" /></a></p>
+
+ </body>
+</html>

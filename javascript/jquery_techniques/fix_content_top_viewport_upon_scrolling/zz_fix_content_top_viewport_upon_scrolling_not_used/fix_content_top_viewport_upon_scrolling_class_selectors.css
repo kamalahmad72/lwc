@@ -1,0 +1,29 @@
+* {
+  line-height: 1.15;
+  text-align: center;
+  margin: 0;
+}
+.header-class {
+  height: 130px;
+}
+.header-not-navbar {
+  height: 80px;
+  background-color: #fcc;
+}
+.header-navbar {
+  height: 50px;
+  background-color: #000;
+  color: #fff;
+}
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.main-class {
+  background-color: #cfc;
+}
+.footer-class {
+  background-color: #ccf;
+}

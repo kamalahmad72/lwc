@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>Web Browser Support For The HTML noscript Element As A Classed Element: Tests And Results</title>
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Steve Taylor" />
+  <meta name="Keywords" content="web browser, support, HTML, noscript, element, classed element, CSS, class selector, test" />
+  <meta name="Description" content=">Tests to determine web browser support for the HTML noscript element as a classed element, and the results" />
+  <style type="text/css">
+   .classed {
+     background-color: limegreen;
+     color: white;
+     border: 2px solid blue;
+     padding: 15px;
+     margin: 15px;
+   }
+  </style>
+ </head>
+ <body>
+
+  <h1>Web Browser Support For The HTML <code>noscript</code> Element As A Classed Element: Tests And Results</h1>
+
+  <h4>Test CSS</h4>
+
+<pre>
+.classed {
+  background-color: limegreen;
+  color: white;
+  border: 2px solid blue;
+  padding: 15px;
+  margin: 15px;
+}
+</pre>
+
+  <h4>Test HTML</h4>
+
+<pre>
+before &lt;noscript class=&quot;classed&quot;&gt;noscript content&lt;/noscript&gt; after
+</pre>
+
+  <h4>Test (requires disabling web browser JavaScript)</h4>
+
+  before <noscript class="classed">noscript content</noscript> after
+
+  <h4>Results</h4>
+
+  <p>Web browser support for the HTML <code>noscript</code> element as a classed element: IE 6+, ED12*, FF1.5+, SF3.1+, CH5+**, OP15+<!-- VI1+ -->.</p>
+
+  <p>Web browser no support for the HTML <code>noscript</code> element as a classed element: OP12.17-.</p>
+
+  <p>* Apparently it is not possible to disable JavaScript on ED13. Therefore, ED13 not tested.<br />
+     ** Apparently it is not possible to disable JavaScript on CH4-. Therefore, CH4- not tested.</p>
+
+
+  <p>* Apparently cannot disable JavaScript on ED13 and CH4-. Therefore, did not test ED13 and CH4-.</p>
+
+  <p>Last reviewed/updated: 17 Jun 2016 | Published: 17 Jun 2016 | Status: Active</p>
+
+  <p><a href="http://www.learnwebcoding.com/">Learn Web Coding</a></p>
+
+  <p><a href="https://validator.w3.org/check?uri=referer"><img src="/images/HTML5_Logo_48.gif" alt="Valid HTML5" /></a>&nbsp;<a href="https://jigsaw.w3.org/css-validator/check?uri=referer&amp;profile=css3"><img src="/images/valid-css.gif" alt="Valid CSS Level 3" /></a></p>
+
+ </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>Template Tag Syntax Web Browser Support Test</title>
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Steve Taylor" />
+  <meta name="Keywords" content="JavaScript, template tag, syntax, web browser support, test" />
+  <meta name="Description" content="A JavaScript that tests and reports if the web browser supports the JavaScript template tag syntax." />
+  <script></script>
+ </head>
+ <body>
+
+  <h1>Template Tag Syntax Web Browser Support Test</h1>
+
+<p id='testId'><b>Fail</b> (no support): The web browser does not recognize the JavaScript template tag syntax. The web browser does not support the JavaScript template tag syntax.</p><!-- Hard code Fail because web browser no support error stops JavaScript execution. -->
+
+<script>
+function implementationTestTemplateTagName(dummyTemplateLiteralStringLiterals){
+ var element = document.getElementById("testId"),
+  substitutionOne = "def",
+  numberLiteralOne = 1,
+  numberLiteralTwo = 2,
+  substitutionTwo = numberLiteralOne + numberLiteralTwo,
+  substitutionThree = "mno";
+ function capabilityTestTemplateTagName(templateLiteralStringLiterals, templateLiteralSubstitutionOne, templateLiteralSubstitutionTwo, templateLiteralSubstitutionThree){
+  return templateLiteralStringLiterals[0] + templateLiteralSubstitutionOne + templateLiteralStringLiterals[1] + templateLiteralSubstitutionTwo + templateLiteralStringLiterals[2] + templateLiteralSubstitutionThree + templateLiteralStringLiterals[3];
+ }
+ var templateTagStringOutput = capabilityTestTemplateTagName`abc ${substitutionOne} ghi ${substitutionTwo} jkl ${substitutionThree} pqr`;
+ if ((typeof templateTagStringOutput === "string") && (templateTagStringOutput === "abc def ghi 3 jkl mno pqr")){
+  element.innerHTML = "<b>Pass</b> (at least partial/possibly full support): The web browser recognizes the JavaScript template tag syntax, and supports at least one template tag syntax capability. The web browser at least partially/possibly fully supports the JavaScript template tag syntax. Positive determination of full web browser support is beyond the scope of this test.";
+ } else {
+  element.innerHTML = "<b>Pass/Fail</b> (partial support): The web browser recognizes the JavaScript template tag syntax, but does not support at least one template tag syntax capability. The web browser partially supports the JavaScript template tag syntax.";
+ }
+}
+implementationTestTemplateTagName`dummy template literal`;
+</script>
+
+ </body>
+</html>

@@ -1,0 +1,123 @@
+<?php
+/* -------------------- INTRODUCTION -------------------- */
+
+/* File: /web_server_root_directory/templates/Reusable_Code.class.php.
+ * Purpose: Reusable code object definition file. Assign reusable code as object property values.
+ * Used in: css_font_compare_sections.php and css_font_sizes.php.
+ * Last reviewed/updated: 02 Jun 2017.
+ * Published: 11 Oct 2016.
+ * NOTE: Copy changes to css_font_compare.js. */
+class Reusable_Code {
+ public $allCharactersString =
+        "The quick brown fox jumps over the lazy dog THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG 1234567890 `~!@#$%^&amp;*-_=+()\/[]{}&lt;&gt;;:'|&quot;,.?";
+ public $fontFamilySelectboxOptions =
+        "<option value='\"adobe minion web\"'>adobe minion web</option>
+         <option value='arial' selected>arial (sans-serif)</option>
+         <option value='\"book antiqua\"'>book antiqua (serif)</option>
+         <option value='calibri'>calibri</option>
+         <option value='cambria'>cambria</option>
+         <option value='candara'>candara</option>
+         <option value='\"comic sans ms\"'>comic sans ms (fantasy)</option>
+         <option value='consolas'>consolas (monospace)</option>
+         <option value='constantia'>constantia (serif)</option>
+         <option value='courier'>courier (monospace)</option>
+         <option value='\"courier new\"'>courier new (monospace)</option>
+         <option value='cursive'>cursive (generic)</option>
+         <option value='ebrima'>ebrima</option>
+         <option value='euphemia'>euphemia</option>
+         <option value='fantasy'>fantasy (generic)</option>
+         <option value='\"franklin gothic medium\"'>franklin gothic medium</option>
+         <option value='garamond'>garamond (serif)</option>
+         <option value='gautami'>gautami</option>
+         <option value='geneva'>geneva</option>
+         <option value='georgia'>georgia (serif)</option>
+         <option value='helvetica'>helvetica (sans-serif)</option>
+         <option value='impact'>impact</option>
+         <option value='latha'>latha</option>
+         <option value='\"lithos pro regular\"'>lithos pro regular</option>
+         <option value='\"lucida console\"'>lucida console (monospace)</option>
+         <option value='\"lucida sans unicode\"'>lucida sans unicode (sans-serif)&nbsp;</option>
+         <option value='\"microsoft sans serif\"'>microsoft sans serif</option>
+         <option value='\"minion pro\"'>minion pro</option>
+         <option value='\"minion web\"'>minion web (serif)</option>
+         <option value='modern'>modern</option>
+         <option value='monospace'>monospace (generic)</option>
+         <option value='\"ms sans serif\"'>ms sans serif</option>
+         <option value='\"ms serif\"'>ms serif (serif)</option>
+         <option value='\"myriad web\"'>myriad web</option>
+         <option value='\"myriad web pro\"'>myriad web pro</option>
+         <option value='\"nueva std\"'>nueva std</option>
+         <option value='palatino'>palatino (serif)</option>
+         <option value='\"palatino linotype\"'>palatino linotype (serif)</option>
+         <option value='roman'>roman</option>
+         <option value='sans-serif'>sans-serif (generic)</option>
+         <option value='script'>script</option>
+         <option value='\"segoe print\"'>segoe print</option>
+         <option value='\"segoe script\"'>segoe script</option>
+         <option value='\"segoe ui\"'>segoe ui</option>
+         <option value='serif'>serif (generic)</option>
+         <option value='sylfaen'>sylfaen</option>
+         <option value='symbol'>symbol</option>
+         <option value='system'>system</option>
+         <option value='tahoma'>tahoma (sans-serif)</option>
+         <option value='\"tekton pro\"'>tekton pro</option>
+         <option value='terminal'>terminal</option>
+         <option value='times'>times (serif)</option>
+         <option value='\"times new roman\"'>times new roman (serif)</option>
+         <option value='\"trajan pro\"'>trajan pro</option>
+         <option value='\"trebuchet ms\"'>trebuchet ms (sans-serif)</option>
+         <option value='tunga'>tunga</option>
+         <option value='verdana'>verdana (sans-serif)</option>
+         <option value='webdings'>webdings</option>";
+ public $fontSizeAbsSelectboxOptions =
+        "<option value='1'>1</option>
+         <option value='2'>2</option>
+         <option value='3'>3</option>
+         <option value='4'>4</option>
+         <option value='5'>5</option>
+         <option value='6'>6</option>
+         <option value='7'>7</option>
+         <option value='8'>8</option>
+         <option value='9'>9</option>
+         <option value='10'>10</option>
+         <option value='11'>11</option>
+         <option value='12'>12</option>
+         <option value='13'>13</option>
+         <option value='14' selected>14</option>
+         <option value='15'>15</option>
+         <option value='16'>16</option>
+         <option value='17'>17</option>
+         <option value='18'>18</option>
+         <option value='19'>19</option>
+         <option value='20'>20</option>
+         <option value='21'>21</option>
+         <option value='22'>22</option>
+         <option value='23'>23</option>
+         <option value='24'>24</option>
+         <option value='25'>25</option>
+         <option value='26'>26</option>
+         <option value='27'>27</option>
+         <option value='28'>28</option>
+         <option value='29'>29</option>
+         <option value='30'>30&nbsp;</option>
+         <option value='31'>31</option>
+         <option value='32'>32</option>";
+ public $fontSizePxPtSelectboxOptions =
+        "<option value='px' selected>px&nbsp;</option>
+         <option value='pt'>pt</option>";
+ public $fontWeightSelectboxOptions =
+        "<option value='normal' selected>normal (400)</option>
+         <option value='bold'>bold (700)</option>
+         <option value='100'>100 (thin)</option>
+         <option value='200'>200 (extra/ultra light)</option>
+         <option value='300'>300 (light)</option>
+         <option value='400'>400 (normal)</option>
+         <option value='500'>500 (medium)</option>
+         <option value='600'>600 (semi/demi bold)&nbsp;</option>
+         <option value='700'>700 (bold)</option>
+         <option value='800'>800 (extra/ultra bold)</option>
+         <option value='900'>900 (black/heavy)</option>";
+ public $fontStyleSelectboxOptions =
+        "<option value='normal' selected>normal&nbsp;</option>
+         <option value='italic'>italic</option>";
+}

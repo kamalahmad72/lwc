@@ -1,0 +1,53 @@
+/* -------------------- INTRODUCTION -------------------- */
+
+/* File: /web_server_root_directory/stylesheets/lwc/print_without_images.css.
+ * Purpose: Supplement/override lwc.css styles for LWC Home tools icon dropdown Display Web Page For Printing Without Images option.
+ * Used in: All LWC Home web pages with LWC Home tools icon dropdown.
+ * Last reviewed/updated: 09 Feb 2017.
+ * Published: 14 May 2015.
+ * Web browser support: At least the web browser support for template.php.
+ * NOTE: In LWC Home print icon dropdown: 1.) if select Default, change external style sheet to print_default.css; 2.) if select Print Friendly With Images, change external style sheet to print_with_images.css; and 3.) if select Print Friendly Without Images, change external style sheet to print_without_images.css. External style sheets changed by ChangeExtSSUtil.changeExtSS() in library_load_in_body.js. */
+
+/* ---------- BOOTSTRAP (/stylesheets/bootstrap/bootstrap.css) ---------- */
+
+.container-fluid {
+  max-width: 100%;
+}
+
+/* ---------- HTML AND BODY (_html_body.scss) ---------- */
+
+body {
+  color: #333;
+}
+
+/* ---------- COLORS AND BORDERS (_colors_borders.scss) ---------- */
+
+pre, caption, .note, code {
+  background-color: #fff;
+}
+.note code, .note pre {
+  background-color: #fff;
+}
+
+/* ---------- HYPERLINKS, INTERACTIVE OBJECTS, AND FORM CONTROLS (_hyperlinks_interactive-objects_form-controls.scss) ---------- */
+
+/* Proper pseudo-class order: link, visited, hover, active, focus. */
+
+.toc a {
+  color: #333;
+}
+.link-list > li > a {
+  color: #333;
+}
+
+/* ---------- MISCELLANEOUS (_miscellaneous.scss) ---------- */
+
+img, footer img {
+  display: none;
+}
+
+/* ---------- JAVASCRIPT SHOPPING CART EXAMPLE (javascript_shopping_cart.css) ---------- */
+
+.img-rt-pnt-tri {
+  display: none;
+}

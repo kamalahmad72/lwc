@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>values() Method On Arrays Web Browser Support Test</title>
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Steve Taylor" />
+  <meta name="Keywords" content="JavaScript, values() method, array, web browser support, test" />
+  <meta name="Description" content="A JavaScript that tests and reports if the web browser supports the JavaScript values() method on arrays." />
+  <script></script>
+ </head>
+ <body>
+
+  <h1><code>values()</code> Method On Arrays Web Browser Support Test</h1>
+
+<!-- Similar test code in Generator object, entries() method on arrays, keys() method on arrays, and values() method on arrays. -->
+<!-- Use for statement/loop instead of ECMAScript 2015 for...of statement/loop to avoid for...of statement/loop possibly skewing test result. -->
+<!-- Per LWC web browser support testing, values() method on arrays supported by ED12+, no IE11-, FF57-, SF5.1.7-, CH63- (except CH38.0.2125.101 - 38.0.2125.104), OP50- (except OP25.0.1614.50 - 25.0.1614.63) and [Symbol.iterator] property supported by ED12+, FF36+, CH38+, OP25+, no IE11-, SF5.1.7-. Therefore, in web browser support test below, did not test if (arrayIteratorValues[Symbol.iterator]) for consistency with entries() method on arrays and keys() method on arrays web browser support tests. -->
+
+<p id='testId'><b>Fail</b> (no support): The web browser does not recognize the JavaScript <code>values()</code> method on arrays. The web browser does not support the JavaScript <code>values()</code> method on arrays.</p><!-- Hard code Fail because web browser no support error stops JavaScript execution. -->
+
+<script>
+var arrayViaArrayConstructor = new Array();
+arrayViaArrayConstructor[0] = "a";
+arrayViaArrayConstructor[1] = "b";
+arrayViaArrayConstructor[2] = "c";
+var arrayLiteral = ["d", "e", "f"];
+// Get references to array built-in array iterator object called by values() method. NOTE: values() method can be considered a generator function. Call values() generator functions. Each call returns a Generator object which inherits prototype from Object (window.Generator property does not exist) and is an iterator. Generator object has next() method property. Called by values(), array iterator object next() method return object value property is set to array element value.
+var arrayViaArrayConstructorIteratorValues = arrayViaArrayConstructor.values();
+var arrayLiteralIteratorValues = arrayLiteral.values();
+var arrayViaArrayConstructorIteratorValuesNextValues = [];
+var arrayLiteralIteratorValuesNextValues = [];
+for (var i = 0; i < arrayViaArrayConstructor.length; i++){ // Identical to for (var value of arrayViaArrayConstructor.values()){console.log(value);}. 1.) "a", 2.) "b", 3.) "c".
+ arrayViaArrayConstructorIteratorValuesNextValues[i] = arrayViaArrayConstructorIteratorValues.next().value;
+}
+for (var i = 0; i < arrayLiteral.length; i++){ // Identical to for (var value of arrayLiteral.values()){console.log(value);}. 1.) "d", 2.) "e", 3.) "f".
+ arrayLiteralIteratorValuesNextValues[i] = arrayLiteralIteratorValues.next().value;
+}
+if (arrayViaArrayConstructor.keys && arrayLiteral.keys){
+ var element = document.getElementById("testId");
+ if ((typeof arrayViaArrayConstructorIteratorValues === "object") && arrayViaArrayConstructorIteratorValues instanceof Object && Object.prototype.isPrototypeOf(arrayViaArrayConstructorIteratorValues) && (typeof arrayViaArrayConstructorIteratorValuesNextValues[0] === "string") && (arrayViaArrayConstructorIteratorValuesNextValues[0] === "a") && (arrayViaArrayConstructorIteratorValuesNextValues[1] === "b") && (arrayViaArrayConstructorIteratorValuesNextValues[2] === "c") && (typeof arrayLiteralIteratorValues === "object") && arrayLiteralIteratorValues instanceof Object && Object.prototype.isPrototypeOf(arrayLiteralIteratorValues) && (typeof arrayLiteralIteratorValuesNextValues[0] === "string") && (arrayLiteralIteratorValuesNextValues[0] === "d") && (arrayLiteralIteratorValuesNextValues[1] === "e") && (arrayLiteralIteratorValuesNextValues[2] === "f")){
+  element.innerHTML = "<b>Pass</b> (at least partial/possibly full support): The web browser recognizes the JavaScript <code>values()</code> method on arrays, and supports at least one <code>values()</code> method on arrays capability. The web browser at least partially/possibly fully supports the JavaScript <code>values()</code> method on arrays. Positive determination of full web browser support is beyond the scope of this test.";
+ } else {
+  element.innerHTML = "<b>Pass/Fail</b> (partial support): The web browser recognizes the JavaScript <code>values()</code> method on arrays, but does not support at least one <code>values()</code> method on arrays capability. The web browser partially supports the JavaScript <code>values()</code> method on arrays.";
+ }
+}
+</script>
+
+ </body>
+</html>

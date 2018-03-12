@@ -1,0 +1,160 @@
+/* List only main items, not sub items of main items. */
+
+/* -------------------- bidi.css -------------------- */
+
+RTL definitions
+Main blocks
+Site Description
+Round cornered boxes and backgrounds
+Horizontal lists
+Bulletin icons for list items
+Dropdown menu
+Notifications
+...
+
+/* -------------------- buttons.css -------------------- */
+
+Button Styles
+Icon images
+Poster contact icons
+Post control buttons
+
+/* -------------------- colors.css -------------------- */
+
+Colours and backgrounds for common.css
+	Search box
+	Round cornered boxes and backgrounds
+	Horizontal lists
+	Table styles
+	Misc layout styles
+	Pagination
+	Miscellaneous styles
+Colours and backgrounds for links.css
+Colours and backgrounds for content.css
+	Post body styles
+	Content container styles
+	BB Code styles
+	Attachments
+	Post poll styles
+	Poster profile block
+Colours and backgrounds for buttons.css
+	Icon images
+Colours and backgrounds for cp.css
+	Main CP box
+	CP tabbed menu
+	Mini tabbed menu used in MCP
+	Responsive tabs
+	UCP navigation menu
+	Preferences pane layout
+	PM Styles
+Colours and backgrounds for forms.css
+	General form styles
+	Definition list layout for forms
+	Posting page styles
+	Input field styles
+	Form button styles
+	jQuery popups
+	Notifications
+
+/* -------------------- common.css -------------------- */
+
+CSS Reset http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126
+General Markup Styles
+Main blocks
+Round cornered boxes and backgrounds
+Horizontal lists
+Bulletin icons for list items
+Dropdown menu
+Responsive breadcrumbs
+Table styles
+Misc layout styles
+Action-bars (container for post/reply buttons, pagination, etc.)
+Pagination
+jQuery popups
+Miscellaneous styles
+Navbar specific list items
+
+/* -------------------- content.css -------------------- */
+
+Content Styles
+Post body styles
+Topic review panel
+MCP Post details
+Content container styles
+BB Code styles
+Attachments
+Post poll styles
+Poster profile block
+Show scrollbars for items with overflow on iOS devices
+
+/* -------------------- cp.css -------------------- */
+
+Control Panel Styles
+Main CP box
+CP tabs shared
+CP tabbed menu
+Mini tabbed menu used in MCP
+Responsive tabs
+UCP navigation menu
+Preferences pane layout
+PM Styles
+Responsive -CP navigation
+
+/* -------------------- forms.css -------------------- */
+
+Form Styles
+General form styles
+Definition list layout for forms
+Posting page styles
+Input field styles
+Form button styles
+Search box (header)
+
+/* -------------------- imageset.css -------------------- */
+
+/* -------------------- links.css -------------------- */
+
+Link Styles
+
+/* -------------------- plupload.css -------------------- */
+
+
+/* -------------------- print.css -------------------- */
+
+Print Style Sheet
+
+/* -------------------- responsive.css -------------------- */
+
+Responsive Design
+Content wrappers
+Common block wrappers
+Logo block
+Navigation
+Search
+.topiclist lists
+Forums and topics lists
+Notifications list
+Pagination
+Responsive tables
+Forms
+User profile
+Polls
+Post
+Misc stuff
+
+/* -------------------- stylesheet.css -------------------- */
+
+@import url("common.css");
+@import url("links.css");
+@import url("content.css");
+@import url("buttons.css");
+@import url("cp.css");
+@import url("forms.css");
+@import url("colours.css");
+@import url("imageset.css");
+
+/* -------------------- tweaks.css -------------------- */
+
+Style Sheet Tweaks. These style definitions are IE 8 & 9 only. They are required due to the poor CSS support in IE browsers.
+IE 8 Tweaks (value)\9 equates to  IE <= 8
+IE 9 Tweaks

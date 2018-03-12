@@ -1,0 +1,22 @@
+// -------------------- INTRODUCTION --------------------
+
+// File: /web_server_root_directory/stylesheets/lwc/_html_body.scss.
+// Purpose: Entire html and body type selector Sass style definitions except for media queries (see _media_queries.scss).
+// Used in: lwc.scss.
+// Last reviewed/updated: 25 Jul 2017.
+// Published: 03 Jun 2015.
+
+/* -------------------- HTML AND BODY (ENTIRE EXCEPT MEDIA QUERIES) (_html_body.scss) -------------------- */
+
+// Force vertical scroll bar to always appear.
+html {
+  overflow-y: scroll;
+}
+body {
+  font-family: $font-family-body;
+  font-size: $font-size-body;
+  background-color: $background-color-body;
+  color: $color-body;
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,85 @@
+The customized bootstrap .js file is used by LWC Home, LWC Blog, And LWC Forums.
+The customized bootstrap .css file is then edited and is used by LWC Home (as is), LWC Blog (as is), And LWC Forums (as pseudo namespace).
+
+How To Test Customize
+
+1.) Perform customize
+2.) Copy customized bootstrap.js file to /javascripts/bootstrap and test LWC home page for header and LWC home page panels. If fail, recustomize. If pass, continue.
+3.) Copy customized bootstrap.css file to /stylesheets/bootstrap/ as customize_bootstrap_orig.css and test LWC home page for header and LWC home page panels. If fail, recustomize. If pass, continue.
+4.) Copy customized bootstrap.css file to project directory as customize_bootstrap_edit_01.css, start editing, and test LWC home page for header and LWC home page panels. If fail, undo recent edits. If pass, continue editing.
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Customize v334 20May15
+
+LESS Files (3,2,1)
+------------------
+Common CSS: 1.) Grid system, 2.) Forms (auto selected by Navbar), 3.) Responsive utilities (required for Navbar show/hide content to function).
+Components: 1.) Navs (auto selected by Navbar), 2.) Navbar.
+JavScript components: 1.) Component animations (required for Navbar icon-bar button to function).
+
+jQuery Plugins (0,1)
+--------------------
+Linked to components: None.
+Magic: 1.) Collapse (required for Navbar icon-bar button to function).
+
+Issues
+------
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Customize v335 01Jul15
+
+LESS Files (3,2,1)
+------------------
+Common CSS: 1.) Grid system, 2.) Forms (auto selected by Navbar), 3.) Responsive utilities (required for Navbar show/hide content to function).
+Components: 1.) Navs (auto selected by Navbar), 2.) Navbar.
+JavScript components: 1.) Component animations (for JS) (required for Navbar icon-bar button to function).
+
+jQuery Plugins (0,1)
+--------------------
+Linked to components: None.
+Magic: 1.) Collapse (required for Navbar icon-bar button to function).
+
+Issues
+------
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Customize v336 31Mar16
+
+LESS Files (3,2,2)
+------------------
+Common CSS: 1.) Grid system, 2.) Forms (auto checked by Navbar), 3.) Responsive utilities (required for the Navbar show/hide content to work).
+Components: 1.) Navs (auto checked by Navbar), 2.) Navbar.
+JavaScript components: 1.) Component animations (for JS) (includes Collapse) (required for the Navbar icon-bar button to work), 2.) Dropdown (required for the Navbar More dropdown to work).
+
+jQuery Plugins (1,1)
+--------------------
+Linked to components: 1.) Dropdowns (required for the Navbar More dropdown to work).
+Magic: 1.) Collapse (required for the Navbar icon-bar button to work).
+
+Issues
+------
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Customize v337 27Jul16
+
+LESS Files (3,2,2)
+------------------
+Common CSS: 1.) Grid system, 2.) Forms (auto checked by Navbar), 3.) Responsive utilities (required for the Navbar show/hide content to work).
+Components: 1.) Navs (auto checked by Navbar), 2.) Navbar.
+JavaScript components: 1.) Component animations (for JS) (includes Collapse) (required for the Navbar icon-bar button to work), 2.) Dropdown (required for the Navbar More dropdown to work).
+
+jQuery Plugins (1,1)
+--------------------
+Linked to components: 1.) Dropdowns (required for the Navbar More dropdown to work).
+Magic: 1.) Collapse (required for the Navbar icon-bar button to work).
+
+Issues
+------

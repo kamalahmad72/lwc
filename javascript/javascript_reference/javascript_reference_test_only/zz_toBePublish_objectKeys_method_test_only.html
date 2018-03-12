@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>keys() Method Web Browser Support Test</title>
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Steve Taylor" />
+  <meta name="Keywords" content="JavaScript, keys() method, web browser support, test" />
+  <meta name="Description" content="A JavaScript that tests and reports if the web browser supports the JavaScript keys() method." />
+  <script></script>
+ </head>
+ <body>
+
+  <h1><code>keys()</code> Method Web Browser Support Test</h1>
+
+<!-- Similar test code in hasOwnProperty() method and Object.keys() method. -->
+
+<script>
+function CustomConstructor(){
+ this.propertyOne = "propertyOne value"; // customConstructorObject own/instance propertyOne. Enumerable.
+ this.propertyTwo = function(){}; // customConstructorObject own/instance propertyTwo. Enumerable.
+}
+var customConstructorObject = new CustomConstructor();
+customConstructorObject.propertyThree = "propertyThree value"; // customConstructorObject own/instance propertyThree. Enumerable.
+customConstructorObject.propertyFour = function(){}; // customConstructorObject own/instance propertyFour. Enumerable.
+CustomConstructor.prototype.propertyFive = "propertyFive value"; // CustomConstructor prototype propertyFive. Enumerable.
+CustomConstructor.prototype.propertySix = function(){}; // CustomConstructor prototype propertySix. Enumerable.
+objectLiteral = {
+ propertyOne: "propertyOne value", // objectLiteral own/instance propertyOne. Enumerable.
+ propertyTwo: function(){} // objectLiteral own/instance propertyTwo. Enumerable.
+}
+objectLiteral.propertyThree = "propertyThree value"; // objectLiteral own/instance propertyThree. Enumerable.
+objectLiteral.propertyFour = function(){}; // objectLiteral own/instance propertyFour. Enumerable.
+
+console.log(Object.keys(customConstructorObject)); // Array [ "propertyOne", "propertyTwo", "propertyThree", "propertyFour" ].
+console.log(Object.keys(objectLiteral)); // Array [ "propertyOne", "propertyTwo", "propertyThree", "propertyFour" ].
+//console.log(customConstructorObject.keys()); // FF57 error: TypeError: customConstructorObject.keys is not a function.
+//console.log(objectLiteral.keys()); // FF57 error: TypeError: objectLiteral.keys is not a function.
+//console.log(Object.values(customConstructorObject)); // Array [ "propertyOne value", CustomConstructor/this.propertyTwo(), "propertyThree value", customConstructorObject.propertyFour() ]. IE11 error: SCRIPT438: Object doesn't support property or method 'values'.
+//console.log(Object.values(objectLiteral)); // Array [ "propertyOne value", propertyTwo(), "propertyThree value", objectLiteral.propertyFour() ]. IE11 error: SCRIPT438: Object doesn't support property or method 'values'.
+//console.log(customConstructorObject.values()); // FF57 error: TypeError: customConstructorObject.values is not a function.
+//console.log(objectLiteral.values()); // FF57 error: TypeError: objectLiteral.values is not a function.
+console.log("---");
+
+var arrayLiteral = [1, 2, 3];
+var set = new Set(); // IE11 does not support sets initialized with an iterable. Hence, use Map constructor and set() method below.
+set.add(1);
+set.add(2);
+set.add(3); // setOne is Set(3) {1, 2, 3}.
+var map = new Map(); // IE11 does not support maps initialized with an iterable. Hence, use Map constructor and set() method below.
+map.set("keyOne", 1);
+map.set("keyTwo", 2);
+map.set("keyThree", 3); // mapOne is Map(3) {"keyOne" => 1, "keyTwo" => 2, "keyThree" => 3}.
+
+console.log(Object.keys(arrayLiteral)); // Array [ "0", "1", "2" ].
+console.log(Object.keys(set)); // Array []. Empty array length = 0.
+console.log(Object.keys(map)); // Array []. Empty array length = 0.
+console.log(arrayLiteral.keys()); // Array Iterator {  }. IE11 error: SCRIPT438: Object doesn't support property or method 'keys'.
+console.log(set.keys()); // Set Iterator {  }. IE11 error: SCRIPT438: Object doesn't support property or method 'keys'.
+console.log(map.keys()); // Map Iterator {  }. IE11 error: SCRIPT438: Object doesn't support property or method 'keys'.
+console.log("---");
+console.log(Object.values(arrayLiteral));  // Array [ 1, 2, 3 ]. IE11 error: SCRIPT438: Object doesn't support property or method 'values'.
+console.log(Object.values(set)); // Array []. IE11 error: SCRIPT438: Object doesn't support property or method 'values'.
+console.log(Object.values(map)); // Array []. IE11 error: SCRIPT438: Object doesn't support property or method 'values'.
+console.log(arrayLiteral.values()); // FF57 error: TypeError: arrayLiteral.values is not a function. IE11 error: SCRIPT438: Object doesn't support property or method 'values'.
+console.log(set.values()); // Set Iterator {  }. IE11 error: SCRIPT438: Object doesn't support property or method 'values'.
+console.log(map.values()); // Map Iterator {  }. IE11 error: SCRIPT438: Object doesn't support property or method 'values'.
+
+
+if (Object.keys){ // Per ECMAScript specifications, which describe keys() method on Object constructor, not on objects.
+ var element = document.getElementById("testId");
+ if (arrayLiteral.keys && !objectLiteral.keys){
+  document.write("<p><b>Pass</b> (at least partial/possibly full support): The web browser recognizes the JavaScript <code>keys()</code> method, and supports at least one <code>keys()</code> method capability. The web browser at least partially/possibly fully supports the JavaScript <code>keys()</code> method. Positive determination of full web browser support is beyond the scope of this test.</p>");
+ } else {
+  document.write("<p><b>Pass/Fail</b> (partial support): The web browser recognizes the JavaScript <code>keys()</code> method, but does not support at least one <code>keys()</code> method capability. The web browser partially supports the JavaScript <code>keys()</code> method.</p>");
+ }
+} else {
+ document.write("<p><b>Fail</b> (no support): The web browser does not recognize the JavaScript <code>keys()</code> method. The web browser does not support the JavaScript <code>keys()</code> method.</p>");
+}
+</script>
+
+ </body>
+</html>

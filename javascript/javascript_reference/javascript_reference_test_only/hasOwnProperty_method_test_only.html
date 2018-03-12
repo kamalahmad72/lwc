@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>hasOwnProperty() Method Web Browser Support Test</title>
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Steve Taylor" />
+  <meta name="Keywords" content="JavaScript, hasOwnProperty() method, web browser support, test" />
+  <meta name="Description" content="A JavaScript that tests and reports if the web browser supports the JavaScript hasOwnProperty() method." />
+  <script></script>
+ </head>
+ <body>
+
+  <h1><code>hasOwnProperty()</code> Method Web Browser Support Test</h1>
+
+<script>
+if (Object.hasOwnProperty){
+ function CustomConstructor(){
+  this.ownPropertyOne = "value"; // objectViaCustomConstructor ownPropertyOne.
+  this.ownPropertyTwo = function(){}; // objectViaCustomConstructor ownPropertyTwo.
+ }
+ CustomConstructor.prototype.prototypePropertyOne = "value"; // CustomConstructor prototypePropertyOne.
+ CustomConstructor.prototype.prototypePropertyTwo = function(){}; // CustomConstructor prototypePropertyTwo.
+ var objectViaCustomConstructor = new CustomConstructor();
+ objectViaCustomConstructor.ownPropertyThree = "value"; // objectViaCustomConstructor ownPropertyThree.
+ objectViaCustomConstructor.ownPropertyFour = function(){}; // objectViaCustomConstructor ownPropertyFour.
+ var objectLiteral = {
+  ownPropertyOne: "value", // objectLiteral ownPropertyOne.
+  ownPropertyTwo: function(){} // objectLiteral ownPropertyTwo.
+ }
+ objectLiteral.ownPropertyThree = "value"; // objectLiteral ownPropertyThree.
+ objectLiteral.ownPropertyFour = function(){}; // objectLiteral ownPropertyFour.
+ if (objectViaCustomConstructor.hasOwnProperty("ownPropertyOne") && objectViaCustomConstructor.hasOwnProperty("ownPropertyTwo") && !objectViaCustomConstructor.hasOwnProperty("prototypePropertyOne") && !objectViaCustomConstructor.hasOwnProperty("prototypePropertyTwo") && objectViaCustomConstructor.hasOwnProperty("ownPropertyThree") && objectViaCustomConstructor.hasOwnProperty("ownPropertyFour") && !objectViaCustomConstructor.hasOwnProperty("propertyDoesNotExist") && objectLiteral.hasOwnProperty("ownPropertyOne") && objectLiteral.hasOwnProperty("ownPropertyTwo") && objectLiteral.hasOwnProperty("ownPropertyThree") && objectLiteral.hasOwnProperty("ownPropertyFour") && !objectLiteral.hasOwnProperty("propertyDoesNotExist")){
+  document.write("<p><b>Pass</b> (at least partial/possibly full support): The web browser recognizes the JavaScript <code>hasOwnProperty()</code> method, and supports at least one <code>hasOwnProperty()</code> method capability. The web browser at least partially/possibly fully supports the JavaScript <code>hasOwnProperty()</code> method. Positive determination of full web browser support is beyond the scope of this test.</p>");
+ } else {
+  document.write("<p><b>Pass/Fail</b> (partial support): The web browser recognizes the JavaScript <code>hasOwnProperty()</code> method, but does not support at least one <code>hasOwnProperty()</code> method capability. The web browser partially supports the JavaScript <code>hasOwnProperty()</code> method.</p>");
+ }
+} else {
+ document.write("<p><b>Fail</b> (no support): The web browser does not recognize the JavaScript <code>hasOwnProperty()</code> method. The web browser does not support the JavaScript <code>hasOwnProperty()</code> method.</p>");
+}
+</script>
+
+ </body>
+</html>

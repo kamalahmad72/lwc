@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>Rest Parameter Web Browser Support Test</title>
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Steve Taylor" />
+  <meta name="Keywords" content="JavaScript, rest parameter, web browser support, test" />
+  <meta name="Description" content="A JavaScript that tests and reports if the web browser supports the JavaScript rest parameter." />
+  <script></script>
+ </head>
+ <body>
+
+  <h1>Rest Parameter Web Browser Support Test</h1>
+
+<!-- Similar testing scheme parameter default value and rest parameter. -->
+
+<script>
+function implementationTest(...implementationTestRestParam){ // IE11 error: Expected identifier. Stops JavaScript execution.
+ if ((implementationTestRestParam[0] === "restParamOne value") && (implementationTestRestParam[1] === "restParamTwo value") && (implementationTestRestParam[2] === "restParamThree value")){
+  function capabilityTest(param, ...capabilityTestRestParam){ // Rest parameter does not contribute to function length property. Rest parameter array has length property. Arguments passed to rest parameter are set on function arguments object.
+   if ((capabilityTest.length === 1) && (capabilityTestRestParam.length === 3) && (arguments.length === 4)){
+    document.write("<p><b>Pass</b> (at least partial/possibly full support): The web browser recognizes the JavaScript rest parameter, and supports at least one rest parameter capability. The web browser at least partially/possibly fully supports the JavaScript rest parameter. Positive determination of full web browser support is beyond the scope of this test.</p>");
+   } else {
+    document.write("<p><b>Pass/Fail</b> (partial support): The web browser recognizes the JavaScript rest parameter, but does not support at least one rest parameter capability. The web browser partially supports the JavaScript rest parameter.</p>");
+   }
+  }
+  capabilityTest("param value", "restParamOne value", "restParamTwo value", "restParamThree value");
+ } else {
+  document.write("<p><b>Fail</b> (no support): The web browser does not recognize the JavaScript rest parameter. The web browser does not support the JavaScript rest parameter.</p>");
+ }
+}
+implementationTest("restParamOne value", "restParamTwo value", "restParamThree value");
+</script>
+
+ </body>
+</html>

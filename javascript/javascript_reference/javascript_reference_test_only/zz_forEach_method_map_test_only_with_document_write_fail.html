@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>forEach() Method On Maps Web Browser Support Test</title>
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Steve Taylor" />
+  <meta name="Keywords" content="JavaScript, forEach() method, map, web browser support, test" />
+  <meta name="Description" content="A JavaScript that tests and reports if the web browser supports the JavaScript forEach() method on maps." />
+  <script></script>
+ </head>
+ <body>
+
+  <h1><code>forEach()</code> Method On Maps Web Browser Support Test</h1>
+
+<script>
+var testMap = new Map(); // IE11 does not support maps initialized with an iterable. Therefore, create testMap using Map constructor and set() method. IE10 error: SCRIPT5009: 'Map' is undefined.
+testMap.set("one", 1);
+testMap.set("two", 2);
+testMap.set("three", 3); // testMap is Map(3) {"one" => 1, "two" => 2, "three" => 3}.
+var keyString = "",
+ valueString = "",
+ mapArgument = null;
+propertyOne = "window object propertyOne value"; // Identical to window.propertyOne = "window object propertyOne value";.
+var objectLiteral = {
+ propertyOne: "objectLiteral propertyOne value"
+},
+ thisValue = null,
+ thisPropertyOne = "";
+if (testMap.forEach){
+ testMap.forEach(function(value, key, map){
+  valueString += value; // After final iteration: "123".
+  keyString += key; // After final iteration: "onetwothree".
+  mapArgument = map; // testMap.
+  thisValue = this; // objectLiteral.
+  thisPropertyOne = this.propertyOne; // "objectLiteral propertyOne value".
+ }, objectLiteral); // Set this to objectLiteral.
+ if ((valueString === "123") && (keyString === "onetwothree") && (mapArgument === testMap) && (thisValue === objectLiteral) && (thisPropertyOne === "objectLiteral propertyOne value")){
+  document.write("<p><b>Pass</b> (at least partial/possibly full support): The web browser recognizes the JavaScript <code>forEach()</code> method on maps, and supports at least one <code>forEach()</code> method on maps capability. The web browser at least partially/possibly fully supports the JavaScript <code>forEach()</code> method on maps. Positive determination of full web browser support is beyond the scope of this test.<p>");
+ } else {
+  document.write("<p><b>Pass/Fail</b> (partial support): The web browser recognizes the JavaScript <code>forEach()</code> method on maps, but does not support at least one <code>forEach()</code> method on maps capability. The web browser partially supports the JavaScript <code>forEach()</code> method on maps.</p>");
+ }
+} else {
+ document.write("<p><b>Fail</b> (no support): The web browser does not recognize the JavaScript <code>forEach()</code> method on maps. The web browser does not support the JavaScript <code>forEach()</code> method on maps.</p>");
+}
+</script>
+
+ </body>
+</html>

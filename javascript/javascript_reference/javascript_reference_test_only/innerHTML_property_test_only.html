@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>innerHTML Property Web Browser Support Test</title>
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Steve Taylor" />
+  <meta name="Keywords" content="JavaScript, innerHTML property, web browser support, test" />
+  <meta name="Description" content="A JavaScript that tests and reports if the web browser supports the JavaScript innerHTML property." />
+  <script></script>
+ </head>
+ <body>
+
+  <h1><code>innerHTML</code> Property Web Browser Support Test</h1>
+
+<p id='testId'>Content required to avoid false negative. The JavaScript <code>innerHTML</code> property on an element node without a child node (i.e., on an empty element/an element without content, for example <code>&lt;div&gt;&lt;/div&gt;</code>) returns an empty string (i.e., <code>&quot;&quot;</code>). Because the JavaScript <code>Boolean()</code> casting function evaluates an empty string to <code>false</code>, a conditional involving the JavaScript <code>innerHTML</code> property on an empty element evaluates to <code>false</code>, which could be mistakenly interpreted as the web browser not supporting the JavaScript <code>innerHTML</code> property.</p>
+
+<p id='testIdTwo'></p>
+
+<script>
+var element = document.getElementById("testId");
+var elementTwo = document.getElementById("testIdTwo");
+if (element.innerHTML){
+ elementTwo.innerHTML = "If the web browser supports the JavaScript <code>innerHTML</code> property set/write mode capability, this HTML code becomes the <code>elementTwo</code> child node on the DOM, which changes <code>elementTwo</code> from an element node without a child node to an element node with this HTML code as the child node, which changes the evaluation of <code>if (elementTwo.innerHTML)</code> from <code>false</code> to <code>true</code>.";
+ if (elementTwo.innerHTML){
+  document.write("<p><b>Pass</b> (at least partial/possibly full support): The web browser recognizes the JavaScript <code>innerHTML</code> property, and supports at least one <code>innerHTML</code> property capability. The web browser at least partially/possibly fully supports the JavaScript <code>innerHTML</code> property. Positive determination of full web browser support is beyond the scope of this test.</p>");
+ } else {
+  document.write("<p><b>Pass/Fail</b> (partial support): The web browser recognizes the JavaScript <code>innerHTML</code> property, but does not support at least one <code>innerHTML</code> property capability. The web browser partially supports the JavaScript <code>innerHTML</code> property.</p>");
+ }
+} else {
+ document.write("<p><b>Fail</b> (no support): The web browser does not recognize the JavaScript <code>innerHTML</code> property. The web browser does not support the JavaScript <code>innerHTML</code> property.</p>");
+}
+</script>
+
+ </body>
+</html>

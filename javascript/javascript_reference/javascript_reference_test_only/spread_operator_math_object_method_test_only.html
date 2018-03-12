@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>Spread Operator In Math Object Methods Web Browser Support Test</title>
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Steve Taylor" />
+  <meta name="Keywords" content="JavaScript, spread operator, Math object method, web browser support, test" />
+  <meta name="Description" content="A JavaScript that tests and reports if the web browser supports the JavaScript spread operator in Math object methods." />
+  <script></script>
+ </head>
+ <body>
+
+  <h1>Spread Operator In <code>Math</code> Object Methods Web Browser Support Test</h1>
+
+<p id='testId'><b>Fail</b> (no support): The web browser does not recognize the JavaScript spread operator in <code>Math</code> object methods. The web browser does not support the JavaScript spread operator in <code>Math</code> object methods.</p><!-- Hard code Fail because web browser no support error stops JavaScript execution. -->
+
+<script>
+var array = [2, 3, 1];
+var arrayMinValue = Math.min(...array);
+var arrayMaxValue = Math.max(...array);
+if ((arrayMinValue === 1) && (arrayMaxValue === 3)){
+ var element = document.getElementById("testId");
+ element.innerHTML = "<b>Pass</b> (at least partial/possibly full support): The web browser recognizes the JavaScript spread operator in <code>Math</code> object methods. The web browser at least partially/possibly fully supports the JavaScript spread operator in <code>Math</code> object methods. Positive determination of full web browser support is beyond the scope of this test.";
+}
+</script>
+
+ </body>
+</html>

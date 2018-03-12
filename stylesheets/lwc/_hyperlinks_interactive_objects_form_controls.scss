@@ -1,0 +1,244 @@
+// -------------------- INTRODUCTION --------------------
+
+// File: /web_server_root_directory/stylesheets/lwc/_hyperlinks_interactive_objects_form_controls.scss.
+// Purpose: Hyperlink, interactive object, and form control (including buttons) Sass style definitions.
+// Used in: lwc.scss.
+// Last reviewed/updated: 10 Mar 2018.
+// Published: 03 Jun 2015.
+// NOTE: Interactive object (IO) is my phrase for a clickable object that uses an element other than the input, button, or a elements. To convey interactivity (ie, to induce clicking), IOs are frequently styled to look like hyperlinks or buttons. When registering an event handler to a click event, if not interesting in hyperlinking (ie, loading/accessing a document), IOs are preferable to hyperlinks in that there is no href attribute to negate and no unwanted pseudo-class styles to override.
+
+/* -------------------- HYPERLINKS, INTERACTIVE OBJECTS, AND FORM CONTROLS (_hyperlinks_interactive_objects_form_controls.scss) -------------------- */
+
+/* ---------- HYPERLINKS ---------- */
+
+/* Proper pseudo-class order: link, visited, hover, active. Focus placement optional. For buttons, place focus after hover and before active, as in link, visited, hover, focus, active. */
+// Focus apparently does not work on; 1.) intra-page hyperlinks, and 2.) CH.
+
+a {
+  color: $color-normal-hyperlink;
+  text-decoration: none;
+  &:hover {
+    color: $color-body;
+    text-decoration: underline;
+  }
+  &:focus {
+    outline: thin dotted invert;
+  }
+}
+.toc {
+  a {
+    color: $color-body;
+  }
+}
+// LWC home page footer and LWC Home template footer hyperlinks, including W3C button hyperlinks.
+footer {
+  a {
+    color: $color-light;
+    &:focus {
+      outline: 0;
+    }
+  }
+}
+.link-list {
+  > li {
+    > {
+      a {
+        color: $color-list-hyperlink;
+        text-decoration: underline;
+        &:visited {
+        color: $color-light;
+        }
+        &:hover {
+          color: $color-light;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+.link-lwc-logo {
+  color: $color-body;
+  &:hover {
+    text-decoration: none;
+  }
+  &:focus {
+    outline: 0;
+  }
+}
+.bcrumbs-nav a {
+  color: $color-light;
+  &:hover {
+    color: $color-body;
+    text-decoration: none;
+  }
+  &:focus {
+    outline: 0;
+  }
+}
+
+/* ---------- INTERACTIVE OBJECTS ---------- */
+
+.tools-icon-dropdown-header {
+  padding: 4px 12px 4px 9px;
+}
+.tools-icon-dropdown-option {
+  padding: 4px 12px 4px 18px;
+  &:hover {
+    background-color: #f2f2f2;
+  }
+}
+.tools-icon-dropdown {
+  > div {
+    &:first-child {
+      padding-top: 8px;
+    }
+    &:last-child {
+      padding-bottom: 8px;
+    }
+  }
+}
+
+/* ---------- FORM CONTROLS ---------- */
+
+/* FORM */
+
+// Present technique for creating space between form controls and surrounding text (including label element content) uses white space " " character. If would rather style this space, for example, by applying margin: 0 5px to form controls, then also use label { display: inline-block; } style rule to eliminate the apparently induced "dead" space between form controls and surrounding label element content in IE11 and CH43. No apparently induced dead space in FF39.
+
+/* BUTTONS */
+
+/* Proper pseudo-class order: link, visited, hover, active. Focus placement optional. For buttons, place focus after hover and before active, as in link, visited, hover, focus, active. */
+// For buttons, want hover and focus background-color and border-color identical with active background-color and border-color darker. This requires placing focus before active; otherwise, active darker does not work.
+
+input[type="button"], input[type="reset"], input[type="submit"], button, .btn {
+  @include generic-form-control-object;
+  border-radius: $border-radius-larger;
+  &:hover {
+    background-color: $background-color-primary;
+    border-color: $border-interactive-object-form-control-dynamic-pseudo-class-dark;
+    cursor: pointer;
+  }
+  // Focus exists on objects using the input and button elements and on objects using the a element with the href attribute.
+  // Focus does not exist on objects using the a element without the href attribute, nor on objects using other elements, including with the href attribute.
+  &:focus {
+    background-color: $background-color-primary;
+    outline: 0; // Eliminate: 1.) CH43 outline on input[type="button"], input[type="reset"], input[type="submit"] and button; and 2.) IE11 and FF39 outline on a.btn with the href attribute.
+    border-color: $border-interactive-object-form-control-dynamic-pseudo-class-dark;
+  }
+  &:active {
+    background-color: $background-color-darker;
+    border-color: $border-interactive-object-form-control-dynamic-pseudo-class-darker;
+    cursor: pointer;
+  }
+}
+.btn:hover {
+  text-decoration: none;
+}
+.btn-xs {
+  font-size: 0.7em;
+  padding: 4px 8px;
+}
+.btn-sm {
+  font-size: 0.85em;
+  padding: 5px 10px;
+}
+.btn-md {
+  font-size: 1.0em;
+  padding: 6px 12px;
+}
+.btn-lg {
+  font-size: 1.15em;
+  padding: 7px 14px;
+}
+.btn-xl {
+  font-size: 1.3em;
+  padding: 8px 16px;
+}
+
+/* TEXTBOXES AND TEXTAREAS */
+
+textarea {
+  vertical-align: middle;
+}
+input[type="text"], input[type="tel"], input[type="email"], textarea {
+  font-family: $font-family-body;
+  font-size: $font-size-body - 0.67px;
+  @include generic-form-control-object;
+  border-radius: $border-radius-primary;
+  padding: 4px 6px;
+  &:hover {
+    border-color: $border-interactive-object-form-control-dynamic-pseudo-class-dark;
+  }
+  &:focus {
+    outline: 0; // Eliminate CH43 outline.
+    border-color: $border-interactive-object-form-control-dynamic-pseudo-class-dark;
+  }
+  &:-ms-input-placeholder {
+    color: $color-light;
+  }
+  &:-moz-placeholder {
+    color: $color-light;
+  }
+  &::-moz-placeholder {
+    color: $color-light;
+    opacity: 1;
+  }
+  &::-webkit-input-placeholder {
+    color: $color-light;
+  }
+}
+
+/* SELECTBOXES (DROPDOWNS) */
+
+select {
+  @include generic-form-control-object;
+  border-radius: $border-radius-primary;
+  padding: 4px 6px;
+}
+select:hover {
+  border-color: $border-interactive-object-form-control-dynamic-pseudo-class-dark;
+}
+select:focus {
+  outline: 0;
+  border-color: $border-interactive-object-form-control-dynamic-pseudo-class-dark;
+}
+
+/* CHECKBOXES AND RADIO BUTTONS */
+
+input[type="checkbox"], input[type="radio"] {
+  display: none;
+}
+label input[type="checkbox"] ~ span, label input[type="radio"] ~ span {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  vertical-align: middle;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 12px;
+  color: transparent;
+  text-align: center;
+  border: $border-interactive-object-form-control;
+  box-sizing: content-box; // Override box-sizing: border-box, if present/inherited. The W3C recommended initial and user agent default style is box-sizing: content-box. Increasingly, however, and particularly in environments where a grid system is being used, the user agent default style is being overridden by box-sizing: border-box. If box-sizing: border-box is not inherited, then can likely delete this line, but keeping it does no harm.
+  -moz-box-sizing: content-box; // The oldest supported versions of FF support the web browser vendor prefix -moz-box-sizing style property, not the W3C recommended web browser vendor independent box-sizing CSS property. In other words, similar to box-sizing: content-box; in line above, but for the oldest supported versions of FF.
+  margin-bottom: 3px;
+}
+label input[type="checkbox"] ~ span {
+  border-radius: 2px;
+}
+label input[type="radio"] ~ span {
+  border-radius: 12px;
+}
+label input[type="checkbox"]:checked ~ span, label input[type="radio"]:checked ~ span {
+  color: inherit;
+}
+label:hover input[type="checkbox"] ~ span, label:hover input[type="radio"] ~ span {
+  border-color: $border-interactive-object-form-control-dynamic-pseudo-class-dark;
+  cursor: default; // Prevent the IE11 cursor from changing into text shape on mouse hover over the CSS checkboxes/radio buttons, themselves.
+}
+
+/* MISCELLANEOUS */
+
+// !important to override background-color assigned to input[type="text"], input[type="tel"], input[type="email"], textarea selectors above. Perhaps in future remove background-color assigned to input[type="text"], input[type="tel"], input[type="email"], textarea selectors above.
+.highlight-invalid-from-element {
+  background-color: $background-color-invalid-form-element !important;
+}

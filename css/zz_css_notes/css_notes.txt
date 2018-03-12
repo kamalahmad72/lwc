@@ -1,0 +1,87 @@
+structural information/structure type
+
+more implied than defined, I define
+
+Things to check/do:
+1.) appear/display
+2.) attribute/attributeName/attributeValue/value, html attribute
+3.) <pre> too big for .pdf.
+4.) ! important defined?
+5.) @import defined?
+6.) might/may
+
+
+Wording Conventions:
+0.) a user, not an user.
+1.) an HTML, not a HTML.  
+1.) user agent default styles, not user agent default style, not user agent style. 
+2.) style content, not stylize content. styled content, not stylized content.
+3.) noun whose, not noun, whose.
+4.) preceded and followed by, not preceded by and followed by.
+5.) structure type, not structural type. structural information, not structure information.
+6.) Consider, for example, when refering to code examples. Suppose, for example, when refering to wanting styles on a Web page.  
+
+1.) css: to attach style to content
+
+2.) rendering engine: to apply style to content
+
+3.) The following use colon, Syntax:, Example:, Examples: 
+The following use semi-colon, ...either; 1.)... Related to; 1.)..., An attribute through which; 1.)...
+
+4.) use syntax up until the point where a style rule selector, declaration block, declaration, property, and value have been defined. Thereafter, rather than using syntax, can use actual style rule examples.
+
+5.) All links to definitions should use className noLinkVisited regardless of whether they appear in normal text or in notes. All other links should use className as they normally would in other pages.
+
+6.) For page sections, and notes outside the definitions section, the first instance of each keyword should be linked to its definition. For the definitions section, and notes within the definitions section, all keywords should be linked to its definition.
+
+7.) Syntac, do not link to definitions.
+
+8.) display implies render, web browser window. appear implies appearance with implies css, style.
+
+8.)	<p><a id="attribute"></a><b>attribute</b></p>
+
+	<ul>
+		<li class="listItem">Imparts additional characteristic upon an <a href="#element" class="linkNoVisited">element</a>.</li>
+		<li class="listItem">Consists of a <a href="#name" class="linkNoVisited">name</a> and <a href="#value_html_attribute" class="linkNoVisited">value</a> pair. Compare with <a href="#declaration" class="linkNoVisited">declaration</a>.</li>
+		<li class="listItem">Syntax: &lt;element name=&quot;value&quot;&gt;content&lt;/element&gt;.</li>
+		<li class="listItem">A generic term referring to an attribute's <a href="#name" class="linkNoVisited">name</a>.</li>
+		<li class="listItem">Syntax: &lt;element attribute=&quot;value&quot;&gt;content&lt;/element&gt;.</li>
+		<li class="listItem">Those related to <a href="#style" class="linkNoVisited">style</a>, except for the <a href="#attribute" class="linkNoVisited">attributes</a>, <a href="#class" class="linkNoVisited">class</a> and <a href="#style_html_attribute" class="linkNoVisited">style</a>, are <a href="#deprecate" class="linkNoVisited">deprecated</a> or <a href="#obsolete" class="linkNoVisited">obsoleted</a> from <a href="#html_xhtml" class="linkNoVisited">HTML/XHTML</a> as being replaced by <a href="#css" class="linkNoVisited">CSS</a>.</li>
+	</ul>
+
+	<p><a id="name"></a><b>name</b></p>
+
+	<ul>
+		<li class="listItem">One of the two parts of an <a href="#attribute" class="linkNoVisited">attribute</a>. Compare with <a href="#value_html_attribute" class="linkNoVisited">value, HTML attribute</a>.</li>
+		<li class="listItem">Designates a general, non-specific, <a href="#element" class="linkNoVisited">element</a> characteristic type. Compare with <a href="#property" class="linkNoVisited">property</a>.</li>
+		<li class="listItem">Those related to <a href="#style" class="linkNoVisited">style</a>, except for the <a href="#attribute" class="linkNoVisited">attributes</a>, <a href="#class" class="linkNoVisited">class</a> and <a href="#style_html_attribute" class="linkNoVisited">style</a>, are <a href="#deprecate" class="linkNoVisited">deprecated</a> or <a href="#obsolete" class="linkNoVisited">obsoleted</a> from <a href="#html_xhtml" class="linkNoVisited">HTML/XHTML</a> as being replaced by <a href="#css" class="linkNoVisited">CSS</a>.</li>
+		<li class="listItem">Examples: face, color, size, <a href="#class" class="linkNoVisited">class</a>, and <a href="#style" class="linkNoVisited">style</a>.</li>
+	</ul>
+
+~~~
+~~~
+
+The update to "On Cascading Style Sheets" renamed "On CSS" on 14Aug09 with a seek peek is now complete and can be found in Left sidebar | Instructional And Informational Pages | Web Development | On CSS:
+http://www.stevestechresource.com/str/instructional/css.html
+
+Just a few of the truly unique qualities of the page are:
+
+1.) Instead of leading by example, it leads by description. In other words, rather than leaving it to the reader to fill in gaps, the page aims to leave few gaps.
+
+2.) Not some, but every technical term in the page is defined, over 70 total.
+
+3.) Some of the examples, rather than being isolated and simple, build off of the previous examples, which gives a better appreciation of the "cascading" aspect of CSS.
+
+4.) Makes the point that user agents have styles built into them that not only contribute to styling content, but that define and provide the structure types associated with HTML/XHTML elements. And the implications of this.
+
+5.) Includes a truly comprehensive definition of the Cascade, including not only what the Cascade does, but what the Cascade provides/allows.
+
+6.) Dispels some of the confusions and misconceptions associated with CSS.
+
+7.) And many more. Just make sure the pager tray is loaded for the .pdf is 36 pages. :)
+
+Comments welcome.
+
+Regards,
+
+-Steve

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>entries() Method On Arrays Web Browser Support Test</title>
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Steve Taylor" />
+  <meta name="Keywords" content="JavaScript, entries() method, array, web browser support, test" />
+  <meta name="Description" content="A JavaScript that tests and reports if the web browser supports the JavaScript entries() method on arrays." />
+  <script></script>
+ </head>
+ <body>
+
+  <h1><code>entries()</code> Method On Arrays Web Browser Support Test</h1>
+
+<!-- Similar test code in Generator object, entries() method on arrays, keys() method on arrays, and values() method on arrays. -->
+<!-- Use for statement/loop instead of ECMAScript 2015 for...of statement/loop to avoid for...of statement/loop possibly skewing test result. -->
+<!-- Per LWC web browser support testing, entries() method on arrays supported by ED12+, FF28+, CH38+, OP25+, no IE11-, SF5.1.7- and [Symbol.iterator] property supported by ED12+, FF36+, CH38+, OP25+, no IE11-, SF5.1.7-. Therefore, in web browser support test below, did not test if (arrayIteratorEntries[Symbol.iterator]) to avoid skewing test result to newer version FF. -->
+
+<script>
+var arrayViaArrayConstructor = new Array();
+arrayViaArrayConstructor[0] = "a";
+arrayViaArrayConstructor[1] = "b";
+arrayViaArrayConstructor[2] = "c";
+var arrayLiteral = ["d", "e", "f"];
+// Get references to array built-in array iterator object called by entries() method. NOTE: entries() method can be considered a generator function. Call entries() generator functions. Each call returns a Generator object which inherits prototype from Object (window.Generator property does not exist) and is an iterator. Generator object has next() method property. Called by entries(), array iterator object next() method return object value property is set to two element array with first element set to array element numeric index and second element set to array element value.
+var arrayViaArrayConstructorIteratorEntries = arrayViaArrayConstructor.entries(); // IE11 error: SCRIPT438: Object doesn't support property or method 'entries'.
+var arrayLiteralIteratorEntries = arrayLiteral.entries();
+var arrayViaArrayConstructorIteratorEntriesNextValues = [];
+var arrayLiteralIteratorEntriesNextValues = [];
+for (var i = 0; i < arrayViaArrayConstructor.length; i++){ // Identical to for (var entry of arrayViaArrayConstructor.entries()){console.log(entry);}. 1.) [0, "a"], 2.) [1, "b"], 3.) [2, "c"].
+ arrayViaArrayConstructorIteratorEntriesNextValues[i] = arrayViaArrayConstructorIteratorEntries.next().value;
+}
+for (var i = 0; i < arrayLiteral.length; i++){ // Identical to for (var entry of arrayLiteral.entries()){console.log(entry);}. 1.) [0, "d"], 2.) [1, "e"], 3.) [2, "f"].
+ arrayLiteralIteratorEntriesNextValues[i] = arrayLiteralIteratorEntries.next().value;
+}
+if (arrayViaArrayConstructor.entries && arrayLiteral.entries){
+ if ((typeof arrayViaArrayConstructorIteratorEntries === "object") && arrayViaArrayConstructorIteratorEntries instanceof Object && Object.prototype.isPrototypeOf(arrayViaArrayConstructorIteratorEntries) && Array.isArray(arrayViaArrayConstructorIteratorEntriesNextValues[0]) && (arrayViaArrayConstructorIteratorEntriesNextValues[0][0] === 0) && (arrayViaArrayConstructorIteratorEntriesNextValues[0][1] === "a") && (arrayViaArrayConstructorIteratorEntriesNextValues[1][0] === 1) && (arrayViaArrayConstructorIteratorEntriesNextValues[1][1] === "b") && (arrayViaArrayConstructorIteratorEntriesNextValues[2][0] === 2) && (arrayViaArrayConstructorIteratorEntriesNextValues[2][1] === "c") && (typeof arrayLiteralIteratorEntries === "object") && arrayLiteralIteratorEntries instanceof Object && Object.prototype.isPrototypeOf(arrayLiteralIteratorEntries) && Array.isArray(arrayLiteralIteratorEntriesNextValues[0]) && (arrayLiteralIteratorEntriesNextValues[0][0] === 0) && (arrayLiteralIteratorEntriesNextValues[0][1] === "d") && (arrayLiteralIteratorEntriesNextValues[1][0] === 1) && (arrayLiteralIteratorEntriesNextValues[1][1] === "e") && (arrayLiteralIteratorEntriesNextValues[2][0] === 2) && (arrayLiteralIteratorEntriesNextValues[2][1] === "f")){
+  document.write("<p><b>Pass</b> (at least partial/possibly full support): The web browser recognizes the JavaScript <code>entries()</code> method on arrays, and supports at least one <code>entries()</code> method on arrays capability. The web browser at least partially/possibly fully supports the JavaScript <code>entries()</code> method on arrays. Positive determination of full web browser support is beyond the scope of this test.</p>");
+ } else {
+  document.write("<p><b>Pass/Fail</b> (partial support): The web browser recognizes the JavaScript <code>entries()</code> method on arrays, but does not support at least one <code>entries()</code> method on arrays capability. The web browser partially supports the JavaScript <code>entries()</code> method on arrays.</p>");
+ }
+} else {
+ document.write("<p><b>Fail</b> (no support): The web browser does not recognize the JavaScript <code>entries()</code> method on arrays. The web browser does not support the JavaScript <code>entries()</code> method on arrays.</p>");
+}
+</script>
+
+ </body>
+</html>

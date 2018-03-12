@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>TypedArray Object Web Browser Support Test</title>
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Steve Taylor" />
+  <meta name="Keywords" content="JavaScript, TypedArray object, web browser support, test" />
+  <meta name="Description" content="A JavaScript that tests and reports if the web browser supports the JavaScript TypedArray object." />
+  <script></script>
+ </head>
+ <body>
+
+  <h1><code>TypedArray</code> Object Web Browser Support Test</h1>
+
+<!-- TypedArray object web browser support test results mentioned in [Symbol.iterator] property. -->
+
+<p id='testId'><b>Fail</b> (no support): The web browser does not recognize the JavaScript <code>TypedArray</code> object. The web browser does not support the JavaScript <code>TypedArray</code> object.</p><!-- Hard code Fail because web browser no support error stops JavaScript execution. -->
+
+<script>
+// Call typed array constructor with new to instantiate typed arrays. Constructor returns a TypedArray object which inherits prototype from Object, not Array (window.TypedArray property does not exist).
+var typedArrayOne = new Int8Array(); // Instantiate typedArrayOne with zero 8-bit elements. typedArrayOne has zero elements (length === 0). Each element is 8 bits. 8 bits = 1 byte. One 8-bit element requires one byte. Zero 8-bit elements require zero bytes (byteLength === 0).
+var typedArrayTwo = new Int8Array(2); // Instantiate typedArrayTwo with two 8-bit elements. typedArrayTwo has two elements (length === 2). Each element is 8 bits. 8 bits = 1 byte. One 8-bit element requires one byte. Two 8-bit elements require two bytes (byteLength === 2).
+var typedArrayThree = new Int16Array(2); // Instantiate typedArrayThree with two 16-bit elements. typedArrayThree has two elements (length === 2). Each element is 16 bits. 8 bits = 1 byte. One 16-bit element requires two bytes. Two 16-bit elements require four bytes (byteLength === 4).
+var typedArrayFour = new Int8Array(3); // Instantiate typedArrayFour with three 8-bit elements holding no values.
+typedArrayFour[0] = 10; // Assign typedArrayFour element index 0 value 10.
+typedArrayFour[1] = 20; // Assign typedArrayFour element 1 index value 20.
+typedArrayFour[2] = typedArrayFour[0] + typedArrayFour[1]; // Assign typedArrayFour element index 2 value typedArrayFour[0] plus typedArrayFour[1] (ie, 10 + 20).
+var typedArrayFive = new Int8Array([11,22,33]); // Instantiate typedArrayFive with three 8-bit elements holding values 11, 22, and 33 from passed array.
+var typedArraySix = new Int8Array(typedArrayFive); // Instantiate typedArraySix with 8-bit elements holding values from passed typed array.
+if (window.typedArrayOne){ // Identical to if (typedArrayOne).
+ var element = document.getElementById("testId");
+ if ((typeof typedArrayOne === "object") && typedArrayOne instanceof Object && !(typedArrayOne instanceof Array) && Object.prototype.isPrototypeOf(typedArrayOne) && !Array.prototype.isPrototypeOf(typedArrayOne) && !Array.isArray(typedArrayOne) && (typedArrayOne.length === 0) && (typedArrayOne.byteLength === 0) && (typedArrayTwo.length === 2) && (typedArrayTwo.byteLength === 2) && (typedArrayThree.length === 2) && (typedArrayThree.byteLength === 4) && (typedArrayFour.length === 3) && (typedArrayFour[0] === 10) && (typedArrayFour[2] === 30) && (typedArrayFive.length === 3) && (typedArrayFive[0] === 11) && (typedArrayFive[2] === 33) && (typedArraySix.length === 3) && (typedArraySix[0] === 11) && (typedArraySix[2] === 33)){
+  element.innerHTML = "<b>Pass</b> (at least partial/possibly full support): The web browser recognizes the JavaScript <code>TypedArray</code> object, and supports at least one <code>TypedArray</code> object capability. The web browser at least partially/possibly fully supports the JavaScript <code>TypedArray</code> object. Positive determination of full web browser support is beyond the scope of this test.";
+ } else {
+  element.innerHTML = "<b>Pass/Fail</b> (partial support): The web browser recognizes the JavaScript <code>TypedArray</code> object, but does not support at least one <code>TypedArray</code> object capability. The web browser partially supports the JavaScript <code>TypedArray</code> object.";
+ }
+}
+</script>
+
+ </body>
+</html>

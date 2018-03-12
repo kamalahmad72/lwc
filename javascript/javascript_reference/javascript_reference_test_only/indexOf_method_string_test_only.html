@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>indexOf() Method On Strings Web Browser Support Test</title>
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Steve Taylor" />
+  <meta name="Keywords" content="JavaScript, indexOf() method, string, web browser support, test" />
+  <meta name="Description" content="A JavaScript that tests and reports if the web browser supports the JavaScript indexOf() method on strings." />
+  <script></script>
+ </head>
+ <body>
+
+  <h1><code>indexOf()</code> Method On Strings Web Browser Support Test</h1>
+
+<script>
+var string = "abc def ghi";
+if (string.indexOf){
+ if (string.indexOf("def") === 4){
+  document.write("<p><b>Pass</b> (at least partial/possibly full support): The web browser recognizes the JavaScript <code>indexOf()</code> method on strings, and supports at least one <code>indexOf()</code> method on strings capability. The web browser at least partially/possibly fully supports the JavaScript <code>indexOf()</code> method on strings. Positive determination of full web browser support is beyond the scope of this test.</p>");
+ } else {
+  document.write("<p><b>Pass/Fail</b> (partial support): The web browser recognizes the JavaScript <code>indexOf()</code> method on strings, but does not support at least one <code>indexOf()</code> method on strings capability. The web browser partially supports the JavaScript <code>indexOf()</code> method on strings.</p>");
+ }
+} else {
+ document.write("<p><b>Fail</b> (no support): The web browser does not recognize the JavaScript <code>indexOf()</code> method on strings. The web browser does not support the JavaScript <code>indexOf()</code> method on strings.</p>");
+}
+</script>
+
+ </body>
+</html>

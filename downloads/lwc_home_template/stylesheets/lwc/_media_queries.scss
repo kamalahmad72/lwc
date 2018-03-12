@@ -1,0 +1,49 @@
+// -------------------- INTRODUCTION --------------------
+
+// File: /web_server_root_directory/stylesheets/lwc/_media_queries.scss.
+// Purpose: Media query related Sass style definitions.
+// Used in: lwc.scss.
+// Last reviewed/updated: 25 Jul 2017.
+// Published: 25 Jul 2017.
+
+/* -------------------- MEDIA QUERIES (_media_queries.scss) -------------------- */
+
+/* ---------- HTML AND BODY ---------- */
+
+/* ---------- TYPOGRAPHY ---------- */
+
+/* ---------- MARGINS AND PADDINGS ---------- */
+
+@media (min-width: $tools-icon-dropdown-media-query-viewport-breakpoint) {
+  .tools-icon-dropdown-container {
+    margin-top: 0;
+  }
+}
+@media (min-width: $tools-icon-dropdown-media-query-viewport-breakpoint) {
+  .tools-icon-dropdown {
+    margin-top: 3px;
+  }
+}
+
+/* ---------- COLORS AND BORDERS ---------- */
+
+@media (min-width: $tools-icon-dropdown-media-query-viewport-breakpoint) {
+  .tools-icon-dropdown {
+    border: $border-darker;
+  }
+}
+@media (min-width: $tools-icon-dropdown-media-query-viewport-breakpoint) {
+  .tools-icon-dropdown {
+    box-shadow: $box-shadow-primary;
+  }
+}
+
+/* ---------- HYPERLINKS, INTERACTIVE OBJECTS, AND FORM CONTROLS ---------- */
+
+/* ---------- MISCELLANEOUS ---------- */
+
+@media (min-width: $tools-icon-dropdown-media-query-viewport-breakpoint) {
+  .web-browser-support, .tools-icon-dropdown-container {
+    float: left;
+  }
+}

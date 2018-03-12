@@ -1,0 +1,32 @@
+--------------------------------------------
+WordPress 4.7.x Installation On XAMPP 5.6.24
+--------------------------------------------
+
+Install WP per WP 5 min install at http://codex.wordpress.org/Installing_WordPress). Where detailed instructions are required, scroll down the page for the detailed instructions.
+
+1.) Download latest version WP from https://wordpress.org/download/.
+2.) Extract the WP download and copy the extracted files, not extracted wordpress folder, to:
+    a.) For WP blog install, copy to /web_server_root_directory/wp/. In my case, copy to G:\xampp7P\htdocs\wp\.
+    b.) For WP forum bbpress install, copy to /web_server_root_directory/wpforums/. In my case, copy to G:\xampp7P\htdocs\wpforum\.
+3.) Create database using phpMyAdmin per https://codex.wordpress.org/Installing_WordPress#Using_phpMyAdmin.
+    Database name: wp1
+    Collation: utf8mb4_general_ci
+    The No tables found in database phpMyAdmin warning arrears. This is OK. Exit phpMyAdmin.
+    NOTE: webzpro installer created WP database with latin1_swedish_ci collation (confirmed 29Jan17).
+4.) Point web browser to http://blog.learnwebcoding.com/, which requires registering DocumentRoot "G:/xampp7P/htdocs/wp/" and ServerName blog.learnwebcoding.com as vhost in XAMPP httpd-vhosts.conf file. Otherwise, point web browser to http://localhost/wp/.
+5.) The http://blog.learnwebcoding.com/wp-admin/setup-config.php web page appears.
+6.) Select English (United States)
+    Database Name:
+    a.) For WP blog install, database name wp1. Notice same as WP install wp folder with 1 added to end.
+    b.) For WP forum bbpress install, database name wpforums1. Notice same as WP forum bbpress install wpforum folder with 1 added to end.
+    Username: root
+    Password: empty/blank.
+    Database host: localhost
+    Table prefix: wp_ (default)
+7.) WordPress can now communicate with your database. If you are ready, time now to...Run the install. Click Run the install.
+8.) Site Title: Learning Web Coding Blog
+    Username: wpAdmin
+    Password: wpAdminPsswrd
+    Your Email: admin@learnwebcoding.com
+    Search Engine Visibility; check Discourage search engines from indexing this site checkbox.
+    

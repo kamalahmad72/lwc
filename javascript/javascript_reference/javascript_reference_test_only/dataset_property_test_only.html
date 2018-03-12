@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>dataset Property Web Browser Support Test</title>
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Steve Taylor" />
+  <meta name="Keywords" content="JavaScript, dataset property, web browser support, test" />
+  <meta name="Description" content="A JavaScript that tests and reports if the web browser supports the JavaScript dataset property." />
+  <script></script>
+ </head>
+ <body>
+
+  <h1><code>dataset</code> Property Web Browser Support Test</h1>
+
+<p id='testId' data-attributename='attributeValue'></p>
+
+<script>
+var element = document.getElementById("testId");
+if (element.dataset){
+ if (element.dataset.attributename === "attributeValue"){
+  document.write("<p><b>Pass</b> (at least partial/possibly full support): The web browser recognizes the JavaScript <code>dataset</code> property, and supports at least one <code>dataset</code> property capability. The web browser at least partially/possibly fully supports the JavaScript <code>dataset</code> property. Positive determination of full web browser support is beyond the scope of this test.</p>");
+ } else {
+  document.write("<p><b>Pass/Fail</b> (partial support): The web browser recognizes the JavaScript <code>dataset</code> property, but does not support at least one <code>dataset</code> property capability. The web browser partially supports the JavaScript <code>dataset</code> property.</p>");
+ }
+} else {
+ document.write("<p><b>Fail</b> (no support): The web browser does not recognize the JavaScript <code>dataset</code> property. The web browser does not support the JavaScript <code>dataset</code> property.</p>");
+}
+</script>
+
+ </body>
+</html>

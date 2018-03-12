@@ -1,0 +1,7 @@
+.interactive-object {
+  text-decoration: underline;
+}
+.interactive-object:hover {
+  color: #999;
+  cursor: pointer;
+}

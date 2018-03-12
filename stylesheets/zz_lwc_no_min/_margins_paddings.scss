@@ -1,0 +1,99 @@
+// -------------------- INTRODUCTION --------------------
+
+// File: /web_server_root_directory/stylesheets/lwc/_margins_paddings.scss.
+// Purpose: Margin property related (eg, margin, margin-top, etc) and padding property related (eg, padding, padding-top, etc) Sass style definitions.
+// Used in: lwc.scss.
+// Last reviewed/updated: 25 Jul 2017.
+// Published: 03 Sep 2015.
+
+/* -------------------- MARGINS AND PADDINGS (_margins_paddings.scss) -------------------- */
+
+p, ol, ul, table, hr, img, code, pre, footer, .note {
+  margin: 1em 0;
+}
+// h1 web page title. h2 through h5 web page section titles. For consistent margins on items with different sizes, use margin px, not em.
+h1, h2, h3, h4, h5 {
+  margin: 21px 0 14px;
+}
+h1 {
+  margin-top: 14px;
+}
+h2 {
+  margin-top: 28px;
+}
+ol, ul {
+  ol, ul, pre, .note {
+    margin: 0.5em 0;
+  }
+}
+// Paragraph as child of table cell and note no margin-top.
+td, .note {
+  > p {
+    margin-top: 0;
+  }
+}
+// List as child of table cell and note no margin-top/bottom. List as first child of table cell and note reduce padding-left.
+td, .note {
+  > ol, > ul {
+    margin: 0;
+    &:first-child {
+      padding-left: 20px;
+    }
+  }
+}
+// Resolves list margin-bottom issue for lists in lists in notes if parent list does not have list item after nested list.
+li:last-child {
+  > ol, > ul {
+    margin-bottom: 0;
+  }
+}
+// margin-bottom: 5em, not 6em, because img type selector margin-top: 1em, not because footer type selector margin-top: 1em which collapses with .home-page-main margin-bottom.
+.home-page-main {
+  margin: 6em 0 4em;
+}
+.home-page-main-subtitle-row {
+  margin-bottom: 3em;
+}
+// Vertically separates home page main panels when they stack on narrow viewports.
+.home-page-main-fa-panel {
+  margin-bottom: 2em;
+}
+.bcrumbs-nav {
+  margin-top: 9px;
+}
+.web-browser-support-and-tools-icon-dropdown-container {
+  margin: 2px 0 21px;
+}
+.tools-icon-dropdown-container {
+  margin-top: 0.5em;
+}
+// margin-left on .toc-sec-title instead of width on .toc-num resolves line wrap issue.
+.toc-sec-title {
+  margin-left: 5em;
+}
+// margin-left on .toc-sub1sec-title instead of width on .toc-num resolves line wrap issue.
+.toc-sub1sec-title {
+  margin-left: 5.75em;
+}
+// margin-left on .toc-sub2sec-title instead of width on .toc-num resolves line wrap issue.
+.toc-sub2sec-title {
+  margin-left: 6.5em;
+}
+// margin-left on .toc-sub3sec-title instead of width on .toc-num resolves line wrap issue.
+.toc-sub3sec-title {
+  margin-left: 7.25em;
+}
+.web-browser-support {
+  margin-right: 20px;
+  padding-top: 2px;
+}
+.tools-icon-dropdown {
+  margin-top: 6px;
+  padding-left: 0px;
+}
+caption, th, td, pre, .note {
+  padding: $padding-primary;
+}
+code {
+  padding: 1px 4px 0;
+}

@@ -1,0 +1,31 @@
+* {
+  text-align: center;
+  margin: 0;
+}
+main {
+  display: block;
+}
+header {
+  height: 150px;
+}
+.header-not-nav {
+  height: 100px;
+  background-color: #fcc;
+}
+nav {
+  height: 50px;
+  background-color: #000;
+  color: #fff;
+}
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+main {
+  background-color: #cfc;
+}
+footer {
+  background-color: #ccf;
+}

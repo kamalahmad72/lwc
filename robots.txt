@@ -1,0 +1,11 @@
+# robots.txt
+# Last reviewed/updated: 07 Jul 2017. Removed; 1.) Disallow: /fonts/, 2.) Disallow: /javascripts/, and 3.) Disallow: /stylesheets/ so Google Mobile-Friendly Test Tool (https://search.google.com/search-console/mobile-friendly) will not report Font Awesome fonts and .js and .css files as blocked resources per https://support.google.com/webmasters/answer/6352293.
+
+User-agent: *
+Disallow: /404.shtml
+Disallow: /index2.html
+Disallow: /cgi-bin/
+Disallow: /phpbb/
+Disallow: /subdirectory/
+Disallow: /wp/
+Sitemap: https://www.learnwebcoding.com/sitemap.xml

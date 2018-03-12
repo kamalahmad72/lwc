@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>Valid HTML5 Web Page Template</title>
+  <style type="text/css">
+   body {
+     font-family: arial, tahoma, sans-serif;
+     font-size: 14px;
+     background-color: #fff;
+     color: #000;
+   }
+   label {
+     display: inline-block; /* Eliminate dead space between :before generated checkbox and label text in IE11 and CH43. No dead space FF39. */
+     cursor: pointer;
+   }
+   input[type="checkbox"], input[type="radio"] {
+     display: none;
+   }
+   input[type="checkbox"] + label:before, input[type="radio"] + label:before {
+     display: inline-block;
+     width: 10px;
+     height: 10px;
+     vertical-align: middle;
+     content: "";
+     font-weight: bold;
+     line-height: 10px;
+     text-align: center;
+     border: 2px solid #d7d7d7;
+     box-sizing: content-box;
+     margin-right: 5px;
+   }
+   input[type="checkbox"] + label:before {
+     border-radius: 2px
+   }
+   input[type="checkbox"]:checked + label:before {
+     content: "\2713";
+   }
+   input[type="radio"] + label:before {
+     border-radius: 10px
+   }
+   input[type="radio"]:checked + label:before {
+    content: "\2022";
+   }
+   input[type="checkbox"] + label:hover:before, input[type="radio"] + label:hover:before {
+     background-color: #efefef;
+     border-color: #888;
+   }
+  </style>
+ </head>
+ <body>
+
+  <p>JSFiddle: <a href="http://jsfiddle.net/gpaj3mg8/">http://jsfiddle.net/gpaj3mg8/</a></p>
+
+  <p>Checkboxes:<br />
+   <input type="checkbox" id="cb1" name="identifies checkbox when form submitted" value="optional" /><label for="cb1">Checkbox</label><br />
+   <input type="checkbox" id="cb2" name="identifies checkbox when form submitted" value="optional" checked="checked" /><label for="cb2">Checkbox default selected (checked)/pre-selected (pre-checked)</label>
+  </p>
+
+  <p>
+   Radio button group:<br />
+   <input type="radio" id="rb1" name="identifies radio button group when form submitted" value="sent when form submitted" /><label for="rb1">Radio button</label><br />
+   <input type="radio" id="rb2" name="identifies radio button group when form submitted" value="sent when form submitted" checked="checked" /><label for="rb2">Radio button default selected/pre-selected</label>
+  </p>
+
+ </body>
+</html>

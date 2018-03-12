@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>startsWith() Method Web Browser Support Test</title>
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Steve Taylor" />
+  <meta name="Keywords" content="JavaScript, startsWith() method, web browser support, test" />
+  <meta name="Description" content="A JavaScript that tests and reports if the web browser supports the JavaScript startsWith() method." />
+  <script></script>
+ </head>
+ <body>
+
+  <h1><code>startsWith()</code> Method Web Browser Support Test</h1>
+
+<script>
+var string = "abc def ghi";
+if (string.startsWith){
+ if (string.startsWith("abc") === true){
+  document.write("<p><b>Pass</b> (at least partial/possibly full support): The web browser recognizes the JavaScript <code>startsWith()</code> method, and supports at least one <code>startsWith()</code> method capability. The web browser at least partially/possibly fully supports the JavaScript <code>startsWith()</code> method. Positive determination of full web browser support is beyond the scope of this test.</p>");
+ } else {
+  document.write("<p><b>Pass/Fail</b> (partial support): The web browser recognizes the JavaScript <code>startsWith()</code> method, but does not support at least one <code>startsWith()</code> method capability. The web browser partially supports the JavaScript <code>startsWith()</code> method.</p>");
+ }
+} else {
+ document.write("<p><b>Fail</b> (no support): The web browser does not recognize the JavaScript <code>startsWith()</code> method. The web browser does not support the JavaScript <code>startsWith()</code> method.</p>");
+}
+</script>
+
+ </body>
+</html>

@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>lists, border, margin, padding</title>
+<meta charset="UTF-8" />
+<meta name="Author" content="Steve Taylor" />
+<meta name="Keywords" content="HTML, web page, examine, view, compare, user agent, Web browser, default, built-in, styles, style sheet" />
+<meta name="Description" content="An HTML only Web page for examining user agent default styles." />
+<!-- <link rel="stylesheet" type="text/css" media="all" href="../../library/main.css" id="linkElement" /> -->
+<script type="text/javascript" src="../../library/library.js"></script>
+<style type="text/css">
+
+.border { border: 1px solid black }
+.margin { margin: 30px }
+.padding { padding: 15px }
+</style>
+</head>
+<body>
+
+<script type="text/javascript" src="../../library/header.js" id="headerSrc"></script>
+<script type="text/javascript">NavBarUtil.navBar("lwcn_home_html");</script>
+<noscript><div class="noscript"><a href="http://www.learnwebcodingnow.com/" class="linkUnderlineNoVisited">Learn Web Coding Now - The Resource For Learning HTML, CSS, BOM, DOM, And JavaScript.</a><br />Page header, and possibly other document objects, not displayed because your Web browser does not support JavaScript or has JavaScript support disabled.</div></noscript>
+
+<div class="container">
+
+<h1>lists, border, margin, padding</h1>
+
+<p>Last Reviewed/Updated: 12 May 2014 | Published: 07 Feb 2014 | Status: Active</p>
+
+<ol class="toc">
+	<li class="tocSectionTitleListItem"><span class="tocSectionTitle">1.&nbsp;&nbsp;<a href="#toc1" class="linkUnderlineNoVisited">Introduction</a></span></li>
+	<li class="tocSectionTitleListItem"><span class="tocSectionTitle">2.&nbsp;&nbsp;<a href="#toc2" class="linkUnderlineNoVisited">div, span, border, margin, padding</a></span>
+	<ol class="tocSectionSubtitleOlOneThruNine">
+		<li class="tocSectionTitleListItem"><span class="tocSectionSubtitle">2.1.&nbsp;&nbsp;<a href="#toc2_1" class="linkUnderlineNoVisited">Classing ol and ul without nesting</a></span></li>
+		<li class="tocSectionTitleListItem"><span class="tocSectionSubtitle">2.1.&nbsp;&nbsp;<a href="#toc2_1" class="linkUnderlineNoVisited">Classing ol and ul with nesting</a></span></li>
+		<li class="tocSectionTitleListItem"><span class="tocSectionSubtitle">2.2.&nbsp;&nbsp;<a href="#toc2_2" class="linkUnderlineNoVisited">Classing li</a></span></li>
+		<li class="tocSectionTitleListItem"><span class="tocSectionSubtitle">2.3.&nbsp;&nbsp;<a href="#toc2_3" class="linkUnderlineNoVisited">span, border, margin, padding</a></span></li>
+	</ol>
+	</li>
+	<li class="tocSectionTitleListItem"><span class="tocSectionTitle">3.&nbsp;&nbsp;<a href="#toc3" class="linkUnderlineNoVisited">Resources And Additional Information</a></span></li>
+</ol>
+
+<hr />
+
+<p><a id="toc1"></a>1.&nbsp;&nbsp;Introduction</p>
+
+<div class="section">
+
+</div>
+
+<hr />
+
+<p class="sectionTitle"><a id="toc2"></a>2.&nbsp;&nbsp;lists, border, margin, padding</p>
+
+<div class="section">
+
+	<p class="sectionSubtitle"><a id="toc2_1"></a>2.1.&nbsp;&nbsp;Classing ol and ul without nesting</p>
+
+	<p>This is a paragraph using &lt;p&gt;&lt;/p&gt; tags for reference</p>
+
+	<ul>
+		<li>1 Unordered list | list item</li>
+		<li>Unordered list | list item</li>
+		<li>Unordered list | list item</li>
+		<li>Unordered list | list item</li>
+	</ul>
+
+	<ol>
+		<li>2 Ordered list | list item</li>
+		<li>Ordered list | list item</li>
+		<li>Ordered list | list item</li>
+		<li>Ordered list | list item</li>
+	</ol>
+
+	<ul class="padding">
+		<li>3 ul classed with padding</li>
+		<li>Unordered list | list item</li>
+		<li>Unordered list | list item</li>
+		<li>Unordered list | list item</li>
+	</ul>
+
+	<p class="border">This is a paragraph classed with border for reference</p>
+
+	<ol>
+		<li>4 Ordered list | list item</li>
+		<li>Ordered list | list item</li>
+		<li>Ordered list | list item</li>
+		<li>Ordered list | list item</li>
+	</ol>
+
+	<ul>
+		<li>5 Unordered list | list item</li>
+		<li>Unordered list | list item</li>
+		<li>Unordered list | list item</li>
+		<li>Unordered list | list item</li>
+	</ul>
+
+	<ol class="padding">
+		<li>6 ol classed with padding</li>
+		<li>Ordered list | list item</li>
+		<li>Ordered list | list item</li>
+		<li>Ordered list | list item</li>
+	</ol>
+
+	<p class="border">This is a paragraph classed with border for reference</p>
+
+	<ul class="border">
+		<li>7 ul classed with border</li>
+		<li>Unordered list | list item</li>
+		<li>Unordered list | list item</li>
+		<li>Unordered list | list item</li>
+	</ul>
+
+	<ul class="border">
+		<li>8 ul classed with border</li>
+		<li>Unordered list | list item</li>
+		<li>Unordered list | list item</li>
+		<li>Unordered list | list item</li>
+	</ul>
+
+	<p class="border">This is a paragraph classed with border for reference</p>
+
+	<ul class="border margin">
+		<li>9 ul classed with border and margin</li>
+		<li>Unordered list | list item</li>
+		<li>Unordered list | list item</li>
+		<li>Unordered list | list item</li>
+	</ul>
+
+	<ul class="border margin">
+		<li>10 ul classed with border and margin</li>
+		<li>Unordered list | list item</li>
+		<li>Unordered list | list item</li>
+		<li>Unordered list | list item</li>
+	</ul>
+
+	<p class="border">This is a paragraph classed with border for reference</p>
+
+	<ul class="border padding">
+		<li>11 ul classed with border and padding</li>
+		<li>Unordered list | list item</li>
+		<li>Unordered list | list item</li>
+		<li>Unordered list | list item</li>
+	</ul>
+
+	<ul class="border padding">
+		<li>12 ul classed with border and padding</li>
+		<li>Unordered list | list item</li>
+		<li>Unordered list | list item</li>
+		<li>Unordered list | list item</li>
+	</ul>
+
+	<p class="border">This is a paragraph classed with border for reference</p>
+
+	<ul class="border margin padding">
+		<li>13 ul classed with border, margin, and padding</li>
+		<li>Unordered list | list item</li>
+		<li>Unordered list | list item</li>
+		<li>Unordered list | list item</li>
+	</ul>
+
+	<ul class="border margin padding">
+		<li>14 ul classed with border, margin, and padding</li>
+		<li>Unordered list | list item</li>
+		<li>Unordered list | list item</li>
+		<li>Unordered list | list item</li>
+	</ul>
+
+	<p class="border">This is a paragraph classed with border for reference</p>
+
+	<ol class="border">
+		<li>15 ol classed with border</li>
+		<li>Ordered list | list item</li>
+		<li>Ordered list | list item</li>
+		<li>Ordered list | list item</li>
+	</ol>
+
+	<ol class="border">
+		<li>16 ol classed with border</li>
+		<li>Ordered list | list item</li>
+		<li>Ordered list | list item</li>
+		<li>Ordered list | list item</li>
+	</ol>
+
+	<p class="border">This is a paragraph classed with border for reference</p>
+
+	<ol class="border margin">
+		<li>17 ol classed with border and margin</li>
+		<li>Ordered list | list item</li>
+		<li>Ordered list | list item</li>
+		<li>Ordered list | list item</li>
+	</ol>
+
+	<ol class="border margin">
+		<li>18 ol classed with border and margin</li>
+		<li>Ordered list | list item</li>
+		<li>Ordered list | list item</li>
+		<li>Ordered list | list item</li>
+	</ol>
+
+	<p class="border">This is a paragraph classed with border for reference</p>
+
+	<ol class="border padding">
+		<li>19 ol classed with border and padding</li>
+		<li>Ordered list | list item</li>
+		<li>Ordered list | list item</li>
+		<li>Ordered list | list item</li>
+	</ol>
+
+	<ol class="border padding">
+		<li>20 ol classed with border and padding</li>
+		<li>Ordered list | list item</li>
+		<li>Ordered list | list item</li>
+		<li>Ordered list | list item</li>
+	</ol>
+
+	<p class="border">This is a paragraph classed with border for reference</p>
+
+	<ol class="border margin padding">
+		<li>21 ol classed with border, margin, and padding</li>
+		<li>Ordered list | list item</li>
+		<li>Ordered list | list item</li>
+		<li>Ordered list | list item</li>
+	</ol>
+
+	<ol class="border margin padding">
+		<li>22 ol classed with border, margin, and padding</li>
+		<li>Ordered list | list item</li>
+		<li>Ordered list | list item</li>
+		<li>Ordered list | list item</li>
+	</ol>
+
+	<p class="sectionSubtitle"><a id="toc2_2"></a>2.2.&nbsp;&nbsp;Classing ol and ul with nesting</p>
+
+	<p class="border">This is a paragraph classed with border for reference</p>
+
+	<ol>
+		<li>23 Ordered list | list item.</li>
+		<li>Ordered list | list item.
+		<ol>
+			<li>Ordered list nested in ordered list | list item.</li>
+			<li>Ordered list nested in ordered list | list item.</li>
+			<li>Ordered list nested in ordered list | list item.</li>
+			<li>Ordered list nested in ordered list | list item.</li>
+		</ol>
+		</li>
+		<li>Ordered list | list item.</li>
+		<li>Ordered list | list item.</li>
+	</ol>
+
+	<p class="border">This is a paragraph classed with border for reference</p>
+
+	<ol class="border">
+		<li>24 ol classed with border</li>
+		<li>Ordered list | list item.
+		<ol class="border">
+			<li>ol classed with border</li>
+			<li>Ordered list nested in ordered list | list item.</li>
+			<li>Ordered list nested in ordered list | list item.</li>
+			<li>Ordered list nested in ordered list | list item.</li>
+		</ol>
+		</li>
+		<li>Ordered list | list item.</li>
+		<li>Ordered list | list item.</li>
+	</ol>
+
+	<p class="border">This is a paragraph classed with border for reference</p>
+
+	<ol class="border margin">
+		<li>25 ol classed with border and margin</li>
+		<li>Ordered list | list item.
+		<ol class="border margin">
+			<li>ol classed with border and margin</li>
+			<li>Ordered list nested in ordered list | list item.</li>
+			<li>Ordered list nested in ordered list | list item.</li>
+			<li>Ordered list nested in ordered list | list item.</li>
+		</ol>
+		</li>
+		<li>Ordered list | list item.</li>
+		<li>Ordered list | list item.</li>
+	</ol>
+
+	<p class="border">This is a paragraph classed with border for reference</p>
+
+	<ol class="border padding">
+		<li>26 ol classed with border and padding</li>
+		<li>Ordered list | list item.
+		<ol class="border padding">
+			<li>ol classed with border and padding</li>
+			<li>Ordered list nested in ordered list | list item.</li>
+			<li>Ordered list nested in ordered list | list item.</li>
+			<li>Ordered list nested in ordered list | list item.</li>
+		</ol>
+		</li>
+		<li>Ordered list | list item.</li>
+		<li>Ordered list | list item.</li>
+	</ol>
+
+	<p class="border">This is a paragraph classed with border for reference</p>
+
+	<ol class="border margin padding">
+		<li>27 ol classed with border, margin,and padding</li>
+		<li>Ordered list | list item.
+		<ol class="border margin padding">
+			<li>ol classed with border,margin, and padding</li>
+			<li>Ordered list nested in ordered list | list item.</li>
+			<li>Ordered list nested in ordered list | list item.</li>
+			<li>Ordered list nested in ordered list | list item.</li>
+		</ol>
+		</li>
+		<li>Ordered list | list item.</li>
+		<li>Ordered list | list item.</li>
+	</ol>
+
+	<ul>
+		<li>28 Unordered list | list item.</li>
+		<li>Unordered list | list item.
+		<ul>
+			<li>Unordered list nested in unordered list | list item.</li>
+			<li>Unordered list nested in unordered list | list item.</li>
+			<li>Unordered list nested in unordered list | list item.</li>
+			<li>Unordered list nested in unordered list | list item.</li>
+		</ul>
+		</li>
+		<li>Unordered list | list item.</li>
+		<li>Unordered list | list item.</li>
+	</ul>
+
+	<p class="border">This is a paragraph classed with border for reference</p>
+
+	<ul class="border">
+		<li>29 ul classed with border</li>
+		<li>Unordered list | list item.
+		<ul class="border">
+			<li>ul classed with border</li>
+			<li>Unordered list nested in unordered list | list item.</li>
+			<li>Unordered list nested in unordered list | list item.</li>
+			<li>Unordered list nested in unordered list | list item.</li>
+		</ul>
+		</li>
+		<li>Unordered list | list item.</li>
+		<li>Unordered list | list item.</li>
+	</ul>
+
+	<p class="border">This is a paragraph classed with border for reference</p>
+
+	<ul class="border margin">
+		<li>30 ul classed with border and margin</li>
+		<li>Unordered list | list item.
+		<ul class="border margin">
+			<li>ul classed with border and margin</li>
+			<li>Unordered list nested in unordered list | list item.</li>
+			<li>Unordered list nested in unordered list | list item.</li>
+			<li>Unordered list nested in unordered list | list item.</li>
+		</ul>
+		</li>
+		<li>Unordered list | list item.</li>
+		<li>Unordered list | list item.</li>
+	</ul>
+
+	<p class="border">This is a paragraph classed with border for reference</p>
+
+	<ul class="border padding">
+		<li>31 ul classed with border and padding</li>
+		<li>Unordered list | list item.
+		<ul class="border padding">
+			<li>ul classed with border and padding</li>
+			<li>Unordered list nested in unordered list | list item.</li>
+			<li>Unordered list nested in unordered list | list item.</li>
+			<li>Unordered list nested in unordered list | list item.</li>
+		</ul>
+		</li>
+		<li>Unordered list | list item.</li>
+		<li>Unordered list | list item.</li>
+	</ul>
+
+	<p class="border">This is a paragraph classed with border for reference</p>
+
+	<ul class="border margin padding">
+		<li>32 ul classed with border, margin,and padding</li>
+		<li>Unordered list | list item.
+		<ul class="border margin padding">
+			<li>ul classed with border,margin, and padding</li>
+			<li>Unordered list nested in unordered list | list item.</li>
+			<li>Unordered list nested in unordered list | list item.</li>
+			<li>Unordered list nested in unordered list | list item.</li>
+		</ul>
+		</li>
+		<li>Unordered list | list item.</li>
+		<li>Unordered list | list item.</li>
+	</ul>
+
+	<p class="border">This is a paragraph classed with border for reference</p>
+
+	<ol>
+		<li>33 Ordered list | list item.</li>
+		<li>Ordered list | list item.
+		<ul>
+			<li>Unordered list nest in ordered list | list item.</li>
+			<li>Unordered list nest in ordered list | list item.</li>
+			<li>Unordered list nest in ordered list | list item.</li>
+			<li>Unordered list nest in ordered list | list item.</li>
+		</ul>
+		</li>
+		<li>Ordered list | list item.</li>
+		<li>Ordered list | list item.</li>
+	</ol>
+
+	<p class="border">This is a paragraph classed with border for reference</p>
+
+	<ol class="border">
+		<li>34 ol classed with border</li>
+		<li>Ordered list | list item.
+		<ul class="border">
+			<li>ul classed with border</li>
+			<li>Unordered list nest in ordered list | list item.</li>
+			<li>Unordered list nest in ordered list | list item.</li>
+			<li>Unordered list nest in ordered list | list item.</li>
+		</ul>
+		</li>
+		<li>Ordered list | list item.</li>
+		<li>Ordered list | list item.</li>
+	</ol>
+
+	<p class="border">This is a paragraph classed with border for reference</p>
+
+	<ol class="border margin">
+		<li>35 ol classed with border and margin</li>
+		<li>Ordered list | list item.
+		<ul class="border margin">
+			<li>ul classed with border and margin</li>
+			<li>Unordered list nest in ordered list | list item.</li>
+			<li>Unordered list nest in ordered list | list item.</li>
+			<li>Unordered list nest in ordered list | list item.</li>
+		</ul>
+		</li>
+		<li>Ordered list | list item.</li>
+		<li>Ordered list | list item.</li>
+	</ol>
+
+	<p class="border">This is a paragraph classed with border for reference</p>
+
+	<ol class="border padding">
+		<li>36 ol classed with border and padding</li>
+		<li>Ordered list | list item.
+		<ul class="border padding">
+			<li>ul classed with border and padding</li>
+			<li>Unordered list nest in ordered list | list item.</li>
+			<li>Unordered list nest in ordered list | list item.</li>
+			<li>Unordered list nest in ordered list | list item.</li>
+		</ul>
+		</li>
+		<li>Ordered list | list item.</li>
+		<li>Ordered list | list item.</li>
+	</ol>
+
+	<ol class="border margin padding">
+		<li>37 ol classed with border, margin, and padding</li>
+		<li>Ordered list | list item.
+		<ul class="border margin padding">
+			<li>ul classed with border, margin, and padding</li>
+			<li>Unordered list nest in ordered list | list item.</li>
+			<li>Unordered list nest in ordered list | list item.</li>
+			<li>Unordered list nest in ordered list | list item.</li>
+		</ul>
+		</li>
+		<li>Ordered list | list item.</li>
+		<li>Ordered list | list item.</li>
+	</ol>
+
+	<p class="border">This is a paragraph classed with border for reference</p>
+
+	<ul>
+		<li>38 Unordered list | list item.</li>
+		<li>Unordered list | list item.
+		<ol>
+			<li>Ordered list nested in unordered list | list item.</li>
+			<li>Ordered list nested in unordered list | list item.</li>
+			<li>Ordered list nested in unordered list | list item.</li>
+			<li>Ordered list nested in unordered list | list item.</li>
+		</ol>
+		</li>
+		<li>Unordered list | list item.</li>
+		<li>Unordered list | list item.</li>
+	</ul>
+
+	<p class="border">This is a paragraph classed with border for reference</p>
+
+	<ul class="border">
+		<li>39 ul classed with border</li>
+		<li>Unordered list | list item.
+		<ol class="border">
+			<li>ol classed with border</li>
+			<li>Ordered list nested in unordered list | list item.</li>
+			<li>Ordered list nested in unordered list | list item.</li>
+			<li>Ordered list nested in unordered list | list item.</li>
+		</ol>
+		</li>
+		<li>Unordered list | list item.</li>
+		<li>Unordered list | list item.</li>
+	</ul>
+
+	<p class="border">This is a paragraph classed with border for reference</p>
+
+	<ul class="border margin">
+		<li>40 ul classed with border and margin</li>
+		<li>Unordered list | list item.
+		<ol class="border margin">
+			<li>ol classed with border and margin</li>
+			<li>Ordered list nested in unordered list | list item.</li>
+			<li>Ordered list nested in unordered list | list item.</li>
+			<li>Ordered list nested in unordered list | list item.</li>
+		</ol>
+		</li>
+		<li>Unordered list | list item.</li>
+		<li>Unordered list | list item.</li>
+	</ul>
+
+	<p class="border">This is a paragraph classed with border for reference</p>
+
+	<ul class="border padding">
+		<li>41 ul classed with border and padding</li>
+		<li>Unordered list | list item.
+		<ol class="border padding">
+			<li>ol classed with border and padding</li>
+			<li>Ordered list nested in unordered list | list item.</li>
+			<li>Ordered list nested in unordered list | list item.</li>
+			<li>Ordered list nested in unordered list | list item.</li>
+		</ol>
+		</li>
+		<li>Unordered list | list item.</li>
+		<li>Unordered list | list item.</li>
+	</ul>
+
+	<p class="border">This is a paragraph classed with border for reference</p>
+
+	<ul class="border margin padding">
+		<li>42 ul classed with border, margin, and padding</li>
+		<li>Unordered list | list item.
+		<ol class="border margin padding">
+			<li>ol classed with border, margin, and padding</li>
+			<li>Ordered list nested in unordered list | list item.</li>
+			<li>Ordered list nested in unordered list | list item.</li>
+			<li>Ordered list nested in unordered list | list item.</li>
+		</ol>
+		</li>
+		<li>Unordered list | list item.</li>
+		<li>Unordered list | list item.</li>
+	</ul>
+
+	<p class="border">This is a paragraph classed with border for reference</p>
+
+	<ol>
+		<li>Ordered list | list item.</li>
+		<li>Ordered list | list item.
+		<ul>
+			<li>Unordered list nest in ordered list | list item.</li>
+			<li>Unordered list nest in ordered list | list item.</li>
+			<li>Unordered list nest in ordered list | list item.</li>
+			<li>Unordered list nest in ordered list | list item.</li>
+		</ul>
+		</li>
+		<li>Ordered list | list item.</li>
+		<li>Ordered list | list item.</li>
+	</ol>
+
+	<p class="border">This is a paragraph classed with border for reference</p>
+
+	<p class="sectionSubtitle"><a id="toc2_3"></a>2.3.&nbsp;&nbsp;Classing li</p>
+
+	<p class="border">This is a paragraph classed with border for reference</p>
+
+	<ul>
+		<li class="border">Unordered list li classed with border</li>
+		<li class="border">Unordered list li classed with border</li>
+		<li class="border">Unordered list li classed with border</li>
+		<li class="border">Unordered list li classed with border</li>
+	</ul>
+
+	<p class="border">This is a paragraph classed with border for reference</p>
+
+	<ol>
+		<li class="border">Ordered list li classed with border</li>
+		<li class="border">Ordered list li classed with border</li>
+		<li class="border">Ordered list li classed with border</li>
+		<li class="border">Ordered list li classed with border</li>
+	</ol>
+
+	<p class="border">This is a paragraph classed with border for reference</p>
+
+	<ul>
+		<li>Unordered list | list item.</li>
+		<li>Unordered list | list item.</li>
+		<li>Unordered list | list item.</li>
+		<li>Unordered list | list item.</li>
+	</ul>
+
+	<p class="border">This is a paragraph classed with border for reference</p>
+
+	<ol>
+		<li>Ordered list | list item.</li>
+		<li>Ordered list | list item.</li>
+		<li>Ordered list | list item.</li>
+		<li>Ordered list | list item.</li>
+	</ol>
+
+
+</div>
+
+<hr />
+
+<p class="sectionTitle"><a id="toc3"></a>3.&nbsp;&nbsp;Resources And Additional Information</p>
+
+<div class="section">
+
+	<ul>
+		<li class="listItem"><a href="http://www.w3.org/TR/CSS1/#appendix-a" class="linkUnderlineVisited">Sample Style Sheet For HTML 2.0 (w3.org)</a></li>
+		<li class="listItem"><a href="http://www.w3.org/TR/CSS2/sample.html" class="linkUnderlineVisited">Default Style Sheet For HTML 4.0 (w3.org)</a></li>
+		<li class="listItem"><a href="http://www.iecss.com/" class="linkUnderlineVisited">Internet Explorer User Agent Style Sheets (iecss.com)</a></li>
+	</ul>
+
+</div>
+
+<script type="text/javascript" src="../../library/footer.js"></script>
+
+</div><!-- end class="container" -->
+
+</body>
+</html>

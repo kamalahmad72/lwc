@@ -1,0 +1,65 @@
+<html>
+ <head>
+  <title>Web Page Styled Via The Firefox 30 Cascade In Action Master Style Sheet</title>
+  <style type="text/css">
+   body {
+     font-family: tahoma, "myriad web";
+     font-size: 20px;
+     background-color: #eee;
+     display: block;
+     margin: 8px;
+     color: #000;
+   }
+   h1 {
+     font-style: italic;
+     text-decoration: underline;
+     display: block;
+     font-size: 2em;
+     font-weight: bold;
+     margin: 0.67em 0;
+   }
+   p {
+     margin: 1em 0em 1em 1em;
+     display: block;
+   }
+   a {
+     background-color: transparent;
+     font-style: italic;
+     text-decoration: underline;
+   }
+   a:link {
+     color: red;
+   }
+   a:visited {
+     color: grey;
+   }
+   .special {
+     font-size: 14px;
+     background-color: #fff;
+     padding: 6px;
+     font-family: "times new roman";
+     border: 2px #00f solid;
+     margin-right: 10%;
+   }
+   a:hover {
+     color: maroon;
+   }
+   .green {
+     color: #008000;
+   }
+  </style>
+ </head>
+ <body>
+  <div class="special">div .special</div>
+  <h1>Heading 1</h1>
+  <p>paragraph</p>
+  <a href="cascade_in_action_dummy_web_document1.html">Link 1</a><br />
+  <a href="cascade_in_action_dummy_web_document2.html">Link 2</a><br />
+  <a href="cascade_in_action_dummy_web_document3.html">Link 3</a><br />
+  <h1>Heading 1</h1>
+  <p>paragraph</p>
+  <p class="special">paragraph .special</p>
+  <p class="green">paragraph .green</p>
+<!-- In an apparently internal fashion, unless a margin top is specified by the author or user, the Firefox 3.5 rendering engine eliminates the Firefox 3.5 user agent margin top from the initial instance of the first element inside the web page's body tags. Since the web page styled via The Cascade In Action By Example's master style sheet specifies a margin top for the structured block-level elements, h1 and p, but the web page styled via the original embedded style sheet and external style sheet does not specify a margin-top for the structured block level elements, h1 and p, to avoid the false impression that the description of CSS is inaccurate, the generic block-level element, div, is used as the first element inside this web page's body tags. -->
+ </body>
+</html>

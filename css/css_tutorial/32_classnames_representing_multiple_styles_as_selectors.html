@@ -1,0 +1,42 @@
+<html>
+ <head>
+  <title>3.2. Class-Names Representing Multiple Styles As Selectors</title>
+  <style type="text/css">
+   .background-color {
+     background-color: yellow;
+   }
+   .background-color-margin-left {
+     background-color: yellow;
+     margin-left: 20px;
+   }
+   .background-color-border {
+     background-color: yellow;
+     border: 1px solid black;
+   }
+   .background-color-margin-left-border {
+     background-color: yellow;
+     margin-left: 20px;
+     border: 1px solid black;
+   }
+   .margin-left {
+     margin-left: 20px;
+   }
+   .margin-left-border {
+     margin-left: 20px;
+     border: 1px solid black;
+   }
+   .border {
+     border: 1px solid black;
+   }
+  </style>
+ </head>
+ <body>
+  <p class="background-color">p styled via the .background-color style rule.</p>
+  <p class="background-color-margin-left">p styled via the .background-color-margin-left style rule.</p>
+  <p class="background-color-border">p styled via the .background-color-border style rule.</p>
+  <p class="background-color-margin-left-border">p styled via the .background-color-margin-left-border style rule.</p>
+  <p class="margin-left">p styled via the .margin-left style rule.</p>
+  <p class="margin-left-border">p styled via the .margin-left-border style rule.</p>
+  <p class="border">p styled via the .border style rule.</p>
+ </body>
+</html>

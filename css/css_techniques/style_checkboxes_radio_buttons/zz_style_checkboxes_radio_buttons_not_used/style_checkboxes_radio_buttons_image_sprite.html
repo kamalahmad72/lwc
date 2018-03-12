@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>Valid HTML5 Web Page Template</title>
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Steve Taylor" />
+  <meta name="Keywords" content="valid, HTML5, web page, template" />
+  <meta name="Description" content="A valid HTML5 web page template." />
+  <style type="text/css">
+   input[type="checkbox"] {
+     display:none;
+   }
+   input[type="checkbox"] + label span {
+     display:inline-block;
+     width:19px;
+     height:19px;
+     margin:-1px 4px 0 0;
+     vertical-align:middle;
+     background:url(check_radio_sheet.png) left top no-repeat;
+     cursor:pointer;
+   }
+   input[type="checkbox"]:checked + label span {
+     background:url(check_radio_sheet.png) -19px top no-repeat;
+   }
+  </style>
+ </head>
+ <body>
+
+<input type="checkbox" id="c1" name="cc" />
+<label for="c1"><span></span>Check Box 1</label>
+
+ </body>
+</html>

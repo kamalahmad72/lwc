@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>let Declaration Web Browser Support Test With Additional Comments</title>
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Steve Taylor" />
+  <meta name="Keywords" content="JavaScript, let declaration, web browser support, test, comments" />
+  <meta name="Description" content="A JavaScript that tests and reports if the web browser supports the JavaScript let declaration." />
+  <script></script>
+ </head>
+ <body>
+
+  <h1><code>let</code> Declaration Web Browser Support Test With Additional Comments</h1>
+
+  <h3>To view the comments, right click and select view source. Also, enable the web browser JavaScript console. Lastly, in the parent <a href='/javascript/javascript_reference/let_declaration.php'>JavaScript Feature Reference: <code>let</code> Declaration Web Browser Support Test (learnwebcoding.com)</a> web page, the tests are tied to one other with JavaScript. Here, for simplicity, each test is presented as a standalone test.</h3>
+
+  <p id='implementationTestId'>Fail implementation test.</p>
+
+  <script>
+  // Implementation test: determine if web browser recognizes let declaration variables.
+  console.log("Implementation test: determine if web browser recognizes let declaration variables.");
+  var varImplementationVariable = "varValue"; // var defines global variable accessible as variable. For comparison. Not part of test.
+  let letImplementationVariable = "letValue"; // let defines global variable accessible as variable.
+  console.log("varImplementationVariable: " + varImplementationVariable); // "varValue". For comparison. Not part of test.
+  console.log("letImplementationVariable: " + letImplementationVariable); // "letValue".
+  if (letImplementationVariable === "letValue"){
+   var element = document.getElementById("implementationTestId");
+   element.innerHTML = "Pass implementation test.";
+  }
+  </script>
+
+  <p id='globalAbatementCapabilityTestId'>Fail global abatement capability test.</p>
+
+  <script>
+  // Capability test one: global abatement. Unlike var, let declaration does not define variable as property of global object (ie, does not set variable as a property on window, eg, as window.property). As a result, unlike var, let declaration does not clutter global object with properties and does not overwrite global properties.
+  console.log("Capability test one: global abatement. Unlike var, let declaration does not define variable as property of global object (ie, does not set variable as a property on window, eg, as window.property). As a result, unlike var, let declaration does not clutter global object with properties and does not overwrite global properties.");
+  var varGlobalAbatementVariableOne = "varValueOne"; // var defines global variable accessible as variable (see implementation test above) and window.property. For comparison. Not part of test.
+  let letGlobalAbatementVariableOne = "letValueOne"; // let defines global variable accessible as variable (see implementation test above), not as window.property.
+  window.letGlobalAbatementVariableTwo = "let letGlobalAbatementVariableTwo assignment below does not overwrite me"; // Explicitly set global object property.
+  let letGlobalAbatementVariableTwo = "letValueTwo"; // let defines global variable accessible as variable (see implementation test above), not as window.property.
+  console.log("window.varGlobalAbatementVariableOne: " + window.varGlobalAbatementVariableOne); // "varValueOne". For comparison. Not part of test.
+  console.log("window.letGlobalAbatementVariableOne: " + window.letGlobalAbatementVariableOne); // undefined. In this example, undefined means object property does not exist. If comment out let letGlobalAbatementVariableOne assignment above, this line still reports: undefined.
+  console.log("window.letGlobalAbatementVariableTwo: " + window.letGlobalAbatementVariableTwo); // "let letGlobalAbatementVariableTwo assignment below does not overwrite me".
+  if ((window.letGlobalAbatementVariableOne === undefined) && (window.letGlobalAbatementVariableTwo === "let letGlobalAbatementVariableTwo assignment below does not overwrite me")){
+   var element = document.getElementById("globalAbatementCapabilityTestId");
+   element.innerHTML = "Pass global abatement capability test.";
+  }
+  </script>
+
+  <p id='noHoistingCapabilityTestId'>Fail no hoisting capability test.</p>
+
+  <script>
+  // Capability test two: no hoisting. Unlike var, let declaration not hoisted to top of containing scope/block. As a result, accessing let variable before initialization results in ReferenceError, not undefined (like var).
+  console.log("Capability test two: no hoisting. Unlike var, let declaration not hoisted to top of containing scope/block. As a result, accessing let variable before initialization results in ReferenceError, not undefined (like var).");
+  //console.log("varNoHoistingVariable: " + varNoHoistingVariable); // undefined. In this example, undefined means declared, but not initialized. If comment out var varNoHoistingVariable assignment below, this line reports: ReferenceError: varNoHoistingVariable is not defined. For comparison. Not part of test.
+  //console.log("letNoHoistingVariable: " + letNoHoistingVariable); // ReferenceError: can't access lexical declaration `letNoHoistingVariable' before initialization. If comment out let letNoHoistingVariable assignment below, this line reports: ReferenceError: letNoHoistingVariable is not defined.
+  try {
+   letNoHoistingVariable; // Replacing letNoHoistingVariable with varNoHoistingVariable does not produce try-catchable error, which fails test.
+  } catch (error){
+  // console.log(error);
+   var element = document.getElementById("noHoistingCapabilityTestId");
+   element.innerHTML = "Pass no hoisting capability test.";
+  }
+  var varNoHoistingVariable = "varValue"; // var declaration hoisted to top of containing scope/block, which, in this example, is global scope.
+  let letNoHoistingVariable = "letValue"; // let declaration not hoisted.
+  </script>
+
+  <p id='blockScopeCapabilityTestId'>Fail block scope capability test.</p>
+
+  <script>
+  // Capability test three: block scope. let declaration inside block (ie, inside function or if/else/for/etc left and right curly bracket ({}) characters) defines variable accessible inside function (like var) and inside if/else/for/etc (like var), not outside function (like var) and not outside if/else/for/etc (unlike var due to var hoisting).
+  console.log("Capability test three: block scope. let declaration inside block (ie, inside function or if/else/for/etc left and right curly bracket ({}) characters) defines variable accessible inside function (like var) and inside if/else/for/etc (like var), not outside function (like var) and not outside if/else/for/etc (unlike var due to var hoisting).");
+  var passBlockScopeCapabilityTest = false,
+   passBlockScopeCapabilityTestOne = false,
+   passBlockScopeCapabilityTestTwo = false,
+   passBlockScopeCapabilityTestThree = false,
+   passBlockScopeCapabilityTestFour = false,
+   passBlockScopeCapabilityTestFive = false,
+   passBlockScopeCapabilityTestSix = false;
+  function blockScopeCapabilityTest(){
+   console.log("Inside function.");
+   var varBlockScopeVariableOne = "varValueOne"; // var declaration inside function defines variable accessible inside function, not outside function. Accessible inside if inside function. For comparison. Not part of test.
+   let letBlockScopeVariableOne = "letValueOne"; // let declaration inside function defines variable accessible inside function, not outside function. Accessible inside if inside function.
+   if (true){
+    console.log("Inside if.");
+    console.log("varBlockScopeVariableOne: " + varBlockScopeVariableOne); // "varValueOne". For comparison. Not part of test.
+    console.log("letBlockScopeVariableOne: " + letBlockScopeVariableOne); // "letValueOne".
+    if (letBlockScopeVariableOne === "letValueOne"){ // let inside function accessible inside if inside function.
+     passBlockScopeCapabilityTestThree = true;
+     console.log("passBlockScopeCapabilityTestThree: " + passBlockScopeCapabilityTestThree);
+    }
+    var varBlockScopeVariableTwo = "varValueTwo"; // var declaration inside if defines variable accessible inside and outside if. Not accessible outside function. For comparison. Not part of test.
+    let letBlockScopeVariableTwo = "letValueTwo"; // let declaration inside if defines variable accessible inside if, not outside if. Not accessible outside function.
+    console.log("varBlockScopeVariableTwo: " + varBlockScopeVariableTwo); // "varValueTwo". For comparison. Not part of test.
+    console.log("letBlockScopeVariableTwo: " + letBlockScopeVariableTwo); // "letValueTwo".
+    if (letBlockScopeVariableTwo === "letValueTwo"){ // let inside if accessible inside if.
+     passBlockScopeCapabilityTestFour = true;
+     console.log("passBlockScopeCapabilityTestFour: " + passBlockScopeCapabilityTestFour);
+    }
+   }
+   console.log("Outside if.");
+   console.log("varBlockScopeVariableOne: " + varBlockScopeVariableOne); // "varValueOne". For comparison. Not part of test.
+   console.log("letBlockScopeVariableOne: " + letBlockScopeVariableOne); // "letValueOne".
+   if (letBlockScopeVariableOne === "letValueOne"){ // let inside function accessible inside function.
+    passBlockScopeCapabilityTestFive = true;
+    console.log("passBlockScopeCapabilityTestFive: " + passBlockScopeCapabilityTestFive);
+   }
+   console.log("varBlockScopeVariableTwo: " + varBlockScopeVariableTwo); // "varValueTwo". For comparison. Not part of test.
+   //console.log("letBlockScopeVariableTwo: " + letBlockScopeVariableTwo); // ReferenceError: letBlockScopeVariableTwo is not defined.
+   if (typeof letBlockScopeVariableTwo === "undefined"){ // let inside if not accessible outside if.
+    passBlockScopeCapabilityTestSix = true;
+    console.log("passBlockScopeCapabilityTestSix: " + passBlockScopeCapabilityTestSix);
+   }
+  }
+  console.log("Outside function.");
+  //console.log("varBlockScopeVariableOne: " + varBlockScopeVariableOne); // ReferenceError: varBlockScopeVariableOne is not defined. For comparison. Not part of test.
+  //console.log("letBlockScopeVariableOne: " + letBlockScopeVariableOne); // ReferenceError: letBlockScopeVariableOne is not defined.
+  if (typeof letBlockScopeVariableOne === "undefined"){ // let inside function not accessible outside function.
+   passBlockScopeCapabilityTestOne = true;
+   console.log("passBlockScopeCapabilityTestOne: " + passBlockScopeCapabilityTestOne);
+  }
+  //console.log("varBlockScopeVariableTwo: " + varBlockScopeVariableTwo); // ReferenceError: varBlockScopeVariableTwo is not defined. For comparison. Not part of test.
+  //console.log("letBlockScopeVariableTwo: " + letBlockScopeVariableTwo); // ReferenceError: letBlockScopeVariableTwo is not defined.
+  if (typeof letBlockScopeVariableTwo === "undefined"){ // let inside if inside function not accessible outside function.
+   passBlockScopeCapabilityTestTwo = true;
+   console.log("passBlockScopeCapabilityTestTwo: " + passBlockScopeCapabilityTestTwo);
+  }
+  blockScopeCapabilityTest();
+  if (passBlockScopeCapabilityTestOne && passBlockScopeCapabilityTestTwo && passBlockScopeCapabilityTestThree && passBlockScopeCapabilityTestFour && passBlockScopeCapabilityTestFive && passBlockScopeCapabilityTestSix){
+   var element = document.getElementById("blockScopeCapabilityTestId");
+   element.innerHTML = "Pass block scope capability test.";
+  }
+  </script>
+
+  <p id='forLoopIteratorCapabilityTestId'>Fail for loop iterator capability test.</p>
+
+  <script>
+  // Capability test four: for loop iterator variable block scope. let declaration for loop iterator variable is accessible inside for loop (like var), not outside for loop (unlike var due to var declaration hoisting).
+  console.log("Capability test four: for loop iterator variable block scope. let declaration for loop iterator variable is accessible inside for loop (like var), not outside for loop (unlike var due to var declaration hoisting).");
+  //for (var j = 0; j < 3; j++){ // For comparison. Not part of test.
+  // console.log("j: " + j); // 0, 1, 2.
+  //}
+  //console.log("j final value: " + j); // 3.
+  for (let i = 0; i < 3; i++){
+  // console.log("i: " + i); // 0, 1, 2.
+  }
+  //console.log("i final value: " + i); // ReferenceError: i is not defined.
+  if (typeof i === "undefined"){
+   var element = document.getElementById("forLoopIteratorCapabilityTestId");
+   element.innerHTML = "Pass for loop iterator capability test.";
+  }
+  </script>
+
+<!-- Comment out no redeclaration capability test because it is not finished/does not work.
+  <p id='noRedeclarationCapabilityTestId'>no redeclaration capability test</p>
+
+  <script>
+  // Capability test five: no redeclaration.
+  console.log("Capability test five: no redeclaration.");
+  var noRedeclarationVariable = "valueOne"; //
+  var noRedeclarationVariable = "valueTwo"; // No error var redeclaration of var noRedeclarationVariable.
+  //let noRedeclarationVariable = "valueThree"; // SyntaxError: redeclaration of var noRedeclarationVariable.
+  </script>
+-->
+
+  <p>Web browser support (pass all tests): IE11+, ED12+, FF44+, CH49+, OP36+. No SF5.1.7-.</p>
+
+  <p>Last reviewed/updated: 14 Jan 2018 | Published: 08 Nov 2017 | Status: Active</p>
+
+  <p><a href="http://www.learnwebcoding.com/">Learn Web Coding</a></p>
+
+  <p><a href="https://validator.w3.org/check?uri=referer"><img src="/images/HTML5_Logo_48.gif" alt="Valid HTML5" /></a>&nbsp;<a href="https://jigsaw.w3.org/css-validator/check?uri=referer&amp;profile=css3"><img src="/images/valid-css.gif" alt="Valid CSS Level 3" /></a></p>
+
+ </body>
+</html>

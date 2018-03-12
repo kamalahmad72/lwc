@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>foo() Method Web Browser Support Test</title>
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Steve Taylor" />
+  <meta name="Keywords" content="JavaScript, foo() method, web browser support, test" />
+  <meta name="Description" content="A JavaScript that tests and reports if the web browser supports the JavaScript foo() method." />
+  <script></script>
+ </head>
+ <body>
+
+  <h1><code>foo()</code> Method Web Browser Support Test</h1>
+
+<p id='testId'><b>Fail</b> (no support): The web browser does not recognize the JavaScript <code>foo()</code> method. The web browser does not support the JavaScript <code>foo()</code> method.</p><!-- Hard code Fail because web browser no support error stops JavaScript execution. -->
+
+<!-- // Omit (typeof identifier === "object"), identifier instanceof Object, identifier instanceof Promise, and Object.prototype.isPrototypeOf(identifier) for all promises except first to reduce amount of code and because they all return true. -->
+
+<!-- Location for comments to be copied to, but not displayed in, foo() method. -->
+<!-- Copy these comment to foo_method_section.php between <h3><a id='result'></a>2.2. Web Browser Support Test Result</h3> heading and opening code tag. -->
+<!-- Copy these comment to *_foo_method_test_only_*.html between h1 heading (and after hard code fail paragraph if present) and opening code tag, which is right here. -->
+<!-- Web browser no support error for getOwnPropertyDescriptor() method and defineProperty() method stops JavaScript execution. -->
+<!-- For examples of accessor properties, see defineProperty() method, name property, and object literal accessor property syntax. -->
+<!-- Use for statement/loop instead of ECMAScript 2015 for...of statement/loop to avoid for...of statement/loop possibly skewing test result. -->
+<!-- Calling generator function does not execute generator function body. Instead, calling generator function returns Generator object. Calling Generator object next() method executes generator function body. However, calling Generator object next() method is best suited for Generator object web browser support test, not generator function web browser support test. Therefore, since cannot nest generator function web browser support tests in generator function, only reasonable implementation test to determine if web browser recognizes the JavaScript generator function is to call generator function and see if Generator object return value exists as a window property. -->
+<!-- Web browser no support error for object literal accessor property syntax, defineProperty() method, and getOwnPropertyDescriptor() method stops JavaScript execution. Therefore, accessor property not tested because web browser no support error for object literal accessor property syntax and defineProperty() method (both of which can be used to create accessor property) stops JavaScript execution, which masks web browser no support error for getOwnPropertyDescriptor() method. -->
+<!-- CustomConstructor.getPrototypeOf(objectViaObjectConstructor) does not work. FF57 reports: TypeError: CustomConstructor.getPrototypeOf is not a function. This implies getPrototypeOf() is a method of Object constructor, not AnyObject constructor. -->
+<!-- CustomConstructor.prototype.isPrototypeOf(objectViaCustomConstructor) works. This implies isPrototypeOf() is a method of Object.prototype and AnyObject.prototype. -->
+<!-- In this example, nesting functions would greatly reduce readability/maintainability. Therefore, did not nest functions below. -->
+<!-- IE Compatibility View and IE F12 IE7 emulation incorrectly report Pass. -->
+<!-- Requires web page served by web server. -->
+<!-- ED, CH, and OP, not FF, support requires web page served by web server (ie, fails if web page opened directly in web browser). -->
+<!-- FF support requires setting FF about:config | dom.moduleScripts.enabled to true. FF53- does not have about:config | dom.moduleScripts.enabled. -->
+<!-- Web browser no support error for getOwnPropertyDescriptor() method, bind() method, and concise method syntax, not name property, stops JavaScript execution. -->
+<!-- In this example, nesting functions would greatly reduce readability/maintainability. Therefore, did not nest functions below. -->
+<!-- TestOne.setPrototypeOf(testTwo, null) does not work. FF57 reports: TypeError: TestOne.setPrototypeOf is not a function. This implies setPrototypeOf() is a method of Object constructor, not AnyObject constructor. -->
+<!-- TypedArray object web browser support test results mentioned in [Symbol.iterator] property. -->
+
+<!-- Similar test code in Generator object, entries() method on arrays, keys() method on arrays, and values() method on arrays. -->
+<!-- Similar comments getPrototypeOf() method, isPrototypeOf() method, and setPrototypeOf() method. -->
+<!-- Similar comments getPrototypeOf() method, isPrototypeOf() method, and setPrototypeOf() method. -->
+<!-- Similar test code in Generator object, entries() method on arrays, keys() method on arrays, and values() method on arrays. -->
+<!-- Similar testing scheme parameter default value and rest parameter. -->
+
+<!-- Per MDN, getOwnPropertyDescriptor() method and bind() method added to ES2011 5.1 Edition and concise method syntax and name property added to ES2015 6th Edition. -->
+<!-- Use for statement/loop instead of ECMAScript 2015 for...of statement/loop to avoid for...of statement/loop possibly skewing test result. -->
+
+<!-- Per LWC web browser support testing, instanceof operator supported by IE6+, ED12+, FF1.5+, SF3.1+, CH2+, OP7.50+, isArray() method supported by IE9+, ED12+, FF4+, SF5+, CH4+, OP10.50+, and array destructuring syntax supported by ED14+, FF38+, CH49+, OP36+, no IE11-, SF5.1.7-. Therefore, in web browser support test below, instanceof operator and isArray() method do not skew test result. -->
+<!-- Per LWC web browser support testing, getPrototypeOf() method supported by IE9+, ED12+, FF3.5+, SF5+, CH5+, OP11.60+ and class syntax supported by ED13+, FF45+, CH49+, OP36+, no IE11-, SF5.1.7-. Therefore, in web browser support test below, getPrototypeOf() method does not skew test result. -->
+<!-- Per LWC web browser support testing, defineProperty() method and getOwnPropertyDescriptor() method supported by IE9+, ED12+, FF4+, SF5+, CH5+, OP11.60+. Therefore, in web browser support test below, getOwnPropertyDescriptor() method does not skew test result. -->
+<!-- Per LWC web browser support testing, entries() method on arrays supported by ED12+, FF28+, CH38+, OP25+, no IE11-, SF5.1.7- and [Symbol.iterator] property supported by ED12+, FF36+, CH38+, OP25+, no IE11-, SF5.1.7-. Therefore, in web browser support test below, did not test if (arrayIteratorEntries[Symbol.iterator]) to avoid skewing test result to newer version FF. -->
+<!-- Per LWC web browser support testing, getOwnPropertyDescriptor() method and defineProperty() method supported by IE9+, ED12+, FF4+, SF5+, CH5+, OP11.60+. -->
+<!-- Per LWC web browser support testing, isPrototype() method supported by IE6+, ED12+, FF1.5+, SF3.1+, CH2+, OP7.50+ and create() method supported by IE9+, ED12+, FF4+, SF5+, CH5+, OP11.60+. Since create() method requires newer web browsers than isPrototype() method, using create() method to create object prototype chain for testing isPrototype() method web browser support on objects would skew test result to newer web browsers. Therefore, in web browser support test below, isPrototypeOf() method is not tested on objects because creating object prototype chain using create() method would skew test result to newer web browsers. For example of isPrototypeOf() on objects (ie, anyObjectOne.isPrototypeOf(anyObjectTwo), see create_method_test_only.html and create_method.php. -->
+<!-- Per LWC web browser support testing, keys() method on arrays supported by ED12+, FF28+, CH38+, OP25+, no IE11-, SF5.1.7- and [Symbol.iterator] property supported by ED12+, FF36+, CH38+, OP25+, no IE11-, SF5.1.7-. Therefore, in web browser support test below, did not test if (arrayIteratorKeys[Symbol.iterator]) to avoid skewing test result to newer version FF. -->
+<!-- Per LWC web browser support testing, getPrototypeOf() method supported by IE9+, ED12+, FF3.5+, SF5+, CH5+, OP11.60+ and module supported by ED16+, FF54+, CH61+, OP48+, no IE11-, SF5.1.7-. Therefore, in web browser support test below, getPrototypeOf() method does not skew test result. -->
+<!-- Per LWC web browser support testing, getOwnPropertyDescriptor() method supported by IE9+, ED12+, FF4+, SF5+, CH5+, OP11.60+, bind() method supported by IE9+, ED12+, FF4+, SF5.1.4+, CH7+, OP11.60+, concise method syntax supported by ED12+, FF34+, CH42+, OP29+, no IE11-, SF5.1.7-, and name property supported by FF53+, CH51+, OP38+, no IE11-, ED16-, SF5.1.7-. Therefore, in web browser support test below, getOwnPropertyDescriptor() method, bind() method, and concise method syntax do not skew test result. -->
+<!-- Per LWC web browser support testing, TypedArray object supported by IE10+, ED12+, FF4+, SF5.1+, CH9+, OP11.60+ and [Symbol.iterator] property supported by ED12+, FF36+, CH38+, OP25+, no IE11-, SF5.1.7-. Therefore, in web browser support test below, TypedArray object does not skew test result. -->
+<!-- Per LWC web browser support testing, values() method on arrays supported by ED12+, no IE11-, FF57-, SF5.1.7-, CH63- (except CH38.0.2125.101 - 38.0.2125.104), OP50- (except OP25.0.1614.50 - 25.0.1614.63) and [Symbol.iterator] property supported by ED12+, FF36+, CH38+, OP25+, no IE11-, SF5.1.7-. Therefore, in web browser support test below, did not test if (arrayIteratorValues[Symbol.iterator]) for consistency with entries() method on arrays and keys() method on arrays web browser support tests. -->
+
+<script>
+
+</script>
+
+ </body>
+</html>

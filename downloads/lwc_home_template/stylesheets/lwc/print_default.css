@@ -1,0 +1,11 @@
+/* -------------------- INTRODUCTION -------------------- */
+
+/* File: /web_server_root_directory/stylesheets/lwc/print_default.css.
+ * Purpose: Dummy/placeholder external style sheet for LWC Home tools icon dropdown Display Web Page For Screen (F5) option.
+ * Used in: All LWC Home web pages with LWC Home tools icon dropdown.
+ * Last reviewed/updated: 09 Feb 2017.
+ * Published: 28 May 2015.
+ * Web browser support: At least the web browser support for template.php.
+ * NOTE:
+ * In LWC Home print icon dropdown: 1.) if select Default, change external style sheet to print_default.css; 2.) if select Print Friendly With Images, change external style sheet to print_with_images.css; and 3.) if select Print Friendly Without Images, change external style sheet to print_without_images.css. External style sheets changed by ChangeExtSSUtil.changeExtSS() in library_load_in_body.js.
+ * If link element href attribute is empty, the web page CSS is not valid per the W3C CSS Validation Service (jigsaw.w3.org). Hence, the need for this dummy/placeholder external style sheet. */

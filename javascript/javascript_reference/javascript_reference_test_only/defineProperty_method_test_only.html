@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>defineProperty() Method Web Browser Support Test</title>
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Steve Taylor" />
+  <meta name="Keywords" content="JavaScript, defineProperty() method, web browser support, test" />
+  <meta name="Description" content="A JavaScript that tests and reports if the web browser supports the JavaScript defineProperty() method." />
+  <script></script>
+ </head>
+ <body>
+
+  <h1><code>defineProperty()</code> Method Web Browser Support Test</h1>
+
+<!-- Web browser no support error for getOwnPropertyDescriptor() method and defineProperty() method stops JavaScript execution. -->
+<!-- Per LWC web browser support testing, defineProperty() method and getOwnPropertyDescriptor() method supported by IE9+, ED12+, FF4+, SF5+, CH5+, OP11.60+. Therefore, in web browser support test below, getOwnPropertyDescriptor() method does not skew test result. -->
+<!-- For examples of accessor properties, see defineProperty() method, name property, and object literal accessor property syntax. -->
+
+<p id='testId'><b>Fail</b> (no support): The web browser does not recognize the JavaScript <code>defineProperty()</code> method. The web browser does not support the JavaScript <code>defineProperty()</code> method.</p><!-- Hard code Fail because web browser no support error stops JavaScript execution. -->
+
+<script>
+if (Object.defineProperty){
+ var element = document.getElementById("testId");
+ function CustomConstructor(){
+  this.propertyOne = "propertyOne value"; // Data property. Here, property writable, enumerable, and configurable attributes default to boolean true.
+  this.propertyFour = "propertyFour value as propertyThree getter function return value";
+  this.propertyFive = "propertyFive value appended by propertyThree setter function";
+ }
+ var customConstructorObject = new CustomConstructor();
+ Object.defineProperty(customConstructorObject, "propertyOne", { // Change customConstructorObject.propertyOne value attribute value. IE8 error: Object doesn't support this action.
+  value: "new propertyOne value"
+ });
+ Object.defineProperty(customConstructorObject, "propertyTwo", { // Create customConstructorObject.propertyTwo data property. Here, property writable, enumerable, and configurable attributes default to boolean false.
+  value: "propertyTwo value"
+ });
+ Object.defineProperty(customConstructorObject, "propertyThree", { // Create customConstructorObject.propertyThree accessor property. Here, property enumerable and configurable attributes default to boolean false.
+  get: function(){
+   return this.propertyFour;
+  },
+  set: function(value){
+   this.propertyFive += value;
+  }
+ });
+ customConstructorObject.propertyThree = " passed value"; // "propertyFive value appended by propertyThree setter function passed value".
+ var objectLiteral = {
+  propertyOne: "propertyOne value", // Data property. Here, property writable, enumerable, and configurable attributes default to boolean true.
+  propertyFour: "propertyFour value as propertyThree getter function return value",
+  propertyFive: "propertyFive value appended by propertyThree setter function"
+ };
+ Object.defineProperty(objectLiteral, "propertyOne", { // Change objectLiteral.propertyOne value attribute value.
+  value: "new propertyOne value"
+ });
+ Object.defineProperty(objectLiteral, "propertyTwo", { // Create objectLiteral.propertyTwo data property. Here, property writable, enumerable, and configurable attributes default to boolean false.
+  value: "propertyTwo value"
+ });
+ Object.defineProperty(objectLiteral, "propertyThree", { // Create objectLiteral.propertyThree accessor property. Here, property enumerable and configurable attributes default to boolean false.
+  get: function(){
+   return this.propertyFour;
+  },
+  set: function(value){
+   this.propertyFive += value;
+  }
+ });
+ objectLiteral.propertyThree = " passed value"; // "propertyFive value appended by propertyThree setter function passed value".
+ var customConstructorObjectPropertyOneDescriptor = Object.getOwnPropertyDescriptor(customConstructorObject, "propertyOne");
+ var customConstructorObjectPropertyTwoDescriptor = Object.getOwnPropertyDescriptor(customConstructorObject, "propertyTwo");
+ var customConstructorObjectPropertyThreeDescriptor = Object.getOwnPropertyDescriptor(customConstructorObject, "propertyThree");
+ var objectLiteralPropertyOneDescriptor = Object.getOwnPropertyDescriptor(objectLiteral, "propertyOne");
+ var objectLiteralPropertyTwoDescriptor = Object.getOwnPropertyDescriptor(objectLiteral, "propertyTwo");
+ var objectLiteralPropertyThreeDescriptor = Object.getOwnPropertyDescriptor(objectLiteral, "propertyThree");
+ if ((customConstructorObject.propertyOne === "new propertyOne value") && (customConstructorObject.propertyTwo === "propertyTwo value") && (customConstructorObject.propertyThree === "propertyFour value as propertyThree getter function return value") && (customConstructorObject.propertyFive === "propertyFive value appended by propertyThree setter function passed value") && customConstructorObjectPropertyOneDescriptor.writable && !customConstructorObjectPropertyTwoDescriptor.enumerable && !customConstructorObjectPropertyThreeDescriptor.configurable && (objectLiteral.propertyOne === "new propertyOne value") && (objectLiteral.propertyTwo === "propertyTwo value") && (objectLiteral.propertyThree === "propertyFour value as propertyThree getter function return value") && (objectLiteral.propertyFive === "propertyFive value appended by propertyThree setter function passed value") && objectLiteralPropertyOneDescriptor.writable && !objectLiteralPropertyTwoDescriptor.enumerable && !objectLiteralPropertyThreeDescriptor.configurable){
+  element.innerHTML = "<b>Pass</b> (at least partial/possibly full support): The web browser recognizes the JavaScript <code>defineProperty()</code> method, and supports at least one <code>defineProperty()</code> method capability. The web browser at least partially/possibly fully supports the JavaScript <code>defineProperty()</code> method. Positive determination of full web browser support is beyond the scope of this test.";
+ } else {
+  element.innerHTML = "<b>Pass/Fail</b> (partial support): The web browser recognizes the JavaScript <code>defineProperty()</code> method, but does not support at least one <code>defineProperty()</code> method capability. The web browser partially supports the JavaScript <code>defineProperty()</code> method.";
+ }
+}
+</script>
+
+ </body>
+</html>

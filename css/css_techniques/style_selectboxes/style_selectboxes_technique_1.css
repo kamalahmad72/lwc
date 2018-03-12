@@ -1,0 +1,20 @@
+.selectboxWrapper {
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+  background: url("/images/style_selectboxes/dn_pnt_tri_8x4.gif") no-repeat 95%;
+  border: 2px solid #999;
+  border-radius: 3px;
+}
+.selectboxWrapper select {
+  width: 125%;
+  background: transparent;
+  border: 0;
+  padding: 4px 6px;
+}
+.selectboxWrapper:hover, label:hover .selectboxWrapper {
+  border-color: #666;
+}
+.selectboxWrapper select:focus {
+  outline: 0;
+}

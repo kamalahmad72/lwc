@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>Visualize CSS Unit em Compared To rem</title>
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Steve Taylor" />
+  <meta name="Keywords" content="visualize, CSS, unit, em, rem, compare, verse, vs" />
+  <meta name="Description" content="A visual comparison of CSS unit em to rem." />
+  <style type="text/css">
+   html { font-size: 16px; } /* Since this example involves rem, and rem is a unit of relative length equal to the font-size property value on the html element (a.k.a., the root element), explicitly set font-size property value on html. */
+   .one-em { font-size: 1em; }
+   .one-rem { font-size: 1rem; }
+   .two-em { font-size: 2em; }
+   .two-rem { font-size: 2rem; }
+  </style>
+ </head>
+ <body>
+
+  <h1>Visualize CSS Unit <code>em</code> Compared To <code>rem</code></h1>
+
+  <ol>
+   <li><a href="#oneNestedInOne">Visualize <code>font-size: 1em;</code> Nested In <code>font-size: 1em;</code> Compared To <code>font-size: 1rem;</code> Nested In <code>font-size: 1rem;</code></a></li>
+   <li><a href="#twoNestedInTwo">Visualize <code>font-size: 2em;</code> Nested In <code>font-size: 2em;</code> Compared To <code>font-size: 2rem;</code> Nested In <code>font-size: 2rem;</code></a></li>
+  </ol>
+
+  <hr>
+
+  <h3><a id="oneNestedInOne"></a>1. Visualize <code>font-size: 1em;</code> Nested In <code>font-size: 1em;</code> Compared To <code>font-size: 1rem;</code> Nested In <code>font-size: 1rem;</code></h3>
+
+  <p class="one-em">Paragraph styled with <code>font-size: 1em</code>. <span class="one-em">Span styled with <code>font-size: 1em</code>.</span> Paragraph styled with <code>font-size: 1em</code>.</p>
+
+  <p class="one-rem">Paragraph styled with <code>font-size: 1rem</code>. <span class="one-rem">Span styled with <code>font-size: 1rem</code>.</span> Paragraph styled with <code>font-size: 1rem</code>.</p>
+
+  <hr />
+
+  <h3><a id="twoNestedInTwo"></a>2. Visualize <code>font-size: 2em;</code> nested in <code>font-size: 2em;</code> Compared To <code>font-size: 2rem;</code> Nested In <code>font-size: 2rem;</code></h3>
+
+  <p class="two-em">Paragraph styled with <code>font-size: 2em</code>. <span class="two-em">Span styled with <code>font-size: 2em</code>.</span> Paragraph styled with <code>font-size: 2em</code>.</p>
+
+  <p class="two-rem">Paragraph styled with <code>font-size: 2rem</code>. <span class="two-rem">Span styled with <code>font-size: 2rem</code>.</span> Paragraph styled with <code>font-size: 2rem</code>.</p>
+
+  <p>Last reviewed/updated: 10 Nov 2017 | Published: 26 Oct 2016 | Status: Active</p>
+
+  <p><a href="http://www.learnwebcoding.com/">Learn Web Coding</a></p>
+
+  <p><a href="https://validator.w3.org/check?uri=referer"><img src="/images/HTML5_Logo_48.gif" alt="Valid HTML5" /></a>&nbsp;<a href="https://jigsaw.w3.org/css-validator/check?uri=referer&amp;profile=css3"><img src="/images/valid-css.gif" alt="Valid CSS Level 3" /></a></p>
+
+ </body>
+</html>

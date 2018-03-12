@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>Is it possible to get clicked button id attribute from form submit event? No.</title>
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Steve Taylor" />
+  <meta name="Keywords" content="valid, HTML5, web page, template" />
+  <meta name="Description" content="A valid HTML5 web page template." />
+  <link rel="stylesheet" type="text/css" href="/stylesheets/lwc/lwc_dummy_external_style_sheet.css" />
+  <style type="text/css">/* Insert embedded style sheet here. */</style>
+  <script type="text/javascript" src="/javascripts/lwc/lwc_dummy_external_javascript.js"></script>
+ </head>
+ <body>
+  <h1>Is it possible to get clicked button id attribute from form submit event? No.</h1>
+<script type="text/javascript" src="/javascripts/lwc/lwc_print_icon_dropdown.js"></script>
+
+<p>Form 1a input type=submit</p>
+<form id="formElement1aId">
+<p>para inside form</p>
+ <input type="submit" id="inputElement1aId" value="input type=submit" />
+<p>para inside form</p>
+</form>
+
+<hr />
+
+<p>Form 1b input type=submit</p>
+<form id="formElement1bId">
+<p>para inside form</p>
+ <input type="submit" id="inputElement1bId" value="input type=submit" onclick="Test.test(event)" />
+<p>para inside form</p>
+</form>
+
+<hr />
+<hr />
+
+<p>Form 2a button type=submit</p>
+<form id="formElement2aId">
+<p>para inside form</p>
+ <button type="submit" id="inputElement2aId">button type=submit</button>
+<p>para inside form</p>
+</form>
+
+<hr />
+
+<p>Form 2b button type=submit</p>
+<form id="formElement2bId">
+<p>para inside form</p>
+ <button type="submit" id="inputElement2bId" onclick="Test.test(event)">button type=submit</button>
+<p>para inside form</p>
+</form>
+
+<hr />
+<hr />
+
+<p>Form 3 span</p>
+<form id="form3Id">
+ <span id="spanElementId" onclick="Test.test(event)">span</button>
+</form>
+
+
+<script type="text/javascript" src="/javascripts/lwc/lwc_library_load_in_body.js"></script>
+<script type="text/javascript">
+var Test = {
+    test: function(event){
+	alert("event.target.id: " + event.target.id);
+    },
+    // Get reference to elements in order to register event handlers. Remember elements (including the form element) accept events from child elements (including child elements of the form element) via event bubbling.
+    form1a: document.getElementById("formElement1aId"),
+    form2a: document.getElementById("formElement2aId"),
+    form3: document.getElementById("formElement3Id"),
+};
+// Register event handlers. EventUtil.registerEventHandler() in lwc_library_load_in_body.js.
+EventUtil.registerEventHandler(Test.form1a, "click", Test.test);
+EventUtil.registerEventHandler(Test.form2a, "submit", Test.test);
+EventUtil.registerEventHandler(Test.form3, "submit", Test.test);
+</script>
+
+
+ </body>
+</html>

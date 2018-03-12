@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>Map Object Web Browser Support Test</title>
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Steve Taylor" />
+  <meta name="Keywords" content="JavaScript, Map object, web browser support, test" />
+  <meta name="Description" content="A JavaScript that tests and reports if the web browser supports the JavaScript Map object." />
+  <script></script>
+ </head>
+ <body>
+
+  <h1><code>Map</code> Object Web Browser Support Test</h1>
+
+<p id='testId'><b>Fail</b> (no support): The web browser does not recognize the JavaScript <code>Map</code> object. The web browser does not support the JavaScript <code>Map</code> object.</p><!-- Hard code Fail because web browser no support error stops JavaScript execution. -->
+
+<script>
+var mapOne = new Map(); // Empty map. Identical to var mapOne = new Map(null);. mapOne is Map(0) {}.
+var mapTwo = new Map([["keyOne", 1], ["keyTwo", 2], ["keyThree", 3], ["keyFour", 4]]); // mapTwo initialized with an iterable whose items/elements are key-value pairs (ie, an array of key-value pair arrays or a map). mapTwo is Map(4) {"keyOne" => 1, "keyTwo" => 2, "keyThree" => 3, "keyFour" => 4}. IE11 does not support maps initialized with an iterable. IE11 mistakenly represents maps initialized with an iterable as [object Object] {size: 0}. Hence, IE11 Pass/Fail (partial support).
+var mapThree = new Map(mapTwo); // mapThree initialized with a map. mapThree is Map(4) {"keyOne" => 1, "keyTwo" => 2, "keyThree" => 3, "keyFour" => 4}.
+if (window.mapOne){ // Identical to if (mapOne).
+ var element = document.getElementById("testId");
+ mapOne.set("keyOne", 1); // Item with key-value pair "keyOne" => 1 set on mapOne. mapOne is Map(1) {"keyOne" => 1}.
+ mapOne.set("keyTwo", 2); // Item with key-value pair "keyTwo" => 2 set on mapOne. mapOne is Map(2) {"keyOne" => 1, "keyTwo" => 2}.
+ mapOne.set("keyThree", 3); // Item with key-value pair "keyThree" => 3 set on mapOne. mapOne is Map(3) {"keyOne" => 1, "keyTwo" => 2, "keyThree" => 3}.
+ mapOne.set("keyTwo", 2); // mapOne has item with key-value pair "keyTwo" => 2. Not unique. Nothing set. mapOne is Map(3) {"keyOne" => 1, "keyTwo" => 2, "keyThree" => 3}.
+ mapOne.set("keyTwo", 22); // mapOne has item with key-value pair "keyTwo" => 2, not "keyTwo" => 22. key-value pair "keyTwo" => 2 replaced by "keyTwo" => 22. mapOne is Map(3) {"keyOne" => 1, "keyTwo" => 22, "keyThree" => 3}.
+ var variable = "variable value";
+ var arrayLiteral = [1, 2, 3];
+ var objectLiteral = {propertyOne: 1, propertyTwo: 2, propertyThree: 3};
+ var functionExpression = function(){return 123;};
+ mapOne.set(variable, "variable key value"); // Item with key-value pair variable => "variable key value" set on mapOne. mapOne is Map(4) {"keyOne" => 1, "keyTwo" => 22, "keyThree" => 3, variable => "variable key value"}.
+ mapOne.set(arrayLiteral, "arrayLiteral key value"); // Item with key-value pair arrayLiteral => "arrayLiteral key value" set on mapOne. mapOne is Map(5) {"keyOne" => 1, "keyTwo" => 22, "keyThree" => 3, variable => "variable key value", arrayLiteral => "arrayLiteral key value"}.
+ mapOne.set(objectLiteral, "objectLiteral key value"); // Item with key-value pair objectLiteral => "objectLiteral key value" set on mapOne. mapOne is Map(6) {"keyOne" => 1, "keyTwo" => 22, "keyThree" => 3, variable => "variable key value", arrayLiteral => "arrayLiteral key value", objectLiteral => "objectLiteral key value"}.
+ mapOne.set(functionExpression, "functionExpression key value"); // Item with key-value pair functionExpression => "functionExpression key value" set on mapOne. mapOne is Map(7) {"keyOne" => 1, "keyTwo" => 22, "keyThree" => 3, variable => "variable key value", arrayLiteral => "arrayLiteral key value", objectLiteral => "objectLiteral key value", functionExpression => "functionExpression key value"}.
+ mapOne.delete("keyOne"); // Item with key "keyOne" removed from mapOne. mapOne is Map(6) {"keyTwo" => 22, "keyThree" => 3, variable => "variable key value", arrayLiteral => "arrayLiteral key value", objectLiteral => "objectLiteral key value", functionExpression => "functionExpression key value"}.
+ mapOne.delete("keyThree"); // Item with key "keyThree" removed from mapOne. mapOne is Map(5) {"keyTwo" => 22, variable => "variable key value", arrayLiteral => "arrayLiteral key value", objectLiteral => "objectLiteral key value", functionExpression => "functionExpression key value"}.
+ mapOne.delete("keyThree"); // mapOne does not have item with key "keyThree". Nothing removed. mapOne is Map(5) {"keyTwo" => 22, variable => "variable key value", arrayLiteral => "arrayLiteral key value", objectLiteral => "objectLiteral key value", functionExpression => "functionExpression key value"}.
+ mapOne.delete(arrayLiteral); // Item with key arrayLiteral removed from mapOne. mapOne is Map(4) {"keyTwo" => 22, variable => "variable key value", objectLiteral => "objectLiteral key value", functionExpression => "functionExpression key value"}.
+ mapTwo.clear(); // Remove all items from mapTwo. mapTwo is Map(0) {}.
+ if ((mapOne.size === 4) && (mapOne.has("keyOne") === false) && (mapOne.has("keyTwo") === true) && (mapOne.get("keyTwo") === 22) && (mapOne.has("keyThree") === false) && (mapOne.has(variable) === true) && (mapOne.get(variable) === "variable key value") && (mapOne.has(objectLiteral) === true) && (mapOne.get(objectLiteral) === "objectLiteral key value") && (mapOne.has(functionExpression) === true) && (mapOne.get(functionExpression) === "functionExpression key value") && (mapOne.get("stringKeyThatDoesNotExist") === undefined) && (mapTwo.size === 0) && (mapThree.size === 4)){
+  element.innerHTML = "<b>Pass</b> (at least partial/possibly full support): The web browser recognizes the JavaScript <code>Map</code> object, and supports at least one <code>Map</code> object capability. The web browser at least partially/possibly fully supports the JavaScript <code>Map</code> object. Positive determination of full web browser support is beyond the scope of this test.";
+ } else {
+  element.innerHTML = "<b>Pass/Fail</b> (partial support): The web browser recognizes the JavaScript <code>Map</code> object, but does not support at least one <code>Map</code> object capability. The web browser partially supports the JavaScript <code>Map</code> object.";
+ }
+}
+</script>
+
+ </body>
+</html>

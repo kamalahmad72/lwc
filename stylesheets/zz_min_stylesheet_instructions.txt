@@ -1,0 +1,8 @@
+Last reviewed/updated: 06 Jul 2017.
+1.) Copy /public_html/stylesheets/zz_abc_no_min/*.css files to /public_html/stylesheets/zz_abc_min/*.scss files. NOTE: file extension changed.
+2.) Copy config.rb file from another project to /public_html/stylesheets/zz_abc_min/config.rb. In config.rb, to enable minification, uncomment out or add the following line:
+output_style = :compressed
+3.) Point Start Command Prompt with Ruby to /public_html/stylesheets/zz_abc_min/ and issue compass watch command. Compass takes /public_html/stylesheets/zz_abc_min/*.scss files as source files and writes minified /public_html/stylesheets/zz_abc_min/*.css files. Close Start Command Prompt with Ruby.
+4.) Copy the minified *.css files in place (ie, in /public_html/stylesheets/zz_abc_min/) as *.min.css. NOTE: copied as file extension *.min.css.
+5.) Copy the minified *.min.css files from /public_html/stylesheets/zz_abc_min/ to /public_html/stylesheets/abc/. In other words, directories /public_html/stylesheets/zz_abc_no_min/ and /public_html/stylesheets/zz_abc_min/ are simply working directories, not destination directories, for creating *.css files (/public_html/stylesheets/zz_abc_no_min/) and for minifying *.css files (/public_html/stylesheets/zz_abc_min/) without overwriting any destination *.css files.
+6.) Place the minified /public_html/stylesheets/abc/*.min.css file(s) online as /public_html/stylesheets/abc/*.min.css.

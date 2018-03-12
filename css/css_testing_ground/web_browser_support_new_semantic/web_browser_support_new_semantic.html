@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>Web Browser Support For The New HTML5 Semantic Elements: Tests And Results</title>
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Steve Taylor" />
+  <meta name="Keywords" content="web browser, support, new, HTML5, semantic, element, test" />
+  <meta name="Description" content="Tests to determine web browser support for the new HTML5 semantic elements, and the results." />
+  <style type="text/css">
+   abc, .classed, span, div, header, main, footer, nav, section, article, aside {
+     width: 200px;
+     height: 50px;
+     background-color: limegreen;
+     color: white;
+     border: 2px solid blue;
+   }
+  </style>
+ </head>
+ <body>
+
+  <h1>Web Browser Support For The New HTML5 Semantic Elements: Tests And Results</h1>
+
+  <ol>
+   <li><a href="#introduction">Introduction</a></li>
+   <li><a href="#test">The Test And How To Interpret The Results</a></li>
+   <li><a href="#header">Web Browser Support For The New HTML5 Semantic <code>header</code> Element: Test And Results</a></li>
+   <li><a href="#main">Web Browser Support For The New HTML5 Semantic <code>main</code> Element: Test And Results</a></li>
+   <li><a href="#footer">Web Browser Support For The New HTML5 Semantic <code>footer</code> Element: Test And Results</a></li>
+   <li><a href="#nav">Web Browser Support For The New HTML5 Semantic <code>nav</code> Element: Test And Results</a></li>
+   <li><a href="#section">Web Browser Support For The New HTML5 Semantic <code>section</code> Element: Test And Results</a></li>
+   <li><a href="#article">Web Browser Support For The New HTML5 Semantic <code>article</code> Element: Test And Results</a></li>
+   <li><a href="#aside">Web Browser Support For The New HTML5 Semantic <code>aside</code> Element: Test And Results</a></li>
+  </ol>
+
+  <hr />
+
+  <h3><a id="introduction"></a>1. Introduction</h3>
+
+  <p>IE9+, ED12+, FF1.5+, SF3.1+, CH2+, and OP8+ style; 1.) unknown HTML elements as type selectors, and 2.) unknown HTML elements that are classed. To demonstrate, consider, for example, the following:</p>
+
+  <h4>Test CSS</h4>
+
+<pre>
+abc, .classed, span, div {
+  width: 200px;
+  height: 50px;
+  background-color: limegreen;
+  color: white;
+  border: 2px solid blue;
+}
+</pre>
+
+  <h4>Test HTML</h4>
+
+<pre>
+Unknown &lt;code&gt;abc&lt;/code&gt; element as type selector: &lt;abc&gt;test text&lt;/abc&gt;
+&lt;p&gt;---&lt;/p&gt;
+Unknown &lt;code&gt;xyz&lt;/code&gt; element classed: &lt;xyz class=&quot;classed&quot;&gt;test text&lt;/xyz&gt;
+&lt;p&gt;---&lt;/p&gt;
+Known &lt;code&gt;span&lt;/code&gt; element as type selector: &lt;span&gt;test text&lt;/span&gt;
+&lt;p&gt;---&lt;/p&gt;
+Known &lt;code&gt;div&lt;/code&gt; element as type selector: &lt;div&gt;test text&lt;/div&gt;
+</pre>
+
+  <h4>Test</h4>
+
+Unknown <code>abc</code> element as type selector: <abc>test text</abc>
+<p>---</p>
+Unknown <code>xyz</code> element classed: <xyz class="classed">test text</xyz>
+<p>---</p>
+Known <code>span</code> element as type selector: <span>test text</span>
+<p>---</p>
+Known <code>div</code> element as type selector: <div>test text</div>
+
+  <h4>Results</h4>
+
+  <p>Web browser support for styling the unknown <code>abc</code> element as type selector and the user agent styles styling it as an inline element (i.e., styling it like the <code>span</code> element, not the <code>div</code> element, as type selector): IE9+, ED12+, FF1.5+, SF3.1+, CH2+, OP8+</p>
+ 
+  <p>Web browser support for styling the unknown <code>xyz</code> element classed and the user agent styles styling it as an inline element (i.e., styling it like the <code>span</code> element, not the <code>div</code> element, as type selector): IE9+, ED12+, FF1.5+, SF3.1+, CH2+, OP8+</p>
+
+  <p>Web browser no support for styling the unknown <code>abc</code> element as type selector: IE6 - 8, OP7.50 - 7.54u2.</p>
+
+  <p>Web browser no support for styling the unknown <code>xyz</code> element classed: IE6 - 8, OP7.50 - 7.54u2.</p>
+
+  <p>That web browsers style unknown elements as type selectors as inline elements makes it difficult to determine if a web browser's <q>support</q> for an element is intentional as a known element, or unintentional as an unknown element.</p>
+
+  <hr />
+
+  <h3><a id="test"></a>2. The Test And How To Interpret The Results</h3>
+
+  <h4>Test CSS</h4>
+
+<pre>
+element {
+  width: 200px;
+  height: 50px;
+  background-color: limegreen;
+  color: white;
+  border: 2px solid blue;
+}
+</pre>
+
+  <h4>Test HTML</h4>
+
+<pre>
+before &lt;element&gt;test text&lt;/element&gt; after
+</pre>
+
+  <h4>The Test And How To Interpret The Results</h4>
+
+  <p>If test text looks like the following, then the web browser supports <code>element</code> and the user agent styles style it as a block-level element:</p>
+
+  before <div>test text</div> after
+
+  <p>If test text looks like the following, then the web browser supports <code>element</code> (as a known or unknown element) and the user agent styles style it as an inline element:</p>
+
+  before <span>test text</span> after
+
+  <p>If test text looks like the following, then the web browser does not support <code>element</code>:</p>
+
+  <p>before test text after</p>
+
+  <hr />
+
+  <h3><a id="header"></a>3. Web Browser Support For The New HTML5 Semantic <code>header</code> Element: Test And Results</h3>
+
+  <h4>Test CSS</h4>
+
+<pre>
+header {
+  width: 200px;
+  height: 50px;
+  background-color: limegreen;
+  color: white;
+  border: 2px solid blue;
+}
+</pre>
+
+  <h4>Test HTML</h4>
+
+<pre>
+before &lt;header&gt;test text&lt;/header&gt; after
+</pre>
+
+  <h4>Test</h4>
+
+  before <header>test text</header> after
+
+  <h4>Results</h4>
+
+  <p>Web browser support for the new HTML5 semantic <code>header</code> element and the user agent styles style it as a block-level element: IE9+, ED12+, FF4+, SF5+, CH5+, OP11.10+.</p>
+
+  <p>Web browser support for the new HTML5 semantic <code>header</code> element (as a known or unknown element) and the user agent styles style it as an inline element: FF1.5 - 3.6.28, SF3.1 - 4.0.5, CH2 - 4, OP8 - 11.01.</p>
+
+  <p>Web browser no support for the new HTML5 semantic <code>header</code> element: IE6 - 8, OP7.50 - 7.54u2.</p>
+
+  <hr />
+
+  <h3><a id="main"></a>4. Web Browser Support For The New HTML5 Semantic <code>main</code> Element: Test And Results</h3>
+
+  <h4>Test CSS</h4>
+
+<pre>
+main {
+  width: 200px;
+  height: 50px;
+  background-color: limegreen;
+  color: white;
+  border: 2px solid blue;
+}
+</pre>
+
+  <h4>Test HTML</h4>
+
+<pre>
+before &lt;main&gt;test text&lt;/main&gt; after
+</pre>
+
+  <h4>Test</h4>
+
+  before <main>test text</main> after
+
+  <h4>Results</h4>
+
+  <p>Web browser support for the new HTML5 semantic <code>main</code> element and the user agent styles style it as a block-level element: ED12+, FF21+, SF?, CH26+, OP15+.</p><!-- SM skipped version from 2.17.1 to 2.19 and OP skipped version from 12.17 to 15. -->
+
+  <p>Web browser support for the new HTML5 semantic <code>main</code> element (as a known or unknown element) and the user agent styles style it as an inline element: IE9+, FF1.5 - 20, SF3.1 - 5.1.7, CH2 - 25, OP8 - 12.17.</p>
+
+  <p>Web browser no support for the new HTML5 semantic <code>main</code> element: IE6 - 8, OP7.50 - 7.54u2.</p>
+
+  <hr />
+
+  <h3><a id="footer"></a>5. Web Browser Support For The New HTML5 Semantic <code>footer</code> Element: Test And Results</h3>
+
+  <h4>Test CSS</h4>
+
+<pre>
+footer {
+  width: 200px;
+  height: 50px;
+  background-color: limegreen;
+  color: white;
+  border: 2px solid blue;
+}
+</pre>
+
+  <h4>Test HTML</h4>
+
+<pre>
+before &lt;footer&gt;test text&lt;/footer&gt; after
+</pre>
+
+  <h4>Test</h4>
+
+  before <footer>test text</footer> after
+
+  <h4>Results</h4>
+
+  <p>Web browser support for the new HTML5 semantic <code>footer</code> element and the user agent styles style it as a block-level element: IE9+, ED12+, FF4+, SF5+, CH5+, OP11.10+.</p>
+
+  <p>Web browser support for the new HTML5 semantic <code>footer</code> element (as a known or unknown element) and the user agent styles style it as an inline element: FF1.5 - 3.6.28, SF3.1 - 4.0.5, CH2 - 4, OP8 - 11.01.</p>
+
+  <p>Web browser no support for the new HTML5 semantic <code>footer</code> element: IE6 - 8, OP7.50 - 7.54u2.</p>
+
+  <hr />
+
+  <h3><a id="nav"></a>6. Web Browser Support For The New HTML5 Semantic <code>nav</code> Element: Test And Results</h3>
+
+  <h4>Test CSS</h4>
+
+<pre>
+nav {
+  width: 200px;
+  height: 50px;
+  background-color: limegreen;
+  color: white;
+  border: 2px solid blue;
+}
+</pre>
+
+  <h4>Test HTML</h4>
+
+<pre>
+before &lt;nav&gt;test text&lt;/nav&gt; after
+</pre>
+
+  <h4>Test</h4>
+
+  before <nav>test text</nav> after
+
+  <h4>Results</h4>
+
+  <p>Web browser support for the new HTML5 semantic <code>nav</code> element and the user agent styles style it as a block-level element: IE9+, ED12+, FF4+, SF5+, CH4+, OP11.10+.</p><!-- Yes, CH4. -->
+
+  <p>Web browser support for the new HTML5 semantic <code>nav</code> element (as a known or unknown element) and the user agent styles style it as an inline element: FF1.5 - 3.6.28, SF3.1 - 4.0.5, CH2 - 3, OP8 - 11.01.</p>
+
+  <p>Web browser no support for the new HTML5 semantic <code>nav</code> element: IE6 - 8, OP7.50 - 7.54u2.</p>
+
+  <hr />
+
+  <h3><a id="section"></a>7. Web Browser Support For The New HTML5 Semantic <code>section</code> Element: Test And Results</h3>
+
+  <h4>Test CSS</h4>
+
+<pre>
+section {
+  width: 200px;
+  height: 50px;
+  background-color: limegreen;
+  color: white;
+  border: 2px solid blue;
+}
+</pre>
+
+  <h4>Test HTML</h4>
+
+<pre>
+before &lt;section&gt;test text&lt;/section&gt; after
+</pre>
+
+  <h4>Test</h4>
+
+  before <section>test text</section> after
+
+  <h4>Results</h4>
+
+  <p>Web browser support for the new HTML5 semantic <code>section</code> element and the user agent styles style it as a block-level element: IE9+, ED12+, FF4+, SF5+, CH5+, OP11.10+.</p>
+
+  <p>Web browser support for the new HTML5 semantic <code>section</code> element (as a known or unknown element) and the user agent styles style it as an inline element: FF1.5 - 3.6.28, SF3.1 - 4.0.5, CH2 - 4, OP8 - 11.01.</p>
+
+  <p>Web browser no support for the new HTML5 semantic <code>section</code> element: IE6 - 8, OP7.50 - 7.54u2.</p>
+
+  <hr />
+
+  <h3><a id="article"></a>8. Web Browser Support For The New HTML5 Semantic <code>article</code> Element: Test And Results</h3>
+
+  <h4>Test CSS</h4>
+
+<pre>
+article {
+  width: 200px;
+  height: 50px;
+  background-color: limegreen;
+  color: white;
+  border: 2px solid blue;
+}
+</pre>
+
+  <h4>Test HTML</h4>
+
+<pre>
+before &lt;article&gt;test text&lt;/article&gt; after
+</pre>
+
+  <h4>Test</h4>
+
+  before <article>test text</article> after
+
+  <h4>Results</h4>
+
+  <p>Web browser support for the new HTML5 semantic <code>article</code> element and the user agent styles style it as a block-level element: IE9+, ED12+, FF4+, SF5+, CH5+, OP11.10+.</p>
+
+  <p>Web browser support for the new HTML5 semantic <code>article</code> element (as a known or unknown element) and the user agent styles style it as an inline element: FF1.5 - 3.6.28, SF3.1 - 4.0.5, CH2 - 4, OP8 - 11.01.</p>
+
+  <p>Web browser no support for the new HTML5 semantic <code>article</code> element: IE6 - 8, OP7.50 - 7.54u2.</p>
+
+  <hr />
+
+  <h3><a id="aside"></a>9. Web Browser Support For The New HTML5 Semantic <code>aside</code> Element: Test And Results</h3>
+
+  <h4>Test CSS</h4>
+
+<pre>
+aside {
+  width: 200px;
+  height: 50px;
+  background-color: limegreen;
+  color: white;
+  border: 2px solid blue;
+}
+</pre>
+
+  <h4>Test HTML</h4>
+
+<pre>
+before &lt;aside&gt;test text&lt;/aside&gt; after
+</pre>
+
+  <h4>Test</h4>
+
+  before <aside>test text</aside> after
+
+  <h4>Results</h4>
+
+  <p>Web browser support for the new HTML5 semantic <code>aside</code> element and the user agent styles style it as a block-level element: IE9+, ED12+, FF4+, SF5+, CH5+, OP11.10+.</p>
+
+  <p>Web browser support for the new HTML5 semantic <code>aside</code> element (as a known or unknown element) and the user agent styles style it as an inline element: FF1.5 - 3.6.28, SF3.1 - 4.0.5, CH2 - 4, OP8 - 11.01.</p>
+
+  <p>Web browser no support for the new HTML5 semantic <code>aside</code> element: IE6 - 8, OP7.50 - 7.54u2.</p>
+
+  <p>Last reviewed/updated: 26 Oct 2016 | Published: 28 Oct 2015 | Status: Active</p>
+
+  <p><a href="http://www.learnwebcoding.com/">Learn Web Coding</a></p>
+
+  <p><a href="https://jigsaw.w3.org/css-validator/check?uri=referer&amp;profile=css3"><img src="/images/valid-css.gif" alt="Valid CSS3!" /></a></p>
+
+ </body>
+</html>

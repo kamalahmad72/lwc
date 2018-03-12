@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>new.target Metaproperty Web Browser Support Test</title>
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Steve Taylor" />
+  <meta name="Keywords" content="JavaScript, new.target metaproperty, web browser support, test" />
+  <meta name="Description" content="A JavaScript that tests and reports if the web browser supports the JavaScript new.target metaproperty." />
+  <script></script>
+ </head>
+ <body>
+
+  <h1><code>new.target</code> Metaproperty Web Browser Support Test</h1>
+
+<p id='testId'><b>Fail</b> (no support): The web browser does not recognize the JavaScript <code>new.target</code> metaproperty. The web browser does not support the JavaScript <code>new.target</code> metaproperty.</p><!-- Hard code Fail because web browser no support error stops JavaScript execution. -->
+
+<script>
+var callWithoutNewFallsThroughToElse = false;
+function Test(){
+ if (new.target){ // Call with new enters if.
+  var element = document.getElementById("testId");
+  if ((callWithoutNewFallsThroughToElse === true) && (new.target !== undefined) && (new.target === Test)){
+   element.innerHTML = "<b>Pass</b> (at least partial/possibly full support): The web browser recognizes the JavaScript <code>new.target</code> metaproperty, and supports at least one <code>new.target</code> metaproperty capability. The web browser at least partially/possibly fully supports the JavaScript <code>new.target</code> metaproperty. Positive determination of full web browser support is beyond the scope of this test.";
+  } else {
+   element.innerHTML = "<b>Pass/Fail</b> (partial support): The web browser recognizes the JavaScript <code>new.target</code> metaproperty, but does not support at least one <code>new.target</code> metaproperty capability. The web browser partially supports the JavaScript <code>new.target</code> metaproperty.";
+  }
+ } else { // Call without new falls through to else.
+  callWithoutNewFallsThroughToElse = true;
+ }
+}
+var callWithoutNew = Test();
+var callWithNew = new Test();
+</script>
+
+ </body>
+</html>

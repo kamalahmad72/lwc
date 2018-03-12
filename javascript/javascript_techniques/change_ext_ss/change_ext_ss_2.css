@@ -1,0 +1,17 @@
+body {
+  font-size: 20px;
+  color: #00f;
+}
+.interactive-object {
+  text-decoration: underline;
+}
+.interactive-object:visited {
+  color: #999;
+}
+.interactive-object:hover {
+  color: #999;
+  cursor: pointer;
+}
+p {
+  font-style: italic;
+}

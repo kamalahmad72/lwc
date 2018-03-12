@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>Spread Operator In Function Calls Web Browser Support Test</title>
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Steve Taylor" />
+  <meta name="Keywords" content="JavaScript, spread operator, function call, web browser support, test" />
+  <meta name="Description" content="A JavaScript that tests and reports if the web browser supports the JavaScript spread operator in function calls." />
+  <script></script>
+ </head>
+ <body>
+
+  <h1>Spread Operator In Function Calls Web Browser Support Test</h1>
+
+<script>
+var array = [2, 3, 1];
+function test(paramOne, paramTwo, paramThree){
+ if (paramOne + paramTwo + paramThree === 6){
+  document.write("<p><b>Pass</b> (at least partial/possibly full support): The web browser recognizes the JavaScript spread operator in function calls. The web browser at least partially/possibly fully supports the JavaScript spread operator in function calls. Positive determination of full web browser support is beyond the scope of this test.</p>");
+ } else {
+  document.write("<p><b>Fail</b> (no support): The web browser does not recognize the JavaScript spread operator in function calls. The web browser does not support the JavaScript spread operator in function calls.</p>");
+ }
+}
+test(...array);
+</script>
+
+ </body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>Learn Bootstrap - The Bootstrap Tutorial</title>
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Steve Taylor" />
+  <meta name="Keywords" content="web page, template, Learn Web Coding, cap words as if used in sentence" />
+  <meta name="Description" content="The web page template for Learn Web Coding." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" media="all" href="/fonts/font-awesome/font-awesome.css" />
+  <link rel="stylesheet" type="text/css" media="all" href="/stylesheets/bootstrap/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" media="all" href="/stylesheets/lwc/lwc.css" />
+  <link rel="stylesheet" type="text/css" media="all" href="/stylesheets/lwc/lwc_print_default.css" id="changeLwcExtSSLinkElementId" />
+  <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="/javascripts/bootstrap/bootstrap.js"></script>
+  <script type="text/javascript" src="/javascripts/lwc/lwc_library_load_in_head.js"></script>
+ </head>
+ <body>
+
+  <header id="headerId">
+   <script type="text/javascript" src="/javascripts/lwc/lwc_header.js"></script>
+   <script type="text/javascript">BcrumbsNavUtil.bcrumbsNav("", "Misc");</script>
+   <noscript><a href="http://www.learnwebcoding.com/" class="link-lwc-logo">Learn Web Coding</a><br />This alternate header displayed because your web browser does not support JavaScript or has JavaScript support disabled.</noscript>
+  </header>
+
+  <main>
+   <div class="container-fluid"><!-- container-fluid from Bootstrap. -->
+    <h1>Learn Bootstrap - The Bootstrap Tutorial</h1>
+
+    <div class="web-browser-support-and-print-icon-dropdown">
+     <script type="text/javascript" src="/javascripts/lwc/lwc_web_browser_support_and_print_icon_dropdown.js"></script>
+    </div>
+
+    <nav class="toc">
+     <div class="toc-sec"><div class="toc-num">1.</div><div class="toc-sec-title"><a href="#introduction">Introduction</a></div></div>
+     <div class="toc-sec"><div class="toc-num">2.</div><div class="toc-sec-title"><a href="#grid">The Grid</a></div></div>
+     <div class="toc-sec"><div class="toc-num">3.</div><div class="toc-sec-title"><a href="#resources">Resources And Additional Information</a></div></div>
+    </nav>
+
+    <hr />
+    <section>
+
+     <h2><a id="introduction"></a>1. Introduction</h2>
+
+     <table>
+      <caption>Caption</caption>
+      <thead>
+       <tr>
+        <th>Screen&nbsp;Size<br />
+        Per B</th>
+        <th>Screen&nbsp;Size<br />
+        Per JSB</th>
+        <th>Display<br />
+        Width</th>
+        <th>&nbsp;&nbsp;&nbsp;Class&nbsp;&nbsp;&nbsp;</th>
+        <th>Media<br />
+        Queries<br />
+        Breakpoints</th>
+        <th>Container<br />
+        Sizes</th>
+        <th>Gutter</th>
+        <th>Column<br />
+        Width</th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+       </tr>
+      </thead>
+      <tbody>
+       <tr>
+        <td>extra small/<br />
+        phone</td>
+        <td>mobile portrait</td>
+        <td>&lt; 768px</td>
+        <td>.col-xs-#</td>
+        <td>@screen-xs: 480px;</td>
+        <td>-</td>
+        <td>30px</td>
+        <td>auto</td>
+        <td>767-px</td>
+        <td>x</td>
+        <td>stack</td>
+        <td>stack</td>
+        <td>stack</td>
+        <td></td>
+        <td></td>
+       </tr>
+       <tr>
+        <td>small/<br />
+        tablet</td>
+        <td>mobile landscape/<br />
+        tablet portrait</td>
+        <td>&gt;= 768px</td>
+        <td>.col-sm-#</td>
+        <td>@screen-sm: 768px;</td>
+        <td>@container-tablet:<br />
+        ((720px + @grid-gutter-width));</td>
+        <td>30px</td>
+        <td>62px</td>
+        <td>768 - 991px</td>
+        <td>|</td>
+        <td>x</td>
+        <td>stack</td>
+        <td>stack</td>
+        <td></td>
+        <td></td>
+       </tr>
+       <tr>
+        <td>medium/<br />
+        desktop</td>
+        <td>tablet landscape/<br />
+        small desktop</td>
+        <td>&gt;= 992px</td>
+        <td>.col-md-#</td>
+        <td>@screen-md: 992px;</td>
+        <td>@container-desktop:<br />
+        ((940px + @grid-gutter-width));</td>
+        <td>30px</td>
+        <td>81px</td>
+        <td>992 - 1200px</td>
+        <td>|</td>
+        <td>|</td>
+        <td>x</td>
+        <td>stack</td>
+        <td></td>
+        <td></td>
+       </tr>
+       <tr>
+        <td>large/<br />
+        wide desktop</td>
+        <td>large desktop</td>
+        <td>&gt; 1200px</td>
+        <td>.col-lg-#</td>
+        <td>@screen-lg: 1200px;</td>
+        <td>@container-large-desktop:<br />
+        ((1140px + @grid-gutter-width));</td>
+        <td>30px</td>
+        <td>97px</td>
+        <td>1201+px</td>
+        <td>v</td>
+        <td>v</td>
+        <td>v</td>
+        <td>x</td>
+        <td></td>
+        <td></td>
+       </tr>
+       <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+       </tr>
+      </body>
+     </table>
+
+    </section>
+    <hr />
+    <section>
+
+     <h2><a id="grid"></a>2. The Grid</h2>
+
+    </section>
+    <hr />
+    <section>
+
+     <h2><a id="resources"></a>3. Resources And Additional Information</h2>
+
+     <ul class="link-list">
+      <li><a href="http://getbootstrap.com/">Bootstrap (getbootstrap.com)</a></li>
+      <li><a href="https://github.com/twbs/bootstrap">GitHub | twbs/bootstrap  (github.com)</a></li>
+      <li><a href=""> ()</a></li>
+      <li><a href=""> ()</a></li>
+      <li><a href=""> ()</a></li>
+     </ul>
+
+    </section>
+
+    <div class="last-reviewed">Last reviewed/updated: 11 Apr 2015 | Published: 11 Apr 2015 | Status: Active</div>
+   </div><!-- Close main section div class="container-fluid". -->
+  </main>
+
+  <footer>
+   <script type="text/javascript" src="/javascripts/lwc/lwc_footer.js"></script>
+  </footer>
+
+  <script type="text/javascript" src="/javascripts/lwc/lwc_library_load_in_body.js"></script>
+
+ </body>
+</html>

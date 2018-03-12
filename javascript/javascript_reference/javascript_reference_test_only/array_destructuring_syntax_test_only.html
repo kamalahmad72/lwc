@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>Array Destructuring Syntax Web Browser Support Test</title>
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Steve Taylor" />
+  <meta name="Keywords" content="JavaScript, array destructuring, syntax, web browser support, test" />
+  <meta name="Description" content="A JavaScript that tests and reports if the web browser supports the JavaScript array destructuring syntax." />
+  <script></script>
+ </head>
+ <body>
+
+  <h1>Array Destructuring Syntax Web Browser Support Test</h1>
+
+<!-- Per LWC web browser support testing, instanceof operator supported by IE6+, ED12+, FF1.5+, SF3.1+, CH2+, OP7.50+, isArray() method supported by IE9+, ED12+, FF4+, SF5+, CH4+, OP10.50+, and array destructuring syntax supported by ED14+, FF38+, CH49+, OP36+, no IE11-, SF5.1.7-. Therefore, in web browser support test below, instanceof operator and isArray() method do not skew test result. -->
+
+<p id='testId'><b>Fail</b> (no support): The web browser does not recognize the JavaScript array destructuring syntax. The web browser does not support the JavaScript array destructuring syntax.</p><!-- Hard code Fail because web browser no support error stops JavaScript execution. -->
+
+<script>
+var arrayLiteralOne = [1, 2];
+var [variableOne, variableTwo] = arrayLiteralOne; // Array literal variable as initializer.
+var arrayLiteralTwo = [3, 4, null, undefined];
+var [variableThree, variableFour = "variableFour default value not used", variableFive = "variableFive default value not used", variableSix = "variableSix default value used", variableSeven = "variableSeven default value used", variableEight] = arrayLiteralTwo; // Assign default value. Default value is used when initializer value is undefined or initializer value does not exist.
+var [variableNine, variableTen] = [9, 10]; // Array literal as initializer.
+[variableEleven, variableTwelve] = [11, 12]; // No var keyword. Do not place destructuring assignment statement inside ().
+arrayLiteralThree = [9, 13, 5, 7, 14, 15, 16];
+var [ , variableThirteen, , , variableFourteen] = arrayLiteralThree; // Ignore values. Empty placeholders not required to ignore any trailing initializer values.
+var variableX = 1,
+ variableY = 2;
+[variableX, variableY] = [variableY, variableX]; // Swap values.
+var arrayLiteralFour = [1, 2, 3, 4];
+var [...clonedArray] = arrayLiteralFour; // Clone array to clonedArray array variable.
+var [variableZ, ...restArray] = arrayLiteralFour; // Assign remaining array elements to restArray array variable.
+if ((variableOne === 1) && (variableTwo === 2) && (variableThree === 3) && (variableFour === 4) && (variableFive === null) && (variableSix === "variableSix default value used") && (variableSeven === "variableSeven default value used") && (variableEight === undefined) && (variableNine === 9) && (variableTen === 10) && (variableEleven === 11) && (variableTwelve === 12) && (variableThirteen === 13) && (variableFourteen === 14) && (variableX === 2) && (variableY === 1) && clonedArray instanceof Array && Array.isArray(clonedArray) && (clonedArray.length === 4) && (clonedArray[0] === 1) && restArray instanceof Array && Array.isArray(restArray) && (restArray.length === 3) && restArray[0] === 2){
+ var element = document.getElementById("testId");
+ element.innerHTML = "<b>Pass</b> (at least partial/possibly full support): The web browser recognizes the JavaScript array destructuring syntax. The web browser at least partially/possibly fully supports the JavaScript array destructuring syntax. Positive determination of full web browser support is beyond the scope of this test.";
+}
+</script>
+
+ </body>
+</html>

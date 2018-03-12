@@ -1,0 +1,58 @@
+// -------------------- INTRODUCTION --------------------
+
+// File: /web_server_root_directory/stylesheets/lwc/_miscellaneous.scss.
+// Purpose: Miscellaneous Sass style definitions.
+// Used in: lwc.scss.
+// Last reviewed/updated: 25 Jul 2017.
+// Published: 03 Jun 2015.
+
+/* -------------------- MISCELLANEOUS (_miscellaneous.scss) -------------------- */
+
+img, header, main, footer, noscript {
+  display: block;
+}
+footer img {
+  display: inline;
+}
+.display-none {
+  display: none;
+}
+.float-left, .toc-num {
+  float: left;
+}
+.clear-both, .toc > div {
+  clear: both;
+}
+.tools-icon-dropdown-container {
+  display: inline-block;
+  position: relative;
+}
+.tools-icon-dropdown {
+  position: absolute;
+  white-space: nowrap;
+  list-style-type: none;
+}
+img {
+  max-width: 100%;
+}
+.vertical-align-top {
+  vertical-align: top;
+}
+.text-align-center, .home-page-main-subtitle-row, .home-page-main-fa-row, .home-page-footer {
+  text-align: center;
+}
+.text-align-right {
+  text-align: right;
+}
+// word-wrap and overflow-wrap allow viewport width to be decreased without inducing horizontal scrollbar. word-wrap for screen supported by all web browsers except FF. overflow-wrap to replace word-wrap.
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+ul {
+  list-style-type: disc;
+}
+.cursor-pointer, .tools-icon-dropdown-option {
+  cursor: pointer;
+}

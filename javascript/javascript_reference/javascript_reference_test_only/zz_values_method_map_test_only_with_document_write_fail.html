@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>values() Method On Maps Web Browser Support Test</title>
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Steve Taylor" />
+  <meta name="Keywords" content="JavaScript, values() method, map, web browser support, test" />
+  <meta name="Description" content="A JavaScript that tests and reports if the web browser supports the JavaScript values() method on maps." />
+  <script></script>
+ </head>
+ <body>
+
+  <h1><code>values()</code> Method On Maps Web Browser Support Test</h1>
+
+<!-- Similar test code in Generator object, entries() method on maps, keys() method on maps, and values() method on maps. -->
+<!-- Use for statement/loop instead of ECMAScript 2015 for...of statement/loop to avoid for...of statement/loop possibly skewing test result. -->
+<!-- Per LWC web browser support testing, values() method on maps supported by ED12+, FF27+, CH38+, OP25+, partial FF20 - 26, no IE11-, SF5.1.7- and [Symbol.iterator] property supported by ED12+, FF36+, CH38+, OP25+, no IE11-, SF5.1.7-. Therefore, in web browser support test below, did not test if (mapIteratorValues[Symbol.iterator]) to avoid skewing test result to newer version FF. -->
+
+<script>
+var testMap = new Map(); // IE11 does not support maps initialized with an iterable. Hence, use Map constructor and set() method.
+testMap.set("keyOne", "a");
+testMap.set("keyTwo", "b");
+testMap.set("keyThree", "c"); // testMap is {"keyOne" => "a", "keyTwo" => "b", "keyThree" => "c"}.
+var testMapIteratorValues = testMap.values(); // Get reference to map built-in map iterator object called by values() method. NOTE: values() method can be considered a generator function. Call values() generator function. Call returns a Generator object which inherits prototype from Object (window.Generator property does not exist) and is an iterator. Generator object has next() method property. Called by values(), map iterator object next() method return object value property is set to map element value. IE11 error: SCRIPT438: Object doesn't support property or method 'values'.
+var testMapIteratorValuesNextValues = [];
+for (var i = 0; i < testMap.size; i++){ // Identical to for (var value of testMap.values()){console.log(value);}. 1.) "a", 2.) "b", 3.) "c".
+ testMapIteratorValuesNextValues[i] = testMapIteratorValues.next().value;
+}
+if (testMap.values){
+ if ((typeof testMapIteratorValues === "object") && testMapIteratorValues instanceof Object && Object.prototype.isPrototypeOf(testMapIteratorValues) && (typeof testMapIteratorValuesNextValues[0] === "string") && (testMapIteratorValuesNextValues[0] === "a") && (testMapIteratorValuesNextValues[1] === "b") && (testMapIteratorValuesNextValues[2] === "c")){
+  document.write("<p><b>Pass</b> (at least partial/possibly full support): The web browser recognizes the JavaScript <code>values()</code> method on maps, and supports at least one <code>values()</code> method on maps capability. The web browser at least partially/possibly fully supports the JavaScript <code>values()</code> method on maps. Positive determination of full web browser support is beyond the scope of this test.</p>");
+ } else {
+  document.write("<p><b>Pass/Fail</b> (partial support): The web browser recognizes the JavaScript <code>values()</code> method on maps, but does not support at least one <code>values()</code> method on maps capability. The web browser partially supports the JavaScript <code>values()</code> method on maps.</p>");
+ }
+} else {
+ document.write("<p><b>Fail</b> (no support): The web browser does not recognize the JavaScript <code>values()</code> method on maps. The web browser does not support the JavaScript <code>values()</code> method on maps.</p>");
+}
+</script>
+
+ </body>
+</html>

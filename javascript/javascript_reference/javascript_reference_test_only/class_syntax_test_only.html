@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>class Syntax Web Browser Support Test</title>
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Steve Taylor" />
+  <meta name="Keywords" content="JavaScript, class syntax, web browser support, test" />
+  <meta name="Description" content="A JavaScript that tests and reports if the web browser supports the JavaScript class syntax." />
+  <script></script>
+ </head>
+ <body>
+
+  <h1><code>class</code> Syntax Web Browser Support Test</h1>
+
+<!-- Per LWC web browser support testing, getPrototypeOf() method supported by IE9+, ED12+, FF3.5+, SF5+, CH5+, OP11.60+ and class syntax supported by ED13+, FF45+, CH49+, OP36+, no IE11-, SF5.1.7-. Therefore, in web browser support test below, getPrototypeOf() method does not skew test result. -->
+
+<p id='testId'><b>Fail</b> (no support): The web browser does not recognize the JavaScript <code>class</code> syntax. The web browser does not support the JavaScript <code>class</code> syntax.</p><!-- Hard code Fail because web browser no support error stops JavaScript execution. -->
+
+<script>
+class ClassDeclaration { // Class definition (not hoisted) using class declaration syntax.
+ constructor(param){ // Class constructor() method (optional). Recommend define all own properties inside class constructor() method.
+  this.ownPropertyOne = param; // objectViaClassDeclaration ownPropertyOne.
+ }
+ conciseMethod(){ // objectViaClassDeclaration prototype property. Class methods use concise method syntax and are not enumerable (ie, propertyIsEnumerable() method returns false).
+  return this.ownPropertyOne;
+ }
+}
+ClassDeclaration.prototype.prototypePropertyOne = "prototypePropertyOne value"; // ClassDeclaration prototypePropertyOne.
+ClassDeclaration.prototype.prototypePropertyTwo = function(){ // ClassDeclaration prototypePropertyTwo.
+ return "prototypePropertyTwo return value";
+};
+var objectViaClassDeclaration = new ClassDeclaration("argument"); // Instantiate object by calling class definition with new operator (required). Arguments are passed to class constructor() method.
+var callObjectViaClassDeclarationConciseMethod = objectViaClassDeclaration.conciseMethod();
+var callObjectViaClassDeclarationPrototypePropertyTwo = objectViaClassDeclaration.prototypePropertyTwo();
+var ClassExpression = class { // Class definition (not hoisted) using class expression syntax.
+ constructor(param){ // Class constructor() method (optional). Recommend define all own properties inside class constructor() method.
+  this.ownPropertyOne = param; // objectViaClassExpression ownPropertyOne.
+ }
+ conciseMethod(){ // objectViaClassExpression prototype property. Class methods use concise method syntax and are not enumerable (ie, propertyIsEnumerable() method returns false).
+  return this.ownPropertyOne;
+ }
+}
+ClassExpression.prototype.prototypePropertyOne = "prototypePropertyOne value"; // ClassExpression prototypePropertyOne.
+ClassExpression.prototype.prototypePropertyTwo = function(){ // ClassExpression prototypePropertyTwo.
+ return "prototypePropertyTwo return value";
+};
+var objectViaClassExpression = new ClassExpression("argument"); // Instantiate object by calling class definition with new operator (required). Arguments are passed to class constructor() method.
+var callObjectViaClassExpressionConciseMethod = objectViaClassExpression.conciseMethod();
+var callObjectViaClassExpressionPrototypePropertyTwo = objectViaClassExpression.prototypePropertyTwo();
+if ((typeof ClassDeclaration === "function") && ClassDeclaration instanceof Function && ClassDeclaration instanceof Object && (typeof objectViaClassDeclaration === "object") && objectViaClassDeclaration instanceof ClassDeclaration && !(objectViaClassDeclaration instanceof Function) && objectViaClassDeclaration instanceof Object && (objectViaClassDeclaration.ownPropertyOne === "argument") && (callObjectViaClassDeclarationConciseMethod === "argument") && (objectViaClassDeclaration.prototypePropertyOne === "prototypePropertyOne value") && (callObjectViaClassDeclarationPrototypePropertyTwo === "prototypePropertyTwo return value") && objectViaClassDeclaration.hasOwnProperty("ownPropertyOne") && !objectViaClassDeclaration.hasOwnProperty("conciseMethod") && !objectViaClassDeclaration.hasOwnProperty("prototypePropertyOne") && !objectViaClassDeclaration.hasOwnProperty("prototypePropertyTwo") && (Object.getPrototypeOf(objectViaClassDeclaration).ownPropertyOne === undefined) && (typeof ClassDeclaration.prototype.ownPropertyOne === "undefined") && (typeof ClassDeclaration.prototype.conciseMethod === "function") && (typeof ClassDeclaration.prototype.prototypePropertyOne === "string") && (typeof ClassDeclaration.prototype.prototypePropertyTwo === "function") && objectViaClassDeclaration.propertyIsEnumerable("ownPropertyOne") && !objectViaClassDeclaration.propertyIsEnumerable("conciseMethod") && !objectViaClassDeclaration.propertyIsEnumerable("prototypePropertyOne") && !objectViaClassDeclaration.propertyIsEnumerable("prototypePropertyTwo") && (typeof ClassExpression === "function") && ClassExpression instanceof Function && ClassExpression instanceof Object && (typeof objectViaClassExpression === "object") && objectViaClassExpression instanceof ClassExpression && !(objectViaClassExpression instanceof Function) && objectViaClassExpression instanceof Object && (objectViaClassExpression.ownPropertyOne === "argument") && (callObjectViaClassExpressionConciseMethod === "argument") && (objectViaClassExpression.prototypePropertyOne === "prototypePropertyOne value") && (callObjectViaClassExpressionPrototypePropertyTwo === "prototypePropertyTwo return value") && objectViaClassExpression.hasOwnProperty("ownPropertyOne") && !objectViaClassExpression.hasOwnProperty("conciseMethod") && !objectViaClassExpression.hasOwnProperty("prototypePropertyOne") && !objectViaClassExpression.hasOwnProperty("prototypePropertyTwo") && (Object.getPrototypeOf(objectViaClassExpression).ownPropertyOne === undefined) && (typeof ClassExpression.prototype.ownPropertyOne === "undefined") && (typeof ClassExpression.prototype.conciseMethod === "function") && (typeof ClassExpression.prototype.prototypePropertyOne === "string") && (typeof ClassExpression.prototype.prototypePropertyTwo === "function") && objectViaClassExpression.propertyIsEnumerable("ownPropertyOne") && !objectViaClassExpression.propertyIsEnumerable("conciseMethod") && !objectViaClassExpression.propertyIsEnumerable("prototypePropertyOne") && !objectViaClassExpression.propertyIsEnumerable("prototypePropertyTwo")){
+ var element = document.getElementById("testId");
+ element.innerHTML = "<b>Pass</b> (at least partial/possibly full support): The web browser recognizes the JavaScript <code>class</code> syntax. The web browser at least partially/possibly fully supports the JavaScript <code>class</code> syntax. Positive determination of full web browser support is beyond the scope of this test.";
+}
+</script>
+
+ </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>isPrototypeOf() Method Web Browser Support Test</title>
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Steve Taylor" />
+  <meta name="Keywords" content="JavaScript, isPrototypeOf() method, web browser support, test" />
+  <meta name="Description" content="A JavaScript that tests and reports if the web browser supports the JavaScript isPrototypeOf() method." />
+  <script></script>
+ </head>
+ <body>
+
+  <h1><code>isPrototypeOf()</code> Method Web Browser Support Test</h1>
+
+<!-- Similar comments getPrototypeOf() method, isPrototypeOf() method, and setPrototypeOf() method. -->
+<!-- CustomConstructor.prototype.isPrototypeOf(objectViaCustomConstructor) works. This implies isPrototypeOf() is a method of Object.prototype and AnyObject.prototype. -->
+<!-- Per LWC web browser support testing, isPrototype() method supported by IE6+, ED12+, FF1.5+, SF3.1+, CH2+, OP7.50+ and create() method supported by IE9+, ED12+, FF4+, SF5+, CH5+, OP11.60+. Since create() method requires newer web browsers than isPrototype() method, using create() method to create object prototype chain for testing isPrototype() method web browser support on objects would skew test result to newer web browsers. Therefore, in web browser support test below, isPrototypeOf() method is not tested on objects because creating object prototype chain using create() method would skew test result to newer web browsers. For example of isPrototypeOf() on objects (ie, anyObjectOne.isPrototypeOf(anyObjectTwo), see create_method_test_only.html and create_method.php. -->
+
+<script>
+if (Object.prototype.isPrototypeOf){
+ var objectViaObjectConstructor = new Object(); // Instantiate instance of Object as objectViaObjectConstructor.
+ function CustomConstructor(){} // CustomConstructor constructor.
+ var objectViaCustomConstructor = new CustomConstructor(); // Instantiate instance of CustomConstructor as objectViaCustomConstructor.
+ var objectLiteral = {}; // Instantiate instance of object literal as objectLiteral.
+ if (Object.prototype.isPrototypeOf(objectViaObjectConstructor) && Object.prototype.isPrototypeOf(objectViaCustomConstructor) && CustomConstructor.prototype.isPrototypeOf(objectViaCustomConstructor) && Object.prototype.isPrototypeOf(objectLiteral)){
+  document.write("<p><b>Pass</b> (at least partial/possibly full support): The web browser recognizes the JavaScript <code>isPrototypeOf()</code> method, and supports at least one <code>isPrototypeOf()</code> method capability. The web browser at least partially/possibly fully supports the JavaScript <code>isPrototypeOf()</code> method. Positive determination of full web browser support is beyond the scope of this test.</p>");
+ } else {
+  document.write("<p><b>Pass/Fail</b> (partial support): The web browser recognizes the JavaScript <code>isPrototypeOf()</code> method, but does not support at least one <code>isPrototypeOf()</code> method capability. The web browser partially supports the JavaScript <code>isPrototypeOf()</code> method.</p>");
+ }
+} else {
+ document.write("<p><b>Fail</b> (no support): The web browser does not recognize the JavaScript <code>isPrototypeOf()</code> method. The web browser does not support the JavaScript <code>isPrototypeOf()</code> method.</p>");
+}
+</script>
+
+ </body>
+</html>

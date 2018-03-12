@@ -1,0 +1,67 @@
+// -------------------- INTRODUCTION --------------------
+
+// File: /web_server_root_directory/stylesheets/lwc/_typography.scss.
+// Purpose: Font property related (eg, font-family, font-size, font-weight, font-style, etc) and line-height property Sass style definitions.
+// Used in: lwc.scss.
+// Last reviewed/updated: 11 Nov 2017.
+// Published: 03 Jun 2015.
+// NOTE: Prior to 11 May 2016 named _fonts_line-heights.scss.
+
+/* -------------------- TYPOGRAPHY (_typography.scss) -------------------- */
+
+pre, code, .filename, .link-lwc-logo {
+  font-family: $font-family-monospace;
+}
+kbd {
+  font-family: $font-family-body;
+}
+// Web page title.
+h1, .home-page-main-subtitle {
+  font-size: 2.4em;
+}
+// Web page section: 1. Section Title.
+h2 {
+  font-size: 1.8em;
+}
+// h3 web page section: 1.1. Subsection Title.
+h3, .link-lwc-logo, .home-page-main-fa-title {
+  font-size: 1.5em;
+}
+// Web page section: 1.1.1. Subsubsection Title.
+h4 {
+  font-size: 1.2em;
+}
+// Web page section: 1.1.1.1. Subsubsubsection Title.
+h5 {
+  font-size: 1.1em;
+}
+.bcrumbs-nav, .home-page-footer, .last-reviewed, .web-browser-support {
+  font-size: $font-size-sm;
+}
+.home-page-main-fa {
+  font-size: 10em;
+}
+// h1 web page title. h2 through h5 web page section titles.
+h1, h2, h3, h4, h5 {
+  font-weight: normal;
+}
+caption, kbd, .tools-icon-dropdown-header, .toc-sec, .link-lwc-logo {
+  font-weight: bold;
+}
+cite {
+  font-style: normal;
+}
+p, li, th, td, .note, .toc-sec, .toc-sub1sec, .toc-sub2sec, .toc-sub3sec, .home-page-footer {
+  line-height: $line-height-primary;
+}
+pre {
+  line-height: $line-height-sm;
+}
+// code type selector for code in sentences and code in sentences in notes, not code in web page title. h1 code { line-height: normal; } style rule does not work for code in web page title.
+.line-height-normal, code {
+  line-height: normal;
+}
+// h1 code descendant selector for code in web page title. h1 code { line-height: normal; } style rule does not work for code in web page title.
+h1 code {
+  line-height: 1;
+}

@@ -1,0 +1,35 @@
+News On Microsoft Supported Versions Of Internet Explorer And Windows
+
+As of 12 Jan 2016, Microsoft will only support the latest version of Internet Explorer (IE) available for the supported versions of Windows. The supported versions of Windows are the versions of Windows that have not reached the end of Extended Support. As of 12 Jan 2016, Windows 8 has reached the end of Extended Support as being superseded by Windows 8.1 Update. The supported versions of IE on the supported versions of Windows:
+
+Windows - End Of Extended Support - Supported Version Of IE For Windows
+-----------------------------------------------------------------------
+XP SP3 - 08 Apr 2014 - None/NA
+Vista SP2 - 11 Apr 2017 - IE9.0
+7 SP1 - 14 Jan 2020 - IE11.0
+8 - 12 Jan 2016 - None/NA
+8.1 Update - 10 Jan 2023 - IE11.0
+10 - 14 Oct 2025 - IE11.0 and Edge
+Server 2008 SP2 - 14 Jan 2020 - IE9.0
+Server 2008 R2 SP1 - 14 Jan 2020 - IE11.0
+Server 2012 - 10 Jan 2023 - IE10.0
+Server 2012 R2 - 10 Jan 2023 - IE11.0
+ 
+For developers that only need/want to support the versions of IE for Windows that Microsoft supports, as of 12 Apr 2016 you only have to support IE9.0 (Windows Vista SP2/Windows Server 2008 SP2), IE10.0 (Windows Server 2012), IE11.0 (Windows 7 SP1/Windows 8.1 Update/Windows 10/Windows Server 2008 R2 SP1/Windows Server 2012 R2), and Edge (Windows 10).
+
+For additional information see:
+
+Support for older versions of Internet Explorer ended on January 12th, 2016
+https://www.microsoft.com/en-us/WindowsForBusiness/End-of-IE-support
+
+Still running Windows 8? Time to upgrade, or else
+http://www.zdnet.com/article/still-running-windows-8-time-to-upgrade-or-else/
+
+Microsoft Support Lifecycle
+https://support.microsoft.com/en-us/gp/lifeselect
+
+Microsoft Support Lifecycle | What is the Microsoft Lifecycle Support policy for Internet Explorer?
+https://support.microsoft.com/en-us/lifecycle#gp/Microsoft-Internet-Explorer
+
+Categories:
+Misc

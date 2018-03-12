@@ -1,0 +1,12 @@
+select {
+  border: 2px solid #999;
+  border-radius: 3px;
+  padding: 4px 6px;
+}
+select:hover {
+  border-color: #666;
+}
+select:focus {
+  border-color: #666;
+  outline: 0;
+}

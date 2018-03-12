@@ -1,0 +1,16 @@
+.tab-hyperlink {
+  float: left;
+  background-color: #888;
+  color: #fff;
+  text-decoration: none;
+  margin-right: 5px;
+  padding: 10px;
+}
+.tab-hyperlink:hover {
+  text-decoration: underline;
+}
+.wrapper {
+  clear: both;
+  border: 1px solid #ccc;
+  padding: 0 10px;
+}

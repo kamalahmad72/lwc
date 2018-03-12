@@ -1,0 +1,83 @@
+// -------------------- INTRODUCTION --------------------
+
+// File: /web_server_root_directory/stylesheets/lwc/_colors_borders.scss.
+// Purpose: Color property related (eg, background-color, background, color, etc) and border property related (eg, border, border-collapse, border-radius, border-color, etc) Sass style definitions except for hyperlinks, interactive objects, and form controls (see _hyperlinks_interactive-objects_form-controls.scss).
+// Used in: lwc.scss.
+// Last reviewed/updated: 10 Mar 2018.
+// Published: 03 Jun 2015.
+
+/* -------------------- COLORS AND BORDERS (_colors_borders.scss) -------------------- */
+
+code, pre, caption, .note {
+  background-color: $background-color-primary;
+}
+.note code, .note pre, .note .note, pre code, caption code {
+  background-color: $background-color-darker;
+}
+// background-color on ul, not li, resolves border radius induced border corner issue.
+.tools-icon-dropdown {
+  background-color: $background-color-body;
+}
+.ascii-art {
+  background-color: transparent;
+  border: 0;
+}
+// h1 web page title. h2 through h5 web page section titles.
+h1, h2, h3, h4, h5, .home-page-main-fa {
+  color: $color-heading;
+}
+// Hyperlinks also color: $color-light.
+.bcrumbs-nav, .last-reviewed, .web-browser-support, .home-page-footer {
+  color: $color-light;
+}
+//IE11 does not support background-color and color on noscript type selector. IE11 supports color and does not support background-color on classed noscript element.
+.noscript {
+  color: $color-lwch-red;
+}
+// Check box-sizing vendor prefixes.
+table {
+  border-collapse: collapse;
+  box-sizing: border-box;
+}
+table, caption, th, td {
+  border: $border-darker;
+}
+.tools-icon-dropdown {
+  border: $border-darkest;
+}
+// No apparent border print icon dropdown Default. Faint border print icon dropdown Print Friendly With/Without Images.
+pre, .note {
+  border: $border-primary;
+}
+// Override IE9 apparent border on a[href] img.
+img {
+  border: 0;
+}
+caption {
+  border-bottom: 0;
+}
+pre, .note {
+  border-left-width: $border-left-width-primary;
+}
+pre, code, .note, .tools-icon-dropdown {
+  border-radius: $border-radius-primary;
+}
+hr {
+  border: 0;
+  border-top: $border-darker;
+}
+pre {
+  border-left-color: #aaa;
+}
+.normal {
+  border-left-color: $color-note-normal;
+}
+.important {
+  border-left-color: $color-note-important;
+}
+.box-shadow {
+  box-shadow: $box-shadow-primary;
+}
+.tools-icon-dropdown {
+  box-shadow: $box-shadow-darker;
+}

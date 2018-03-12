@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>Does The Web Browser Retain Or Remove Manually And Programmatically Entered/Displayed Web Page Content Upon F5 (Refresh/Reload)?</title><!-- No markup in title tags. -->
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Steve Taylor" />
+  <meta name="Keywords" content="web browser, retain, keep, remove, delete, manually, programmatically, entered, displayed, web page, content, upon, press, F5, click, Refresh, Reload" /><!-- Cap words as if used in sentence. No markup in Keywords. -->
+  <meta name="Description" content="A test to determine if the web browser retains or removes manually and programmatically entered/displayed web page content upon F5 (Refresh/Reload)." /><!-- Sentence and/or structured data less than 160 char per Google. No markup in Description. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" media="all" href="/stylesheets/fontawesome/font-awesome.css" />
+  <link rel="stylesheet" type="text/css" media="all" href="/stylesheets/bootstrap/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" media="all" href="/stylesheets/lwc/lwc.css" />
+  <link rel="stylesheet" type="text/css" media="all" href="/stylesheets/lwc/print_default.css" id="changeableExtSSLinkElementId" />
+ </head>
+ <body>
+
+  <header id="headerId">
+   <script src="/javascripts/lwc/header_html.min.js"></script><!-- NOTE: F5 (Refresh/Reload) does not work as expected if this web page is changed from .html to .php. -->
+   <script>BcrumbsNavUtil.bcrumbsNav("../", "HTML", "", "HTML Testing Ground");</script>
+   <noscript class="noscript"><div class="container-fluid"><!-- container-fluid from Bootstrap. -->NOTE: Parts of this web site require JavaScript and are nonfunctional because your web browser does not support JavaScript or has JavaScript support disabled.</div></noscript>
+  </header>
+
+  <main>
+   <div class="container-fluid"><!-- container-fluid from Bootstrap. -->
+    <h1>Does The Web Browser Retain Or Remove Manually And Programmatically Entered/Displayed Web Page Content Upon F5 (Refresh/Reload)?</h1>
+
+    <div class="last-reviewed">Last reviewed/updated: 10 Feb 2018 | Published: 03 Feb 2015 | Status: Active</div>
+    <script src="/javascripts/lwc/support_tools_html.min.js"></script>
+
+    <nav id="tocId" class="toc">
+     <div class="toc-sec"><div class="toc-num">1.</div><div class="toc-sec-title"><a href="#introduction">Introduction</a></div></div>
+     <div class="toc-sub1sec"><div class="toc-num">1.1.</div><div class="toc-sub1sec-title"><a href="#abbreviations">Abbreviations</a></div></div>
+     <div class="toc-sec"><div class="toc-num">2.</div><div class="toc-sec-title"><a href="#completeProg">Click To Complete The Programmatic Items Below</a></div></div>
+     <div class="toc-sec"><div class="toc-num">3.</div><div class="toc-sec-title"><a href="#textbox">Textbox Text</a></div></div>
+     <div class="toc-sub1sec"><div class="toc-num">3.1.</div><div class="toc-sub1sec-title"><a href="#manTextbox">Manually Entered Textbox Text</a></div></div>
+     <div class="toc-sub2sec"><div class="toc-num">3.1.1.</div><div class="toc-sub2sec-title"><a href="#manTextboxResult">Manually Entered Textbox Text Result</a></div></div>
+     <div class="toc-sub1sec"><div class="toc-num">3.2.</div><div class="toc-sub1sec-title"><a href="#progTextbox">Programmatically Entered Textbox Text</a></div></div>
+     <div class="toc-sub2sec"><div class="toc-num">3.2.1.</div><div class="toc-sub2sec-title"><a href="#progTextboxResult">Programmatically Entered Textbox Text Result</a></div></div>
+     <div class="toc-sec"><div class="toc-num">4.</div><div class="toc-sec-title"><a href="#textarea">Textarea Text</a></div></div>
+     <div class="toc-sub1sec"><div class="toc-num">4.1.</div><div class="toc-sub1sec-title"><a href="#manTextarea">Manually Entered Textarea Text</a></div></div>
+     <div class="toc-sub2sec"><div class="toc-num">4.1.1.</div><div class="toc-sub2sec-title"><a href="#manTextareaResult">Manually Entered Textarea Text Result</a></div></div>
+     <div class="toc-sub1sec"><div class="toc-num">4.2.</div><div class="toc-sub1sec-title"><a href="#progTextarea">Programmatically Entered Textarea Text</a></div></div>
+     <div class="toc-sub2sec"><div class="toc-num">4.2.1.</div><div class="toc-sub2sec-title"><a href="#progTextareaResult">Programmatically Entered Textarea Text Result</a></div></div>
+     <div class="toc-sec"><div class="toc-num">5.</div><div class="toc-sec-title"><a href="#checkboxToChecked">Checkbox Unchecked To Checked</a></div></div>
+     <div class="toc-sub1sec"><div class="toc-num">5.1.</div><div class="toc-sub1sec-title"><a href="#manCheckboxToChecked">Manually Checked Checkbox</a></div></div>
+     <div class="toc-sub2sec"><div class="toc-num">5.1.1.</div><div class="toc-sub2sec-title"><a href="#manCheckboxToCheckedResult">Manually Checked Checkbox Result</a></div></div>
+     <div class="toc-sub1sec"><div class="toc-num">5.2.</div><div class="toc-sub1sec-title"><a href="#progCheckboxToChecked">Programmatically Checked Checkbox</a></div></div>
+     <div class="toc-sub2sec"><div class="toc-num">5.2.1.</div><div class="toc-sub2sec-title"><a href="#progCheckboxToCheckedResult">Programmatically Checked Checkbox Result</a></div></div>
+     <div class="toc-sec"><div class="toc-num">6.</div><div class="toc-sec-title"><a href="#checkboxToUnchecked">Checkbox Checked To Unchecked</a></div></div>
+     <div class="toc-sub1sec"><div class="toc-num">6.1.</div><div class="toc-sub1sec-title"><a href="#manCheckboxToUnchecked">Manually Unchecked Checkbox</a></div></div>
+     <div class="toc-sub2sec"><div class="toc-num">6.1.1.</div><div class="toc-sub2sec-title"><a href="#manCheckboxToUncheckedResult">Manually Unchecked Checkbox Result</a></div></div>
+     <div class="toc-sub1sec"><div class="toc-num">6.2.</div><div class="toc-sub1sec-title"><a href="#progCheckboxToUnchecked">Programmatically Unchecked Checkbox</a></div></div>
+     <div class="toc-sub2sec"><div class="toc-num">6.2.1.</div><div class="toc-sub2sec-title"><a href="#progCheckboxToUncheckedResult">Programmatically Unchecked Checkbox Result</a></div></div>
+     <div class="toc-sec"><div class="toc-num">7.</div><div class="toc-sec-title"><a href="#radio">Radio Button Group</a></div></div>
+     <div class="toc-sub1sec"><div class="toc-num">7.1.</div><div class="toc-sub1sec-title"><a href="#manRadio">Manually Checked Radio Button</a></div></div>
+     <div class="toc-sub2sec"><div class="toc-num">7.1.1.</div><div class="toc-sub2sec-title"><a href="#manRadioResult">Manually Checked Radio Button Result</a></div></div>
+     <div class="toc-sub1sec"><div class="toc-num">7.2.</div><div class="toc-sub1sec-title"><a href="#progRadio">Programmatically Checked Radio Button</a></div></div>
+     <div class="toc-sub2sec"><div class="toc-num">7.2.1.</div><div class="toc-sub2sec-title"><a href="#progRadioResult">Programmatically Checked Radio Button Result</a></div></div>
+     <div class="toc-sec"><div class="toc-num">8.</div><div class="toc-sec-title"><a href="#selectbox">Selectbox</a></div></div>
+     <div class="toc-sub1sec"><div class="toc-num">8.1.</div><div class="toc-sub1sec-title"><a href="#manSelectbox">Manually Selected Selectbox</a></div></div>
+     <div class="toc-sub2sec"><div class="toc-num">8.1.1.</div><div class="toc-sub2sec-title"><a href="#manSelectboxResult">Manually Selected Selectbox Result</a></div></div>
+     <div class="toc-sub1sec"><div class="toc-num">8.2.</div><div class="toc-sub1sec-title"><a href="#progSelectbox">Programmatically Selected Selectbox</a></div></div>
+     <div class="toc-sub2sec"><div class="toc-num">8.2.1.</div><div class="toc-sub2sec-title"><a href="#progSelectboxResult">Programmatically Selected Selectbox Result</a></div></div>
+     <div class="toc-sec"><div class="toc-num">9.</div><div class="toc-sec-title"><a href="#prog">Programmatically Displayed Web Page Text</a></div></div>
+     <div class="toc-sub1sec"><div class="toc-num">9.1.</div><div class="toc-sub1sec-title"><a href="#progInnerHtml">Programmatically Displayed Web Page Text Via JavaScript <code>innerHTML</code> Property</a></div></div>
+     <div class="toc-sub2sec"><div class="toc-num">9.1.1.</div><div class="toc-sub2sec-title"><a href="#progInnerHtmlResult">Programmatically Displayed Web Page Text Via JavaScript <code>innerHTML</code> Property Result</a></div></div>
+     <div class="toc-sub1sec"><div class="toc-num">9.2.</div><div class="toc-sub1sec-title"><a href="#progClassList">Programmatically Displayed Web Page Text Via JavaScript <code>classList</code> Property</a></div></div>
+     <div class="toc-sub2sec"><div class="toc-num">9.2.1.</div><div class="toc-sub2sec-title"><a href="#progClassListResult">Programmatically Displayed Web Page Text Via JavaScript <code>classList</code> Property Result</a></div></div>
+     <div class="toc-sec"><div class="toc-num">10.</div><div class="toc-sec-title"><a href="#pressF5">Press F5 Or Click Refresh/Reload</a></div></div>
+     <div class="toc-sec"><div class="toc-num">11.</div><div class="toc-sec-title"><a href="#resources">Resources And Additional Information</a></div></div>
+    </nav>
+
+    <hr />
+    <section>
+
+     <h2><a id="introduction"></a>1. Introduction</h2>
+
+     <p>A test to determine if the web browser retains or removes manually and programmatically entered/displayed web page content upon F5 (Refresh/Reload).</p>
+
+     <div class="note normal">In this web page, web page content is classified as either form element content or non-form element content. Form element content refers to textboxes, textareas, checkboxes, radio buttons, and selectboxes. In addition, it refers to the state of the textbox (empty/not empty), textarea (empty/not empty), checkbox (checked/not checked), radio button (checked/not checked), and selectbox (selected/not selected). For example, the first form element below is textbox empty form element content. Non-form element content refers to text and images not classified as form element content. In addition, it refers to the state of the text and image (displayed/not displayed). For example, this sentence is text displayed non-form element content.</div>
+
+     <p>IE and FF retain manually and programmatically entered web page form element content upon F5 (Refresh/Reload). SF, CH, and OP remove manually and programmatically entered web page form element content upon F5 (Refresh/Reload). With respect to retaining/removing manually and programmatically entered web page form element content upon F5 (Refresh/Reload), in some cases ED behaves like IE and FF, and in other cases ED behaves like SF, CH, and OP. All of the aforementioned web browsers remove programmatically displayed web page non-form element content upon F5 (Refresh/Reload). Because IE and FF retain manually and programmatically entered form element content, but remove programmatically displayed non-form element content upon F5 (Refresh/Reload), the state of manually and programmatically entered form element content can fall out of sync with the state of programmatically displayed non-form element content.</p>
+
+     <p>For example, suppose a web page with a checkbox in which checking the checkbox triggers an event handler that programmatically displays some non-form element text. In IE and FF, after checking the checkbox, if the user then pressed F5 (Refresh/Reload), the checkbox would remain checked:, but the programmatically displayed non-form element text would be removed, which throws the state of the checkbox and the programmatically displayed non-form element text out of sync, as demonstrated:</p>
+
+     <ol>
+      <li>View this web page in IE or FF.</li>
+      <li><label><input type="checkbox" id="demoCheckboxId1" />Manually <kbd>check</kbd> the checkbox (it is a dummy checkbox that does nothing and serves simply as a control): <span>&#10003;</span></label></li>
+      <li><label><input type="checkbox" id="demoCheckboxId2" />Manually <kbd>check</kbd> the checkbox to programmatically display some non-form element text in line 4 below: <span>&#10003;</span></label></li>
+      <li id="webPageTextProgDemoInnerHtmlId"></li>
+      <li>Press <kbd>F5</kbd> or click <kbd>Refresh/Reload</kbd>.</li>
+     </ol>
+
+     <p>In IE and FF, upon F5 (Refresh/Reload), the checkboxes on line 2 and 3 above remain checked, but the programmatically displayed text on line 4 above is removed. Line 3 states to check its checkbox to display some text on line 4. In IE and FF, however, notice that the checkbox on line 3 is currently checked, but that line 4 is empty, which is contrary to what line 3 implies. Because IE and FF retain manually and programmatically entered form element content, but remove programmatically displayed non-form element content upon F5 (Refresh/Reload), the state of the checkbox and the programmatically displayed text are now out of sync. The checkbox on line 2 above is a dummy checkbox that does nothing and is not connected to the programmatically displayed text in line 4. It simply serves as a control to confirm that the state of the line 3 checkbox is independent of the line 3 checkbox triggering an event handler.</p>
+
+     <p>To complete the tests below:</p>
+
+     <ol>
+      <li>Section 2: Click the button to perform the programmatic actions.</li>
+      <li>Sections 3 - 8: This is the manually and programmatically entered web page form element content tests. Manually enter text, check/uncheck, and select/unselect as indicated.</li>
+      <li>Section 9: This is the programmatically displayed web page non-form element content tests. Nothing to do here. Skip to the next step.</li>
+      <li>Section 10: Press <kbd>F5</kbd> or click <kbd>Refresh/Reload</kbd>.</li>
+      <li>Notice where the web browser retains or removes the manually and programmatically entered/displayed web page content.</li>
+     </ol>
+
+     <h3><a id="abbreviations"></a>1.1. Abbreviations</h3>
+
+     <ul>
+      <li>IE = Internet Explorer.</li>
+      <li>ED = Edge = EdgeHTML rendering engine (ED12+) and/or Edge browser (ED20+).</li>
+      <li>FF = Firefox.</li>
+      <li>SF = Safari.</li>
+      <li>CH = Chrome.</li>
+      <li>OP = Opera.</li>
+     </ul>
+
+    </section>
+    <hr />
+    <section>
+
+     <h2><a id="completeProg"></a>2. Click To Complete The Programmatic Items Below</h2>
+
+<!-- Button below and ProgCompleteFormElementUtil.allProgItems() work in IE6+, FF1.5+, SM1+, SF3.1+, CH2+, OP7.50+, NT9+ -->
+
+     <p><button id="completeProgItemsBtnId" class="btn-md">Click To Complete The Programmatic Items Below</button></p>
+
+    </section>
+    <hr />
+    <section>
+
+     <h2><a id="textbox"></a>3. Textbox Text</h2>
+
+     <h3><a id="manTextbox"></a>3.1. Manually Entered Textbox Text</h3>
+
+     <p><label>Manually <kbd>enter some text</kbd>: <input type="text" size="20" maxlength="20" id="textboxManId" /></label></p>
+
+     <h4><a id="manTextboxResult"></a>3.1.1. Manually Entered Textbox Text Result</h4>
+
+     <p>Text retained upon F5 (Refresh/Reload): IE6+, ED12+, FF1.5+.</p>
+
+     <p>Text removed upon F5 (Refresh/Reload): SF3.1+, CH2+, OP7.50+.</p>
+
+     <h3><a id="progTextbox"></a>3.2. Programmatically Entered Textbox Text</h3>
+
+     <p><label>Programmatically entered text <kbd>textbox</kbd>: <input type="text" size="20" maxlength="20" id="textboxProgId" /></label></p>
+
+     <h4><a id="progTextboxResult"></a>3.2.1. Programmatically Entered Textbox Text Result</h4>
+
+     <p>Text retained upon F5 (Refresh/Reload): IE6+, ED12+, FF1.5+.</p>
+
+     <p>Text removed upon F5 (Refresh/Reload): SF3.1+, CH2+, OP7.50+.</p>
+
+    </section>
+    <hr />
+    <section>
+
+     <h2><a id="textarea"></a>4. Textarea Text</h2>
+
+     <h3><a id="manTextarea"></a>4.1. Manually Entered Textarea Text</h3>
+
+     <p><label>Manually <kbd>enter some text</kbd>: <textarea cols="20" rows="2" id="textareaManId"></textarea></label></p>
+
+     <h4><a id="manTextareaResult"></a>4.1.1. Manually Entered Textarea Text Result</h4>
+
+     <p>Text retained upon F5 (Refresh/Reload): IE6+, ED12+, FF1.5+.</p>
+
+     <p>Text removed upon F5 (Refresh/Reload): SF3.1+, CH2+, OP7.50+.</p>
+
+     <h3><a id="progTextarea"></a>4.2. Programmatically Entered Textarea Text</h3>
+
+     <p><label>Programmatically entered text <kbd>textarea</kbd>: <textarea cols="20" rows="2" id="textareaProgId"></textarea></label></p>
+
+     <h4><a id="progTextareaResult"></a>4.2.1. Programmatically Entered Textarea Text Result</h4>
+
+     <p>Text retained upon F5 (Refresh/Reload): IE6+, ED12+, FF1.5+.</p>
+
+     <p>Text removed upon F5 (Refresh/Reload): SF3.1+, CH2+, OP7.50+.</p>
+
+    </section>
+    <hr />
+    <section>
+
+     <h2><a id="checkboxToChecked"></a>5. Checkbox Unchecked To Checked</h2>
+
+     <h3><a id="manCheckboxToChecked"></a>5.1. Manually Checked Checkbox</h3>
+
+     <p><label><input type="checkbox" id="checkboxCheckManId" />Manually <kbd>check</kbd> the checkbox: <span>&#10003;</span></label></p>
+
+     <h4><a id="manCheckboxToCheckedResult"></a>5.1.1. Manually Checked Checkbox Result</h4>
+
+     <p>Check retained upon F5 (Refresh/Reload): IE6+, FF1.5+.</p>
+
+     <p>Check removed upon F5 (Refresh/Reload): ED12+, SF3.1+, CH2+, OP7.50+.</p>
+
+     <h3><a id="progCheckboxToChecked"></a>5.2. Programmatically Checked Checkbox</h3>
+
+     <p><label><input type="checkbox" id="checkboxCheckProgId" />Programmatically <kbd>checked</kbd> checkbox: <span>&#10003;</span></label></p>
+
+     <h4><a id="progCheckboxToCheckedResult"></a>5.2.1. Programmatically Checked Checkbox Result</h4>
+
+     <p>Check retained upon F5 (Refresh/Reload): IE6+, FF1.5+.</p>
+
+     <p>Check removed upon F5 (Refresh/Reload): ED12+, SF3.1+, CH2+, OP7.50+.</p>
+
+    </section>
+    <hr />
+    <section>
+
+     <h2><a id="checkboxToUnchecked"></a>6. Checkbox Checked To Unchecked</h2>
+
+     <h3><a id="manCheckboxToUnchecked"></a>6.1. Manually Unchecked Checkbox</h3>
+
+     <p><label><input type="checkbox" id="checkboxUncheckManId" checked="checked" />Manually <kbd>uncheck</kbd> the checkbox: <span>&#10003;</span></label></p>
+
+     <h4><a id="manCheckboxToUncheckedResult"></a>6.1.1. Manually Unchecked Checkbox Result</h4>
+
+     <p>Uncheck retained upon F5 (Refresh/Reload): IE6+, ED12+, FF1.5+.</p>
+
+     <p>Uncheck removed upon F5 (Refresh/Reload): SF3.1+, CH2+, OP7.50+.</p>
+
+     <h3><a id="progCheckboxToUnchecked"></a>6.2. Programmatically Unchecked Checkbox</h3>
+
+     <p><label><input type="checkbox" id="checkboxUncheckProgId" checked="checked" />Programmatically <kbd>unchecked</kbd> checkbox: <span>&#10003;</span></label></p>
+
+     <h4><a id="progCheckboxToUncheckedResult"></a>6.2.1. Programmatically Unchecked Checkbox Result</h4>
+
+     <p>Uncheck retained upon F5 (Refresh/Reload): IE6+, ED12+, FF1.5+.</p>
+
+     <p>Uncheck removed upon F5 (Refresh/Reload): SF3.1+, CH2+, OP7.50+.</p>
+
+    </section>
+    <hr />
+    <section>
+
+     <h2><a id="radio"></a>7. Radio Button Group</h2>
+
+     <h3><a id="manRadio"></a>7.1. Manually Checked Radio Button</h3>
+
+     <p>Manually check <kbd>radio button two</kbd>:<br />
+      <label><input type="radio" name="radioBtnMan" id="radioBtnManId1" value="radio button one" /><span>&#9679;</span> radio button one.</label><br />
+      <label><input type="radio" name="radioBtnMan" id="radioBtnManId2" value="radio button two" /><span>&#9679;</span> radio button two.</label>
+     </p>
+
+     <h4><a id="manRadioResult"></a>7.1.1. Manually Checked Radio Button Result</h4>
+
+     <p>Check retained upon F5 (Refresh/Reload): IE6+, FF1.5+.</p>
+
+     <p>Check removed upon F5 (Refresh/Reload): ED12+, SF3.1+, CH2+, OP7.50+.</p>
+
+     <h3><a id="progRadio"></a>7.2. Programmatically Checked Radio Button</h3>
+
+     <p>Programmatically checked <kbd>radio button two</kbd>:<br />
+      <label><input type="radio" name="radioBtnProg" id="radioBtnProgId1" value="radio button one" /><span>&#9679;</span> radio button one.</label><br />
+      <label><input type="radio" name="radioBtnProg" id="radioBtnProgId2" value="radio button two" /><span>&#9679;</span> radio button two.</label>
+     </p>
+
+     <h4><a id="progRadioResult"></a>7.2.1. Programmatically Checked Radio Button Result</h4>
+
+     <p>Check retained upon F5 (Refresh/Reload): IE6+, FF1.5+.</p>
+
+     <p>Check removed upon F5 (Refresh/Reload): ED12+, SF3.1+, CH2+, OP7.50+.</p>
+
+    </section>
+    <hr />
+    <section>
+
+     <h2><a id="selectbox"></a>8. Selectbox</h2>
+
+     <h3><a id="manSelectbox"></a>8.1. Manually Selected Selectbox</h3>
+
+     <p>
+      <label>Manually select <kbd>option two</kbd>:
+       <select size="1" id="selectboxManId">
+        <option value="option one" label=" "> </option>
+        <option value="option two">option two&nbsp;</option>
+       </select>
+      </label>
+     </p>
+
+     <h4><a id="manSelectboxResult"></a>8.1.1. Manually Selected Selectbox Result</h4>
+
+     <p>Selection retained upon F5 (Refresh/Reload): IE6+, ED12+, FF1.5+.</p>
+
+     <p>Selection removed upon F5 (Refresh/Reload): SF3.1+, CH2+, OP7.50+.</p>
+
+     <h3><a id="progSelectbox"></a>8.2. Programmatically Selected Selectbox</h3>
+
+     <p>
+      <label>Programmatically selected <kbd>option two</kbd>:
+       <select size="1" id="selectboxProgId">
+        <option value="option one" label=" "> </option>
+        <option value="option two">option two&nbsp;</option>
+       </select>
+      </label>
+     </p>
+
+     <h4><a id="progSelectboxResult"></a>8.2.1. Programmatically Selected Selectbox Result</h4>
+
+     <p>Selection retained upon F5 (Refresh/Reload): IE6+, ED12+, FF1.5+.</p>
+
+     <p>Selection removed upon F5 (Refresh/Reload): SF3.1+, CH2+, OP7.50+.</p>
+
+    </section>
+    <hr />
+    <section>
+
+     <h2><a id="prog"></a>9. Programmatically Displayed Web Page Text</h2>
+
+     <h3><a id="progInnerHtml"></a>9.1. Programmatically Displayed Web Page Text Via JavaScript <code>innerHTML</code> Property</h3>
+
+     <p>Programmatically displayed web page text <kbd>Via JavaScript <code>innerHTML</code> Property</kbd> between the following square braces: <b>[&nbsp;<span id="webPageTextProgInnerHtmlId"></span>&nbsp;]</b>.</p>
+
+     <h4><a id="progInnerHtmlResult"></a>9.1.1. Programmatically Displayed Web Page Text Via JavaScript <code>innerHTML</code> Property Result</h4>
+
+     <div class="note normal">Web browser support for the JavaScript <code>innerHTML</code> property is IE6+, ED12+, FF1.5+, SF3.1+, CH2+, OP7.50+.</div>
+
+     <p>Text retained upon F5 (Refresh/Reload): none.</p>
+
+     <p>Text removed upon F5 (Refresh/Reload): IE6+, ED12+, FF1.5+, SF3.1+, CH2+, OP7.50+.</p>
+
+     <h3><a id="progClassList"></a>9.2. Programmatically Displayed Web Page Text Via JavaScript <code>classList</code> Property</h3>
+
+     <p>Programmatically displayed web page text <kbd>Via JavaScript <code>classList</code> Property</kbd> between the following square braces: <b>[&nbsp;<span id="webPageTextProgClassListId" class="display-none">Via JavaScript <code>classList</code> Property</span>&nbsp;]</b>.</p>
+
+     <h4><a id="progClassListResult"></a>9.2.1. Programmatically Displayed Web Page Text Via JavaScript <code>classList</code> Property Result</h4>
+
+     <div class="note normal">Web browser support for the JavaScript <code>classList</code> property is IE10+, ED12+, FF3.6+, SF5.1+, CH8+, OP11.50+.</div>
+
+     <p>Text retained upon F5 (Refresh/Reload): none.</p>
+
+     <p>Text removed upon F5 (Refresh/Reload): IE10+, ED12+, FF3.6+, SF5.1+, CH8+, OP11.50+.</p>
+
+    </section>
+    <hr />
+    <section>
+
+     <h2><a id="pressF5"></a>10. Press F5 Or Click Refresh/Reload</h2>
+
+     <p>Press <kbd>F5</kbd> or click <kbd>Refresh/Reload</kbd>.</p>
+
+    </section>
+    <hr />
+    <section>
+
+     <h2><a id="resources"></a>11. Resources And Additional Information</h2>
+
+     <ul class="link-list">
+      <li><a href="/html/html_testing_ground/index.html">HTML Testing Ground (learnwebcoding.com)</a></li>
+     </ul>
+
+    </section>
+
+   </div><!-- Close main section div class="container-fluid". -->
+  </main>
+
+  <footer>
+   <script src="/javascripts/lwc/footer_html.min.js"></script>
+  </footer>
+
+<!-- Copy changes below to javascript*.php, 404.shtml, and web_browser_retain_remove_content_f5.html. -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="/javascripts/bootstrap/bootstrap.min.js"></script>
+  <script src="/javascripts/lwc/library_load_in_body.min.js"></script>
+
+  <script src="/javascripts/lwc/web_browser_retain_remove_content_f5.min.js"></script>
+
+ </body>
+</html>

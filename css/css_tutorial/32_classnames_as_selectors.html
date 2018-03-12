@@ -1,0 +1,34 @@
+<html>
+ <head>
+  <title>3.2. Class-Names As Selectors</title>
+  <style type="text/css">
+   body {
+     font-family: arial;
+     background-color: lightgrey;
+     color: black;
+     font-size: 16px;
+   }
+   h1 {
+     font-style: italic;
+   }
+   p {
+     margin-left: 20px;
+   }
+   .red {
+     color: red;
+   }
+   .blue {
+     color: blue;
+   }
+  </style>
+ </head>
+ <body>
+  body styled via the body style rule.
+  <h1>h1 styled via the body and h1 style rules.</h1>
+  <p>p styled via the body and p style rules.</p>
+  <h1 class="red">h1 styled via the body, h1, and .red style rules.</h1>
+  <p class="red">p styled via the body, p, and .red style rules.</p>
+  <h1 class="blue">h1 styled via the body, h1, and .blue style rules.</h1>
+  <p class="blue">p styled via the body, p, and .blue style rules.</p>
+ </body>
+</html>

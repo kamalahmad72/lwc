@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>new.target Metaproperty Web Browser Support Test With Comments</title>
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Steve Taylor" />
+  <meta name="Keywords" content="JavaScript, new.target metaproperty, web browser support, test, comments" />
+  <meta name="Description" content="A JavaScript that tests and reports if the web browser supports the JavaScript new.target metaproperty." />
+  <script></script>
+ </head>
+ <body>
+
+  <h1><code>new.target</code> Metaproperty Web Browser Support Test With Comments</h1>
+
+  <h3>To view the comments, right click and select view source. Also, enable the web browser JavaScript web console.</h3>
+
+  <p id='testId'><b>Fail</b> (no support): The web browser does not recognize the JavaScript <code>new.target</code> metaproperty. The web browser does not support the JavaScript <code>new.target</code> metaproperty.</p><!-- Hard code Fail because web browser no support error stops JavaScript execution. -->
+
+  <script>
+  var callWithoutNewFallsThroughToElse = false;
+  function Test(){ // var callWithoutNew = Test(); // var callWithNew = new Test();
+   console.log("new.target: " + new.target); // undefined (value, not string) // function test() code
+   console.log("typeof new.target: " + typeof new.target); // undefined (string) // function
+   console.log("!new.target: " + !new.target); // true // false
+   if (new.target){ // Call with new enters if. If web browser supports new.target metaproperty, call with new enters if. If web browser does not support new.target metaproperty, new.target throws SyntaxError, which stops JavaScript execution. Therefore, hard code fail for web browsers that do not support new.target metaproperty, and overwrite fail with with pass for web browsers that support new.target metaproperty. For web browsers that support support new.target metaproperty: 1.) if call without new, new.target is undefined, which evaluates to boolean false; and 2.) if call with new, new.target is Test (ie, console.log(new.target) outputs function Test() source code), which evaluates to boolean true. IE11 error: SCRIPT1002: Syntax error.
+    var element = document.getElementById("testId");
+    if ((callWithoutNewFallsThroughToElse === true) && (new.target !== undefined) && (new.target === Test)){
+     element.innerHTML = "<b>Pass</b> (at least partial/possibly full support): The web browser recognizes the JavaScript <code>new.target</code> metaproperty, and supports at least one <code>new.target</code> metaproperty capability. The web browser at least partially/possibly fully supports the JavaScript <code>new.target</code> metaproperty. Positive determination of full web browser support is beyond the scope of this test.";
+    } else {
+     element.innerHTML = "<b>Pass/Fail</b> (partial support): The web browser recognizes the JavaScript <code>new.target</code> metaproperty, but does not support at least one <code>new.target</code> metaproperty capability. The web browser partially supports the JavaScript <code>new.target</code> metaproperty.";
+    }
+   } else { // Call without new falls through to else.
+    callWithoutNewFallsThroughToElse = true;
+   }
+  }
+  var callWithoutNew = Test();
+  console.log("callWithoutNew: " + callWithoutNew); // undefined
+  console.log("callWithoutNewFallsThroughToElse: " + callWithoutNewFallsThroughToElse); // true
+  var callWithNew = new Test();
+  console.log("callWithNew: " + callWithNew); // [object Object]
+  console.log("callWithNewEntersIf: " + callWithNewEntersIf); // true
+  </script>
+
+  <p>Web browser support: ED13+, FF41+, CH46+, OP33+. No IE11-, ED12, SF5.1.7-.</p>
+
+  <p>Last reviewed/updated: 22 Nov 2019 | Published: 22 Nov 2017 | Status: Active</p>
+
+  <p><a href="http://www.learnwebcoding.com/">Learn Web Coding</a></p>
+
+  <p><a href="https://validator.w3.org/check?uri=referer"><img src="/images/HTML5_Logo_48.gif" alt="Valid HTML5" /></a>&nbsp;<a href="https://jigsaw.w3.org/css-validator/check?uri=referer&amp;profile=css3"><img src="/images/valid-css.gif" alt="Valid CSS Level 3" /></a></p>
+
+ </body>
+</html>

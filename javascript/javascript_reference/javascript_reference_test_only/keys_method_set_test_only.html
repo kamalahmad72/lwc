@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>keys() Method On Sets Web Browser Support Test</title>
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Steve Taylor" />
+  <meta name="Keywords" content="JavaScript, keys() method, set, web browser support, test" />
+  <meta name="Description" content="A JavaScript that tests and reports if the web browser supports the JavaScript keys() method on sets." />
+  <script></script>
+ </head>
+ <body>
+
+  <h1><code>keys()</code> Method On Sets Web Browser Support Test</h1>
+
+<!-- Similar test code in Generator object, entries() method on sets, keys() method on sets, and values() method on sets. -->
+<!-- Use for statement/loop instead of ECMAScript 2015 for...of statement/loop to avoid for...of statement/loop possibly skewing test result. -->
+<!-- Per LWC web browser support testing, keys() method on sets supported by ED12+, FF27+, CH38+, OP25+, partial FF24 - 26, no IE11-, SF5.1.7- and [Symbol.iterator] property supported by ED12+, FF36+, CH38+, OP25+, no IE11-, SF5.1.7-. Therefore, in web browser support test below, did not test if (setIteratorKeys[Symbol.iterator]) to avoid skewing test result to newer version FF. -->
+
+<p id='testId'><b>Fail</b> (no support): The web browser does not recognize the JavaScript <code>keys()</code> method on sets. The web browser does not support the JavaScript <code>keys()</code> method on sets.</p><!-- Hard code Fail because web browser no support error stops JavaScript execution. -->
+
+<script>
+var testSet = new Set(); // IE11 does not support sets initialized with an iterable. Hence, use Set constructor and add() method.
+testSet.add("a");
+testSet.add("b");
+testSet.add("c"); // testSet is {"a", "b", "c"}.
+var testSetIteratorKeys = testSet.keys(); // Get reference to set built-in set iterator object called by keys() method. NOTE: keys() method can be considered a generator function. Call keys() generator function. Call returns a Generator object which inherits prototype from Object (window.Generator property does not exist) and is an iterator. Generator object has next() method property. Called by keys(), set iterator object next() method return object value property is set to set element value.
+var testSetIteratorKeysNextValues = [];
+for (var i = 0; i < testSet.size; i++){ // Identical to for (var key of testSet.keys()){console.log(key);}. 1.) "a", 2.) "b", 3.) "c".
+ testSetIteratorKeysNextValues[i] = testSetIteratorKeys.next().value;
+}
+if (testSet.keys){
+ var element = document.getElementById("testId");
+ if ((typeof testSetIteratorKeys === "object") && testSetIteratorKeys instanceof Object && Object.prototype.isPrototypeOf(testSetIteratorKeys) && (typeof testSetIteratorKeysNextValues[0] === "string") && (testSetIteratorKeysNextValues[0] === "a") && (testSetIteratorKeysNextValues[1] === "b") && (testSetIteratorKeysNextValues[2] === "c")){
+  element.innerHTML = "<b>Pass</b> (at least partial/possibly full support): The web browser recognizes the JavaScript <code>keys()</code> method on sets, and supports at least one <code>keys()</code> method on sets capability. The web browser at least partially/possibly fully supports the JavaScript <code>keys()</code> method on sets. Positive determination of full web browser support is beyond the scope of this test.";
+ } else {
+  element.innerHTML = "<b>Pass/Fail</b> (partial support): The web browser recognizes the JavaScript <code>keys()</code> method on sets, but does not support at least one <code>keys()</code> method on sets capability. The web browser partially supports the JavaScript <code>keys()</code> method on sets.";
+ }
+}
+</script>
+
+ </body>
+</html>
