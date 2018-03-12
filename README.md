@@ -38,4 +38,4 @@
 * For Simple MySQL Admin source code, see [GitHub | learnwebcoding | simple_mysql_admin Repository (github.com)](https://github.com/learnwebcoding/simple_mysql_admin).
 * For Computer Help And Resources (CHAR) source code, see [GitHub | learnwebcoding | char Repository (github.com)](https://github.com/learnwebcoding/char).
 * /zz_* directories and zz_*.* files do not need to be placed on web server. However, if they are placed on web server, it is OK.
-* Last reviewed/updated: 04 Jun 2017 | Published: 04 Jun 2017 | Status: Active
+* Last reviewed/updated: 12 Mar 2018 | Published: 04 Jun 2017 | Status: Active | Last recreated from scratch to eliminate no longer needed old commits/etc: 12 Mar 2018
