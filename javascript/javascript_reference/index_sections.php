@@ -4,7 +4,7 @@
 /* File: /web_server_root_directory/javascript/javascript_reference/index_sections.php.
  * Purpose: Web page sections.
  * Used in: /web_server_root_directory/javascript/javascript_reference/index.php.
- * Last reviewed/updated: 05 Mar 2018.
+ * Last reviewed/updated: 22 Mar 2018.
  * Published: 21 Sep 2016. */
 return
    "<section>
@@ -1256,10 +1256,9 @@ return
         <td>
          <ul>
           <li>Types: 1.) Embedded: <code>script</code> element with <code>type=\"module\"</code> attribute; 2.) External: <span class='filename'>filename.js</span>; and 3.) External loaded: <span class='filename'>filename.js</span> and <code>script</code> element with <code>type=\"module\"</code> and <code>src=\"path_to_filename.js\"</code> attributes.</li>
-          <li>A module can be loaded, not imported. Only a module's exports are imported. A module's exports constitute the module's interface.</li>
-          <li>Exports can only be imported by another module.</li>
+          <li>A module can be loaded, not imported. Only a module's exports can be imported. A module's exports can only be imported by another module. A module's exports constitute the module's interface.</li>
           <li><code>export</code> and <code>import</code> statements must be located at the top level of the module, not within any block ({}) of code inside the module.</li>
-          <li>Module code executes in strict mode and asynchronously, with no way to escape either.</li>
+          <li>Module code executes in strict mode and asynchronously, with no way to change either.</li>
           <li>ED, CH, and OP, not FF, support requires web page served by web server (i.e., fails if web page opened directly in web browser).</li>
           <li>ECMAScript 2015.</li>
          </ul>
