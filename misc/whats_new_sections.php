@@ -4,7 +4,7 @@
 /* File: /web_server_root_directory/misc/whats_new_sections.php.
  * Purpose: Web page sections.
  * Used in: /web_server_root_directory/misc/whats_new.php.
- * Last reviewed/updated: 22 Mar 2018.
+ * Last reviewed/updated: 28 Mar 2018.
  * Published: 21 Sep 2016. */
 return
    "<!-- This web page does not have an h2-h6 element in the section element. To avoid W3C Markup Validation Service (http://validator.w3.org/) warning, not error (Warning: Section lacks heading. Consider using h2-h6 elements to add identifying headings to all sections.), comment out the section element. Same for index.php, sitemap.php, glossary.php, and whats_new.php.
@@ -12,7 +12,7 @@ return
 -->
 <!-- Resources are \"Added.\" Instructional pages are \"Published.\" Always keep when a page is \"Added/Published.\" When a page is \"Major update\" remove prior \"Updated/Major update.\" When a page is \"Updated\" remove prior \"Updated.\" When a page is \"Updated\" keep prior \"Major update.\" When a page is \"Updated/Major update\" remove prior \"Renamed.\" When a page is \"Renamed\" without being \"Updated\" keep prior \"Updated/Major update.\" When a page is \"Renamed\" and \"Updated\" remove prior \"Updated\" and keep prior \"Major update.\" When a page is \"Renamed\" rename all refs to the page (including Updated/Major update/Added/Published) to the new name. When a page is \"Moved to discontinued\" keep prior \"Published\" and remove prior \"Updated.\" -->
      <ul class='link-list'>
-      <li><a href='/javascript/web_browser_useragent_values.php'>Web Browser User-Agent String Values (learnwebcoding.com)</a> and <a href='/javascript/javascript_web_browser_detection_update.php'>JavaScript Web Browser Detection With Link To Download Update (learnwebcoding.com)</a>: Updated: 22 Mar 2018.</li>
+      <li><a href='/javascript/web_browser_useragent_values.php'>Web Browser User-Agent String Values (learnwebcoding.com)</a> and <a href='/javascript/javascript_web_browser_detection_update.php'>JavaScript Web Browser Detection With Link To Download Update (learnwebcoding.com)</a>: Updated: 28 Mar 2018.</li>
       <li><a href='/javascript/javascript_reference/index.php'>JavaScript Feature Reference (learnwebcoding.com)</a>: Updated: 22 Mar 2018.</li>
       <li><a href='/css/css_techniques/style_checkboxes_radio_buttons.php'>CSS Technique: Style Checkboxes And Radio Buttons (learnwebcoding.com)</a>: Updated: 22 Mar 2018.</li>
       <li><a href='/php/simple_mysql_admin.php'>Simple MySQL Admin (learnwebcoding.com)</a>: Web page updated and application updated: 11 Mar 2018.</li>
@@ -85,24 +85,17 @@ return
       <li><a href='/javascript/javascript_reference/let_declaration.php'>JavaScript Feature Reference: <code>let</code> Declaration Web Browser Support Test (learnwebcoding.com)</a>: Published: 08 Nov 2017.</li>
       <li><a href='/javascript/javascript_reference/template_tag_syntax.php'>JavaScript Feature Reference: Template Tag Syntax Web Browser Support Test (learnwebcoding.com)</a>: Published: 02 Nov 2017.</li>
       <li><a href='/javascript/javascript_reference/template_literal_syntax.php'>JavaScript Feature Reference: Template Literal Syntax Web Browser Support Test (learnwebcoding.com)</a>: Published: 01 Nov 2017.</li>
+<!-- Next oldest web page updates and web pages that frequently update and/or do not want to delete/retype:
       <li><a href='/misc/install_xampp_windows.php'>Install XAMPP For An Offline Development Environment With Apache And MySQL Running Locally On Windows (learnwebcoding.com)</a>: Updated: 28 Oct 2017.</li>
-      <li><a href='/javascript/javascript_reference/indexOf_method_string.php'>JavaScript Feature Reference: <code>indexOf()</code> Method On Strings Web Browser Support Test (learnwebcoding.com)</a>, <a href='/javascript/javascript_reference/includes_method.php'>JavaScript Feature Reference: <code>includes()</code> Method Web Browser Support Test (learnwebcoding.com)</a>, <a href='/javascript/javascript_reference/startsWith_method.php'>JavaScript Feature Reference: <code>startsWith()</code> Method Web Browser Support Test (learnwebcoding.com)</a>, and <a href='/javascript/javascript_reference/endsWith_method.php'>JavaScript Feature Reference: <code>endsWith()</code> Method Web Browser Support Test (learnwebcoding.com)</a>: Published: 27 Oct 2017.</li>
       <li><a href='/misc/versions_ie_ed_windows.php'>Versions Of Internet Explorer And Edge Included With And Supported By Windows 98/ME/2000/XP/Vista/7/8/8.1/10 (learnwebcoding.com)</a>: Updated: 24 Oct 2017.</li>
       <li><a href='/php/install_quickinstall_windows.php'>Install phpBB QuickInstall On Your Local Windows Web Server To Develop phpBB Board Styles (learnwebcoding.com)</a>: Updated: 16 Sep 2017.</li>
       <li><a href='/misc/glossary.php'>Glossary (learnwebcoding.com)</a>: Updated 08 Sep 2017.</li>
-      <li><a href='/misc/install_xampp_windows.php'>Install XAMPP For An Offline Development Environment With Apache And MySQL Running Locally On Windows (learnwebcoding.com)</a>: Major update: 17 Aug 2017.</li>
-      <li><a href='/php/install_quickinstall_windows.php'>Install phpBB QuickInstall On Your Local Windows Web Server To Develop phpBB Board Styles (learnwebcoding.com)</a>: Major update: 15 Aug 2017.</li>
       <li><a href='/css/css_tutorial.php'>CSS Tutorial (learnwebcoding.com)</a>: Updated 13 Aug 2017.</li>
-<!-- Next oldest web page updates and web pages that frequently update and/or do not want to delete/retype:
-      <li><a href='/javascript/javascript_reference/getAttribute_method.php'>JavaScript Feature Reference: <code>getAttribute()</code> Method Web Browser Support Test (learnwebcoding.com)</a> and <a href='/javascript/javascript_reference/getElementById_method.php'>JavaScript Feature Reference: <code>getElementById()</code> Method Web Browser Support Test (learnwebcoding.com)</a>: Published: 31 Jul 2017.</li>
-      <li><a href='/javascript/javascript_reference/className_property.php'>JavaScript Feature Reference: <code>className</code> Property Web Browser Support Test (learnwebcoding.com)</a>: Published: 30 Jul 2017.</li>
-      <li><a href='/javascript/javascript_reference/getElementsByClassName_method.php'>JavaScript Feature Reference: <code>getElementsByClassName()</code> Method Web Browser Support Test (learnwebcoding.com)</a>: Published: 29 Jul 2017.</li>
       <li><a href='/misc/index.php'>Misc (learnwebcoding.com)</a> Landing Page: Updated: 07 Jul 2017.</li>
       <li><a href='/php/index.php'>PHP (learnwebcoding.com)</a> Landing Page: Updated: 06 Jul 2017.</li>
       <li>Learn Web Coding now supports the Hypertext Transfer Protocol Secure (i.e., the https:// protocol), which means connections to <a href='https://www.learnwebcoding.com/'>LWC Home (www.learnwebcoding.com)</a>, <a href='https://blog.learnwebcoding.com/'>LWC Blog (blog.learnwebcoding.com)</a>, and <a href='https://forums.learnwebcoding.com/'>LWC Forums (forums.learnwebcoding.com)</a> are now encrypted: 13 Jun 2017.</li>
       <li><a href='/css/css_techniques/style_selectboxes.php'>CSS Technique: Style Selectboxes (learnwebcoding.com)</a>: Updated: 11 Jun 2017.</li>
       <li><a href='/javascript/jquery_techniques/index.php'>jQuery Techniques (learnwebcoding.com)</a>: Updated: 02 Jun 2017.</li>
-      <li><a href='/php/simple_mysql_admin.php'>Simple MySQL Admin (learnwebcoding.com)</a>: Published: 14 May 2017.</li>
       <li><a href='/html/web_page.php'>Learn Web Coding Home Template (learnwebcoding.com)</a>: Updated: 11 May 2017.</li>
       <li><a href='/php/index.php'>PHP (learnwebcoding.com)</a> Landing Page: Added: 10 May 2017.</li>
       <li><a href='/html/valid_html401_transitional_template.html'>Valid HTML 4.01 Transitional Template (learnwebcoding.com)</a>, <a href='/html/valid_html401_strict_template.html'>Valid HTML 4.01 Strict Template (learnwebcoding.com)</a>, <a href='/html/valid_xhtml10_transitional_template.html'>Valid XHTML 1.0 Transitional Template (learnwebcoding.com)</a>, <a href='/html/valid_xhtml10_strict_template.html'>Valid XHTML 1.0 Strict Template (learnwebcoding.com)</a>, and <a href='/html/valid_xhtml11_template.html'>Valid XHTML 1.1 Template (learnwebcoding.com)</a>: Updated: 08 Feb 2017.</li>

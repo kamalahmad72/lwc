@@ -4,7 +4,7 @@
 /* File: /web_server_root_directory/bom/web_browser_useragent_values_sections.php.
  * Purpose: Web page sections.
  * Used in: /web_server_root_directory/bom/web_browser_useragent_values.php.
- * Last reviewed/updated: 22 Mar 2018.
+ * Last reviewed/updated: 28 Mar 2018.
  * Published: 21 Sep 2016. */
 return
    "<section>
@@ -1508,7 +1508,7 @@ return
      <p>Firefox 58.0 64-bit<br />
      mozilla/5.0 (windows nt 6.1; win64; x64; rv:58.0) gecko/20100101 firefox/58.0</p>
 
-     <div class='note normal'>The Firefox 58.0.1 and 58.0.2 user-agent string values are identical to the Firefox 56.0 user-agent string values.</div>
+     <div class='note normal'>The Firefox 58.0.1 and 58.0.2 user-agent string values are identical to the Firefox 58.0 user-agent string values.</div>
 
      <p>Firefox 58.0.1 32-bit<br />
      mozilla/5.0 (windows nt 6.1; wow64; rv:58.0) gecko/20100101 firefox/58.0</p>
@@ -1528,12 +1528,18 @@ return
      <p>Firefox 59.0 64-bit<br />
      mozilla/5.0 (windows nt 6.1; win64; x64; rv:59.0) gecko/20100101 firefox/59.0</p>
 
-     <div class='note normal'>The Firefox 59.0.1 user-agent string value is identical to the Firefox 59.0 user-agent string value.</div>
+     <div class='note normal'>The Firefox 59.0.1 and 59.0.2 user-agent string values are identical to the Firefox 59.0 user-agent string values.</div>
 
      <p>Firefox 59.0.1 32-bit<br />
      mozilla/5.0 (windows nt 6.1; wow64; rv:59.0) gecko/20100101 firefox/59.0</p>
 
      <p>Firefox 59.0.1 64-bit<br />
+     mozilla/5.0 (windows nt 6.1; win64; x64; rv:59.0) gecko/20100101 firefox/59.0</p>
+
+     <p>Firefox 59.0.2 32-bit<br />
+     mozilla/5.0 (windows nt 6.1; wow64; rv:59.0) gecko/20100101 firefox/59.0</p>
+
+     <p>Firefox 59.0.2 64-bit<br />
      mozilla/5.0 (windows nt 6.1; win64; x64; rv:59.0) gecko/20100101 firefox/59.0</p>
 
     </section>
@@ -4662,6 +4668,12 @@ return
 
      <p>Opera 52.0.2871.30 64-bit<br />
      mozilla/5.0 (windows nt 6.1; win64; x64) applewebkit/537.36 (khtml, like gecko) chrome/65.0.3325.162 safari/537.36 opr/52.0.2871.30</p>
+
+     <p>Opera 52.0.2871.37 32-bit<br />
+     mozilla/5.0 (windows nt 6.1; wow64) applewebkit/537.36 (khtml, like gecko) chrome/65.0.3325.181 safari/537.36 opr/52.0.2871.37</p>
+
+     <p>Opera 52.0.2871.37 64-bit<br />
+     mozilla/5.0 (windows nt 6.1; win64; x64) applewebkit/537.36 (khtml, like gecko) chrome/65.0.3325.181 safari/537.36 opr/52.0.2871.37</p>
 
     </section>
     <hr />
