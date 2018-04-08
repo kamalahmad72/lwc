@@ -4,7 +4,7 @@
 /* File: /web_server_root_directory/html/template_explained_sections.php.
  * Purpose: Web page sections.
  * Used in: /web_server_root_directory/html/template_explained.php.
- * Last reviewed/updated: 10 Mar 2018.
+ * Last reviewed/updated: 08 Apr 2018.
  * Published: 21 Sep 2016. */
 return
    "<section>
@@ -3741,7 +3741,7 @@ textarea::-webkit-input-placeholder { color: #888; }
 
      <h3><a id='formSelectboxes'></a>25.4. Selectboxes (Dropdowns)</h3>
 
-     <p>Selectboxes (a.k.a., dropdowns) use the <code>select</code> and <code>option</code> elements. The <code>label</code> element is a commonly used optional element. Only the data of the selected option(s), not the data of the unselected option(s), is including when a form is submitted. If the selectbox data is to be sent when a form is submitted, use the <code>select</code> element with the <code>name</code> attribute, assign the <code>name</code> attribute a unique value, and use the <code>option</code> element with or without the <code>value</code> attribute. The <code>value</code> attribute can be used to send data other than that which appears on the screen as the <code>&lt;option&gt;&lt;/option&gt;</code> tag content. If the <code>name</code>attribute is used without the <code>value</code> attribute, then the <code>&lt;option&gt;&lt;/option&gt;</code> tag content is sent, and, therefore, assign the <code>&lt;option&gt;&lt;/option&gt;</code> tag content a unique string of text. If the <code>name</code> attribute is used with the <code>value</code> attribute, the <code>value</code> attribute value is sent, and, therefore, assign the <code>value</code> attribute a unique value. To increase the number of options visible in the selectbox, use the <code>select</code> element with the <code>size</code> attribute and assign it a number value greater than one. If the <code>size</code> attribute is absent, user agents are to default to <code>size='1'</code>. To allow multiple options to be selected, use the <code>select</code> element with the <code>multiple='multiple'</code> attribute. To create a blank/empty option, use <code>&lt;option label='&nbsp;'&gt; &lt;/option&gt;</code> (note the two spaces). To default select/pre-select an option, use the <code>option</code> element with the <code>selected='selected'</code> attribute:</p>
+     <p>Selectboxes (a.k.a., dropdowns) use the <code>select</code> and <code>option</code> elements. The <code>label</code> element is a commonly used optional element. Only the data of the selected option(s), not the data of the unselected option(s), is including when a form is submitted. If the selectbox data is to be sent when a form is submitted, use the <code>select</code> element with the <code>name</code> attribute, assign the <code>name</code> attribute a unique value, and use the <code>option</code> element with or without the <code>value</code> attribute. The <code>value</code> attribute can be used to send data other than that which appears on the screen as the <code>&lt;option&gt;&lt;/option&gt;</code> tag content. If the <code>name</code>attribute is used without the <code>value</code> attribute, then the <code>&lt;option&gt;&lt;/option&gt;</code> tag content is sent, and, therefore, assign the <code>&lt;option&gt;&lt;/option&gt;</code> tag content a unique string of text. If the <code>name</code> attribute is used with the <code>value</code> attribute, the <code>value</code> attribute value is sent, and, therefore, assign the <code>value</code> attribute a unique value. To increase the number of options visible in the selectbox, use the <code>select</code> element with the <code>size</code> attribute and assign it a number value greater than one. If the <code>size</code> attribute is absent, user agents are to default to <code>size='1'</code>. To allow multiple options to be selected, use the <code>select</code> element with the <code>multiple='multiple'</code> attribute. To create an empty/blank option, use <code>&lt;option label='&nbsp;'&gt; &lt;/option&gt;</code> (note the two spaces). To default select/pre-select an option, use the <code>option</code> element with the <code>selected='selected'</code> attribute:</p>
 
 <pre>
 &lt;p&gt;
@@ -4833,7 +4833,7 @@ kbd {
 
      <p>Consider, for example, the following two sentences describing one of the Cascade's rules for resolving style conflicts, where <q>reader</q> means user, and <q>UA's default values</q> and <q>the default style sheet</q> mean user agent styles:</p>
 
-     <p>If left blank, <q>default</q> is automatically assigned.</p>
+     <p>If left empty/blank, <q>default</q> is automatically assigned.</p>
 
      <p> The phpBB board database name, prefixed with <q>qi_</q>.</p>
 
