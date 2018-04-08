@@ -4,7 +4,7 @@
 /* File: views/databases-html.php.
  * Purpose: Databases page view.
  * Used in: controllers/databases.php.
- * Last reviewed/updated: 20 Jul 2017.
+ * Last reviewed/updated: 06 Apr 2018.
  * Last reviewed/updated for XSS: 31 May 2017.
  * Published: 14 May 2017.
  * Forms: 1.) createDatabaseForm, and 2.) dropDatabaseForm. */
@@ -19,21 +19,21 @@ if (!empty($db->fetchDatabaseAndCollation)){
   // Create database natively does not allow &<>"'\ characters in database name. Therefore, although, in theory, running html entities method here is not required, it is run here as defense in depth measure.
   $database = $index->htmlEntities($database);
   $db->databasesTableDataHtml .= "<tr>\n";
-  // Databases table | Drop column.
-  // NOTE: sys indicates MySQL/phpMyAdmin system database that cannot be selected for drop.
-  if (($database === "information_schema") || ($database === "mysql") || ($database === "performance_schema") || ($database === "phpmyadmin")){
-   $db->databasesTableDataHtml .= "<td class='text-align-center'>sys</td>\n";
+  // Drop column.
+  // NOTE: rsvd indicates database reserved for MySQL/phpMyAdmin administration. Simple MySQL Admin does not allow dropping.
+  if (($database === "information_schema") || ($database === "mysql") || ($database === "performance_schema") || ($database === "phpmyadmin") || ($database === "sys")){
+   $db->databasesTableDataHtml .= "<td class='text-align-center'>rsvd</td>\n";
   } else {
    $db->databasesTableDataHtml .= "<td class='text-align-center'><label><input type='checkbox' name='dropDatabasesArray[]' value='$database' /><span>&#10003;</span></label></td>\n";
   }
-  // Databases table | Database column.
-  if (($database === "information_schema") || ($database === "mysql") || ($database === "performance_schema") || ($database === "phpmyadmin") || ($database === "test")){
-   // NOTE: Asterisk (*) character indicates MySQL/phpMyAdmin database.
+  // Database column.
+  if (($database === "information_schema") || ($database === "mysql") || ($database === "performance_schema") || ($database === "phpmyadmin") || ($database === "sys") || ($database === "test")){
+   // NOTE: Asterisk (*) character indicates database created by MySQL/phpMyAdmin.
    $db->databasesTableDataHtml .= "<td>$database*</td>\n";
   } else {
    $db->databasesTableDataHtml .= "<td>$database</td>\n";
   }
-  // Databases table | Collation column.
+  // Collation column.
   $db->databasesTableDataHtml .= "<td>$collation</td>\n";
   $db->databasesTableDataHtml .= "</tr>\n";
  }

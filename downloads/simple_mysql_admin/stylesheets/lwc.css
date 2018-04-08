@@ -3,7 +3,7 @@
 /* File: stylesheets/lwc.css.
  * Purpose: Primary style sheet for Simple MySQL Admin.
  * Used in: stylesheets/stylesheets.php.
- * Last reviewed/updated: 28 Jul 2017.
+ * Last reviewed/updated: 06 Apr 2018.
  * Published: 11 Jun 2017.
  * NOTE: Copied, unaltered, except for this introduction section, from /lwc/stylesheets/zz_lwc_no_min/lwc.css. */
 
@@ -94,9 +94,14 @@ pre {
   line-height: 1.5;
 }
 
-/* line 60, _typography.scss */
-.line-height-normal {
+/* line 61, _typography.scss */
+.line-height-normal, code {
   line-height: normal;
+}
+
+/* line 65, _typography.scss */
+h1 code {
+  line-height: 1;
 }
 
 /* -------------------- MARGINS AND PADDINGS (_margins_paddings.scss) -------------------- */
@@ -223,7 +228,7 @@ code, pre, caption, .note {
 }
 
 /* line 14, _colors_borders.scss */
-.note code, .note pre, pre code, caption code {
+.note code, .note pre, .note .note, pre code, caption code {
   background-color: #d7d7d7;
 }
 

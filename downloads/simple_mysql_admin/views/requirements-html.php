@@ -4,7 +4,7 @@
 /* File: views/requirements-html.php.
  * Purpose: Requirements page view.
  * Used in: controllers/requirements.php.
- * Last reviewed/updated: 11 Mar 2018.
+ * Last reviewed/updated: 08 Apr 2018.
  * Last reviewed/updated for XSS: 31 May 2017.
  * Published: 14 May 2017.
  * Forms: 1.) connectToMysqlForm. */
@@ -35,7 +35,7 @@ return
       <span class='section-title-title'>MySQL</span>
      </div>
      <div class='section-content'>
-      <div>
+      <div class='line-height-custom'>
        <b>MySQL running status:</b> $index->runningStatus<br />
        <b>MySQL connection status:</b> $index->connectionStatus
       </div>
@@ -48,14 +48,14 @@ return
       <span class='section-title-title'>Web Browser Cookies</span>
      </div>
      <div class='section-content'>
-      <div id='cookieStatus'><b>Web browser cookies status:</b> <span class='good'>Good</span>. Web browser cookies are enabled.</div>
+      <div id='cookieStatus' class='line-height-custom'><b>Web browser cookies status:</b> <span class='good'>Good</span>. Web browser cookies are enabled.</div>
      </div>
     </div>
    </div>
 
    <div class='about'>
-    Simple MySQL Admin v1.2.2 released 11 Mar 2018.<br />
-    Simple MySQL Admin supports Internet Explorer 10+, Edge 12+, Firefox 6+, Chrome 30+, Opera 17+, PHP 5.6.8+, PHP 7+, MySQL 5.6.24+, MariaDB 10.1.8+.<br />
+    Simple MySQL Admin v1.3.0 released 08 Apr 2018.<br />
+    Simple MySQL Admin supports Internet Explorer 10+, Edge 12+, Firefox 6+, Chrome 30+, Opera 17+, PHP 5.6.8+, PHP 7+, MariaDB 10+, MySQL 5.5+.<br />
     Simple MySQL Admin is intended solely for personal use in private/Intranet/offline/development environments.<br />
     For additional information, including security, known issues, and disclaimer, see <a href='http://www.learnwebcoding.com/php/simple_mysql_admin.php'>Simple MySQL Admin (learnwebcoding.com)</a>.
    </div>

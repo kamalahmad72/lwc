@@ -4,7 +4,7 @@
 /* File: views/userAccnts-html-content.php.
  * Purpose: User Accounts page view. Content from views/userAccnts-html.php is placed in this external file so logic in views/userAccnts-html.php is easier to read.
  * Used in: views/userAccnts-html.php.
- * Last reviewed/updated: 11 Mar 2018.
+ * Last reviewed/updated: 07 Apr 2018.
  * Last reviewed/updated for XSS: 31 May 2017.
  * Published: 14 May 2017.
  * Forms: 1.) createUserAccntForm, 2.) dropUserAccntsForm, 3.) selectUserAccntForm, and 4.) userAccntPrivsForm. */
@@ -50,13 +50,13 @@ return "
          <tr>
           <td colspan='6'>
            <ul>
-           <li>sys = MySQL/phpMyAdmin system user account. Simple MySQL Admin does not allow dropping.</li>
-            <li>* = MySQL/phpMyAdmin user account.</li>
-            <li>Any = Any user name (e.g., foo) accepted. The user account is ''@'localhost', where any user name is represented as double apostrophe (') characters, not as 'Any'.</li>
-            <li>% = Any legitimate host name (e.g., localhost) accepted.</li>
+            <li>rsvd = User account reserved for MySQL/phpMyAdmin administration. Simple MySQL Admin does not allow dropping.</li>
+            <li>* = User account created by MySQL/phpMyAdmin.</li>
+            <li>Any = Any user name (e.g., foo) accepted. In the user account, any user name is represented as two apostrophe ('') characters (i.e., empty string), not as 'Any'.</li>
+            <li>% = Any host name (e.g., foo) accepted. In the user account, any host name is represented as apostrophe, percent sign, and apostrophe ('%') characters, not as '' (i.e., empty string).</li>
             <li>ALL PRIVILEGES = All privileges with possible exception of GRANT.</li>
             <li>USAGE = No privileges with possible exception of GRANT.</li>
-            <li>On = on database.tables, where * = wildcard = all.</li>
+            <li>On = On database.tables (e.g., *.* means on all databases and all tables).</li>
            </ul>
           </td>
          </tr>
@@ -78,22 +78,15 @@ return "
        </span>
       </div>
       <ul class='edit-user-accnt-privs display-none'>
-       <li>Simple MySQL Admin does not allow editing the privileges of the following MySQL/phpMyAdmin system user accounts; 1.) 'pma'@'localhost', 2.) 'root'@'localhost', 3.) 'root'@'127.0.0.1', and 4.) 'root'@'::1'. Accordingly, these user accounts are not listed in the select user account dropdown below.</li>
+       <li>Simple MySQL Admin does not allow editing privileges of user accounts reserved for MySQL/phpMyAdmin administration. Therefore, user accounts reserved for MySQL/phpMyAdmin administration are not listed in the Select user account dropdown. Moreover, if all user accounts are reserved for MySQL/phpMyAdmin administration, the Select user account dropdown is replaced with text explaining such. When this is the case, to edit user account privileges, first create a user account above.</li>
        <li>Simple MySQL Admin allows editing only the <dfn title='Global privileges are administrative or apply to all databases on a given server. To assign global privileges, use ON *.* syntax.'>global privileges</dfn> shown below. For the global privileges not shown, defaults are used. To manage additional privileges, use phpMyAdmin.</li>
        <li>Data, Structure, and Administration are types/categories of global privileges, not global privileges themselves.</li> 
       </ul>
      </div>
      <div class='section-content'>
       <div class='section-content-status'><b>Edit user account privileges status:</b> $uA->editStatus</div>
-      <div>1.) Select user account:</div>
-      <form method='post' action='index.php' name='selectUserAccntForm'>
-       <select name='selectedUserAccnt' id='selectUserAccntDropdown'>
-        <option value=''></option>
-        $uA->selectUserAccntDropdownHtml
-       </select>
-       <button type='submit' id='selectUserAccntFormHiddenSubmitBtn' class='hidden'></button>
-      </form>
-      <div>2.) Edit user account privileges below and then click save:</div>
+      <div class='line-height-custom'>1.) Select user account: $uA->selectUserAccntDropdownHtml
+      <div class='line-height-custom'>2.) Edit user account privileges below and then click save:</div>
       <form method='post' action='index.php' name='userAccntPrivsForm' id='userAccntPrivsForm'>
        <fieldset class='float-left ua-all-privs-container'>
         <legend>

@@ -1,5 +1,5 @@
 Simple_MySQL_Admin_Readme.txt
-Last reviewed/edited: 11 Mar 2018.
+Last reviewed/edited: 08 Apr 2018.
 
 Simple MySQL Admin is developed by Steve Taylor at Learn Web Coding (http://www.learnwebcoding.com/). Simple MySQL Admin is intended solely for personal use in private/Intranet/offline/development environments, not public/Internet/online/production environments. Use Simple MySQL Admin at your own risk. For additional information, including security, known issues, and disclaimer, see the Simple MySQL Admin home page (http://www.learnwebcoding.com/php/simple_mysql_admin.php). Please email comments/suggestions to steve@learnwebcoding.com. Please feel free to download, edit, and/or fork the Simple MySQL Admin source code. The Simple MySQL Admin source code is available at GitHub (https://github.com/learnwebcoding/simple_mysql_admin).
 
@@ -45,11 +45,16 @@ Simple MySQL Admin supports PHP 5.6.8+ and PHP 7+. PHP 5.6.7- not tested.
 4.) DATABASE SERVER SUPPORT
 ---------------------------
 
-Simple MySQL Admin supports MySQL 5.6.24+ and MariaDB 10.1.8+. MySQL 5.6.23- and MariaDB 10.1.7- not tested.
+Simple MySQL Admin supports MariaDB 10+ and MySQL 5.5+.
 
 ---------------------------------
 5.) RELEASE HISTORY AND CHANGELOG
 ---------------------------------
+
+v1.3.0 released 08 Apr 2018:
+* Update database server support. Primary changes: 1.) add support for MySQL 5.7 stores MySQL user account password in mysql.user table authentication_string column, not password column (in MySQL 5.7, mysql.user table password column does not exit); 2.) add support for MySQL 5.7 'mysql.session'@'localhost' and 'mysql.sys'@'localhost' reserved user accounts, and MariaDB 10.0 - 10.2 'root'@'computername-pc' reserved user account; 3.) add support for MySQL 5.7 sys reserved database; and 4.) change MySQL to store Simple MySQL Admin | User Accounts | create user account | host name/IP address field empty/blank in mysql.user table host column as any host name ('%' string), not empty string (''), and change Simple MySQL Admin | User Accounts | create user account reports to display host name/IP address field empty/blank as any host name ('%' string), not empty string ('').
+* Replace User Accounts | edit user account privileges | select user account dropdown with explanatory text if all user accounts are reserved.
+* Update lwc.css and update CSS styles.
 
 v1.2.2 released 11 Mar 2018:
 * Fix path to images.

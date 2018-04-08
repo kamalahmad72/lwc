@@ -4,7 +4,7 @@
 /* File: classes/Index.class.php.
  * Purpose: Index page model. Class definition for Index page $index object. Index page $index object declares properties representing Index page web page content and defines methods representing Index page interface.
  * Used in: index.php.
- * Last reviewed/updated: 15 Jul 2017.
+ * Last reviewed/updated: 02 Apr 2018.
  * Last reviewed/updated for SQL injection: 31 May 2017.
  * Published: 14 May 2017.
  * NOTE: No HTML in class definition. */
@@ -32,7 +32,7 @@ class Index {
   $body_main_webPageTitle,	// String.
   $body_main_lastStatus,	// String.
   $body_main_tabs,			// String.
-  $body_main_page,		// Statement.
+  $body_main_page,			// Statement.
   $body_main_javascript;	// String.
 
  // First assigned value in Index page (front) controller (index.php) | MySQL running: mysqli section.

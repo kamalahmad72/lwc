@@ -4,7 +4,7 @@
 /* File: /web_server_root_directory/php/simple_mysql_admin_sections.php.
  * Purpose: Web page sections.
  * Used in: /web_server_root_directory/php/simple_mysql_admin.php.
- * Last reviewed/updated: 11 Mar 2018.
+ * Last reviewed/updated: 08 Apr 2018.
  * Published: 14 May 2017. */
 return
    "<section>
@@ -41,9 +41,9 @@ return
 
      <h3><a id='databaseServerSupport'></a>1.3. Database Server Support</h3>
 
-     <p>Database server support: MySQL 5.6.24+ and MariaDB 10.1.8+. MySQL 5.6.23- and MariaDB 10.1.7- not tested.</p>
+     <p>Database server support: MariaDB 10+ and MySQL 5.5+.<!-- MySQL 5.5 is slow. MySQL 5.6+ recommended. --></p>
 
-     <h3><a id='screenshots'></a>1.4. Screenshots</h3>
+     <h3><a id='screenshots'></a>1.4. Screenshots</h3><!-- See databases DVD for screenshots of various versions of MariaDB and MySQL +/- Simple MySQL Admin. -->
 
      <p>Requirements tab:</p>
 
@@ -81,7 +81,7 @@ return
      <ol>
       <li>Download the following source code zip file to your computer:
        <ul class='link-list'>
-        <li><a href='/downloads/simple_mysql_admin.zip'><span class='filename'>simple_mysql_admin.zip</span> (learnwebcoding.com)</a> - v1.2.2 released 11 Mar 2018. Size: 58,344 bytes. SHA-256 checksum: 8e51a041cebe99fca451eaf1d5a8ce597d28ffb7ec844de4debeef2a113747dc.</li>
+        <li><a href='/downloads/simple_mysql_admin.zip'><span class='filename'>simple_mysql_admin.zip</span> (learnwebcoding.com)</a> - v1.3.0 released 08 Apr 2018. Size: 60,089 bytes. SHA-256 checksum: 3a6dbd2b23a4acf88995baca7ae4f5fdf579d8f345a4a76af7e2900d455f8c0a.</li>
        </ul>
       </li>
       <li>Extract the downloaded zip file. In this example, <span class='filename'>simple_mysql_admin.zip</span> is extracted to the <span class='filename'>simple_mysql_admin</span> folder:
@@ -95,6 +95,13 @@ return
      <h3><a id='release'></a>1.8. Release History And Changelog</h3>
 
      <ul>
+      <li>v1.3.0 released 08 Apr 2018:
+       <ul>
+        <li>Update database server support. Primary changes: 1.) add support for MySQL 5.7 stores MySQL user account password in mysql.user table authentication_string column, not password column (in MySQL 5.7, mysql.user table password column does not exit); 2.) add support for MySQL 5.7 'mysql.session'@'localhost' and 'mysql.sys'@'localhost' reserved user accounts, and MariaDB 10.0 - 10.2 'root'@'computername-pc' reserved user account; 3.) add support for MySQL 5.7 sys reserved database; and 4.) change MySQL to store Simple MySQL Admin | User Accounts | create user account | host name/IP address field empty/blank in mysql.user table host column as any host name ('%' string), not empty string (''), and change Simple MySQL Admin | User Accounts | create user account reports to display host name/IP address field empty/blank as any host name ('%' string), not empty string ('').</li>
+        <li>Replace User Accounts | edit user account privileges | select user account dropdown with explanatory text if all user accounts are reserved.</li>
+        <li>Update lwc.css and update CSS styles.</li>
+       </ul>
+      </li>
       <li>v1.2.2 released 11 Mar 2018:
        <ul>
         <li>Fix path to images.</li>
@@ -103,7 +110,7 @@ return
         <li>Update comments for consistency with other projects.</li>
        </ul>
       </li>
-      <li>v1.2.1 released 29 Jun 2017:
+      <li>v1.2.1 released 28 Jul 2017:
        <ul>
         <li>Update <span class='filename'>lwc.css</span>.</li>
         <li>Edit <span class='filename'>simple_mysql_admin.js</span> to be unobtrusive. Change IE support from IE9+ to IE10+.</li>

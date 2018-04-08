@@ -4,7 +4,7 @@
 /* File: classes/Requirements.class.php.
  * Purpose: Requirements page model. Class definition for Requirements page $req object. Requirements page $req object declares properties representing Requirements page web page content and defines methods representing Requirements page interface.
  * Used in: controllers/requirements.php.
- * Last reviewed/updated: 15 Jul 2017.
+ * Last reviewed/updated: 05 Apr 2018.
  * Last reviewed/updated for SQL injection: 31 May 2017.
  * Published: 14 May 2017.
  * NOTE: No HTML in class definition. */
@@ -22,8 +22,7 @@ class Requirements {
 
  // First assigned value in view (views/requirements-html.php).
  public
-  $connectToMysqlFormHtml,		// String.
-  $mysqlConnectionStatusHtml;	// String.
+  $connectToMysqlFormHtml;		// String. If not declared as $req-property, throws following which references first use: Notice: Undefined variable: connectToMysqlFormHtml.
 
 /* ---------- METHODS ---------- */
 

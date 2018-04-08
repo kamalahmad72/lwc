@@ -4,7 +4,7 @@
 /* File: controllers/userAccnts.php.
  * Purpose: User Accounts page controller. Require User Accounts page class (classes/UserAccnts.class.php) and instantiate User Accounts page $uA object. Require User Accounts page view (views/userAccnts-html.php) and return User Accounts page HTML content to Index page (front) controller (index.php).
  * Used in: No other file.
- * Last reviewed/updated: 11 Mar 2018.
+ * Last reviewed/updated: 07 Apr 2018.
  * Last reviewed/updated for XSS: 31 May 2017.
  * Published: 14 May 2017.
  * Forms: 1.) createUserAccntForm, 2.) dropUserAccntsForm, 3.) selectUserAccntForm, and 4.) userAccntPrivsForm. */
@@ -16,6 +16,8 @@ require_once "classes/UserAccnts.class.php";
 $uA = new UserAccnts($index->dbh);
 
 /* ---------- ASSIGNMENTS ---------- */
+
+$uA->numberUserAccntsWithEditablePrivileges = 0;
 
 /* ---------- PERSIST/NOT PERSIST SELECTED USER ACCOUNT ---------- */
 
@@ -55,6 +57,12 @@ if (isset($_POST["createUserAccntUsername"])){
   // NOTE: Untrusted data output to HTML is vulnerable to XSS attack. $createUserAccntUsername and $createUserAccntHostname are untrusted data output to HTML. To reduce XSS attack surface, convert all applicable characters to HTML entities.
   $createUserAccntUsername = $index->htmlEntities($createUserAccntUsername);
   $createUserAccntHostname = $index->htmlEntities($createUserAccntHostname);
+  // Determine if create user account host name is '' (ie, empty string). If create user account host name is '' (ie, empty string), expression evaluates to boolean true.
+  // NOTE: Simple MySQL Admin | User Accounts page | create user account form | host name/IP address field empty/blank is stored in mysql.user table host column as '%' string, and is represented in user account as 'username'@'%'. Therefore, if create user account host name is '' (ie, empty string), set create user account host name to '%' string for proper display in $index->body_main_lastStatus and $uA->createUserAccntStatus below.
+  if ($createUserAccntHostname === ''){
+   // Create user account host name is '' (ie, empty string). Set create user account host name to '%'.
+   $createUserAccntHostname = '%';
+  }
   // Determine if create user account successful. If successful, expression evaluates to boolean true.
   if ($uA->isCreateUserAccntSuccessful){
    // Create user account successful. Set string on $_SESSION["variable"], $index->property, and $uA->property to report create user account name successful.
@@ -108,7 +116,7 @@ if (isset($_POST["dropUserAccntsArray"])){
   $_SESSION["lastStatus"] = $index->body_main_lastStatus = $uA->dropUserAccntsStatus = "<span class='good'>Good</span>. User account $dropUserAccntsString successfully dropped.";
   // Iterate over drop user accounts array elements.
   foreach ($dropUserAccntsArray as $dropUserAccnt){
-   // Determine if drop user account is User Accounts | edit user accounts | selected user account.
+   // Determine if drop user account is User Accounts | edit user accounts | selected user account. If drop user account is User Accounts | edit user accounts | selected user account, expression evaluates to boolean true.
    if ($dropUserAccnt === $_SESSION["selectedUserAccnt"]){
     // Drop user account is User Accounts | edit user accounts | selected user account. Stop selected user account persistence by setting $_SESSION superglobal variable to special value null.
     $_SESSION["selectedUserAccnt"] = null;
@@ -326,12 +334,6 @@ if ($uA->isSelectUserHostPasswordSuccessful){
   foreach ($fetchUserHostPassword as list($user, $host, $password)){
    // Get user account user (string) and host (string) and set string representing user account on $variable.
    $userAccnt = "'$user'@'$host'";
-   // Set user account in user accounts array on $uA->property.
-   // NOTE:
-   // $uA->userAccntsArray not used in this section. Used in User Accounts page view (views/userAccnts-html.php).
-   // XAMPP 5.6.24-1 plus 'steve1'@'localhost' (using password: YES), print_r($uA->userAccntsArray) is: Array ( [0] => Array ( [0] => ''@'localhost' ) [1] => Array ( [0] => 'pma'@'localhost' ) [2] => Array ( [0] => 'root'@'localhost' ) [3] => Array ( [0] => 'root'@'127.0.0.1' ) [4] => Array ( [0] => 'root'@'::1' ) [5] => Array ( [0] => 'steve1'@'localhost' ) ).
-   // If use $uA->userAccntsArray[] = array($userAccnt) here, then use $uA->userAccntsArray as list($userAccnt) in User Accounts page view (views/userAccnts-html.php).
-   $uA->userAccntsArray[] = $userAccnt;
    // 2.) Show user account grants (call $uA->showGrants() method).
    // Call show grants method to instruct MySQL to show user account grants and set return value (PDOStatement object (aka, stmt or sth = statement handle)) on $variable.
    $sth_showGrants = $uA->showGrants($userAccnt);

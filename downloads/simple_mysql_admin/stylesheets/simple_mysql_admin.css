@@ -3,7 +3,7 @@
 /* File: stylesheets/simple_mysql_admin.css.
  * Purpose: Supplement/override stylesheets/lwc.css styles.
  * Used in: stylesheets/stylesheets.php.
- * Last reviewed/updated: 28 Jul 2017.
+ * Last reviewed/updated: 06 Apr 2018.
  * Published: 14 May 2017. */
 
 /* -------------------- HTML AND BODY (ENTIRE EXCEPT VIEWPORT) -------------------- */
@@ -22,6 +22,9 @@ body {
 }
 .section-title-title, .good, .bad, .warning {
   font-weight: bold;
+}
+li, .last-status, .section-content-status, .line-height-custom {
+  line-height: 1.5;
 }
 
 /* -------------------- MARGINS AND PADDINGS -------------------- */

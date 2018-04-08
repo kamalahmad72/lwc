@@ -4,7 +4,7 @@
 /* File: views/databases-html-content.php.
  * Purpose: Databases page view. Content from views/databases-html.php is placed in this external file so logic in views/databases-html.php is easier to read.
  * Used in: views/databases-html.php.
- * Last reviewed/updated: 11 Mar 2018.
+ * Last reviewed/updated: 05 Apr 2018.
  * Last reviewed/updated for XSS: 31 May 2017.
  * Published: 14 May 2017.
  * Forms: 1.) createDatabaseForm, and 2.) dropDatabaseForm. */
@@ -19,7 +19,7 @@ return "
        </span>
       </div>
       <ul class='create-database display-none'>
-       <li>Simple MySQL Admin allows selecting only the most commonly used/recommended collations. To select additional collations, please suggest collations to add to the dropdown or use phpMyAdmin.</li>
+       <li>Simple MySQL Admin allows selecting only the most commonly used/recommended collations. To select additional collations, please suggest collations to add to the Collation dropdown or use phpMyAdmin.</li>
        <li>$yourDefaultCollationServerHtml For additional information, see <a href='https://dev.mysql.com/doc/refman/5.7/en/charset-applications.html'>11.1.5 Configuring Application Character Set and Collation (dev.mysql.com)</a>.</li>
        <li>phpBB QuickInstall creates a database for phpBB that uses the MySQL default collation.</li>
        <li>The recommended WordPress database collation is utf8mb4_general_ci. For additional information, see <a href='https://codex.wordpress.org/Installing_WordPress'>Installing WordPress (codex.wordpress.org)</a>.</li>
@@ -57,8 +57,8 @@ return "
          <tr>
           <td colspan='4'>
            <ul>
-            <li>sys = MySQL/phpMyAdmin system database. Simple MySQL Admin does not allow dropping.</li>
-            <li>* = MySQL/phpMyAdmin database.</li>
+            <li>rsvd = Database reserved for MySQL/phpMyAdmin administration. Simple MySQL Admin does not allow dropping.</li>
+            <li>* = Database created by MySQL/phpMyAdmin.</li>
            </ul>
           </td>
          </tr>

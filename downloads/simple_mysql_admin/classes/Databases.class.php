@@ -4,7 +4,7 @@
 /* File: classes/Databases.class.php.
  * Purpose: Databases page model. Class definition for Databases page $db object. Database page $db object declares properties representing Database page web page content and defines methods representing Database page interface.
  * Used in: controllers/databases.php.
- * Last reviewed/updated: 16 Jul 2017.
+ * Last reviewed/updated: 02 Apr 2018.
  * Last reviewed/updated for SQL injection: 31 May 2017.
  * Published: 14 May 2017.
  * NOTE: No HTML in class definition. */
@@ -103,7 +103,7 @@ class Databases {
   $sth = $this->dbh->prepare($sql);
   // Bind parameter (aka, placeholder) to $variable and explicitly indicate data type.
   $sth->bindParam(':collation', $collation, PDO::PARAM_STR);
-  // Call PDOStatement::execute() method to execute prepared SQL statement and set return boolean value on $this->variable to indicate create database successful.
+  // Call PDOStatement::execute() method to execute prepared SQL statement and set return boolean value on $this->property to indicate create database successful.
   // NOTE:
   // Returns boolean true on success or boolean false on failure.
   // Create database considered successful/unsuccessful if PDOStatement::execute() method successful/unsuccessful, respectively.
