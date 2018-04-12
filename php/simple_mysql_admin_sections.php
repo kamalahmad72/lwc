@@ -4,7 +4,7 @@
 /* File: /web_server_root_directory/php/simple_mysql_admin_sections.php.
  * Purpose: Web page sections.
  * Used in: /web_server_root_directory/php/simple_mysql_admin.php.
- * Last reviewed/updated: 08 Apr 2018.
+ * Last reviewed/updated: 11 Apr 2018.
  * Published: 14 May 2017. */
 return
    "<section>
@@ -63,7 +63,7 @@ return
 
      <ol>
       <li>Type: Information disclosure.<br />
-       Description: <span class='filename'>simple_mysql_admin/connection_credentials.php</span> is plain text.</li>
+       Description: <span class='filename'>simple_mysql_admin/connection_credentials.php</span> is in plain text.</li>
       <li>Type: SQL injection.<br />
        Description: <a href='http://php.net/manual/en/pdo.prepare.php'>PDO::prepare (php.net)</a>/<a href='http://php.net/manual/en/pdostatement.bindparam.php'>PDOStatement::bindParam (php.net)</a> do not accept <a href='https://dev.mysql.com/doc/refman/5.7/en/identifiers.html'>MySQL identifiers (dev.mysql.com)</a> as variables and placeholders. As a result, there are instances where untrusted data is included in SQL statements. This occurs in the indicated locations in the user accounts section class (classes/UserAccnts.class.php) and the databases section class (classes/Databases.class.php).<!-- Note &apos; and &quot; character issues described in simple_,mysql_admin/vulnerabilities.txt. --></li>
       <li>Type: Cross-site scripting (XSS).<br />
