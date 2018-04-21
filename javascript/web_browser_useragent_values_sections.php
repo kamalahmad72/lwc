@@ -4,7 +4,7 @@
 /* File: /web_server_root_directory/bom/web_browser_useragent_values_sections.php.
  * Purpose: Web page sections.
  * Used in: /web_server_root_directory/bom/web_browser_useragent_values.php.
- * Last reviewed/updated: 12 Apr 2018.
+ * Last reviewed/updated: 19 Apr 2018.
  * Published: 21 Sep 2016. */
 return
    "<section>
@@ -2651,6 +2651,12 @@ return
 
      <p>Chrome 65.0.3325.181 64-bit<br />
      mozilla/5.0 (windows nt 6.1; win64; x64) applewebkit/537.36 (khtml, like gecko) chrome/65.0.3325.181 safari/537.36</p>
+
+     <p>Chrome 66.0.3359.117 32-bit<br />
+     mozilla/5.0 (windows nt 6.1; wow64) applewebkit/537.36 (khtml, like gecko) chrome/66.0.3359.117 safari/537.36</p>
+
+     <p>Chrome 66.0.3359.117 64-bit<br />
+     mozilla/5.0 (windows nt 6.1; win64; x64) applewebkit/537.36 (khtml, like gecko) chrome/66.0.3359.117 safari/537.36</p>
 
     </section>
     <hr />
