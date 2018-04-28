@@ -23,14 +23,14 @@ if (Object.defineProperty){
   this.propertyFour = "propertyFour value as propertyThree getter function return value";
   this.propertyFive = "propertyFive value appended by propertyThree setter function";
  }
- var customConstructorObject = new CustomConstructor();
- Object.defineProperty(customConstructorObject, "propertyOne", { // Change customConstructorObject.propertyOne value attribute value. IE8 error: Object doesn't support this action.
+ var objectViaCustomConstructor = new CustomConstructor();
+ Object.defineProperty(objectViaCustomConstructor, "propertyOne", { // Change objectViaCustomConstructor.propertyOne value attribute value. IE8 error: Object doesn't support this action.
   value: "new propertyOne value"
  });
- Object.defineProperty(customConstructorObject, "propertyTwo", { // Create customConstructorObject.propertyTwo data property. Here, property writable, enumerable, and configurable attributes default to boolean false.
+ Object.defineProperty(objectViaCustomConstructor, "propertyTwo", { // Create objectViaCustomConstructor.propertyTwo data property. Here, property writable, enumerable, and configurable attributes default to boolean false.
   value: "propertyTwo value"
  });
- Object.defineProperty(customConstructorObject, "propertyThree", { // Create customConstructorObject.propertyThree accessor property. Here, property enumerable and configurable attributes default to boolean false.
+ Object.defineProperty(objectViaCustomConstructor, "propertyThree", { // Create objectViaCustomConstructor.propertyThree accessor property. Here, property enumerable and configurable attributes default to boolean false.
   get: function(){
    return this.propertyFour;
   },
@@ -38,7 +38,7 @@ if (Object.defineProperty){
    this.propertyFive += value;
   }
  });
- customConstructorObject.propertyThree = " passed value"; // "propertyFive value appended by propertyThree setter function passed value".
+ objectViaCustomConstructor.propertyThree = " passed value"; // "propertyFive value appended by propertyThree setter function passed value".
  var objectLiteral = {
   propertyOne: "propertyOne value", // Data property. Here, property writable, enumerable, and configurable attributes default to boolean true.
   propertyFour: "propertyFour value as propertyThree getter function return value",
@@ -59,13 +59,13 @@ if (Object.defineProperty){
   }
  });
  objectLiteral.propertyThree = " passed value"; // "propertyFive value appended by propertyThree setter function passed value".
- var customConstructorObjectPropertyOneDescriptor = Object.getOwnPropertyDescriptor(customConstructorObject, "propertyOne");
- var customConstructorObjectPropertyTwoDescriptor = Object.getOwnPropertyDescriptor(customConstructorObject, "propertyTwo");
- var customConstructorObjectPropertyThreeDescriptor = Object.getOwnPropertyDescriptor(customConstructorObject, "propertyThree");
+ var objectViaCustomConstructorPropertyOneDescriptor = Object.getOwnPropertyDescriptor(objectViaCustomConstructor, "propertyOne");
+ var objectViaCustomConstructorPropertyTwoDescriptor = Object.getOwnPropertyDescriptor(objectViaCustomConstructor, "propertyTwo");
+ var objectViaCustomConstructorPropertyThreeDescriptor = Object.getOwnPropertyDescriptor(objectViaCustomConstructor, "propertyThree");
  var objectLiteralPropertyOneDescriptor = Object.getOwnPropertyDescriptor(objectLiteral, "propertyOne");
  var objectLiteralPropertyTwoDescriptor = Object.getOwnPropertyDescriptor(objectLiteral, "propertyTwo");
  var objectLiteralPropertyThreeDescriptor = Object.getOwnPropertyDescriptor(objectLiteral, "propertyThree");
- if ((customConstructorObject.propertyOne === "new propertyOne value") && (customConstructorObject.propertyTwo === "propertyTwo value") && (customConstructorObject.propertyThree === "propertyFour value as propertyThree getter function return value") && (customConstructorObject.propertyFive === "propertyFive value appended by propertyThree setter function passed value") && customConstructorObjectPropertyOneDescriptor.writable && !customConstructorObjectPropertyTwoDescriptor.enumerable && !customConstructorObjectPropertyThreeDescriptor.configurable && (objectLiteral.propertyOne === "new propertyOne value") && (objectLiteral.propertyTwo === "propertyTwo value") && (objectLiteral.propertyThree === "propertyFour value as propertyThree getter function return value") && (objectLiteral.propertyFive === "propertyFive value appended by propertyThree setter function passed value") && objectLiteralPropertyOneDescriptor.writable && !objectLiteralPropertyTwoDescriptor.enumerable && !objectLiteralPropertyThreeDescriptor.configurable){
+ if ((objectViaCustomConstructor.propertyOne === "new propertyOne value") && (objectViaCustomConstructor.propertyTwo === "propertyTwo value") && (objectViaCustomConstructor.propertyThree === "propertyFour value as propertyThree getter function return value") && (objectViaCustomConstructor.propertyFive === "propertyFive value appended by propertyThree setter function passed value") && objectViaCustomConstructorPropertyOneDescriptor.writable && !objectViaCustomConstructorPropertyTwoDescriptor.enumerable && !objectViaCustomConstructorPropertyThreeDescriptor.configurable && (objectLiteral.propertyOne === "new propertyOne value") && (objectLiteral.propertyTwo === "propertyTwo value") && (objectLiteral.propertyThree === "propertyFour value as propertyThree getter function return value") && (objectLiteral.propertyFive === "propertyFive value appended by propertyThree setter function passed value") && objectLiteralPropertyOneDescriptor.writable && !objectLiteralPropertyTwoDescriptor.enumerable && !objectLiteralPropertyThreeDescriptor.configurable){
   document.write("<p><b>Pass</b> (at least partial/possibly full support): The web browser recognizes the JavaScript <code>defineProperty()</code> method, and supports at least one <code>defineProperty()</code> method capability. The web browser at least partially/possibly fully supports the JavaScript <code>defineProperty()</code> method. Positive determination of full web browser support is beyond the scope of this test.</p>");
  } else {
   document.write("<p><b>Pass/Fail</b> (partial support): The web browser recognizes the JavaScript <code>defineProperty()</code> method, but does not support at least one <code>defineProperty()</code> method capability. The web browser partially supports the JavaScript <code>defineProperty()</code> method.</p>");

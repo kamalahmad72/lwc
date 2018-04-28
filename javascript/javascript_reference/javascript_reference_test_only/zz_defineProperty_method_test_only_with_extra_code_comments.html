@@ -27,14 +27,14 @@ if (Object.defineProperty){
   this.propertyFour = "propertyFour value as propertyThree getter function return value";
   this.propertyFive = "propertyFive value appended by propertyThree setter function";
  }
- var customConstructorObject = new CustomConstructor();
- Object.defineProperty(customConstructorObject, "propertyOne", { // Change customConstructorObject.propertyOne value attribute value. IE8 error: Object doesn't support this action.
+ var objectViaCustomConstructor = new CustomConstructor();
+ Object.defineProperty(objectViaCustomConstructor, "propertyOne", { // Change objectViaCustomConstructor.propertyOne value attribute value. IE8 error: Object doesn't support this action.
   value: "new propertyOne value"
  });
- Object.defineProperty(customConstructorObject, "propertyTwo", { // Create customConstructorObject.propertyTwo data property. Here, property writable, enumerable, and configurable attributes default to boolean false.
+ Object.defineProperty(objectViaCustomConstructor, "propertyTwo", { // Create objectViaCustomConstructor.propertyTwo data property. Here, property writable, enumerable, and configurable attributes default to boolean false.
   value: "propertyTwo value"
  });
- Object.defineProperty(customConstructorObject, "propertyThree", { // Create customConstructorObject.propertyThree accessor property. Here, property enumerable and configurable attributes default to boolean false.
+ Object.defineProperty(objectViaCustomConstructor, "propertyThree", { // Create objectViaCustomConstructor.propertyThree accessor property. Here, property enumerable and configurable attributes default to boolean false.
   get: function(){
 //   console.log("in getter");
    return this.propertyFour;
@@ -45,12 +45,12 @@ if (Object.defineProperty){
    this.propertyFive += value;
   }
  });
- customConstructorObject.propertyThree = " passed value"; // "propertyFive value appended by propertyThree setter function passed value".
+ objectViaCustomConstructor.propertyThree = " passed value"; // "propertyFive value appended by propertyThree setter function passed value".
 
-console.log(customConstructorObject.propertyThree); // "propertyFour value as propertyThree getter function return value". Read from accessor property triggers getter. Return value set on accessor property. To use return value without triggering getter again, assign accessor property to variable (eg, var myvar = customConstructorObject.propertyThree) and then use variable.
-//console.log(customConstructorObject.propertyThree = "passed value"); // "passed value". Write to accessor property triggers setter. Assigned value passed as argument to setter function. Assignment does not overwrite getter return value being set on accessor property (see below).
-console.log(customConstructorObject.propertyThree); // "propertyFour value as propertyThree getter function return value".
-console.log(customConstructorObject.propertyFive); // "propertyFive value appended by propertyThree setter function passed value".
+console.log(objectViaCustomConstructor.propertyThree); // "propertyFour value as propertyThree getter function return value". Read from accessor property triggers getter. Return value set on accessor property. To use return value without triggering getter again, assign accessor property to variable (eg, var myvar = objectViaCustomConstructor.propertyThree) and then use variable.
+//console.log(objectViaCustomConstructor.propertyThree = "passed value"); // "passed value". Write to accessor property triggers setter. Assigned value passed as argument to setter function. Assignment does not overwrite getter return value being set on accessor property (see below).
+console.log(objectViaCustomConstructor.propertyThree); // "propertyFour value as propertyThree getter function return value".
+console.log(objectViaCustomConstructor.propertyFive); // "propertyFive value appended by propertyThree setter function passed value".
 console.log("---");
 
  var objectLiteral = {
@@ -82,24 +82,24 @@ console.log(objectLiteral.propertyThree); // "propertyFour value as propertyThre
 console.log(objectLiteral.propertyThree); // "propertyFour value as propertyThree getter function return value".
 console.log(objectLiteral.propertyFive); // "propertyFive value appended by propertyThree setter function passed value".
 
- var customConstructorObjectPropertyOneDescriptor = Object.getOwnPropertyDescriptor(customConstructorObject, "propertyOne");
- var customConstructorObjectPropertyTwoDescriptor = Object.getOwnPropertyDescriptor(customConstructorObject, "propertyTwo");
- var customConstructorObjectPropertyThreeDescriptor = Object.getOwnPropertyDescriptor(customConstructorObject, "propertyThree");
-//console.log(customConstructorObjectPropertyOneDescriptor); // Object { value: "new propertyOne value", writable: true, enumerable: true, configurable: true }.
-//console.log(customConstructorObjectPropertyOneDescriptor.value); // "new propertyOne value".
-//console.log(customConstructorObjectPropertyOneDescriptor.writable); // true.
-//console.log(customConstructorObjectPropertyOneDescriptor.enumerable); // true.
-//console.log(customConstructorObjectPropertyOneDescriptor.configurable); // true.
-//console.log(customConstructorObjectPropertyTwoDescriptor); // Object { value: "propertyTwo value", writable: false, enumerable: false, configurable: false }.
-//console.log(customConstructorObjectPropertyTwoDescriptor.value); // "propertyTwo value".
-//console.log(customConstructorObjectPropertyTwoDescriptor.writable); // false.
-//console.log(customConstructorObjectPropertyTwoDescriptor.enumerable); // false.
-//console.log(customConstructorObjectPropertyTwoDescriptor.configurable); // false.
-//console.log(customConstructorObjectPropertyThreeDescriptor); // Object { get: get(), set: set(), enumerable: false, configurable: false }.
-//console.log(customConstructorObjectPropertyThreeDescriptor.get); // function get().
-//console.log(customConstructorObjectPropertyThreeDescriptor.set); // function set().
-//console.log(customConstructorObjectPropertyThreeDescriptor.enumerable); // false.
-//console.log(customConstructorObjectPropertyThreeDescriptor.configurable); // false.
+ var objectViaCustomConstructorPropertyOneDescriptor = Object.getOwnPropertyDescriptor(objectViaCustomConstructor, "propertyOne");
+ var objectViaCustomConstructorPropertyTwoDescriptor = Object.getOwnPropertyDescriptor(objectViaCustomConstructor, "propertyTwo");
+ var objectViaCustomConstructorPropertyThreeDescriptor = Object.getOwnPropertyDescriptor(objectViaCustomConstructor, "propertyThree");
+//console.log(objectViaCustomConstructorPropertyOneDescriptor); // Object { value: "new propertyOne value", writable: true, enumerable: true, configurable: true }.
+//console.log(objectViaCustomConstructorPropertyOneDescriptor.value); // "new propertyOne value".
+//console.log(objectViaCustomConstructorPropertyOneDescriptor.writable); // true.
+//console.log(objectViaCustomConstructorPropertyOneDescriptor.enumerable); // true.
+//console.log(objectViaCustomConstructorPropertyOneDescriptor.configurable); // true.
+//console.log(objectViaCustomConstructorPropertyTwoDescriptor); // Object { value: "propertyTwo value", writable: false, enumerable: false, configurable: false }.
+//console.log(objectViaCustomConstructorPropertyTwoDescriptor.value); // "propertyTwo value".
+//console.log(objectViaCustomConstructorPropertyTwoDescriptor.writable); // false.
+//console.log(objectViaCustomConstructorPropertyTwoDescriptor.enumerable); // false.
+//console.log(objectViaCustomConstructorPropertyTwoDescriptor.configurable); // false.
+//console.log(objectViaCustomConstructorPropertyThreeDescriptor); // Object { get: get(), set: set(), enumerable: false, configurable: false }.
+//console.log(objectViaCustomConstructorPropertyThreeDescriptor.get); // function get().
+//console.log(objectViaCustomConstructorPropertyThreeDescriptor.set); // function set().
+//console.log(objectViaCustomConstructorPropertyThreeDescriptor.enumerable); // false.
+//console.log(objectViaCustomConstructorPropertyThreeDescriptor.configurable); // false.
 //console.log("---");
  var objectLiteralPropertyOneDescriptor = Object.getOwnPropertyDescriptor(objectLiteral, "propertyOne");
  var objectLiteralPropertyTwoDescriptor = Object.getOwnPropertyDescriptor(objectLiteral, "propertyTwo");
@@ -119,7 +119,7 @@ console.log(objectLiteral.propertyFive); // "propertyFive value appended by prop
 //console.log(objectLiteralPropertyThreeDescriptor.set); // function set().
 //console.log(objectLiteralPropertyThreeDescriptor.enumerable); // false.
 //console.log(objectLiteralPropertyThreeDescriptor.configurable); // false.
- if ((customConstructorObject.propertyOne === "new propertyOne value") && (customConstructorObject.propertyTwo === "propertyTwo value") && (customConstructorObject.propertyThree === "propertyFour value as propertyThree getter function return value") && (customConstructorObject.propertyFive === "propertyFive value appended by propertyThree setter function passed value") && customConstructorObjectPropertyOneDescriptor.writable && !customConstructorObjectPropertyTwoDescriptor.enumerable && !customConstructorObjectPropertyThreeDescriptor.configurable && (objectLiteral.propertyOne === "new propertyOne value") && (objectLiteral.propertyTwo === "propertyTwo value") && (objectLiteral.propertyThree === "propertyFour value as propertyThree getter function return value") && (objectLiteral.propertyFive === "propertyFive value appended by propertyThree setter function passed value") && objectLiteralPropertyOneDescriptor.writable && !objectLiteralPropertyTwoDescriptor.enumerable && !objectLiteralPropertyThreeDescriptor.configurable){
+ if ((objectViaCustomConstructor.propertyOne === "new propertyOne value") && (objectViaCustomConstructor.propertyTwo === "propertyTwo value") && (objectViaCustomConstructor.propertyThree === "propertyFour value as propertyThree getter function return value") && (objectViaCustomConstructor.propertyFive === "propertyFive value appended by propertyThree setter function passed value") && objectViaCustomConstructorPropertyOneDescriptor.writable && !objectViaCustomConstructorPropertyTwoDescriptor.enumerable && !objectViaCustomConstructorPropertyThreeDescriptor.configurable && (objectLiteral.propertyOne === "new propertyOne value") && (objectLiteral.propertyTwo === "propertyTwo value") && (objectLiteral.propertyThree === "propertyFour value as propertyThree getter function return value") && (objectLiteral.propertyFive === "propertyFive value appended by propertyThree setter function passed value") && objectLiteralPropertyOneDescriptor.writable && !objectLiteralPropertyTwoDescriptor.enumerable && !objectLiteralPropertyThreeDescriptor.configurable){
   element.innerHTML = "<b>Pass</b> (at least partial/possibly full support): The web browser recognizes the JavaScript <code>defineProperty()</code> method, and supports at least one <code>defineProperty()</code> method capability. The web browser at least partially/possibly fully supports the JavaScript <code>defineProperty()</code> method. Positive determination of full web browser support is beyond the scope of this test.";
  } else {
   element.innerHTML = "<b>Pass/Fail</b> (partial support): The web browser recognizes the JavaScript <code>defineProperty()</code> method, but does not support at least one <code>defineProperty()</code> method capability. The web browser partially supports the JavaScript <code>defineProperty()</code> method.";
