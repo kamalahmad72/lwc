@@ -3,7 +3,7 @@
 /* File: /web_server_root_directory/javascripts/lwc/javascript_web_browser_detection_update.js.
  * Purpose: Determine web browser name, version, and report whether or not web browser is latest known official version, and, if web browser is not latest known official version, provide link to download web browser.
  * Used in: javascript_web_browser_detection_update.php.
- * Last reviewed/updated: 19 Apr 2018.
+ * Last reviewed/updated: 27 Apr 2018.
  * Published: 04 Feb 2014.
  * Unobtrusive: 1.) decouple HTML/JavaScript: a.) no register JavaScript event handlers in HTML via HTML attributes (eg, onload and onclick), and b.) no embed JavaScripts in HTML via HTML script element; 2.) as reasonable, decouple CSS/JavaScript. Eg, as reasonable, use JavaScript to change HTML class attribute value assignments (loose coupling), not use JavaScript to change JavaScript style object CSS property value assignments (tight coupling); and 3.) no define JavaScript variables and functions on JavaScript global scope.
  * Web browser support: Supported web browsers are those that the JavaScript is designed and tested to positively detect/report on: IE6+ for Windows XP, IE7+ for Windows Vista, IE8+ for Windows 7, IE10+ for Windows 8, IE11+ for Windows 8.1, IE11+ and ED12+ for Windows 10, FF0.8+ for Windows, CH2+ for Windows, OP5+ for Windows, and VV1+ for Windows. Unsupported web browsers are those that the JavaScript is not designed and tested to positively detect/report on: SF for Windows and SM for Windows.
@@ -46,10 +46,10 @@ var BrowserDetectionUpdateUtil = {
 /*
    latestVersionSM = "2.40",
 */
-   latestVersionCH = "66.0.3359.117",
-   latestVersionOP = "52.0.2871.64",
-   latestVersionVVPerUaString = "1.95.1077.60", // Line added 30 Jun 2017 for Vivaldi 1.10+ user-agent string value does not report correct version of Vivaldi.
-   latestVersionVV = "1.14.1077.60";
+   latestVersionCH = "66.0.3359.139",
+   latestVersionOP = "52.0.2871.99",
+   latestVersionVVPerUaString = "1.96.1147.36", // Line added 30 Jun 2017 for Vivaldi 1.10+ user-agent string value does not report correct version of Vivaldi.
+   latestVersionVV = "1.15.1147.36";
   var linkDownloadIEForXP = "<a href='http://windows.microsoft.com/ie/'>Internet Explorer " + latestVersionIEForXP + " for Windows XP (windows.microsoft.com)</a>",
    linkDownloadIEForVista = "<a href='http://windows.microsoft.com/ie/'>Internet Explorer " + latestVersionIEForVista + " for Windows Vista (windows.microsoft.com)</a>",
    linkDownloadIEFor7 = "<a href='http://windows.microsoft.com/ie/'>Internet Explorer " + latestVersionIEFor7 + " for Windows 7 (windows.microsoft.com)</a>",
