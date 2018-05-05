@@ -4,7 +4,7 @@
 /* File: /web_server_root_directory/bom/web_browser_useragent_values_sections.php.
  * Purpose: Web page sections.
  * Used in: /web_server_root_directory/bom/web_browser_useragent_values.php.
- * Last reviewed/updated: 27 Apr 2018.
+ * Last reviewed/updated: 04 Mar 2018.
  * Published: 21 Sep 2016. */
 return
    "<section>
@@ -486,7 +486,7 @@ return
 
      <h4><a id='ediew10v1709'></a>2.8.5. Edge and Internet Explorer For Windows 10 Version 1709</h4>
 
-<!-- Windows 10 Version 1709 Build 16299 32-bit = Installed 10 Professional from MSDN subscriptions Windows 10 (Multiple Editions) Version 1709 (Updated September 2017) (x86) - DVD (English) en_windows_10_multi-edition_version_1709_updated_sept_2017_x86_dvd_100090818.iso. -->
+<!-- Windows 10 Version 1709 Build 16299 32-bit = Installed 10 Professional from MSDN subscriptions Windows 10 (multi-edition) Version 1709 (Updated Sept 2017) (x86) - DVD (English) en_windows_10_multi-edition_version_1709_updated_sept_2017_x86_dvd_100090818.iso. -->
 
      <p>Edge 41 included with Windows 10 Version 1709 Build 16299 32-bit (Edge 41.16299.15.0. EdgeHTML 16.16299.)<br />
      mozilla/5.0 (windows nt 10.0) applewebkit/537.36 (khtml, like gecko) chrome/58.0.3029.110 safari/537.36 edge/16.16299</p>
@@ -497,7 +497,7 @@ return
      <p>Internet Explorer 11.0 included with Windows 10 Version 1709 Build 16299 32-bit (Compatibility View) (IE 11.15.16299.0)<br />
      mozilla/4.0 (compatible; msie 7.0; windows nt 10.0; trident/7.0; .net4.0c; .net4.0e)</p>
 
-<!-- Windows 10 Version 1709 Build 16299 64-bit = Installed 10 Professional from MSDN subscriptions Windows 10 (Multiple Editions) Version 1709 (Updated September 2017) (x64) - DVD (English) en_windows_10_multi-edition_version_1709_updated_sept_2017_x64_dvd_100090817.iso. -->
+<!-- Windows 10 Version 1709 Build 16299 64-bit = Installed 10 Professional from MSDN subscriptions Windows 10 (multi-edition) Version 1709 (Updated Sept 2017) (x64) - DVD (English) en_windows_10_multi-edition_version_1709_updated_sept_2017_x64_dvd_100090817.iso. -->
 
      <p>Edge 41 included with Windows 10 Version 1709 Build 16299 64-bit (Edge 41.16299.15.0. EdgeHTML 16.16299.)<br />
      mozilla/5.0 (windows nt 10.0; win64; x64) applewebkit/537.36 (khtml, like gecko) chrome/58.0.3029.110 safari/537.36 edge/16.16299</p>
@@ -506,6 +506,30 @@ return
      mozilla/5.0 (windows nt 10.0; wow64; trident/7.0; .net4.0c; .net4.0e; rv:11.0) like gecko</p>
 
      <p>Internet Explorer 11.0 included with Windows 10 Version 1709 Build 16299 64-bit (Compatibility View) (IE 11.15.16299.0)<br />
+     mozilla/4.0 (compatible; msie 7.0; windows nt 10.0; wow64; trident/7.0; .net4.0c; .net4.0e)</p>
+
+     <h4><a id='ediew10v1803'></a>2.8.6. Edge and Internet Explorer For Windows 10 Version 1803</h4>
+
+<!-- Windows 10 Version 1803 Build 17134.1 32-bit = Installed 10 Professional from MSDN subscriptions Windows 10 (consumer editions) Version 1803 (Updated March 2018) (x86) - DVD (English) en_windows_10_consumer_editions_version_1803_updated_march_2018_x86_dvd_12063380.iso. -->
+
+     <p>Edge 42 included with Windows 10 Version 1803 Build 17134.1 32-bit (Edge 42.17134.1.0. EdgeHTML 17.17134.)<br />
+     mozilla/5.0 (windows nt 10.0) applewebkit/537.36 (khtml, like gecko) chrome/64.0.3282.140 safari/537.36 edge/17.17134</p>
+
+     <p>Internet Explorer 11.0 included with Windows 10 Version 1803 Build 17134.1 32-bit (IE 11.1.17134.0)<br />
+     mozilla/5.0 (windows nt 10.0; trident/7.0; .net4.0c; .net4.0e; rv:11.0) like gecko</p>
+
+     <p>Internet Explorer 11.0 included with Windows 10 Version 1803 Build 17134.1 32-bit (Compatibility View) (IE 11.1.17134.0)<br />
+     mozilla/4.0 (compatible; msie 7.0; windows nt 10.0; trident/7.0; .net4.0c; .net4.0e)</p>
+
+<!-- Windows 10 Version 1803 Build 17134.1 64-bit = Installed 10 Professional from MSDN subscriptions Windows 10 (consumer editions) Version 1803 (Updated March 2018) (x64) - DVD (English) en_windows_10_consumer_editions_version_1803_updated_march_2018_x64_dvd_12063379.iso. -->
+
+     <p>Edge 42 included with Windows 10 Version 1803 Build 17134.1 64-bit (Edge 42.17134.1.0. EdgeHTML 17.17134.)<br />
+     mozilla/5.0 (windows nt 10.0; win64; x64) applewebkit/537.36 (khtml, like gecko) chrome/64.0.3282.140 safari/537.36 edge/17.17134</p>
+
+     <p>Internet Explorer 11.0 included with Windows 10 Version 1803 Build 17134.1 64-bit (IE 11.1.17134.0)<br />
+     mozilla/5.0 (windows nt 10.0; wow64; trident/7.0; .net4.0c; .net4.0e; rv:11.0) like gecko</p>
+
+     <p>Internet Explorer 11.0 included with Windows 10 Version 1803 Build 17134.1 64-bit (Compatibility View) (IE 11.1.17134.0)<br />
      mozilla/4.0 (compatible; msie 7.0; windows nt 10.0; wow64; trident/7.0; .net4.0c; .net4.0e)</p>
 
     </section>

@@ -4,7 +4,7 @@
 /* File: /web_server_root_directory/bom/versions_ie_ed_windows_sections.php.
  * Purpose: Web page sections.
  * Used in: /web_server_root_directory/bom/versions_ie_ed_windows.php.
- * Last reviewed/updated: 24 Oct 2017.
+ * Last reviewed/updated: 04 May 2018.
  * Published: 21 Sep 2016. */
 return
    "<section>
@@ -76,7 +76,8 @@ return
 
 Since the version of software bundled with Windows has been the same for Windows 32-bit and 64-bit, for now on check 64-bit, not 32-bit and 64-bit.
 
-		<li>Windows 10 Version 1709 = Installed Windows 10 Professional from MSDN subscriptions Windows 10 (Multiple Editions) Version 1709 (Updated September 2017) (x64) - DVD (English) en_windows_10_multi-edition_version_1709_updated_sept_2017_x64_dvd_100090817.iso.</li>
+		<li>Windows 10 Version 1709 = Installed Windows 10 Professional from MSDN subscriptions Windows 10 (multi-edition) Version 1709 (Updated Sept 2017) (x64) - DVD (English) en_windows_10_multi-edition_version_1709_updated_sept_2017_x64_dvd_100090817.iso.</li>
+		<li>Windows 10 Version 1803 = Installed Windows 10 Professional from MSDN subscriptions Windows 10 (consumer editions) Version 1803 (Updated March 2018) (x64) - DVD (English) en_windows_10_consumer_editions_version_1803_updated_march_2018_x64_dvd_12063379.iso.</li>
 	</ul>
 -->
 
@@ -347,6 +348,8 @@ http://blogs.windows.com/windows/b/windowsexperience/archive/2014/04/08/why-i-lo
          (10.0.15063.0)</th><!-- Redstone 2/Creators Update -->
         <th>10 Version 1709<br />
          (10.0.16299.15)</th><!-- Redstone 3/Fall Creators Update -->
+        <th>10 Version 1803<br />
+         (10.0.17134.1)</th><!-- Redstone 4/April 2018 Update -->
        </tr>
       </thead>
       <tbody>
@@ -358,6 +361,7 @@ http://blogs.windows.com/windows/b/windowsexperience/archive/2014/04/08/why-i-lo
         <td>02 Aug 2016</td>
         <td>11 Apr 2017</td>
         <td>17 Oct 2017</td>
+        <td>30 Apr 2018</td>
        </tr>
        <tr>
         <th>Included With</th>
@@ -396,9 +400,17 @@ http://blogs.windows.com/windows/b/windowsexperience/archive/2014/04/08/why-i-lo
           <li>IE11.15.16299.0.</li>
          </ul>
         </td>
+        <td>
+         <ul>
+          <li>ED42.17134.1.0<br />
+           (EdgeHTML 17.17134).</li>
+          <li>IE11.1.17134.0.</li>
+         </ul>
+        </td>
        </tr>
        <tr>
         <th>Also Supports</th>
+        <td>-</td>
         <td>-</td>
         <td>-</td>
         <td>-</td>

@@ -4,7 +4,7 @@
 /* File: /web_server_root_directory/bom/web_browser_useragent_values_toc.php.
  * Purpose: Web page table of contents.
  * Used in: /web_server_root_directory/bom/web_browser_useragent_values.php.
- * Last reviewed/updated: 19 Oct 2017.
+ * Last reviewed/updated: 04 May 2018.
  * Published: 21 Sep 2016. */
 return
     "<div class='toc-sec'><div class='toc-num'>1.</div><div class='toc-sec-title'><a href='#introduction'>Introduction</a></div></div>
@@ -23,6 +23,7 @@ return
      <div class='toc-sub2sec'><div class='toc-num'>2.8.3.</div><div class='toc-sub2sec-title'><a href='#ediew10v1607'>Edge and Internet Explorer For Windows 10 Version 1607</a></div></div>
      <div class='toc-sub2sec'><div class='toc-num'>2.8.4.</div><div class='toc-sub2sec-title'><a href='#ediew10v1703'>Edge and Internet Explorer For Windows 10 Version 1703</a></div></div>
      <div class='toc-sub2sec'><div class='toc-num'>2.8.5.</div><div class='toc-sub2sec-title'><a href='#ediew10v1709'>Edge and Internet Explorer For Windows 10 Version 1709</a></div></div>
+     <div class='toc-sub2sec'><div class='toc-num'>2.8.6.</div><div class='toc-sub2sec-title'><a href='#ediew10v1803'>Edge and Internet Explorer For Windows 10 Version 1803</a></div></div>
      <div class='toc-sec'><div class='toc-num'>3.</div><div class='toc-sec-title'><a href='#ff'>Firefox</a></div></div>
      <div class='toc-sec'><div class='toc-num'>4.</div><div class='toc-sec-title'><a href='#ch'>Chrome</a></div></div>
      <div class='toc-sec'><div class='toc-num'>5.</div><div class='toc-sec-title'><a href='#op'>Opera</a></div></div>
