@@ -10,7 +10,8 @@
  * Objects: BrowserDetectionUpdateUtil.
  * NOTE:
  * Support for SM1+ for Windows commented out 07 Jul 2016.
- * Three changes on Jun 30 for Vivaldi 1.10+ user-agent string value does not report correct version of Vivaldi. */
+ * 30 Jun 2017: make three changes for Vivaldi 1.10+ user-agent string value does not report correct version of Vivaldi.
+ * 05 May 2018: Windows 10 version build.update (eg, Windows 10 version 1709 build 16299 update 371 aka 1709 16299.371 and 10.0.16299.371). Update number is appended to both OS build number and Edge version number (eg, OS 10.0.16299.371 has Edge 41.16299.371.0). Since update number is appended to Edge version number and this changes with time, to avoid reporting incorrect update number, do not hard code update number appended to Edge version number. Then decided to remove build.update information throughout as unnecessary. */
 
 /* -------------------- JAVASCRIPT OBJECT DEFINITIONS -------------------- */
 
@@ -28,24 +29,23 @@ var BrowserDetectionUpdateUtil = {
    latestVersionIEFor8 = "10.0",
    latestVersionIEFor81 = "11.0",
    latestVersionIEFor10 = "11.0",
-   // W10 version build.update. Eg, Windows 10 version 1709 build 16299 update 371 aka 1709 16299.371 and 10.0.16299.371. Update number is appended to both OS build number and Edge version number. Ex, OS 10.0.16299.371 has Edge 41.16299.371.0. Since update number is appended to Edge version number and this changes with time, to avoid reporting incorrect update number, do not hard code update number appended to Edge version number in section below.
    latestVersionEDHTMLFor10v1507 = "12.10240",
-   latestVersionEDFor10v1507 = "12.10240 (Edge 20.10240)",
+   latestVersionEDFor10v1507 = "12 (Edge 20)",
    latestVersionEDHTMLFor10v1511 = "13.10586",
-   latestVersionEDFor10v1511 = "13.10586 (Edge 25.10586)",
+   latestVersionEDFor10v1511 = "13 (Edge 25)",
    latestVersionEDHTMLFor10v1607 = "14.14393",
-   latestVersionEDFor10v1607 = "14.14393 (Edge 38.14393)",
+   latestVersionEDFor10v1607 = "14 (Edge 38)",
    latestVersionEDHTMLFor10v1703 = "15.15063",
-   latestVersionEDFor10v1703 = "15.15063 (Edge 40.15063)",
+   latestVersionEDFor10v1703 = "15 (Edge 40)",
    latestVersionEDHTMLFor10v1709 = "16.16299",
-   latestVersionEDFor10v1709 = "16.16299 (Edge 41.16299)",
+   latestVersionEDFor10v1709 = "16 (Edge 41)",
    latestVersionEDHTMLFor10v1803 = "17.17134",
-   latestVersionEDFor10v1803 = "17.17134 (Edge 42.17134)",
+   latestVersionEDFor10v1803 = "17 (Edge 42)",
   // IMPORTANT: Because FF 16+ major releases (e.g., FF58) and point releases (e.g, FF58.0.1) have identical user-agent string values, the logic for FF is slightly different than, for example, SM.
    latestVersionFFPerUaString = "59.0", // Enter latest version FF per user-agent string value, not latest actual version FF. Set to string. Eg, if latest version FF is 50.0.1 but its user-agent string reports 50.0, set to string "50.0" not "50.0.1". REQUIRED.
    isFFPointReleasesWithIdenticalUaStringAsFFMajorRelease = true, // Is there FF point releases with identical user-agent string value as FF major release? Set to boolean true or false. Eg, if FF 50.0 and FF 50.0.1 (+/- and FF 50.0.2, etc) have identical user-agent strings reporting 50.0, set to boolean true. Eg, if there is a FF 50.0 but there is no FF 50.0.1, set to boolean false. REQUIRED.
-   latestVersionFF = "59.0.2", // Enter latest actual version FF, not latest version FF per user-agent string value. Set to string. Eg, if latest version FF is 50.0.1 but its user-agent string reports 50.0, set to string "50.0.1". REQUIRED ONLY IF isFFPointReleasesWithIdenticalUaStringAsFFMajorRelease = true. However, if isFFPointReleasesWithIdenticalUaStringAsFFMajorRelease = false, set to latestVersionFFPerUaString. This way, if FF is FF beta, the report will display the correct latest known official version FF.
-   listVersionsFFWithIdenticalUaStringExceptLatestVersionFF = "59.0, 59.0.1,", // List versions FF with identical user-agent string values except latest version FF. Set to string. Eg, if latestVersionFF = "50.0.1", set to string "50.0" (NOTE: no trailing comma in string if list contains only a single version). Eg, if latestVersionFF = "50.0.2", set to string "50.0, 50.0.1," (NOTE: trailing comma in string if list contains multiple versions). REQUIRED ONLY IF isFFPointReleasesWithIdenticalUaStringAsFFMajorRelease = true. Therefore, if isFFPointReleasesWithIdenticalUaStringAsFFMajorRelease = false, can leave value as is, can set value to empty string "", or can set value to anything.
+   latestVersionFF = "59.0.3", // Enter latest actual version FF, not latest version FF per user-agent string value. Set to string. Eg, if latest version FF is 50.0.1 but its user-agent string reports 50.0, set to string "50.0.1". REQUIRED ONLY IF isFFPointReleasesWithIdenticalUaStringAsFFMajorRelease = true. However, if isFFPointReleasesWithIdenticalUaStringAsFFMajorRelease = false, set to latestVersionFFPerUaString. This way, if FF is FF beta, the report will display the correct latest known official version FF.
+   listVersionsFFWithIdenticalUaStringExceptLatestVersionFF = "59.0, 59.0.1, 59.0.2,", // List versions FF with identical user-agent string values except latest version FF. Set to string. Eg, if latestVersionFF = "50.0.1", set to string "50.0" (NOTE: no trailing comma in string if list contains only a single version). Eg, if latestVersionFF = "50.0.2", set to string "50.0, 50.0.1," (NOTE: trailing comma in string if list contains multiple versions). REQUIRED ONLY IF isFFPointReleasesWithIdenticalUaStringAsFFMajorRelease = true. Therefore, if isFFPointReleasesWithIdenticalUaStringAsFFMajorRelease = false, can leave value as is, can set value to empty string "", or can set value to anything.
 /*
    latestVersionSM = "2.40",
 */
@@ -208,7 +208,7 @@ var BrowserDetectionUpdateUtil = {
    // userAgent = "enter test user-agent string here and uncomment out";
    // Is operating system Windows 10 Version 1507 Build 10240?
    if (userAgent.indexOf("10240") !== -1){
-    operatingSystem = " for Windows 10 Version 1507 Build 10240";
+    operatingSystem = " for Windows 10 Version 1507";
     // Is latest version of ED for Windows 10 Version 1507 Build 10240?
     if (userAgent.indexOf("edge/" + latestVersionEDHTMLFor10v1507) !== -1){
      browserStatus = "latestVersion";
@@ -216,13 +216,13 @@ var BrowserDetectionUpdateUtil = {
     // Report error detecting version of ED for Windows 10 Version 1507 Build 10240.
     } else {
      browserStatus = "unknown";
-     reasonNotDetected = "Most likely the version of Edge for Windows 10 Version 1507 Build 10240 is an unofficial version and not supported by the JavaScript.";
-     errorReportLineAndIssue = "Line: 220. Issue: Detect version of Edge for Windows 10 Version 1507 Build 10240 failed.";
+     reasonNotDetected = "Most likely the version of Edge for Windows 10 Version 1507 is an unofficial version and not supported by the JavaScript.";
+     errorReportLineAndIssue = "Line: 220. Issue: Detect version of Edge for Windows 10 Version 1507 failed.";
     }
    }
    // Is operating system Windows 10 Version 1511 Build 10586?
    else if (userAgent.indexOf("10586") !== -1){
-    operatingSystem = " for Windows 10 Version 1511 Build 10586";
+    operatingSystem = " for Windows 10 Version 1511";
     // Is latest version of ED for Windows 10 Version 1511 Build 10586?
     if (userAgent.indexOf("edge/" + latestVersionEDHTMLFor10v1511) !== -1){
      browserStatus = "latestVersion";
@@ -230,13 +230,13 @@ var BrowserDetectionUpdateUtil = {
     // Report error detecting version of ED for Windows 10 Version 1511 Build 10586.
     } else {
      browserStatus = "unknown";
-     reasonNotDetected = "Most likely the version of Edge for Windows 10 Version 1511 Build 10586 is an unofficial version and not supported by the JavaScript.";
-     errorReportLineAndIssue = "Line: 234. Issue: Detect version of Edge for Windows 10 Version 1511 Build 10586 failed.";
+     reasonNotDetected = "Most likely the version of Edge for Windows 10 Version 1511 is an unofficial version and not supported by the JavaScript.";
+     errorReportLineAndIssue = "Line: 234. Issue: Detect version of Edge for Windows 10 Version 1511 failed.";
     }
    }
    // Is operating system Windows 10 Version 1607 Build 14393?
    else if (userAgent.indexOf("14393") !== -1){
-    operatingSystem = " for Windows 10 Version 1607 Build 14393";
+    operatingSystem = " for Windows 10 Version 1607";
     // Is latest version of ED for Windows 10 Version 1607 Build 14393?
     if (userAgent.indexOf("edge/" + latestVersionEDHTMLFor10v1607) !== -1){
      browserStatus = "latestVersion";
@@ -244,13 +244,13 @@ var BrowserDetectionUpdateUtil = {
     // Report error detecting version of ED for Windows 10 Version 1607 Build 14393.
     } else {
      browserStatus = "unknown";
-     reasonNotDetected = "Most likely the version of Edge for Windows 10 Version 1607 Build 14393 is an unofficial version and not supported by the JavaScript.";
-     errorReportLineAndIssue = "Line: 248. Issue: Detect version of Edge for Windows 10 Version 1607 Build 14393 failed.";
+     reasonNotDetected = "Most likely the version of Edge for Windows 10 Version 1607 is an unofficial version and not supported by the JavaScript.";
+     errorReportLineAndIssue = "Line: 248. Issue: Detect version of Edge for Windows 10 Version 1607 failed.";
     }
    }
    // Is operating system Windows 10 Version 1703 Build 15063?
    else if (userAgent.indexOf("15063") !== -1){
-    operatingSystem = " for Windows 10 Version 1703 Build 15063";
+    operatingSystem = " for Windows 10 Version 1703";
     // Is latest version of ED for Windows 10 Version 1703 Build 15063?
     if (userAgent.indexOf("edge/" + latestVersionEDHTMLFor10v1703) !== -1){
      browserStatus = "latestVersion";
@@ -258,13 +258,13 @@ var BrowserDetectionUpdateUtil = {
     // Report error detecting version of ED for Windows 10 Version 1703 Build 15063.
     } else {
      browserStatus = "unknown";
-     reasonNotDetected = "Most likely the version of Edge for Windows 10 Version 1703 Build 15063 is an unofficial version and not supported by the JavaScript.";
-     errorReportLineAndIssue = "Line: 262. Issue: Detect version of Edge for Windows 10 Version 1703 Build 15063 failed.";
+     reasonNotDetected = "Most likely the version of Edge for Windows 10 Version 1703 is an unofficial version and not supported by the JavaScript.";
+     errorReportLineAndIssue = "Line: 262. Issue: Detect version of Edge for Windows 10 Version 1703 failed.";
     }
    }
    // Is operating system Windows 10 Version 1709 Build 16299?
    else if (userAgent.indexOf("16299") !== -1){
-    operatingSystem = " for Windows 10 Version 1709 Build 16299";
+    operatingSystem = " for Windows 10 Version 1709";
     // Is latest version of ED for Windows 10 Version 1709 Build 16299?
     if (userAgent.indexOf("edge/" + latestVersionEDHTMLFor10v1709) !== -1){
      browserStatus = "latestVersion";
@@ -272,13 +272,13 @@ var BrowserDetectionUpdateUtil = {
     // Report error detecting version of ED for Windows 10 Version 1709 Build 16299.
     } else {
      browserStatus = "unknown";
-     reasonNotDetected = "Most likely the version of Edge for Windows 10 Version 1709 Build 16299 is an unofficial version and not supported by the JavaScript.";
-     errorReportLineAndIssue = "Line: 276. Issue: Detect version of Edge for Windows 10 Version 1709 Build 16299 failed.";
+     reasonNotDetected = "Most likely the version of Edge for Windows 10 Version 1709 is an unofficial version and not supported by the JavaScript.";
+     errorReportLineAndIssue = "Line: 276. Issue: Detect version of Edge for Windows 10 Version 1709 failed.";
     }
    }
    // Is operating system Windows 10 Version 1803 Build 17134?
    else if (userAgent.indexOf("17134") !== -1){
-    operatingSystem = " for Windows 10 Version 1803 Build 17134";
+    operatingSystem = " for Windows 10 Version 1803";
     // Is latest version of ED for Windows 10 Version 1803 Build 17134?
     if (userAgent.indexOf("edge/" + latestVersionEDHTMLFor10v1803) !== -1){
      browserStatus = "latestVersion";
@@ -286,8 +286,8 @@ var BrowserDetectionUpdateUtil = {
     // Report error detecting version of ED for Windows 10 Version 1803 Build 17134.
     } else {
      browserStatus = "unknown";
-     reasonNotDetected = "Most likely the version of Edge for Windows 10 Version 1803 Build 17134 is an unofficial version and not supported by the JavaScript.";
-     errorReportLineAndIssue = "Line: 290. Issue: Detect version of Edge for Windows 10 Version 1803 Build 17134 failed.";
+     reasonNotDetected = "Most likely the version of Edge for Windows 10 Version 1803 is an unofficial version and not supported by the JavaScript.";
+     errorReportLineAndIssue = "Line: 290. Issue: Detect version of Edge for Windows 10 Version 1803 failed.";
     }
    // Report error detecting version of Windows for ED.
    } else {

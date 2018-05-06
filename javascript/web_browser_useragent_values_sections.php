@@ -4,7 +4,7 @@
 /* File: /web_server_root_directory/bom/web_browser_useragent_values_sections.php.
  * Purpose: Web page sections.
  * Used in: /web_server_root_directory/bom/web_browser_useragent_values.php.
- * Last reviewed/updated: 04 Mar 2018.
+ * Last reviewed/updated: 05 Mar 2018.
  * Published: 21 Sep 2016. */
 return
    "<section>
@@ -1552,7 +1552,7 @@ return
      <p>Firefox 59.0 64-bit<br />
      mozilla/5.0 (windows nt 6.1; win64; x64; rv:59.0) gecko/20100101 firefox/59.0</p>
 
-     <div class='note normal'>The Firefox 59.0.1 and 59.0.2 user-agent string values are identical to the Firefox 59.0 user-agent string values.</div>
+     <div class='note normal'>The Firefox 59.0.1 - 59.0.3 user-agent string values are identical to the Firefox 59.0 user-agent string values.</div>
 
      <p>Firefox 59.0.1 32-bit<br />
      mozilla/5.0 (windows nt 6.1; wow64; rv:59.0) gecko/20100101 firefox/59.0</p>
@@ -1564,6 +1564,12 @@ return
      mozilla/5.0 (windows nt 6.1; wow64; rv:59.0) gecko/20100101 firefox/59.0</p>
 
      <p>Firefox 59.0.2 64-bit<br />
+     mozilla/5.0 (windows nt 6.1; win64; x64; rv:59.0) gecko/20100101 firefox/59.0</p>
+
+     <p>Firefox 59.0.3 32-bit<br />
+     mozilla/5.0 (windows nt 6.1; wow64; rv:59.0) gecko/20100101 firefox/59.0</p>
+
+     <p>Firefox 59.0.3 64-bit<br />
      mozilla/5.0 (windows nt 6.1; win64; x64; rv:59.0) gecko/20100101 firefox/59.0</p>
 
     </section>
@@ -5588,6 +5594,14 @@ return
 
      <p>Seamonkey 2.49.2 (Advertise Firefox Compatibility)<br />
      mozilla/5.0 (windows nt 6.1; wow64; rv:52.0) gecko/20100101 firefox/52.0 seamonkey/2.49.2</p>
+
+     <div class='note normal'>SeaMonkey 2.49.3 released with Firefox at version 59.0.3.</div>
+
+     <p>Seamonkey 2.49.3<br />
+     mozilla/5.0 (windows nt 6.1; wow64; rv:52.0) gecko/20100101 seamonkey/2.49.3</p>
+
+     <p>Seamonkey 2.49.3 (Advertise Firefox Compatibility)<br />
+     mozilla/5.0 (windows nt 6.1; wow64; rv:52.0) gecko/20100101 firefox/52.0 seamonkey/2.49.3</p>
 
     </section>
     <hr />

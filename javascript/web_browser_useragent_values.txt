@@ -5536,6 +5536,22 @@ appVersion: 5.0 (Windows)
 parseFloatAppVersion: 5
 platform: Win64
 
+Firefox 59.0.3 32-bit
+
+appName: Netscape
+userAgent: mozilla/5.0 (windows nt 6.1; wow64; rv:59.0) gecko/20100101 firefox/59.0
+appVersion: 5.0 (Windows)
+parseFloatAppVersion: 5
+platform: Win32
+
+Firefox 59.0.3 64-bit
+
+appName: Netscape
+userAgent: mozilla/5.0 (windows nt 6.1; win64; x64; rv:59.0) gecko/20100101 firefox/59.0
+appVersion: 5.0 (Windows)
+parseFloatAppVersion: 5
+platform: Win64
+
 Chrome 1.0.154.53
 
 appName: Netscape
@@ -18540,6 +18556,22 @@ Seamonkey 2.49.2 (Advertise Firefox Compatibility)
 
 appName: Netscape
 userAgent: mozilla/5.0 (windows nt 6.1; wow64; rv:52.0) gecko/20100101 firefox/52.0 seamonkey/2.49.2
+appVersion: 5.0 (Windows)
+parseFloatAppVersion: 5
+platform: Win32
+
+Seamonkey 2.49.3
+
+appName: Netscape
+userAgent: mozilla/5.0 (windows nt 6.1; wow64; rv:52.0) gecko/20100101 seamonkey/2.49.3
+appVersion: 5.0 (Windows)
+parseFloatAppVersion: 5
+platform: Win32
+
+Seamonkey 2.49.3 (Advertise Firefox Compatibility)
+
+appName: Netscape
+userAgent: mozilla/5.0 (windows nt 6.1; wow64; rv:52.0) gecko/20100101 firefox/52.0 seamonkey/2.49.3
 appVersion: 5.0 (Windows)
 parseFloatAppVersion: 5
 platform: Win32
