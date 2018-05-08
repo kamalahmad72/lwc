@@ -4,7 +4,7 @@
 /* File: /web_server_root_directory/javascript/javascript_reference/localStorage_object_sections.php.
  * Purpose: Web page sections.
  * Used in: /web_server_root_directory/javascript/javascript_reference/localStorage_object.php.
- * Last reviewed/updated: 03 Jan 2018.
+ * Last reviewed/updated: 07 May 2018.
  * Published: 21 Sep 2016. */
 return
    "<section>
@@ -45,9 +45,9 @@ return
 <pre>
 &lt;script&gt;
 if (window.localStorage){ // Identical to if (localStorage).
- localStorage.setItem(&quot;keyOne&quot;, &quot;valueOne&quot;);
- localStorage.setItem(&quot;keyTwo&quot;, &quot;valueTwo&quot;);
- localStorage.setItem(&quot;keyThree&quot;, &quot;valueThree&quot;);
+ localStorage.setItem(&quot;keyOne&quot;, &quot;keyOne value&quot;);
+ localStorage.setItem(&quot;keyTwo&quot;, &quot;keyTwo value&quot;);
+ localStorage.setItem(&quot;keyThree&quot;, &quot;keyThree value&quot;);
  if (localStorage.length === 3){
   document.write(&quot;&lt;p&gt;&lt;b&gt;Pass&lt;/b&gt; (at least partial/possibly full support): The web browser recognizes the JavaScript &lt;code&gt;localStorage&lt;/code&gt; object, and supports at least one &lt;code&gt;localStorage&lt;/code&gt; object capability. The web browser at least partially/possibly fully supports the JavaScript &lt;code&gt;localStorage&lt;/code&gt; object. Positive determination of full web browser support is beyond the scope of this test.&lt;/p&gt;&quot;);
  } else {
@@ -66,9 +66,9 @@ if (window.localStorage){ // Identical to if (localStorage).
 
      <script>
      if (window.localStorage){ // Identical to if (localStorage).
-      localStorage.setItem(\"keyOne\", \"valueOne\");
-      localStorage.setItem(\"keyTwo\", \"valueTwo\");
-      localStorage.setItem(\"keyThree\", \"valueThree\");
+      localStorage.setItem(\"keyOne\", \"keyOne value\");
+      localStorage.setItem(\"keyTwo\", \"keyTwo value\");
+      localStorage.setItem(\"keyThree\", \"keyThree value\");
       if (localStorage.length === 3){
        document.write(\"<p><b>Pass</b> (at least partial/possibly full support): The web browser recognizes the JavaScript <code>localStorage</code> object, and supports at least one <code>localStorage</code> object capability. The web browser at least partially/possibly fully supports the JavaScript <code>localStorage</code> object. Positive determination of full web browser support is beyond the scope of this test.</p>\");
       } else {
