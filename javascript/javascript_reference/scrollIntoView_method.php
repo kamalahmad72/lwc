@@ -4,7 +4,7 @@
 /* File: /web_server_root_directory/javascript/javascript_reference/scrollIntoView_method.php.
  * Purpose: Web page file.
  * Used in: No other file.
- * Last reviewed/updated: 12 Jan 2018.
+ * Last reviewed/updated: 08 May 2018.
  * Published: 20 Oct 2016. */
 error_reporting(E_ALL);
 ini_set('display_errors', '0'); // To display errors, change '0' to '1'.
@@ -20,7 +20,7 @@ $webPage->head_meta_description = "A JavaScript that tests and reports if the we
 /* $webPage->body_header = include_once "header.php"; */
 $webPage->body_header_callBcrumbsNav = "BcrumbsNavUtil.bcrumbsNav(\"../\", \"JavaScript\", \"\", \"JavaScript Feature Reference\");";
 $webPage->body_main_webPageTitle = "JavaScript Feature Reference: <code>scrollIntoView()</code> Method Web Browser Support Test";
-$webPage->body_main_lastReviewed = "Last reviewed/updated: 12 Jan 2018 | Published: 20 Oct 2016 | Status: Active";
+$webPage->body_main_lastReviewed = "Last reviewed/updated: 08 May 2018 | Published: 20 Oct 2016 | Status: Active";
 /* $webPage->body_main_webBrowserSupport = "Web browser support: Internet Explorer 10+, Edge 12+, Firefox 6+, Chrome 30+, Opera 17+"; */
 /* $webPage->body_main_tools = include_once "tools.php"; */
 $webPage->body_main_toc = include_once "scrollIntoView_method_toc.php";

@@ -4,7 +4,7 @@
 /* File: /web_server_root_directory/javascript/javascript_reference/scrollIntoView_method_sections.php.
  * Purpose: Web page sections.
  * Used in: /web_server_root_directory/javascript/javascript_reference/scrollIntoView_method.php.
- * Last reviewed/updated: 04 Dec 2017.
+ * Last reviewed/updated: 08 May 2018.
  * Published: 20 Oct 2016. */
 return
    "<section>
@@ -83,9 +83,9 @@ if (element.scrollIntoView){
 &lt;p&gt;To manually run the web browser support capability test, click the buttons below:&lt;/p&gt;
 
 &lt;ul&gt;
- &lt;li&gt;When click &lt;kbd&gt;test scrollIntoView() support&lt;/kbd&gt;, if the web browser supports the JavaScript &lt;code&gt;scrollIntoView()&lt;/code&gt; method, the &lt;a href='#testScrollIntoViewTargetId'&gt;target element text (below)&lt;/a&gt; is scrolled to the top of the viewport: &lt;input type='button' id='testNoArgumentId' value='test scrollIntoView() support' /&gt;.&lt;/li&gt;
- &lt;li&gt;When click &lt;kbd&gt;test scrollIntoView(true) support&lt;/kbd&gt;, if the web browser supports the JavaScript &lt;code&gt;scrollIntoView(true)&lt;/code&gt; method, the target element text is scrolled to the top of the viewport: &lt;input type='button' id='testTrueArgumentId' value='test scrollIntoView(true) support' /&gt;.&lt;/li&gt;
- &lt;li&gt;When click &lt;kbd&gt;test scrollIntoView(false) support&lt;/kbd&gt;, if the web browser supports the JavaScript &lt;code&gt;scrollIntoView(false)&lt;/code&gt; method, the target element text is scrolled to the bottom of the viewport: &lt;input type='button' id='testFalseArgumentId' value='test scrollIntoView(false) support' /&gt;.&lt;/li&gt;
+ &lt;li&gt;When click the &lt;kbd&gt;Test scrollIntoView() Support&lt;/kbd&gt; button, if the web browser supports the JavaScript &lt;code&gt;scrollIntoView()&lt;/code&gt; method, the &lt;a href='#testScrollIntoViewTargetId'&gt;target element text (below)&lt;/a&gt; is scrolled to the top of the viewport: &lt;button type='button' id='testNoArgumentId' class='btn-sm'&gt;Test scrollIntoView() Support&lt;/button&gt;.&lt;/li&gt;
+ &lt;li&gt;When click the &lt;kbd&gt;Test scrollIntoView(true) Support&lt;/kbd&gt; button, if the web browser supports the JavaScript &lt;code&gt;scrollIntoView(true)&lt;/code&gt; method, the target element text is scrolled to the top of the viewport: &lt;button type='button' id='testTrueArgumentId' class='btn-sm'&gt;Test scrollIntoView(true) Support&lt;/button&gt;.&lt;/li&gt;
+ &lt;li&gt;When click the &lt;kbd&gt;Test scrollIntoView(false) Support&lt;/kbd&gt; button, if the web browser supports the JavaScript &lt;code&gt;scrollIntoView(false)&lt;/code&gt; method, the target element text is scrolled to the bottom of the viewport: &lt;button type='button' id='testFalseArgumentId' class='btn-sm'&gt;Test scrollIntoView(false) Support&lt;/button&gt;.&lt;/li&gt;
  &lt;li&gt;When click any of the buttons above, if the web browser does not support the tested JavaScript &lt;kbd&gt;scrollIntoView() method capability, nothing happens and the target element text is not scrolled into the viewport.&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -117,9 +117,9 @@ elementFalseArgument.onclick = function(){
      <p>To manually run the web browser support capability test, click the buttons below:</p>
 
      <ul>
-      <li>When click <kbd>test scrollIntoView() support</kbd>, if the web browser supports the JavaScript <code>scrollIntoView()</code> method, the <a href='#testScrollIntoViewTargetId'>target element text (below)</a> is scrolled to the top of the viewport: <input type='button' id='testNoArgumentId' value='test scrollIntoView() support' />.</li>
-      <li>When click <kbd>test scrollIntoView(true) support</kbd>, if the web browser supports the JavaScript <code>scrollIntoView(true)</code> method, the target element text is scrolled to the top of the viewport: <input type='button' id='testTrueArgumentId' value='test scrollIntoView(true) support' />.</li>
-      <li>When click <kbd>test scrollIntoView(false) support</kbd>, if the web browser supports the JavaScript <code>scrollIntoView(false)</code> method, the target element text is scrolled to the bottom of the viewport: <input type='button' id='testFalseArgumentId' value='test scrollIntoView(false) support' />.</li>
+      <li>When click the <kbd>Test scrollIntoView() Support</kbd> button, if the web browser supports the JavaScript <code>scrollIntoView()</code> method, the <a href='#testScrollIntoViewTargetId'>target element text (below)</a> is scrolled to the top of the viewport: <button type='button' id='testNoArgumentId' class='btn-sm'>Test scrollIntoView() Support</button>.</li>
+      <li>When click the <kbd>Test scrollIntoView(true) Support</kbd> button, if the web browser supports the JavaScript <code>scrollIntoView(true)</code> method, the target element text is scrolled to the top of the viewport: <button type='button' id='testTrueArgumentId' class='btn-sm'>Test scrollIntoView(true) Support</button>.</li>
+      <li>When click the <kbd>Test scrollIntoView(false) Support</kbd> button, if the web browser supports the JavaScript <code>scrollIntoView(false)</code> method, the target element text is scrolled to the bottom of the viewport: <button type='button' id='testFalseArgumentId' class='btn-sm'>Test scrollIntoView(false) Support</button>.</li>
       <li>When click any of the buttons above, if the web browser does not support the tested JavaScript <code>scrollIntoView()</code> method capability, nothing happens and the target element text is not scrolled into the viewport.</li>
      </ul>
 
