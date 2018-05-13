@@ -4,7 +4,7 @@
 /* File: /web_server_root_directory/misc/original_content_sections.php.
  * Purpose: Web page sections.
  * Used in: /web_server_root_directory/misc/original_content.php.
- * Last reviewed/updated: 05 Mar 2018.
+ * Last reviewed/updated: 10 May 2018.
  * Published: 21 Sep 2016. */
 return
    "<section>
@@ -147,6 +147,7 @@ return
         <li><a href='/javascript/javascript_reference/scrollIntoView_method.php'>JavaScript Feature Reference: <code>scrollIntoView()</code> Method Web Browser Support Test (learnwebcoding.com)</a></li>
         <li><a href='/javascript/javascript_reference/set_object.php'>JavaScript Feature Reference: <code>Set</code> Object Web Browser Support Test (learnwebcoding.com)</a></li>
         <li><a href='/javascript/javascript_reference/setPrototypeOf_method.php'>JavaScript Feature Reference: <code>setPrototypeOf()</code> Method Web Browser Support Test (learnwebcoding.com)</a></li>
+        <li><a href='/javascript/javascript_reference/setTimeout_method.php'>JavaScript Feature Reference: <code>setTimeout()</code> Method Web Browser Support Test (learnwebcoding.com)</a></li>
         <li><a href='/javascript/javascript_reference/splice_method.php'>JavaScript Feature Reference: <code>splice()</code> Method Web Browser Support Test (learnwebcoding.com)</a></li>
         <li><a href='/javascript/javascript_reference/spread_operator_array_literal.php'>JavaScript Feature Reference: Spread Operator In Array Literals Web Browser Support Test (learnwebcoding.com)</a></li>
         <li><a href='/javascript/javascript_reference/spread_operator_function_call.php'>JavaScript Feature Reference: Spread Operator In Function Calls Web Browser Support Test (learnwebcoding.com)</a></li>

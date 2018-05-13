@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <!-- The Learn Web Coding Home Site Map (XML Version Per Sitemaps.org) -->
-<!-- Last reviewed/updated: 05 Mar 2018 | Published: 08 Jan 2014 | Status: Active -->
+<!-- Last reviewed/updated: 10 May 2018 | Published: 08 Jan 2014 | Status: Active -->
 
 <!-- /public_html/ Home -->
 
@@ -338,6 +338,9 @@
  </url>
  <url>
   <loc>http://www.learnwebcoding.com/javascript/javascript_reference/setPrototypeOf_method.php</loc>
+ </url>
+ <url>
+  <loc>http://www.learnwebcoding.com/javascript/javascript_reference/setTimeout_method.php</loc>
  </url>
  <url>
   <loc>http://www.learnwebcoding.com/javascript/javascript_reference/splice_method.php</loc>

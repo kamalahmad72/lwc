@@ -4,7 +4,7 @@
 /* File: /web_server_root_directory/javascript/javascript_reference/index.php.
  * Purpose: Web page file.
  * Used in: No other file.
- * Last reviewed/updated: 22 Mar 2018.
+ * Last reviewed/updated: 10 May 2018.
  * Published: 21 Sep 2016. */
 error_reporting(E_ALL);
 ini_set('display_errors', '0'); // To display errors, change '0' to '1'.
@@ -20,7 +20,7 @@ $webPage->head_meta_description = "A list of JavaScript properties, methods, and
 /* $webPage->body_header = include_once "header.php"; */
 $webPage->body_header_callBcrumbsNav = "BcrumbsNavUtil.bcrumbsNav(\"../\", \"JavaScript\");";
 $webPage->body_main_webPageTitle = "JavaScript Feature Reference";
-$webPage->body_main_lastReviewed = "Last reviewed/updated: 22 Mar 2018 | Published: 20 Mar 2014 | Status: Active";
+$webPage->body_main_lastReviewed = "Last reviewed/updated: 10 May 2018 | Published: 20 Mar 2014 | Status: Active";
 /* $webPage->body_main_webBrowserSupport = "Web browser support: Internet Explorer 10+, Edge 12+, Firefox 6+, Chrome 30+, Opera 17+"; */
 /* $webPage->body_main_tools = include_once "tools.php"; */
 $webPage->body_main_toc = include_once "index_toc.php";

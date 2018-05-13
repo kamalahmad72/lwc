@@ -4,7 +4,7 @@
 /* File: /web_server_root_directory/sitemap_sections.php.
  * Purpose: Web page sections.
  * Used in: /web_server_root_directory/sitemap.php.
- * Last reviewed/updated: 05 Mar 2018.
+ * Last reviewed/updated: 10 May 2018.
  * Published: 21 Sep 2016. */
 return
    "<!-- This web page does not have an h2-h6 element in the section element. To avoid W3C Markup Validation Service (http://validator.w3.org/) warning, not error (Warning: Section lacks heading. Consider using h2-h6 elements to add identifying headings to all sections.), comment out the section element. Same for index.php, sitemap.php, glossary.php, and whats_new.php.
@@ -152,6 +152,7 @@ return
         <li><a href='http://www.learnwebcoding.com/javascript/javascript_reference/scrollIntoView_method.php'>JavaScript Feature Reference: <code>scrollIntoView()</code> Method Web Browser Support Test</a></li>
         <li><a href='http://www.learnwebcoding.com/javascript/javascript_reference/set_object.php'>JavaScript Feature Reference: <code>Set</code> Object Web Browser Support Test</a></li>
         <li><a href='http://www.learnwebcoding.com/javascript/javascript_reference/setPrototypeOf_method.php'>JavaScript Feature Reference: <code>setPrototypeOf()</code> Method Web Browser Support Test</a></li>
+        <li><a href='http://www.learnwebcoding.com/javascript/javascript_reference/setTimeout_method.php'>JavaScript Feature Reference: <code>setTimeout()</code> Method Web Browser Support Test</a></li>
         <li><a href='http://www.learnwebcoding.com/javascript/javascript_reference/splice_method.php'>JavaScript Feature Reference: <code>splice()</code> Method Web Browser Support Test</a></li>
         <li><a href='http://www.learnwebcoding.com/javascript/javascript_reference/spread_operator_array_literal.php'>JavaScript Feature Reference: Spread Operator In Array Literals Web Browser Support Test</a></li>
         <li><a href='http://www.learnwebcoding.com/javascript/javascript_reference/spread_operator_function_call.php'>JavaScript Feature Reference: Spread Operator In Function Calls Web Browser Support Test</a></li>

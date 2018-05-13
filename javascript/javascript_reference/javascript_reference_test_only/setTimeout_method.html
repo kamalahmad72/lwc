@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>setTimeout() Method Web Browser Support Test</title>
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Steve Taylor" />
+  <meta name="Keywords" content="JavaScript, setTimeout() method, web browser support, test" />
+  <meta name="Description" content="A JavaScript that tests and reports if the web browser supports the JavaScript setTimeout() method." />
+  <script></script>
+ </head>
+ <body>
+
+  <h1><code>setTimeout()</code> Method Web Browser Support Test</h1>
+
+<p>To run the web browser support test, click the button. The test output and result will appear below: <button type='button' id='buttonId' class='btn-sm'>Run Web Browser Support Test</button>.</p>
+
+<ul id='executionOrderReportId'></ul>
+
+<p id='testId'></p><!-- Typically used to hard code Fail test result when web browser no support error stops JavaScript execution, which precludes using document.write to show Fail test result. In this web page, although web browser no support does not produce error that stops JavaScript execution, cannot use document.write to show any (including Pass, Pass/Fail, and Fail) test result. Therefore, use JavaScript innerHTML property to show all test result. -->
+
+<script>
+var executionOrderReportTest = ""; // For JavaScript innerHTML property, many web browsers substitute their own line break code for author line break code. For example, IE11, FF59, and CH66 substitute <br> for author <br />, and OP7.50 substitutes <BR/> for author <br /> and <br>. In other words, JavaScript innerHTML property write is unpredictable/unreliable. Therefore, to test execution order, generate execution order report test string without author line breaks. Must be placed outside scope of setTimeout5000ms; otherwise, setTimeout("string to execute as JavaScript") line throws error: ReferenceError: executionOrderReportTest is not defined.
+var executionOrderReportElement = document.getElementById("executionOrderReportId"); // Must be placed outside scope of setTimeout5000ms; otherwise, setTimeout("string to execute as JavaScript") line throws error: ReferenceError: executionOrderReportElement is not defined.
+supportTest = function(){
+ var element = document.getElementById("testId"); // Normally placed inside implementation test. However, to clear capability test result if user presses run test button multiple times (see line below), must place outside implementation test.
+ element.innerHTML = ""; // Clear capability test result if user presses run test button multiple times.
+ var anonymousFunctionThisValue = null;
+ var functionIdentifierThisValue = null;
+ var executionOrderString = "Execution Order 01: Sync 01: Executing code at top of <code>capabilityTest()</code> function.";
+ executionOrderReportTest = executionOrderString + " ";
+ executionOrderReportElement.innerHTML = "<li>" + executionOrderString + "</li>";
+ // setTimeout1000ms.
+ setTimeout(function(){ // setTimeout() method using anonymous function syntax.
+  var executionOrderString = "Execution Order 04: Async 02: Executing setTimeout1000ms callback function. Executed after setTimeout0ms callback function even though setTimeout1000ms appears in code before setTimeout0ms.";
+  executionOrderReportTest += executionOrderString + " ";
+  executionOrderReportElement.innerHTML += "<li>" + executionOrderString + "</li>";
+  anonymousFunctionThisValue = this; // window.
+ }, 1000);
+ // setTimeout0ms.
+ setTimeout(function(){
+  var executionOrderString = "Execution Order 03: Async 01: Executing setTimeout0ms callback function. Executed before setTimeout1000ms callback function even though setTimeout0ms appears in code after setTimeout1000ms.";
+  executionOrderReportTest += executionOrderString + " ";
+  executionOrderReportElement.innerHTML += "<li>" + executionOrderString + "</li>";
+ }, 0); // Identical to }). If time not specified, default is 0.
+ // setTimeout2000ms.
+ setTimeout(function(){
+  var executionOrderString = "Execution Order 05: Async 03: Executing setTimeout2000ms callback function. Time counted from when <code>setTimeout()</code> method parsed, not from when previous <code>setTimeout()</code> method callback function executed. Therefore, setTimeout2000ms callback function placed in job queue 1000ms, not 2000ms, after setTimeout1000ms callback function placed in job queue.";
+  executionOrderReportTest += executionOrderString + " ";
+  executionOrderReportElement.innerHTML += "<li>" + executionOrderString + "</li>";
+ }, 2000);
+ // setTimeout3000ms.
+ var functionIdentifier = function(){
+  var executionOrderString = "Execution Order 06: Async 04: Executing setTimeout3000ms callback function. Time counted from when <code>setTimeout()</code> method parsed, not from when previous <code>setTimeout()</code> method callback function executed. Therefore, setTimeout3000ms callback function placed in job queue 1000ms, not 3000ms, after setTimeout2000ms callback function placed in job queue.";
+  executionOrderReportTest += executionOrderString + " ";
+  executionOrderReportElement.innerHTML += "<li>" + executionOrderString + "</li>";
+  functionIdentifierThisValue = this; // window.
+ };
+ setTimeout(functionIdentifier, 3000); // setTimeout() method using function identifier syntax. Function identifier can be via function declaration, function expression (shown), or arrow function. NOTE: function reference (functionIdentifier) is passed, not function call(functionIdentifier()).
+ // setTimeout4000ms.
+ var setTimeoutFunctionWithParams = function(syncAsynExecuting, note){
+  var executionOrderString = "Execution Order 07: " + syncAsynExecuting + note;
+  executionOrderReportTest += executionOrderString + " ";
+  executionOrderReportElement.innerHTML += "<li>" + executionOrderString + "</li>";
+ }
+ setTimeout(setTimeoutFunctionWithParams, 4000, "Async 05: Executing setTimeout4000ms callback function. ", "Time counted from when <code>setTimeout()</code> method parsed, not from when previous <code>setTimeout()</code> method callback function executed. Therefore, setTimeout4000ms callback function placed in job queue 1000ms, not 4000ms, after setTimeout3000ms callback function placed in job queue."); // setTimeout() method using named function with parameters syntax. IE9- mistakenly output Execution Order 07: undefined undefined but correctly return timeoutID.
+ // setTimeout5000ms.
+ setTimeout("var executionOrderString = 'Execution Order 08: Async 06: Executing setTimeout5000ms callback function. Time counted from when <code>setTimeout()</code> method parsed, not from when previous <code>setTimeout()</code> method callback function executed. Therefore, setTimeout5000ms callback function placed in job queue 1000ms, not 5000ms, after setTimeout4000ms callback function placed in job queue.';executionOrderReportTest += executionOrderString + ' ';executionOrderReportElement.innerHTML += '<li>' + executionOrderString + '</li>';", 5000); // setTimeout() method using code string syntax. Like eval() method, setTimeout() method interprets string argument as JavaScript code, which is a security risk. AVOID.
+ // setTimeout6000ms.
+ var timeoutID = setTimeout(function(){ // setTimeout() method returns timeout ID, which identifies the setTimeout() method timer.
+  var executionOrderString = "Execution Order 09: Async 07: Executing setTimeout6000ms callback function, which is cancelled by clearTimeout() method.";
+  executionOrderReportTest += executionOrderString + " ";
+  executionOrderReportElement.innerHTML += "<li>" + executionOrderString + "</li>";
+ }, 6000);
+ clearTimeout(timeoutID); // To cancel setTimeout() method, call clearTimeout() with timeout ID anytime before the timer's timeout elapses.
+ // setTimeout7000ms.
+ setTimeout(function(){
+  var executionOrderString = "Execution Order 10: Async 08: Executing setTimeout7000ms callback function. Time counted from when <code>setTimeout()</code> method parsed, not from when previous <code>setTimeout()</code> method cancelled. (NOTE: Execution Order 09: Async 07: setTimeout6000ms cancelled by <code>clearTimeout()</code> method.) Therefore, setTimeout7000ms callback function placed in job queue 2000ms, not 7000ms, after setTimeout5000ms callback function placed in job queue.";
+  executionOrderReportTest += executionOrderString + " ";
+  executionOrderReportElement.innerHTML += "<li>" + executionOrderString + "</li>";
+  if (window.setTimeout){ // Implementation test.
+   if ((anonymousFunctionThisValue === window) && (functionIdentifierThisValue === window) && (executionOrderReportTest === "Execution Order 01: Sync 01: Executing code at top of <code>capabilityTest()</code> function. Execution Order 02: Sync 02: Executing code at bottom of <code>capabilityTest()</code> function. The <code>setTimeout()</code> method code is located between the Sync 01 and Sync 02 code. The <code>setTimeout()</code> method code is parsed as normal synchronously. The <code>setTimeout()</code> method callback functions are executed asynchronously as demonstrated below. (NOTE: Execution Order 09: Async 07: setTimeout6000ms cancelled by <code>clearTimeout()</code> method.) Execution Order 03: Async 01: Executing setTimeout0ms callback function. Executed before setTimeout1000ms callback function even though setTimeout0ms appears in code after setTimeout1000ms. Execution Order 04: Async 02: Executing setTimeout1000ms callback function. Executed after setTimeout0ms callback function even though setTimeout1000ms appears in code before setTimeout0ms. Execution Order 05: Async 03: Executing setTimeout2000ms callback function. Time counted from when <code>setTimeout()</code> method parsed, not from when previous <code>setTimeout()</code> method callback function executed. Therefore, setTimeout2000ms callback function placed in job queue 1000ms, not 2000ms, after setTimeout1000ms callback function placed in job queue. Execution Order 06: Async 04: Executing setTimeout3000ms callback function. Time counted from when <code>setTimeout()</code> method parsed, not from when previous <code>setTimeout()</code> method callback function executed. Therefore, setTimeout3000ms callback function placed in job queue 1000ms, not 3000ms, after setTimeout2000ms callback function placed in job queue. Execution Order 07: Async 05: Executing setTimeout4000ms callback function. Time counted from when <code>setTimeout()</code> method parsed, not from when previous <code>setTimeout()</code> method callback function executed. Therefore, setTimeout4000ms callback function placed in job queue 1000ms, not 4000ms, after setTimeout3000ms callback function placed in job queue. Execution Order 08: Async 06: Executing setTimeout5000ms callback function. Time counted from when <code>setTimeout()</code> method parsed, not from when previous <code>setTimeout()</code> method callback function executed. Therefore, setTimeout5000ms callback function placed in job queue 1000ms, not 5000ms, after setTimeout4000ms callback function placed in job queue. Execution Order 10: Async 08: Executing setTimeout7000ms callback function. Time counted from when <code>setTimeout()</code> method parsed, not from when previous <code>setTimeout()</code> method cancelled. (NOTE: Execution Order 09: Async 07: setTimeout6000ms cancelled by <code>clearTimeout()</code> method.) Therefore, setTimeout7000ms callback function placed in job queue 2000ms, not 7000ms, after setTimeout5000ms callback function placed in job queue. ")){ // Capability test.
+    element.innerHTML = "<b>Pass</b> (at least partial/possibly full support): The web browser recognizes the JavaScript <code>setTimeout()</code> method, and supports at least one <code>setTimeout()</code> method capability. The web browser at least partially/possibly fully supports the JavaScript <code>setTimeout()</code> method. Positive determination of full web browser support is beyond the scope of this test.";
+   } else {
+    element.innerHTML = "<b>Pass/Fail</b> (partial support): The web browser recognizes the JavaScript <code>setTimeout()</code> method, but does not support at least one <code>setTimeout()</code> method capability. The web browser partially supports the JavaScript <code>setTimeout()</code> method.";
+   }
+  } else {
+   element.innerHTML = "<b>Fail</b> (no support): The web browser does not recognize the JavaScript <code>setTimeout()</code> method. The web browser does not support the JavaScript <code>setTimeout()</code> method.";
+  }
+ }, 7000);
+ var executionOrderString = "Execution Order 02: Sync 02: Executing code at bottom of <code>capabilityTest()</code> function. The <code>setTimeout()</code> method code is located between the Sync 01 and Sync 02 code. The <code>setTimeout()</code> method code is parsed as normal synchronously. The <code>setTimeout()</code> method callback functions are executed asynchronously as demonstrated below. (NOTE: Execution Order 09: Async 07: setTimeout6000ms cancelled by <code>clearTimeout()</code> method.)";
+ executionOrderReportTest += executionOrderString + " ";
+ executionOrderReportElement.innerHTML += "<li>" + executionOrderString + "</li>";
+}
+// Register event handlers.
+var buttonElement = document.getElementById("buttonId");
+buttonElement.onclick = supportTest;
+</script>
+
+ </body>
+</html>
