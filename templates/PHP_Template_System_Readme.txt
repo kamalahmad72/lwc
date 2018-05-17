@@ -1,5 +1,5 @@
 PHP_Template_System_Readme.txt
-Last reviewed/edited: 11 Mar 2018.
+Last reviewed/edited: 15 May 2018.
 
 The LWC Home Template is developed by Steve Taylor at Learn Web Coding (http://www.learnwebcoding.com/). For additional information, see Learn Web Coding Home Template Explained (http://www.learnwebcoding.com/html/template_explained.php). Please email comments/suggestions to steve@learnwebcoding.com. Please feel free to download, edit, and/or fork the LWC Home Template source code. The LWC Home Template source code is available on GitHub (https://github.com/learnwebcoding/lwc_home_template).
 
@@ -34,10 +34,10 @@ The PHP template system:
 * Allows the overriding of sitewide default WPO property values with web page specific WPO property values in a single file (web_page.php).
 * Allows the placement of sitewide blocks of code in separate files (e.g., footer.php, header.php, javascripts.php, stylesheets.php, and tools.php).
 * Allows that some WPO properties and that some sitewide blocks of code might not be used in all web pages (web_page.php).
-* Allows the creation of a web page overall HTML/PHP template in a single file, with HTML from opening <!DOCTYPE html><html lang='en'> to closing </html>, and PHP that inserts WPO property values into the HTML (overall.php).
+* Allows the creation of a web page HTML/PHP template in a single file, with HTML from <html> to </html>, and PHP that inserts WPO property values into the HTML (template.php).
 * Allows the definition of multiple different web page types as PHP WPOs each in a separate file (Web_Page*.class.php).
 * Allows the placement of multiple different sitewide blocks of code, and the creation of multiple different variations of the sitewide blocks of code, each in a separate file (myblockofcode*.php, footer*.php, header*.php, javascripts*.php, stylesheets*.php, and tools*.php).
-* Allows the creation of multiple different web page overall HTML/PHP templates each in a separate file (overall*.php).
+* Allows the creation of multiple different web page HTML/PHP templates each in a separate file (template*.php).
 
 -----------------------
 2.) WEB BROWSER SUPPORT
@@ -81,13 +81,14 @@ NOTE: The include_path directive is not commented out. The include_path directiv
 
 The minimum files for the PHP template system (all located in the extracted /templates/ folder):
 * footer.php: Web page <footer></footer> section code file.
+* google_analytics.php: Web page Google Analytics code file.
 * header.php: Web page <header></header> section code file.
 * javascripts.php: Web page JavaScripts code file.
-* overall.php: Web page overall HTML/PHP template file.
 * stylesheets.php: Web page style sheets code file.
+* template.php: Web page HTML/PHP template file.
 * tools.php: Web page LWC Home tools icon dropdown code file.
 * Web_Page.class.php: Web page object (WPO) definition file. Defines a web page type as a PHP WPO. Defines WPO properties. Assigns sitewide default WPO property values.
-* web_page.php: Web page file. Assigns web page specific WPO property values. The property values assigned in web_page.php override the property values assigned in Web_Page.class.php. Merges the WPO with the web page overall HTML/PHP template. Becomes a web page with filename web_page.php.
+* web_page.php: Web page file. Assigns web page specific WPO property values. The property values assigned in web_page.php override the property values assigned in Web_Page.class.php. Merges the WPO with the web page HTML/PHP template. Becomes a web page with filename web_page.php.
 * web_page_sections.php: Web page sections code file.
 * web_page_toc.php: Web page table of contents code file.
 
@@ -95,57 +96,56 @@ The minimum files for the PHP template system (all located in the extracted /tem
 6.) HOW THE PHP TEMPLATE SYSTEM WORKS
 -------------------------------------
 
-In general, web_page.php merges a web page object (WPO) with a web page overall HTML/PHP template, which turns web_page.php into a web page with filename web_page.php. Specifically:
+In general, web_page.php merges a web page object (WPO) with a web page HTML/PHP template, which turns web_page.php into a web page with filename web_page.php. Specifically:
 * Web_Page.class.php: Defines a web page type as a PHP WPO. Defines WPO properties and assigns sitewide default WPO property values.
 * web_page.php: include_once Web_Page.class.php and instantiate the WPO.
-* web_page.php: Overrides sitewide default WPO property values with web page specific WPO property values. NOTE: In web_page.php, the commented out properties are assigned the sitewide default WPO property values per Web_Page.class.php.
+* web_page.php: Overrides sitewide default WPO property values with web page specific WPO property values.
 * web_page.php: include_once stylesheets.php, header.php, tools.php, web_page_toc.php, web_page_sections.php, footer.php, and javascripts.php.
-* overall.php: Creates a web page overall HTML/PHP template. Includes HTML from opening <!DOCTYPE html><html lang='en'> to closing </html> and the PHP inserts WPO property values into the HTML.
-* web_page.php: include_once overall.php.
+* template.php: Represents a web page HTML/PHP template. Provides HTML from <html> to </html> and the PHP inserts WPO property values into the HTML.
+* web_page.php: include_once template.php.
 * web_page.php: Becomes a web page with filename web_page.php.
 
-----------------------
++--------------------+
 |                    |
 |                    | - Defines a web page type as a PHP WPO.
 |                    | - Defines WPO properties.
 | Web_Page.class.php | - Assigns sitewide default WPO property
-|                    |   values.------------------------------------>|
-|                    | ----------------|                             |
+|                    |   values.------------------------------------>+
+|                    | --------------->+                             |
 |                    |                 |                             |
-----------------------                 |                             |
++--------------------+                 |                             |
                                        |                             |
-----------------------                 |                             |
++--------------------+                 |                             |
 |                    |                \|/                           \|/
 |                    | - include_once Web_Page.class.php and         |
 |                    |   instantiate the WPO.                        |
 |                    | - Overrides sitewide default WPO property     |
 |                    |   values with web page specific WPO           |
-|   web_page.php     |   property values.--------------------------->|
+|   web_page.php     |   property values.--------------------------->+
 |    (web page)      | - include_once stylesheets.php,               |
 |                    |   header.php, tools.php,                      |
 |                    |   web_page_toc.php, web_page_sections.php,    |
 |                    |   footer.php, and javascripts.php.            |
-|                    | - include_once overall.php.                   |
+|                    | - include_once template.php.                  |
 |                    |                /|\                           \|/
-----------------------                 |                             |
++--------------------+                 |                             |
                                        |                             |
-----------------------                 |                             |
++--------------------+                 |                             |
 |                    |                 |                             |
-|                    | ----------------|                             |
-|                    | - Creates a web page overall HTML/PHP         |
-|    overall.php     |   template.                                   |
-|                    | - Includes HTML from opening to closing       |
-|                    |   HTML tag and the PHP inserts WPO            |
-|                    |   property values into the HTML.<-------------|
+|                    | --------------->+                             |
+|                    | - Represents a web page HTML/PHP template.    |
+|   template.php     | - Provides HTML from <html> to </html> and    |
+|                    |   the PHP inserts WPO property values into   \|/
+|                    |   the HTML.<----------------------------------+
 |                    |
-----------------------
++--------------------+
 
 ----------------------------
 7.) HOW TO CREATE A WEB PAGE
 ----------------------------
 
 Each web page consists of three files:
-a.) web_page.php (required): Web page file. Assigns web page specific web page object (WPO) property values. The property values assigned in web_page.php override the property values assigned in Web_Page.class.php. Merges the WPO with the web page overall HTML/PHP template. Becomes a web page with filename web_page.php.
+a.) web_page.php (required): Web page file. Assigns web page specific web page object (WPO) property values. The property values assigned in web_page.php override the property values assigned in Web_Page.class.php. Merges the WPO with the web page HTML/PHP template. Becomes a web page with filename web_page.php.
 b.) web_page_sections.php (required): Web page sections code.
 c.) web_page_toc.php (optional): Web page table of contents code. NOTE: If the web page does not include a table of contents, web_page_toc.php can be empty, contain only comments, or be omitted.
 
@@ -174,14 +174,14 @@ a.) In the web page file (myfilename.php), add, remove, and/or edit the web page
 b.) In the web page sections code file (myfilename_sections.php), replace the web page sections code with your web page sections code.
 c.) In the web page table of contents code file (myfilename_toc.php), replace the web page table of contents code with your web page table of contents code.
 
-Editing the web page overall HTML/PHP template file (overall.php):
+Editing the web page HTML/PHP template file (template.php):
 a.) Add, remove, and/or edit the HTML per your requirements.
 b.) Add, remove, and/or edit the WPO properties per your requirements.
 
-Editing the footer.php, header.php, javascripts.php, stylesheets.php, and tools.php files:
+Editing the footer.php, google_analytics.php, header.php, javascripts.php, stylesheets.php, and tools.php files:
 a.) Replace the provided code with your code per your requirements.
 
-NOTE: For an example of two web pages using the same WPO definition file (Web_Page.class.php), two different web page overall HTML/PHP template files (overall_home_page.php and overall.php), and one of the web pages (the home page) not using the web page table of contents code file (index_toc.php), see the home page (/web_server_root_directory/index.php) and the HTML landing page (/web_server_root_directory/html/index.php). The reason for this is that the home page; 1.) does not call the LWC Home breadcrumbs navigation, 2.) does not use the WPO last reviewed property, 3.) does not use the WPO web browser support property, 4.) does not use the LWC Home tools icon dropdown (tools.php), 5.) does not use a table of contents (index_toc.php), 6.) does not use the WPO horizontal rule property, 7.) does not use the footer (footer.php), and 8.) uses a completely different footer-like section. Here, the home page is considered the exception and the HTML landing page is considered the norm; hence, the web page overall HTML/PHP template filename is overall_home_page.php for the exception (the home page) and overall.php for the norm (the HTML landing page). Of course, because of the flexibility of the PHP template system, there are often multiple different ways of accomplishing essentially the same task. Select a solution that makes the most sense to you while ensuring maintainability.
+NOTE: For an example of two web pages using the same WPO definition file (Web_Page.class.php), two different web page HTML/PHP template files (template_home_page.php and template.php), and one of the web pages (the home page) not using the web page table of contents code file (index_toc.php), see the home page (/web_server_root_directory/index.php) and the HTML landing page (/web_server_root_directory/html/index.php). The reason for this is that the home page; 1.) does not call the LWC Home breadcrumbs navigation, 2.) does not use the WPO last reviewed property, 3.) does not use the WPO web browser support property, 4.) does not use the LWC Home tools icon dropdown (tools.php), 5.) does not use a table of contents (index_toc.php), 6.) does not use the WPO horizontal rule property, 7.) does not use the footer (footer.php), and 8.) uses a unique footer-like section. Here, the home page is considered the exception and the HTML landing page is considered the norm; hence, the web page HTML/PHP template filename is template_home_page.php for the exception (the home page) and template.php for the norm (the HTML landing page). Of course, because of the flexibility of the PHP template system, there are often multiple different ways of accomplishing essentially the same task. Select a solution that makes the most sense to you while ensuring maintainability.
 
 -----------------------------------------
 10.) RESOURCES AND ADDITIONAL INFORMATION

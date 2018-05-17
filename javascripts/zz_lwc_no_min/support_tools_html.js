@@ -2,8 +2,8 @@
 
 /* File: /web_server_root_directory/javascripts/lwc/support_tools_html.js.
  * Purpose: LWC Home Web Browser Support HTML and LWC Home Tools Icon Dropdown HTML.
- * Used in: web_browser_retain_remove_content_f5.html. Used in LWC Home web pages based on LWC Home Template (/public_html/html/template.php) view source code that need to be .(s)html files, not .php files. Not used in LWC Home specialty web pages. Not used in LWC Blog/Forums.
- * Last reviewed/updated: 10 Mar 2018.
+ * Used in: web_browser_retain_remove_content_f5.html. Used in LWC Home web pages based on LWC Home Template (/public_html/html/template_explained.php) that need to be .(s)html files, not .php files. Not used in LWC Home specialty web pages. Not used in LWC Blog/Forums.
+ * Last reviewed/updated: 16 May 2018.
  * Published: 11 Nov 2015.
  * Web browser support: IE6+, ED12+, FF1.5+, SM1+, FL1+, SF3.1+, CH2+, OP7.50+, NT9+.
  * NOTE: Copy changes to tools*.php and support_tools*.js. */

@@ -1,15 +1,16 @@
 <?php
 /* -------------------- INTRODUCTION -------------------- */
 
-/* File: /web_server_root_directory/templates/overall.php.
- * Purpose: Web page overall HTML/PHP template file.
+/* File: /web_server_root_directory/templates/template.php.
+ * Purpose: Web page HTML/PHP template file.
  * Used in: Web page files based on /web_server_root_directory/templates/web_page.php except home page.
- * Last reviewed/updated: 01 Dec 2017.
+ * Last reviewed/updated: 15 May 2018.
  * Published: 21 Sep 2016. */
 return
 "<!DOCTYPE html>
 <html lang='en'>
  <head>
+  $webPage->head_script_googleAnalytics
   <title>$webPage->head_title</title><!-- No markup in title tags. -->
   <meta charset='$webPage->head_meta_charset' />
   <meta name='Author' content='$webPage->head_meta_author' />

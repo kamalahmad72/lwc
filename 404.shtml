@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
  <head>
+  <script src="/javascripts/lwc/google_analytics.min.js"></script>
   <title>404 Not Found</title><!-- No markup in title tags. -->
   <meta charset="UTF-8" />
   <meta name="Author" content="Steve Taylor" />
@@ -11,7 +12,7 @@
   <link rel="stylesheet" type="text/css" media="all" href="/stylesheets/bootstrap/bootstrap.css" />
   <link rel="stylesheet" type="text/css" media="all" href="/stylesheets/lwc/lwc.css" />
   <link rel="stylesheet" type="text/css" media="all" href="/stylesheets/lwc/print_default.css" id="changeableExtSSLinkElementId" />
-  <script type="text/javascript">
+  <script>
    var NotFound404Util = {
     notFound404: function(){
 /* SSI REQUEST_URI variable intended for/works in .shtml file, not external .js file. */
@@ -20,323 +21,44 @@
      var reportString = "";
      var reportContainer = document.getElementById("reportContainerId");
 
-/* -------------------- START TWO ARRAYS FOR RENAMED WEB PAGE FILES -------------------- */
+/* -------------------- RENAMED WEB PAGE FILES ARRAYS -------------------- */
 
-/* renamedFilesArray lists the web page files that no longer exist because they have been renamed. */
-/* NOTE: each item in renamedFilesArray corresponds to identically indexed item in renamedFilesNewNameArray. */
-     var renamedFilesArray = [
-/* Start for renamed files from xyz.html to xyz.php 04 Jun 2016. */
-      "/index.html", // 0
-      "/sitemap.html", // 1
-      "/html/index.html", // 2
-      "/html/template.html", // 3
-      "/html/template_as_template.html", // 4
-      "/html/html_testing_ground/index.html", // 5
-      "/css/index.html", // 6
-      "/css/css_tutorial.html", // 7
-      "/css/web_browser_support_css.html", // 8
-      "/css/how_to_override_unwanted_css_styles.html", // 9
-      "/css/css_font_sizes.html", // 10
-      "/css/css_font_compare.html", // 11
-      "/css/css_techniques/index.html", // 12
-      "/css/css_techniques/style_textboxes_textareas.html", // 13
-      "/css/css_techniques/style_selectboxes.html", // 14
-      "/css/css_techniques/style_checkboxes_radio_buttons.html", // 15
-      "/css/css_techniques/reveal_fixed_footer_upon_scrolling.html", // 16
-      "/css/css_testing_ground/index.html", // 17
-      "/css/css_testing_ground/web_browser_support_placeholder.html", // 18
-      "/css/css_testing_ground/web_browser_support_new_semantic.html", // 19
-      "/javascript/index.html", // 20
-      "/javascript/javascript_shopping_cart_example.html", // 21
-      "/javascript/javascript_shopping_cart_example_most_content_removed.html", // 22
-      "/javascript/javascript_web_browser_detection_update.html", // 23
-      "/javascript/errata_pro_jquery_20_2nd_edition_adam_freeman.html", // 24
-      "/javascript/javascript_techniques/index.html", // 25
-      "/javascript/javascript_techniques/breadcrumbs_navigation.html", // 26
-      "/javascript/javascript_techniques/change_ext_ss.html", // 27
-      "/javascript/javascript_techniques/collapse_expand_all.html", // 28
-      "/javascript/javascript_techniques/tabbed_web_pages.html", // 29
-      "/javascript/javascript_reference/index.html", // 30
-      "/javascript/javascript_reference/arguments_object.html", // 31
-      "/javascript/javascript_reference/classList_property.html", // 32
-      "/javascript/javascript_reference/dataset_property.html", // 33
-      "/javascript/javascript_reference/indexOf_method.html", // 34
-      "/javascript/javascript_reference/innerHTML_property.html", // 35
-      "/javascript/javascript_reference/insertAdjacentHTML_method.html", // 36
-      "/javascript/javascript_reference/json_object.html", // 37
-      "/javascript/javascript_reference/localStorage_object.html", // 38
-      "/javascript/javascript_reference/querySelectorAll_method.html", // 39
-      "/javascript/javascript_reference/splice_method.html", // 40
-      "/javascript/javascript_reference/style_object.html", // 41
-      "/javascript/jquery_techniques/index.html", // 42
-      "/javascript/jquery_techniques/fix_content_top_viewport_upon_scrolling.html", // 43
-      "/misc/index.html", // 44
-      "/misc/original_content.html", // 45
-      "/misc/glossary.html", // 46
-      "/misc/whats_new.html", // 47
-      "/misc/windows_environment_develop_phpbb_styles.html", // 48
-/* End for renamed files from xyz.html to xyz.php 04 Jun 2016. */
-/* Start for renamed files misc. */
-      "/css/css_font_sizes.php", // 49
-      "/css/css_property_value_web_browser_support.html", // 50
-      "/css/css_web_browser_support.html", // 51
-      "/css/css_testing_ground/user_agent_default_styles.html", // 52
-      "/css/css_testing_ground/bootstrap_335_default_styles.html", // 53
-      "/css/css_testing_ground/bootstrap_336_default_styles.html", // 54
-      "/css/css_testing_ground/visualize_bootstrap_336_default_styles.html", // 55
-      "/css/css_testing_ground/bootstrap_337_default_styles.html", // 56
-      "/css/css_testing_ground/display_inline_vs_display_inline_block.html", // 57
-      "/css/css_testing_ground/web_browser_support_placeholder_attribute_selector.html", // 58
-      "/css/css_testing_ground/web_browser_support_new_html5_semantic_elements.html", // 59
-      "/html/template.php", // 60
-      "/html/template_most_content_removed.html", // 61
-      "/html/template_as_template.php", // 62
-      "/javascript/javascript_shopping_cart.php", // 63
-      "/javascript/javascript_shopping_cart_by_itself.php", // 64
-      "/javascript/javascript_shopping_cart_most_content_removed.php", // 65
-      "/javascript/javascript_techniques/tabbed_web_pages/tabbed_web_pages_1.html", // 66
-      "/javascript/javascript_techniques/tabbed_web_pages/tabbed_web_pages_2.html", // 67
-      "/javascript/javascript_techniques/tabbed_web_pages/tabbed_web_pages_3.html" // 68
-/* End for renamed files misc. */
+/* NOTE: each item in renamedFilesArray corresponds to identically indexed item in renamedFilesNewFilenamesArray. */
+
+     var renamedFilesArray = [ // renamedFilesArray lists web page files that no longer exist because the web page file has been renamed.
+      "/zz_test/renamed_file.html" // 0.
+     ];
+     var renamedFilesNewFilenamesArray = [ // renamedFilesNewFilenamesArray lists the renamed web page files new filenames.
+      "/zz_test/renamed_file_new_filename.html" // 0.
      ];
 
-/* renamedFilesNewNameArray lists the new web page filenames for the web page files that no longer exist because they have been renamed per renamedFilesArray above. */
-/* NOTE: each item in renamedFilesArray corresponds to identically indexed item in renamedFilesNewNameArray. */
-     var renamedFilesNewNameArray = [
-/* Start for renamed files new names from xyz.html to xyz.php 04 Jun 2016. */
-      "/index.php", // 0
-      "/sitemap.php", // 1
-      "/html/index.php", // 2
-      "/html/template_explained.php", // 3
-      "/html/web_page.php", // 4
-      "/html/html_testing_ground/index.php", // 5
-      "/css/index.php", // 6
-      "/css/css_tutorial.php", // 7
-      "/css/web_browser_support_css.php", // 8
-      "/css/how_to_override_unwanted_css_styles.php", // 9
-      "/css/css_font_size_property.php", // 10
-      "/css/css_font_compare.php", // 11
-      "/css/css_techniques/index.php", // 12
-      "/css/css_techniques/style_textboxes_textareas.php", // 13
-      "/css/css_techniques/style_selectboxes.php", // 14
-      "/css/css_techniques/style_checkboxes_radio_buttons.php", // 15
-      "/css/css_techniques/reveal_fixed_footer_upon_scrolling.php", // 16
-      "/css/css_testing_ground/index.php", // 17
-      "/css/css_testing_ground/web_browser_support_placeholder.php", // 18
-      "/css/css_testing_ground/web_browser_support_new_semantic.php", // 19
-      "/javascript/index.php", // 20
-      "/javascript/javascript_shopping_cart_spa.php", // 21
-      "/javascript/javascript_shopping_cart_spa.php", // 22
-      "/javascript/javascript_web_browser_detection_update.php", // 23
-      "/javascript/errata_pro_jquery_20_2nd_edition_adam_freeman.php", // 24
-      "/javascript/javascript_techniques/index.php", // 25
-      "/javascript/javascript_techniques/breadcrumbs_navigation.php", // 26
-      "/javascript/javascript_techniques/change_ext_ss.php", // 27
-      "/javascript/javascript_techniques/collapse_expand_all.php", // 28
-      "/javascript/javascript_techniques/tabbed_web_pages.php", // 29
-      "/javascript/javascript_reference/index.php", // 30
-      "/javascript/javascript_reference/arguments_object.php", // 31
-      "/javascript/javascript_reference/classList_property.php", // 32
-      "/javascript/javascript_reference/dataset_property.php", // 33
-      "/javascript/javascript_reference/indexOf_method.php", // 34
-      "/javascript/javascript_reference/innerHTML_property.php", // 35
-      "/javascript/javascript_reference/insertAdjacentHTML_method.php", // 36
-      "/javascript/javascript_reference/json_object.php", // 37
-      "/javascript/javascript_reference/localStorage_object.php", // 38
-      "/javascript/javascript_reference/querySelectorAll_method.php", // 39
-      "/javascript/javascript_reference/splice_method.php", // 40
-      "/javascript/javascript_reference/style_object.php", // 41
-      "/javascript/jquery_techniques/index.php", // 42
-      "/javascript/jquery_techniques/fix_content_top_viewport_upon_scrolling.php", // 43
-      "/misc/index.php", // 44
-      "/misc/original_content.php", // 45
-      "/misc/glossary.php", // 46
-      "/misc/whats_new.php", // 47
-      "/php/install_quickinstall_windows.php", // 48
-/* End for renamed files new names from xyz.html to xyz.php 04 Jun 2016. */
-/* Start for renamed files new names misc. */
-      "/css/css_font_size_property.php", // 49
-      "/css/web_browser_support_css.php", // 50
-      "/css/web_browser_support_css.php", // 51
-      "/css/css_testing_ground/visualize_user_agent_styles.html", // 52
-      "/css/css_testing_ground/visualize_bootstrap_335_styles.html", // 53
-      "/css/css_testing_ground/visualize_bootstrap_336_styles.html", // 54
-      "/css/css_testing_ground/visualize_bootstrap_336_styles.html", // 55
-      "/css/css_testing_ground/visualize_bootstrap_337_styles.html", // 56
-      "/css/css_testing_ground/visualize_display_inline_compared_to_display_inline_block.html", // 57
-      "/css/css_testing_ground/web_browser_support_placeholder.php", // 58
-      "/css/css_testing_ground/web_browser_support_new_semantic.php", // 59
-      "/html/template_explained.php", // 60
-      "/html/web_page.php", // 61
-      "/html/web_page.php", // 62
-      "/javascript/javascript_shopping_cart_spa.php", // 63
-      "/javascript/javascript_shopping_cart_spa.php", // 64
-      "/javascript/javascript_shopping_cart_spa.php", // 65
-      "/javascript/javascript_techniques/tabbed_web_pages/tabbed_web_page_1.html", // 66
-      "/javascript/javascript_techniques/tabbed_web_pages/tabbed_web_page_2.html", // 67
-      "/javascript/javascript_techniques/tabbed_web_pages/tabbed_web_page_3.html" // 68
-/* End for rename files new names misc. */
+/* -------------------- MOVED (NOT DELETED) WEB PAGES ARRAYS -------------------- */
+
+/* NOTE: each item in movedWebPagesArray corresponds to identically indexed item in movedWebPagesNewLocationsArray. */
+
+     var movedWebPagesArray = [ // movedWebPagesArray lists web pages that no longer exist because they have been moved (and possibly renamed).
+      "/zz_testDNE/moved.html" // 00.
+     ];
+     var movedWebPagesNewLocationsArray = [ // movedWebPagesNewLocationsArray lists the moved web pages new location.
+      "/zz_test/moved_new_location_possibly_renamed.html" // 00.
      ];
 
-/* -------------------- STOP TWO ARRAYS FOR RENAMED WEB PAGE FILES -------------------- */
-
-/* -------------------- START TWO ARRAYS FOR MOVED (NOT DELETED) WEB PAGES -------------------- */
-
-/* movedWebPagesArray lists the web page files that no longer exist because they have been moved (and possibly renamed). */
-/* NOTE: each item in movedWebPagesArray corresponds to identically indexed item in movedWebPagesNewLocationArray. */
-     var movedWebPagesArray = [
-/* Start for moved web pages from /js/js_xyz.ext to /javascript/javascript_xyz.ext 31 Mar 2016. */
-      "/js/index.html", // 00
-      "/js/js_shopping_cart_example.html", // 01
-      "/js/js_shopping_cart_example_most_content_removed.html", // 02
-      "/js/js_web_browser_detection_update.html", // 03
-      "/js/errata_pro_jquery_20_2nd_edition_adam_freeman.html", // 04
-      "/js/js_techniques/index.html", // 05
-      "/js/js_techniques/breadcrumbs_navigation.html", // 06
-      "/js/js_techniques/change_ext_ss.html", // 07
-      "/js/js_techniques/change_ext_ss/change_ext_ss.html", // 08
-      "/js/js_techniques/collapse_expand_all.html", // 09
-      "/js/js_techniques/collapse_expand_all/collapse_expand_all.html", // 010
-      "/js/js_techniques/tabbed_web_pages.html", // 011
-      "/js/js_techniques/tabbed_web_pages/tabbed_web_pages_1.html", // 012
-      "/js/js_techniques/tabbed_web_pages/tabbed_web_pages_2.html", // 013
-      "/js/js_techniques/tabbed_web_pages/tabbed_web_pages_3.html", // 014
-      "/js/js_reference/index.html", // 015
-      "/js/js_reference/arguments_object.html", // 016
-      "/js/js_reference/classList_property.html", // 017
-      "/js/js_reference/dataset_property.html", // 018
-      "/js/js_reference/indexOf_method.html", // 019
-      "/js/js_reference/innerHTML_property.html", // 020
-      "/js/js_reference/insertAdjacentHTML_method.html", // 021
-      "/js/js_reference/json_object.html", // 022
-      "/js/js_reference/localStorage_object.html", // 023
-      "/js/js_reference/querySelectorAll_method.html", // 024
-      "/js/js_reference/splice_method.html", // 025
-      "/js/js_reference/style_object.html", // 026
-      "/js/jquery_techniques/index.html", // 027
-      "/js/jquery_techniques/fix_content_top_viewport_upon_scrolling.html", // 028
-/* End for moved web pages from /js/js_xyz.ext to /javascript/javascript_xyz.ext 31 Mar 2016. */
-/* Start for moved web pages misc. */
-      "/bom/index.html", // 029
-      "/bom/versions_ie_ed_windows.html", // 030
-      "/bom/web_browser_useragent_values.html", // 031
-      "/bom/web_browser_useragent_values.php", // 032
-      "/bom/windows_versions_ie.html", // 033
-      "/bom/versions_ie_ed_windows.php", // 034
-      "/css/css_testing_ground/web_browser_support_placeholder/web_browser_support_moz-placeholder_pseudo-class.html", // 035
-      "/css/css_testing_ground/web_browser_support_placeholder/web_browser_support_placeholder.html", // 036
-      "/css/css_testing_ground/web_browser_support_placeholder/web_browser_support_webkit-input-placeholder.html", // 037
-      "/css/style_textboxes_textareas_with_css.html", // 038
-      "/css/style_textboxes_textareas_with_css/style_textboxes_textareas_with_css_demo.html", // 039
-      "/css/style_selectboxes_with_css.html", // 040
-      "/css/style_selectboxes_with_css/style_selectboxes_with_css_technique1_demo.html", // 041
-      "/css/style_selectboxes_with_css/style_selectboxes_with_css_technique2_demo.html", // 042
-      "/css/style_selectboxes_with_css/style_selectboxes_with_css_technique3_demo.html", // 043
-      "/css/style_checkboxes_radio_buttons_with_css.html", // 044
-      "/css/style_checkboxes_radio_buttons_with_css/style_checkboxes_radio_buttons_with_css_demo.html", // 045
-      "/css/style_checkboxes_radio_buttons_with_css/style_checkboxes_radio_buttons_with_css_technique_1.html", // 046
-      "/css/style_checkboxes_radio_buttons_with_css/style_checkboxes_radio_buttons_with_css_technique_2.html", // 047
-      "/css/visualize_bootstrap_viewport_breakpoints.html", // 048
-      "/dom/index.html", // 049
-      "/html/template/template_most_content_removed.html", // 050
-      "/js/javascript_shopping_cart_example/javascript_shopping_cart_example_most_content_removed.html", // 051
-      "/js/js_shopping_cart_example/js_shopping_cart_example_most_content_removed.html", // 052
-      "/js/js_techniques/change_ext_ss_demo.html", // 053
-      "/js/js_techniques/collapse_expand_all_demo.html", // 054
-      "/js/js_techniques/tabbed_web_pages_demo1.html", // 055
-      "/js/js_techniques/tabbed_web_pages_demo2.html", // 056
-      "/js/js_techniques/tabbed_web_pages_demo3.html", // 057
-      "/js/jquery_techniques/fix_content_top_viewport_upon_scrolling/fix_content_top_viewport_upon_scrolling.html", // 058
-      "/misc/windows_environment_develop_phpbb_styles.php", // 059
-      "/other/windows_environment_develop_phpbb_styles.html", // 060
-      "/other/development_environment_phpbb_windows.html" // 061
-/* End for moved web pages misc. */
-     ];
-
-/* movedWebPagesNewLocationArray lists the new location for the web page files that no longer exist because they have been moved (and possibly renamed) per movedWebPagesArray above. */
-/* NOTE: each item in movedWebPagesArray corresponds to identically indexed item in movedWebPagesNewLocationArray. */
-     var movedWebPagesNewLocationArray = [
-/* Start for moved web pages new location from /js/js_xyz.ext to /javascript/javascript_xyz.ext 31 Mar 2016. */
-      "/javascript/index.php", // 00
-      "/javascript/javascript_shopping_cart_spa.php", // 01
-      "/javascript/javascript_shopping_cart_spa.php", // 02
-      "/javascript/javascript_web_browser_detection_update.php", // 03
-      "/javascript/errata_pro_jquery_20_2nd_edition_adam_freeman.php", // 04
-      "/javascript/javascript_techniques/index.php", // 05
-      "/javascript/javascript_techniques/breadcrumbs_navigation.php", // 06
-      "/javascript/javascript_techniques/change_ext_ss.php", // 07
-      "/javascript/javascript_techniques/change_ext_ss/change_ext_ss.html", // 08
-      "/javascript/javascript_techniques/collapse_expand_all.php", // 09
-      "/javascript/javascript_techniques/collapse_expand_all/collapse_expand_all.html", // 010
-      "/javascript/javascript_techniques/tabbed_web_pages.php", // 011
-      "/javascript/javascript_techniques/tabbed_web_pages/tabbed_web_page_1.html", // 012
-      "/javascript/javascript_techniques/tabbed_web_pages/tabbed_web_page_2.html", // 013
-      "/javascript/javascript_techniques/tabbed_web_pages/tabbed_web_page_3.html", // 014
-      "/javascript/javascript_reference/index.php", // 015
-      "/javascript/javascript_reference/arguments_object.php", // 016
-      "/javascript/javascript_reference/classList_property.php", // 017
-      "/javascript/javascript_reference/dataset_property.php", // 018
-      "/javascript/javascript_reference/indexOf_method.php", // 019
-      "/javascript/javascript_reference/innerHTML_property.php", // 020
-      "/javascript/javascript_reference/insertAdjacentHTML_method.php", // 021
-      "/javascript/javascript_reference/json_object.php", // 022
-      "/javascript/javascript_reference/localStorage_object.php", // 023
-      "/javascript/javascript_reference/querySelectorAll_method.php", // 024
-      "/javascript/javascript_reference/splice_method.php", // 025
-      "/javascript/javascript_reference/style_object.php", // 026
-      "/javascript/jquery_techniques/index.php", // 027
-      "/javascript/jquery_techniques/fix_content_top_viewport_upon_scrolling.php", // 028
-/* End for moved web pages new location from /js/js_xyz.ext to /javascript/javascript_xyz.ext 31 Mar 2016. */
-/* Start for moved web pages new location misc. */
-      "/javascript/index.php", // 029
-      "/misc/versions_ie_ed_windows.php", // 030
-      "/javascript/web_browser_useragent_values.php", // 031
-      "/javascript/web_browser_useragent_values.php", // 032
-      "/misc/versions_ie_ed_windows.php", // 033
-      "/misc/versions_ie_ed_windows.php", // 034
-      "/css/css_testing_ground/web_browser_support_placeholder.php", // 035
-      "/css/css_testing_ground/web_browser_support_placeholder.php", // 036
-      "/css/css_testing_ground/web_browser_support_placeholder.php", // 037
-      "/css/css_techniques/style_textboxes_textareas.php", // 038
-      "/css/css_techniques/style_textboxes_textareas/style_textboxes_textareas.html", // 039
-      "/css/css_techniques/style_selectboxes.php", // 040
-      "/css/css_techniques/style_selectboxes/style_selectboxes_technique_1.html", // 041
-      "/css/css_techniques/style_selectboxes/style_selectboxes_technique_2.html", // 042
-      "/css/css_techniques/style_selectboxes/style_selectboxes_technique_3.html", // 043
-      "/css/css_techniques/style_checkboxes_radio_buttons.php", // 044
-      "/css/css_techniques/style_checkboxes_radio_buttons.php", // 045
-      "/css/css_techniques/style_checkboxes_radio_buttons/style_checkboxes_radio_buttons_technique_1.html", // 046
-      "/css/css_techniques/style_checkboxes_radio_buttons/style_checkboxes_radio_buttons_technique_2.html", // 047
-      "/css/css_testing_ground/visualize_bootstrap_33x_media_query_viewport_breakpoints.html", // 048
-      "/javascript/index.php", // 049
-      "/html/template.php", // 050
-      "/javascript/javascript_shopping_cart_spa.php", // 051
-      "/javascript/javascript_shopping_cart_spa.php", // 052
-      "/javascript/javascript_techniques/change_ext_ss.php", // 053
-      "/javascript/javascript_techniques/collapse_expand_all.php", // 054
-      "/javascript/javascript_techniques/tabbed_web_pages/tabbed_web_page_1.html", // 055
-      "/javascript/javascript_techniques/tabbed_web_pages/tabbed_web_page_2.html", // 056
-      "/javascript/javascript_techniques/tabbed_web_pages/tabbed_web_page_3.html", // 057
-      "/javascript/jquery_techniques/fix_content_top_viewport_upon_scrolling.php", // 058
-      "/php/install_quickinstall_windows.php", // 059
-      "/php/install_quickinstall_windows.php", // 060
-      "/php/install_quickinstall_windows.php" // 061
-/* End for moved web pages new location misc. */
-     ];
-
-/* -------------------- STOP TWO ARRAYS FOR MOVED (NOT DELETED) WEB PAGES -------------------- */
+/* -------------------- DELETED WEB PAGES ARRAY -------------------- */
 
      var deletedWebPagesArray = [
-      "/deleted.html"
+      "/zz_test/deleted.html"
      ];
+
+/* -------------------- LOGIC -------------------- */
+
      if (renamedFilesArray.indexOf(requestUri) != -1){
       var i = renamedFilesArray.indexOf(requestUri);
-      var renamedFilesNewName = renamedFilesNewNameArray[i];
-      reportString = "Why? The web page file was renamed: <a href='http://www.learnwebcoding.com" + renamedFilesNewName + "'>http://www.learnwebcoding.com" + renamedFilesNewName + "</a>.";
+      var renamedFileNewFilename = renamedFilesNewFilenamesArray[i];
+      reportString = "Why? The web page file was renamed: <a href='http://www.learnwebcoding.com" + renamedFileNewFilename + "'>http://www.learnwebcoding.com" + renamedFileNewFilename + "</a>.";
      } else if (movedWebPagesArray.indexOf(requestUri) != -1){
       var i = movedWebPagesArray.indexOf(requestUri);
-      var movedWebPagesNewLocation = movedWebPagesNewLocationArray[i];
-      reportString = "Why? The web page file was moved (and possibly renamed): <a href='http://www.learnwebcoding.com" + movedWebPagesNewLocation + "'>http://www.learnwebcoding.com" + movedWebPagesNewLocation + "</a>.";
+      var movedWebPageNewLocation = movedWebPagesNewLocationsArray[i];
+      reportString = "Why? The web page file was moved (and possibly renamed): <a href='http://www.learnwebcoding.com" + movedWebPageNewLocation + "'>http://www.learnwebcoding.com" + movedWebPageNewLocation + "</a>.";
      } else if (deletedWebPagesArray.indexOf(requestUri) != -1){
       reportString = "Why? The web page file was deleted and is no longer available.";
      } else {
@@ -350,8 +72,8 @@
  <body>
 
   <header id="headerId">
-   <script type="text/javascript" src="/javascripts/lwc/header_html.min.js"></script>
-   <script type="text/javascript">BcrumbsNavUtil.bcrumbsNav();</script>
+   <script src="/javascripts/lwc/header_html.min.js"></script>
+   <script>BcrumbsNavUtil.bcrumbsNav();</script>
    <noscript class="noscript"><div class="container-fluid"><!-- container-fluid from Bootstrap. -->NOTE: Parts of this web site require JavaScript and are nonfunctional because your web browser does not support JavaScript or has JavaScript support disabled.</div></noscript>
   </header>
 
@@ -359,8 +81,8 @@
    <div class="container-fluid"><!-- container-fluid from Bootstrap. -->
     <h1>404 Not Found</h1>
 
-    <div class="last-reviewed">Last reviewed/updated: 10 Feb 2018 | Published: 16 Oct 2015 | Status: Active</div>
-    <script type="text/javascript" src="/javascripts/lwc/support_tools_no_toc_html.min.js"></script>
+    <div class="last-reviewed">Last reviewed/updated: 16 May 2018 | Published: 16 Oct 2015 | Status: Active</div>
+    <script src="/javascripts/lwc/support_tools_no_toc_html.min.js"></script>
 
     <nav id="tocId" class="toc">
 <!-- No table of contents required for 404.shtml. However, table of content nav tags are required for the LWC Home tools icon dropdown option 1 - 3 marker, not the option itself, to work. Therefore, include empty table of contents nav tags. -->
@@ -375,16 +97,16 @@
 
 <!-- 404.shtml appears only if cannot find a web page. When try to validate 404.shtml, the validator validates the referring URL, which is the non-existent 404 not found web page, not 404.shtml. The validation fails with report: I got the following unexpected response when trying to retrieve http://www.learnwebcoding.com/some_non_existant_web_page.php: 404 Not Found. Therefore, either hard code the footer_html.min.js content into the footer tag and explicitly set the referring URL to 404.shtml, or omit the footer. For now, do not want to draw attention to .shtml file. Therefore, for now, 404.shtml is considered a specialty web page and the footer is commented out.
   <footer>
-   <script type="text/javascript" src="/javascripts/lwc/footer_html.min.js"></script>
+   <script src="/javascripts/lwc/footer_html.min.js"></script>
   </footer>
 -->
 
 <!-- Copy changes below to javascript*.php, 404.shtml, and web_browser_retain_remove_content_f5.html. -->
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script type="text/javascript" src="/javascripts/bootstrap/bootstrap.min.js"></script>
-  <script type="text/javascript" src="/javascripts/lwc/library_load_in_body.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="/javascripts/bootstrap/bootstrap.min.js"></script>
+  <script src="/javascripts/lwc/library_load_in_body.min.js"></script>
 
-  <script type="text/javascript">NotFound404Util.notFound404();</script>
+  <script>NotFound404Util.notFound404();</script>
 
  </body>
 </html>

@@ -4,7 +4,7 @@
 /* File: /web_server_root_directory/html/template_explained_sections.php.
  * Purpose: Web page sections.
  * Used in: /web_server_root_directory/html/template_explained.php.
- * Last reviewed/updated: 08 Apr 2018.
+ * Last reviewed/updated: 15 May 2018.
  * Published: 21 Sep 2016. */
 return
    "<section>
@@ -184,10 +184,10 @@ warnings (learnwebcoding.com)</a> per the <a href='http://jigsaw.w3.org/css-vali
       <li>Allows the overriding of sitewide default WPO property values with web page specific WPO property values in a single file (<span class='filename'>web_page.php</span>).</li>
       <li>Allows the placement of sitewide blocks of code in separate files (e.g., <span class='filename'>footer.php</span>, <span class='filename'>header.php</span>, <span class='filename'>javascripts.php</span>, <span class='filename'>stylesheets.php</span>, and <span class='filename'>tools.php</span>).</li>
       <li>Allows that some WPO properties and that some sitewide blocks of code might not be used in all web pages (<span class='filename'>web_page.php</span>).</li>
-      <li>Allows the creation of a web page overall HTML/PHP template in a single file, with HTML from opening <code>&lt;!DOCTYPE html&gt;&lt;html lang='en'&gt;</code> to closing <code>&lt;/html&gt;</code>, and PHP that inserts WPO property values into the HTML (<span class='filename'>overall.php</span>).</li>
+      <li>Allows the creation of a web page HTML/PHP template in a single file, with HTML from <code>&lt;html&gt;</code> to <code>&lt;/html&gt;</code>, and PHP that inserts WPO property values into the HTML (<span class='filename'>template.php</span>).</li>
       <li>Allows the definition of multiple different web page types as PHP WPOs each in a separate file (<span class='filename'>Web_Page*.class.php</span>).</li>
       <li>Allows the placement of multiple different sitewide blocks of code, and the creation of multiple different variations of the sitewide blocks of code, each in a separate file (<span class='filename'>myblockofcode*.php</span>, <span class='filename'>footer*.php</span>, <span class='filename'>header*.php</span>, <span class='filename'>javascripts*.php</span>, <span class='filename'>stylesheets*.php</span>, and <span class='filename'>tools*.php</span>).</li>
-      <li>Allows the creation of multiple different web page overall HTML/PHP templates each in a separate file (<span class='filename'>overall*.php</span>).</li>
+      <li>Allows the creation of multiple different web page HTML/PHP templates each in a separate file (<span class='filename'>template*.php</span>).</li>
      </ul>
 
      <h3><a id='phpTemplateFileDescription'></a>4.1. PHP Template System File Description</h3>
@@ -196,69 +196,67 @@ warnings (learnwebcoding.com)</a> per the <a href='http://jigsaw.w3.org/css-vali
 
      <ul>
       <li><span class='filename'>footer.php</span>: Web page <a href='#footerSection'><code>&lt;footer&gt;&lt;/footer&gt;</code> section (below)</a> code file.</li>
+      <li><span class='filename'>google_analytics.php</span>: Web page Google Analytics code file.
       <li><span class='filename'>header.php</span>: Web page <a href='#headerSection'><code>&lt;header&gt;&lt;/header&gt;</code> section (below)</a> code file.</li>
       <li><span class='filename'>javascripts.php</span>: Web page JavaScripts code file.</li>
-      <li><span class='filename'>overall.php</span>: Web page overall HTML/PHP template file.</li>
       <li><span class='filename'>stylesheets.php</span>: Web page style sheets code file.</li>
+      <li><span class='filename'>template.php</span>: Web page HTML/PHP template file.</li>
       <li><span class='filename'>tools.php</span>: Web page <a href='#lwcHomeToolsIconDropdown'>LWC Home tools icon dropdown (below)</a> code file.</li>
       <li><span class='filename'>Web_Page.class.php</span>: Web page object (WPO) definition file. Defines a web page type as a PHP WPO. Defines WPO properties. Assigns sitewide default WPO property values.</li>
-      <li><span class='filename'>web_page.php</span>: Web page file. Assigns web page specific WPO property values. The property values assigned in <span class='filename'>web_page.php</span> override the property values assigned in <span class='filename'>Web_Page.class.php</span>. Merges the WPO with the web page overall HTML/PHP template. Becomes a web page with filename <span class='filename'>web_page.php</span>.</li>
+      <li><span class='filename'>web_page.php</span>: Web page file. Assigns web page specific WPO property values. The property values assigned in <span class='filename'>web_page.php</span> override the property values assigned in <span class='filename'>Web_Page.class.php</span>. Merges the WPO with the web page HTML/PHP template. Becomes a web page with filename <span class='filename'>web_page.php</span>.</li>
       <li><span class='filename'>web_page_sections.php</span>: Web page <a href='#sections'>sections (below)</a> code file.</li>
       <li><span class='filename'>web_page_toc.php</span>: Web page <a href='#toc'>table of contents (below)</a> code file.</li>
      </ul>
 
      <h3><a id='phpTemplateHowWorks'></a>4.2. How The PHP Template System Works</h3>
 
-     <p>In general, <span class='filename'>web_page.php</span> merges a web page object (WPO) with a web page overall HTML/PHP template, which turns <span class='filename'>web_page.php</span> into a web page with filename <span class='filename'>web_page.php</span>. Specifically:</p>
+     <p>In general, <span class='filename'>web_page.php</span> merges a web page object (WPO) with a web page HTML/PHP template, which turns <span class='filename'>web_page.php</span> into a web page with filename <span class='filename'>web_page.php</span>. Specifically:</p>
 
      <ul>
       <li><span class='filename'>Web_Page.class.php</span>: Defines a web page type as a PHP WPO. Defines WPO properties and assigns sitewide default WPO property values.</li>
       <li><span class='filename'>web_page.php</span>: <code>include_once</code> <span class='filename'>Web_Page.class.php</span> and instantiate the WPO.</li>
-      <li><span class='filename'>web_page.php</span>: Overrides sitewide default WPO property values with web page specific WPO property values.
-       <div class='note normal'>In <span class='filename'>web_page.php</span>, the commented out properties are assigned the sitewide default WPO property values per <span class='filename'>Web_Page.class.php</span>.</div>
-      </li>
+      <li><span class='filename'>web_page.php</span>: Overrides sitewide default WPO property values with web page specific WPO property values.</li>
       <li><span class='filename'>web_page.php</span>: <code>include_once</code> <span class='filename'>stylesheets.php</span>, <span class='filename'>header.php</span>, <span class='filename'>tools.php</span>, <span class='filename'>web_page_toc.php</span>, <span class='filename'>web_page_sections.php</span>, <span class='filename'>footer.php</span>, and <span class='filename'>javascripts.php</span>.</li>
-      <li><span class='filename'>overall.php</span>: Creates a web page overall HTML/PHP template. Includes HTML from opening <code>&lt;!DOCTYPE html&gt;&lt;html lang='en'&gt;</code> to closing <code>&lt;/html&gt;</code> and the PHP inserts WPO property values into the HTML.</li>
-      <li><span class='filename'>web_page.php</span>: <code>include_once</code> <span class='filename'>overall.php</span>.</li>
+      <li><span class='filename'>template.php</span>: Represents a web page HTML/PHP template. Provides HTML from <code>&lt;html&gt;</code> to <code>&lt;/html&gt;</code> and the PHP inserts WPO property values into the HTML.</li>
+      <li><span class='filename'>web_page.php</span>: <code>include_once</code> <span class='filename'>template.php</span>.</li>
       <li><span class='filename'>web_page.php</span>: Becomes a web page with filename <span class='filename'>web_page.php</span>.</li>
      </ul>
 
 <pre class='ascii-art'>
-----------------------
++--------------------+
 |                    |
 |                    | - Defines a web page type as a PHP WPO.
 |                    | - Defines WPO properties.
 | Web_Page.class.php | - Assigns sitewide default WPO property
-|                    |   values.------------------------------------&gt;|
-|                    | ----------------|                             |
+|                    |   values.------------------------------------&gt;+
+|                    | ---------------&gt;+                             |
 |                    |                 |                             |
-----------------------                 |                             |
++--------------------+                 |                             |
                                        |                             |
-----------------------                 |                             |
++--------------------+                 |                             |
 |                    |                \|/                           \|/
 |                    | - include_once Web_Page.class.php and         |
 |                    |   instantiate the WPO.                        |
 |                    | - Overrides sitewide default WPO property     |
 |                    |   values with web page specific WPO           |
-|   web_page.php     |   property values.---------------------------&gt;|
+|   web_page.php     |   property values.---------------------------&gt;+
 |    (web page)      | - include_once stylesheets.php,               |
 |                    |   header.php, tools.php,                      |
 |                    |   web_page_toc.php, web_page_sections.php,    |
 |                    |   footer.php, and javascripts.php.            |
-|                    | - include_once overall.php.                   |
+|                    | - include_once template.php.                  |
 |                    |                /|\                           \|/
-----------------------                 |                             |
++--------------------+                 |                             |
                                        |                             |
-----------------------                 |                             |
++--------------------+                 |                             |
 |                    |                 |                             |
-|                    | ----------------|                             |
-|                    | - Creates a web page overall HTML/PHP         |
-|    overall.php     |   template.                                   |
-|                    | - Includes HTML from opening to closing       |
-|                    |   HTML tag and the PHP inserts WPO            |
-|                    |   property values into the HTML.&lt;-------------|
+|                    | ---------------&gt;+                             |
+|                    | - Represents a web page HTML/PHP template.    |
+|   template.php     | - Provides HTML from &lt;html&gt; to &lt;/html&gt; and    |
+|                    |   the PHP inserts WPO property values into   \|/
+|                    |   the HTML.&lt;----------------------------------+
 |                    |
-----------------------
++--------------------+
 </pre>
 
      <div class='note normal'>For additional information on the PHP template system, see <a href='/templates/PHP_Template_System_Readme.txt'>PHP_Template_System_Readme.txt (learnwebcoding.com)</a>.</div>

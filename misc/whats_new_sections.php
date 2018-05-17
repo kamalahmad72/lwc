@@ -12,6 +12,8 @@ return
 -->
 <!-- Resources are \"Added.\" Instructional pages are \"Published.\" Always keep when a page is \"Added/Published.\" When a page is \"Major update\" remove prior \"Updated/Major update.\" When a page is \"Updated\" remove prior \"Updated.\" When a page is \"Updated\" keep prior \"Major update.\" When a page is \"Updated/Major update\" remove prior \"Renamed.\" When a page is \"Renamed\" without being \"Updated\" keep prior \"Updated/Major update.\" When a page is \"Renamed\" and \"Updated\" remove prior \"Updated\" and keep prior \"Major update.\" When a page is \"Renamed\" rename all refs to the page (including Updated/Major update/Added/Published) to the new name. When a page is \"Moved to discontinued\" keep prior \"Published\" and remove prior \"Updated.\" -->
      <ul class='link-list'>
+      <li><a href='/index.php'>Learn Web Coding Home Page (learnwebcoding.com)</a>: Updated: 15 May 2018.</li>
+      <li><a href='/html/template_explained.php'>Learn Web Coding Home Template Explained (learnwebcoding.com)</a>: Updated: 15 May 2018.</li>
       <li><a href='/javascript/web_browser_useragent_values.php'>Web Browser User-Agent String Values (learnwebcoding.com)</a> and <a href='/javascript/javascript_web_browser_detection_update.php'>JavaScript Web Browser Detection With Link To Download Update (learnwebcoding.com)</a>: Updated: 13 May 2018.</li>
       <li><a href='/javascript/javascript_reference/setTimeout_method.php'>JavaScript Feature Reference: <code>setTimeout()</code> Method Web Browser Support Test (learnwebcoding.com)</a>: Published: 10 May 2018.</li>
       <li><a href='/javascript/javascript_reference/index.php'>JavaScript Feature Reference (learnwebcoding.com)</a>: Updated: 10 May 2018.</li>
@@ -25,7 +27,6 @@ return
       <li><a href='/javascript/javascript_reference/defineProperty_method.php'>JavaScript Feature Reference: <code>defineProperty()</code> Method Web Browser Support Test (learnwebcoding.com)</a>: Updated: 28 Apr 2018.</li>
       <li><a href='/php/simple_mysql_admin.php'>Simple MySQL Admin (learnwebcoding.com)</a>: Web page updated: 11 Apr 2018.</li>
       <li><a href='/php/simple_mysql_admin.php'>Simple MySQL Admin (learnwebcoding.com)</a>: Application major update: 08 Apr 2018.</li>
-      <li><a href='/html/template_explained.php'>Learn Web Coding Home Template Explained (learnwebcoding.com)</a>: Updated: 08 Apr 2018.</li>
       <li><a href='/css/css_techniques/style_checkboxes_radio_buttons.php'>CSS Technique: Style Checkboxes And Radio Buttons (learnwebcoding.com)</a>: Updated: 22 Mar 2018.</li>
       <li><a href='/html/template_download.php'>Learn Web Coding Home Template Download (learnwebcoding.com)</a>: Web page updated and application updated: 11 Mar 2018.</li>
       <li><a href='/javascript/javascript_techniques/breadcrumbs_navigation.php'>JavaScript Technique: Breadcrumbs Navigation (learnwebcoding.com)</a>: Updated: 10 Mar 2018.</li>
@@ -36,7 +37,6 @@ return
       <li><a href='/javascript/javascript_reference/promise_object.php'>JavaScript Feature Reference: <code>Promise</code> Object Web Browser Support Test (learnwebcoding.com)</a>: Updated: 24 Feb 2018.</li>
       <li><a href='/javascript/javascript_reference/promise_object.php'>JavaScript Feature Reference: <code>Promise</code> Object Web Browser Support Test (learnwebcoding.com)</a>: Published: 22 Feb 2018.</li>
       <li><a href='/javascript/angularjs_shopping_cart_spa.php'>AngularJS Shopping Cart Single Page Application (learnwebcoding.com)</a> and <a href='/javascript/javascript_shopping_cart_spa.php'>JavaScript Shopping Cart Single Page Application (learnwebcoding.com)</a> Updated: 15 Feb 2018.</li>
-      <li><a href='/index.php'>Learn Web Coding Home Page (learnwebcoding.com)</a>: Updated: 10 Feb 2018.</li>
       <li><a href='/javascript/jquery_techniques/fix_content_top_viewport_upon_scrolling.php'>jQuery Technique: Fix Web Page Content To Top Of Viewport Upon Scrolling (learnwebcoding.com)</a>: Updated: 10 Feb 2018.</li>
       <li><a href='/javascript/javascript_reference/find_method.php'>JavaScript Feature Reference: <code>find</code> Method Web Browser Support Test (learnwebcoding.com)</a> and <a href='/javascript/javascript_reference/findIndex_method.php'>JavaScript Feature Reference: <code>findIndex()</code> Method Web Browser Support Test (learnwebcoding.com)</a>: Published: 09 Feb 2018.</li>
       <li><a href='/javascript/javascript_reference/class_syntax.php'>JavaScript Feature Reference: <code>class</code> Syntax Web Browser Support Test (learnwebcoding.com)</a> and <a href='/javascript/javascript_reference/propertyIsEnumerable_method.php'>JavaScript Feature Reference: <code>propertyIsEnumerable()</code> Method Web Browser Support Test (learnwebcoding.com)</a>: Published: 07 Feb 2018.</li>
