@@ -1,0 +1,8 @@
+Learn Web Coding (LWC) consists of <a href='http://www.learnwebcoding.com/'>LWC Home (learnwebcoding.com)</a>, <a href='http://blog.learnwebcoding.com/'>LWC Blog (blog.learnwebcoding.com)</a>, and <a href='http://forums.learnwebcoding.com/'>LWC Forums (forums.learnwebcoding.com)</a>. LWC Home, LWC Blog, and LWC Forums (LWC Home/Blog/Forums) are treated as three distinct web sites.
+
+LWC uses the following third party code/cookies:
+1.) LWC Home uses Google Analytics gtag.js code. The Google Analytics code uses cookies (learnwebcoding.com). For information on the Google Analytics cookies, see Google Analytics Cookie Usage on Websites (https://developers.google.com/analytics/devguides/collection/analyticsjs/cookie-usage).
+2.) LWC Blog is a Word Press application. The Word Press application does not use cookies. NOTE: If creating a user account and logging in were enabled, the Word Press application would use cookies (blog.learnwebcoding.com) only upon logging in. However, creating a user account and logging in are disabled. Therefore, the Word Press application does not use cookies.
+3.) LWC Forums is a phpBB application. The Word Press application uses cookies (forums.learnwebcoding.com).
+
+The data collected by the LWC Home Google Analytics code, the LWC Blog Word Press application, and the LWC Forums phpBB application is not shown/shared with any third party.

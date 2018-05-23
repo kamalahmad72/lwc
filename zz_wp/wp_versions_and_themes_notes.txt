@@ -4,7 +4,7 @@ NOTE: Starting Apr/May 2015 change LWC from fixed width style to responsive styl
 WP Default Styles
 -----------------
 
-wp 4.2.1 (27Apr15) includes three themes; 1.) Twenty Fifteen v1.1 (default), 2.) Twenty Fourteen v1.4, 3.) Twenty Thirteen v1.5. Not compared to wp v4.2.
+wp 4.2.1 (27Apr15) includes three themes; 1.) Twenty Fifteen v1.1 (default), 2.) Twenty Fourteen v1.4, 3.) Twenty Thirteen v1.5.
 wp 4.2.2 (07May15) includes three themes; 1.) Twenty Fifteen v1.2 (default), 2.) Twenty Fourteen v1.4, 3.) Twenty Thirteen v1.5.
 wp 4.3   (18Aug15) includes three themes; 1.) Twenty Fifteen v1.3 (default), 2.) Twenty Fourteen v1.5, 3.) Twenty Thirteen v1.6.
 wp 4.3.1 (15Sep15) includes three themes; 1.) Twenty Fifteen v1.3 (default), 2.) Twenty Fourteen v1.5, 3.) Twenty Thirteen v1.6.
@@ -33,6 +33,7 @@ wp 4.9.2 (16Jan18) includes three themes; 1.) Twenty Seventeen v1.4 (default), 2
 wp 4.9.3 (05Feb18) includes three themes; 1.) Twenty Seventeen v1.4 (default), 2.) Twenty Sixteen v1.4, 3.) Twenty Fifteen v1.9.
 wp 4.9.4 (06Feb18) includes three themes; 1.) Twenty Seventeen v1.4 (default), 2.) Twenty Sixteen v1.4, 3.) Twenty Fifteen v1.9.
 wp 4.9.5 (03Apr18) includes three themes; 1.) Twenty Seventeen v1.5 (default), 2.) Twenty Sixteen v1.4, 3.) Twenty Fifteen v1.9.
+wp 4.9.6 (17May18) includes three themes; 1.) Twenty Seventeen v1.6 (default), 2.) Twenty Sixteen v1.5, 3.) Twenty Fifteen v2.0. GDPR release.
 
 -------------------
 WP Alternate Themes
