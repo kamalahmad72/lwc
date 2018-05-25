@@ -4,7 +4,7 @@
 /* File: /web_server_root_directory/templates/Web_Page.class.php.
  * Purpose: Web page object definition file. Define web page object properties. Assign sitewide default web page object property values.
  * Used in: Web page files based on /web_server_root_directory/templates/web_page.php.
- * Last reviewed/updated: 27 Jul 2017.
+ * Last reviewed/updated: 15 May 2018.
  * Published: 21 Sep 2016. */
 class Web_Page {
  public $head_title = "";
@@ -21,6 +21,7 @@ class Web_Page {
  public $body_main_hrClassAttribute = ""; // Default ""/empty string displays <hr>. To not display <hr>, assign "class='display-none'" string.
  public $body_main_sections = "";
  function __construct(){ // To simultaneously declare and initialize PHP object properties with non simple constant values, such as those using include_once statement, constructor required.
+  $this->head_script_googleAnalytics = include_once "google_analytics.php";
   $this->head_link_stylesheets = include_once "stylesheets.php";
   $this->body_header = include_once "header.php";
   $this->body_main_tools = include_once "tools.php";

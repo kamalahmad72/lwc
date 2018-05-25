@@ -36,7 +36,7 @@ return
      <ol>
       <li>Download the following source code zip file to your computer:
        <ul class='link-list'>
-        <li><a href='/downloads/lwc_home_template.zip'><span class='filename'>lwc_home_template.zip</span> (learnwebcoding.com)</a> - Released: 11 Mar 2018. Size: 850,620 bytes. SHA-256 checksum: 2ecc32d2bc3f93fb25c43b586446ff34d75ff9f589da090ce0e34c7832fd9078.</li>
+        <li><a href='/downloads/lwc_home_template.zip'><span class='filename'>lwc_home_template.zip</span> (learnwebcoding.com)</a> - Released: 24 May 2018. Size: 849,126 bytes. SHA-256 checksum: f70be0b0d707112a7b18c1c609f1935dfee0bf74bd011d857a2a9aa8d24e97c8.</li>
        </ul>
       </li>
       <li>Extract the downloaded zip file. In this example, <span class='filename'>lwc_home_template.zip</span> is extracted to the <span class='filename'>lwc_home_template</span> folder:

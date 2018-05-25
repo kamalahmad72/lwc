@@ -3,12 +3,11 @@
 /* File: /web_server_root_directory/javascripts/lwc/library_load_in_body.js.
  * Purpose: Central location for LWC Home sitewide JavaScripts that can be loaded near end of <body></body>.
  * Used in: All LWC Home web pages except specialty web pages.
- * Last reviewed/updated: 10 Mar 2018.
+ * Last reviewed/updated: 16 May 2018.
  * Published: 19 May 2014.
  * Unobtrusive: 1.) decouple HTML/JavaScript: a.) no register JavaScript event handlers in HTML via HTML attributes (eg, onload and onclick), and b.) no embed JavaScripts in HTML via HTML script element; 2.) as reasonable, decouple CSS/JavaScript. Eg, as reasonable, use JavaScript to change HTML class attribute value assignments (loose coupling), not use JavaScript to change JavaScript style object CSS property value assignments (tight coupling); and 3.) no define JavaScript variables and functions on JavaScript global scope.
- * Web browser support (except Google Analytics code ???): IE10+, ED12+, FF3.6+, SM2.1+, SF5.1+, CH8+, OP11.50+, which corresponds to classList property support.
- * Objects: EventUtil and ToolsIconDropdownUtil.
- * NOTE: Includes Google Analytics code. */
+ * Web browser support: IE10+, ED12+, FF3.6+, SM2.1+, SF5.1+, CH8+, OP11.50+, which corresponds to classList property support.
+ * Objects: EventUtil and ToolsIconDropdownUtil. */
 
 /* -------------------- JAVASCRIPT OBJECT DEFINITIONS -------------------- */
 
@@ -191,18 +190,3 @@ var ToolsIconDropdownUtil = {
 EventUtil.registerEventHandler(ToolsIconDropdownUtil.toolsIconDropdownContainer, "click", ToolsIconDropdownUtil.showHideToolsIconDropdown);
 EventUtil.registerEventHandler(ToolsIconDropdownUtil.document, "click", ToolsIconDropdownUtil.showHideToolsIconDropdown);
 EventUtil.registerEventHandler(ToolsIconDropdownUtil.toolsIconDropdown, "click", ToolsIconDropdownUtil.changeDisplayOfWebPage);
-
-/* -------------------- GOOGLE ANALYTICS CODE -------------------- */
-
-/* Purpose: Collect data for Google Analytics and Google Webmaster Tools.
- * Used in: All LWC Home web pages except specialty web pages.
- * Last reviewed/updated: 06 Jul 2016.
- * Published: 28 Oct 2014.
- * Web browser support: ??? */
-
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-ga('create', 'UA-53108923-2', 'auto');
-ga('send', 'pageview');

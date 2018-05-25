@@ -2,9 +2,9 @@
 /* -------------------- INTRODUCTION -------------------- */
 
 /* File: /web_server_root_directory/templates/footer.php.
- * Purpose: Web page <footer></footer> section code file. Replace the <footer></footer> section code example below with your <footer></footer> section code, coded per LWC Home Template Explained (https://www.learnwebcoding.com/html/template_explained.php).
+ * Purpose: Web page <footer></footer> section code file. Replace the <footer></footer> section code below with your <footer></footer> section code, coded per LWC Home Template Explained (https://www.learnwebcoding.com/html/template_explained.php).
  * Used in: Web page files based on /web_server_root_directory/templates/web_page.php.
- * Last reviewed/updated: 10 Mar 2018.
+ * Last reviewed/updated: 22 May 2018.
  * Published: 04 Jun 2016.
  * NOTE: Copy changes to footer*.php and footer*html.js. */
 return
