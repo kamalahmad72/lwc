@@ -1,5 +1,5 @@
 PHP_Template_System_Readme.txt
-Last reviewed/edited: 15 May 2018.
+Last reviewed/edited: 20 Jun 2018.
 
 The LWC Home Template is developed by Steve Taylor at Learn Web Coding (http://www.learnwebcoding.com/). For additional information, see Learn Web Coding Home Template Explained (http://www.learnwebcoding.com/html/template_explained.php). Please email comments/suggestions to steve@learnwebcoding.com. Please feel free to download, edit, and/or fork the LWC Home Template source code. The LWC Home Template source code is available on GitHub (https://github.com/learnwebcoding/lwc_home_template).
 
@@ -122,8 +122,8 @@ In general, web_page.php merges a web page object (WPO) with a web page HTML/PHP
 |                    | - Overrides sitewide default WPO property     |
 |                    |   values with web page specific WPO           |
 |   web_page.php     |   property values.--------------------------->+
-|    (web page)      | - include_once stylesheets.php,               |
-|                    |   header.php, tools.php,                      |
+|    (web page)      | - include_once google_analytics.php,          |
+|                    |   stylesheets.php, header.php, tools.php,     |
 |                    |   web_page_toc.php, web_page_sections.php,    |
 |                    |   footer.php, and javascripts.php.            |
 |                    | - include_once template.php.                  |

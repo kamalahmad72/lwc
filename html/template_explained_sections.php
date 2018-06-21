@@ -4,7 +4,7 @@
 /* File: /web_server_root_directory/html/template_explained_sections.php.
  * Purpose: Web page sections.
  * Used in: /web_server_root_directory/html/template_explained.php.
- * Last reviewed/updated: 15 May 2018.
+ * Last reviewed/updated: 20 Jun 2018.
  * Published: 21 Sep 2016. */
 return
    "<section>
@@ -240,8 +240,8 @@ warnings (learnwebcoding.com)</a> per the <a href='http://jigsaw.w3.org/css-vali
 |                    | - Overrides sitewide default WPO property     |
 |                    |   values with web page specific WPO           |
 |   web_page.php     |   property values.---------------------------&gt;+
-|    (web page)      | - include_once stylesheets.php,               |
-|                    |   header.php, tools.php,                      |
+|    (web page)      | - include_once google_analytics.php,          |
+|                    |   stylesheets.php, header.php, tools.php,     |
 |                    |   web_page_toc.php, web_page_sections.php,    |
 |                    |   footer.php, and javascripts.php.            |
 |                    | - include_once template.php.                  |
