@@ -4,7 +4,7 @@
 /* File: /web_server_root_directory/html/template_explained_sections.php.
  * Purpose: Web page sections.
  * Used in: /web_server_root_directory/html/template_explained.php.
- * Last reviewed/updated: 20 Jun 2018.
+ * Last reviewed/updated: 30 Jun 2018.
  * Published: 21 Sep 2016. */
 return
    "<section>
@@ -4664,9 +4664,9 @@ kbd {
 
      <p>A URI as text is http://www.learnwebcoding.com/.</p>
 
-     <h3><a id='filenames'></a>27.4. Filenames, Folder Names, File System Paths, And Text At The Terminal/Command Prompt</h3>
+     <h3><a id='filenames'></a>27.4. Filenames, Folder Names, File System Paths, And Terminal/Command Prompt Output</h3>
 
-     <p>Filenames, folder names, file system paths, and text at the terminal/command prompt use the <code>span</code> element with the <code>class='filename'</code> attribute:</p>
+     <p>Filenames, folder names, file system paths, and terminal/command prompt output use the <code>span</code> element with the <code>class='filename'</code> attribute:</p>
 
 <pre>
 &lt;span class='filename'&gt;filename.ext&lt;/span&gt;
@@ -4681,7 +4681,7 @@ kbd {
 }
 </pre>
 
-     <p>Examples of filenames, folder names, file system paths, and text at the terminal/command prompt:</p>
+     <p>Examples of filenames, folder names, file system paths, and terminal/command prompt output:</p>
 
      <p>The Bootstrap implementation requires loading the Bootstrap style sheet <span class='filename'>bootstrap.min.css</span> file, the jQuery JavaScript <span class='filename'>jquery-3.3.1.min.js</span> file, and the Bootstrap JavaScript <span class='filename'>bootstrap.min.js</span> file.</p>
 
@@ -4725,7 +4725,28 @@ kbd {
       <li><a href='/javascript/javascript_techniques/collapse_expand_all/collapse_expand_all.js'><span class='filename'>collapse_expand_all.js</span> (learnwebcoding.com)</a></li>
      </ul>
 
-     <h3><a id='dialogTitles'></a>27.5. Dialog Titles And Web Page Titles</h3>
+     <h3><a id='databaseNames'></a>27.5. Database Names, Table Names, Column Names, Field Data, And User Accounts</h3>
+
+     <p>Database names, table names, column names, field data, and user accounts use the <code>span</code> element with the <code>class='filename'</code> attribute:</p>
+
+<pre>
+&lt;span class='filename'&gt;database_name&lt;/span&gt;
+</pre>
+
+     <p>The <code>span</code> type selector is not assigned author styles. The <code>.filename</code> class selector is assigned author styles:</p>
+
+<!-- Last reviewed/updated: 25 Jun 2016. -->
+<pre>
+.filename {
+  font-family: &quot;courier new&quot;, courier, monospace;
+}
+</pre>
+
+     <p>Examples of database names, table names, column names, field data, and user accounts:</p>
+
+     <p>Update database server support. Primary changes: 1.) add support for MySQL 5.7 stores MySQL user account password in <span class='filename'>mysql.user</span> table <span class='filename'>authentication_string</span> column, not <span class='filename'>password</span> column (in MySQL 5.7, <span class='filename'>mysql.user</span> table <span class='filename'>password</span> column does not exit); 2.) add support for MySQL 5.7 <span class='filename'>'mysql.session'@'localhost'</span> and <span class='filename'>'mysql.sys'@'localhost'</span> reserved user accounts, and MariaDB 10.0 - 10.2 <span class='filename'>'root'@'computername-pc'</span> reserved user account; 3.) add support for MySQL 5.7 <span class='filename'>sys</span> reserved database; and 4.) change MySQL to store Simple MySQL Admin | User Accounts | create user account | host name/IP address field empty/blank in <span class='filename'>mysql.user</span> table <span class='filename'>host</span> column as any host name (<span class='filename'>'%'</span> string), not empty string (<span class='filename'>''</span>), and change Simple MySQL Admin | User Accounts | create user account reports to display host name/IP address field empty/blank as any host name (<span class='filename'>'%'</span> string), not empty string (<span class='filename'>''</span>).</p>
+
+     <h3><a id='dialogTitles'></a>27.6. Dialog Titles And Web Page Titles</h3>
 
      <p>In a dialog, the dialog title appears in the dialog title bar, and the dialog text appears in the body of the dialog. In general, use <q>dialog</q>, not <q>dialog box.</q> For example, the Setup dialog appears, not the Setup dialog box appears. Always use the dialog title. The dialog text is optional. The dialog title and the dialog text are separated by a colon (:) character. Use the same spelling, capitalization, and punctuation, including any ending punctuation, as the dialog title and the dialog text.</p>
 
@@ -4768,7 +4789,7 @@ kbd {
 
      <p>The <b>General</b> tab is selected.</p>
 
-     <h3><a id='computerReports'></a>27.6. Computer Error, Success, And Failure Reports</h3>
+     <h3><a id='computerReports'></a>27.7. Computer Error, Success, And Failure Reports</h3>
 
      <p>Computer error, success, and failure reports are text that report the error, success, or failure status a computer related action. Use the same spelling, capitalization, and punctuation, including any ending punctuation, as the report text.</p>
 
@@ -4791,7 +4812,7 @@ kbd {
 
      <p>The W3C CSS Validation Service throws a warning: <q><code>:-ms-input-placeholder</code> is an unknown vendor extended pseudo-class.</q></p>
 
-     <h3><a id='emphasizedText'></a>27.7. Emphasized Text</h3>
+     <h3><a id='emphasizedText'></a>27.8. Emphasized Text</h3>
 
      <p>Emphasized text is text of importance that stands out compared to the surrounding text.</p>
 
@@ -4810,9 +4831,9 @@ kbd {
 
      <p>Paragraph ending with a <em>colon</em> as introductory text for an ordered list:</p>
 
-     <h3><a id='quotedText'></a>27.8. Quoted Text</h3>
+     <h3><a id='quotedText'></a>27.9. Quoted Text</h3>
 
-     <h4><a id='quotedWords'></a>27.8.1. Quoted Words</h4>
+     <h4><a id='quotedWords'></a>27.9.1. Quoted Words</h4>
 
      <p>Quoted words are one or more words in quotes. The quotes can indicate that the words are a quote, that they are to be taken literally, or that they are being used in a special way, such as when a person makes quote marks in the air with their fingers when speaking.</p>
 
@@ -4835,7 +4856,7 @@ kbd {
 
      <p> The phpBB board database name, prefixed with <q>qi_</q>.</p>
 
-     <h4><a id='quotedTextWithSource'></a>27.8.2. Quoted Text With Source</h4>
+     <h4><a id='quotedTextWithSource'></a>27.9.2. Quoted Text With Source</h4>
 
      <p>Quoted text with source is quoted text with the source of the quote. If the quoted text with source is presented as a block, the source may follow the quoted text and may be separated from the quoted text by a hyphen (-) character.</p>
 

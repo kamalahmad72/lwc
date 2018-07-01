@@ -4,7 +4,7 @@
 /* File: /web_server_root_directory/php/simple_mysql_admin_sections.php.
  * Purpose: Web page sections.
  * Used in: /web_server_root_directory/php/simple_mysql_admin.php.
- * Last reviewed/updated: 26 May 2018.
+ * Last reviewed/updated: 30 Jun 2018.
  * Published: 14 May 2017. */
 return
    "<section>
@@ -97,9 +97,9 @@ return
      <ul>
       <li>v1.3.0 released 08 Apr 2018:
        <ul>
-        <li>Update database server support. Primary changes: 1.) add support for MySQL 5.7 stores MySQL user account password in mysql.user table authentication_string column, not password column (in MySQL 5.7, mysql.user table password column does not exit); 2.) add support for MySQL 5.7 'mysql.session'@'localhost' and 'mysql.sys'@'localhost' reserved user accounts, and MariaDB 10.0 - 10.2 'root'@'computername-pc' reserved user account; 3.) add support for MySQL 5.7 sys reserved database; and 4.) change MySQL to store Simple MySQL Admin | User Accounts | create user account | host name/IP address field empty/blank in mysql.user table host column as any host name ('%' string), not empty string (''), and change Simple MySQL Admin | User Accounts | create user account reports to display host name/IP address field empty/blank as any host name ('%' string), not empty string ('').</li>
+        <li>Update database server support. Primary changes: 1.) add support for MySQL 5.7 stores MySQL user account password in <span class='filename'>mysql.user</span> table <span class='filename'>authentication_string</span> column, not <span class='filename'>password</span> column (in MySQL 5.7, <span class='filename'>mysql.user</span> table <span class='filename'>password</span> column does not exit); 2.) add support for MySQL 5.7 <span class='filename'>'mysql.session'@'localhost'</span> and <span class='filename'>'mysql.sys'@'localhost'</span> reserved user accounts, and MariaDB 10.0 - 10.2 <span class='filename'>'root'@'computername-pc'</span> reserved user account; 3.) add support for MySQL 5.7 <span class='filename'>sys</span> reserved database; and 4.) change MySQL to store Simple MySQL Admin | User Accounts | create user account | host name/IP address field empty/blank in <span class='filename'>mysql.user</span> table <span class='filename'>host</span> column as any host name (<span class='filename'>'%'</span> string), not empty string (<span class='filename'>''</span>), and change Simple MySQL Admin | User Accounts | create user account reports to display host name/IP address field empty/blank as any host name (<span class='filename'>'%'</span> string), not empty string (<span class='filename'>''</span>).</li>
         <li>Replace User Accounts | edit user account privileges | select user account dropdown with explanatory text if all user accounts are reserved.</li>
-        <li>Update lwc.css and update CSS styles.</li>
+        <li>Update <span class='filename'>lwc.css</span> and update CSS styles.</li>
        </ul>
       </li>
       <li>v1.2.2 released 11 Mar 2018:
