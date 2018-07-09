@@ -4,8 +4,9 @@
 /* File: /web_server_root_directory/javascript/angularjs_shopping_cart_sections_spa.php.
  * Purpose: Web page sections.
  * Used in: /web_server_root_directory/javascript/angularjs_shopping_cart_spa.php.
- * Last reviewed/updated: 30 Sep 2017.
- * Published: 24 Jan 2017. */
+ * Last reviewed/updated: 08 Jul 2018.
+ * Published: 24 Jan 2017. 
+ * NOTE: On 08 Jul 2018, to add AngularJS 1.7.x support, in angularjs_shopping_cart_spa_sections.php (this file); 1.) change ng-click='addDeliveryMethod() to ng-change='addDeliveryMethod(), and 2.) change ng-click='insertBillingAddressFormValues() to ng-change='insertBillingAddressFormValues(). No other changes (including no changes to angularjs_shopping_cart_spa.js) required. For additional info, see https://docs.angularjs.org/guide/migration#migrating-from-1-6-to-1-7. */
 return
    "<section>
 
@@ -58,7 +59,7 @@ return
 
      <h3><a id='webBrowserSupport'></a>1.1. Web Browser Support</h3>
 
-     <p>Web browser support: IE9+, ED12+, FF6+, SF5.1.4+, CH13+, OP11.60+.</p>
+     <p>Web browser support: IE9+, ED12+, FF6+, CH16+, OP11.60+.</p>
 
      <h3><a id='angularJsSupport'></a>1.2. AngularJS Support</h3>
 
@@ -116,7 +117,7 @@ src='/images/javascript_shopping_cart/rt_pnt_tri_6x28.gif' alt='Next pointing sh
         </div>
         <div class='col-xs-2 text-align-right'>
          <div class='itemPriceEach'>{{itemRecord.itemPriceEach | currency: '$'}}</div>
-         <button ng-click='addItemToCart(itemRecord.itemName)' class='btn btn-sm'>Add<span class='hidden-xs'>&nbsp;To&nbsp;Cart</span>&nbsp;&gt;</button>
+         <button type='button' ng-click='addItemToCart(itemRecord.itemName)' class='btn btn-sm'>Add<span class='hidden-xs'>&nbsp;To&nbsp;Cart</span>&nbsp;&gt;</button>
         </div>
        </div>
 
@@ -184,7 +185,7 @@ src='/images/javascript_shopping_cart/rt_pnt_tri_6x28.gif' alt='Next pointing sh
            <td id='deliveryMethodFormHeadingId' colspan='2'><b>Delivery Method</b> <span ng-hide='shoppingCartDb.isDeliveryMethodFormValid'><span ng-messages='deliveryMethodForm.shoppingCartDeliveryMethodRadioBtn.\$error' class='ng-messages'><span ng-message='required'>Please select a delivery method.</span></span></span><br />
             <form name='deliveryMethodForm' novalidate>
              <div ng-repeat='deliveryMethodRecord in deliveryMethodsDb'>
-              <label><input type='radio' name='shoppingCartDeliveryMethodRadioBtn' id='shoppingCartDeliveryMethodRadioBtn{{\$index}}Id' value='{{deliveryMethodRecord.deliveryMethodName}}' ng-model='shoppingCartDb.deliveryMethod' ng-click='addDeliveryMethod()' required /><span id='shoppingCartDeliveryMethodCssRadioBtn{{\$index}}Id'>&#9679;</span> {{deliveryMethodRecord.deliveryMethodPriceEach | currency: '$'}} - {{deliveryMethodRecord.deliveryMethodName}}</label>
+              <label><input type='radio' name='shoppingCartDeliveryMethodRadioBtn' id='shoppingCartDeliveryMethodRadioBtn{{\$index}}Id' value='{{deliveryMethodRecord.deliveryMethodName}}' ng-model='shoppingCartDb.deliveryMethod' ng-change='addDeliveryMethod()' required /><span id='shoppingCartDeliveryMethodCssRadioBtn{{\$index}}Id'>&#9679;</span> {{deliveryMethodRecord.deliveryMethodPriceEach | currency: '$'}} - {{deliveryMethodRecord.deliveryMethodName}}</label>
              </div>
             </form>
            </td>
@@ -283,7 +284,7 @@ src='/images/javascript_shopping_cart/rt_pnt_tri_6x28.gif' alt='Next pointing sh
 
        <p class='subsection-title'>Billing Address</p>
 
-       <p><label><input type='checkbox' ng-model='billingDb.isBillingAddressSameAsTheShippingAddressCheckboxChecked' ng-click='insertBillingAddressFormValues()' /><span>&#10003;</span> Same as the shipping address:</label></p>
+       <p><label><input type='checkbox' ng-model='billingDb.isBillingAddressSameAsTheShippingAddressCheckboxChecked' ng-change='insertBillingAddressFormValues()' /><span>&#10003;</span> Same as the shipping address:</label></p>
 
        <div ng-hide='billingDb.isBillingAddressSameAsTheShippingAddressCheckboxChecked'>
 
