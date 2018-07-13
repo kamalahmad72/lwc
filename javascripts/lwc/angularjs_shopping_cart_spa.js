@@ -3,7 +3,7 @@
 /* File: /web_server_root_directory/javascripts/lwc/angular_shopping_cart_spa.js.
  * Purpose: Primary JavaScript for AngularJS Shopping Cart Single Page Application (AngularJS Shopping Cart SPA).
  * Used in: angular_shopping_cart_spa.php.
- * Last reviewed/updated: 08 Jul 2018.
+ * Last reviewed/updated: 09 Jul 2018.
  * Published: 24 Jan 2017.
  * Unobtrusive: 1.) decouple HTML/JavaScript: a.) no register JavaScript event handlers in HTML via HTML attributes (eg, onload and onclick), and b.) no embed JavaScripts in HTML via HTML script element; 2.) as reasonable, decouple CSS/JavaScript. Eg, as reasonable, use JavaScript to change HTML class attribute value assignments (loose coupling), not use JavaScript to change JavaScript style object CSS property value assignments (tight coupling); and 3.) no define JavaScript variables and functions on JavaScript global scope. However, Add To Cart buttons, Shopping Navbars, and some other buttons use AngularJS ng-click directive.
  * Web browser support: IE9+, ED12+, FF6+, CH16+, OP11.60+, VV1+. No SF5.1.7-. Confirmed 08 Jul 2018. Apparently previous 10 Mar 2018 web browser support statement listing SF5.1.4+ and CH13+ was incorrect.
@@ -29,7 +29,7 @@
  * 2.) Closed. OP11.64- apparently does not support JavaScript JSON.stringify() method indenting argument and AngularJS json filter indenting argument. This issue not considered important and, therefore, is closed.
  * 3.) Closed. CH7+ would be supported if checkboxes and radio buttons did not require CH13+. This issue not considered important and, therefore, is closed. 
  * CHANGES:
- * On 08 Jul 2018, to add AngularJS 1.7.x support, in angularjs_shopping_cart_spa_sections.php; 1.) change ng-click='addDeliveryMethod() to ng-change='addDeliveryMethod(), and 2.) change ng-click='insertBillingAddressFormValues() to ng-change='insertBillingAddressFormValues(). No other changes (including no changes to angularjs_shopping_cart_spa.js (this file)) required. For additional info, see https://docs.angularjs.org/guide/migration#migrating-from-1-6-to-1-7. */
+ * On 08 Jul 2018, to add AngularJS 1.7.x support, in angularjs_shopping_cart_spa_sections.php; 1.) change ng-click='addDeliveryMethod() to ng-change='addDeliveryMethod(), and 2.) change ng-click='insertBillingAddressFormValues() to ng-change='insertBillingAddressFormValues(). No other changes (including no changes to angularjs_shopping_cart_spa.js (this file)) required. For additional info, see https://docs.angularjs.org/guide/migration#migrating-from-1-6-to-1-7 | input[radio] and input[checkbox]. */
 
 /* -------------------- ANGULARJS MODULE DEFINITION -------------------- */
 
