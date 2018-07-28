@@ -4,7 +4,7 @@
 /* File: /web_server_root_directory/bom/web_browser_useragent_values_sections.php.
  * Purpose: Web page sections.
  * Used in: /web_server_root_directory/bom/web_browser_useragent_values.php.
- * Last reviewed/updated: 19 Jul 2018.
+ * Last reviewed/updated: 27 Jul 2018.
  * Published: 21 Sep 2016. */
 return
    "<section>
@@ -2762,6 +2762,12 @@ return
      <p>Chrome 67.0.3396.99 64-bit<br />
      mozilla/5.0 (windows nt 6.1; win64; x64) applewebkit/537.36 (khtml, like gecko) chrome/67.0.3396.99 safari/537.36</p>
 
+     <p>Chrome 68.0.3440.75 32-bit<br />
+     mozilla/5.0 (windows nt 6.1; wow64) applewebkit/537.36 (khtml, like gecko) chrome/68.0.3440.75 safari/537.36</p>
+
+     <p>Chrome 68.0.3440.75 64-bit<br />
+     mozilla/5.0 (windows nt 6.1; win64; x64) applewebkit/537.36 (khtml, like gecko) chrome/68.0.3440.75 safari/537.36</p>
+
     </section>
     <hr />
     <section>
@@ -4869,6 +4875,12 @@ return
      <p>Opera 54.0.2952.60 64-bit<br />
      mozilla/5.0 (windows nt 6.1; win64; x64) applewebkit/537.36 (khtml, like gecko) chrome/67.0.3396.87 safari/537.36 opr/54.0.2952.60</p>
 
+     <p>Opera 54.0.2952.64 32-bit<br />
+     mozilla/5.0 (windows nt 6.1; wow64) applewebkit/537.36 (khtml, like gecko) chrome/67.0.3396.87 safari/537.36 opr/54.0.2952.64</p>
+
+     <p>Opera 54.0.2952.64 64-bit<br />
+     mozilla/5.0 (windows nt 6.1; win64; x64) applewebkit/537.36 (khtml, like gecko) chrome/67.0.3396.87 safari/537.36 opr/54.0.2952.64</p>
+
     </section>
     <hr />
     <section>
@@ -5754,6 +5766,14 @@ return
 
      <p>Seamonkey 2.49.3 (Advertise Firefox Compatibility)<br />
      mozilla/5.0 (windows nt 6.1; wow64; rv:52.0) gecko/20100101 firefox/52.0 seamonkey/2.49.3</p>
+
+     <div class='note normal'>SeaMonkey 2.49.4 released with Firefox at version 61.0.1.</div>
+
+     <p>Seamonkey 2.49.4<br />
+     mozilla/5.0 (windows nt 6.1; wow64; rv:52.0) gecko/20100101 seamonkey/2.49.4</p>
+
+     <p>Seamonkey 2.49.4 (Advertise Firefox Compatibility)<br />
+     mozilla/5.0 (windows nt 6.1; wow64; rv:52.0) gecko/20100101 firefox/52.0 seamonkey/2.49.4</p>
 
     </section>
     <hr />
