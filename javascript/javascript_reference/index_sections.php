@@ -1611,10 +1611,10 @@ return
 <!-- JavaScript setTimeout() method web browser release date: IE10 Feb13, ED12 Jul15, FF1.5 Dec05, SF3.1 Apr08, CH2 Jun09, OP7.50 May04. -->
         <td>
          <ul>
-          <li>Code to execute can be a function (a.k.a., callback function), or a string interpreted as code (like <code>eval()</code> method, not recommended and, therefore, not discussed further).</li>
+          <li><code>setTimeout()</code> method code parsed synchronously as normal.</li>
+          <li>Code to execute asynchronously can be a function (a.k.a., callback function), or a string interpreted as code (like <code>eval()</code> method, not recommended and not discussed further).</li>
+          <li>Time counted from when <code>setTimeout()</code> method code parsed, not from when any previous <code>setTimeout()</code> method callback function code executed.</li>
           <li>Time expressed in number of milliseconds (e.g., 1000). If time not specified, default is 0.</li>
-          <li><code>setTimeout()</code> method code is parsed as normal synchronously. <code>setTimeout()</code> method callback functions are executed asynchronously.</li>
-          <li>Time counted from when <code>setTimeout()</code> method parsed, not from when any previous <code>setTimeout()</code> method callback function executed.</li>
           <li>After specified amount of time, callback function placed in job queue. If job queue empty, callback function executed immediately. Otherwise, callback function waits its turn in job queue to execute.</li>
          </ul>
         </td>
