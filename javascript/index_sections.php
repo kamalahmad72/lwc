@@ -4,7 +4,7 @@
 /* File: /web_server_root_directory/javascript/index_sections.php.
  * Purpose: Web page sections.
  * Used in: /web_server_root_directory/javascript/index.php.
- * Last reviewed/updated: 10 May 2018.
+ * Last reviewed/updated: 04 Sep 2018.
  * Published: 21 Sep 2016. */
 return
    "<section>
@@ -181,17 +181,18 @@ return
      </ul>
 
      <h4><a id='w3cIdlApi'></a>3.1.2. W3C Web Platform Working Group And WHATWG Web IDL/API Recommendations/Etc.</h4>
-<!-- W3C News Keyword: Web Platform Working Group: http://www.w3.org/WebPlatform/WG/. -->
+<!-- W3C Web Platform Working Group: https://www.w3.org/WebPlatform/WG/. -->
+<!-- Web Platform Working Group specifications: https://www.w3.org/WebPlatform/WG/PubStatus and https://www.w3.org/2016/11/webplatform-charter.html. -->
 <!-- For Web IDL defined and list of specs that have a normative reference for Web IDL: http://www.w3.org/wiki/Web_IDL. -->
-<!-- List from top to bottom; 1.) Recommendations, 2.) Proposed Recommendations, 3.) Candidate Recommendations, 4.) Working Group Notes, 5.) all Working Drafts incl Last Call and First Public, and 6.) within each list by date newest on top to date oldest on bottom. -->
+<!-- List from top to bottom by date newest on top to oldest on bottom. -->
 
      <ul class='link-list'>
+      <li><a href='https://www.w3.org/TR/pointerevents2/'>Pointer Events - Level 2: W3C Candidate Recommendation 22 May 2018 (w3.org)</a></li>
+      <li><a href='https://www.w3.org/TR/IndexedDB-2/'>Indexed Database API 2.0: W3C Recommendation, 30 January 2018 (w3.org)</a></li>
       <li><a href='http://www.w3.org/TR/intersection-observer/'>Intersection Observer: W3C First Public Working Draft, 14 September 2017 (w3.org)</a></li>
-      <li><a href='http://www.w3.org/TR/IndexedDB-2/'>Indexed Database API 2.0: W3C Candidate Recommendation, 10 August 2017 (w3.org)</a></li>
       <li><a href='http://www.w3.org/TR/WebIDL-1/'>WebIDL Level 1: W3C Recommendation 15 December 2016 (w3.org)</a></li>
       <li><a href='http://www.w3.org/TR/clipboard-apis/'>Clipboard API And Events: W3C Working Draft 13 December 2016 (w3.org)</a></li>
       <li><a href='http://www.w3.org/TR/screen-orientation/'>The Screen Orientation API: W3C Working Draft 31 October 2016 (w3.org)</a></li>
-      <li><a href='http://www.w3.org/TR/pointerevents2/'>Pointer Events - Level 2: W3C First Public Working Draft 19 July 2016 (w3.org)</a></li>
       <li><a href='http://www.w3.org/TR/webstorage/'>Web Storage (Second Edition): W3C Recommendation 19 April 2016 (w3.org)</a></li>
       <li><a href='http://www.w3.org/TR/pointerevents/'>Pointer Events: W3C Recommendation 24 February 2015 (w3.org)</a></li>
       <li><a href='http://www.w3.org/TR/IndexedDB/'>Indexed Database API: W3C Recommendation 08 January 2015 (w3.org)</a></li>
@@ -234,8 +235,9 @@ return
      </ul>
 
      <h4><a id='w3cDomLevel3'></a>3.3.4. W3C DOM Level 3 Recommendations/Etc.</h4>
-<!-- All W3C DOM Standards And Drafts http://www.w3.org/TR/#tr_DOM -->
-<!-- List from top to bottom; 1.) Recommendations, 2.) Proposed Recommendations, 3.) Candidate Recommendations, 4.) Working Group Notes, 5.) all Working Drafts incl Last Call and First Public, and 6.) within each list by date newest on top to date oldest on bottom. -->
+<!-- W3C DOM Related Working Group: Web Platform Working Group: https://www.w3.org/WebPlatform/WG/. -->
+<!-- Web Platform Working Group specifications: https://www.w3.org/WebPlatform/WG/PubStatus and https://www.w3.org/2016/11/webplatform-charter.html. -->
+<!-- List from top to bottom; 1.) Recommendations, 2.) Proposed Recommendations, 3.) Candidate Recommendations, 4.) Working Group Notes, 5.) all Working Drafts incl Last Call and First Public, and Editor's Drafts, and 6.) within each list by date newest on top to oldest on bottom. -->
 
      <h5><a id='w3cDomLevel3r'></a>3.3.4.1. W3C DOM Level 3 Recommendations</h5>
 
@@ -311,7 +313,7 @@ return
      <h3><a id='domMiscellaneous'></a>5.2. DOM Miscellaneous</h3>
 
      <ul class='link-list'>
-      <li><a href='http://www.w3.org/html/wg/'>W3C: HTML Working Group (w3.org)</a></li>
+      <li><a href='http://www.w3.org/WebPlatform/WG/'>W3C: Web Platform Working Group</a></li>
      </ul>
 
     </section>";
