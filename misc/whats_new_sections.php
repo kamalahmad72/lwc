@@ -12,10 +12,10 @@ return
 -->
 <!-- Resources are \"Added.\" Instructional pages are \"Published.\" Always keep when a page is \"Added/Published.\" When a page is \"Major update\" remove prior \"Updated/Major update.\" When a page is \"Updated\" remove prior \"Updated.\" When a page is \"Updated\" keep prior \"Major update.\" When a page is \"Updated/Major update\" remove prior \"Renamed.\" When a page is \"Renamed\" without being \"Updated\" keep prior \"Updated/Major update.\" When a page is \"Renamed\" and \"Updated\" remove prior \"Updated\" and keep prior \"Major update.\" When a page is \"Renamed\" rename all refs to the page (including Updated/Major update/Added/Published) to the new name. When a page is \"Moved to discontinued\" keep prior \"Published\" and remove prior \"Updated.\" -->
      <ul class='link-list'>
+      <li><a href='/javascript/web_browser_useragent_values.php'>Web Browser User-Agent String Values (learnwebcoding.com)</a> and <a href='/javascript/javascript_web_browser_detection_update.php'>JavaScript Web Browser Detection With Link To Download Update (learnwebcoding.com)</a>: Updated: 04 Sep 2018.</li>
       <li><a href='/html/index.php'>HTML (learnwebcoding.com)</a> Landing Page: Updated: 04 Sep 2018.</li>
       <li><a href='/css/index.php'>CSS (learnwebcoding.com)</a> Landing Page: Updated: 04 Sep 2018.</li>
       <li><a href='/javascript/index.php'>JavaScript (learnwebcoding.com)</a> Landing Page: Updated: 04 Sep 2018.</li>
-      <li><a href='/javascript/web_browser_useragent_values.php'>Web Browser User-Agent String Values (learnwebcoding.com)</a> and <a href='/javascript/javascript_web_browser_detection_update.php'>JavaScript Web Browser Detection With Link To Download Update (learnwebcoding.com)</a>: Updated: 23 Aug 2018.</li>
       <li><a href='/javascript/javascript_reference/setTimeout_method.php'>JavaScript Feature Reference: <code>setTimeout()</code> Method Web Browser Support Test (learnwebcoding.com)</a>: Updated: 29 Jul 2018.</li>
       <li><a href='/javascript/javascript_reference/index.php'>JavaScript Feature Reference (learnwebcoding.com)</a>: Updated: 29 Jul 2018.</li>
       <li><a href='/javascript/angularjs_shopping_cart_spa.php'>AngularJS Shopping Cart Single Page Application (learnwebcoding.com)</a> Updated: 08 Jul 2018.</li>
