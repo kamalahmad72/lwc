@@ -5664,6 +5664,22 @@ appVersion: 5.0 (Windows)
 parseFloatAppVersion: 5
 platform: Win64
 
+Firefox 62.0.2 32-bit
+
+appName: Netscape
+userAgent: mozilla/5.0 (windows nt 6.1; wow64; rv:62.0) gecko/20100101 firefox/62.0
+appVersion: 5.0 (Windows)
+parseFloatAppVersion: 5
+platform: Win32
+
+Firefox 62.0.2 64-bit
+
+appName: Netscape
+userAgent: mozilla/5.0 (windows nt 6.1; win64; x64; rv:62.0) gecko/20100101 firefox/62.0
+appVersion: 5.0 (Windows)
+parseFloatAppVersion: 5
+platform: Win64
+
 Chrome 1.0.154.53
 
 appName: Netscape
