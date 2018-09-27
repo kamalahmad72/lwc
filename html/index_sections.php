@@ -4,7 +4,7 @@
 /* File: /web_server_root_directory/html/index_sections.php.
  * Purpose: Web page sections.
  * Used in: /web_server_root_directory/html/index.php.
- * Last reviewed/updated: 04 Sep 2018.
+ * Last reviewed/updated: 26 Sep 2018.
  * Published: 21 Sep 2016. */
 return
    "<section>
@@ -95,15 +95,15 @@ return
      <ul class='link-list'>
       <li><a href=''> (w3.org)</a></li>
      </ul>
--->
 
-     <h4><a id='w3cHtml5cr'></a>3.3.2. W3C HTML5 Candidate Recommendations</h4>
+     <h4><a id='w3cHtml5cr'></a>3.3.3. W3C HTML5 Candidate Recommendations</h4>
 
      <ul class='link-list'>
-      <li><a href='http://www.w3.org/TR/html52/'>HTML 5.2: W3C Candidate Recommendation, 8 August 2017 (w3.org)</a></li>
+      <li><a href=''> (w3.org)</a></li>
      </ul>
+-->
 
-     <h4><a id='w3cHtml5wgn'></a>3.3.3. W3C HTML5 Working Group Notes</h4>
+     <h4><a id='w3cHtml5wgn'></a>3.3.2. W3C HTML5 Working Group Notes</h4>
 
      <ul class='link-list'>
       <li><a href='http://www.w3.org/TR/media-accessibility-reqs/'>Media Accessibility User Requirements: W3C Working Group Note 03 December 2015 (w3.org)</a></li>
@@ -111,7 +111,7 @@ return
       <li><a href='http://www.w3.org/TR/html-ruby-extensions/'>W3C HTML Ruby Markup Extensions: W3C Working Group Note 04 February 2014 (w3.org)</a></li>
      </ul>
 
-     <h4><a id='w3cHtml5wd'></a>3.3.4. W3C HTML5 Working Drafts</h4>
+     <h4><a id='w3cHtml5wd'></a>3.3.3. W3C HTML5 Working Drafts</h4>
 
      <ul class='link-list'>
       <li><a href='http://www.w3.org/TR/microdata/'>HTML Microdata: W3C Working Draft 26 June 2017 (w3.org)</a></li>
