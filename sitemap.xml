@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <!-- The Learn Web Coding Home Site Map (XML Version Per Sitemaps.org) -->
-<!-- Last reviewed/updated: 10 May 2018 | Published: 08 Jan 2014 | Status: Active -->
+<!-- Last reviewed/updated: 26 Sep 2018 | Published: 08 Jan 2014 | Status: Active -->
 
 <!-- /public_html/ Home -->
 
@@ -98,12 +98,6 @@
  </url>
  <url>
   <loc>http://www.learnwebcoding.com/css/css_testing_ground/visualize_user_agent_styles.html</loc>
- </url>
- <url>
-  <loc>http://www.learnwebcoding.com/css/css_testing_ground/visualize_bootstrap_335_styles.html</loc>
- </url>
- <url>
-  <loc>http://www.learnwebcoding.com/css/css_testing_ground/visualize_bootstrap_336_styles.html</loc>
  </url>
  <url>
   <loc>http://www.learnwebcoding.com/css/css_testing_ground/visualize_bootstrap_337_styles.html</loc>
