@@ -4,7 +4,7 @@
 /* File: /web_server_root_directory/bom/web_browser_useragent_values_sections.php.
  * Purpose: Web page sections.
  * Used in: /web_server_root_directory/bom/web_browser_useragent_values.php.
- * Last reviewed/updated: 21 Sep 2018.
+ * Last reviewed/updated: 27 Sep 2018.
  * Published: 21 Sep 2016. */
 return
    "<section>
@@ -4974,6 +4974,12 @@ return
      <p>Opera 55.0.2994.61 64-bit<br />
      mozilla/5.0 (windows nt 6.1; win64; x64) applewebkit/537.36 (khtml, like gecko) chrome/68.0.3440.106 safari/537.36 opr/55.0.2994.61</p>
 
+     <p>Opera 56.0.3051.31 32-bit<br />
+     mozilla/5.0 (windows nt 6.1; wow64) applewebkit/537.36 (khtml, like gecko) chrome/69.0.3497.100 safari/537.36 opr/56.0.3051.31</p>
+
+     <p>Opera 56.0.3051.31 64-bit<br />
+     mozilla/5.0 (windows nt 6.1; win64; x64) applewebkit/537.36 (khtml, like gecko) chrome/69.0.3497.100 safari/537.36 opr/56.0.3051.31</p>
+
     </section>
     <hr />
     <section>
@@ -5154,7 +5160,7 @@ return
      <p>Vivaldi 1.9.818.50 64-bit<br />
      mozilla/5.0 (windows nt 6.1; win64; x64) applewebkit/537.36 (khtml, like gecko) chrome/58.0.3029.114 safari/537.36 vivaldi/1.9.818.50</p>
 
-     <div class='note normal'>The Vivaldi 1.10+ user-agent string values do not report the correct version of Vivaldi. According to Vivaldi, this is deliberate to avoid poorly written scripts from confusing Vivaldi 1.10+ with Vivaldi 1.1.</div>
+     <div class='note normal'>The Vivaldi 1.1x user-agent string values do not report the correct version of Vivaldi. According to Vivaldi, this is deliberate to avoid poorly written scripts from confusing Vivaldi 1.1x with Vivaldi 1.1.</div>
 
      <p>Vivaldi 1.10.867.38 32-bit<br />
      mozilla/5.0 (windows nt 6.1; wow64) applewebkit/537.36 (khtml, like gecko) chrome/59.0.3071.90 safari/537.36 vivaldi/1.91.867.38</p>
@@ -5311,6 +5317,12 @@ return
 
      <p>Vivaldi 1.15.1147.64 64-bit<br />
      mozilla/5.0 (windows nt 6.1; win64; x64) applewebkit/537.36 (khtml, like gecko) chrome/65.0.3325.183 safari/537.36 vivaldi/1.96.1147.64</p>
+
+     <p>Vivaldi 2.0.1309.29 32-bit<br />
+     mozilla/5.0 (windows nt 6.1; wow64) applewebkit/537.36 (khtml, like gecko) chrome/69.0.3497.102 safari/537.36 vivaldi/2.0.1309.29</p>
+
+     <p>Vivaldi 2.0.1309.29 64-bit<br />
+     mozilla/5.0 (windows nt 6.1; win64; x64) applewebkit/537.36 (khtml, like gecko) chrome/69.0.3497.102 safari/537.36 vivaldi/2.0.1309.29</p>
 
     </section>
     <hr />
