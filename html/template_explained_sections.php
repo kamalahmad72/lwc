@@ -4,7 +4,7 @@
 /* File: /web_server_root_directory/html/template_explained_sections.php.
  * Purpose: Web page sections.
  * Used in: /web_server_root_directory/html/template_explained.php.
- * Last reviewed/updated: 30 Jun 2018.
+ * Last reviewed/updated: 05 Oct 2018.
  * Published: 21 Sep 2016. */
 return
    "<section>
@@ -3858,8 +3858,8 @@ select:focus {
 
 <pre>
 &lt;p&gt;Select spices with the &lt;code&gt;value&lt;/code&gt; attribute:&lt;br /&gt;
- &lt;label&gt;&lt;input type='checkbox' name='spices' value='salt' /&gt;&lt;span&gt;&amp;#10003;&lt;/span&gt; Salt (if checked, sends spices=salt)&lt;/label&gt;&lt;br /&gt;
- &lt;label&gt;&lt;input type='checkbox' name='spices' value='pepper' /&gt;&lt;span&gt;&amp;#10003;&lt;/span&gt; Pepper (if checked, sends spices=pepper)&lt;/label&gt;
+ &lt;label&gt;&lt;input type='checkbox' name='spice' value='salt' /&gt;&lt;span&gt;&amp;#10003;&lt;/span&gt; Salt (if checked, sends spice=salt)&lt;/label&gt;&lt;br /&gt;
+ &lt;label&gt;&lt;input type='checkbox' name='spice' value='pepper' /&gt;&lt;span&gt;&amp;#10003;&lt;/span&gt; Pepper (if checked, sends spice=pepper)&lt;/label&gt;
 &lt;/p&gt;
 </pre>
 
