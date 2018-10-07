@@ -4,7 +4,7 @@
 /* File: /web_server_root_directory/bom/versions_ie_ed_windows_sections.php.
  * Purpose: Web page sections.
  * Used in: /web_server_root_directory/bom/versions_ie_ed_windows.php.
- * Last reviewed/updated: 04 May 2018.
+ * Last reviewed/updated: 07 Oct 2018.
  * Published: 21 Sep 2016. */
 return
    "<section>
@@ -48,37 +48,38 @@ return
 <!-- Operating system version via msinfo32.exe. DirectX version via dxdiag.exe. Windows 8/81 IE Metro version via mouse to top right corner | Settings | About. All operating system installations fresh/clean/custom (not upgrade) using default/recommended settings. -->
 
 <!--
-	<p class='subsectionTitle'><a id='toc1_2'></a>1.2.&nbsp;&nbsp;Windows 98/ME/2000/XP/Vista/7/8/8.1/10 Installations</p>
+     <p class='subsectionTitle'><a id='toc1_2'></a>1.2.&nbsp;&nbsp;Windows 98/ME/2000/XP/Vista/7/8/8.1/10 Installations</p>
 
-	<ul>
-		<li>Windows 98 = Installed Windows 98 Second Edition English Upgrade Retail Part No. X04-14318.</li>
-		<li>Windows ME = Installed Windows Millennium Edition English Upgrade Retail Part No. X05-60892.</li>
-		<li>Windows 2000 Pro SP3 = Installed Windows 2000 Professional with Service Pack 3 English Upgrade Retail part No. X08-83652 Includes SP3 Retail.</li>
-		<li>Windows 2000 Pro SP4 = Windows 2000 Pro SP3 (from above) plus installed Windows 2000 Service Pack 4 Network Install For IT Professionals 26 Jun 2003 W2KSP4_EN.EXE.</li>
-		<li>Windows XP = Installed: 1.) MSDN subscriptions Windows XP Home Edition (English) - ISO CD Image en_winxp_home_x86_build2600.iso, and 2.) MSDN subscriptions Windows XP Professional (English) en_winxp_pro_x86_build2600_iso.img.</li>
-		<li>Windows XP SP1 = Installed Windows XP Home Edition with Service Pack 1 English (x86) Upgrade Retail Part No. X08-88344 Volume Label XRMHCCP_EN, which includes Windows XP Service Pack 1, not Windows XP Service Pack 1a.</li>
-		<li>Windows XP SP1a = 1.) Installed Windows XP Home Edition with Service Pack 1a English (x86) Upgrade Retail Part No. X08-88344 Volume Label X1AHCCP_EN, which includes Windows XP Service Pack 1a, not Windows XP Service Pack 1, and 2.) Windows XP Professional (from 'Windows XP' above) plus installed Windows XP Service Pack 1a Network Install 03 Feb 2003 xpsp1a_en_x86.exe.</li>
-		<li>Windows XP SP2 = Installed: 1.) MSDN subscriptions Windows XP Home Edition with Service Pack 2 (English) en_winxp_home_with_sp2.iso, and 2.) MSDN subscriptions Windows XP Professional with Service Pack 2 (English) en_winxp_pro_with_sp2.iso.</li>
-		<li>Windows XP SP3 = Installed: 1.) MSDN subscriptions Windows XP Home with Service Pack 3 (x86) - CD (English) en_windows_xp_home_with_service_pack_3_x86_cd_x14-92413.iso, and 2.) MSDN subscriptions Windows XP Professional with Service Pack 3 (x86) - CD (English) en_windows_xp_professional_with_service_pack_3_x86_cd_x14-80428.iso.</li>
-		<li>Windows Vista = Installed Vista Home Basic and Vista Ultimate from: 1.) MSDN subscriptions Windows Vista (x86) - DVD (English) en_windows_vista_x86_dvd_x12-34293.iso, and 2.) MSDN subscriptions Windows Vista (x64) - DVD (English) en_windows_vista_x64_dvd_x12-40712.iso.</li>
-		<li>Windows Vista SP1 = Installed Windows Vista Home Basic from: 1.) MSDN subscriptions Windows Vista With Service Pack 1 (x86) - DVD (English) en_windows_vista_with_service_pack_1_x86_dvd_x14-29594.iso, and 2.) MSDN subscriptions Windows Vista With Service Pack 1 (x64) - DVD (English) en_windows_vista_with_service_pack_1_x64_dvd_x14-29595.iso.</li>
-		<li>Windows Vista SP2 = Installed Windows Vista Home Basic and Vista Ultimate from: 1.) MSDN subscriptions Windows Vista With Service Pack 2 (x86) - DVD (English) en_windows_vista_with_sp2_x86_dvd_342266.iso, and 2.) MSDN subscriptions Windows Vista With Service Pack 2 (x64) - DVD (English) en_windows_vista_sp2_x64_dvd_342267.iso.</li>
-		<li>Windows 7 = Installed: 1.) MSDN subscriptions Windows 7 Home Premium (x86) - DVD (English) en_windows_7_home_premium_x86_dvd_x15-65732.iso, 2.) MSDN subscriptions Windows 7 Home Premium (x64) - DVD (English) en_windows_7_home_premium_x64_dvd_x15-65733.iso, 3.) MSDN subscriptions Windows 7 Professional (x86) - DVD (English) en_windows_7_professional_x86_dvd_x15-65804.iso, and 4.) MSDN subscriptions Windows 7 Professional (x64) - DVD (English) en_windows_7_professional_x64_dvd_x15-65805.iso.</li>
-		<li>Windows 7 SP1 = Installed: 1.) MSDN subscriptions Windows 7 Home Premium With Service Pack 1 (x86) - DVD (English) Media Refresh en_windows_7_home_premium_with_sp1_x86_dvd_u_676701.iso, 2.) MSDN subscriptions Windows 7 Home Premium With Service Pack 1 (x64) - DVD (English) Media Refresh en_windows_7_home_premium_with_sp1_x64_dvd_u_676549.iso, 3.) MSDN subscriptions Windows 7 Professional With Service Pack 1 (x86) - DVD (English) Media Refresh en_windows_7_professional_with_sp1_x86_dvd_u_677056.iso, and 4.) MSDN subscriptions Windows 7 Professional With Service Pack 1 (x64) - DVD (English) Media Refresh en_windows_7_professional_with_sp1_x64_dvd_u_676939.iso.</li>
-		<li>Windows 8 = Installed Windows 8 Professional from: 1.) MSDN subscriptions Windows 8 (multiple editions) (x86) - DVD (English) en_windows_8_x86_dvd_915417.iso, and 2.) MSDN subscriptions Windows 8 (multiple editions) (x64) - DVD (English) en_windows_8_x64_dvd_915440.iso.</li>
-		<li>Windows 8.1 = Installed Windows 8.1 Professional from: 1.) MSDN subscriptions Windows 8.1 (multiple editions) (x86) - DVD (English) en_windows_8_1_x86_dvd_2707392.iso, and 2.) MSDN subscriptions Windows 8.1 (multiple editions) (x64) - DVD (English) en_windows_8_1_x64_dvd_2707217.iso.</li>
-		<li>Windows 8.1 Update Apr 2014 = Installed Windows 8.1 Professional from: 1.) MSDN subscriptions Windows 8.1 With Update (multiple editions) (x86) - DVD (English) en_windows_8_1_with_update_x86_dvd_4065105.iso, and 2.) MSDN subscriptions Windows 8.1 With Update (multiple editions) (x64) - DVD (English) en_windows_8_1_with_update_x64_dvd_4065090.iso. NOTE: Update is Apr 2014 KB2919355.</li>
-		<li>Windows 8.1 Update Nov 2014 = Installed Windows 8.1 Professional from: 1.) MSDN subscriptions Windows 8.1 With Update (multiple editions) (x86) - DVD (English) en_windows_8_1_with_update_x86_dvd_6051550.iso, and 2.) MSDN subscriptions Windows 8.1 With Update (multiple editions) (x64) - DVD (English) en_windows_8_1_with_update_x64_dvd_6051480.iso. NOTE: Update is Nov 2014 KB3000850.</li>
-		<li>Windows 10 Version 1507 = Installed Windows 10 Home and Windows 10 Professional from: 1.) MSDN subscriptions Windows 10 (Multiple Editions) (x86) - DVD (English) en_windows_10_multiple_editions_x86_dvd_6848465.iso, and 2.) MSDN subscriptions Windows 10 (Multiple Editions) (x64) - DVD (English) en_windows_10_multiple_editions_x64_dvd_6846432.iso.</li>
-		<li>Windows 10 Version 1511 = Installed Windows 10 Home and Windows 10 Professional from: 1.) MSDN subscriptions Windows 10 (Multiple Editions) Version 1511 (x86) - DVD (English) en_windows_10_multiple_editions_version_1511_x86_dvd_7223716.iso, and 2.) MSDN subscriptions Windows 10 (Multiple Editions) Version 1511 (x64) - DVD (English) en_windows_10_multiple_editions_version_1511_x64_dvd_7223712.iso.</li>
-		<li>Windows 10 Version 1607 = Installed Windows 10 Home and Windows 10 Professional from: 1.) MSDN subscriptions Windows 10 (Multiple Editions) Version 1607 (Updated Jul 2016) (x86) - DVD (English) en_windows_10_multiple_editions_version_1607_updated_jul_2016_x86_dvd_9053863.iso, and 2.) MSDN subscriptions Windows 10 (Multiple Editions) Version 1607 (Updated Jul 2016) (x64) - DVD (English) en_windows_10_multiple_editions_version_1607_updated_jul_2016_x64_dvd_9058187.iso.</li>
-		<li>Windows 10 Version 1703 = Installed Windows 10 Professional from: 1.) MSDN subscriptions Windows 10 (Multiple Editions) Version 1703 (Updated March 2017) (x86) - DVD (English) en_windows_10_multiple_editions_version_1703_updated_march_2017_x86_dvd_10188977.iso, and 2.) MSDN subscriptions Windows 10 (Multiple Editions) Version 1703 (Updated March 2017) (x64) - DVD (English) en_windows_10_multiple_editions_version_1703_updated_march_2017_x64_dvd_10189288.iso.</li>
+     <ul>
+      <li>Windows 98 = Installed Windows 98 Second Edition English Upgrade Retail Part No. X04-14318.</li>
+      <li>Windows ME = Installed Windows Millennium Edition English Upgrade Retail Part No. X05-60892.</li>
+      <li>Windows 2000 Pro SP3 = Installed Windows 2000 Professional with Service Pack 3 English Upgrade Retail part No. X08-83652 Includes SP3 Retail.</li>
+      <li>Windows 2000 Pro SP4 = Windows 2000 Pro SP3 (from above) plus installed Windows 2000 Service Pack 4 Network Install For IT Professionals 26 Jun 2003 W2KSP4_EN.EXE.</li>
+      <li>Windows XP = Installed: 1.) MSDN subscriptions Windows XP Home Edition (English) - ISO CD Image en_winxp_home_x86_build2600.iso, and 2.) MSDN subscriptions Windows XP Professional (English) en_winxp_pro_x86_build2600_iso.img.</li>
+      <li>Windows XP SP1 = Installed Windows XP Home Edition with Service Pack 1 English (x86) Upgrade Retail Part No. X08-88344 Volume Label XRMHCCP_EN, which includes Windows XP Service Pack 1, not Windows XP Service Pack 1a.</li>
+      <li>Windows XP SP1a = 1.) Installed Windows XP Home Edition with Service Pack 1a English (x86) Upgrade Retail Part No. X08-88344 Volume Label X1AHCCP_EN, which includes Windows XP Service Pack 1a, not Windows XP Service Pack 1, and 2.) Windows XP Professional (from 'Windows XP' above) plus installed Windows XP Service Pack 1a Network Install 03 Feb 2003 xpsp1a_en_x86.exe.</li>
+      <li>Windows XP SP2 = Installed: 1.) MSDN subscriptions Windows XP Home Edition with Service Pack 2 (English) en_winxp_home_with_sp2.iso, and 2.) MSDN subscriptions Windows XP Professional with Service Pack 2 (English) en_winxp_pro_with_sp2.iso.</li>
+      <li>Windows XP SP3 = Installed: 1.) MSDN subscriptions Windows XP Home with Service Pack 3 (x86) - CD (English) en_windows_xp_home_with_service_pack_3_x86_cd_x14-92413.iso, and 2.) MSDN subscriptions Windows XP Professional with Service Pack 3 (x86) - CD (English) en_windows_xp_professional_with_service_pack_3_x86_cd_x14-80428.iso.</li>
+      <li>Windows Vista = Installed Vista Home Basic and Vista Ultimate from: 1.) MSDN subscriptions Windows Vista (x86) - DVD (English) en_windows_vista_x86_dvd_x12-34293.iso, and 2.) MSDN subscriptions Windows Vista (x64) - DVD (English) en_windows_vista_x64_dvd_x12-40712.iso.</li>
+      <li>Windows Vista SP1 = Installed Windows Vista Home Basic from: 1.) MSDN subscriptions Windows Vista With Service Pack 1 (x86) - DVD (English) en_windows_vista_with_service_pack_1_x86_dvd_x14-29594.iso, and 2.) MSDN subscriptions Windows Vista With Service Pack 1 (x64) - DVD (English) en_windows_vista_with_service_pack_1_x64_dvd_x14-29595.iso.</li>
+      <li>Windows Vista SP2 = Installed Windows Vista Home Basic and Vista Ultimate from: 1.) MSDN subscriptions Windows Vista With Service Pack 2 (x86) - DVD (English) en_windows_vista_with_sp2_x86_dvd_342266.iso, and 2.) MSDN subscriptions Windows Vista With Service Pack 2 (x64) - DVD (English) en_windows_vista_sp2_x64_dvd_342267.iso.</li>
+      <li>Windows 7 = Installed: 1.) MSDN subscriptions Windows 7 Home Premium (x86) - DVD (English) en_windows_7_home_premium_x86_dvd_x15-65732.iso, 2.) MSDN subscriptions Windows 7 Home Premium (x64) - DVD (English) en_windows_7_home_premium_x64_dvd_x15-65733.iso, 3.) MSDN subscriptions Windows 7 Professional (x86) - DVD (English) en_windows_7_professional_x86_dvd_x15-65804.iso, and 4.) MSDN subscriptions Windows 7 Professional (x64) - DVD (English) en_windows_7_professional_x64_dvd_x15-65805.iso.</li>
+      <li>Windows 7 SP1 = Installed: 1.) MSDN subscriptions Windows 7 Home Premium With Service Pack 1 (x86) - DVD (English) Media Refresh en_windows_7_home_premium_with_sp1_x86_dvd_u_676701.iso, 2.) MSDN subscriptions Windows 7 Home Premium With Service Pack 1 (x64) - DVD (English) Media Refresh en_windows_7_home_premium_with_sp1_x64_dvd_u_676549.iso, 3.) MSDN subscriptions Windows 7 Professional With Service Pack 1 (x86) - DVD (English) Media Refresh en_windows_7_professional_with_sp1_x86_dvd_u_677056.iso, and 4.) MSDN subscriptions Windows 7 Professional With Service Pack 1 (x64) - DVD (English) Media Refresh en_windows_7_professional_with_sp1_x64_dvd_u_676939.iso.</li>
+      <li>Windows 8 = Installed Windows 8 Professional from: 1.) MSDN subscriptions Windows 8 (multiple editions) (x86) - DVD (English) en_windows_8_x86_dvd_915417.iso, and 2.) MSDN subscriptions Windows 8 (multiple editions) (x64) - DVD (English) en_windows_8_x64_dvd_915440.iso.</li>
+      <li>Windows 8.1 = Installed Windows 8.1 Professional from: 1.) MSDN subscriptions Windows 8.1 (multiple editions) (x86) - DVD (English) en_windows_8_1_x86_dvd_2707392.iso, and 2.) MSDN subscriptions Windows 8.1 (multiple editions) (x64) - DVD (English) en_windows_8_1_x64_dvd_2707217.iso.</li>
+      <li>Windows 8.1 Update Apr 2014 = Installed Windows 8.1 Professional from: 1.) MSDN subscriptions Windows 8.1 With Update (multiple editions) (x86) - DVD (English) en_windows_8_1_with_update_x86_dvd_4065105.iso, and 2.) MSDN subscriptions Windows 8.1 With Update (multiple editions) (x64) - DVD (English) en_windows_8_1_with_update_x64_dvd_4065090.iso. NOTE: Update is Apr 2014 KB2919355.</li>
+      <li>Windows 8.1 Update Nov 2014 = Installed Windows 8.1 Professional from: 1.) MSDN subscriptions Windows 8.1 With Update (multiple editions) (x86) - DVD (English) en_windows_8_1_with_update_x86_dvd_6051550.iso, and 2.) MSDN subscriptions Windows 8.1 With Update (multiple editions) (x64) - DVD (English) en_windows_8_1_with_update_x64_dvd_6051480.iso. NOTE: Update is Nov 2014 KB3000850.</li>
+      <li>Windows 10 Version 1507 = Installed Windows 10 Home and Windows 10 Professional from: 1.) MSDN subscriptions Windows 10 (Multiple Editions) (x86) - DVD (English) en_windows_10_multiple_editions_x86_dvd_6848465.iso, and 2.) MSDN subscriptions Windows 10 (Multiple Editions) (x64) - DVD (English) en_windows_10_multiple_editions_x64_dvd_6846432.iso.</li>
+      <li>Windows 10 Version 1511 = Installed Windows 10 Home and Windows 10 Professional from: 1.) MSDN subscriptions Windows 10 (Multiple Editions) Version 1511 (x86) - DVD (English) en_windows_10_multiple_editions_version_1511_x86_dvd_7223716.iso, and 2.) MSDN subscriptions Windows 10 (Multiple Editions) Version 1511 (x64) - DVD (English) en_windows_10_multiple_editions_version_1511_x64_dvd_7223712.iso.</li>
+      <li>Windows 10 Version 1607 = Installed Windows 10 Home and Windows 10 Professional from: 1.) MSDN subscriptions Windows 10 (Multiple Editions) Version 1607 (Updated Jul 2016) (x86) - DVD (English) en_windows_10_multiple_editions_version_1607_updated_jul_2016_x86_dvd_9053863.iso, and 2.) MSDN subscriptions Windows 10 (Multiple Editions) Version 1607 (Updated Jul 2016) (x64) - DVD (English) en_windows_10_multiple_editions_version_1607_updated_jul_2016_x64_dvd_9058187.iso.</li>
+      <li>Windows 10 Version 1703 = Installed Windows 10 Professional from: 1.) MSDN subscriptions Windows 10 (Multiple Editions) Version 1703 (Updated March 2017) (x86) - DVD (English) en_windows_10_multiple_editions_version_1703_updated_march_2017_x86_dvd_10188977.iso, and 2.) MSDN subscriptions Windows 10 (Multiple Editions) Version 1703 (Updated March 2017) (x64) - DVD (English) en_windows_10_multiple_editions_version_1703_updated_march_2017_x64_dvd_10189288.iso.</li>
 
 Since the version of software bundled with Windows has been the same for Windows 32-bit and 64-bit, for now on check 64-bit, not 32-bit and 64-bit.
 
-		<li>Windows 10 Version 1709 = Installed Windows 10 Professional from MSDN subscriptions Windows 10 (multi-edition) Version 1709 (Updated Sept 2017) (x64) - DVD (English) en_windows_10_multi-edition_version_1709_updated_sept_2017_x64_dvd_100090817.iso.</li>
-		<li>Windows 10 Version 1803 = Installed Windows 10 Professional from MSDN subscriptions Windows 10 (consumer editions) Version 1803 (Updated March 2018) (x64) - DVD (English) en_windows_10_consumer_editions_version_1803_updated_march_2018_x64_dvd_12063379.iso.</li>
-	</ul>
+      <li>Windows 10 Version 1709 = Installed Windows 10 Professional from MSDN subscriptions Windows 10 (multi-edition) Version 1709 (Updated Sept 2017) (x64) - DVD (English) en_windows_10_multi-edition_version_1709_updated_sept_2017_x64_dvd_100090817.iso.</li>
+      <li>Windows 10 Version 1803 = Installed Windows 10 Professional from MSDN subscriptions Windows 10 (consumer editions) Version 1803 (Updated March 2018) (x64) - DVD (English) en_windows_10_consumer_editions_version_1803_updated_march_2018_x64_dvd_12063379.iso.</li>
+      <li>Windows 10 Version 1809 = Installed Windows 10 Professional from MSDN subscriptions Windows 10 (consumer edition) Version 1809 (Updated Sept 2018) (x64) - DVD (English) en_windows_10_consumer_edition_version_1809_updated_sept_2018_x64_dvd_5c2f3f9a.iso.</li>
+     </ul>
 -->
 
      <h3><a id='abbreviations'></a>1.2. Abbreviations</h3>
@@ -339,7 +340,7 @@ http://blogs.windows.com/windows/b/windowsexperience/archive/2014/04/08/why-i-lo
         <th>Windows<br />
          (Build)</th>
         <th>10 Version 1507<br />
-         (10.0.10240)</th><!-- Threshold 1 -->
+         (10.0.10240)</th><!-- Threshold 1. A.k.a., 10, 10 Initial Version, 10 Gold. -->
         <th>10 Version 1511<br />
          (10.0.10586.0)</th><!-- Threshold 2/November Update -->
         <th>10 Version 1607<br />
@@ -350,6 +351,8 @@ http://blogs.windows.com/windows/b/windowsexperience/archive/2014/04/08/why-i-lo
          (10.0.16299.15)</th><!-- Redstone 3/Fall Creators Update -->
         <th>10 Version 1803<br />
          (10.0.17134.1)</th><!-- Redstone 4/April 2018 Update -->
+        <th>10 Version 1809<br />
+         (10.0.17763.1)</th><!-- Redstone 5/October 2018 Update -->
        </tr>
       </thead>
       <tbody>
@@ -362,6 +365,7 @@ http://blogs.windows.com/windows/b/windowsexperience/archive/2014/04/08/why-i-lo
         <td>11 Apr 2017</td>
         <td>17 Oct 2017</td>
         <td>30 Apr 2018</td>
+        <td>02 Oct 2018</td>
        </tr>
        <tr>
         <th>Included With</th>
@@ -407,9 +411,17 @@ http://blogs.windows.com/windows/b/windowsexperience/archive/2014/04/08/why-i-lo
           <li>IE11.1.17134.0.</li>
          </ul>
         </td>
+        <td>
+         <ul>
+          <li>ED44.17763.1.0<br />
+           (EdgeHTML 18.17763).</li>
+          <li>IE11.1.17763.0.</li>
+         </ul>
+        </td>
        </tr>
        <tr>
         <th>Also Supports</th>
+        <td>-</td>
         <td>-</td>
         <td>-</td>
         <td>-</td>

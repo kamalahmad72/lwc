@@ -3,7 +3,7 @@
 /* File: /web_server_root_directory/javascripts/lwc/javascript_web_browser_detection_update.js.
  * Purpose: Determine web browser name, version, and report whether or not web browser is latest known official version, and, if web browser is not latest known official version, provide link to download web browser.
  * Used in: javascript_web_browser_detection_update.php.
- * Last reviewed/updated: 05 Oct 2018.
+ * Last reviewed/updated: 07 Oct 2018.
  * Published: 04 Feb 2014.
  * Unobtrusive: 1.) decouple HTML/JavaScript: a.) no register JavaScript event handlers in HTML via HTML attributes (eg, onload and onclick), and b.) no embed JavaScripts in HTML via HTML script element; 2.) as reasonable, decouple CSS/JavaScript. Eg, as reasonable, use JavaScript to change HTML class attribute value assignments (loose coupling), not use JavaScript to change JavaScript style object CSS property value assignments (tight coupling); and 3.) no define JavaScript variables and functions on JavaScript global scope.
  * Web browser support: Supported web browsers are those that the JavaScript is designed and tested to positively detect/report on: IE6+ for Windows XP, IE7+ for Windows Vista, IE8+ for Windows 7, IE10+ for Windows 8, IE11+ for Windows 8.1, IE11+ and ED12+ for Windows 10, FF0.8+ for Windows, CH2+ for Windows, OP5+ for Windows, and VV1+ for Windows. Unsupported web browsers are those that the JavaScript is not designed and tested to positively detect/report on: SF for Windows and SM for Windows.
@@ -41,6 +41,8 @@ var BrowserDetectionUpdateUtil = {
    latestVersionEDFor10v1709 = "16 (Edge 41)",
    latestVersionEDHTMLFor10v1803 = "17.17134",
    latestVersionEDFor10v1803 = "17 (Edge 42)",
+   latestVersionEDHTMLFor10v1809 = "18.17763",
+   latestVersionEDFor10v1809 = "18 (Edge 44)",
   // IMPORTANT: Because FF 16+ major releases (e.g., FF58) and point releases (e.g, FF58.0.1) have identical user-agent string values, the logic for FF is slightly different than, for example, SM.
    latestVersionFFPerUaString = "62.0", // Enter latest version FF per user-agent string value, not latest actual version FF. Set to string. Eg, if latest version FF is 50.0.1 but its user-agent string reports 50.0, set to string "50.0" not "50.0.1". REQUIRED.
    isFFPointReleasesWithIdenticalUaStringAsFFMajorRelease = true, // Is there FF point releases with identical user-agent string value as FF major release? Set to boolean true or false. Eg, if FF 50.0 and FF 50.0.1 (+/- and FF 50.0.2, etc) have identical user-agent strings reporting 50.0, set to boolean true. Eg, if there is a FF 50.0 but there is no FF 50.0.1, set to boolean false. REQUIRED.
@@ -98,7 +100,7 @@ var BrowserDetectionUpdateUtil = {
     } else {
      browserStatus = "unknown";
      reasonNotDetected = "Most likely the version of Internet Explorer for Windows XP is an unofficial version and not supported by the JavaScript.";
-     errorReportLineAndIssue = "Line: 102. Issue: Detect version of Internet Explorer for Windows XP failed.";
+     errorReportLineAndIssue = "Line: 103. Issue: Detect version of Internet Explorer for Windows XP failed.";
     }
    }
    // Is operating system Windows Vista?
@@ -122,7 +124,7 @@ var BrowserDetectionUpdateUtil = {
     } else {
      browserStatus = "unknown";
      reasonNotDetected = "Most likely the version of Internet Explorer for Windows Vista is an unofficial version and not supported by the JavaScript.";
-     errorReportLineAndIssue = "Line: 126 Issue: Detect version of Internet Explorer for Windows Vista failed.";
+     errorReportLineAndIssue = "Line: 127 Issue: Detect version of Internet Explorer for Windows Vista failed.";
     }
    }
    // Is operating system Windows 7?
@@ -151,7 +153,7 @@ var BrowserDetectionUpdateUtil = {
     } else {
      browserStatus = "unknown";
      reasonNotDetected = "Most likely the version of Internet Explorer for Windows 7 is an unofficial version and not supported by the JavaScript.";
-     errorReportLineAndIssue = "Line: 155. Issue: Detect version of Internet Explorer for Windows 7 failed.";
+     errorReportLineAndIssue = "Line: 156. Issue: Detect version of Internet Explorer for Windows 7 failed.";
     }
    }
    // Is operating system Windows 8?
@@ -165,7 +167,7 @@ var BrowserDetectionUpdateUtil = {
     } else {
      browserStatus = "unknown";
      reasonNotDetected = "Most likely the version of Internet Explorer for Windows 8 is an unofficial version and not supported by the JavaScript.";
-     errorReportLineAndIssue = "Line: 169. Issue: Detect version of Internet Explorer for Windows 8 failed.";
+     errorReportLineAndIssue = "Line: 170. Issue: Detect version of Internet Explorer for Windows 8 failed.";
     }
    }
    // Is operating system Windows 8.1?
@@ -179,7 +181,7 @@ var BrowserDetectionUpdateUtil = {
     } else {
      browserStatus = "unknown";
      reasonNotDetected = "Most likely the version of Internet Explorer for Windows 8.1 is an unofficial version and not supported by the JavaScript.";
-     errorReportLineAndIssue = "Line: 183. Issue: Detect version of Internet Explorer for Windows 8.1 failed.";
+     errorReportLineAndIssue = "Line: 184. Issue: Detect version of Internet Explorer for Windows 8.1 failed.";
     }
    }
    // Is operating system Windows 10?
@@ -193,13 +195,13 @@ var BrowserDetectionUpdateUtil = {
     } else {
      browserStatus = "unknown";
      reasonNotDetected = "Most likely the version of Internet Explorer for Windows 10 is an unofficial version and not supported by the JavaScript.";
-     errorReportLineAndIssue = "Line: 197. Issue: Detect version of Internet Explorer for Windows 10 failed.";
+     errorReportLineAndIssue = "Line: 198. Issue: Detect version of Internet Explorer for Windows 10 failed.";
     }
    // Report error detecting version of Windows for Internet Explorer.
    } else {
      browserStatus = "unknown";
      reasonNotDetected = "Most likely the version of Windows is an unofficial version and not supported by the JavaScript.";
-     errorReportLineAndIssue = "Line: 203. Issue: Detect version of Windows for Internet Explorer failed.";
+     errorReportLineAndIssue = "Line: 204. Issue: Detect version of Windows for Internet Explorer failed.";
    }
   // Independently detect ED.
   } else if (userAgent.indexOf("edge") !== -1){
@@ -216,7 +218,7 @@ var BrowserDetectionUpdateUtil = {
     } else {
      browserStatus = "unknown";
      reasonNotDetected = "Most likely the version of Edge for Windows 10 Version 1507 is an unofficial version and not supported by the JavaScript.";
-     errorReportLineAndIssue = "Line: 220. Issue: Detect version of Edge for Windows 10 Version 1507 failed.";
+     errorReportLineAndIssue = "Line: 221. Issue: Detect version of Edge for Windows 10 Version 1507 failed.";
     }
    }
    // Is operating system Windows 10 Version 1511 Build 10586?
@@ -230,7 +232,7 @@ var BrowserDetectionUpdateUtil = {
     } else {
      browserStatus = "unknown";
      reasonNotDetected = "Most likely the version of Edge for Windows 10 Version 1511 is an unofficial version and not supported by the JavaScript.";
-     errorReportLineAndIssue = "Line: 234. Issue: Detect version of Edge for Windows 10 Version 1511 failed.";
+     errorReportLineAndIssue = "Line: 235. Issue: Detect version of Edge for Windows 10 Version 1511 failed.";
     }
    }
    // Is operating system Windows 10 Version 1607 Build 14393?
@@ -244,7 +246,7 @@ var BrowserDetectionUpdateUtil = {
     } else {
      browserStatus = "unknown";
      reasonNotDetected = "Most likely the version of Edge for Windows 10 Version 1607 is an unofficial version and not supported by the JavaScript.";
-     errorReportLineAndIssue = "Line: 248. Issue: Detect version of Edge for Windows 10 Version 1607 failed.";
+     errorReportLineAndIssue = "Line: 249. Issue: Detect version of Edge for Windows 10 Version 1607 failed.";
     }
    }
    // Is operating system Windows 10 Version 1703 Build 15063?
@@ -258,7 +260,7 @@ var BrowserDetectionUpdateUtil = {
     } else {
      browserStatus = "unknown";
      reasonNotDetected = "Most likely the version of Edge for Windows 10 Version 1703 is an unofficial version and not supported by the JavaScript.";
-     errorReportLineAndIssue = "Line: 262. Issue: Detect version of Edge for Windows 10 Version 1703 failed.";
+     errorReportLineAndIssue = "Line: 263. Issue: Detect version of Edge for Windows 10 Version 1703 failed.";
     }
    }
    // Is operating system Windows 10 Version 1709 Build 16299?
@@ -272,7 +274,7 @@ var BrowserDetectionUpdateUtil = {
     } else {
      browserStatus = "unknown";
      reasonNotDetected = "Most likely the version of Edge for Windows 10 Version 1709 is an unofficial version and not supported by the JavaScript.";
-     errorReportLineAndIssue = "Line: 276. Issue: Detect version of Edge for Windows 10 Version 1709 failed.";
+     errorReportLineAndIssue = "Line: 277. Issue: Detect version of Edge for Windows 10 Version 1709 failed.";
     }
    }
    // Is operating system Windows 10 Version 1803 Build 17134?
@@ -286,13 +288,27 @@ var BrowserDetectionUpdateUtil = {
     } else {
      browserStatus = "unknown";
      reasonNotDetected = "Most likely the version of Edge for Windows 10 Version 1803 is an unofficial version and not supported by the JavaScript.";
-     errorReportLineAndIssue = "Line: 290. Issue: Detect version of Edge for Windows 10 Version 1803 failed.";
+     errorReportLineAndIssue = "Line: 291. Issue: Detect version of Edge for Windows 10 Version 1803 failed.";
+    }
+   }
+   // Is operating system Windows 10 Version 1809 Build 17763?
+   else if (userAgent.indexOf("17763") !== -1){
+    operatingSystem = " for Windows 10 Version 1809";
+    // Is latest version of ED for Windows 10 Version 1809 Build 17763?
+    if (userAgent.indexOf("edge/" + latestVersionEDHTMLFor10v1809) !== -1){
+     browserStatus = "latestVersion";
+     browserVersion = latestVersionEDFor10v1809;
+    // Report error detecting version of ED for Windows 10 Version 1809 Build 17763.
+    } else {
+     browserStatus = "unknown";
+     reasonNotDetected = "Most likely the version of Edge for Windows 10 Version 1809 is an unofficial version and not supported by the JavaScript.";
+     errorReportLineAndIssue = "Line: 305. Issue: Detect version of Edge for Windows 10 Version 1809 failed.";
     }
    // Report error detecting version of Windows for ED.
    } else {
      browserStatus = "unknown";
      reasonNotDetected = "Most likely the version of Windows is an unofficial version and not supported by the JavaScript.";
-     errorReportLineAndIssue = "Line: 296. Issue: Detect version of Windows for Edge failed.";
+     errorReportLineAndIssue = "Line: 311. Issue: Detect version of Windows for Edge failed.";
    }
   // Independently detect FF0.8+ except for OP9.10+ Mask As Firefox.
   // "gecko/2009xxxxxx firefox/3.0.1x" are to exclude FL2.5 - 2.5.2. "gecko/20050302 firefox/0.9.6" is to exclude NT8.0 Beta.
@@ -400,7 +416,7 @@ var BrowserDetectionUpdateUtil = {
    } else {
     browserStatus = "unknown";
     reasonNotDetected = "Most likely the version of Opera is Opera 9 - 12.17 (Mask As Internet Explorer) or Opera 10.50 - 12.17 (Mask As Firefox), neither of which are supported by the JavaScript.";
-    errorReportLineAndIssue = "Line: 404. Issue: Detect version of Opera failed.";
+    errorReportLineAndIssue = "Line: 419. Issue: Detect version of Opera failed.";
    }
   // Independently detect VV1+.
   } else if (userAgent.indexOf("vivaldi") !== -1){
@@ -420,7 +436,7 @@ var BrowserDetectionUpdateUtil = {
   } else {
    browserStatus = "unknown";
    reasonNotDetected = "Most likely the web browser is not supported by the JavaScript.";
-   errorReportLineAndIssue = "Line: 425. Issue: Detect web browser failed.";
+   errorReportLineAndIssue = "Line: 439. Issue: Detect web browser failed.";
   }
   // Function: getBrowserVersion().
   // Purpose: Extract browserVersion from user-agent string for non-IE web browsers in which browserVersion is present in unique user-agent string. As fail-safe, test for " " after end of browserVersion even though unaware of any user-agent strings with data after end of browserVersion.
