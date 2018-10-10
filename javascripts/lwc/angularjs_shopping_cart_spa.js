@@ -3,7 +3,7 @@
 /* File: /web_server_root_directory/javascripts/lwc/angular_shopping_cart_spa.js.
  * Purpose: Primary JavaScript for AngularJS Shopping Cart Single Page Application (AngularJS Shopping Cart SPA).
  * Used in: angular_shopping_cart_spa.php.
- * Last reviewed/updated: 09 Jul 2018.
+ * Last reviewed/updated: 10 Oct 2018.
  * Published: 24 Jan 2017.
  * Unobtrusive: 1.) decouple HTML/JavaScript: a.) no register JavaScript event handlers in HTML via HTML attributes (eg, onload and onclick), and b.) no embed JavaScripts in HTML via HTML script element; 2.) as reasonable, decouple CSS/JavaScript. Eg, as reasonable, use JavaScript to change HTML class attribute value assignments (loose coupling), not use JavaScript to change JavaScript style object CSS property value assignments (tight coupling); and 3.) no define JavaScript variables and functions on JavaScript global scope. However, Add To Cart buttons, Shopping Navbars, and some other buttons use AngularJS ng-click directive.
  * Web browser support: IE9+, ED12+, FF6+, CH16+, OP11.60+, VV1+. No SF5.1.7-. Confirmed 08 Jul 2018. Apparently previous 10 Mar 2018 web browser support statement listing SF5.1.4+ and CH13+ was incorrect.
@@ -37,7 +37,7 @@ angular.module('shoppingCartSpaApp', ['ngMessages'])
 
 // ---------- ANGULARJS CONTROLLER DEFINITION ----------
 
-.controller('shoppingCartSpaCtrl', function($scope, $filter) {
+.controller('shoppingCartSpaCtrl', function($scope, $filter){
 
  // ---------- ANGULARJS MODEL DEFINITIONS: ANGULARJS SCOPE OBJECT DATA REFERENCE PROPERTIES DEFINED AS JAVASCRIPT OBJECTS AND ARRAYS ----------
 
