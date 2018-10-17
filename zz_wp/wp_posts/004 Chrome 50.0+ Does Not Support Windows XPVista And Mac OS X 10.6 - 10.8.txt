@@ -1,9 +1,10 @@
 Chrome 50.0+ Does Not Support Windows XP/Vista And Mac OS X 10.6 - 10.8
+https://blog.learnwebcoding.com/?p=39
 
 Apparently Chrome 50.0 is the first version of Chrome that no longer supports Windows XP/Vista and Mac OS X 10.6 - 10.8 per the following Chrome Blog announcement back on 10 Nov 2015:
 
 Updates to Chrome platform support - Tuesday, November 10, 2015
-https://chrome.googleblog.com/2015/11/updates-to-chrome-platform-support.html
+<a href="https://chrome.googleblog.com/2015/11/updates-to-chrome-platform-support.html"  target="_blank">https://chrome.googleblog.com/2015/11/updates-to-chrome-platform-support.html</a>
 
 Interestingly, the announcement states that Microsoft no longer supports Windows Vista, which is not true as Windows Vista Extended Support does not end until 11 Apr 2017.
 

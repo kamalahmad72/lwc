@@ -1,9 +1,10 @@
 Technologies And APIs Not Supported In Microsoft Edge
+https://blog.learnwebcoding.com/?p=21
 
 Technologies and APIs not supported in Microsoft Edge (These technologies will continue to be supported in Internet Explorer on Windows 10 for users and enterprises who depend on them.): ActiveX, Browser Helper Objects (BHO), document modes, Vector Markup Language (VML), VBScript, attachEvent/removeEvent, currentStyle, conditional comments, IE8 layout quirks, DirectX filters and transitions.
 
 From: A break from the past, part 2: Saying goodbye to ActiveX, VBScript, attachEvent...
-http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/
+<a href="http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/" target="_blank">http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/</a>
 
 Categories:
 Misc

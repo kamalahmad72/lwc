@@ -1,12 +1,13 @@
 Google PageSpeed Insights and Mobile Web Site Testing Tool
+https://blog.learnwebcoding.com/?p=49
 
 PageSpeed Insights and Mobile Web Site Testing Tool run the same tests. However, Mobile - User Experience in PageSpeed Insights is called Mobile Friendliness in Mobile Web Site Testing Tool. Also, PageSpeed Insights provides links on how to fix stuff without having to go through email. Therefore, PageSpeed Insights is recommended over Mobile Web Site Testing Tool.
 
 PageSpeed Insights
-https://developers.google.com/speed/pagespeed/insights/
+<a href="https://developers.google.com/speed/pagespeed/insights/" target="_blank">https://developers.google.com/speed/pagespeed/insights/</a>
 
 Mobile Web Site Testing Tool
-https://testmysite.thinkwithgoogle.com/
+<a href="https://testmysite.thinkwithgoogle.com/" target="_blank">https://testmysite.thinkwithgoogle.com/</a>
 
 Categories:
 Misc

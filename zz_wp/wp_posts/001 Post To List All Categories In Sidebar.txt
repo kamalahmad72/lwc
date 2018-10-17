@@ -1,4 +1,5 @@
 Post To List All Categories In Sidebar
+https://blog.learnwebcoding.com/?p=19
 
 This post assigned to all categories so that the categories are listed in the sidebar.
 
@@ -7,4 +8,4 @@ Test to see if post preview respects [Enter].
 It does not.
 
 Categories:
-BOM, CSS, DOM, HTML, JavaScript, Misc
+CSS, HTML, JavaScript, PHP, Misc
