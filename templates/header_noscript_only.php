@@ -2,9 +2,9 @@
 /* -------------------- INTRODUCTION -------------------- */
 
 /* File: /web_server_root_directory/templates/header_noscript_only.php.
- * Purpose: Web page <header></header> section code file. A variation of /web_server_root_directory/templates/header.php with the LWC navbar removed, the LWC Bootstrap navbar removed, and the LWC Home breadcrumbs navigation removed, leaving only the <noscript></noscript> section.
+ * Purpose: Web page <header></header> section. A variation of /web_server_root_directory/templates/header.php with LWC navbar removed, LWC Bootstrap navbar removed, and LWC Home breadcrumbs navigation removed, leaving only the <noscript></noscript> section.
  * Used in: Nothing. For possible future use.
- * Last reviewed/updated: 02 Jun 2017.
+ * Last reviewed/updated: 19 Oct 2018.
  * Published: 21 Jun 2016.
  * NOTE: Copy changes to header*.php and header*html.js. */
 return

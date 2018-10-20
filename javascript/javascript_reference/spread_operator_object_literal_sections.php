@@ -2,9 +2,9 @@
 /* -------------------- INTRODUCTION -------------------- */
 
 /* File: /web_server_root_directory/javascript/javascript_reference/spread_operator_object_literal_sections.php.
- * Purpose: Web page sections.
+ * Purpose: Web page <section></section> sections.
  * Used in: /web_server_root_directory/javascript/javascript_reference/spread_operator_object_literal.php.
- * Last reviewed/updated: 07 Mar 2018.
+ * Last reviewed/updated: 18 Oct 2018.
  * Published: 28 Nov 2017. */
 return
    "<section>

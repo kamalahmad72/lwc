@@ -2,9 +2,9 @@
 /* -------------------- INTRODUCTION -------------------- */
 
 /* File: /web_server_root_directory/css/css_techniques/reveal_fixed_footer_upon_scrolling_sections.php.
- * Purpose: Web page sections.
+ * Purpose: Web page <section></section> sections.
  * Used in: /web_server_root_directory/css/css_techniques/reveal_fixed_footer_upon_scrolling.php.
- * Last reviewed/updated: 07 Oct 2016.
+ * Last reviewed/updated: 18 Oct 2018.
  * Published: 21 Sep 2016. */
 return
    "<section>

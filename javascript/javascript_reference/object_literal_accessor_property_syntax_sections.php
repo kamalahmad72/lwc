@@ -2,9 +2,9 @@
 /* -------------------- INTRODUCTION -------------------- */
 
 /* File: /web_server_root_directory/javascript/javascript_reference/object_literal_accessor_property_syntax_sections.php.
- * Purpose: Web page sections.
+ * Purpose: Web page <section></section> sections.
  * Used in: /web_server_root_directory/javascript/javascript_reference/object_literal_accessor_property_syntax.php.
- * Last reviewed/updated: 19 Dec 2017.
+ * Last reviewed/updated: 18 Oct 2018.
  * Published: 16 Dec 2017. */
 return
    "<section>

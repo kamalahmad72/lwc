@@ -2,9 +2,9 @@
 /* -------------------- INTRODUCTION -------------------- */
 
 /* File: /web_server_root_directory/bom/web_browser_useragent_values_sections.php.
- * Purpose: Web page sections.
+ * Purpose: Web page <section></section> sections.
  * Used in: /web_server_root_directory/bom/web_browser_useragent_values.php.
- * Last reviewed/updated: 12 Oct 2018.
+ * Last reviewed/updated: 18 Oct 2018.
  * Published: 21 Sep 2016. */
 return
    "<section>

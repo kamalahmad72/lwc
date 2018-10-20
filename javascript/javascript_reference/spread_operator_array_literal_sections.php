@@ -2,9 +2,9 @@
 /* -------------------- INTRODUCTION -------------------- */
 
 /* File: /web_server_root_directory/javascript/javascript_reference/spread_operator_array_literal_sections.php.
- * Purpose: Web page sections.
+ * Purpose: Web page <section></section> sections.
  * Used in: /web_server_root_directory/javascript/javascript_reference/spread_operator_array_literal.php.
- * Last reviewed/updated: 15 Dec 2017.
+ * Last reviewed/updated: 18 Oct 2018.
  * Published: 28 Nov 2017. */
 return
    "<section>

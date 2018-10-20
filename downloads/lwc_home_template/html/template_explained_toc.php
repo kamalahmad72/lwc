@@ -4,7 +4,7 @@
 /* File: /web_server_root_directory/html/template_explained_toc.php.
  * Purpose: Web page table of contents.
  * Used in: /web_server_root_directory/html/template_explained.php.
- * Last reviewed/updated: 12 Nov 2017.
+ * Last reviewed/updated: 19 Oct 2018.
  * Published: 21 Sep 2016. */
 return
     "<div class='toc-sec'><div class='toc-num'>1.</div><div class='toc-sec-title'><a href='#introduction'>Introduction</a></div></div>
@@ -36,7 +36,7 @@ return
      <div class='toc-sub2sec'><div class='toc-num'>8.4.2.</div><div class='toc-sub2sec-title'><a href='#tocSubsectionTitles'>Table Of Contents Subsection Titles</a></div></div>
      <div class='toc-sub2sec'><div class='toc-num'>8.4.3.</div><div class='toc-sub2sec-title'><a href='#tocSubsubsectionTitles'>Table Of Contents Subsubsection Titles</a></div></div>
      <div class='toc-sub2sec'><div class='toc-num'>8.4.4.</div><div class='toc-sub2sec-title'><a href='#tocSubsubsubsectionTitles'>Table Of Contents Subsubsubsection Titles</a></div></div>
-     <div class='toc-sub1sec'><div class='toc-num'>8.5.</div><div class='toc-sub1sec-title'><a href='#sections'>Sections</a></div></div>
+     <div class='toc-sub1sec'><div class='toc-num'>8.5.</div><div class='toc-sub1sec-title'><a href='#sections'><code>&lt;section&gt;&lt;/section&gt;</code> Sections</a></div></div>
      <div class='toc-sub2sec'><div class='toc-num'>8.5.1.</div><div class='toc-sub2sec-title'><a href='#sectionTitles'>Section Titles</a></div></div>
      <div class='toc-sub2sec'><div class='toc-num'>8.5.2.</div><div class='toc-sub2sec-title'><a href='#subsectionTitles'>Subsection Titles</a></div></div>
      <div class='toc-sub2sec'><div class='toc-num'>8.5.3.</div><div class='toc-sub2sec-title'><a href='#subsubsectionTitles'>Subsubsection Titles</a></div></div>
@@ -93,12 +93,13 @@ return
      <div class='toc-sub1sec'><div class='toc-num'>27.3.</div><div class='toc-sub1sec-title'><a href='#emailAddressesAndUris'>Email Addresses And URIs</a></div></div>
      <div class='toc-sub2sec'><div class='toc-num'>27.3.1.</div><div class='toc-sub2sec-title'><a href='#emailAddressesAsHyperlinks'>Email Addresses As Hyperlinks</a></div></div>
      <div class='toc-sub2sec'><div class='toc-num'>27.3.2.</div><div class='toc-sub2sec-title'><a href='#emailAddressesAndUrisAsText'>Email Addresses And URIs As Text</a></div></div>
-     <div class='toc-sub1sec'><div class='toc-num'>27.4.</div><div class='toc-sub1sec-title'><a href='#filenames'>Filenames, Folder Names, File System Paths, And Text At The Terminal/Command Prompt</a></div></div>
+     <div class='toc-sub1sec'><div class='toc-num'>27.4.</div><div class='toc-sub1sec-title'><a href='#filenames'>Filenames, Folder Names, File System Paths, And Terminal/Command Prompt Output</a></div></div>
      <div class='toc-sub2sec'><div class='toc-num'>27.4.1.</div><div class='toc-sub2sec-title'><a href='#filenamesAsHyperlinks'>Filenames As Hyperlinks</a></div></div>
-     <div class='toc-sub1sec'><div class='toc-num'>27.5.</div><div class='toc-sub1sec-title'><a href='#dialogTitles'>Dialog Titles And Web Page Titles</a></div></div>
-     <div class='toc-sub1sec'><div class='toc-num'>27.6.</div><div class='toc-sub1sec-title'><a href='#computerReports'>Computer Error, Success, And Failure Reports</a></div></div>
-     <div class='toc-sub1sec'><div class='toc-num'>27.7.</div><div class='toc-sub1sec-title'><a href='#emphasizedText'>Emphasized Text</a></div></div>
-     <div class='toc-sub1sec'><div class='toc-num'>27.8.</div><div class='toc-sub1sec-title'><a href='#quotedText'>Quoted Text</a></div></div>
-     <div class='toc-sub2sec'><div class='toc-num'>27.8.1.</div><div class='toc-sub2sec-title'><a href='#quotedWords'>Quoted Words</a></div></div>
-     <div class='toc-sub2sec'><div class='toc-num'>27.8.2.</div><div class='toc-sub2sec-title'><a href='#quotedTextWithSource'>Quoted Text With Source</a></div></div>
+     <div class='toc-sub1sec'><div class='toc-num'>27.5.</div><div class='toc-sub1sec-title'><a href='#databaseNames'>Database Names, Table Names, Column Names, Field Data, And User Accounts</a></div></div>
+     <div class='toc-sub1sec'><div class='toc-num'>27.6.</div><div class='toc-sub1sec-title'><a href='#dialogTitles'>Dialog Titles And Web Page Titles</a></div></div>
+     <div class='toc-sub1sec'><div class='toc-num'>27.7.</div><div class='toc-sub1sec-title'><a href='#computerReports'>Computer Error, Success, And Failure Reports</a></div></div>
+     <div class='toc-sub1sec'><div class='toc-num'>27.8.</div><div class='toc-sub1sec-title'><a href='#emphasizedText'>Emphasized Text</a></div></div>
+     <div class='toc-sub1sec'><div class='toc-num'>27.9.</div><div class='toc-sub1sec-title'><a href='#quotedText'>Quoted Text</a></div></div>
+     <div class='toc-sub2sec'><div class='toc-num'>27.9.1.</div><div class='toc-sub2sec-title'><a href='#quotedWords'>Quoted Words</a></div></div>
+     <div class='toc-sub2sec'><div class='toc-num'>27.9.2.</div><div class='toc-sub2sec-title'><a href='#quotedTextWithSource'>Quoted Text With Source</a></div></div>
      <div class='toc-sec'><div class='toc-num'>28.</div><div class='toc-sec-title'><a href='#resources'>Resources And Additional Information</a></div></div>";

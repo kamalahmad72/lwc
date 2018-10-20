@@ -2,9 +2,9 @@
 /* -------------------- INTRODUCTION -------------------- */
 
 /* File: /web_server_root_directory/javascript/javascript_reference/instanceof_operator_sections.php.
- * Purpose: Web page sections.
+ * Purpose: Web page <section></section> sections.
  * Used in: /web_server_root_directory/javascript/javascript_reference/instanceof_operator.php.
- * Last reviewed/updated: 07 May 2018.
+ * Last reviewed/updated: 18 Oct 2018.
  * Published: 24 Jan 2018. */
 return
    "<section>

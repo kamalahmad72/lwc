@@ -2,9 +2,9 @@
 /* -------------------- INTRODUCTION -------------------- */
 
 /* File: /web_server_root_directory/php/simple_mysql_admin_sections.php.
- * Purpose: Web page sections.
+ * Purpose: Web page <section></section> sections.
  * Used in: /web_server_root_directory/php/simple_mysql_admin.php.
- * Last reviewed/updated: 30 Jun 2018.
+ * Last reviewed/updated: 18 Oct 2018.
  * Published: 14 May 2017. */
 return
    "<section>

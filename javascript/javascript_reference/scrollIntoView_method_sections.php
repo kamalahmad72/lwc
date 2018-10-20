@@ -2,9 +2,9 @@
 /* -------------------- INTRODUCTION -------------------- */
 
 /* File: /web_server_root_directory/javascript/javascript_reference/scrollIntoView_method_sections.php.
- * Purpose: Web page sections.
+ * Purpose: Web page <section></section> sections.
  * Used in: /web_server_root_directory/javascript/javascript_reference/scrollIntoView_method.php.
- * Last reviewed/updated: 08 May 2018.
+ * Last reviewed/updated: 18 Oct 2018.
  * Published: 20 Oct 2016. */
 return
    "<section>

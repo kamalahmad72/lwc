@@ -2,9 +2,9 @@
 /* -------------------- INTRODUCTION -------------------- */
 
 /* File: /web_server_root_directory/templates/template.php.
- * Purpose: Web page HTML/PHP template file.
+ * Purpose: Web page HTML/PHP template.
  * Used in: Web page files based on /web_server_root_directory/templates/web_page.php except home page.
- * Last reviewed/updated: 15 May 2018.
+ * Last reviewed/updated: 19 Oct 2018.
  * Published: 21 Sep 2016. */
 return
 "<!DOCTYPE html>

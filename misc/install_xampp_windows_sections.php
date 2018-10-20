@@ -2,9 +2,9 @@
 /* -------------------- INTRODUCTION -------------------- */
 
 /* File: /web_server_root_directory/misc/install_xampp_windows_sections.php.
- * Purpose: Web page sections.
+ * Purpose: Web page <section></section> sections.
  * Used in: /web_server_root_directory/misc/install_xampp_windows.php
- * Last reviewed/updated: 28 Oct 2017.
+ * Last reviewed/updated: 18 Oct 2018.
  * Published: 21 Sep 2016. */
 return
    "<section>

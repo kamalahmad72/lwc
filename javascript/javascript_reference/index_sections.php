@@ -2,9 +2,9 @@
 /* -------------------- INTRODUCTION -------------------- */
 
 /* File: /web_server_root_directory/javascript/javascript_reference/index_sections.php.
- * Purpose: Web page sections.
+ * Purpose: Web page <section></section> sections.
  * Used in: /web_server_root_directory/javascript/javascript_reference/index.php.
- * Last reviewed/updated: 10 May 2018.
+ * Last reviewed/updated: 18 Oct 2018.
  * Published: 21 Sep 2016. */
 return
    "<section>

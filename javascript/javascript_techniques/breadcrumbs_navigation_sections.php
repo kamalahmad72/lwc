@@ -2,9 +2,9 @@
 /* -------------------- INTRODUCTION -------------------- */
 
 /* File: /web_server_root_directory/javascript/javascript_techniques/breadcrumbs_navigation_sections.php.
- * Purpose: Web page sections.
+ * Purpose: Web page <section></section> sections.
  * Used in: /web_server_root_directory/javascript/javascript_techniques/breadcrumbs_navigation.php.
- * Last reviewed/updated: 12 Mar 2018.
+ * Last reviewed/updated: 18 Oct 2018.
  * Published: 21 Sep 2016. */
 return
    "<section>

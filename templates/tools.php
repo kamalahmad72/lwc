@@ -2,11 +2,11 @@
 /* -------------------- INTRODUCTION -------------------- */
 
 /* File: /web_server_root_directory/templates/tools.php.
- * Purpose: Web page Tools Icon Dropdown code file.
+ * Purpose: Web page tools icon dropdown.
  * Used in: Web page files based on /web_server_root_directory/templates/web_page.php except home page, sitemap.php, glossary.php, and whats_new.php.
- * Last reviewed/updated: 26 Ju1 2017.
+ * Last reviewed/updated: 19 Oct 2018.
  * Published: 04 Jun 2016.
- * NOTE: Copy changes to tools*.php and support_tools*html.js. */
+ * NOTE: Copy changes to tools*.php and tools*html.js. */
 return
     "<div id='toolsIconDropdownContainerId' class='tools-icon-dropdown-container'>
       <div class='fa fa-cog fa-lg cursor-pointer'></div>

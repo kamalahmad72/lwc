@@ -2,9 +2,9 @@
 /* -------------------- INTRODUCTION -------------------- */
 
 /* File: /web_server_root_directory/html/template_download_sections.php.
- * Purpose: Web page sections.
+ * Purpose: Web page <section></section> sections.
  * Used in: /web_server_root_directory/html/template_download.php.
- * Last reviewed/updated: 11 Mar 2018.
+ * Last reviewed/updated: 19 Oct 2018.
  * Published: 18 Oct 2016. */
 return
    "<section>
@@ -36,7 +36,7 @@ return
      <ol>
       <li>Download the following source code zip file to your computer:
        <ul class='link-list'>
-        <li><a href='/downloads/lwc_home_template.zip'><span class='filename'>lwc_home_template.zip</span> (learnwebcoding.com)</a> - Released: 24 May 2018. Size: 849,126 bytes. SHA-256 checksum: f70be0b0d707112a7b18c1c609f1935dfee0bf74bd011d857a2a9aa8d24e97c8.</li>
+        <li><a href='/downloads/lwc_home_template.zip'><span class='filename'>lwc_home_template.zip</span> (learnwebcoding.com)</a> - Released: 19 Oct 2018. Size: 848,882 bytes. SHA-256 checksum: a4e80a4b8ba38323465d03017e4baf270fc3fb158f1fd3bd00274e2b6cbeecd9.</li>
        </ul>
       </li>
       <li>Extract the downloaded zip file. In this example, <span class='filename'>lwc_home_template.zip</span> is extracted to the <span class='filename'>lwc_home_template</span> folder:

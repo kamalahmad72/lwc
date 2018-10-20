@@ -2,9 +2,9 @@
 /* -------------------- INTRODUCTION -------------------- */
 
 /* File: /web_server_root_directory/templates/Web_Page.class.php.
- * Purpose: Web page object definition file. Define web page object properties. Assign sitewide default web page object property values.
+ * Purpose: Web page object (WPO) definition. Defines a web page type as a WPO. Defines WPO properties and assign sitewide default WPO property values.
  * Used in: Web page files based on /web_server_root_directory/templates/web_page.php.
- * Last reviewed/updated: 15 May 2018.
+ * Last reviewed/updated: 19 Oct 2018.
  * Published: 21 Sep 2016. */
 class Web_Page {
  public $head_title = "";

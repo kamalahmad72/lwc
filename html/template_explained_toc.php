@@ -4,7 +4,7 @@
 /* File: /web_server_root_directory/html/template_explained_toc.php.
  * Purpose: Web page table of contents.
  * Used in: /web_server_root_directory/html/template_explained.php.
- * Last reviewed/updated: 30 Jun 2018.
+ * Last reviewed/updated: 19 Oct 2018.
  * Published: 21 Sep 2016. */
 return
     "<div class='toc-sec'><div class='toc-num'>1.</div><div class='toc-sec-title'><a href='#introduction'>Introduction</a></div></div>
@@ -36,7 +36,7 @@ return
      <div class='toc-sub2sec'><div class='toc-num'>8.4.2.</div><div class='toc-sub2sec-title'><a href='#tocSubsectionTitles'>Table Of Contents Subsection Titles</a></div></div>
      <div class='toc-sub2sec'><div class='toc-num'>8.4.3.</div><div class='toc-sub2sec-title'><a href='#tocSubsubsectionTitles'>Table Of Contents Subsubsection Titles</a></div></div>
      <div class='toc-sub2sec'><div class='toc-num'>8.4.4.</div><div class='toc-sub2sec-title'><a href='#tocSubsubsubsectionTitles'>Table Of Contents Subsubsubsection Titles</a></div></div>
-     <div class='toc-sub1sec'><div class='toc-num'>8.5.</div><div class='toc-sub1sec-title'><a href='#sections'>Sections</a></div></div>
+     <div class='toc-sub1sec'><div class='toc-num'>8.5.</div><div class='toc-sub1sec-title'><a href='#sections'><code>&lt;section&gt;&lt;/section&gt;</code> Sections</a></div></div>
      <div class='toc-sub2sec'><div class='toc-num'>8.5.1.</div><div class='toc-sub2sec-title'><a href='#sectionTitles'>Section Titles</a></div></div>
      <div class='toc-sub2sec'><div class='toc-num'>8.5.2.</div><div class='toc-sub2sec-title'><a href='#subsectionTitles'>Subsection Titles</a></div></div>
      <div class='toc-sub2sec'><div class='toc-num'>8.5.3.</div><div class='toc-sub2sec-title'><a href='#subsubsectionTitles'>Subsubsection Titles</a></div></div>

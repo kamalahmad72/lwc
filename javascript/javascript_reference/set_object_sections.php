@@ -2,9 +2,9 @@
 /* -------------------- INTRODUCTION -------------------- */
 
 /* File: /web_server_root_directory/javascript/javascript_reference/set_object_sections.php.
- * Purpose: Web page sections.
+ * Purpose: Web page <section></section> sections.
  * Used in: /web_server_root_directory/javascript/javascript_reference/set_object.php.
- * Last reviewed/updated: 03 Jan 2018.
+ * Last reviewed/updated: 18 Oct 2018.
  * Published: 19 Dec 2017. */
 return
    "<section>

@@ -2,9 +2,9 @@
 /* -------------------- INTRODUCTION -------------------- */
 
 /* File: /web_server_root_directory/html/index_sections.php.
- * Purpose: Web page sections.
+ * Purpose: Web page <section></section> sections.
  * Used in: /web_server_root_directory/html/index.php.
- * Last reviewed/updated: 10 Mar 2018.
+ * Last reviewed/updated: 18 Oct 2018.
  * Published: 21 Sep 2016. */
 return
    "<section>
@@ -54,8 +54,8 @@ return
 
      <ul class='link-list'>
       <li><a href='http://www.w3.org/TR/REC-html32'>HTML 3.2 Reference Specification: W3C Recommendation 14-Jan-1997 (w3.org)</a></li>
-      <li><a href='http://www.w3.org/TR/REC-html40-971218/'>HTML 4.0 Specification: W3C Recommendation 18-Dec-1997 (w3.org)</a></li>
       <li><a href='http://www.w3.org/TR/1998/REC-html40-19980424/'>HTML 4.0 Specification: W3C Recommendation, Revised On 24-Apr-1998 (w3.org)</a></li>
+      <li><a href='http://www.w3.org/TR/REC-html40-971218/'>HTML 4.0 Specification: W3C Recommendation 18-Dec-1997 (w3.org)</a></li>
       <li><a href='http://www.w3.org/TR/html401/'>HTML 4.01 Specification: W3C Recommendation 24 December 1999 (w3.org)</a></li>
      </ul>
 
@@ -69,17 +69,19 @@ return
      </ul>
 
      <h3><a id='w3cHtml5'></a>3.3. W3C HTML5 Recommendations/Etc.</h3>
-<!-- W3C News Keyword: 1.) HTML Working Group replaced by Web Platform Working Group 01 Nov 2016: https://www.w3.org/WebPlatform/WG/. 2.) HTML Media Extensions Working Group: http://www.w3.org/html/wg/. -->
-<!-- All W3C HTML Standards And Drafts http://www.w3.org/TR/#tr_HTML. -->
-<!-- Web Platform Working Group Charter (the place to determine which publications fall under Web Platform Working Group) http://www.w3.org/2016/11/webplatform-charter.html. -->
-<!-- HTML/Publications: Ongoing Publications - HTML Media (the place to determine which publications fall under HTML Media Extensions Working Group) http://www.w3.org/wiki/HTML/Publications. -->
+<!-- W3C HTML Related Working Groups: 1.) Web Platform Working Group (replaced HTML Working Group 01 Nov 2016): https://www.w3.org/WebPlatform/WG/. 2.) HTML Media Extensions Working Group: https://www.w3.org/html/wg/. -->
+<!-- Web Platform Working Group specifications: https://www.w3.org/WebPlatform/WG/PubStatus and https://www.w3.org/2016/11/webplatform-charter.html. -->
+<!-- HTML Media Extensions Working Group specifications: https://www.w3.org/wiki/HTML/Publications. -->
 <!-- For Web IDL defined and list of specs that have a normative reference for Web IDL: http://www.w3.org/wiki/Web_IDL. -->
-<!-- List from top to bottom; 1.) Recommendations, 2.) Proposed Recommendations, 3.) Candidate Recommendations, 4.) Working Group Notes, 5.) all Working Drafts incl Last Call and First Public, and Editor's Drafts, and 6.) within each list by date newest on top to date oldest on bottom. -->
+<!-- List from top to bottom; 1.) Recommendations, 2.) Proposed Recommendations, 3.) Candidate Recommendations, 4.) Working Group Notes, 5.) all Working Drafts incl Last Call and First Public, and Editor's Drafts, and 6.) within each list by date newest on top to oldest on bottom. -->
 
      <h4><a id='w3cHtml5r'></a>3.3.1. W3C HTML5 Recommendations</h4>
 
      <ul class='link-list'>
-      <li><a href='http://www.w3.org/TR/html51/'>HTML 5.1 2nd Edition: W3C Recommendation 3 October 2017 (w3.org)</a></li>
+      <li><a href='https://www.w3.org/TR/html-media-capture/'>HTML Media Capture: W3C Recommendation 01 February 2018 (w3.org)</a></li>
+      <li><a href='https://www.w3.org/TR/html52/'>HTML 5.2: W3C Recommendation, 14 December 2017 (w3.org)</a></li>
+      <li><a href='https://www.w3.org/TR/html51/'>HTML 5.1 2nd Edition: W3C Recommendation 3 October 2017 (w3.org)</a></li>
+      <li><a href='https://www.w3.org/TR/encrypted-media/'>Encrypted Media Extensions: W3C Recommendation 18 September 2017 (w3.org)</a></li>
       <li><a href='http://www.w3.org/TR/media-source/'>Media Source Extensions: W3C Recommendation 17 November 2016 (w3.org)</a></li>
       <li><a href='http://www.w3.org/TR/2016/REC-html51-20161101/'>HTML 5.1: W3C Recommendation, 1 November 2016 (w3.org)</a></li>
       <li><a href='http://www.w3.org/TR/2dcontext/'>HTML Canvas 2D Context: W3C Recommendation 19 November 2015 (w3.org)</a></li>
@@ -87,20 +89,21 @@ return
       <li><a href='http://www.w3.org/TR/html5/'>HTML5: A Vocabulary And Associated APIs For HTML And XHTML: W3C Recommendation 28 October 2014 (w3.org)</a></li>
      </ul>
 
+<!--
      <h4><a id='w3cHtml5pr'></a>3.3.2. W3C HTML5 Proposed Recommendations</h4>
 
      <ul class='link-list'>
-      <li><a href='http://www.w3.org/TR/encrypted-media/'>Encrypted Media Extensions: W3C Proposed Recommendation 16 March 2017 (w3.org)</a></li>
+      <li><a href=''> (w3.org)</a></li>
      </ul>
 
      <h4><a id='w3cHtml5cr'></a>3.3.3. W3C HTML5 Candidate Recommendations</h4>
 
      <ul class='link-list'>
-      <li><a href='http://www.w3.org/TR/html-media-capture/'>HTML Media Capture: W3C Candidate Recommendation 31 August 2017 (w3.org)</a></li>
-      <li><a href='http://www.w3.org/TR/html52/'>HTML 5.2: W3C Candidate Recommendation, 8 August 2017 (w3.org)</a></li>
+      <li><a href=''> (w3.org)</a></li>
      </ul>
+-->
 
-     <h4><a id='w3cHtml5wgn'></a>3.3.4. W3C HTML5 Working Group Notes</h4>
+     <h4><a id='w3cHtml5wgn'></a>3.3.2. W3C HTML5 Working Group Notes</h4>
 
      <ul class='link-list'>
       <li><a href='http://www.w3.org/TR/media-accessibility-reqs/'>Media Accessibility User Requirements: W3C Working Group Note 03 December 2015 (w3.org)</a></li>
@@ -108,7 +111,7 @@ return
       <li><a href='http://www.w3.org/TR/html-ruby-extensions/'>W3C HTML Ruby Markup Extensions: W3C Working Group Note 04 February 2014 (w3.org)</a></li>
      </ul>
 
-     <h4><a id='w3cHtml5wd'></a>3.3.5. W3C HTML5 Working Drafts</h4>
+     <h4><a id='w3cHtml5wd'></a>3.3.3. W3C HTML5 Working Drafts</h4>
 
      <ul class='link-list'>
       <li><a href='http://www.w3.org/TR/microdata/'>HTML Microdata: W3C Working Draft 26 June 2017 (w3.org)</a></li>
@@ -125,7 +128,7 @@ return
      </ul>
 
      <h3><a id='w3cRdfa'></a>3.5. W3C RDFa Recommendations/Etc.</h3>
-<!-- W3C News Keyword: RDFa Working Group: http://www.w3.org/2010/02/rdfa/ -->
+<!-- W3C RDFa Working Group: http://www.w3.org/2010/02/rdfa/ -->
 
      <h4><a id='w3cRdfaR'></a>3.5.1. W3C RDFa Recommendations</h4>
 
@@ -163,7 +166,8 @@ return
      <h2><a id='miscellaneous'></a>5. Miscellaneous</h2>
 
      <ul class='link-list'>
-      <li><a href='http://www.w3.org/html/wg/'>W3C: HTML Working Group (w3.org)</a></li>
+      <li><a href='https://www.w3.org/WebPlatform/WG/'>Web Platform Working Group (w3.org)</a></li>
+      <li><a href='https://www.w3.org/html/wg/'>HTML Media Extensions Working Group (w3.org)</a></li>
       <li><a href='http://ftp.ics.uci.edu/pub/ietf/html/rfc1866.txt'>Hypertext Markup Language - 2.0: Request For Comment 1866 November 1995 (ftp.ics.uci.edu)</a> (Tim Berners-Lee.)</li>
       <li><a href='http://www.w3.org/QA/2002/04/valid-dtd-list.html'>Recommended Doctype Declarations To Use In Your Web Document (w3.org)</a></li>
       <li><a href='http://encoding.spec.whatwg.org/'>Encoding: Living Standard (encoding.spec.whatwg.org)</a></li>

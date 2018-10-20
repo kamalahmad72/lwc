@@ -2,9 +2,9 @@
 /* -------------------- INTRODUCTION -------------------- */
 
 /* File: /web_server_root_directory/javascript/javascript_reference/className_property_sections.php.
- * Purpose: Web page sections.
+ * Purpose: Web page <section></section> sections.
  * Used in: /web_server_root_directory/javascript/javascript_reference/className_property.php.
- * Last reviewed/updated: 04 Dec 2017.
+ * Last reviewed/updated: 18 Oct 2018.
  * Published: 30 Jul 2017. */
 return
    "<section>

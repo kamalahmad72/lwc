@@ -2,9 +2,9 @@
 /* -------------------- INTRODUCTION -------------------- */
 
 /* File: /web_server_root_directory/javascript/javascript_reference/forEach_method_map_sections.php.
- * Purpose: Web page sections.
+ * Purpose: Web page <section></section> sections.
  * Used in: /web_server_root_directory/javascript/javascript_reference/forEach_method_map.php.
- * Last reviewed/updated: 23 Dec 2017.
+ * Last reviewed/updated: 18 Oct 2018.
  * Published: 23 Dec 2017. */
 return
    "<section>

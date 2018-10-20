@@ -2,9 +2,9 @@
 /* -------------------- INTRODUCTION -------------------- */
 
 /* File: /web_server_root_directory/templates/header.php.
- * Purpose: Web page <header></header> section code file. Replace the <header></header> section code below with your <header></header> section code, coded per LWC Home Template Explained (https://www.learnwebcoding.com/html/template_explained.php).
+ * Purpose: Web page <header></header> section. Replace the <header></header> section code below with your <header></header> section code, coded per LWC Home Template Explained (https://www.learnwebcoding.com/html/template_explained.php).
  * Used in: Web page files based on /web_server_root_directory/templates/web_page.php.
- * Last reviewed/updated: 22 May 2018.
+ * Last reviewed/updated: 19 Oct 2018.
  * Published: 04 Jun 2016.
  * Objects: BcrumbsNavUtil.
  * NOTE:

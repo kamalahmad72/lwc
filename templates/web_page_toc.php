@@ -4,7 +4,7 @@
 /* File: /web_server_root_directory/templates/web_page_toc.php.
  * Purpose: Web page table of contents.
  * Used in: /web_server_root_directory/templates/web_page.php.
- * Last reviewed/updated: 25 Sep 2018.
+ * Last reviewed/updated: 19 Oct 2018.
  * Published: 21 Sep 2016. */
 return
     "<div class='toc-sec'><div class='toc-num'>1.</div><div class='toc-sec-title'><a href='#sectionOneTitle'>Section One Title</a></div></div>

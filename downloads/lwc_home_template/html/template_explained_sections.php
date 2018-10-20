@@ -2,9 +2,9 @@
 /* -------------------- INTRODUCTION -------------------- */
 
 /* File: /web_server_root_directory/html/template_explained_sections.php.
- * Purpose: Web page sections.
+ * Purpose: Web page <section></section> sections.
  * Used in: /web_server_root_directory/html/template_explained.php.
- * Last reviewed/updated: 24 May 2018.
+ * Last reviewed/updated: 19 Oct 2018.
  * Published: 21 Sep 2016. */
 return
    "<section>
@@ -179,14 +179,14 @@ warnings (learnwebcoding.com)</a> per the <a href='http://jigsaw.w3.org/css-vali
      <p>The LWC Home Template includes a PHP template system for creating an easy to maintain and flexible web site. The PHP template system:</p>
 
      <ul>
-      <li>Allows the definition of a web page type as a PHP web page object (WPO) in a single file, with the WPO properties representing HTML markup and attributes, and the WPO property values representing HTML attribute values and content (<span class='filename'>Web_Page.class.php</span>).</li>
+      <li>Allows the definition of a web page type as a web page object (WPO) in a single file, with the WPO properties representing HTML markup and attributes, and the WPO property values representing HTML attribute values and content (<span class='filename'>Web_Page.class.php</span>).</li>
       <li>Allows the assignment of sitewide default WPO property values in a single file (<span class='filename'>Web_Page.class.php</span>).</li>
       <li>Allows the overriding of sitewide default WPO property values with web page specific WPO property values in a single file (<span class='filename'>web_page.php</span>).</li>
-      <li>Allows the placement of sitewide blocks of code in separate files (e.g., <span class='filename'>footer.php</span>, <span class='filename'>header.php</span>, <span class='filename'>javascripts.php</span>, <span class='filename'>stylesheets.php</span>, and <span class='filename'>tools.php</span>).</li>
+      <li>Allows the placement of sitewide blocks of code in separate files (e.g., <span class='filename'>google_analytics.php</span>, <span class='filename'>stylesheets.php</span>, <span class='filename'>header.php</span>, <span class='filename'>tools.php</span>, <span class='filename'>footer.php</span>, and <span class='filename'>javascripts.php</span>).</li>
       <li>Allows that some WPO properties and that some sitewide blocks of code might not be used in all web pages (<span class='filename'>web_page.php</span>).</li>
       <li>Allows the creation of a web page HTML/PHP template in a single file, with HTML from <code>&lt;html&gt;</code> to <code>&lt;/html&gt;</code>, and PHP that inserts WPO property values into the HTML (<span class='filename'>template.php</span>).</li>
-      <li>Allows the definition of multiple different web page types as PHP WPOs each in a separate file (<span class='filename'>Web_Page*.class.php</span>).</li>
-      <li>Allows the placement of multiple different sitewide blocks of code, and the creation of multiple different variations of the sitewide blocks of code, each in a separate file (<span class='filename'>myblockofcode*.php</span>, <span class='filename'>footer*.php</span>, <span class='filename'>header*.php</span>, <span class='filename'>javascripts*.php</span>, <span class='filename'>stylesheets*.php</span>, and <span class='filename'>tools*.php</span>).</li>
+      <li>Allows the definition of multiple different web page types as WPOs each in a separate file (<span class='filename'>Web_Page*.class.php</span>).</li>
+      <li>Allows the placement of multiple different sitewide blocks of code, and the creation of multiple different variations of the sitewide blocks of code, each in a separate file (<span class='filename'>myblockofcode*.php</span>, <span class='filename'>google_analytics*.php</span>, <span class='filename'>stylesheets*.php</span>, <span class='filename'>header*.php</span>, <span class='filename'>tools*.php</span>, <span class='filename'>footer*.php</span>, and <span class='filename'>javascripts*.php</span>).</li>
       <li>Allows the creation of multiple different web page HTML/PHP templates each in a separate file (<span class='filename'>template*.php</span>).</li>
      </ul>
 
@@ -195,66 +195,63 @@ warnings (learnwebcoding.com)</a> per the <a href='http://jigsaw.w3.org/css-vali
      <p>The minimum files for the PHP template system:</p>
 
      <ul>
-      <li><span class='filename'>footer.php</span>: Web page <a href='#footerSection'><code>&lt;footer&gt;&lt;/footer&gt;</code> section (below)</a> code file.</li>
-      <li><span class='filename'>google_analytics.php</span>: Web page Google Analytics code file.
-      <li><span class='filename'>header.php</span>: Web page <a href='#headerSection'><code>&lt;header&gt;&lt;/header&gt;</code> section (below)</a> code file.</li>
-      <li><span class='filename'>javascripts.php</span>: Web page JavaScripts code file.</li>
-      <li><span class='filename'>stylesheets.php</span>: Web page style sheets code file.</li>
-      <li><span class='filename'>template.php</span>: Web page HTML/PHP template file.</li>
-      <li><span class='filename'>tools.php</span>: Web page <a href='#lwcHomeToolsIconDropdown'>LWC Home tools icon dropdown (below)</a> code file.</li>
-      <li><span class='filename'>Web_Page.class.php</span>: Web page object (WPO) definition file. Defines a web page type as a PHP WPO. Defines WPO properties. Assigns sitewide default WPO property values.</li>
-      <li><span class='filename'>web_page.php</span>: Web page file. Assigns web page specific WPO property values. The property values assigned in <span class='filename'>web_page.php</span> override the property values assigned in <span class='filename'>Web_Page.class.php</span>. Merges the WPO with the web page HTML/PHP template. Becomes a web page with filename <span class='filename'>web_page.php</span>.</li>
-      <li><span class='filename'>web_page_sections.php</span>: Web page <a href='#sections'>sections (below)</a> code file.</li>
-      <li><span class='filename'>web_page_toc.php</span>: Web page <a href='#toc'>table of contents (below)</a> code file.</li>
+      <li><span class='filename'>footer.php</span>: Web page <a href='#footerSection'><code>&lt;footer&gt;&lt;/footer&gt;</code> section (below)</a>.</li>
+      <li><span class='filename'>google_analytics.php</span>: Web page Google Analytics code.
+      <li><span class='filename'>header.php</span>: Web page <a href='#headerSection'><code>&lt;header&gt;&lt;/header&gt;</code> section (below)</a>.</li>
+      <li><span class='filename'>javascripts.php</span>: Web page JavaScripts.</li>
+      <li><span class='filename'>stylesheets.php</span>: Web page style sheets.</li>
+      <li><span class='filename'>template.php</span>: Web page HTML/PHP template.</li>
+      <li><span class='filename'>tools.php</span>: Web page <a href='#lwcHomeToolsIconDropdown'>LWC Home tools icon dropdown (below)</a>.</li>
+      <li><span class='filename'>Web_Page.class.php</span>: Web page object (WPO) definition.</li>
+      <li><span class='filename'>web_page.php</span>: Web page file.</li>
+      <li><span class='filename'>web_page_sections.php</span>: Web page <a href='#sections'><code>&lt;section&gt;&lt;/section&gt;</code> sections (below)</a>.</li>
+      <li><span class='filename'>web_page_toc.php</span>: Web page <a href='#toc'>table of contents (below)</a>.</li>
      </ul>
 
      <h3><a id='phpTemplateHowWorks'></a>4.2. How The PHP Template System Works</h3>
 
-     <p>In general, <span class='filename'>web_page.php</span> merges a web page object (WPO) with a web page HTML/PHP template, which turns <span class='filename'>web_page.php</span> into a web page with filename <span class='filename'>web_page.php</span>. Specifically:</p>
+     <p>In brief, <span class='filename'>web_page.php</span>; 1.) merges a web page object (WPO) definition (<span class='filename'>Web_Page.class.php</span>) with a web page HTML/PHP template (<span class='filename'>template.php</span>), and 2.) outputs a web page (<span class='filename'>web_page.php</span>). More specifically:</p>
 
      <ul>
-      <li><span class='filename'>Web_Page.class.php</span>: Defines a web page type as a PHP WPO. Defines WPO properties and assigns sitewide default WPO property values.</li>
-      <li><span class='filename'>web_page.php</span>: <code>include_once</code> <span class='filename'>Web_Page.class.php</span> and instantiate the WPO.</li>
-      <li><span class='filename'>web_page.php</span>: Overrides sitewide default WPO property values with web page specific WPO property values.</li>
-      <li><span class='filename'>web_page.php</span>: <code>include_once</code> <span class='filename'>stylesheets.php</span>, <span class='filename'>header.php</span>, <span class='filename'>tools.php</span>, <span class='filename'>web_page_toc.php</span>, <span class='filename'>web_page_sections.php</span>, <span class='filename'>footer.php</span>, and <span class='filename'>javascripts.php</span>.</li>
-      <li><span class='filename'>template.php</span>: Represents a web page HTML/PHP template. Provides HTML from <code>&lt;html&gt;</code> to <code>&lt;/html&gt;</code> and the PHP inserts WPO property values into the HTML.</li>
-      <li><span class='filename'>web_page.php</span>: <code>include_once</code> <span class='filename'>template.php</span>.</li>
-      <li><span class='filename'>web_page.php</span>: Becomes a web page with filename <span class='filename'>web_page.php</span>.</li>
+      <li><span class='filename'>Web_Page.class.php</span>: Defines a web page type as a WPO. Defines WPO properties and assigns sitewide default WPO property values. <code>include_once</code> <span class='filename'>google_analytics.php</span>, <span class='filename'>stylesheets.php</span>, <span class='filename'>header.php</span>, <span class='filename'>tools.php</span>, <span class='filename'>footer.php</span>, and <span class='filename'>javascripts.php</span>. Similar to MVC model.</li>
+      <li><span class='filename'>web_page.php</span>: <code>include_once</code> <span class='filename'>Web_Page.class.php</span> and instantiates the WPO. Overrides sitewide default WPO property values with web page specific WPO property values. <code>include_once</code> <span class='filename'>web_page_toc.php</span> and <span class='filename'>web_page_sections.php</span>. <code>include_once</code> <span class='filename'>template.php</span>. Outputs the web page, which has filename <span class='filename'>web_page.php</span>. Similar to MVC controller.</li>
+      <li><span class='filename'>template.php</span>: Web page HTML/PHP template. Provides HTML from <code>&lt;html&gt;</code> to <code>&lt;/html&gt;</code>. PHP inserts the WPO property values into the HTML. Similar to MVC view.</li>
      </ul>
 
 <pre class='ascii-art'>
 +--------------------+
 |                    |
-|                    | - Defines a web page type as a PHP WPO.
-|                    | - Defines WPO properties.
-| Web_Page.class.php | - Assigns sitewide default WPO property
-|                    |   values.------------------------------------&gt;+
-|                    | ---------------&gt;+                             |
-|                    |                 |                             |
-+--------------------+                 |                             |
-                                       |                             |
-+--------------------+                 |                             |
-|                    |                \|/                           \|/
-|                    | - include_once Web_Page.class.php and         |
-|                    |   instantiate the WPO.                        |
-|                    | - Overrides sitewide default WPO property     |
-|                    |   values with web page specific WPO           |
-|   web_page.php     |   property values.---------------------------&gt;+
-|    (web page)      | - include_once stylesheets.php,               |
-|                    |   header.php, tools.php,                      |
-|                    |   web_page_toc.php, web_page_sections.php,    |
-|                    |   footer.php, and javascripts.php.            |
-|                    | - include_once template.php.                  |
-|                    |                /|\                           \|/
-+--------------------+                 |                             |
-                                       |                             |
-+--------------------+                 |                             |
-|                    |                 |                             |
-|                    | ---------------&gt;+                             |
-|                    | - Represents a web page HTML/PHP template.    |
-|   template.php     | - Provides HTML from &lt;html&gt; to &lt;/html&gt; and    |
-|                    |   the PHP inserts WPO property values into   \|/
-|                    |   the HTML.&lt;----------------------------------+
+|                    | - Defines a web page type as a WPO.
+|                    | - Defines WPO properties and assigns
+|                    |   sitewide default WPO property values.
+| Web_Page.class.php | - include_once google_analytics.php,
+|                    |   stylesheets.php, header.php, tools.php,
+|                    |   footer.php, and javascripts.php.
+|                    | ----------------------&gt;---------------------+
+|                    |                                             |
++--------------------+                                             |
+                                                                   |
++--------------------+                                            \|/
+|                    |                                             |
+|                    | - include_once Web_Page.class.php and       |
+|                    |   instantiates the WPO. &lt;-------------------+
+|                    | - Overrides sitewide default WPO
+|   web_page.php     |   property values with web page specific
+|    (web page)      |   WPO property values.
+|                    | - include_once web_page_toc.php and
+|                    |   web_page_sections.php.
+|                    | - include_once template.php. &lt;--------------+
+|                    | - Outputs the web page.                     |
+|                    |                                             |
++--------------------+                                            /|\
+                                                                   |
++--------------------+                                             |
+|                    |                                             |
+|                    | ----------------------&gt;---------------------+
+|                    | - Web page HTML/PHP template.
+|   template.php     | - Provides HTML from &lt;html&gt; to &lt;/html&gt;.
+|                    | - PHP inserts the WPO property values into
+|                    |   the HTML.
 |                    |
 +--------------------+
 </pre>
@@ -356,7 +353,7 @@ body {
 
      <h2><a id='headerSection'></a>7. <code>&lt;header&gt;&lt;/header&gt;</code> Section</h2>
 
-     <p>The <code>&lt;header&gt;&lt;/header&gt;</code> section (a.k.a. header) is located at the top of the web page and consists of four sections:</p>
+     <p>The <code>&lt;header&gt;&lt;/header&gt;</code> section (a.k.a., header) is located at the top of the web page and consists of four sections:</p>
 
      <ul>
       <li><a href='#lwcNavbar'>LWC navbar (below)</a>.</li>
@@ -769,7 +766,7 @@ web_server_root_directory (root directory of web server) (might be named htdocs,
 
      <h2><a id='mainSection'></a>8. <code>&lt;main&gt;&lt;/main&gt;</code> Section</h2>
 
-     <p>The <code>&lt;main&gt;&lt;/main&gt;</code> section (a.k.a. main) is located between the <a href='#headerSection'><code>&lt;header&gt;&lt;/header&gt;</code> section (above)</a> and the <a href='#footerSection'><code>&lt;footer&gt;&lt;/footer&gt;</code> section (below)</a> and consists of five sections:</p>
+     <p>The <code>&lt;main&gt;&lt;/main&gt;</code> section (a.k.a., main) is located between the <a href='#headerSection'><code>&lt;header&gt;&lt;/header&gt;</code> section (above)</a> and the <a href='#footerSection'><code>&lt;footer&gt;&lt;/footer&gt;</code> section (below)</a> and consists of five sections:</p>
 
      <ul>
       <li><a href='#webPageTitle'>Web page title (below) </a>.</li>
@@ -1307,9 +1304,9 @@ a:focus { <s>outline: thin dotted invert;</s> } /* From normal hyperlinks below.
       <div class='toc-sub3sec'><div class='toc-num'>99.1.1.1.</div><div class='toc-sub3sec-title'><a href='#subsubsubsectionTitle'>Subsubsubsection Title First Letter Each Word Cap</a></div></div>
      </div>
 
-     <h3><a id='sections'></a>8.5. Sections</h3>
+     <h3><a id='sections'></a>8.5. <code>&lt;section&gt;&lt;/section&gt;</code> Sections</h3>
 
-     <p>Sections typically constitute the majority of the web page content and are located between the <a href='#toc'>table of contents (above)</a> and the <a href='#footerSection'><code>&lt;footer&gt;&lt;/footer&gt;</code> section (below)</a>. There are three levels of section titles:</p>
+     <p>One or more <code>&lt;section&gt;&lt;/section&gt;</code> sections typically constitute the majority of the web page content and are located between the <a href='#toc'>table of contents (above)</a> and the <a href='#footerSection'><code>&lt;footer&gt;&lt;/footer&gt;</code> section (below)</a>. There are three levels of section titles:</p>
 
      <ul>
       <li><em>Section</em> titles.</li>
@@ -1463,7 +1460,7 @@ h5 {
 
      <h2><a id='footerSection'></a>9. <code>&lt;footer&gt;&lt;/footer&gt;</code> Section</h2>
 
-     <p>The <code>&lt;footer&gt;&lt;/footer&gt;</code> section (a.k.a. footer) is located at the bottom of the web page and consists of two sections:</p>
+     <p>The <code>&lt;footer&gt;&lt;/footer&gt;</code> section (a.k.a., footer) is located at the bottom of the web page and consists of two sections:</p>
 
      <ul>
       <li>LWC logo. The LWC logo is a hyperlink to the LWC home page.</li>
@@ -3858,8 +3855,8 @@ select:focus {
 
 <pre>
 &lt;p&gt;Select spices with the &lt;code&gt;value&lt;/code&gt; attribute:&lt;br /&gt;
- &lt;label&gt;&lt;input type='checkbox' name='spices' value='salt' /&gt;&lt;span&gt;&amp;#10003;&lt;/span&gt; Salt (if checked, sends spices=salt)&lt;/label&gt;&lt;br /&gt;
- &lt;label&gt;&lt;input type='checkbox' name='spices' value='pepper' /&gt;&lt;span&gt;&amp;#10003;&lt;/span&gt; Pepper (if checked, sends spices=pepper)&lt;/label&gt;
+ &lt;label&gt;&lt;input type='checkbox' name='spice' value='salt' /&gt;&lt;span&gt;&amp;#10003;&lt;/span&gt; Salt (if checked, sends spice=salt)&lt;/label&gt;&lt;br /&gt;
+ &lt;label&gt;&lt;input type='checkbox' name='spice' value='pepper' /&gt;&lt;span&gt;&amp;#10003;&lt;/span&gt; Pepper (if checked, sends spice=pepper)&lt;/label&gt;
 &lt;/p&gt;
 </pre>
 
@@ -4664,9 +4661,9 @@ kbd {
 
      <p>A URI as text is http://www.learnwebcoding.com/.</p>
 
-     <h3><a id='filenames'></a>27.4. Filenames, Folder Names, File System Paths, And Text At The Terminal/Command Prompt</h3>
+     <h3><a id='filenames'></a>27.4. Filenames, Folder Names, File System Paths, And Terminal/Command Prompt Output</h3>
 
-     <p>Filenames, folder names, file system paths, and text at the terminal/command prompt use the <code>span</code> element with the <code>class='filename'</code> attribute:</p>
+     <p>Filenames, folder names, file system paths, and terminal/command prompt output use the <code>span</code> element with the <code>class='filename'</code> attribute:</p>
 
 <pre>
 &lt;span class='filename'&gt;filename.ext&lt;/span&gt;
@@ -4681,7 +4678,7 @@ kbd {
 }
 </pre>
 
-     <p>Examples of filenames, folder names, file system paths, and text at the terminal/command prompt:</p>
+     <p>Examples of filenames, folder names, file system paths, and terminal/command prompt output:</p>
 
      <p>The Bootstrap implementation requires loading the Bootstrap style sheet <span class='filename'>bootstrap.min.css</span> file, the jQuery JavaScript <span class='filename'>jquery-3.3.1.min.js</span> file, and the Bootstrap JavaScript <span class='filename'>bootstrap.min.js</span> file.</p>
 
@@ -4725,7 +4722,28 @@ kbd {
       <li><a href='/javascript/javascript_techniques/collapse_expand_all/collapse_expand_all.js'><span class='filename'>collapse_expand_all.js</span> (learnwebcoding.com)</a></li>
      </ul>
 
-     <h3><a id='dialogTitles'></a>27.5. Dialog Titles And Web Page Titles</h3>
+     <h3><a id='databaseNames'></a>27.5. Database Names, Table Names, Column Names, Field Data, And User Accounts</h3>
+
+     <p>Database names, table names, column names, field data, and user accounts use the <code>span</code> element with the <code>class='filename'</code> attribute:</p>
+
+<pre>
+&lt;span class='filename'&gt;database_name&lt;/span&gt;
+</pre>
+
+     <p>The <code>span</code> type selector is not assigned author styles. The <code>.filename</code> class selector is assigned author styles:</p>
+
+<!-- Last reviewed/updated: 25 Jun 2016. -->
+<pre>
+.filename {
+  font-family: &quot;courier new&quot;, courier, monospace;
+}
+</pre>
+
+     <p>Examples of database names, table names, column names, field data, and user accounts:</p>
+
+     <p>Update database server support. Primary changes: 1.) add support for MySQL 5.7 stores MySQL user account password in <span class='filename'>mysql.user</span> table <span class='filename'>authentication_string</span> column, not <span class='filename'>password</span> column (in MySQL 5.7, <span class='filename'>mysql.user</span> table <span class='filename'>password</span> column does not exit); 2.) add support for MySQL 5.7 <span class='filename'>'mysql.session'@'localhost'</span> and <span class='filename'>'mysql.sys'@'localhost'</span> reserved user accounts, and MariaDB 10.0 - 10.2 <span class='filename'>'root'@'computername-pc'</span> reserved user account; 3.) add support for MySQL 5.7 <span class='filename'>sys</span> reserved database; and 4.) change MySQL to store Simple MySQL Admin | User Accounts | create user account | host name/IP address field empty/blank in <span class='filename'>mysql.user</span> table <span class='filename'>host</span> column as any host name (<span class='filename'>'%'</span> string), not empty string (<span class='filename'>''</span>), and change Simple MySQL Admin | User Accounts | create user account reports to display host name/IP address field empty/blank as any host name (<span class='filename'>'%'</span> string), not empty string (<span class='filename'>''</span>).</p>
+
+     <h3><a id='dialogTitles'></a>27.6. Dialog Titles And Web Page Titles</h3>
 
      <p>In a dialog, the dialog title appears in the dialog title bar, and the dialog text appears in the body of the dialog. In general, use <q>dialog</q>, not <q>dialog box.</q> For example, the Setup dialog appears, not the Setup dialog box appears. Always use the dialog title. The dialog text is optional. The dialog title and the dialog text are separated by a colon (:) character. Use the same spelling, capitalization, and punctuation, including any ending punctuation, as the dialog title and the dialog text.</p>
 
@@ -4768,7 +4786,7 @@ kbd {
 
      <p>The <b>General</b> tab is selected.</p>
 
-     <h3><a id='computerReports'></a>27.6. Computer Error, Success, And Failure Reports</h3>
+     <h3><a id='computerReports'></a>27.7. Computer Error, Success, And Failure Reports</h3>
 
      <p>Computer error, success, and failure reports are text that report the error, success, or failure status a computer related action. Use the same spelling, capitalization, and punctuation, including any ending punctuation, as the report text.</p>
 
@@ -4791,7 +4809,7 @@ kbd {
 
      <p>The W3C CSS Validation Service throws a warning: <q><code>:-ms-input-placeholder</code> is an unknown vendor extended pseudo-class.</q></p>
 
-     <h3><a id='emphasizedText'></a>27.7. Emphasized Text</h3>
+     <h3><a id='emphasizedText'></a>27.8. Emphasized Text</h3>
 
      <p>Emphasized text is text of importance that stands out compared to the surrounding text.</p>
 
@@ -4810,9 +4828,9 @@ kbd {
 
      <p>Paragraph ending with a <em>colon</em> as introductory text for an ordered list:</p>
 
-     <h3><a id='quotedText'></a>27.8. Quoted Text</h3>
+     <h3><a id='quotedText'></a>27.9. Quoted Text</h3>
 
-     <h4><a id='quotedWords'></a>27.8.1. Quoted Words</h4>
+     <h4><a id='quotedWords'></a>27.9.1. Quoted Words</h4>
 
      <p>Quoted words are one or more words in quotes. The quotes can indicate that the words are a quote, that they are to be taken literally, or that they are being used in a special way, such as when a person makes quote marks in the air with their fingers when speaking.</p>
 
@@ -4835,7 +4853,7 @@ kbd {
 
      <p> The phpBB board database name, prefixed with <q>qi_</q>.</p>
 
-     <h4><a id='quotedTextWithSource'></a>27.8.2. Quoted Text With Source</h4>
+     <h4><a id='quotedTextWithSource'></a>27.9.2. Quoted Text With Source</h4>
 
      <p>Quoted text with source is quoted text with the source of the quote. If the quoted text with source is presented as a block, the source may follow the quoted text and may be separated from the quoted text by a hyphen (-) character.</p>
 

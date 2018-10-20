@@ -2,9 +2,9 @@
 /* -------------------- INTRODUCTION -------------------- */
 
 /* File: /web_server_root_directory/javascript/javascript_reference/concise_method_syntax_sections.php.
- * Purpose: Web page sections.
+ * Purpose: Web page <section></section> sections.
  * Used in: /web_server_root_directory/javascript/javascript_reference/concise_method_syntax.php.
- * Last reviewed/updated: 10 Dec 2017.
+ * Last reviewed/updated: 18 Oct 2018.
  * Published: 20 Nov 2017. */
 return
    "<section>

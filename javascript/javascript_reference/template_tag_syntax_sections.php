@@ -2,9 +2,9 @@
 /* -------------------- INTRODUCTION -------------------- */
 
 /* File: /web_server_root_directory/javascript/javascript_reference/template_tag_syntax_sections.php.
- * Purpose: Web page sections.
+ * Purpose: Web page <section></section> sections.
  * Used in: /web_server_root_directory/javascript/javascript_reference/template_tag_syntax.php.
- * Last reviewed/updated: 07 Mar 2018.
+ * Last reviewed/updated: 18 Oct 2018.
  * Published: 02 Nov 2017. */
 return
    "<section>

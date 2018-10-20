@@ -2,11 +2,11 @@
 /* -------------------- INTRODUCTION -------------------- */
 
 /* File: /web_server_root_directory/templates/tools_print_only.php.
- * Purpose: Web page Tools Icon Dropdown code file. A variation of /web_server_root_directory/templates/tools.php with the Table Of Contents display options removed, leaving only the Print display options.
+ * Purpose: Web page tools icon dropdown. A variation of /web_server_root_directory/templates/tools.php with the Table Of Contents display options removed, leaving only the Print display options.
  * Used in: sitemap.php, glossary.php, and whats_new.php.
- * Last reviewed/updated: 26 Jul 2017.
+ * Last reviewed/updated: 19 Oct 2018.
  * Published: 21 Sep 2016.
- * NOTE: Copy changes to tools*.php and support_tools*html.js. */
+ * NOTE: Copy changes to tools*.php and tools*html.js. */
 return
     "<div id='toolsIconDropdownContainerId' class='tools-icon-dropdown-container'>
       <div class='fa fa-cog fa-lg cursor-pointer'></div>

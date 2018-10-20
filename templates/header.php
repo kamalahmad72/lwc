@@ -2,9 +2,9 @@
 /* -------------------- INTRODUCTION -------------------- */
 
 /* File: /web_server_root_directory/templates/header.php.
- * Purpose: Web page <header></header> section code file. Contains: 1.) LWC navbar, 2.) LWC Bootstrap navbar, 3.) <noscript></noscript> section, and 4.) LWC Home breadcrumbs navigation.
+ * Purpose: Web page <header></header> section. Contains: 1.) LWC navbar, 2.) LWC Bootstrap navbar, 3.) <noscript></noscript> section, and 4.) LWC Home breadcrumbs navigation.
  * Used in: Web page files based on /web_server_root_directory/templates/web_page.php.
- * Last reviewed/updated: 01 Dec 2017.
+ * Last reviewed/updated: 19 Oct 2018.
  * Published: 04 Jun 2016.
  * Objects: BcrumbsNavUtil.
  * NOTE:

@@ -2,9 +2,9 @@
 /* -------------------- INTRODUCTION -------------------- */
 
 /* File: /web_server_root_directory/javascript/javascript_reference/defineProperty_method_sections.php.
- * Purpose: Web page sections.
+ * Purpose: Web page <section></section> sections.
  * Used in: /web_server_root_directory/javascript/javascript_reference/defineProperty_method.php.
- * Last reviewed/updated: 28 Apr 2018.
+ * Last reviewed/updated: 18 Oct 2018.
  * Published: 11 Dec 2017. */
 return
    "<section>

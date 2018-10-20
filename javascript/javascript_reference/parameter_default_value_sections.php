@@ -2,9 +2,9 @@
 /* -------------------- INTRODUCTION -------------------- */
 
 /* File: /web_server_root_directory/javascript/javascript_reference/parameter_default_value_sections.php.
- * Purpose: Web page sections.
+ * Purpose: Web page <section></section> sections.
  * Used in: /web_server_root_directory/javascript/javascript_reference/parameter_default_value.php.
- * Last reviewed/updated: 06 Mar 2018.
+ * Last reviewed/updated: 18 Oct 2018.
  * Published: 21 Nov 2017. */
 return
    "<section>

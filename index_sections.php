@@ -2,9 +2,9 @@
 /* -------------------- INTRODUCTION -------------------- */
 
 /* File: /web_server_root_directory/index_sections.php.
- * Purpose: Web page sections.
+ * Purpose: Web page <section></section> sections.
  * Used in: /web_server_root_directory/index.php.
- * Last reviewed/updated: 24 Sep 2017.
+ * Last reviewed/updated: 19 Oct 2018.
  * Published: 21 Sep 2016. */
 return
   "<!-- This web page does not have an h2-h6 element in the section element. To avoid W3C Markup Validation Service (http://validator.w3.org/) warning, not error (Warning: Section lacks heading. Consider using h2-h6 elements to add identifying headings to all sections.), comment out the section element. Same for index.php, sitemap.php, glossary.php, and whats_new.php.
