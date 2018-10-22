@@ -1,5 +1,5 @@
 PHP_Template_System_Readme.txt
-Last reviewed/edited: 19 Oct 2018.
+Last reviewed/edited: 21 Oct 2018.
 
 This file explains the PHP template system of the LWC Home Template.
 
@@ -31,7 +31,10 @@ To download and try the LWC Home Template on your web server, including instruct
 
 This file explains the PHP template system of the LWC Home Template.
 
-The PHP template system:
+Goal:
+To develop a PHP template system for creating a flexible and easy to maintain web site and web pages. This results in a web site whose content is easy to change, a web site whose content is easy to rearrange, and a web site that can accept any number of web page types.
+
+Accomplished: The PHP template system:
 * Allows the definition of a web page type as a web page object (WPO) in a single file, with the WPO properties representing HTML markup and attributes, and the WPO property values representing HTML attribute values and content (Web_Page.class.php).
 * Allows the assignment of sitewide default WPO property values in a single file (Web_Page.class.php).
 * Allows the overriding of sitewide default WPO property values with web page specific WPO property values in a single file (web_page.php).

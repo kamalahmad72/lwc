@@ -4,7 +4,7 @@
 /* File: /web_server_root_directory/javascript/angularjs_shopping_cart_sections_spa.php.
  * Purpose: Web page <section></section> sections.
  * Used in: /web_server_root_directory/javascript/angularjs_shopping_cart_spa.php.
- * Last reviewed/updated: 18 Oct 2018.
+ * Last reviewed/updated: 21 Oct 2018.
  * Published: 24 Jan 2017. 
  * NOTE: On 08 Jul 2018, to add AngularJS 1.7.x support, in angularjs_shopping_cart_spa_sections.php (this file); 1.) change ng-click='addDeliveryMethod() to ng-change='addDeliveryMethod(), and 2.) change ng-click='insertBillingAddressFormValues() to ng-change='insertBillingAddressFormValues(). No other changes (including no changes to angularjs_shopping_cart_spa.js) required. For additional info, see https://docs.angularjs.org/guide/migration#migrating-from-1-6-to-1-7. */
 return
@@ -63,9 +63,7 @@ return
 
      <h3><a id='angularJsSupport'></a>1.2. AngularJS Support</h3>
 
-     <p>AngularJS support: AngularJS 1.5.9+. Not Angular 2+.</p>
-
-     <div class='note normal'>AngularJS 1.5.8- support not tested.</div>
+     <p>AngularJS support: AngularJS 1.5.9+. No Angular 2+. AngularJS 1.5.8- not tested.</p>
 
      <h3><a id='abbreviations'></a>1.3. Abbreviations</h3>
 

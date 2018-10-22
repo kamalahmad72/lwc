@@ -4,12 +4,14 @@
 /* File: /web_server_root_directory/html/template_explained_toc.php.
  * Purpose: Web page table of contents.
  * Used in: /web_server_root_directory/html/template_explained.php.
- * Last reviewed/updated: 19 Oct 2018.
+ * Last reviewed/updated: 21 Oct 2018.
  * Published: 21 Sep 2016. */
 return
     "<div class='toc-sec'><div class='toc-num'>1.</div><div class='toc-sec-title'><a href='#introduction'>Introduction</a></div></div>
-     <div class='toc-sub1sec'><div class='toc-num'>1.1.</div><div class='toc-sub1sec-title'><a href='#goals'>LWC Home Template Goals Accomplished</a></div></div>
-     <div class='toc-sub1sec'><div class='toc-num'>1.2.</div><div class='toc-sub1sec-title'><a href='#abbreviations'>Abbreviations</a></div></div>
+     <div class='toc-sub1sec'><div class='toc-num'>1.1.</div><div class='toc-sub1sec-title'><a href='#goals'>LWC Home Template Goals</a></div></div>
+     <div class='toc-sub1sec'><div class='toc-num'>1.2.</div><div class='toc-sub1sec-title'><a href='#browserSupport'>Web Browser Support</a></div></div>
+     <div class='toc-sub1sec'><div class='toc-num'>1.3.</div><div class='toc-sub1sec-title'><a href='#phpSupport'>PHP Support</a></div></div>
+     <div class='toc-sub1sec'><div class='toc-num'>1.4.</div><div class='toc-sub1sec-title'><a href='#abbreviations'>Abbreviations</a></div></div>
      <div class='toc-sec'><div class='toc-num'>2.</div><div class='toc-sec-title'><a href='#bootstrap'>Bootstrap Usage</a></div></div>
      <div class='toc-sub1sec'><div class='toc-num'>2.1.</div><div class='toc-sub1sec-title'><a href='#customizingBootstrapStyleSheet'>Customizing Bootstrap And Then Editing The Bootstrap Style Sheet</a></div></div>
      <div class='toc-sub1sec'><div class='toc-num'>2.2.</div><div class='toc-sub1sec-title'><a href='#customizingBootstrapJavaScript'>Customizing Bootstrap And The Bootstrap JavaScript</a></div></div>

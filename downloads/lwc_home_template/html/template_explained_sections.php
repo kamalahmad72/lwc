@@ -4,7 +4,7 @@
 /* File: /web_server_root_directory/html/template_explained_sections.php.
  * Purpose: Web page <section></section> sections.
  * Used in: /web_server_root_directory/html/template_explained.php.
- * Last reviewed/updated: 19 Oct 2018.
+ * Last reviewed/updated: 21 Oct 2018.
  * Published: 21 Sep 2016. */
 return
    "<section>
@@ -44,11 +44,13 @@ selector { property-one: value-one; property-two: value-two; property-three: val
       </ul>
      </div>
 
-     <h3><a id='goals'></a>1.1. LWC Home Template Goals Accomplished</h3>
+     <h3><a id='goals'></a>1.1. LWC Home Template Goals</h3>
 
      <ul>
+<!-- Start similar content in PHP_Template_System_Readme.txt. -->
       <li>Goal: To develop a PHP template system for creating a flexible and easy to maintain web site and web pages. This results in a web site whose content is easy to change, a web site whose content is easy to rearrange, and a web site that can accept any number of web page types.<br />
-       Accomplished: The PHP template system: 1.) Allows the definition of a web page type as a PHP web page object (WPO) in a single file, with the WPO properties representing HTML markup and attributes, and the WPO property values representing HTML attribute values and content; 2.) Allows the assignment of sitewide default WPO property values in a single file; 3.) Allows the overriding of sitewide default WPO property values with web page specific WPO property values in a single file; 4.) Allows the placement of sitewide blocks of code in separate files; 5.) Allows that some WPO properties and that some sitewide blocks of code might not be used in all web pages; 6.) Allows the creation of a web page overall HTML/PHP template in a single file, with HTML from opening &lt;!DOCTYPE html&gt;&lt;html lang='en'&gt; to closing &lt;/html&gt;, and PHP that inserts WPO property values into the HTML; 7.) Allows the definition of multiple different web page types as PHP WPOs each in a separate file; 8.) Allows the placement of multiple different sitewide blocks of code, and the creation of multiple different variations of the sitewide blocks of code, each in a separate file; and 9.) Allows the creation of multiple different web page overall HTML/PHP templates each in a separate file.</li>
+       Accomplished: The PHP template system: 1.) Allows the definition of a web page type as a web page object (WPO) in a single file, with the WPO properties representing HTML markup and attributes, and the WPO property values representing HTML attribute values and content; 2.) Allows the assignment of sitewide default WPO property values in a single file; 3.) Allows the overriding of sitewide default WPO property values with web page specific WPO property values in a single file; 4.) Allows the placement of sitewide blocks of code in separate files; 5.) Allows that some WPO properties and that some sitewide blocks of code might not be used in all web pages; 6.) Allows the creation of a web page HTML/PHP template in a single file, with HTML from <code>&lt;html&gt;</code> to <code>&lt;/html&gt;</code>, and PHP that inserts WPO property values into the HTML; 7.) Allows the definition of multiple different web page types as WPOs each in a separate file; 8.) Allows the placement of multiple different sitewide blocks of code, and the creation of multiple different variations of the sitewide blocks of code, each in a separate file; and 9.) Allows the creation of multiple different web page HTML/PHP templates each in a separate file.</li>
+<!-- End similar content in PHP_Template_System_Readme.txt. -->
       <li>Goal: To be responsive. This results in web pages that are functional on devices with various viewport dimensions, including devices with small viewport dimensions such as mobile phones, and devices with large viewport dimensions such as desktop computers with widescreen monitors. In particular, this results in web pages onto which the viewport width can be substantially decreased before inducing horizontal scrolling.<br />
        Accomplished: The LWC Home Template uses fluid design techniques (LWC code) and media queries (Bootstrap code) to automatically adjust the scale/layout of content as the viewport width changes. Because of this, in web pages based on the LWC Home Template, the only content that induces horizontal scrolling is; 1.) a long uninterrupted string of characters whose width exceeds the viewport width, and 2.) a row of table cells whose minimum content width (because of uninterrupted strings of characters) exceeds the viewport width.</li>
       <li>Goal: To use the new HTML5 semantic elements where appropriate. This improves the readability/interpretability of the HTML code.<br />
@@ -65,7 +67,15 @@ selector { property-one: value-one; property-two: value-two; property-three: val
        Accomplished: The LWC Home Template scores 100 out of 100 on the Google Mobile Website Speed Testing Tool Mobile Friendliness test. To confirm, go to the <a href='https://testmysite.thinkwithgoogle.com/'>Google Mobile Website Speed Testing Tool (testmysite.thinkwithgoogle.com)</a>, copy and paste the <a href='/html/web_page.php'>LWC Home Template (learnwebcoding.com)</a> URI, and click Test Now. The Google Mobile Website Speed Testing Tool runs three tests; Mobile Friendliness test, Mobile Speed test, and Desktop Speed test. After the tests are run, the results are displayed.</li>
      </ul>
 
-     <h3><a id='abbreviations'></a>1.2. Abbreviations</h3>
+     <h3><a id='browserSupport'></a>1.2. Web Browser Support</h3>
+
+     <p>Web browser support: IE10+, ED12+, FF6+, CH30+, OP17+.</p>
+
+     <h3><a id='phpSupport'></a>1.3. PHP Support</h3>
+
+     <p>PHP support: PHP 5.6.8+ and PHP 7+. PHP 5.6.7- not tested.</p>
+
+     <h3><a id='abbreviations'></a>1.4. Abbreviations</h3>
 
      <p>The Abbreviations subsection is always the last subsection of section 1. Introduction, including; 1.) if there are other subsections in section 1. Introduction, and 2.) if the abbreviations are used prior to the Abbreviation subsection.</p>
 
@@ -4891,7 +4901,7 @@ cite {
      <ul class='link-list'>
       <li><a href='/html/web_page.php'>Learn Web Coding Home Template (learnwebcoding.com)</a></li>
       <li><a href=''><s>Learn Web Coding Home Template Download (learnwebcoding.com)</s></a></li>
-      <li><a href='https://search.google.com/search-console/mobile-friendly'>Google Mobile-Friendly Test (search.google.com)</a></li>
+      <li><a href='https://search.google.com/test/mobile-friendly'>Google Mobile-Friendly Test (search.google.com)</a></li>
       <li><a href='https://testmysite.thinkwithgoogle.com/'>Google Mobile Website Speed Testing Tool (testmysite.thinkwithgoogle.com)</a></li>
       <li><a href='https://developers.google.com/speed/pagespeed/insights/'>Google Developers PageSpeed Insights (developers.google.com)</a></li>
       <li><a href='http://getbootstrap.com/'>Bootstrap (getbootstrap.com)</a></li>
