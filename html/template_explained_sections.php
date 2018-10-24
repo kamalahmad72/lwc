@@ -4,7 +4,7 @@
 /* File: /web_server_root_directory/html/template_explained_sections.php.
  * Purpose: Web page <section></section> sections.
  * Used in: /web_server_root_directory/html/template_explained.php.
- * Last reviewed/updated: 21 Oct 2018.
+ * Last reviewed/updated: 23 Oct 2018.
  * Published: 21 Sep 2016. */
 return
    "<section>
@@ -47,10 +47,10 @@ selector { property-one: value-one; property-two: value-two; property-three: val
      <h3><a id='goals'></a>1.1. LWC Home Template Goals</h3>
 
      <ul>
-<!-- Start similar content in PHP_Template_System_Readme.txt. -->
+<!-- Start similar content in 4. PHP Template System below and PHP_Template_System_Readme.txt. -->
       <li>Goal: To develop a PHP template system for creating a flexible and easy to maintain web site and web pages. This results in a web site whose content is easy to change, a web site whose content is easy to rearrange, and a web site that can accept any number of web page types.<br />
        Accomplished: The PHP template system: 1.) Allows the definition of a web page type as a web page object (WPO) in a single file, with the WPO properties representing HTML markup and attributes, and the WPO property values representing HTML attribute values and content; 2.) Allows the assignment of sitewide default WPO property values in a single file; 3.) Allows the overriding of sitewide default WPO property values with web page specific WPO property values in a single file; 4.) Allows the placement of sitewide blocks of code in separate files; 5.) Allows that some WPO properties and that some sitewide blocks of code might not be used in all web pages; 6.) Allows the creation of a web page HTML/PHP template in a single file, with HTML from <code>&lt;html&gt;</code> to <code>&lt;/html&gt;</code>, and PHP that inserts WPO property values into the HTML; 7.) Allows the definition of multiple different web page types as WPOs each in a separate file; 8.) Allows the placement of multiple different sitewide blocks of code, and the creation of multiple different variations of the sitewide blocks of code, each in a separate file; and 9.) Allows the creation of multiple different web page HTML/PHP templates each in a separate file.</li>
-<!-- End similar content in PHP_Template_System_Readme.txt. -->
+<!-- End similar content in 4. PHP Template System below and PHP_Template_System_Readme.txt. -->
       <li>Goal: To be responsive. This results in web pages that are functional on devices with various viewport dimensions, including devices with small viewport dimensions such as mobile phones, and devices with large viewport dimensions such as desktop computers with widescreen monitors. In particular, this results in web pages onto which the viewport width can be substantially decreased before inducing horizontal scrolling.<br />
        Accomplished: The LWC Home Template uses fluid design techniques (LWC code) and media queries (Bootstrap code) to automatically adjust the scale/layout of content as the viewport width changes. Because of this, in web pages based on the LWC Home Template, the only content that induces horizontal scrolling is; 1.) a long uninterrupted string of characters whose width exceeds the viewport width, and 2.) a row of table cells whose minimum content width (because of uninterrupted strings of characters) exceeds the viewport width.</li>
       <li>Goal: To use the new HTML5 semantic elements where appropriate. This improves the readability/interpretability of the HTML code.<br />
@@ -186,7 +186,9 @@ warnings (learnwebcoding.com)</a> per the <a href='http://jigsaw.w3.org/css-vali
 
      <h2><a id='phpTemplate'></a>4. PHP Template System</h2>
 
-     <p>The LWC Home Template includes a PHP template system for creating an easy to maintain and flexible web site. The PHP template system:</p>
+<!-- Start similar content in 1.1. LWC Home Template Goals above and PHP_Template_System_Readme.txt. -->
+
+     <p>The LWC Home Template includes a PHP template system for creating a flexible and easy to maintain web site and web pages. This results in a web site whose content is easy to change, a web site whose content is easy to rearrange, and a web site that can accept any number of web page types. The PHP template system:</p>
 
      <ul>
       <li>Allows the definition of a web page type as a web page object (WPO) in a single file, with the WPO properties representing HTML markup and attributes, and the WPO property values representing HTML attribute values and content (<span class='filename'>Web_Page.class.php</span>).</li>
@@ -199,6 +201,8 @@ warnings (learnwebcoding.com)</a> per the <a href='http://jigsaw.w3.org/css-vali
       <li>Allows the placement of multiple different sitewide blocks of code, and the creation of multiple different variations of the sitewide blocks of code, each in a separate file (<span class='filename'>myblockofcode*.php</span>, <span class='filename'>google_analytics*.php</span>, <span class='filename'>stylesheets*.php</span>, <span class='filename'>header*.php</span>, <span class='filename'>tools*.php</span>, <span class='filename'>footer*.php</span>, and <span class='filename'>javascripts*.php</span>).</li>
       <li>Allows the creation of multiple different web page HTML/PHP templates each in a separate file (<span class='filename'>template*.php</span>).</li>
      </ul>
+
+<!-- End similar content in 1.1. LWC Home Template Goals above and PHP_Template_System_Readme.txt. -->
 
      <h3><a id='phpTemplateFileDescription'></a>4.1. PHP Template System File Description</h3>
 
