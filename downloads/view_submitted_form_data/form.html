@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang='en'>
+ <head>
+  <title>Form Loaded In Web Browser</title>
+  <meta charset='UTF-8' />
+  <style>
+   th, td { line-height: 1.75; }
+   caption, th, td { padding: 0.5em; }
+   table { border-collapse: collapse; box-sizing: border-box; margin: 1em 0; }
+   table, caption, th, td { border: 1px solid #d7d7d7; }
+   caption { font-weight: bold; background-color: #efefef; border-bottom: 0; }
+  </style>
+ </head>
+ <body>
+
+  <h1>Form Loaded In Web Browser</h1>
+
+  <p>Interact with form and click Submit.</p>
+
+  <form method='post' enctype='application/x-www-form-urlencoded' action='http://localhost:8001/form_submitted'><!-- Upon form submit, web browser address bar points to resource specified by action attribute. -->
+
+   <p><button type='submit' class='btn-md'>Submit</button></p>
+
+   <table width='100%'>
+    <caption>Raw Request Body Form Data Sent On Last Submit</caption>
+    <tbody>
+     <tr>
+      <td>&nbsp;</td>
+     </tr>
+    </tbody>
+   </table>
+
+   <table>
+    <caption>Textboxes</caption>
+    <thead>
+     <tr>
+      <th>Control Loaded With Data Sent On Last Submit</th>
+      <th>Control Data Sent On Last Submit</th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td><label>Textbox: <input type='text' name='textbox' size='30' maxlength='30' /></label></td>
+      <td></td>
+     </tr>
+     <tr>
+      <td><label>Textbox with pre-entered text: <input type='text' name='textboxWithPreenteredText' size='30' maxlength='30' value='textbox pre-entered text' /></label></td>
+      <td></td>
+     </tr>
+    </tbody>
+   </table>
+
+   <table>
+    <caption>Textareas</caption>
+    <thead>
+     <tr>
+      <th>Control Loaded With Data Sent On Last Submit</th>
+      <th>Control Data Sent On Last Submit</th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td><label>Textarea: <textarea name='textarea' cols='30' rows='2'></textarea></label></td>
+      <td></td>
+     </tr>
+     <tr>
+      <td><label>Textarea with pre-entered text: <textarea name='textareaWithPreenteredText' cols='30' rows='2'>textarea pre-entered text</textarea></label></td>
+      <td></td>
+     </tr>
+    </tbody>
+   </table>
+
+   <table>
+    <caption>Selectboxes (Dropdowns)</caption>
+    <thead>
+     <tr>
+      <th>Control Loaded With Data Sent On Last Submit</th>
+      <th>Control Data Sent On Last Submit</th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <label>Selectbox: 
+        <select name='selectbox'>
+         <option>selectbox option one</option>
+         <option>selectbox option two</option>
+         <option>selectbox option three</option>
+        </select>
+       </label>
+      </td>
+      <td></td>
+     </tr>
+     <tr>
+      <td>
+       <label>Selectbox with option three pre-selected: 
+        <select name='selectboxWithOptionThreePreselected'>
+         <option>selectbox option one</option>
+         <option>selectbox option two</option>
+         <option selected='selected'>selectbox option three pre-selected</option>
+        </select>
+       </label>
+      </td>
+      <td></td>
+     </tr>
+     <tr>
+      <td>
+       <label>Selectbox with <code>multiple</code> attribute and option one and two pre-selected: 
+        <select name='selectboxWithMultipleAttributeOptionOneTwoPreselected' multiple='multiple'>
+         <option selected='selected'>selectbox option one pre-selected</option>
+         <option selected='selected'>selectbox option two pre-selected</option>
+         <option>selectbox option three</option>
+        </select>
+       </label>
+      </td>
+      <td></td>
+     </tr>
+    </tbody>
+   </table>
+
+   <table>
+    <caption>Checkboxes</caption>
+    <thead>
+     <tr>
+      <th>Control Loaded With Data Sent On Last Submit</th>
+      <th>Data Sent On Last Submit <a id='1_checkboxes_return'></a><a href='#1_checkboxes'>(1)</a></th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <label><input type='checkbox' name='checkbox' /> Checkbox</label>
+      </td>
+      <td></td>
+     </tr>
+     <tr>
+      <td>
+       <label><input type='checkbox' name='checkboxPrechecked' checked='checked' /> Checkbox pre-checked</label>
+      </td>
+      <td></td>
+     </tr>
+     <tr>
+      <td>
+       <label><input type='checkbox' name='checkboxWithValueAttributePrechecked' checked='checked' value='valueAttributeValue' /> Checkbox with <code>value</code> attribute and pre-checked</label>
+      </td>
+      <td></td>
+     </tr>
+    </tbody>
+    <tfoot>
+     <tr>
+      <td colspan='2'><a id='1_checkboxes'></a><a href='#1_checkboxes_return'>(1)</a> For checkbox, data is sent only if the checkbox is checked. For example, for a checkbox with <code>name='nameAttributeValue'</code> attribute: 1.) if the checkbox is unchecked, nothing is sent and the JavaScript <code>nameAttributeValue</code> property is <code>undefined</code>; and 2.) if the checkbox is checked, <code>nameAttributeValue=on</code> is sent if the <code>value</code> attribute is not used, or <code>nameAttributeValue=valueAttributeValue</code> is sent if the <code>value</code> attribute is used.</td>
+     </tr>
+    </tfoot>
+   </table>
+
+   <table>
+    <caption>Radio Buttons</caption>
+    <thead>
+     <tr>
+      <th>Control Loaded With Data Sent On Last Submit</th>
+      <th>Data Sent On Last Submit <a id='1_radioButtons_return'></a><a href='#1_radioButtons'>(1)</a></th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <label><input type='radio' name='radioButtonGroup' value='radioButtonOne' /> Radio button one</label><br />
+       <label><input type='radio' name='radioButtonGroup' value='radioButtonTwo' /> Radio button two</label>
+      </td>
+      <td></td>
+     </tr>
+     <tr>
+      <td>
+       <label><input type='radio' name='radioButtonGroupPrechecked' value='radioButtonOne' /> Radio button one</label><br />
+       <label><input type='radio' name='radioButtonGroupPrechecked' value='radioButtonTwoPrechecked' checked='checked' /> Radio button two pre-checked</label>
+      </td>
+      <td></td>
+     </tr>
+    </tbody>
+    <tfoot>
+     <tr>
+      <td colspan='2'><a id='1_radioButtons'></a><a href='#1_radioButtons_return'>(1)</a> For radio buttons, data is sent only if a radio button is checked and it corresponds only to the checked radio button. For example, for radio buttons with <code>name='nameAttributeValue'</code> attribute: 1.) if the radio buttons are unchecked, nothing is sent and the JavaScript <code>nameAttributeValue</code> property is <code>undefined</code>; and 2.) if a radio button is checked, <code>nameAttributeValue=valueAttributeValue</code> is sent, where <code>valueAttributeValue</code> is from the <code>value</code> attribute of the checked radio button.</td>
+     </tr>
+    </tfoot>
+   </table>
+
+   <p><button type='submit' class='btn-md'>Submit</button></p>
+
+  </form>
+
+ </body>
+</html>

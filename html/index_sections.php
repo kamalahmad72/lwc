@@ -4,7 +4,7 @@
 /* File: /web_server_root_directory/html/index_sections.php.
  * Purpose: Web page <section></section> sections.
  * Used in: /web_server_root_directory/html/index.php.
- * Last reviewed/updated: 18 Oct 2018.
+ * Last reviewed/updated: 12 Nov 2018.
  * Published: 21 Sep 2016. */
 return
    "<section>
@@ -30,6 +30,7 @@ return
       <li><a href='/html/web_page.php'>Learn Web Coding Home Template (learnwebcoding.com)</a></li>
       <li><a href='/html/template_download.php'>Learn Web Coding Home Template Download (learnwebcoding.com)</a></li>
       <li><a href='/html/template_explained.php'>Learn Web Coding Home Template Explained (learnwebcoding.com)</a></li>
+      <li><a href='/html/form_data.php'>View Submitted Form Data (learnwebcoding.com)</a></li>
       <li><a href='/html/valid_html401_transitional_template.html'>Valid HTML 4.01 Transitional Template (learnwebcoding.com)</a></li>
       <li><a href='/html/valid_html401_strict_template.html'>Valid HTML 4.01 Strict Template (learnwebcoding.com)</a></li>
       <li><a href='/html/valid_xhtml10_transitional_template.html'>Valid XHTML 1.0 Transitional Template (learnwebcoding.com)</a></li>
