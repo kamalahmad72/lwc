@@ -4,7 +4,7 @@
 /* File: /web_server_root_directory/html/template_explained_sections.php.
  * Purpose: Web page <section></section> sections.
  * Used in: /web_server_root_directory/html/template_explained.php.
- * Last reviewed/updated: 23 Oct 2018.
+ * Last reviewed/updated: 11 Nov 2018.
  * Published: 21 Sep 2016. */
 return
    "<section>
@@ -73,7 +73,7 @@ selector { property-one: value-one; property-two: value-two; property-three: val
 
      <h3><a id='phpSupport'></a>1.3. PHP Support</h3>
 
-     <p>PHP support: PHP 5.6.8+ and PHP 7+. PHP 5.6.7- not tested.</p>
+     <p>PHP support: PHP 5.6.8+, 7+. PHP 5.6.7- not tested.</p>
 
      <h3><a id='abbreviations'></a>1.4. Abbreviations</h3>
 

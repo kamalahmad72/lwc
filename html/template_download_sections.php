@@ -4,7 +4,7 @@
 /* File: /web_server_root_directory/html/template_download_sections.php.
  * Purpose: Web page <section></section> sections.
  * Used in: /web_server_root_directory/html/template_download.php.
- * Last reviewed/updated: 21 Oct 2018.
+ * Last reviewed/updated: 12 Nov 2018.
  * Published: 18 Oct 2016. */
 return
    "<section>
@@ -27,20 +27,16 @@ return
 
      <h3><a id='phpSupport'></a>1.2. PHP Support</h3>
 
-     <p>PHP support: PHP 5.6.8+ and PHP 7+. PHP 5.6.7- not tested.</p>
+     <p>PHP support: PHP 5.6.8+, 7+. PHP 5.6.7- not tested.</p>
 
      <h3><a id='try'></a>1.3. How To Download And Try On Your Web Server</h3>
 
      <p>To download and try on your web server:</p>
 
      <ol>
-      <li>Download the following source code zip file to your computer:
-       <ul class='link-list'>
-        <li><a href='/downloads/lwc_home_template.zip'><span class='filename'>lwc_home_template.zip</span> (learnwebcoding.com)</a> - Released: 21 Oct 2018. Size: 849,025 bytes. SHA-256 checksum: 03dd9647c604481a2eda3cb2c49e45d9eaadb6be66e13985d78a29413c688275.</li>
-       </ul>
-      </li>
+      <li>Download the source code zip file to your computer: <a href='/downloads/lwc_home_template.zip'><span class='filename'>lwc_home_template.zip</span> (learnwebcoding.com)</a> - Released: 21 Oct 2018. Size: 849,025 bytes. SHA-256 checksum: 03dd9647c604481a2eda3cb2c49e45d9eaadb6be66e13985d78a29413c688275.</li>
       <li>Extract the downloaded zip file. In this example, <span class='filename'>lwc_home_template.zip</span> is extracted to the <span class='filename'>lwc_home_template</span> folder:
-       <img src='/images/lwc_home_template/lwc_home_template_folder_450x344.gif' alt='Contents Extracted LWC Home Template Folder' />
+       <img src='/images/lwc_home_template/lwc_home_template_folder_450x342.gif' alt='Contents Extracted Zip File' />
       </li>
       <li>Copy the contents of the <span class='filename'>lwc_home_template</span> folder, not the <span class='filename'>lwc_home_template</span> folder itself, to the root of the web server.</li>
       <li>The LWC Home Template includes a PHP template system for creating a flexible and easy to maintain web site and web pages. The PHP template system uses pathless <code>include_once</code> statements. For the pathless <code>include_once</code> statements to work, the PHP interpretor must be instructed of the path to the PHP template system <span class='filename'>templates</span> directory on the web server. This requires editing the <code>include_path</code> directive of the PHP initialization <span class='filename'>php.ini</span> file. Otherwise, change the PHP template system <code>include_once</code> statements to absolute paths.<br /><br />

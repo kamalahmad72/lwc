@@ -1,5 +1,5 @@
 PHP_Template_System_Readme.txt
-Last reviewed/edited: 21 Oct 2018.
+Last reviewed/edited: 11 Nov 2018.
 
 This file explains the PHP template system of the LWC Home Template.
 
@@ -55,7 +55,7 @@ The LWC Home Template supports Internet Explorer 10+, Edge 12+, Firefox 6+, Chro
 3.) PHP SUPPORT
 ---------------
 
-The LWC Home Template supports PHP 5.6.8+ and PHP 7+. PHP 5.6.7- not tested.
+The LWC Home Template supports PHP 5.6.8+, 7+. PHP 5.6.7- not tested.
 
 ----------------------------------------
 4.) PHP TEMPLATE SYSTEM FILE DESCRIPTION

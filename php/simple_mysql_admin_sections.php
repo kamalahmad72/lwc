@@ -4,7 +4,7 @@
 /* File: /web_server_root_directory/php/simple_mysql_admin_sections.php.
  * Purpose: Web page <section></section> sections.
  * Used in: /web_server_root_directory/php/simple_mysql_admin.php.
- * Last reviewed/updated: 18 Oct 2018.
+ * Last reviewed/updated: 12 Nov 2018.
  * Published: 14 May 2017. */
 return
    "<section>
@@ -37,11 +37,11 @@ return
 
      <h3><a id='phpSupport'></a>1.2. PHP Support</h3>
 
-     <p>PHP support: PHP 5.6.8+ and PHP 7+. PHP 5.6.7- not tested.</p>
+     <p>PHP support: PHP 5.6.8+, 7+. PHP 5.6.7- not tested.</p>
 
      <h3><a id='databaseServerSupport'></a>1.3. Database Server Support</h3>
 
-     <p>Database server support: MariaDB 10+ and MySQL 5.5+.<!-- MySQL 5.5 is slow. MySQL 5.6+ recommended. --></p>
+     <p>Database server support: MariaDB 10+, MySQL 5.5+.<!-- MySQL 5.5 is slow. MySQL 5.6+ recommended. --></p>
 
      <h3><a id='screenshots'></a>1.4. Screenshots</h3><!-- See databases DVD for screenshots of various versions of MariaDB and MySQL +/- Simple MySQL Admin. -->
 
@@ -79,13 +79,9 @@ return
      <p>To download and try on your web server:</p>
 
      <ol>
-      <li>Download the following source code zip file to your computer:
-       <ul class='link-list'>
-        <li><a href='/downloads/simple_mysql_admin.zip'><span class='filename'>simple_mysql_admin.zip</span> (learnwebcoding.com)</a> - v1.3.0 released 08 Apr 2018. Size: 60,089 bytes. SHA-256 checksum: 3a6dbd2b23a4acf88995baca7ae4f5fdf579d8f345a4a76af7e2900d455f8c0a.</li>
-       </ul>
-      </li>
+      <li>Download the source code zip file to your computer: <a href='/downloads/simple_mysql_admin.zip'><span class='filename'>simple_mysql_admin.zip</span> (learnwebcoding.com)</a> - v1.3.0 released 08 Apr 2018. Size: 60,089 bytes. SHA-256 checksum: 3a6dbd2b23a4acf88995baca7ae4f5fdf579d8f345a4a76af7e2900d455f8c0a.</li>
       <li>Extract the downloaded zip file. In this example, <span class='filename'>simple_mysql_admin.zip</span> is extracted to the <span class='filename'>simple_mysql_admin</span> folder:
-       <img src='/images/simple_mysql_admin/simple_mysql_admin_folder_450x342.gif' alt='Contents Extracted Simple MySQL Admin Folder' />
+       <img src='/images/simple_mysql_admin/simple_mysql_admin_folder_450x342.gif' alt='Contents Extracted Zip File' />
       </li>
       <li>Copy the <span class='filename'>simple_mysql_admin</span> folder itself, not the contents of the <span class='filename'>simple_mysql_admin</span> folder, to the root of the web server.</li>
       <li>Point your web browser to the <span class='filename'>/simple_mysql_admin/index.php</span> file on the web server.</li>

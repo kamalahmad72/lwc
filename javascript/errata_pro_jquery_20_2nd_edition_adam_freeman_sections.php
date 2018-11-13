@@ -4,7 +4,7 @@
 /* File: /web_server_root_directory/javascript/errata_pro_jquery_20_2nd_edition_adam_freeman_sections.php.
  * Purpose: Web page <section></section> sections.
  * Used in: /web_server_root_directory/javascript/errata_pro_jquery_20_2nd_edition_adam_freeman.php.
- * Last reviewed/updated: 18 Oct 2018.
+ * Last reviewed/updated: 12 Nov 2018.
  * Published: 21 Sep 2016. */
 return
    "<section>
@@ -13,13 +13,7 @@ return
 
      <p>Unfortunately, <a href='http://www.apress.com/9781430263883'>Apress Pro jQuery 2.0 2nd Edition by Adam Freeman (ISBN-13: 9781430263883)</a> was not properly edited. Moreover, Apress has not published any submitted errata/suggestions. Otherwise, it would be an excellent book.</p>
 
-     <div class='note normal'>
-      <p>In many cases:</p>
-      <ul>
-       <li>errata for the source code book listings also applies to the corresponding source code download files.</li>
-       <li>when a block of source code is used in multiple listings, errata for the initial block of source code also applies to the subsequent blocks of source code.</li>
-      </ul>
-     </div>
+     <div class='note normal'>Often below the errata for the source code book listings also applies to the corresponding source code download files. Also, when a block of source code is used in multiple listings, the errata for the initial block of source code also applies to the subsequent blocks of source code.</div>
 
     </section>
     <hr />
@@ -87,8 +81,8 @@ return
        <p>To install Node.js:</p>
 
        <ol>
-        <li>Download Node.js from <a href='http://nodejs.org'>Node.js (nodejs.org)</a>. (For Windows, download the Windows Installer <span class='filename'>.msi</span> file.)</li>
-        <li>Install Node.js. (For Windows, double click the downloaded <span class='filename'>.msi</span> file and use the default settings.)</li>
+        <li>Download Node.js from <a href='https://nodejs.org/en/download/'>Node.js Downloads (nodejs.org)</a>. For Windows, download the Windows Installer <span class='filename'>(.msi)</span> file.</li>
+        <li>Install Node.js. For Windows, double click the downloaded <span class='filename'>.msi</span> file and use the default settings.</li>
        </ol>
 
        <p>To test the Node.js installation, run <span class='filename'>nodetest.js</span>:</p>
@@ -1006,7 +1000,8 @@ var <b>tmplElems</b> = $(&quot;#flowerTmpl&quot;)<b>.template({ flowers: data })
      <ul class='link-list'>
       <li><a href='http://jquery.com/'>jQuery (jquery.com)</a></li>
       <li><a href='http://api.jquery.com/'>jQuery API Documentation (api.jquery.com)</a></li>
-      <li><a href='http://nodejs.org'>Node.js (nodejs.org)</a></li>
+      <li><a href='https://nodejs.org'>Node.js (nodejs.org)</a></li>
+      <li><a href='https://nodejs.org/en/download/'>Node.js Downloads (nodejs.org)</a></li>
       <li><a href='http://handlebarsjs.com/'>Handlebars (handlebarsjs.com)</a></li>
       <li><a href='http://handlebarsjs.com/builtin_helpers.html'>Handlebars Built-In Helpers (handlebarsjs.com)</a></li>
       <li><a href='http://handlebarsjs.com/reference.html'>Handlebars API Reference (handlebarsjs.com)</a></li>
