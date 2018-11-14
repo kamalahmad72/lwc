@@ -4,7 +4,7 @@
 /* File: /web_server_root_directory/javascript/errata_pro_jquery_20_2nd_edition_adam_freeman_sections.php.
  * Purpose: Web page <section></section> sections.
  * Used in: /web_server_root_directory/javascript/errata_pro_jquery_20_2nd_edition_adam_freeman.php.
- * Last reviewed/updated: 12 Nov 2018.
+ * Last reviewed/updated: 13 Nov 2018.
  * Published: 21 Sep 2016. */
 return
    "<section>
@@ -1000,7 +1000,7 @@ var <b>tmplElems</b> = $(&quot;#flowerTmpl&quot;)<b>.template({ flowers: data })
      <ul class='link-list'>
       <li><a href='http://jquery.com/'>jQuery (jquery.com)</a></li>
       <li><a href='http://api.jquery.com/'>jQuery API Documentation (api.jquery.com)</a></li>
-      <li><a href='https://nodejs.org'>Node.js (nodejs.org)</a></li>
+      <li><a href='https://nodejs.org/en/'>Node.js (nodejs.org)</a></li>
       <li><a href='https://nodejs.org/en/download/'>Node.js Downloads (nodejs.org)</a></li>
       <li><a href='http://handlebarsjs.com/'>Handlebars (handlebarsjs.com)</a></li>
       <li><a href='http://handlebarsjs.com/builtin_helpers.html'>Handlebars Built-In Helpers (handlebarsjs.com)</a></li>

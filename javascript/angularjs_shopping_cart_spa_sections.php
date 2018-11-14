@@ -4,7 +4,7 @@
 /* File: /web_server_root_directory/javascript/angularjs_shopping_cart_sections_spa.php.
  * Purpose: Web page <section></section> sections.
  * Used in: /web_server_root_directory/javascript/angularjs_shopping_cart_spa.php.
- * Last reviewed/updated: 21 Oct 2018.
+ * Last reviewed/updated: 13 Nov 2018.
  * Published: 24 Jan 2017. 
  * NOTE: On 08 Jul 2018, to add AngularJS 1.7.x support, in angularjs_shopping_cart_spa_sections.php (this file); 1.) change ng-click='addDeliveryMethod() to ng-change='addDeliveryMethod(), and 2.) change ng-click='insertBillingAddressFormValues() to ng-change='insertBillingAddressFormValues(). No other changes (including no changes to angularjs_shopping_cart_spa.js) required. For additional info, see https://docs.angularjs.org/guide/migration#migrating-from-1-6-to-1-7. */
 return
@@ -94,14 +94,14 @@ return
       <div ng-show='view===\"shopping\"' class='min-height-100vh'>
 
        <div class='shopping-navbar'><span class='shopping-navbar-section-active'>1.) SHOPPING</span><img 
-src='/images/javascript_shopping_cart/rt_pnt_tri_6x28.gif' alt='Next pointing shopping navbar triangle' class='img-rt-pnt-tri' /><span class='shopping-navbar-section-next'>2.) SHOPPING CART</span><span class='shopping-navbar-section'>3.) CHECKOUT:</span><span class='shopping-navbar-section'>Shipping</span><span class='shopping-navbar-section'>Billing</span><span class='shopping-navbar-section'>Review Order</span><span class='shopping-navbar-section'>Order Confirmation</span></div>
+src='/images/javascript_shopping_cart_spa/rt_pnt_tri_6x28.gif' alt='Next pointing shopping navbar triangle' class='img-rt-pnt-tri' /><span class='shopping-navbar-section-next'>2.) SHOPPING CART</span><span class='shopping-navbar-section'>3.) CHECKOUT:</span><span class='shopping-navbar-section'>Shipping</span><span class='shopping-navbar-section'>Billing</span><span class='shopping-navbar-section'>Review Order</span><span class='shopping-navbar-section'>Order Confirmation</span></div>
 
        <p>Fake search result for: <q>4th Generation Intel Core i3 Processors (Desktop) Boxed</q><br />
         Showing 1 - 9 of 9 products.</p>
 
        <div ng-repeat='itemRecord in itemsDb' class='row'>
         <div class='col-xs-2'>
-         <img src='/images/javascript_shopping_cart/{{itemRecord.itemImage}}' alt='{{itemRecord.itemName}}' />
+         <img src='/images/javascript_shopping_cart_spa/{{itemRecord.itemImage}}' alt='{{itemRecord.itemName}}' />
         </div>
         <div class='col-xs-7'>
          <div class='itemName'>{{itemRecord.itemName}}</div>
@@ -132,7 +132,7 @@ src='/images/javascript_shopping_cart/rt_pnt_tri_6x28.gif' alt='Next pointing sh
 
       <div ng-show='view===\"shoppingCart\"' class='min-height-100vh'>
 
-       <div class='shopping-navbar'><span ng-click='changeViewTo(\"shopping\")' class='shopping-navbar-section-back'>1.) SHOPPING</span><span class='shopping-navbar-section-active'>2.) SHOPPING CART</span><img src='/images/javascript_shopping_cart/rt_pnt_tri_6x28.gif' alt='Next pointing shopping navbar triangle' class='img-rt-pnt-tri' /><span class='shopping-navbar-section-next'>3.) CHECKOUT:</span><span class='shopping-navbar-section'>Shipping</span><span class='shopping-navbar-section'>Billing</span><span class='shopping-navbar-section'>Review Order</span><span class='shopping-navbar-section'>Order Confirmation</span></div>
+       <div class='shopping-navbar'><span ng-click='changeViewTo(\"shopping\")' class='shopping-navbar-section-back'>1.) SHOPPING</span><span class='shopping-navbar-section-active'>2.) SHOPPING CART</span><img src='/images/javascript_shopping_cart_spa/rt_pnt_tri_6x28.gif' alt='Next pointing shopping navbar triangle' class='img-rt-pnt-tri' /><span class='shopping-navbar-section-next'>3.) CHECKOUT:</span><span class='shopping-navbar-section'>Shipping</span><span class='shopping-navbar-section'>Billing</span><span class='shopping-navbar-section'>Review Order</span><span class='shopping-navbar-section'>Order Confirmation</span></div>
  
        <div ng-hide='shoppingCartDb.isShoppingCartFull'>
 
@@ -208,7 +208,7 @@ src='/images/javascript_shopping_cart/rt_pnt_tri_6x28.gif' alt='Next pointing sh
 
       <div ng-show='view===\"shipping\"' class='min-height-100vh'>
 
-       <div class='shopping-navbar'><span ng-click='changeViewTo(\"shopping\")' class='shopping-navbar-section-back'>1.) SHOPPING</span><span ng-click='changeViewTo(\"shoppingCart\")' class='shopping-navbar-section-back'>2.) SHOPPING CART</span><span class='shopping-navbar-section'>3.) CHECKOUT:</span><span class='shopping-navbar-section-active'>Shipping</span><img src='/images/javascript_shopping_cart/rt_pnt_tri_6x28.gif' alt='Next pointing shopping navbar triangle' class='img-rt-pnt-tri' /><span class='shopping-navbar-section-next'>Billing</span><span class='shopping-navbar-section'>Review Order</span><span class='shopping-navbar-section'>Order Confirmation</span></div>
+       <div class='shopping-navbar'><span ng-click='changeViewTo(\"shopping\")' class='shopping-navbar-section-back'>1.) SHOPPING</span><span ng-click='changeViewTo(\"shoppingCart\")' class='shopping-navbar-section-back'>2.) SHOPPING CART</span><span class='shopping-navbar-section'>3.) CHECKOUT:</span><span class='shopping-navbar-section-active'>Shipping</span><img src='/images/javascript_shopping_cart_spa/rt_pnt_tri_6x28.gif' alt='Next pointing shopping navbar triangle' class='img-rt-pnt-tri' /><span class='shopping-navbar-section-next'>Billing</span><span class='shopping-navbar-section'>Review Order</span><span class='shopping-navbar-section'>Order Confirmation</span></div>
 
        <p class='subsection-title'>Shipping Information</p>
 
@@ -257,7 +257,7 @@ src='/images/javascript_shopping_cart/rt_pnt_tri_6x28.gif' alt='Next pointing sh
 
       <div ng-show='view===\"billing\"' class='min-height-100vh'>
 
-       <div class='shopping-navbar'><span ng-click='changeViewTo(\"shopping\")' class='shopping-navbar-section-back'>1.) SHOPPING</span><span ng-click='changeViewTo(\"shoppingCart\")' class='shopping-navbar-section-back'>2.) SHOPPING CART</span><span class='shopping-navbar-section'>3.) CHECKOUT:</span><span ng-click='changeViewTo(\"shipping\")' class='shopping-navbar-section-back'>Shipping</span><span class='shopping-navbar-section-active'>Billing</span><img src='/images/javascript_shopping_cart/rt_pnt_tri_6x28.gif' alt='Next pointing shopping navbar triangle' class='img-rt-pnt-tri' /><span class='shopping-navbar-section-next'>Review Order</span><span class='shopping-navbar-section'>Order Confirmation</span></div>
+       <div class='shopping-navbar'><span ng-click='changeViewTo(\"shopping\")' class='shopping-navbar-section-back'>1.) SHOPPING</span><span ng-click='changeViewTo(\"shoppingCart\")' class='shopping-navbar-section-back'>2.) SHOPPING CART</span><span class='shopping-navbar-section'>3.) CHECKOUT:</span><span ng-click='changeViewTo(\"shipping\")' class='shopping-navbar-section-back'>Shipping</span><span class='shopping-navbar-section-active'>Billing</span><img src='/images/javascript_shopping_cart_spa/rt_pnt_tri_6x28.gif' alt='Next pointing shopping navbar triangle' class='img-rt-pnt-tri' /><span class='shopping-navbar-section-next'>Review Order</span><span class='shopping-navbar-section'>Order Confirmation</span></div>
 
        <p class='subsection-title'>Billing Information</p>
 
@@ -328,7 +328,7 @@ src='/images/javascript_shopping_cart/rt_pnt_tri_6x28.gif' alt='Next pointing sh
 
       <div ng-show='view===\"reviewOrder\"' class='min-height-100vh'>
 
-       <div class='shopping-navbar'><span ng-click='changeViewTo(\"shopping\")' class='shopping-navbar-section-back'>1.) SHOPPING</span><span ng-click='changeViewTo(\"shoppingCart\")' class='shopping-navbar-section-back'>2.) SHOPPING CART</span><span class='shopping-navbar-section'>3.) CHECKOUT:</span><span ng-click='changeViewTo(\"shipping\")' class='shopping-navbar-section-back'>Shipping</span><span ng-click='changeViewTo(\"billing\")' class='shopping-navbar-section-back'>Billing</span><span class='shopping-navbar-section-active'>Review Order</span><img src='/images/javascript_shopping_cart/rt_pnt_tri_6x28.gif' alt='Next pointing shopping navbar triangle' class='img-rt-pnt-tri' /><span class='shopping-navbar-section-next'>Order Confirmation</span></div>
+       <div class='shopping-navbar'><span ng-click='changeViewTo(\"shopping\")' class='shopping-navbar-section-back'>1.) SHOPPING</span><span ng-click='changeViewTo(\"shoppingCart\")' class='shopping-navbar-section-back'>2.) SHOPPING CART</span><span class='shopping-navbar-section'>3.) CHECKOUT:</span><span ng-click='changeViewTo(\"shipping\")' class='shopping-navbar-section-back'>Shipping</span><span ng-click='changeViewTo(\"billing\")' class='shopping-navbar-section-back'>Billing</span><span class='shopping-navbar-section-active'>Review Order</span><img src='/images/javascript_shopping_cart_spa/rt_pnt_tri_6x28.gif' alt='Next pointing shopping navbar triangle' class='img-rt-pnt-tri' /><span class='shopping-navbar-section-next'>Order Confirmation</span></div>
 
        <p class='subsection-title'>Shopping Cart&nbsp;&nbsp;<button type='button' ng-click='changeViewTo(\"shoppingCart\")' class='btn-xs'>Edit</button></p>
 

@@ -4,7 +4,7 @@
 /* File: /web_server_root_directory/javascript/javascript_shopping_cart_spa.php.
  * Purpose: Web page file.
  * Used in: No other file.
- * Last reviewed/updated: 15 May 2018.
+ * Last reviewed/updated: 13 Nov 2018.
  * Published: 21 Sep 2016. */
 error_reporting(E_ALL);
 ini_set('display_errors', '0'); // To display errors, change '0' to '1'.
@@ -16,7 +16,7 @@ $webPage->head_meta_description = "A JavaScript shopping cart single page applic
 $webPage->head_link_stylesheets = include_once "stylesheets_angularjs_javascript_shopping_cart_spa.php";
 $webPage->body_header_callBcrumbsNav = "BcrumbsNavUtil.bcrumbsNav(\"\", \"JavaScript\");";
 $webPage->body_main_webPageTitle = "JavaScript Shopping Cart Single Page Application";
-$webPage->body_main_lastReviewed = "Last reviewed/updated: 15 Feb 2018 | Published: 18 Mar 2014 | Status: Active";
+$webPage->body_main_lastReviewed = "Last reviewed/updated: 13 Nov 2018 | Published: 18 Mar 2014 | Status: Active";
 $webPage->body_main_webBrowserSupport = "Web browser support: Internet Explorer 11+, Edge 12+, Firefox 6+, Chrome 30+, Opera 17+";
 $webPage->body_main_toc = include_once "javascript_shopping_cart_spa_toc.php";
 $webPage->body_main_sections = include_once "javascript_shopping_cart_spa_sections.php";

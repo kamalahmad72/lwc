@@ -4,7 +4,7 @@
 /* File: /web_server_root_directory/javascript/javascript_shopping_cart_sections_spa.php.
  * Purpose: Web page <section></section> sections.
  * Used in: /web_server_root_directory/javascript/javascript_shopping_cart_spa.php.
- * Last reviewed/updated: 18 Oct 2018.
+ * Last reviewed/updated: 13 Nov 2018.
  * Published: 21 Sep 2016. */
 return
    "<section>
@@ -54,14 +54,14 @@ return
      <div id='shoppingContainerId' class='min-height-100vh'>
 
       <div class='shopping-navbar'><span class='shopping-navbar-section-active'>1.) SHOPPING</span><img 
-src='/images/javascript_shopping_cart/rt_pnt_tri_6x28.gif' alt='Next pointing shopping navbar triangle' class='img-rt-pnt-tri' /><span class='shopping-navbar-section-next'>2.) SHOPPING CART</span><span class='shopping-navbar-section'>3.) CHECKOUT:</span><span class='shopping-navbar-section'>Shipping</span><span class='shopping-navbar-section'>Billing</span><span class='shopping-navbar-section'>Review Order</span><span class='shopping-navbar-section'>Order Confirmation</span></div>
+src='/images/javascript_shopping_cart_spa/rt_pnt_tri_6x28.gif' alt='Next pointing shopping navbar triangle' class='img-rt-pnt-tri' /><span class='shopping-navbar-section-next'>2.) SHOPPING CART</span><span class='shopping-navbar-section'>3.) CHECKOUT:</span><span class='shopping-navbar-section'>Shipping</span><span class='shopping-navbar-section'>Billing</span><span class='shopping-navbar-section'>Review Order</span><span class='shopping-navbar-section'>Order Confirmation</span></div>
 
       <p>Fake search result for: <q>4th Generation Intel Core i3 Processors (Desktop) Boxed</q><br />
       Showing 1 - 9 of 9 products.</p>
 
       <div class='row'>
        <div class='col-xs-2'>
-        <img src='/images/javascript_shopping_cart/i3-4130_19-116-946-TS_125x135.jpg' alt='Intel Core i3-4130 Processor (3MB Cache, 3.40GHz) Haswell LGA1150 22nm Boxed' />
+        <img src='/images/javascript_shopping_cart_spa/i3-4130_19-116-946-TS_125x135.jpg' alt='Intel Core i3-4130 Processor (3MB Cache, 3.40GHz) Haswell LGA1150 22nm Boxed' />
        </div>
        <div class='col-xs-7'>
         <div class='itemName'>Intel Core i3-4130 Processor (3MB Cache, 3.40GHz) Haswell LGA1150 22nm Boxed</div>
@@ -80,7 +80,7 @@ src='/images/javascript_shopping_cart/rt_pnt_tri_6x28.gif' alt='Next pointing sh
       </div>
       <div class='row'>
        <div class='col-xs-2'>
-        <img src='/images/javascript_shopping_cart/i3-4150_19-116-995-TS_125x135.jpg' alt='Intel Core i3-4150 Processor (3MB Cache, 3.50GHz) Haswell LGA1150 22nm Boxed' />
+        <img src='/images/javascript_shopping_cart_spa/i3-4150_19-116-995-TS_125x135.jpg' alt='Intel Core i3-4150 Processor (3MB Cache, 3.50GHz) Haswell LGA1150 22nm Boxed' />
        </div>
        <div class='col-xs-7'>
         <div class='itemName'>Intel Core i3-4150 Processor (3MB Cache, 3.50GHz) Haswell LGA1150 22nm Boxed</div>
@@ -99,7 +99,7 @@ src='/images/javascript_shopping_cart/rt_pnt_tri_6x28.gif' alt='Next pointing sh
       </div>
       <div class='row'>
        <div class='col-xs-2'>
-        <img src='/images/javascript_shopping_cart/i3-4160_19-117-447-01_125x135.jpg' alt='Intel Core i3-4160 Processor (3MB Cache, 3.60GHz) Haswell LGA1150 22nm Boxed' />
+        <img src='/images/javascript_shopping_cart_spa/i3-4160_19-117-447-01_125x135.jpg' alt='Intel Core i3-4160 Processor (3MB Cache, 3.60GHz) Haswell LGA1150 22nm Boxed' />
        </div>
        <div class='col-xs-7'>
         <div class='itemName'>Intel Core i3-4160 Processor (3MB Cache, 3.60GHz) Haswell LGA1150 22nm Boxed</div>
@@ -118,7 +118,7 @@ src='/images/javascript_shopping_cart/rt_pnt_tri_6x28.gif' alt='Next pointing sh
       </div>
       <div class='row'>
        <div class='col-xs-2'>
-        <img src='/images/javascript_shopping_cart/i3-4170_19-117-543-02_125x135.jpg' alt='Intel Core i3-4170 Processor (3MB Cache, 3.70GHz) Haswell LGA1150 22nm Boxed' />
+        <img src='/images/javascript_shopping_cart_spa/i3-4170_19-117-543-02_125x135.jpg' alt='Intel Core i3-4170 Processor (3MB Cache, 3.70GHz) Haswell LGA1150 22nm Boxed' />
        </div>
        <div class='col-xs-7'>
         <div class='itemName'>Intel Core i3-4170 Processor (3MB Cache, 3.70GHz) Haswell LGA1150 22nm Boxed</div>
@@ -137,7 +137,7 @@ src='/images/javascript_shopping_cart/rt_pnt_tri_6x28.gif' alt='Next pointing sh
       </div>
       <div class='row'>
        <div class='col-xs-2'>
-        <img src='/images/javascript_shopping_cart/i3-4330_19-116-945-TS_125x135.jpg' alt='Intel Core i3-4330 Processor (4MB Cache, 3.50GHz) Haswell LGA1150 22nm Boxed' />
+        <img src='/images/javascript_shopping_cart_spa/i3-4330_19-116-945-TS_125x135.jpg' alt='Intel Core i3-4330 Processor (4MB Cache, 3.50GHz) Haswell LGA1150 22nm Boxed' />
        </div>
        <div class='col-xs-7'>
         <div class='itemName'>Intel Core i3-4330 Processor (4MB Cache, 3.50GHz) Haswell LGA1150 22nm Boxed</div>
@@ -156,7 +156,7 @@ src='/images/javascript_shopping_cart/rt_pnt_tri_6x28.gif' alt='Next pointing sh
       </div>
       <div class='row'>
        <div class='col-xs-2'>
-        <img src='/images/javascript_shopping_cart/i3-4340_19-116-944-TS_125x135.jpg' alt='Intel Core i3-4340 Processor (4MB Cache, 3.60GHz) Haswell LGA1150 22nm Boxed' />
+        <img src='/images/javascript_shopping_cart_spa/i3-4340_19-116-944-TS_125x135.jpg' alt='Intel Core i3-4340 Processor (4MB Cache, 3.60GHz) Haswell LGA1150 22nm Boxed' />
        </div>
        <div class='col-xs-7'>
         <div class='itemName'>Intel Core i3-4340 Processor (4MB Cache, 3.60GHz) Haswell LGA1150 22nm Boxed</div>
@@ -175,7 +175,7 @@ src='/images/javascript_shopping_cart/rt_pnt_tri_6x28.gif' alt='Next pointing sh
       </div>
       <div class='row'>
        <div class='col-xs-2'>
-        <img src='/images/javascript_shopping_cart/i3-4350_19-116-994-TS_125x135.jpg' alt='Intel Core i3-4350 Processor (4MB Cache, 3.60GHz) Haswell LGA1150 22nm Boxed' />
+        <img src='/images/javascript_shopping_cart_spa/i3-4350_19-116-994-TS_125x135.jpg' alt='Intel Core i3-4350 Processor (4MB Cache, 3.60GHz) Haswell LGA1150 22nm Boxed' />
        </div>
        <div class='col-xs-7'>
         <div class='itemName'>Intel Core i3-4350 Processor (4MB Cache, 3.60GHz) Haswell LGA1150 22nm Boxed</div>
@@ -194,7 +194,7 @@ src='/images/javascript_shopping_cart/rt_pnt_tri_6x28.gif' alt='Next pointing sh
       </div>
       <div class='row'>
        <div class='col-xs-2'>
-        <img src='/images/javascript_shopping_cart/i3-4360_19-116-993-TS_125x135.jpg' alt='Intel Core i3-4360 Processor (4MB Cache, 3.70GHz) Haswell LGA1150 22nm Boxed' />
+        <img src='/images/javascript_shopping_cart_spa/i3-4360_19-116-993-TS_125x135.jpg' alt='Intel Core i3-4360 Processor (4MB Cache, 3.70GHz) Haswell LGA1150 22nm Boxed' />
        </div>
        <div class='col-xs-7'>
         <div class='itemName'>Intel Core i3-4360 Processor (4MB Cache, 3.70GHz) Haswell LGA1150 22nm Boxed</div>
@@ -213,7 +213,7 @@ src='/images/javascript_shopping_cart/rt_pnt_tri_6x28.gif' alt='Next pointing sh
       </div>
       <div class='row'>
        <div class='col-xs-2'>
-        <img src='/images/javascript_shopping_cart/i3-4370_19-117-446-TS_125x135.jpg' alt='Intel Core i3-4370 Processor (4MB Cache, 3.80GHz) Haswell LGA1150 22nm Boxed' />
+        <img src='/images/javascript_shopping_cart_spa/i3-4370_19-117-446-TS_125x135.jpg' alt='Intel Core i3-4370 Processor (4MB Cache, 3.80GHz) Haswell LGA1150 22nm Boxed' />
        </div>
        <div class='col-xs-7'>
         <div class='itemName'>Intel Core i3-4370 Processor (4MB Cache, 3.80GHz) Haswell LGA1150 22nm Boxed</div>
@@ -244,7 +244,7 @@ src='/images/javascript_shopping_cart/rt_pnt_tri_6x28.gif' alt='Next pointing sh
 
      <div id='shoppingCartContainerId' class='display-none min-height-100vh'>
 
-      <div class='shopping-navbar'><span onclick='ShoppingCartUtil.navTo(\"Shopping\")' class='shopping-navbar-section-back'>1.) SHOPPING</span><span class='shopping-navbar-section-active'>2.) SHOPPING CART</span><img src='/images/javascript_shopping_cart/rt_pnt_tri_6x28.gif' alt='Next pointing shopping navbar triangle' class='img-rt-pnt-tri' /><span class='shopping-navbar-section-next'>3.) CHECKOUT:</span><span class='shopping-navbar-section'>Shipping</span><span class='shopping-navbar-section'>Billing</span><span class='shopping-navbar-section'>Review Order</span><span class='shopping-navbar-section'>Order Confirmation</span></div>
+      <div class='shopping-navbar'><span onclick='ShoppingCartUtil.navTo(\"Shopping\")' class='shopping-navbar-section-back'>1.) SHOPPING</span><span class='shopping-navbar-section-active'>2.) SHOPPING CART</span><img src='/images/javascript_shopping_cart_spa/rt_pnt_tri_6x28.gif' alt='Next pointing shopping navbar triangle' class='img-rt-pnt-tri' /><span class='shopping-navbar-section-next'>3.) CHECKOUT:</span><span class='shopping-navbar-section'>Shipping</span><span class='shopping-navbar-section'>Billing</span><span class='shopping-navbar-section'>Review Order</span><span class='shopping-navbar-section'>Order Confirmation</span></div>
 
       <div id='shoppingCartEmptyReportContainerId'>
 
@@ -298,7 +298,7 @@ src='/images/javascript_shopping_cart/rt_pnt_tri_6x28.gif' alt='Next pointing sh
 
      <div id='shippingContainerId' class='display-none min-height-100vh'>
 
-      <div class='shopping-navbar'><span onclick='ShoppingCartUtil.navTo(\"Shopping\")' class='shopping-navbar-section-back'>1.) SHOPPING</span><span onclick='ShoppingCartUtil.navTo(\"Shopping Cart\")' class='shopping-navbar-section-back'>2.) SHOPPING CART</span><span class='shopping-navbar-section'>3.) CHECKOUT:</span><span class='shopping-navbar-section-active'>Shipping</span><img src='/images/javascript_shopping_cart/rt_pnt_tri_6x28.gif' alt='Next pointing shopping navbar triangle' class='img-rt-pnt-tri' /><span class='shopping-navbar-section-next'>Billing</span><span class='shopping-navbar-section'>Review Order</span><span class='shopping-navbar-section'>Order Confirmation</span></div>
+      <div class='shopping-navbar'><span onclick='ShoppingCartUtil.navTo(\"Shopping\")' class='shopping-navbar-section-back'>1.) SHOPPING</span><span onclick='ShoppingCartUtil.navTo(\"Shopping Cart\")' class='shopping-navbar-section-back'>2.) SHOPPING CART</span><span class='shopping-navbar-section'>3.) CHECKOUT:</span><span class='shopping-navbar-section-active'>Shipping</span><img src='/images/javascript_shopping_cart_spa/rt_pnt_tri_6x28.gif' alt='Next pointing shopping navbar triangle' class='img-rt-pnt-tri' /><span class='shopping-navbar-section-next'>Billing</span><span class='shopping-navbar-section'>Review Order</span><span class='shopping-navbar-section'>Order Confirmation</span></div>
 
       <p class='subsection-title'>Shipping Information</p>
 
@@ -404,7 +404,7 @@ src='/images/javascript_shopping_cart/rt_pnt_tri_6x28.gif' alt='Next pointing sh
 
      <div id='billingContainerId' class='display-none min-height-100vh'>
 
-      <div class='shopping-navbar'><span onclick='ShoppingCartUtil.navTo(\"Shopping\")' class='shopping-navbar-section-back'>1.) SHOPPING</span><span onclick='ShoppingCartUtil.navTo(\"Shopping Cart\")' class='shopping-navbar-section-back'>2.) SHOPPING CART</span><span class='shopping-navbar-section'>3.) CHECKOUT:</span><span onclick='ShoppingCartUtil.navTo(\"Shipping\")' class='shopping-navbar-section-back'>Shipping</span><span class='shopping-navbar-section-active'>Billing</span><img src='/images/javascript_shopping_cart/rt_pnt_tri_6x28.gif' alt='Next pointing shopping navbar triangle' class='img-rt-pnt-tri' /><span class='shopping-navbar-section-next'>Review Order</span><span class='shopping-navbar-section'>Order Confirmation</span></div>
+      <div class='shopping-navbar'><span onclick='ShoppingCartUtil.navTo(\"Shopping\")' class='shopping-navbar-section-back'>1.) SHOPPING</span><span onclick='ShoppingCartUtil.navTo(\"Shopping Cart\")' class='shopping-navbar-section-back'>2.) SHOPPING CART</span><span class='shopping-navbar-section'>3.) CHECKOUT:</span><span onclick='ShoppingCartUtil.navTo(\"Shipping\")' class='shopping-navbar-section-back'>Shipping</span><span class='shopping-navbar-section-active'>Billing</span><img src='/images/javascript_shopping_cart_spa/rt_pnt_tri_6x28.gif' alt='Next pointing shopping navbar triangle' class='img-rt-pnt-tri' /><span class='shopping-navbar-section-next'>Review Order</span><span class='shopping-navbar-section'>Order Confirmation</span></div>
 
       <p class='subsection-title'>Billing Information</p>
 
@@ -479,7 +479,7 @@ src='/images/javascript_shopping_cart/rt_pnt_tri_6x28.gif' alt='Next pointing sh
 
      <div id='reviewOrderContainerId' class='display-none min-height-100vh'>
 
-      <div class='shopping-navbar'><span onclick='ShoppingCartUtil.navTo(\"Shopping\")' class='shopping-navbar-section-back'>1.) SHOPPING</span><span onclick='ShoppingCartUtil.navTo(\"Shopping Cart\")' class='shopping-navbar-section-back'>2.) SHOPPING CART</span><span class='shopping-navbar-section'>3.) CHECKOUT:</span><span onclick='ShoppingCartUtil.navTo(\"Shipping\")' class='shopping-navbar-section-back'>Shipping</span><span onclick='ShoppingCartUtil.navTo(\"Billing\")' class='shopping-navbar-section-back'>Billing</span><span class='shopping-navbar-section-active'>Review Order</span><img src='/images/javascript_shopping_cart/rt_pnt_tri_6x28.gif' alt='Next pointing shopping navbar triangle' class='img-rt-pnt-tri' /><span class='shopping-navbar-section-next'>Order Confirmation</span></div>
+      <div class='shopping-navbar'><span onclick='ShoppingCartUtil.navTo(\"Shopping\")' class='shopping-navbar-section-back'>1.) SHOPPING</span><span onclick='ShoppingCartUtil.navTo(\"Shopping Cart\")' class='shopping-navbar-section-back'>2.) SHOPPING CART</span><span class='shopping-navbar-section'>3.) CHECKOUT:</span><span onclick='ShoppingCartUtil.navTo(\"Shipping\")' class='shopping-navbar-section-back'>Shipping</span><span onclick='ShoppingCartUtil.navTo(\"Billing\")' class='shopping-navbar-section-back'>Billing</span><span class='shopping-navbar-section-active'>Review Order</span><img src='/images/javascript_shopping_cart_spa/rt_pnt_tri_6x28.gif' alt='Next pointing shopping navbar triangle' class='img-rt-pnt-tri' /><span class='shopping-navbar-section-next'>Order Confirmation</span></div>
 
       <p class='subsection-title'>Shopping Cart&nbsp;&nbsp;<button type='button' onclick='ShoppingCartUtil.navTo(\"Shopping Cart\")' class='btn-xs'>Edit</button></p>
 
