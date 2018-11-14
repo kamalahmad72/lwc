@@ -1,5 +1,16 @@
-// web browser support: IE 10+, ED, FF6+, SF5.1+, CH30+, OP17+, VV1+.
-// Node.js support: 8.12+. 8.11- not tested.
+/* -------------------- INTRODUCTION -------------------- */
+
+/* File: nodejs_web_server.js.
+ * Purpose: Web server for View Submitted For Data form.html form submission.
+ * Used in: No other file.
+ * Last reviewed/updated: 13 Nov 2018.
+ * Published: 12 Nov 2018.
+ * Web browser support: IE8+, ED12+, FF1.5+, SF3.1+, CH2+, OP7.50+.
+ * Node.js support: Node.js 8+, 10+, 11+. Node 7-, 9 not tested.
+ * NOTE:
+ * IE6 - 7 not tested.
+ * CH2 requires hostname = '127.0.0.1', not hostname = 'localhost'. */
+
 const http = require('http'); // Native Node.js  module.
 const querystring = require('querystring'); // Native Node.js module.
 const port = 8001; // Apparently port required.
@@ -15,7 +26,7 @@ const server = http.createServer((request, response) => { // Alternatively, no a
   if (request.url === "/"){ // Handle root request.
    response.statusCode = 200;
    response.setHeader("Content-Type", "text/html");
-   return response.end(`Node.js web server listening on http://${hostname}:${port}/. Nothing else here. Load form.html in your web browser, interact with the form, and Submit.`);
+   return response.end(`Node.js web server listening on http://${hostname}:${port}/. Nothing to do here. Load form.html in your web browser, interact with the form, and click Submit.`);
   }
   if (request.url === "/form_submitted"){ // Handle form submitted request.
    var requestBodyObject = querystring.parse(requestBody); // requestBodyObject property names are form control name attribute values. requestBodyObject property values; 1.) are form control submitted values, and 2.) do not include raw request body replaced/escaped characters (eg, in requestBody, user input space, &, =, and + characters are replaced by +, %26, %3D, and %2B, respectively). Used in Textboxes and Textareas table Control Loaded With Data Sent On Last Submit column cells.
@@ -78,7 +89,7 @@ const server = http.createServer((request, response) => { // Alternatively, no a
    <p><button type='submit' class='btn-md'>Submit</button></p>
 
    <table width='100%'>
-    <caption>Raw Request Body Form Data Sent On Last Submit</caption>
+    <caption>Raw Form Data Sent In Request Body On Last Submit</caption>
     <tbody>
      <tr>
       <td>${requestBody}</td>
@@ -179,7 +190,7 @@ const server = http.createServer((request, response) => { // Alternatively, no a
     <thead>
      <tr>
       <th>Control Loaded With Data Sent On Last Submit</th>
-      <th>Data Sent On Last Submit <a id='1_checkboxes_return'></a><a href='#1_checkboxes'>(1)</a></th>
+      <th>Control Data Sent On Last Submit <a id='1_checkboxes_return'></a><a href='#1_checkboxes'>(1)</a></th>
      </tr>
     </thead>
     <tbody>
@@ -214,7 +225,7 @@ const server = http.createServer((request, response) => { // Alternatively, no a
     <thead>
      <tr>
       <th>Control Loaded With Data Sent On Last Submit</th>
-      <th>Data Sent On Last Submit <a id='1_radioButtons_return'></a><a href='#1_radioButtons'>(1)</a></th>
+      <th>Control Data Sent On Last Submit <a id='1_radioButtons_return'></a><a href='#1_radioButtons'>(1)</a></th>
      </tr>
     </thead>
     <tbody>
