@@ -4,7 +4,7 @@
 /* File: /web_server_root_directory/html/view_form_post_urlencoded_data_sections.php.
  * Purpose: Web page <section></section> sections.
  * Used in: /web_server_root_directory/html/view_form_post_urlencoded_data.php.
- * Last reviewed/updated: 17 Nov 2018.
+ * Last reviewed/updated: 18 Nov 2018.
  * Published: 12 Nov 2018. */
 return
    "<section>
@@ -59,10 +59,10 @@ controlOneName=controlOneUserInput<b>&amp;</b>controlTwoName=controlTwoUserInput
         </li>
        </ol>
       </li>
-      <li>Download the following source code zip file to your computer: <a href='/downloads/view_form_post_urlencoded_data.zip'><span class='filename'>view_form_post_urlencoded_data.zip</span> (learnwebcoding.com)</a> - Released 17 Nov 2018. Size: 6,104 bytes. SHA-256 checksum: 8acc88487976e92fa951a712f8bf0b3d81dbcf60d2af2451e96daa5409d36ec4.</li>
+      <li>Download the following source code zip file to your computer: <a href='/downloads/view_form_post_urlencoded_data.zip'><span class='filename'>view_form_post_urlencoded_data.zip</span> (learnwebcoding.com)</a> - Released 18 Nov 2018. Size: 6,253 bytes. SHA-256 checksum: ce6245af4477651aab4363ce595542e01d346ee8202601a7bc4f2d0c4bde6f87.</li>
       <li>Extract the downloaded zip file. In this example, <span class='filename'>view_form_post_urlencoded_data.zip</span> is extracted to the <span class='filename'>view_form_post_urlencoded_data</span> folder:
        <img src='/images/view_form_post_urlencoded_data/view_form_post_urlencoded_data_folder_600x350.gif' alt='The contents of the extracted zip file.' />
-       <div class='note normal'>The location of <span class='filename'>form.html</span> and <span class='filename'>nodejs_web_server.js</span> on your computer does not matter. They do not even need to be located in the same folder. Accordingly, leave them where they are, or move one or both of them to a different location.</div>
+       <div class='note normal'>The location of <span class='filename'>form_post_urlencoded.html</span> and <span class='filename'>nodejs_web_server.js</span> on your computer does not matter. They do not even need to be located in the same folder. Accordingly, leave them where they are, or move one or both of them to a different location.</div>
       </li>
       <li>Start the Node.js web server:
        <ol>
@@ -75,7 +75,7 @@ controlOneName=controlOneUserInput<b>&amp;</b>controlTwoName=controlTwoUserInput
        </ol>
        <div class='note normal'>To stop the Node.js web server, close the terminal/command prompt or press <kbd>Ctrl</kbd>+<kbd>c</kbd>.</div>
       </li>
-      <li>Load <span class='filename'>form_post_urlencoded.html</span> in your web browser. This can be done by double clicking the <span class='filename'>form_post_urlencoded.html</span> file, which loads it in the default web browser. Alternatively, copy <span class='filename'>form.html</span> to your local HTTP Server and point your web browser to the URL for <span class='filename'>form_post_urlencoded.html</span> on your local HTTP Server.</li>
+      <li>Load <span class='filename'>form_post_urlencoded.html</span> in your web browser. This can be done by double clicking the <span class='filename'>form_post_urlencoded.html</span> file, which loads it in the default web browser. Alternatively, copy <span class='filename'>form_post_urlencoded.html</span> to your local HTTP Server and point your web browser to the URL for <span class='filename'>form_post_urlencoded.html</span> on your local HTTP Server.</li>
       <li>Interact with the form and click <kbd>Submit</kbd>. The form is submitted to http://localhost:8001/form_post_urlencoded_submitted and the Node.js web server responds with a web page that displays the submitted form data:
        <img src='/images/view_form_post_urlencoded_data/form_submitted_1024x767.gif' alt='The Node.js web server response is a web page that displays the submitted form data.' class='box-shadow' />
       </li>

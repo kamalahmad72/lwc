@@ -1,59 +1,56 @@
 /* -------------------- INTRODUCTION -------------------- */
 
 /* File: nodejs_web_server.js.
- * Purpose: Web server for View Submitted For Data form.html form submission.
+ * Purpose: Node.js web server for form_post_urlencoded.html form submission. The form_post_urlencoded.html form element attributes are: method='post' enctype='application/x-www-form-urlencoded' action='http://localhost:8001/form_post_urlencoded_submitted.
  * Used in: No other file.
- * Last reviewed/updated: 17 Nov 2018.
+ * Last reviewed/updated: 18 Nov 2018.
  * Published: 12 Nov 2018.
- * Web browser support: IE8+, ED12+, FF1.5+, SF3.1+, CH2+, OP7.50+.
- * Node.js support: Node.js 8+, 10+, 11+. Node 7-, 9 not tested.
- * NOTE:
- * IE6 - 7 not tested.
- * CH2 requires hostname = '127.0.0.1', not hostname = 'localhost'. */
+ * Web browser support: IE8+, ED12+, FF1.5+, SF3.1+, CH2+, OP7.50+. IE6 - 7 not tested.
+ * Node.js support: Node.js 8+, 10+, 11+. Node 7-, 9 not tested. */
 
 const http = require('http'); // Native Node.js module.
 const querystring = require('querystring'); // Native Node.js module.
-const port = 8001; // Apparently port required.
-const hostname = 'localhost'; // string. Eg, 'localhost' or '127.0.0.1'.
+const port = 8001; // Number. Apparently required, including 80. 
+const hostname = 'localhost'; // String. Eg, '127.0.0.1'. CH2 requires hostname = '127.0.0.1', not hostname = 'localhost'.
 const server = http.createServer((request, response) => { // Alternatively, no assignment and use chaining: http.createServer((request, response) => {}).listen();
  var requestBody = "";
  request.on("error", err => {
   console.error(err); // Output error to terminal/command prompt.
  }).on("data", chunk => {
-  requestBody += chunk; // textbox=&textboxWithPreenteredText=textbox+pre-entered+text&textarea=&textareaWithPreenteredText=textarea+pre-entered+text&selectbox=selectbox+option+one&selectboxWithOptionThreePreselected=selectbox+option+three+pre-selected&selectboxWithMultipleAttributeOptionOneTwoPreselected=selectbox+option+one+pre-selected&selectboxWithMultipleAttributeOptionOneTwoPreselected=selectbox+option+two+pre-selected&checkboxPrechecked=on&checkboxWithValueAttributePrechecked=valueAttributeValue&radioButtonGroupPrechecked=radioButtonTwoPrechecked (default). // string.
- }).on("end", () => {
-  // console.log("request.method: " + request.method); // For http://localhost:8001/ = "GET". For submit form = "POST".
-  // console.log("request.url: " + request.url); // For http://localhost:8001/ = "/". For submit form = "/form_post_urlencoded_submitted".
-  if (request.method === "GET"){ // Handle GET request.
-   if (request.url === "/"){ // Handle GET root request. For http://localhost:8001/.
-    response.statusCode = 200;
+  requestBody += chunk; // textbox=&textboxWithPreenteredText=textbox+pre-entered+text&textarea=&textareaWithPreenteredText=textarea+pre-entered+text&selectbox=selectbox+option+one&selectboxWithOptionThreePreselected=selectbox+option+three+pre-selected&selectboxWithMultipleAttributeOptionOneTwoPreselected=selectbox+option+one+pre-selected&selectboxWithMultipleAttributeOptionOneTwoPreselected=selectbox+option+two+pre-selected&checkboxPrechecked=on&checkboxWithValueAttributePrechecked=valueAttributeValue&radioButtonGroupPrechecked=radioButtonTwoPrechecked (default). // String.
+ }).on("end", () => { // Handle request end event, which is emitted at end of request. NOTE: http.clientRequest object has end() method.
+  // console.log("request.method: " + request.method); // For http://localhost:8001/ request, request.method = "GET". For submit form request, request.method = "POST".
+  // console.log("request.url: " + request.url); // For http://localhost:8001/ request, request.url = "/". For submit form request, request.url = "/form_post_urlencoded_submitted".
+  if (request.method === "GET"){ // Determine if request method is GET.
+   if (request.url === "/"){ // Request method is GET. Determine if request URL is root. Applies to http://localhost:8001/ request.
+    response.statusCode = 200; // Request URL is root.
     response.setHeader("Content-Type", "text/html"); // 'text/html' outputs HTML to web browser. 'text/plain' outputs text to web browser.
     return response.end(`Node.js web server listening on http://${hostname}:${port}/. Nothing to do here. Load form_post_urlencoded.html in your web browser, interact with the form, and click Submit.`);
    }
-   if (request.url === "/favicon.ico"){ // Handle GET favicon request. For http://localhost:8001/ and when submit form. Upon form submit, web browser performs two requests: 1.) POST request to resource specified by form action attribute, which is request.url = "/form_post_urlencoded_submitted"; and 2.) GET request of favicon.ico, which is request.url = "/favicon.ico". At end of both requests the end event fires.
-    response.statusCode = 200;
+   if (request.url === "/favicon.ico"){ // Request method is GET. Determine if request URL is for favicon. Applies to http://localhost:8001/ request and submit form request. Upon form submit, web browser performs two requests: 1.) POST request to resource specified by form action attribute, which is request.url = "/form_post_urlencoded_submitted"; and 2.) GET request for favicon.ico, which is request.url = "/favicon.ico". At end of both requests the request end event fires.
+    response.statusCode = 200; // Request URL is for favicon.
     response.setHeader("Content-Type", "image/x-icon");
-    return response.end(); // No favicon image data sent.
+    return response.end(); // No favicon image data is sent.
    }
   }
-  if (request.method === "POST"){ // Handle POST request.
-   if (request.url === "/form_post_urlencoded_submitted"){ // Handle POST to action='http://localhost:8001/form_post_urlencoded_submitted request. Occurs when submit form. Upon form submit, web browser performs two requests: 1.) POST request to resource specified by form action attribute, which is request.url = "/form_post_urlencoded_submitted"; and 2.) GET request of favicon.ico, which is request.url = "/favicon.ico". At end of both requests the end event fires. The POST request provides the form data to the on.data event code to construct the requestBody string, and, therefore, when the first end event fires, the requestBody string exists and the on.end event code can process the requestBody string and generate the response.
-    var requestBodyObject = querystring.parse(requestBody); // requestBodyObject property names are form control name attribute values. requestBodyObject property values; 1.) are form control submitted values, and 2.) do not include raw request body replaced/escaped characters (eg, in requestBody, user input space, &, =, and + characters are replaced by +, %26, %3D, and %2B, respectively). Used in Textboxes and Textareas table Control Loaded With Data From Last Submit column cells.
+  if (request.method === "POST"){ // Determine if request method is POST.
+   if (request.url === "/form_post_urlencoded_submitted"){ // Request method is POST. Determine if request URL is "/form_post_urlencoded_submitted". Applies to form submit request. Upon form submit, web browser performs two requests: 1.) POST request to resource specified by form action attribute, which is request.url = "/form_post_urlencoded_submitted"; and 2.) GET request for favicon.ico, which is request.url = "/favicon.ico". At end of both requests the request end event fires. The POST request sends the form data string to the request.on() method data event callback function, which accepts the incoming data stream, assembles the chunks into the form data string, and assigns the form data string to the requestBody variable.
+    var requestBodyObject = querystring.parse(requestBody); // Request URL is "/form_post_urlencoded_submitted". Form control name attribute values are set as requestBodyObject property names. Form control user input values are set as requestBodyObject property values. requestBodyObject property values do not include requestBody replaced/escaped characters (ie, in requestBody, user input space, &, =, and + characters are replaced/escaped by +, %26, %3D, and %2B, respectively). However, the querystring.parse() method reverts the replaced/escaped characters to the original user input characters.
     var textbox = requestBodyObject.textbox; // textbox control. // "" (default). // "aa".
-    var textboxWithPreenteredText = requestBodyObject.textboxWithPreenteredText; // textboxWithPreenteredText control. // "textbox pre-entered text" (default). // .
+    var textboxWithPreenteredText = requestBodyObject.textboxWithPreenteredText; // textboxWithPreenteredText control. // "textbox pre-entered text" (default). // "".
     var textarea = requestBodyObject.textarea; // textarea control. // "" (default). // "aa".
-    var textareaWithPreenteredText = requestBodyObject.textareaWithPreenteredText; // textareaWithPreenteredText control. // "textarea pre-entered text" (default). // .
-    var requestBodyArray = requestBody.split("&", 6); // requestBodyArray elements; 1.) include form control name attribute values and form control submitted values, and 2.) include raw request body replaced/escaped characters (eg, in requestBody, user input space, &, =, and + characters are replaced by +, %26, %3D, and %2B, respectively). Use in all table Data Sent On Last Submit column cells.
+    var textareaWithPreenteredText = requestBodyObject.textareaWithPreenteredText; // textareaWithPreenteredText control. // "textarea pre-entered text" (default). // "".
+    var requestBodyArray = requestBody.split("&", 6); // requestBodyArray elements are; 1.) controlNameAttributeValue=controlUserInputValue pairs, and 2.) controlUserInputValues include requestBody replaced/escaped characters (ie, in requestBody, user input space, &, =, and + characters are replaced/escaped by +, %26, %3D, and %2B, respectively).
     // requestBodyArray[0]; // textbox control. // "textbox=" (default). // "textbox=aa".
     // requestBodyArray[1]; // textboxWithPreenteredText control. // "textboxWithPreenteredText=textbox+pre-entered+text" (default). // "textboxWithPreenteredText=".
     // requestBodyArray[2]; // textarea control. // "textarea=" (default). // "textarea=aa".
     // requestBodyArray[3]; // textareaWithPreenteredText control. // "textareaWithPreenteredText=textarea+pre-entered+text" (default). // "textareaWithPreenteredText=".
     // requestBodyArray[4]; // selectbox control. // "selectbox=selectbox+option+one" (default).
     // requestBodyArray[5]; // selectboxWithOptionThreePreselected control. // "selectboxWithOptionThreePreselected=selectbox+option+three+pre-selected" (default).
-    var indexOfSelectboxWithMultipleAttributeOptionOneTwoPreselected = requestBody.indexOf("selectboxWithMultipleAttributeOptionOneTwoPreselected");    // Determine start position of data sent for selectboxWithMultipleAttributeOptionOneTwoPreselected.
-    var indexOfCheckbox = requestBody.indexOf("&checkbox"); // Determine end position of data sent for selectboxWithMultipleAttributeOptionOneTwoPreselected for when one or more of the three checkboxes are checked.
-    var indexOfRadioButtonGroup = requestBody.indexOf("&radioButtonGroup"); // Determine end position of data sent for selectboxWithMultipleAttributeOptionOneTwoPreselected for when none of the three checkboxes are checked.
-    requestBodyArray[6] = requestBody.slice(indexOfSelectboxWithMultipleAttributeOptionOneTwoPreselected, (indexOfCheckbox !== -1) ? indexOfCheckbox : indexOfRadioButtonGroup); // selectboxWithMultipleAttributeOptionOneTwoPreselected control. // Determine if none of the three checkboxes are checked. Get data sent for selectboxWithMultipleAttributeOptionOneTwoPreselected and set on requestBodyArray[6]. // "selectboxWithMultipleAttributeOptionOneTwoPreselected=selectbox+option+one+pre-selected&selectboxWithMultipleAttributeOptionOneTwoPreselected=selectbox+option+two+pre-selected" (default).
+    var indexOfSelectboxWithMultipleAttributeOptionOneTwoPreselected = requestBody.indexOf("selectboxWithMultipleAttributeOptionOneTwoPreselected"); // Determine start position of user input data submitted for selectboxWithMultipleAttributeOptionOneTwoPreselected control.
+    var indexOfCheckbox = requestBody.indexOf("&checkbox"); // Determine end position of user input data submitted for selectboxWithMultipleAttributeOptionOneTwoPreselected control for when one or more of the three checkboxes are checked.
+    var indexOfRadioButtonGroup = requestBody.indexOf("&radioButtonGroup"); // Determine end position of user input data submitted for selectboxWithMultipleAttributeOptionOneTwoPreselected control for when none of the three checkboxes are checked.
+    requestBodyArray[6] = requestBody.slice(indexOfSelectboxWithMultipleAttributeOptionOneTwoPreselected, (indexOfCheckbox !== -1) ? indexOfCheckbox : indexOfRadioButtonGroup); // selectboxWithMultipleAttributeOptionOneTwoPreselected control. // Determine if none of the three checkboxes are checked. Get user input data submitted for selectboxWithMultipleAttributeOptionOneTwoPreselected control and set on requestBodyArray[6]. // "selectboxWithMultipleAttributeOptionOneTwoPreselected=selectbox+option+one+pre-selected&selectboxWithMultipleAttributeOptionOneTwoPreselected=selectbox+option+two+pre-selected" (default).
     requestBodyArray[7] = requestBody.indexOf("&checkbox=on&") !== -1 ? "checkbox=on" : ""; // checkbox control. // Determine if checkbox control is checked. If checked, set "checkbox=on" on requestBodyArray[7]. If not checked, set "" on requestBodyArray[7]. // "" (default). // "checkbox=on".
     requestBodyArray[8] = requestBody.indexOf("&checkboxPrechecked=on&") !== -1 ? "checkboxPrechecked=on" : ""; // checkboxPrechecked control. // Determine if checkboxPrechecked control is checked. If checked, set "checkboxPrechecked=on" on requestBodyArray[8]. If not checked, set "" on requestBodyArray[8]. // "checkboxPrechecked=on" (default). // "".
     requestBodyArray[9] = requestBody.indexOf("&checkboxWithValueAttributePrechecked=valueAttributeValue&") !== -1 ? "checkboxWithValueAttributePrechecked=valueAttributeValue" : ""; // checkboxWithValueAttributePrechecked control. // Determine if checkboxWithValueAttributePrechecked control is checked. If checked, set "checkboxWithValueAttributePrechecked=valueAttributeValue" on requestBodyArray[9]. If not checked, set "" on requestBodyArray[9]. // "checkboxWithValueAttributePrechecked=valueAttributeValue" (default). // "".
@@ -70,9 +67,11 @@ const server = http.createServer((request, response) => { // Alternatively, no a
     });
     response.statusCode = 200;
     response.setHeader("Content-Type", "text/html"); // 'text/html' outputs HTML to web browser. 'text/plain' outputs text to web browser.
-    // response.write/end(`template literal syntax`) allows; 1.) to insert ${JavaScript expressions} without having to break out of and back into "HTML" mode, and 2.) to format HTML code using indenting and new lines as would normally do in an .html/.php file. This in contrast to response.write("string literal syntax") which; 1.) to insert JavaScript expression requires break out of and back into "HTML" mode, and 2.) to format HTML code using new lines requires each new line be a response.write("") statement, as in:
-    // 1 response.write("<tag>line 1 HTML content</tag>");
-    // 2 response.write("<tag>line 2 HTML content</tag>");
+    // response.write/end(`template literal syntax`) allows; 1.) to insert ${JavaScript expressions} without having to break out of and back into "HTML" mode, and 2.) to format HTML code using indenting and new lines as would normally do in an .html/.php file. This in contrast to response.write("string literal syntax") which; 1.) to insert JavaScript expression requires break out of and back into "HTML" mode, and 2.) to format HTML code using new lines requires break string character (\) (not recommended) or each line be a response.write("") statement, as in:
+    // 1 response.write("<tag>line one\ 
+    // 2 and two HTML content</tag>");
+    // 3 response.write("<tag>line three HTML content</tag>");
+    // 4 response.write("<tag>line four HTML content</tag>");
     return response.end(`
 <!DOCTYPE html>
 <html lang='en'>
@@ -259,17 +258,14 @@ const server = http.createServer((request, response) => { // Alternatively, no a
      </tr>
     </tfoot>
    </table>
-
    <p><button type='submit' class='btn-md'>Submit</button></p>
-
   </form>
-
  </body>
 </html>`);
    }
   }
  });
 });
-server.listen(port, hostname, () => { // Apparently port required.
+server.listen(port, hostname, () => { // Apparently port required, including 80.
  console.log(`Node.js web server listening on http://${hostname}:${port}/.`); // Output to terminal/command prompt.
 });
