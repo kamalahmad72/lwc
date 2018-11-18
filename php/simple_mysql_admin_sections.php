@@ -4,7 +4,7 @@
 /* File: /web_server_root_directory/php/simple_mysql_admin_sections.php.
  * Purpose: Web page <section></section> sections.
  * Used in: /web_server_root_directory/php/simple_mysql_admin.php.
- * Last reviewed/updated: 12 Nov 2018.
+ * Last reviewed/updated: 16 Nov 2018.
  * Published: 14 May 2017. */
 return
    "<section>
@@ -81,7 +81,7 @@ return
      <ol>
       <li>Download the source code zip file to your computer: <a href='/downloads/simple_mysql_admin.zip'><span class='filename'>simple_mysql_admin.zip</span> (learnwebcoding.com)</a> - v1.3.0 released 08 Apr 2018. Size: 60,089 bytes. SHA-256 checksum: 3a6dbd2b23a4acf88995baca7ae4f5fdf579d8f345a4a76af7e2900d455f8c0a.</li>
       <li>Extract the downloaded zip file. In this example, <span class='filename'>simple_mysql_admin.zip</span> is extracted to the <span class='filename'>simple_mysql_admin</span> folder:
-       <img src='/images/simple_mysql_admin/simple_mysql_admin_folder_450x342.gif' alt='Contents Extracted Zip File' />
+       <img src='/images/simple_mysql_admin/simple_mysql_admin_folder_600x456.gif' alt='The contents of the extracted zip file.' />
       </li>
       <li>Copy the <span class='filename'>simple_mysql_admin</span> folder itself, not the contents of the <span class='filename'>simple_mysql_admin</span> folder, to the root of the web server.</li>
       <li>Point your web browser to the <span class='filename'>/simple_mysql_admin/index.php</span> file on the web server.</li>

@@ -4,7 +4,7 @@
 /* File: /web_server_root_directory/javascript/javascript_techniques/breadcrumbs_navigation_sections.php.
  * Purpose: Web page <section></section> sections.
  * Used in: /web_server_root_directory/javascript/javascript_techniques/breadcrumbs_navigation.php.
- * Last reviewed/updated: 18 Oct 2018.
+ * Last reviewed/updated: 16 Nov 2018.
  * Published: 21 Sep 2016. */
 return
    "<section>
@@ -73,13 +73,9 @@ web_server_root_directory (root directory of web server) (might be named htdocs,
      <p>To try this example on your web server:</p>
 
      <ol>
-      <li>Download the following source code zip file to your computer:
-       <ul class='link-list'>
-        <li><a href='/downloads/breadcrumbs_navigation.zip'><span class='filename'>breadcrumbs_navigation.zip</span> (learnwebcoding.com)</a> - Released: 10 Mar 2018. Size: 5,258 bytes. SHA-256 checksum: 934b702ef3587de7329159da0dbb51c7ffaa133914a1e286cbb8388f50518a8c.</li>
-       </ul>
-      </li>
+      <li>Download the following source code zip file to your computer: <a href='/downloads/breadcrumbs_navigation.zip'><span class='filename'>breadcrumbs_navigation.zip</span> (learnwebcoding.com)</a> - Released: 10 Mar 2018. Size: 5,258 bytes. SHA-256 checksum: 934b702ef3587de7329159da0dbb51c7ffaa133914a1e286cbb8388f50518a8c.</li>
       <li>Extract the downloaded zip file. In this example, <span class='filename'>breadcrumbs_navigation.zip</span> is extracted to the <span class='filename'>breadcrumbs_navigation</span> folder:
-       <img src='/images/breadcrumbs_navigation/breadcrumbs_navigation_folder_461x296.gif' alt='Contents Extracted Breadcrumbs Navigation Folder' />
+       <img src='/images/breadcrumbs_navigation/breadcrumbs_navigation_folder_615x395.gif' alt='The contents of the extracted zip file.' />
       </li>
       <li>Copy the contents of the <span class='filename'>breadcrumbs_navigation</span> folder, not the <span class='filename'>breadcrumbs_navigation</span> folder itself, to the root directory of the your server.</li>
       <li>Point your web browser to the <span class='filename'>index2.html</span> file in the root directory of your web server.
