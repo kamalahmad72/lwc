@@ -4,7 +4,7 @@
 /* File: /web_server_root_directory/sitemap_sections.php.
  * Purpose: Web page sections.
  * Used in: /web_server_root_directory/sitemap.php.
- * Last reviewed/updated: 13 Nov 2018.
+ * Last reviewed/updated: 15 Nov 2018.
  * Published: 21 Sep 2016. */
 return
    "<!-- This web page does not have an h2-h6 element in the section element. To avoid W3C Markup Validation Service (http://validator.w3.org/) warning, not error (Warning: Section lacks heading. Consider using h2-h6 elements to add identifying headings to all sections.), comment out the section element. Same for index.php, sitemap.php, glossary.php, and whats_new.php.
@@ -31,7 +31,6 @@ return
         <li><a href='http://www.learnwebcoding.com/html/web_page.php'>Learn Web Coding Home Template</a></li>
         <li><a href='http://www.learnwebcoding.com/html/template_download.php'>Learn Web Coding Home Template Download</a></li>
         <li><a href='http://www.learnwebcoding.com/html/template_explained.php'>Learn Web Coding Home Template Explained</a></li>
-        <li><a href='http://www.learnwebcoding.com/html/view_submitted_form_data.php'>View Submitted Form Data</a></li>
         <li><a href='http://www.learnwebcoding.com/html/valid_html401_transitional_template.html'>Valid HTML 4.01 Transitional Template</a></li>
         <li><a href='http://www.learnwebcoding.com/html/valid_html401_strict_template.html'>Valid HTML 4.01 Strict Template</a></li>
         <li><a href='http://www.learnwebcoding.com/html/valid_xhtml10_transitional_template.html'>Valid XHTML 1.0 Transitional Template</a></li>
@@ -41,6 +40,7 @@ return
         <li><a href='http://www.learnwebcoding.com/html/blank_web_page.html'>Blank Web Page</a></li>
         <li><a href='http://www.learnwebcoding.com/html/html_testing_ground/index.php'>HTML Testing Ground</a></li>
         <li><a href='http://www.learnwebcoding.com/html/html_testing_ground/web_browser_retain_remove_content_f5.html'>Does The Web Browser Retain Or Remove Manually And Programmatically Entered/Displayed Web Page Content Upon F5 (Refresh/Reload)?</a></li>
+        <li><a href='http://www.learnwebcoding.com/html/html_testing_ground/view_form_post_urlencoded_data.php'>View Form <code>method='post' enctype='application/x-www-form-urlencoded'</code> Data</a></li>
        </ul>
       </li>
      </ul>

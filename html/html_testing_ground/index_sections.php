@@ -36,4 +36,12 @@ return
       <li><a href='/html/html_testing_ground/web_browser_retain_remove_content_f5.html'>Does The Web Browser Retain Or Remove Manually And Programmatically Entered/Displayed Web Page Content Upon F5 (Refresh/Reload)? (learnwebcoding.com)</a></li>
      </ul>
 
+     <h2><a id='formPostUrlencoded'></a>3. View Form <code>method='post' enctype='application/x-www-form-urlencoded'</code> Data</h2>
+
+     <p>A form with <code>method='post' enctype='application/x-www-form-urlencoded'</code> attributes and a Node.js web server that responds with the submitted form data:</p>
+
+     <ul class='link-list'>
+      <li><a href='/html/html_testing_ground/view_form_post_urlencoded_data.php'>View Form <code>method='post' enctype='application/x-www-form-urlencoded'</code> Data (learnwebcoding.com)</a></li>
+     </ul>
+
     </section>";
