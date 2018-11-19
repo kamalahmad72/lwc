@@ -4,7 +4,7 @@
 /* File: /web_server_root_directory/bom/web_browser_useragent_values_sections.php.
  * Purpose: Web page <section></section> sections.
  * Used in: /web_server_root_directory/bom/web_browser_useragent_values.php.
- * Last reviewed/updated: 12 Nov 2018.
+ * Last reviewed/updated: 18 Nov 2018.
  * Published: 21 Sep 2016. */
 return
    "<section>
@@ -1239,7 +1239,7 @@ return
      <p>Firefox 43.0 64-bit<br />
      mozilla/5.0 (windows nt 6.1; win64; x64; rv:43.0) gecko/20100101 firefox/43.0</p>
 
-     <div class='note normal'>The Firefox 43.0.1 - 43.0.4 user-agent string values are identical to the Firefox 43.0 user-agent string values.</div>
+     <div class='note normal'>The Firefox 43.0.1 - 43.0.4 user-agent string values are identical to the Firefox 43.0 user-agent string value.</div>
 
      <p>Firefox 43.0.1 32-bit<br />
      mozilla/5.0 (windows nt 6.1; wow64; rv:43.0) gecko/20100101 firefox/43.0</p>
@@ -1419,7 +1419,7 @@ return
      <p>Firefox 52.0 64-bit<br />
      mozilla/5.0 (windows nt 6.1; win64; x64; rv:52.0) gecko/20100101 firefox/52.0</p>
 
-     <div class='note normal'>The Firefox 52.0.1 and 52.0.2 user-agent string values are identical to the Firefox 52.0 user-agent string values.</div>
+     <div class='note normal'>The Firefox 52.0.1 and 52.0.2 user-agent string values are identical to the Firefox 52.0 user-agent string value.</div>
 
      <p>Firefox 52.0.1 32-bit<br />
      mozilla/5.0 (windows nt 6.1; wow64; rv:52.0) gecko/20100101 firefox/52.0</p>
@@ -1442,7 +1442,7 @@ return
      <div class='note normal'>
       <ul>
        <li>The version of Firefox skipped from 53.0 to 53.0.2.</li>
-       <li>The Firefox 53.0.2 and 53.0.3 user-agent string values are identical to the Firefox 53.0 user-agent string values.</li>
+       <li>The Firefox 53.0.2 and 53.0.3 user-agent string values are identical to the Firefox 53.0 user-agent string value.</li>
       </ul>
      </div>
 
@@ -1478,7 +1478,7 @@ return
      <p>Firefox 55.0 64-bit<br />
      mozilla/5.0 (windows nt 6.1; win64; x64; rv:55.0) gecko/20100101 firefox/55.0</p>
 
-     <div class='note normal'>The Firefox 55.0.1 - 55.0.3 user-agent string values are identical to the Firefox 55.0 user-agent string values.</div>
+     <div class='note normal'>The Firefox 55.0.1 - 55.0.3 user-agent string values are identical to the Firefox 55.0 user-agent string value.</div>
 
      <p>Firefox 55.0.1 32-bit<br />
      mozilla/5.0 (windows nt 6.1; wow64; rv:55.0) gecko/20100101 firefox/55.0</p>
@@ -1504,7 +1504,7 @@ return
      <p>Firefox 56.0 64-bit<br />
      mozilla/5.0 (windows nt 6.1; win64; x64; rv:56.0) gecko/20100101 firefox/56.0</p>
 
-     <div class='note normal'>The Firefox 56.0.1 and 56.0.2 user-agent string values are identical to the Firefox 56.0 user-agent string values.</div>
+     <div class='note normal'>The Firefox 56.0.1 and 56.0.2 user-agent string values are identical to the Firefox 56.0 user-agent string value.</div>
 
      <p>Firefox 56.0.1 32-bit<br />
      mozilla/5.0 (windows nt 6.1; wow64; rv:56.0) gecko/20100101 firefox/56.0</p>
@@ -1524,7 +1524,7 @@ return
      <p>Firefox 57.0 64-bit<br />
      mozilla/5.0 (windows nt 6.1; win64; x64; rv:57.0) gecko/20100101 firefox/57.0</p>
 
-     <div class='note normal'>The Firefox 57.0.1 - 57.0.4 user-agent string values are identical to the Firefox 57.0 user-agent string values.</div>
+     <div class='note normal'>The Firefox 57.0.1 - 57.0.4 user-agent string values are identical to the Firefox 57.0 user-agent string value.</div>
 
      <p>Firefox 57.0.1 32-bit<br />
      mozilla/5.0 (windows nt 6.1; wow64; rv:57.0) gecko/20100101 firefox/57.0</p>
@@ -1556,7 +1556,7 @@ return
      <p>Firefox 58.0 64-bit<br />
      mozilla/5.0 (windows nt 6.1; win64; x64; rv:58.0) gecko/20100101 firefox/58.0</p>
 
-     <div class='note normal'>The Firefox 58.0.1 and 58.0.2 user-agent string values are identical to the Firefox 58.0 user-agent string values.</div>
+     <div class='note normal'>The Firefox 58.0.1 and 58.0.2 user-agent string values are identical to the Firefox 58.0 user-agent string value.</div>
 
      <p>Firefox 58.0.1 32-bit<br />
      mozilla/5.0 (windows nt 6.1; wow64; rv:58.0) gecko/20100101 firefox/58.0</p>
@@ -1576,7 +1576,7 @@ return
      <p>Firefox 59.0 64-bit<br />
      mozilla/5.0 (windows nt 6.1; win64; x64; rv:59.0) gecko/20100101 firefox/59.0</p>
 
-     <div class='note normal'>The Firefox 59.0.1 - 59.0.3 user-agent string values are identical to the Firefox 59.0 user-agent string values.</div>
+     <div class='note normal'>The Firefox 59.0.1 - 59.0.3 user-agent string values are identical to the Firefox 59.0 user-agent string value.</div>
 
      <p>Firefox 59.0.1 32-bit<br />
      mozilla/5.0 (windows nt 6.1; wow64; rv:59.0) gecko/20100101 firefox/59.0</p>
@@ -1602,7 +1602,7 @@ return
      <p>Firefox 60.0 64-bit<br />
      mozilla/5.0 (windows nt 6.1; win64; x64; rv:60.0) gecko/20100101 firefox/60.0</p>
 
-     <div class='note normal'>The Firefox 60.0.1 and 60.0.2 user-agent string values are identical to the Firefox 60.0 user-agent string values.</div>
+     <div class='note normal'>The Firefox 60.0.1 and 60.0.2 user-agent string values are identical to the Firefox 60.0 user-agent string value.</div>
 
      <p>Firefox 60.0.1 32-bit<br />
      mozilla/5.0 (windows nt 6.1; wow64; rv:60.0) gecko/20100101 firefox/60.0</p>
@@ -1622,7 +1622,7 @@ return
      <p>Firefox 61.0 64-bit<br />
      mozilla/5.0 (windows nt 6.1; win64; x64; rv:61.0) gecko/20100101 firefox/61.0</p>
 
-     <div class='note normal'>The Firefox 61.0.1 and 61.0.2 user-agent string values are identical to the Firefox 61.0 user-agent string values.</div>
+     <div class='note normal'>The Firefox 61.0.1 and 61.0.2 user-agent string values are identical to the Firefox 61.0 user-agent string value.</div>
 
      <p>Firefox 61.0.1 32-bit<br />
      mozilla/5.0 (windows nt 6.1; wow64; rv:61.0) gecko/20100101 firefox/61.0</p>
@@ -1645,7 +1645,7 @@ return
      <div class='note normal'>
       <ul>
        <li>The version of Firefox skipped from 62.0 to 62.0.2.</li>
-       <li>The Firefox 62.0.2 and 62.0.3 user-agent string values are identical to the Firefox 62.0 user-agent string values.</li>
+       <li>The Firefox 62.0.2 and 62.0.3 user-agent string values are identical to the Firefox 62.0 user-agent string value.</li>
       </ul>
      </div>
 
@@ -1667,12 +1667,23 @@ return
      <p>Firefox 63.0 64-bit<br />
      mozilla/5.0 (windows nt 6.1; win64; x64; rv:63.0) gecko/20100101 firefox/63.0</p>
 
-     <div class='note normal'>The Firefox 63.0.1 user-agent string value is identical to the Firefox 63.0 user-agent string value.</div>
+     <div class='note normal'>
+      <ul>
+       <li>The version of Firefox skipped from 63.0.1 to 63.0.3.</li>
+       <li>The Firefox 63.0.1 and 63.0.3 user-agent string values are identical to the Firefox 63.0 user-agent string value.</li>
+      </ul>
+     </div>
 
      <p>Firefox 63.0.1 32-bit<br />
      mozilla/5.0 (windows nt 6.1; wow64; rv:63.0) gecko/20100101 firefox/63.0</p>
 
      <p>Firefox 63.0.1 64-bit<br />
+     mozilla/5.0 (windows nt 6.1; win64; x64; rv:63.0) gecko/20100101 firefox/63.0</p>
+
+     <p>Firefox 63.0.3 32-bit<br />
+     mozilla/5.0 (windows nt 6.1; wow64; rv:63.0) gecko/20100101 firefox/63.0</p>
+
+     <p>Firefox 63.0.3 64-bit<br />
      mozilla/5.0 (windows nt 6.1; win64; x64; rv:63.0) gecko/20100101 firefox/63.0</p>
 
     </section>

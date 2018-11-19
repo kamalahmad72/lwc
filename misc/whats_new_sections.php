@@ -12,6 +12,7 @@ return
 -->
 <!-- Resources are \"Added\". Instructional pages are \"Published\". Always keep when a page is \"Added/Published\". When a page is \"Major update\" remove prior \"Updated/Major update\". When a page is \"Updated\" remove prior \"Updated\". When a page is \"Updated\" keep prior \"Major update\". When a page is \"Updated/Major update\" remove prior \"Renamed\". When a page is \"Renamed\" without being \"Updated\" keep prior \"Updated/Major update\". When a page is \"Renamed\" and \"Updated\" remove prior \"Updated\" and keep prior \"Major update\". When a page is \"Renamed\" rename all refs to the page (including Updated/Major update/Added/Published) to the new name. When a page is \"Deleted\" remove prior \"Published\", remove prior \"Updated\, and mention page \"Deleted.\". When a page is \"Moved to discontinued\" keep prior \"Published\", remove prior \"Updated\", and do not mention page \"Moved to discontinued\". -->
      <ul class='link-list'>
+      <li><a href='/javascript/web_browser_useragent_values.php'>Web Browser User-Agent String Values (learnwebcoding.com)</a> and <a href='/javascript/javascript_web_browser_detection_update.php'>JavaScript Web Browser Detection With Link To Download Update (learnwebcoding.com)</a>: Updated: 18 Nov 2018.</li>
       <li><a href='/html/html_testing_ground/view_form_post_urlencoded_data.php'>View Form <code>method='post' enctype='application/x-www-form-urlencoded'</code> Data (learnwebcoding.com)</a>: Updated: 18 Nov 2018.</li>
       <li><a href='/javascript/javascript_techniques/breadcrumbs_navigation.php'>JavaScript Technique: Breadcrumbs Navigation (learnwebcoding.com)</a>: Updated: 16 Nov 2018.</li>
       <li><a href='/html/template_download.php'>Learn Web Coding Home Template Download (learnwebcoding.com)</a>: Web page updated: 16 Nov 2018.</li>
@@ -25,7 +26,6 @@ return
       <li><a href='/javascript/javascript_shopping_cart_spa.php'>JavaScript Shopping Cart Single Page Application (learnwebcoding.com)</a> Updated: 13 Nov 2018.</li>
       <li><a href='/javascript/errata_pro_jquery_20_2nd_edition_adam_freeman.php'>Errata Pro jQuery 2.0 2nd Edition By Adam Freeman (learnwebcoding.com)</a>: Updated: 13 Nov 2018.</li>
       <li><a href='/html/view_submitted_form_data.php'>View Submitted Form Data (learnwebcoding.com)</a>: Published: 12 Nov 2018.</li>
-      <li><a href='/javascript/web_browser_useragent_values.php'>Web Browser User-Agent String Values (learnwebcoding.com)</a> and <a href='/javascript/javascript_web_browser_detection_update.php'>JavaScript Web Browser Detection With Link To Download Update (learnwebcoding.com)</a>: Updated: 12 Nov 2018.</li>
       <li><a href='/html/template_explained.php'>Learn Web Coding Home Template Explained (learnwebcoding.com)</a>: Updated: 11 Nov 2018.</li>
       <li><a href='/html/template_download.php'>Learn Web Coding Home Template Download (learnwebcoding.com)</a>: Application updated: 21 Oct 2018.</li>
       <li><a href='/index.php'>Learn Web Coding Home Page (learnwebcoding.com)</a>: Updated: 19 Oct 2018.</li>
