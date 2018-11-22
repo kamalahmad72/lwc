@@ -1398,6 +1398,64 @@ appVersion: 4.0 (compatible; MSIE 7.0; Windows NT 10.0; WOW64; Trident/7.0; .NET
 parseFloatAppVersion: 4
 platform: Win32
 
+---
+
+<!-- Windows 10 Version 1809 Build 17763.107 32-bit = Installed 10 Professional from MSDN subscriptions Windows 10 (consumer edition) Version 1809 (Updated Sept 2018) (x86) - DVD (English) Win10_1809Oct_English_x32.iso. -->
+
+Microsoft Edge 44 included with Windows 10 Version 1809 Build 17763.107 32-bit (Microsoft Edge 44.17763.1.0. Microsoft EdgeHTML 18.17763.)
+<!-- Run Edge via; 1.) Desktop icon, 2.) Taskbar icon, 3.) Start | M | Microsoft Edge, 4.) Start | Explore | Microsoft Edge. -->
+appName: Netscape
+userAgent: mozilla/5.0 (windows nt 10.0) applewebkit/537.36 (khtml, like gecko) chrome/64.0.3282.140 safari/537.36 edge/18.17763
+appVersion: 5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/18.17763
+parseFloatAppVersion: 5
+platform: Win32
+
+<!-- Apparently Compatibility View does not exits in Edge. -->
+
+Internet Explorer 11.0 included with Windows 10 Version 1809 Build 17763.107 32-bit (IE 11.55.17763.0)
+<!-- Run IE via; 1.) Cortana | Enter Internet Explorer | Enter, 2.) Edge | Settings and more | More tools | Open with Internet Explorer. -->
+appName: Netscape
+userAgent: mozilla/5.0 (windows nt 10.0; trident/7.0; .net4.0c; .net4.0e; rv:11.0) like gecko
+appVersion: 5.0 (Windows NT 10.0; Trident/7.0; .NET4.0C; .NET4.0E; rv:11.0) like Gecko
+parseFloatAppVersion: 5
+platform: Win32
+
+Internet Explorer 11.0 included with Windows 10 Version 1809 Build 17763.107 32-bit (Compatibility View) (IE 11.55.17763.0)
+(Toggling Compatibility View apparently requires viewing page via web server.)
+appName: Microsoft Internet Explorer
+userAgent: mozilla/4.0 (compatible; msie 7.0; windows nt 10.0; trident/7.0; .net4.0c; .net4.0e)
+appVersion: 4.0 (compatible; MSIE 7.0; Windows NT 10.0; Trident/7.0; .NET4.0C; .NET4.0E)
+parseFloatAppVersion: 4
+platform: Win32
+
+<!-- Windows 10 Version 1809 Build 17763.107 64-bit = Installed 10 Professional from MSDN subscriptions Windows 10 (consumer edition) Version 1809 (Updated Sept 2018) (x64) - DVD (English) Win10_1809Oct_English_x64.iso. -->
+
+Microsoft Edge 44 included with Windows 10 Version 1809 Build 17763.107 64-bit (Microsoft Edge 44.17763.1.0. Microsoft EdgeHTML 18.17763.)
+<!-- Run Edge via; 1.) Desktop icon, 2.) Taskbar icon, 3.) Start | M | Microsoft Edge, 4.) Start | Explore | Microsoft Edge. -->
+appName: Netscape
+userAgent: mozilla/5.0 (windows nt 10.0; win64; x64) applewebkit/537.36 (khtml, like gecko) chrome/64.0.3282.140 safari/537.36 edge/18.17763
+appVersion: 5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/18.17763
+parseFloatAppVersion: 5
+platform: Win32
+
+<!-- Apparently Compatibility View does not exits in Edge. -->
+
+Internet Explorer 11.0 included with Windows 10 Version 1809 Build 17763.107 64-bit (IE 11.55.17763.0)
+<!-- Run IE via; 1.) Cortana | Enter Internet Explorer | Enter, 2.) Edge | Settings and more | More tools | Open with Internet Explorer. -->
+appName: Netscape
+userAgent: mozilla/5.0 (windows nt 10.0; wow64; trident/7.0; .net4.0c; .net4.0e; rv:11.0) like gecko
+appVersion: 5.0 (Windows NT 10.0; WOW64; Trident/7.0; .NET4.0C; .NET4.0E; rv:11.0) like Gecko
+parseFloatAppVersion: 5
+platform: Win32
+
+Internet Explorer 11.0 included with Windows 10 Version 1809 Build 17763.107 64-bit (Compatibility View) (IE 11.55.17763.0)
+(Toggling Compatibility View apparently requires viewing page via web server.)
+appName: Microsoft Internet Explorer
+userAgent: mozilla/4.0 (compatible; msie 7.0; windows nt 10.0; wow64; trident/7.0; .net4.0c; .net4.0e)
+appVersion: 4.0 (compatible; MSIE 7.0; Windows NT 10.0; WOW64; Trident/7.0; .NET4.0C; .NET4.0E)
+parseFloatAppVersion: 4
+platform: Win32
+
 Firebird 0.6
 
 appName: Netscape

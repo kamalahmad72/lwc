@@ -4,7 +4,7 @@
 /* File: /web_server_root_directory/bom/versions_ie_ed_windows_sections.php.
  * Purpose: Web page <section></section> sections.
  * Used in: /web_server_root_directory/bom/versions_ie_ed_windows.php.
- * Last reviewed/updated: 18 Oct 2018.
+ * Last reviewed/updated: 22 Nov 2018.
  * Published: 21 Sep 2016. */
 return
    "<section>
@@ -78,7 +78,8 @@ Since the version of software bundled with Windows has been the same for Windows
 
       <li>Windows 10 Version 1709 = Installed Windows 10 Professional from MSDN subscriptions Windows 10 (multi-edition) Version 1709 (Updated Sept 2017) (x64) - DVD (English) en_windows_10_multi-edition_version_1709_updated_sept_2017_x64_dvd_100090817.iso.</li>
       <li>Windows 10 Version 1803 = Installed Windows 10 Professional from MSDN subscriptions Windows 10 (consumer editions) Version 1803 (Updated March 2018) (x64) - DVD (English) en_windows_10_consumer_editions_version_1803_updated_march_2018_x64_dvd_12063379.iso.</li>
-      <li>Windows 10 Version 1809 = Installed Windows 10 Professional from MSDN subscriptions Windows 10 (consumer edition) Version 1809 (Updated Sept 2018) (x64) - DVD (English) en_windows_10_consumer_edition_version_1809_updated_sept_2018_x64_dvd_5c2f3f9a.iso.</li>
+      <li>Windows 10 Version 1809 (10.0.17763.1) = Installed Windows 10 Professional from MSDN subscriptions Windows 10 (consumer edition) Version 1809 (Updated Sept 2018) (x64) - DVD (English) (v1_02Oct18) en_windows_10_consumer_edition_version_1809_updated_sept_2018_x64_dvd_5c2f3f9a.iso.</li>
+      <li>Windows 10 Version 1809 (10.0.17763.107) = Installed Windows 10 Professional from MSDN subscriptions Windows 10 (consumer edition) Version 1809 (Updated Sept 2018) (x64) - DVD (English) (v2_13Nov18) Win10_1809Oct_English_x64.iso.</li>
      </ul>
 -->
 
@@ -330,6 +331,7 @@ http://blogs.windows.com/windows/b/windowsexperience/archive/2014/04/08/why-i-lo
       <ul>
        <li>On Windows 10, the default web browser is Edge, not Internet Explorer.</li>
        <li>On Windows 10 64-bit, Edge is 64-bit and Internet Explorer is 32-bit.</li>
+       <li>There are two official releases of Windows 10 Version 1809; 1.) Build 10.0.17763.1 released 02 Oct 2018, and 2.) Build 10.0.17763.107 released 13 Nov 2018. For additional information, see <a href='https://blogs.windows.com/windowsexperience/2018/10/09/updated-version-of-windows-10-october-2018-update-released-to-windows-insiders/'>Updated Version Of Windows 10 October 2018 Update Released To Windows Insiders (blogs.windows.com)</a> and <a href='https://blogs.windows.com/windowsexperience/2018/11/13/resuming-the-rollout-of-the-windows-10-october-2018-update/'>Resuming The Rollout Of The Windows 10 October 2018 Update (blogs.windows.com)</a>.</li>
       </ul>
      </div>
 
@@ -347,12 +349,6 @@ http://blogs.windows.com/windows/b/windowsexperience/archive/2014/04/08/why-i-lo
          (10.0.14393.0)</th><!-- Redstone 1/Anniversary Update -->
         <th>10 Version 1703<br />
          (10.0.15063.0)</th><!-- Redstone 2/Creators Update -->
-        <th>10 Version 1709<br />
-         (10.0.16299.15)</th><!-- Redstone 3/Fall Creators Update -->
-        <th>10 Version 1803<br />
-         (10.0.17134.1)</th><!-- Redstone 4/April 2018 Update -->
-        <th>10 Version 1809<br />
-         (10.0.17763.1)</th><!-- Redstone 5/October 2018 Update -->
        </tr>
       </thead>
       <tbody>
@@ -363,9 +359,6 @@ http://blogs.windows.com/windows/b/windowsexperience/archive/2014/04/08/why-i-lo
         <td>12 Nov 2015</td>
         <td>02 Aug 2016</td>
         <td>11 Apr 2017</td>
-        <td>17 Oct 2017</td>
-        <td>30 Apr 2018</td>
-        <td>02 Oct 2018</td>
        </tr>
        <tr>
         <th>Included With</th>
@@ -397,6 +390,44 @@ http://blogs.windows.com/windows/b/windowsexperience/archive/2014/04/08/why-i-lo
           <li>IE11.0.15063.0.</li>
          </ul>
         </td>
+       </tr>
+       <tr>
+        <th>Also Supports</th>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+       </tr>
+      <tbody>
+     </table>
+
+     <table>
+      <caption>Versions Of ED And IE Included With And Supported By Windows 10</caption>
+      <thead>
+       <tr>
+        <th>Windows<br />
+         (Build)</th>
+        <th>10 Version 1709<br />
+         (10.0.16299.15)</th><!-- Redstone 3/Fall Creators Update -->
+        <th>10 Version 1803<br />
+         (10.0.17134.1)</th><!-- Redstone 4/April 2018 Update -->
+        <th>10 Version 1809<br />
+         (10.0.17763.1)</th><!-- Redstone 5/October 2018 Update -->
+        <th>10 Version 1809<br />
+         (10.0.17763.107)</th><!-- Redstone 5/October 2018 Update -->
+       </tr>
+      </thead>
+      <tbody>
+       <tr>
+        <th>General<br />
+         Availability</th>
+        <td>17 Oct 2017</td>
+        <td>30 Apr 2018</td>
+        <td>02 Oct 2018</td>
+        <td>13 Nov 2018</td>
+       </tr>
+       <tr>
+        <th>Included With</th>
         <td>
          <ul>
           <li>ED41.16299.15.0<br />
@@ -418,12 +449,16 @@ http://blogs.windows.com/windows/b/windowsexperience/archive/2014/04/08/why-i-lo
           <li>IE11.1.17763.0.</li>
          </ul>
         </td>
+        <td>
+         <ul>
+          <li>ED 44.17763.1.0<br />
+           (EdgeHTML 18.17763).</li>
+          <li>IE 11.55.17763.0.</li>
+         </ul>
+        </td>
        </tr>
        <tr>
         <th>Also Supports</th>
-        <td>-</td>
-        <td>-</td>
-        <td>-</td>
         <td>-</td>
         <td>-</td>
         <td>-</td>
@@ -444,6 +479,8 @@ http://blogs.windows.com/windows/b/windowsexperience/archive/2014/04/08/why-i-lo
       <li><a href='http://www.microsoft.com/en-us/download/internet-explorer-9-details.aspx'>Microsoft Download Center: Internet Explorer 9 (microsoft.com)</a></li>
       <li><a href='http://www.microsoft.com/en-us/download/internet-explorer-10-details.aspx'>Microsoft Download Center: Internet Explorer 10 (microsoft.com)</a></li>
       <li><a href='http://www.microsoft.com/en-us/download/details.aspx?id=40902'>Microsoft Download Center: Internet Explorer 11 for Windows 7 (microsoft.com)</a></li>
+      <li><a href='https://blogs.windows.com/windowsexperience/2018/10/09/updated-version-of-windows-10-october-2018-update-released-to-windows-insiders/'>Updated Version Of Windows 10 October 2018 Update Released To Windows Insiders (blogs.windows.com)</a></li>
+      <li><a href='https://blogs.windows.com/windowsexperience/2018/11/13/resuming-the-rollout-of-the-windows-10-october-2018-update/'>Resuming The Rollout Of The Windows 10 October 2018 Update (blogs.windows.com)</a></li>
      </ul>
 
     </section>";

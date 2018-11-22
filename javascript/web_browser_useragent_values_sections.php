@@ -4,7 +4,7 @@
 /* File: /web_server_root_directory/bom/web_browser_useragent_values_sections.php.
  * Purpose: Web page <section></section> sections.
  * Used in: /web_server_root_directory/bom/web_browser_useragent_values.php.
- * Last reviewed/updated: 21 Nov 2018.
+ * Last reviewed/updated: 22 Nov 2018.
  * Published: 21 Sep 2016. */
 return
    "<section>
@@ -534,6 +534,8 @@ return
 
      <h4><a id='ediew10v1809'></a>2.8.7. Edge and Internet Explorer For Windows 10 Version 1809</h4>
 
+     <div class='note normal'>There are two official releases of Windows 10 Version 1809; 1.) Build 17763.1 released 02 Oct 2018, and 2.) Build 17763.107 released 13 Nov 2018. For additional information, see <a href='https://blogs.windows.com/windowsexperience/2018/10/09/updated-version-of-windows-10-october-2018-update-released-to-windows-insiders/'>Updated Version Of Windows 10 October 2018 Update Released To Windows Insiders (blogs.windows.com)</a> and <a href='https://blogs.windows.com/windowsexperience/2018/11/13/resuming-the-rollout-of-the-windows-10-october-2018-update/'>Resuming The Rollout Of The Windows 10 October 2018 Update (blogs.windows.com)</a>.</div>
+
 <!-- Windows 10 Version 1809 Build 17763.1 32-bit = Installed 10 Professional from MSDN subscriptions Windows 10 (consumer edition) Version 1809 (Updated Sept 2018) (x86) - DVD (English) en_windows_10_consumer_edition_version_1809_updated_sept_2018_x86_dvd_0addd9ef.iso. -->
 
      <p>Edge 44 included with Windows 10 Version 1809 Build 17763.1 32-bit (Edge 44.17763.1.0. EdgeHTML 18.17763.)<br />
@@ -554,6 +556,30 @@ return
      mozilla/5.0 (windows nt 10.0; wow64; trident/7.0; .net4.0c; .net4.0e; rv:11.0) like gecko</p>
 
      <p>Internet Explorer 11.0 included with Windows 10 Version 1809 Build 17763.1 64-bit (Compatibility View) (IE 11.1.17763.0)<br />
+     mozilla/4.0 (compatible; msie 7.0; windows nt 10.0; wow64; trident/7.0; .net4.0c; .net4.0e)</p>
+
+     <div class='note normal'>The Windows 10 Version 1809 Build 17763.107 Edge and Internet Explorer user-agent string values are identical to the Windows 10 Version 1809 Build 17763.1 Edge and Internet Explorer user-agent string values.</div>
+
+<!-- Windows 10 Version 1809 Build 17763.107 32-bit = Installed 10 Professional from MSDN subscriptions Windows 10 (consumer edition) Version 1809 (Updated Sept 2018) (x86) - DVD (English) Win10_1809Oct_English_x32.iso. -->
+
+     <p>Edge 44 included with Windows 10 Version 1809 Build 17763.107 32-bit (Edge 44.17763.1.0. EdgeHTML 18.17763.)<br />
+     mozilla/5.0 (windows nt 10.0) applewebkit/537.36 (khtml, like gecko) chrome/64.0.3282.140 safari/537.36 edge/18.17763</p>
+
+     <p>Internet Explorer 11.0 included with Windows 10 Version 1809 Build 17763.107 32-bit (IE 11.55.17763.0)<br />
+     mozilla/5.0 (windows nt 10.0; trident/7.0; .net4.0c; .net4.0e; rv:11.0) like gecko</p>
+
+     <p>Internet Explorer 11.0 included with Windows 10 Version 1809 Build 17763.107 32-bit (Compatibility View) (IE 11.55.17763.0)<br />
+     mozilla/4.0 (compatible; msie 7.0; windows nt 10.0; trident/7.0; .net4.0c; .net4.0e)</p>
+
+<!-- Windows 10 Version 1809 Build 17763.107 64-bit = Installed 10 Professional from MSDN subscriptions Windows 10 (consumer edition) Version 1809 (Updated Sept 2018) (x64) - DVD (English) Win10_1809Oct_English_x64.iso. -->
+
+     <p>Edge 44 included with Windows 10 Version 1809 Build 17763.107 64-bit (Edge 44.17763.1.0. EdgeHTML 18.17763.)<br />
+     mozilla/5.0 (windows nt 10.0; win64; x64) applewebkit/537.36 (khtml, like gecko) chrome/64.0.3282.140 safari/537.36 edge/18.17763</p>
+
+     <p>Internet Explorer 11.0 included with Windows 10 Version 1809 Build 17763.107 64-bit (IE 11.55.17763.0)<br />
+     mozilla/5.0 (windows nt 10.0; wow64; trident/7.0; .net4.0c; .net4.0e; rv:11.0) like gecko</p>
+
+     <p>Internet Explorer 11.0 included with Windows 10 Version 1809 Build 17763.107 64-bit (Compatibility View) (IE 11.55.17763.0)<br />
      mozilla/4.0 (compatible; msie 7.0; windows nt 10.0; wow64; trident/7.0; .net4.0c; .net4.0e)</p>
 
     </section>
