@@ -4,7 +4,7 @@
 /* File: /web_server_root_directory/php/install_quickinstall_windows_sections.php.
  * Purpose: Web page <section></section> sections.
  * Used in: /web_server_root_directory/php/install_quickinstall_windows.php
- * Last reviewed/updated: 18 Oct 2018.
+ * Last reviewed/updated: 24 Nov 2018.
  * Published: 21 Sep 2016. */
 return
    "<section>
@@ -313,7 +313,7 @@ return
       <li>Download the phpBB board style software from <a href='https://www.phpbb.com/customise/db/styles/board_styles-12'>phpBB Board Styles (phpbb.com)</a>. If the phpBB board style is a child style and the parent style is not already installed on the phpBB board software, also download the parent style. In this example, the <a href='https://www.phpbb.com/customise/db/style/prosilver_special_edition/'>phpBB prosilver Special Edition 3.2.1 (phpbb.com)</a> style was downloaded. prosilver Special Edition 3.2.1 is a child style of prosilver 3.2.1. prosilver 3.2.1 is the phpBB 3.2.1 default style and, therefore, is already installed on phpBB 3.2.1. As a result, in this example, there is no need to download a parent style.</li>
       <li>Extract the downloaded file(s). In this example, the downloaded <span class='filename'>prosilver_se_3.2.1.zip</span> file was extracted to the <span class='filename'>prosilver_se</span> folder.</li>
       <li>Copy the phpBB board style software folder(s) to the phpBB board software <span class='filename'>styles</span> directory. In this example, the <span class='filename'>prosilver_se</span> phpBB board style software folder was copied to the phpBB board software <span class='filename'>styles</span> directory as <span class='filename'>C:\\xampp\\htdocs\\quickinstall\\boards\\phpbb321\\styles\\prosilver_se\\</span>. As a result of the copy, the phpBB board software <span class='filename'>styles</span> directory contains the prosilver parent style (<span class='filename'>prosilver</span>) and the prosilver Special Edition child style (<span class='filename'>prosilver_se</span>):
-       <img src='/images/install_quickinstall_windows/prosilver_se_copied_to_board_software_styles_directory_544x452.gif' alt='prosilver Special Edition Copied To phpBB Board Software styles Directory' />
+       <img src='/images/install_quickinstall_windows/prosilver_se_copied_to_board_software_styles_directory_570x603.gif' alt='prosilver Special Edition Copied To phpBB Board Software styles Directory' />
        <div class='note normal'>The phpBB 3.2.x board software <span class='filename'>styles\\all</span> directory is not a phpBB board style software folder and can be ignored.</div>
       </li>
      </ol>

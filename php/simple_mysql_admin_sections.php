@@ -4,7 +4,7 @@
 /* File: /web_server_root_directory/php/simple_mysql_admin_sections.php.
  * Purpose: Web page <section></section> sections.
  * Used in: /web_server_root_directory/php/simple_mysql_admin.php.
- * Last reviewed/updated: 16 Nov 2018.
+ * Last reviewed/updated: 23 Nov 2018.
  * Published: 14 May 2017. */
 return
    "<section>
@@ -47,15 +47,15 @@ return
 
      <p>Requirements tab:</p>
 
-     <img src='/images/simple_mysql_admin/requirements_tab_600x450.gif' alt='Simple MySQL Admin Requirements Tab' class='box-shadow' />
+     <img src='/images/simple_mysql_admin/requirements_tab_800x600.gif' alt='Simple MySQL Admin Requirements Tab' class='box-shadow' />
 
      <p>User accounts tab:</p>
 
-     <img src='/images/simple_mysql_admin/user_accounts_tab_600x450.gif' alt='Simple MySQL Admin User Accounts Tab' class='box-shadow' />
+     <img src='/images/simple_mysql_admin/user_accounts_tab_800x600.gif' alt='Simple MySQL Admin User Accounts Tab' class='box-shadow' />
 
      <p>Databases tab:</p>
 
-     <img src='/images/simple_mysql_admin/databases_tab_600x450.gif' alt='Simple MySQL Admin Databases Tab' class='box-shadow' />
+     <img src='/images/simple_mysql_admin/databases_tab_800x600.gif' alt='Simple MySQL Admin Databases Tab' class='box-shadow' />
 
      <h3><a id='security'></a>1.5. Security</h3>
 
