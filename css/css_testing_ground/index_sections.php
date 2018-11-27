@@ -4,7 +4,7 @@
 /* File: /web_server_root_directory/css/css_testing_ground/index_sections.php.
  * Purpose: Web page <section></section> sections.
  * Used in: /web_server_root_directory/css/css_testing_ground/index.php.
- * Last reviewed/updated: 18 Oct 2018.
+ * Last reviewed/updated: 26 Nov 2018.
  * Published: 21 Sep 2016. */
 return
    "<section>
@@ -30,7 +30,7 @@ return
 
      <h2><a id='userAgentStyles'></a>2. Visualize User Agent Styles</h2>
 
-     <p>A demonstration of user agent styles:</p>
+     <p>A visual demonstration of user agent styles:</p>
 
      <ul class='link-list'>
       <li><a href='/css/css_testing_ground/visualize_user_agent_styles.html'>Visualize User Agent Styles (learnwebcoding.com)</a>
@@ -44,7 +44,7 @@ return
 
      <h2><a id='bootstrap337Styles'></a>3. Visualize Bootstrap v3.3.7 Styles</h2>
 
-     <p>A demonstration of Bootstrap v3.3.7 styles:</p>
+     <p>A visual demonstration of Bootstrap v3.3.7 styles:</p>
 
      <ul class='link-list'>
       <li><a href='/css/css_testing_ground/visualize_bootstrap_337_styles.html'>Visualize Bootstrap v3.3.7 Styles (learnwebcoding.com)</a></li>
@@ -56,7 +56,7 @@ return
 
      <h2><a id='bootstrap33xMediaQueryViewportBreakpoints'></a>4. Visualize Bootstrap v3.3.x Media Query Viewport Breakpoints</h2>
 
-     <p>A demonstration of Bootstrap v3.3.x media query viewport breakpoints:</p>
+     <p>A visual demonstration of Bootstrap v3.3.x media query viewport breakpoints:</p>
 
      <ul class='link-list'>
       <li><a href='/css/css_testing_ground/visualize_bootstrap_33x_media_query_viewport_breakpoints.html'>Visualize Bootstrap v3.3.x Media Query Viewport Breakpoints (learnwebcoding.com)</a></li>
