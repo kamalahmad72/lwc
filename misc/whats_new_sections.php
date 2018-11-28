@@ -4,7 +4,7 @@
 /* File: /web_server_root_directory/misc/whats_new_sections.php.
  * Purpose: Web page <section></section> sections.
  * Used in: /web_server_root_directory/misc/whats_new.php.
- * Last reviewed/updated: 26 Nov 2018.
+ * Last reviewed/updated: 27 Nov 2018.
  * Published: 21 Sep 2016. */
 return
    "<!-- This web page does not have an h2-h6 element in the section element. To avoid W3C Markup Validation Service (http://validator.w3.org/) warning, not error (Warning: Section lacks heading. Consider using h2-h6 elements to add identifying headings to all sections.), comment out the section element. Same for index.php, sitemap.php, glossary.php, and whats_new.php.
@@ -12,8 +12,13 @@ return
 -->
 <!-- Resources are \"Added\". Instructional pages are \"Published\". Always keep when a page is \"Added/Published\". When a page is \"Major update\" remove prior \"Updated/Major update\". When a page is \"Updated\" remove prior \"Updated\". When a page is \"Updated\" keep prior \"Major update\". When a page is \"Updated/Major update\" remove prior \"Renamed\". When a page is \"Renamed\" without being \"Updated\" keep prior \"Updated/Major update\". When a page is \"Renamed\" and \"Updated\" remove prior \"Updated\" and keep prior \"Major update\". When a page is \"Renamed\" rename all refs to the page (including Updated/Major update/Added/Published) to the new name. When a page is \"Deleted\" remove prior \"Published\", remove prior \"Updated\, and mention page \"Deleted.\". When a page is \"Moved to discontinued\" keep prior \"Published\", remove prior \"Updated\", and do not mention page \"Moved to discontinued\". -->
      <ul class='link-list'>
-      <li><a href='/css/css_testing_ground/index.php'>CSS Testing Ground (learnwebcoding.com)</a>: Updated: 26 Nov 2018.</li>
-      <li><a href='/css/css_testing_ground/visualize_user_agent_styles.html'>Visualize User Agent Styles (learnwebcoding.com)</a>, <a href='/css/css_testing_ground/visualize_bootstrap_337_styles.html'>Visualize Bootstrap v3.3.7 Styles (learnwebcoding.com)</a>, and <a href='/css/css_testing_ground/visualize_bootstrap_33x_media_query_viewport_breakpoints.html'>Visualize Bootstrap v3.3.x Media Query Viewport Breakpoints (learnwebcoding.com)</a>: Updated: 26 Nov 2018.</li>
+      <li>Visualize User Agent Styles and Visualize Bootstrap v3.3.7 Styles merged into <a href='/css/css_testing_ground/visualize_user_agent_or_bootstrap_styles.html'>Visualize User Agent Or Bootstrap Styles (learnwebcoding.com)</a>: Published: 27 Nov 2018.</li>
+      <li><a href='/css/css_testing_ground/index.php'>CSS Testing Ground (learnwebcoding.com)</a>: Updated: 27 Nov 2018.</li>
+      <li><a href='/css/index.php'>CSS (learnwebcoding.com)</a> Landing Page: Updated: 27 Nov 2018.</li>
+      <li><a href='/misc/original_content.php'>Original Content (learnwebcoding.com)</a>: Updated: 27 Nov 2018.</li>
+      <li><a href='/sitemap.xml'>Learn Web Coding Site Map (XML Version Per Sitemaps.org) (learnwebcoding.com)</a>: Updated: 27 Nov 2018.</li><!-- Submit to Google Webmaster Tools. -->
+      <li><a href='/sitemap.php'>Learn Web Coding Site Map (HTML Version) (learnwebcoding.com)</a>: Updated: 27 Nov 2018.</li>
+      <li><a href='/css/css_testing_ground/visualize_bootstrap_33x_media_query_viewport_breakpoints.html'>Visualize Bootstrap v3.3.x Media Query Viewport Breakpoints (learnwebcoding.com)</a>: Updated: 26 Nov 2018.</li>
       <li><a href='/javascript/web_browser_useragent_values.php'>Web Browser User-Agent String Values (learnwebcoding.com)</a> and <a href='/javascript/javascript_web_browser_detection_update.php'>JavaScript Web Browser Detection With Link To Download Update (learnwebcoding.com)</a>: Updated: 24 Nov 2018.</li>
       <li><a href='/php/install_quickinstall_windows.php'>Install phpBB QuickInstall On Your Local Windows Web Server To Develop phpBB Board Styles (learnwebcoding.com)</a>: Updated: 24 Nov 2018.</li>
       <li><a href='/php/simple_mysql_admin.php'>Simple MySQL Admin (learnwebcoding.com)</a>: Web page updated: 23 Nov 2018.</li>
@@ -23,9 +28,6 @@ return
       <li><a href='/html/template_download.php'>Learn Web Coding Home Template Download (learnwebcoding.com)</a>: Web page updated: 16 Nov 2018.</li>
       <li><a href='/html/html_testing_ground/index.php'>HTML Testing Ground (learnwebcoding.com)</a>: Updated: 15 Nov 2018.</li>
       <li><a href='/html/index.php'>HTML (learnwebcoding.com)</a> Landing Page: Updated: 15 Nov 2018.</li>
-      <li><a href='/misc/original_content.php'>Original Content (learnwebcoding.com)</a>: Updated: 15 Nov 2018.</li>
-      <li><a href='/sitemap.xml'>Learn Web Coding Site Map (XML Version Per Sitemaps.org) (learnwebcoding.com)</a>: Updated: 15 Nov 2018.</li><!-- Submit to Google Webmaster Tools. -->
-      <li><a href='/sitemap.php'>Learn Web Coding Site Map (HTML Version) (learnwebcoding.com)</a>: Updated: 15 Nov 2018.</li>
       <li><a href='/javascript/angularjs_shopping_cart_spa.php'>AngularJS Shopping Cart Single Page Application (learnwebcoding.com)</a> Updated: 13 Nov 2018.</li>
       <li><a href='/javascript/javascript_shopping_cart_spa.php'>JavaScript Shopping Cart Single Page Application (learnwebcoding.com)</a> Updated: 13 Nov 2018.</li>
       <li><a href='/javascript/errata_pro_jquery_20_2nd_edition_adam_freeman.php'>Errata Pro jQuery 2.0 2nd Edition By Adam Freeman (learnwebcoding.com)</a>: Updated: 13 Nov 2018.</li>
@@ -33,7 +35,6 @@ return
       <li><a href='/html/template_explained.php'>Learn Web Coding Home Template Explained (learnwebcoding.com)</a>: Updated: 11 Nov 2018.</li>
       <li><a href='/html/template_download.php'>Learn Web Coding Home Template Download (learnwebcoding.com)</a>: Application updated: 21 Oct 2018.</li>
       <li><a href='/index.php'>Learn Web Coding Home Page (learnwebcoding.com)</a>: Updated: 19 Oct 2018.</li>
-      <li><a href='/css/index.php'>CSS (learnwebcoding.com)</a> Landing Page: Updated: 26 Sep 2018.</li>
       <li><a href='/javascript/index.php'>JavaScript (learnwebcoding.com)</a> Landing Page: Updated: 04 Sep 2018.</li>
       <li><a href='/javascript/javascript_reference/setTimeout_method.php'>JavaScript Feature Reference: <code>setTimeout()</code> Method Web Browser Support Test (learnwebcoding.com)</a>: Updated: 29 Jul 2018.</li>
       <li><a href='/javascript/javascript_reference/index.php'>JavaScript Feature Reference (learnwebcoding.com)</a>: Updated: 29 Jul 2018.</li>

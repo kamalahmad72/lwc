@@ -4,7 +4,7 @@
 /* File: /web_server_root_directory/sitemap_sections.php.
  * Purpose: Web page sections.
  * Used in: /web_server_root_directory/sitemap.php.
- * Last reviewed/updated: 15 Nov 2018.
+ * Last reviewed/updated: 27 Nov 2018.
  * Published: 21 Sep 2016. */
 return
    "<!-- This web page does not have an h2-h6 element in the section element. To avoid W3C Markup Validation Service (http://validator.w3.org/) warning, not error (Warning: Section lacks heading. Consider using h2-h6 elements to add identifying headings to all sections.), comment out the section element. Same for index.php, sitemap.php, glossary.php, and whats_new.php.
@@ -62,10 +62,9 @@ return
         <li><a href='http://www.learnwebcoding.com/css/css_techniques/style_checkboxes_radio_buttons.php'>CSS Technique: Style Checkboxes And Radio Buttons</a></li>
         <li><a href='http://www.learnwebcoding.com/css/css_techniques/reveal_fixed_footer_upon_scrolling.php'>CSS Technique: Reveal Fixed Web Page Footer Upon Scrolling</a></li>
         <li><a href='http://www.learnwebcoding.com/css/css_testing_ground/index.php'>CSS Testing Ground</a></li>
-        <li><a href='http://www.learnwebcoding.com/css/css_testing_ground/visualize_user_agent_styles.html'>Visualize User Agent Styles</a>
+        <li><a href='http://www.learnwebcoding.com/css/css_testing_ground/visualize_user_agent_or_bootstrap_styles.html'>Visualize User Agent Or Bootstrap Styles</a>
          <div class='note normal'>In Edge, to avoid an apparent load issue related to the <code>template</code> element example, right click and select <kbd>Open in new tab</kbd>.</div>
         </li>
-        <li><a href='http://www.learnwebcoding.com/css/css_testing_ground/visualize_bootstrap_337_styles.html'>Visualize Bootstrap v3.3.7 Styles</a></li>
         <li><a href='http://www.learnwebcoding.com/css/css_testing_ground/visualize_bootstrap_33x_media_query_viewport_breakpoints.html'>Visualize Bootstrap v3.3.x Media Query Viewport Breakpoints</a></li>
         <li><a href='http://www.learnwebcoding.com/css/css_testing_ground/visualize_display_inline_compared_to_display_inline_block.html'>Visualize CSS Style <code>display: inline</code> Compared To <code>display: inline-block</code></a></li>
         <li><a href='http://www.learnwebcoding.com/css/css_testing_ground/visualize_em_compared_to_rem.html'>Visualize CSS Unit <code>em</code> Compared To <code>rem</code></a></li>
