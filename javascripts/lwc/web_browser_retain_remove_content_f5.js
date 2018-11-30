@@ -3,11 +3,11 @@
 /* File: /web_server_root_directory/javascripts/lwc/web_browser_retain_remove_content_f5.js.
  * Purpose: Programmatically display web page content when; 1.) check checkbox in Introduction section demonstration, and 2.) click Click To Complete The Programmatic Items Below button.
  * Used in: web_browser_retain_remove_content_f5.html.
- * Last reviewed/updated: 10 Mar 2018.
+ * Last reviewed/updated: 28 Nov 2018.
  * Published: 03 Feb 2015.
  * Unobtrusive: 1.) decouple HTML/JavaScript: a.) no register JavaScript event handlers in HTML via HTML attributes (eg, onload and onclick), and b.) no embed JavaScripts in HTML via HTML script element; 2.) as reasonable, decouple CSS/JavaScript. Eg, as reasonable, use JavaScript to change HTML class attribute value assignments (loose coupling), not use JavaScript to change JavaScript style object CSS property value assignments (tight coupling); and 3.) no define JavaScript variables and functions on JavaScript global scope.
- * Object: ProgCompleteFormElementUtil.
- * Web browser support: IE10+, ED12+, FF3.6+, SM2.1+, SF5.1+, CH8+, OP11.50+, which corresponds to classList property support. */
+ * Web browser support: IE10+, ED12+, FF3.6+, SM2.1+, SF5.1+, CH8+, OP11.50+, which corresponds to classList property support.
+ * Object: ProgCompleteFormElementUtil. */
 
 /* -------------------- JAVASCRIPT OBJECT DEFINITIONS -------------------- */
 
