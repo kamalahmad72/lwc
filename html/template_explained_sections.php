@@ -4,7 +4,7 @@
 /* File: /web_server_root_directory/html/template_explained_sections.php.
  * Purpose: Web page <section></section> sections.
  * Used in: /web_server_root_directory/html/template_explained.php.
- * Last reviewed/updated: 11 Nov 2018.
+ * Last reviewed/updated: 29 Nov 2018.
  * Published: 21 Sep 2016. */
 return
    "<section>
@@ -3979,18 +3979,18 @@ img {
 
      <p>Paragraph ending with a <em>colon</em> as introductory text for an image <em>without</em> the <code>class='box-shadow'</code> attribute:</p>
 
-     <img src='/images/HTML5_Logo_48.gif' alt='Why include image and/or what is image purpose. If sentence, end with period. If not sentence, end without period.' />
+     <img src='/images/lwc/image_100x100.gif' alt='Why include image and/or what is image purpose. If sentence, end with period. If not sentence, end without period.' />
 
      <p>Paragraph ending with a <em>colon</em> as introductory text for an image <em>with</em> the <code>class='box-shadow'</code> attribute:</p>
 
-     <img src='/images/HTML5_Logo_48.gif' alt='An example image with box-shadow.' class='box-shadow' />
+     <img src='/images/lwc/image_100x100.gif' alt='An example image with box-shadow.' class='box-shadow' />
 
      <p>Paragraph.</p>
 
      <ol>
       <li>Ordered list is for list items that occur in order.</li>
       <li>List item ending with a <em>colon</em> as introductory text for an image <em>without</em> the <code>class='box-shadow'</code> attribute:
-       <img src='/images/HTML5_Logo_48.gif' alt='Why Insert Image First Letter Each Word Cap End Without Period' />
+       <img src='/images/lwc/image_100x100.gif' alt='Why Insert Image First Letter Each Word Cap End Without Period' />
       </li>
      </ol>
 
@@ -3999,7 +3999,7 @@ img {
      <ul>
       <li>Unordered list is for list items that do not occur in order.</li>
       <li>List item ending with a <em>colon</em> as introductory text for an image <em>with</em> the <code>class='box-shadow'</code> attribute:
-       <img src='/images/HTML5_Logo_48.gif' alt='Why Insert Image First Letter Each Word Cap End Without Period' class='box-shadow' />
+       <img src='/images/lwc/image_100x100.gif' alt='Why Insert Image First Letter Each Word Cap End Without Period' class='box-shadow' />
       </li>
      </ul>
 
@@ -4008,7 +4008,7 @@ img {
      <ol>
       <li>Ordered list is for list items that occur in order.</li>
       <li>List item ending with a <em>colon</em> as introductory text for an image <em>without</em> the <code>class='box-shadow'</code> attribute:
-       <img src='/images/HTML5_Logo_48.gif' alt='Why Insert Image First Letter Each Word Cap End Without Period' />
+       <img src='/images/lwc/image_100x100.gif' alt='Why Insert Image First Letter Each Word Cap End Without Period' />
       </li>
       <li>List item first letter first word cap end with period.</li>
      </ol>
@@ -4016,7 +4016,7 @@ img {
      <ul>
       <li>Unordered list is for list items that do not occur in order.</li>
       <li>List item ending with a <em>colon</em> as introductory text for an image <em>with</em> the <code>class='box-shadow'</code> attribute:
-       <img src='/images/HTML5_Logo_48.gif' alt='Why Insert Image First Letter Each Word Cap End Without Period' class='box-shadow' />
+       <img src='/images/lwc/image_100x100.gif' alt='Why Insert Image First Letter Each Word Cap End Without Period' class='box-shadow' />
       </li>
       <li>List item first letter first word cap end with period.</li>
      </ul>
