@@ -101,7 +101,7 @@
     </label>
    </form>
 
-   <p>Note: To visually compare user agent/Bootstrap styles side by side, open this web page in multiple web browser tabs, select the user agent/Bootstrap styles to visualize for each tab, and press Ctrl + Tab to toggle between the tabs.</p>
+   <p>Note: To visually compare user agent/Bootstrap styles side by side, open <a href="/css/css_testing_ground/visualize_user_agent_or_bootstrap_styles.html" target="_blank" rel="noreferrer">this web page (learnwebcoding.com)</a> in multiple web browser tabs, select the user agent/Bootstrap styles to visualize for each tab, and press Ctrl + Tab to toggle between the tabs.</p>
 
    <hr />
 
@@ -125,9 +125,7 @@
 <code>&lt;element&gt;element&lt;/element&gt;</code>
 <code>&lt;span&gt;span&lt;/span&gt;</code></pre>
 
-   <p>Where deemed useful, additional examples of an element are provided.</p>
-
-   <p>The e &gt; f CSS child combinator selector syntax means an <code>f</code> element child of an <code>e</code> element (i.e., <code>&lt;parentElement&gt;&lt;childElement&gt;parentElement &gt; childElement&lt;/childElement&gt;&lt;/parentElement&gt;</code>). When in doubt, to see the actual source code right click and select View Source, or right click on an element and select Inspect.</p>
+   <p>Where possibly informative, different/additional examples of an element's usage are provided. In particular, references to the CSS <code>e &gt; f</code> child combinator selector indicate an <code>f</code> element child of an <code>e</code> element (i.e., <code>&lt;e&gt;&lt;f&gt;&lt;/f&gt;&lt;/e&gt;</code>). To see the source code, right click and select View Source, or right click on an element and select Inspect.</p>
 
    <hr />
 
@@ -1077,14 +1075,29 @@
 
    <p>Note: The <code>video</code> element was added in HTML5.</p>
 
+   <p>Note: The <code>video</code> element is coded as (from top to bottom, left to right):</p>
+
+   <ul>
+    <li><code>
+&lt;video src=&quot;/images/visualize_user_agent_or_bootstrap_styles/Wildlife_256x144.mp4&quot; type=&quot;video/mp4&quot; width=&quot;256&quot; height=&quot;144&quot; controls=&quot;controls&quot; poster=&quot;/images/visualize_user_agent_or_bootstrap_styles/poster_attribute_256x144.gif&quot;&gt;This content displayed if web browser does not support HTML5 video element.&lt;/video&gt;</code>.</li>
+    <li><code>
+&lt;video src=&quot;/images/visualize_user_agent_or_bootstrap_styles/Wildlife_256x144.mp4&quot; controls=&quot;controls&quot; poster=&quot;/images/visualize_user_agent_or_bootstrap_styles/poster_attribute_256x144.gif&quot;&gt;This content displayed if web browser does not support HTML5 video element.&lt;/video&gt;</code> (no <code>type</code>, <code>width</code> and <code>height</code> attributes).</li>
+    <li><code>
+&lt;video src=&quot;/images/visualize_user_agent_or_bootstrap_styles/Wildlife_256x144.mp4&quot; type=&quot;video/mp4&quot; width=&quot;256&quot; height=&quot;144&quot; controls=&quot;controls&quot;&gt;This content displayed if web browser does not support HTML5 video element.&lt;/video&gt;</code> (no <code>poster</code> attribute).</li>
+    <li><code>
+&lt;video src=&quot;/images/visualize_user_agent_or_bootstrap_styles/Wildlife_256x144.mp4&quot;&gt;This content displayed if web browser does not support HTML5 video element.&lt;/video&gt;</code> (no attributes except <code>src</code>).</li>
+   </ul>
+
+   <p>Note: The video includes audio and is 0m2s of horses running on a beach.</p>
+
    <div>div</div>
-   <video>video</video>
+   <video src="/images/visualize_user_agent_or_bootstrap_styles/Wildlife_256x144.mp4" type="video/mp4" width="256" height="144" controls="controls" poster="/images/visualize_user_agent_or_bootstrap_styles/poster_attribute_256x144.gif">This content displayed if web browser does not support HTML5 video element.</video>
    <div>div</div>
-   <video>video</video>
-   <video>video</video>
+   <video src="/images/visualize_user_agent_or_bootstrap_styles/Wildlife_256x144.mp4" controls="controls" poster="/images/visualize_user_agent_or_bootstrap_styles/poster_attribute_256x144.gif">This content displayed if web browser does not support HTML5 video element.</video>
+   <video src="/images/visualize_user_agent_or_bootstrap_styles/Wildlife_256x144.mp4" type="video/mp4" width="256" height="144" controls="controls">This content displayed if web browser does not support HTML5 video element.</video>
    <div>div</div>
    <span>span</span>
-   <video>video</video>
+   <video src="/images/visualize_user_agent_or_bootstrap_styles/Wildlife_256x144.mp4">This content displayed if web browser does not support HTML5 video element.</video>
    <span>span</span>
 
    <hr />
@@ -1548,7 +1561,7 @@
    </ul>
   </ol>
 
-  <p>Last reviewed/updated: 27 Nov 2018 | Published: 27 Nov 2018 | Status: Active</p>
+  <p>Last reviewed/updated: 29 Nov 2018 | Published: 27 Nov 2018 | Status: Active</p>
 
   <p><a href="http://www.learnwebcoding.com/">Learn Web Coding</a></p>
 

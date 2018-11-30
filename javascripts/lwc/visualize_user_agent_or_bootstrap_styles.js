@@ -1,13 +1,13 @@
 /* -------------------- INTRODUCTION -------------------- */
 
 /* File: /web_server_root_directory/javascripts/lwc/visualize_user_agent_or_bootstrap_styles.js
- * Purpose: 
+ * Purpose: Change external style sheet when click form selectbox (dropdown) option.
  * Used in: visualize_user_agent_or_bootstrap_styles.html.
- * Last reviewed/updated: 27 Nov 2018.
+ * Last reviewed/updated: 28 Nov 2018.
  * Published: 27 Nov 2018.
  * Unobtrusive: 1.) decouple HTML/JavaScript: a.) no register JavaScript event handlers in HTML via HTML attributes (eg, onload and onclick), and b.) no embed JavaScripts in HTML via HTML script element; 2.) as reasonable, decouple CSS/JavaScript. Eg, as reasonable, use JavaScript to change HTML class attribute value assignments (loose coupling), not use JavaScript to change JavaScript style object CSS property value assignments (tight coupling); and 3.) no define JavaScript variables and functions on JavaScript global scope.
- * Object: ChangeExtSSUtil.
- * Web browser support: IE+, ED+, FF+, SF+, CH+, OP+, which corresponds to Map object support. */
+ * Web browser support: IE11+, ED12+, FF19+, CH38+, OP25+, which corresponds to Map object support.
+ * Object: ChangeExtSSUtil. */
 
 /* -------------------- JAVASCRIPT OBJECT DEFINITIONS -------------------- */
 
