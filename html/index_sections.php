@@ -4,7 +4,7 @@
 /* File: /web_server_root_directory/html/index_sections.php.
  * Purpose: Web page <section></section> sections.
  * Used in: /web_server_root_directory/html/index.php.
- * Last reviewed/updated: 15 Nov 2018.
+ * Last reviewed/updated: 02 Dec 2018.
  * Published: 21 Sep 2016. */
 return
    "<section>
@@ -87,7 +87,7 @@ return
       <li><a href='http://www.w3.org/TR/2016/REC-html51-20161101/'>HTML 5.1: W3C Recommendation, 1 November 2016 (w3.org)</a></li>
       <li><a href='http://www.w3.org/TR/2dcontext/'>HTML Canvas 2D Context: W3C Recommendation 19 November 2015 (w3.org)</a></li>
       <li><a href='http://www.w3.org/TR/html-longdesc/'>HTML5 Image Description Extension (<code>longdesc</code>): W3C Recommendation 26 February 2015 (w3.org)</a></li>
-      <li><a href='http://www.w3.org/TR/html5/'>HTML5: A Vocabulary And Associated APIs For HTML And XHTML: W3C Recommendation 28 October 2014 (w3.org)</a></li>
+      <li><a href='https://www.w3.org/TR/html50/'>HTML5: A Vocabulary And Associated APIs For HTML And XHTML: W3C Recommendation 28 October 2014 Superseded 27 March 2018 (w3.org)</a></li>
      </ul>
 
 <!--
