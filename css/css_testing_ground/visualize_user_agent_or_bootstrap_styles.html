@@ -36,6 +36,7 @@
    <li><a href="#buttonTypeButton"><code>button</code> Element With <code>type=&quot;button&quot;</code> Attribute (Button)</a></li>
    <li><a href="#buttonTypeReset"><code>button</code> Element With <code>type=&quot;reset&quot;</code> Attribute (Reset Button)</a></li>
    <li><a href="#buttonTypeSubmit"><code>button</code> Element With <code>type=&quot;submit&quot;</code> Attribute (Submit Button)</a></li>
+   <li><a href="#canvas"><code>canvas</code> Element (Scriptable Bitmap Canvas)</a></li>
    <li><a href="#caption"><code>caption</code> Element (Table Caption)</a></li>
    <li><a href="#cite"><code>cite</code> Element (Title Of A Work)</a></li>
    <li><a href="#code"><code>code</code> Element (Computer Code)</a></li>
@@ -151,17 +152,25 @@
    <div>div</div>
    <div>div</div>
    <div>div</div>
+   <div>div</div>
+   <div>div</div>
+   <div>div</div>
    <span>span</span>
    <div>div</div>
+   <span>span</span>
 
    <hr />
 
    <li><h4><a id="span"></a><code>span</code> Element (Generic Phrasing/Inline Container)</h4></li>
 
+   <div>div</div>
    <span>span</span>
+   <div>div</div>
    <span>span</span>
    <span>span</span>
    <div>div</div>
+   <span>span</span>
+   <span>span</span>
    <span>span</span>
 
    <hr />
@@ -182,7 +191,7 @@
 
    <li><h4><a id="abbr"></a><code>abbr</code> Element (Abbreviation)</h4></li>
 
-   <p>Note: The <code>abbr</code> element is coded as <code>&lt;abbr title=&quot;abbreviation&quot;&gt;abbr&lt;/abbr&gt;</code>.</p>
+   <p>Note: The <code>abbr</code> element coded as <code>&lt;abbr title=&quot;abbreviation&quot;&gt;abbr&lt;/abbr&gt;</code>:</p>
 
    <div>div</div>
    <abbr title="abbreviation">abbr</abbr>
@@ -246,32 +255,53 @@
 
    <p>Note: The <code>audio</code> element was added in HTML5.</p>
 
-   <p>Note: The <code>audio</code> element is coded as (from top to bottom, left to right):</p>
+   <p>Note: The audio is 0m4s of music (courtesy of Microsoft).<!-- Original via Windows 7 C:\Users\Public\Music\Sample Music\Kalimba.mp3. --></p>
 
-   <ul>
-    <li><code>&lt;audio src=&quot;/images/visualize_user_agent_or_bootstrap_styles/Kalimba.mp3&quot; type=&quot;audio/mp3&quot; controls=&quot;controls&quot;&gt;This content displayed if web browser does not support HTML5 audio element.&lt;/audio&gt;</code>.</li>
-    <li><code>&lt;audio src=&quot;/images/visualize_user_agent_or_bootstrap_styles/Kalimba.mp3&quot; type=&quot;audio/mp3&quot; controls=&quot;controls&quot;&gt;This content displayed if web browser does not support HTML5 audio element.&lt;/audio&gt;</code>. (Same as above.)</li>
-    <li><code>&lt;audio src=&quot;/images/visualize_user_agent_or_bootstrap_styles/Kalimba.mp3&quot; type=&quot;audio/mp3&quot; controls=&quot;controls&quot;&gt;This content displayed if web browser does not support HTML5 audio element.&lt;/audio&gt;</code>. (Same as above.)</li>
-    <li><code>&lt;audio src=&quot;/images/visualize_user_agent_or_bootstrap_styles/Kalimba.mp3&quot; controls=&quot;controls&quot;&gt;This content displayed if web browser does not support HTML5 audio element.&lt;/audio&gt;</code>. (No <code>type</code> attribute.)</li>
-   </ul>
-
-   <p>Note: The audio is 0m2s of music (courtesy of Microsoft).<!-- Original via Windows 7 C:\Users\Public\Music\Sample Music\Kalimba.mp3. --></p>
+   <p>Note: The <code>audio</code> element coded as <code>&lt;audio src=&quot;/images/visualize_user_agent_or_bootstrap_styles/Kalimba_0m4s.mp3&quot; type=&quot;audio/mp3&quot; controls=&quot;controls&quot;&gt;Content displayed if web browser does not support HTML5 audio element.&lt;/audio&gt;</code>:</p>
 
    <div>div</div>
-   <audio src="/images/visualize_user_agent_or_bootstrap_styles/Kalimba.mp3" type="audio/mp3" controls="controls">This content displayed if web browser does not support HTML5 audio element.</audio>
+   <audio src="/images/visualize_user_agent_or_bootstrap_styles/Kalimba_0m4s.mp3" type="audio/mp3" controls="controls">Content displayed if web browser does not support HTML5 audio element.</audio>
    <div>div</div>
-   <audio src="/images/visualize_user_agent_or_bootstrap_styles/Kalimba.mp3" type="audio/mp3" controls="controls">This content displayed if web browser does not support HTML5 audio element.</audio>
-   <audio src="/images/visualize_user_agent_or_bootstrap_styles/Kalimba.mp3" type="audio/mp3" controls="controls">This content displayed if web browser does not support HTML5 audio element.</audio>
+   <audio src="/images/visualize_user_agent_or_bootstrap_styles/Kalimba_0m4s.mp3" type="audio/mp3" controls="controls">Content displayed if web browser does not support HTML5 audio element.</audio>
+   <audio src="/images/visualize_user_agent_or_bootstrap_styles/Kalimba_0m4s.mp3" type="audio/mp3" controls="controls">Content displayed if web browser does not support HTML5 audio element.</audio>
    <div>div</div>
    <span>span</span>
-   <audio src="/images/visualize_user_agent_or_bootstrap_styles/Kalimba.mp3" controls="controls">This content displayed if web browser does not support HTML5 audio element.</audio>
+   <audio src="/images/visualize_user_agent_or_bootstrap_styles/Kalimba_0m4s.mp3" type="audio/mp3" controls="controls">Content displayed if web browser does not support HTML5 audio element.</audio>
    <span>span</span>
 
    <hr />
 
-   <p>Note: The <code>audio</code> element is coded as <code>&lt;audio src=&quot;/images/visualize_user_agent_or_bootstrap_styles/Kalimba.mp3&quot; type=&quot;audio/mp3&quot;&gt;This content displayed if web browser does not support HTML5 audio element.&lt;/audio&gt;</code> (No <code>controls</code> attribute. Note that nothing is displayed.)</p>
+   <p>Note: The <code>audio</code> element coded as (no <code>type</code> attribute) <code>&lt;audio src=&quot;/images/visualize_user_agent_or_bootstrap_styles/Kalimba_0m4s.mp3&quot; controls=&quot;controls&quot;&gt;Content displayed if web browser does not support HTML5 audio element.&lt;/audio&gt;</code>:</p>
 
-   <audio src="/images/visualize_user_agent_or_bootstrap_styles/Kalimba.mp3" type="audio/mp3">This content displayed if web browser does not support HTML5 audio element.</audio>
+   <audio src="/images/visualize_user_agent_or_bootstrap_styles/Kalimba_0m4s.mp3" controls="controls">Content displayed if web browser does not support HTML5 audio element.</audio>
+
+   <hr />
+
+   <p>Note: The <code>audio</code> element coded as (no <code>controls</code> attribute, which means nothing is displayed) <code>&lt;audio src=&quot;/images/visualize_user_agent_or_bootstrap_styles/Kalimba_0m4s.mp3&quot; type=&quot;audio/mp3&quot;&gt;Content displayed if web browser does not support HTML5 audio element.&lt;/audio&gt;</code>:</p>
+
+   <audio src="/images/visualize_user_agent_or_bootstrap_styles/Kalimba_0m4s.mp3" type="audio/mp3">Content displayed if web browser does not support HTML5 audio element.</audio>
+
+   <hr />
+
+   <p>Note: The <code>audio</code> element coded as (with <code>source</code> element having <code>src</code> and <code>type</code> attributes):
+
+   <p>
+<pre>
+&lt;audio controls=&quot;controls&quot;&gt;
+ &lt;source src=&quot;/images/visualize_user_agent_or_bootstrap_styles/Kalimba_0m4s.ogg&quot; type=&quot;audio/ogg&quot;&gt;
+ &lt;source src=&quot;/images/visualize_user_agent_or_bootstrap_styles/Kalimba_0m4s.wav&quot; type=&quot;audio/wav&quot;&gt;
+ &lt;source src=&quot;/images/visualize_user_agent_or_bootstrap_styles/Kalimba_0m4s.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+ Content displayed if web browser does not support HTML5 audio element.
+&lt;/audio&gt;
+</pre>
+   </p>
+
+   <audio controls="controls">
+    <source src="/images/visualize_user_agent_or_bootstrap_styles/Kalimba_0m4s.ogg" type="audio/ogg">
+    <source src="/images/visualize_user_agent_or_bootstrap_styles/Kalimba_0m4s.wav" type="audio/wav">
+    <source src="/images/visualize_user_agent_or_bootstrap_styles/Kalimba_0m4s.mp3" type="audio/mp3">
+    Content displayed if web browser does not support HTML5 audio element.
+   </audio>
 
    <hr />
 
@@ -305,7 +335,7 @@
 
    <li><h4><a id="button"></a><code>button</code> Element (Button Control)</h4></li>
 
-   <p>Note: The <code>button</code> element is coded as <code>&lt;button&gt;button&lt;/button&gt;</code>.</p>
+   <p>Note: The <code>button</code> element coded as <code>&lt;button&gt;button&lt;/button&gt;</code>:</p>
 
    <div>div</div>
    <button>button</button>
@@ -321,7 +351,7 @@
 
    <li><h4><a id="buttonTypeButton"></a><code>button</code> Element With <code>type=&quot;button&quot;</code> Attribute (Button)</h4></li>
 
-   <p>Note: The <code>button</code> element with <code>type=&quot;button&quot;</code> attribute is coded as <code>&lt;button type=&quot;button&quot;&gt;button&lt;/button&gt;</code>.</p>
+   <p>Note: The <code>button</code> element with <code>type=&quot;button&quot;</code> attribute coded as <code>&lt;button type=&quot;button&quot;&gt;button&lt;/button&gt;</code>:</p>
 
    <div>div</div>
    <button type="button">button</button>
@@ -337,7 +367,7 @@
 
    <li><h4><a id="buttonTypeReset"></a><code>button</code> Element With <code>type=&quot;reset&quot;</code> Attribute (Reset Button)</h4></li>
 
-   <p>Note: The <code>button</code> element with <code>type=&quot;reset&quot;</code> attribute is coded as <code>&lt;button type=&quot;reset&quot;&gt;button&lt;/button&gt;</code>.</p>
+   <p>Note: The <code>button</code> element with <code>type=&quot;reset&quot;</code> attribute coded as <code>&lt;button type=&quot;reset&quot;&gt;button&lt;/button&gt;</code>:</p>
 
    <div>div</div>
    <button type="reset">button</button>
@@ -353,7 +383,7 @@
 
    <li><h4><a id="buttonTypeSubmit"></a><code>button</code> Element With <code>type=&quot;submit&quot;</code> Attribute (Submit Button)</h4></li>
 
-   <p>Note: The <code>button</code> element with <code>type=&quot;submit&quot;</code> attribute is coded as <code>&lt;button type=&quot;submit&quot;&gt;button&lt;/button&gt;</code>.</p>
+   <p>Note: The <code>button</code> element with <code>type=&quot;submit&quot;</code> attribute coded as <code>&lt;button type=&quot;submit&quot;&gt;button&lt;/button&gt;</code>:</p>
 
    <div>div</div>
    <button type="submit">button</button>
@@ -363,6 +393,20 @@
    <div>div</div>
    <span>span</span>
    <button type="submit">button</button>
+   <span>span</span>
+
+   <hr />
+
+   <li><h4><a id="canvas"></a><code>canvas</code> Element (Scriptable Bitmap Canvas)</h4></li>
+
+   <div>div</div>
+   <canvas>canvas</canvas>
+   <div>div</div>
+   <canvas>canvas</canvas>
+   <canvas>canvas</canvas>
+   <div>div</div>
+   <span>span</span>
+   <canvas>canvas</canvas>
    <span>span</span>
 
    <hr />
@@ -413,7 +457,7 @@
 
    <li><h4><a id="data"></a><code>data</code> Element (Machine-Readable Equivalent)</h4></li>
 
-   <p>Note: The <code>data</code> element is coded as <code>&lt;data value=&quot;&quot;&gt;data&lt;/data&gt;</code>.</p>
+   <p>Note: The <code>data</code> element coded as <code>&lt;data value=&quot;&quot;&gt;data&lt;/data&gt;</code>:</p>
 
    <div>div</div>
    <data value="">data</data>
@@ -472,6 +516,21 @@
    <hr />
 
    <li><h4><a id="dl"></a><code>dl</code> Element (Association List Consisting Of Zero Or More Name-Value Groups), <code>dt</code> Element (Legend For Corresponding <code>dd</code> Element(s)), And <code>dd</code> Element (Content For Corresponding <code>dt</code> Element(s))</h4></li>
+
+   <p>Note: The association list coded as:</p>
+
+   <p>
+<pre>
+&lt;dl&gt;
+ &lt;dt&gt;dl &amp;gt; dt&lt;/dt&gt;
+ &lt;dd&gt;dd&lt;/dd&gt;
+ &lt;dt&gt;dt&lt;/dt&gt;
+ &lt;dd&gt;dd&lt;/dd&gt;
+ &lt;dt&gt;dt&lt;/dt&gt;
+ &lt;dd&gt;dd&lt;/dd&gt;
+&lt;/dl&gt;
+</pre>
+   </p>
 
    <div>div</div>
    <dl>
@@ -545,6 +604,8 @@
 
    <li><h4><a id="fieldset"></a><code>fieldset</code> Element (Group Of Form Controls) And <code>legend</code> Element (Caption For <code>fieldset</code>)</h4></li>
 
+   <p>Note: The <code>fieldset</code> and <code>legend</code> elements coded as <code>&lt;fieldset&gt;&lt;legend&gt;fieldset &amp;gt; legend&lt;/legend&gt;&lt;/fieldset&gt;</code>:</p>
+
    <div>div</div>
    <fieldset><legend>fieldset &gt; legend</legend></fieldset>
    <div>div</div>
@@ -578,6 +639,8 @@
    <li><h4><a id="figure"></a><code>figure</code> Element (Figure With Optional Caption) And <code>figcaption</code> Element (Caption For <code>figure</code>)</h4></li>
 
    <p>Note: The <code>figure</code> and <code>figcaption</code> elements were added in HTML5.</p>
+
+   <p>Note: The <code>figure</code> and <code>figcaption</code> elements coded as <code>&lt;figure&gt;&lt;figcaption&gt;figure &amp;gt; figcaption&lt;/figcaption&gt;&lt;/figure&gt;</code>:</p>
 
    <div>div</div>
    <figure><figcaption>figure &gt; figcaption</figcaption></figure>
@@ -748,7 +811,7 @@
 
    <li><h4><a id="img"></a><code>img</code> Element (Image)</h4></li>
 
-   <p>Note: The <code>img</code> element is coded as <code>&lt;img src=&quot;/images/lwc/image_100x100.gif&quot; alt=&quot;100 by 100 pixel image.&quot; /&gt;</code>.</p>
+   <p>Note: The <code>img</code> element coded as <code>&lt;img src=&quot;/images/lwc/image_100x100.gif&quot; alt=&quot;100 by 100 pixel image.&quot; /&gt;</code>:</p>
 
    <div>div</div>
    <img src="/images/lwc/image_100x100.gif" alt="100 by 100 pixel image." />
@@ -764,23 +827,23 @@
 
    <li><h4><a id="input"></a><code>input</code> Element (Form Control)</h4></li>
 
-   <p>Note: The <code>input</code> element is coded as <code>&lt;input /&gt;input</code>.</p>
+   <p>Note: The <code>input</code> element coded as <code>&lt;input /&gt;</code>:</p>
 
    <div>div</div>
-   <input />input
+   <input />
    <div>div</div>
-   <input />input
-   <input />input
+   <input />
+   <input />
    <div>div</div>
    <span>span</span>
-   <input />input
+   <input />
    <span>span</span>
 
    <hr />
 
    <li><h4><a id="inputTypeButton"></a><code>input</code> Element With <code>type=&quot;button&quot;</code> Attribute (Button)</h4></li>
 
-   <p>Note: The <code>input</code> element with <code>type=&quot;button&quot;</code> attribute is coded as <code>&lt;input type=&quot;button&quot; value=&quot;value&quot; /&gt;</code>.</p>
+   <p>Note: The <code>input</code> element with <code>type=&quot;button&quot;</code> attribute coded as <code>&lt;input type=&quot;button&quot; value=&quot;value&quot; /&gt;</code>:</p>
 
    <div>div</div>
    <input type="button" value="value" />
@@ -796,23 +859,23 @@
 
    <li><h4><a id="inputTypeCheckbox"></a><code>input</code> Element With <code>type=&quot;checkbox&quot;</code> Attribute (Checkbox)</h4></li>
 
-   <p>Note: The <code>input</code> element with <code>type=&quot;checkbox&quot;</code> attribute is coded as <code>&lt;input type=&quot;checkbox&quot; /&gt;input</code>.</p>
+   <p>Note: The <code>input</code> element with <code>type=&quot;checkbox&quot;</code> attribute coded as <code>&lt;input type=&quot;checkbox&quot; /&gt;</code>:</p>
 
    <div>div</div>
-   <input type="checkbox" />input
+   <input type="checkbox" />
    <div>div</div>
-   <input type="checkbox" />input
-   <input type="checkbox" />input
+   <input type="checkbox" />
+   <input type="checkbox" />
    <div>div</div>
    <span>span</span>
-   <input type="checkbox" />input
+   <input type="checkbox" />
    <span>span</span>
 
    <hr />
 
    <li><h4><a id="inputTypeFile"></a><code>input</code> Element With <code>type=&quot;file&quot;</code> Attribute (File Upload)</h4></li>
 
-   <p>Note: The <code>input</code> element with <code>type=&quot;file&quot;</code> attribute is coded as <code>&lt;input type=&quot;file&quot; /&gt;</code>.</p>
+   <p>Note: The <code>input</code> element with <code>type=&quot;file&quot;</code> attribute coded as <code>&lt;input type=&quot;file&quot; /&gt;</code>:</p>
 
    <div>div</div>
    <input type="file" />
@@ -828,23 +891,23 @@
 
    <li><h4><a id="inputTypeRadio"></a><code>input</code> Element With <code>type=&quot;radio&quot;</code> Attribute (Radio Button)</h4></li>
 
-   <p>Note: The <code>input</code> element with <code>type=&quot;radio&quot;</code> attribute is coded as <code>&lt;input type=&quot;radio&quot; /&gt;input</code>.</p>
+   <p>Note: The <code>input</code> element with <code>type=&quot;radio&quot;</code> attribute coded as <code>&lt;input type=&quot;radio&quot; /&gt;</code>:</p>
 
    <div>div</div>
-   <input type="radio" />input
+   <input type="radio" />
    <div>div</div>
-   <input type="radio" />input
-   <input type="radio" />input
+   <input type="radio" />
+   <input type="radio" />
    <div>div</div>
    <span>span</span>
-   <input type="radio" />input
+   <input type="radio" />
    <span>span</span>
 
    <hr />
 
    <li><h4><a id="inputTypeReset"></a><code>input</code> Element With <code>type=&quot;reset&quot;</code> Attribute (Reset Button)</h4></li>
 
-   <p>Note: The <code>input</code> element with <code>type=&quot;reset&quot;</code> attribute is coded as <code>&lt;input type=&quot;reset&quot; /&gt;</code>.</p>
+   <p>Note: The <code>input</code> element with <code>type=&quot;reset&quot;</code> attribute coded as <code>&lt;input type=&quot;reset&quot; /&gt;</code>:</p>
 
    <div>div</div>
    <input type="reset" />
@@ -860,23 +923,23 @@
 
    <li><h4><a id="inputTypeSearch"></a><code>input</code> Element With <code>type=&quot;search&quot;</code> Attribute (Search)</h4></li>
 
-   <p>Note: The <code>input</code> element with <code>type=&quot;search&quot;</code> attribute is coded as <code>&lt;input type=&quot;search&quot; /&gt;input</code>.</p>
+   <p>Note: The <code>input</code> element with <code>type=&quot;search&quot;</code> attribute coded as <code>&lt;input type=&quot;search&quot; /&gt;</code>:</p>
 
    <div>div</div>
-   <input type="search" />input
+   <input type="search" />
    <div>div</div>
-   <input type="search" />input
-   <input type="search" />input
+   <input type="search" />
+   <input type="search" />
    <div>div</div>
    <span>span</span>
-   <input type="search" />input
+   <input type="search" />
    <span>span</span>
 
    <hr />
 
    <li><h4><a id="inputTypeSubmit"></a><code>input</code> Element With <code>type=&quot;submit&quot;</code> Attribute (Submit Button)</h4></li>
 
-   <p>Note: The <code>input</code> element with <code>type=&quot;submit&quot;</code> attribute is coded as <code>&lt;input type=&quot;submit&quot; /&gt;</code>.</p>
+   <p>Note: The <code>input</code> element with <code>type=&quot;submit&quot;</code> attribute coded as <code>&lt;input type=&quot;submit&quot; /&gt;</code>:</p>
 
    <div>div</div>
    <input type="submit" />
@@ -892,16 +955,16 @@
 
    <li><h4><a id="inputTypeText"></a><code>input</code> Element With <code>type=&quot;text&quot;</code> Attribute (Text)</h4></li>
 
-   <p>Note: The <code>input</code> element with <code>type=&quot;text&quot;</code> attribute is coded as <code>&lt;input type=&quot;text&quot; /&gt;input</code>.</p>
+   <p>Note: The <code>input</code> element with <code>type=&quot;text&quot;</code> attribute coded as <code>&lt;input type=&quot;text&quot; /&gt;</code>:</p>
 
    <div>div</div>
-   <input type="text" />input
+   <input type="text" />
    <div>div</div>
-   <input type="text" />input
-   <input type="text" />input
+   <input type="text" />
+   <input type="text" />
    <div>div</div>
    <span>span</span>
-   <input type="text" />input
+   <input type="text" />
    <span>span</span>
 
    <hr />
@@ -1028,6 +1091,18 @@
 
    <li><h4><a id="ol"></a><code>ol</code> Element (Ordered List), <code>ul</code> Element (List), And <code>li</code> Element (List Item)</h4></li>
 
+   <p>Note: The ordered list coded as:</p>
+
+   <p>
+<pre>
+&lt;ol&gt;
+ &lt;li&gt;ol &amp;gt; li&lt;/li&gt;
+ &lt;li&gt;li&lt;/li&gt;
+ &lt;li&gt;li&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+   </p>
+
    <div>div</div>
    <ol>
     <li>ol &gt; li</li>
@@ -1055,6 +1130,18 @@
    <span>span</span>
 
    <hr />
+
+   <p>Note: The list coded as:</p>
+
+   <p>
+<pre>
+&lt;ul&gt;
+ &lt;li&gt;ul &amp;gt; li&lt;/li&gt;
+ &lt;li&gt;li&lt;/li&gt;
+ &lt;li&gt;li&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+   </p>
 
    <div>div</div>
    <ul>
@@ -1401,7 +1488,7 @@
 
    <li><h4><a id="select"></a><code>select</code> Element (List Box Control)</h4></li>
 
-   <p>Note: The <code>select</code> element is coded as <code>&lt;select&gt;select&lt;/select&gt;</code>.</p>
+   <p>Note: The <code>select</code> element coded as <code>&lt;select&gt;select&lt;/select&gt;</code>:</p>
 
    <div>div</div>
    <select>select</select>
@@ -1415,16 +1502,42 @@
 
    <hr />
 
-   <p>Note: The <code>select</code> element is coded as <code>&lt;select&gt;&lt;option&gt;option one&lt;/option&gt;&lt;option&gt;option two&lt;/option&gt;&lt;option&gt;option three&lt;/option&gt;&lt;/select&gt;</code>.</p>
+   <p>Note: The <code>select</code> element coded as:</p>
+
+   <p>
+<pre>
+&lt;select&gt;
+ &lt;option&gt;select &amp;gt; option one&lt;/option&gt;
+ &lt;option&gt;option two&lt;/option&gt;
+ &lt;option&gt;option three&lt;/option&gt;
+&lt;/select&gt;
+</pre>
+   </p>
 
    <div>div</div>
-   <select><option>option one</option><option>option two</option><option>option three</option></select>
+   <select>
+    <option>select &gt; option one</option>
+    <option>option two</option>
+    <option>option three</option>
+   </select>
    <div>div</div>
-   <select><option>option one</option><option>option two</option><option>option three</option></select>
-   <select><option>option one</option><option>option two</option><option>option three</option></select>
+   <select>
+    <option>select &gt; option one</option>
+    <option>option two</option>
+    <option>option three</option>
+   </select>
+   <select>
+    <option>select &gt; option one</option>
+    <option>option two</option>
+    <option>option three</option>
+   </select>
    <div>div</div>
    <span>span</span>
-   <select><option>option one</option><option>option two</option><option>option three</option></select>
+   <select>
+    <option>select &gt; option one</option>
+    <option>option two</option>
+    <option>option three</option>
+   </select>
    <span>span</span>
 
    <hr />
@@ -1447,16 +1560,18 @@
 
    <p>Note: The <code>source</code> element was added in HTML5.</p>
 
-   <p>Note: The <code>source</code> element is coded as <code>&lt;source src=&quot;/images/visualize_user_agent_or_bootstrap_styles/Wildlife_256x144.mp4&quot; type=&quot;video/mp4&quot;&gt;</code>.</p>
+   <p>Note: Also see <a href="#audio"><code>audio</code> Element (above)</a> and <a href="#video"><code>video</code> Element (below)</a>.</p>
+
+   <p>Note: The <code>source</code> element coded as <code>&lt;source src=&quot;/images/visualize_user_agent_or_bootstrap_styles/Wildlife_0m4s_256x144_x264.mp4&quot; type=&quot;video/mp4&quot;&gt;</code>:</p>
 
    <div>div</div>
-   <source src="/images/visualize_user_agent_or_bootstrap_styles/Wildlife_256x144.mp4" type="video/mp4">
+   <source src="/images/visualize_user_agent_or_bootstrap_styles/Wildlife_0m4s_256x144_x264.mp4" type="video/mp4">
    <div>div</div>
-   <source src="/images/visualize_user_agent_or_bootstrap_styles/Wildlife_256x144.mp4" type="video/mp4">
-   <source src="/images/visualize_user_agent_or_bootstrap_styles/Wildlife_256x144.mp4" type="video/mp4">
+   <source src="/images/visualize_user_agent_or_bootstrap_styles/Wildlife_0m4s_256x144_x264.mp4" type="video/mp4">
+   <source src="/images/visualize_user_agent_or_bootstrap_styles/Wildlife_0m4s_256x144_x264.mp4" type="video/mp4">
    <div>div</div>
    <span>span</span>
-   <source src="/images/visualize_user_agent_or_bootstrap_styles/Wildlife_256x144.mp4" type="video/mp4">
+   <source src="/images/visualize_user_agent_or_bootstrap_styles/Wildlife_0m4s_256x144_x264.mp4" type="video/mp4">
    <span>span</span>
 
    <hr />
@@ -1519,8 +1634,9 @@
 
    <li><h4><a id="table"></a><code>table</code> Element (Table), <code>caption</code> Element (Table Caption), <code>thead</code> Element (Group Of Heading Rows In A Table), <code>tbody</code> Element (Group Of Rows In A Table), <code>tfoot</code> Element (Group Of Footer Rows In A Table), <code>tr</code> Element (Table Row), <code>th</code> Element (Table Header Cell), And <code>td</code> Element (Table Cell)</h4></li>
 
-   <p>Note: The table is coded as:</p>
+   <p>Note: The table coded as:</p>
 
+   <p>
 <pre>
 &lt;table&gt;
  &lt;caption&gt;table &amp;gt; caption&lt;/caption&gt;
@@ -1547,6 +1663,7 @@
  &lt;/tfoot&gt;
 &lt;/table&gt;
 </pre>
+   </p>
 
    <div>div</div>
    <table>
@@ -1702,7 +1819,7 @@
 
    <li><h4><a id="textarea"></a><code>textarea</code> Element (Multiline Text Field)</h4></li>
 
-   <p>Note: The <code>textarea</code> element is coded as <code>&lt;textarea&gt;textarea&lt;/textarea&gt;</code>.</p>
+   <p>Note: The <code>textarea</code> element coded as <code>&lt;textarea&gt;textarea&lt;/textarea&gt;</code>:</p>
 
    <div>div</div>
    <textarea>textarea</textarea>
@@ -1768,7 +1885,7 @@
 
    <p>Note: The <code>time</code> element was added in HTML5.</p>
 
-   <p>Note: The <code>time</code> element is coded as <code>&lt;time&gt;2018-12-31T23:59&lt;/time&gt;</code>.</p>
+   <p>Note: The <code>time</code> element coded as <code>&lt;time&gt;2018-12-31T23:59&lt;/time&gt;</code>:</p>
 
    <div>div</div>
    <time>2018-12-31T23:59</time>
@@ -1814,30 +1931,60 @@
 
    <p>Note: The <code>video</code> element was added in HTML5.</p>
 
-   <p>Note: The <code>video</code> element is coded as (from top to bottom, left to right):</p>
+   <p>Note: The video is 0m4s of horses and includes audio (courtesy of Microsoft).<!-- Original via Windows 7 C:\Users\Public\Videos\Sample Videos\Wildlife.wmv. --></p>
 
-   <ul>
-    <li><code>
-&lt;video src=&quot;/images/visualize_user_agent_or_bootstrap_styles/Wildlife_256x144.mp4&quot; type=&quot;video/mp4&quot; width=&quot;256&quot; height=&quot;144&quot; controls=&quot;controls&quot; poster=&quot;/images/visualize_user_agent_or_bootstrap_styles/poster_attribute_image_256x144.gif&quot;&gt;Content displayed if web browser does not support HTML5 video element.&lt;/video&gt;</code>.</li>
-    <li><code>
-&lt;video src=&quot;/images/visualize_user_agent_or_bootstrap_styles/Wildlife_256x144.mp4&quot; controls=&quot;controls&quot; poster=&quot;/images/visualize_user_agent_or_bootstrap_styles/poster_attribute_image_256x144.gif&quot;&gt;Content displayed if web browser does not support HTML5 video element.&lt;/video&gt;</code>. (No <code>type</code>, <code>width</code>, and <code>height</code> attributes.)</li>
-    <li><code>
-&lt;video src=&quot;/images/visualize_user_agent_or_bootstrap_styles/Wildlife_256x144.mp4&quot; type=&quot;video/mp4&quot; width=&quot;256&quot; height=&quot;144&quot; controls=&quot;controls&quot;&gt;Content displayed if web browser does not support HTML5 video element.&lt;/video&gt;</code>. (No <code>poster</code> attribute.)</li>
-    <li><code>
-&lt;video src=&quot;/images/visualize_user_agent_or_bootstrap_styles/Wildlife_256x144.mp4&quot;&gt;Content displayed if web browser does not support HTML5 video element.&lt;/video&gt;</code>. (No attributes except <code>src</code>.)</li>
-   </ul>
-
-   <p>Note: The video is 0m2s of horses and includes audio (courtesy of Microsoft).<!-- Original via Windows 7 C:\Users\Public\Videos\Sample Videos\Wildlife.wmv. --></p>
+   <p>Note: The <code>video</code> element coded as <code>&lt;video src=&quot;/images/visualize_user_agent_or_bootstrap_styles/Wildlife_0m4s_256x144_x264.mp4&quot; type=&quot;video/mp4&quot; width=&quot;256&quot; height=&quot;144&quot; controls=&quot;controls&quot; poster=&quot;/images/visualize_user_agent_or_bootstrap_styles/poster_attribute_image_256x144.gif&quot;&gt;Content displayed if web browser does not support HTML5 video element.&lt;/video&gt;</code>:</p>
 
    <div>div</div>
-   <video src="/images/visualize_user_agent_or_bootstrap_styles/Wildlife_256x144.mp4" type="video/mp4" width="256" height="144" controls="controls" poster="/images/visualize_user_agent_or_bootstrap_styles/poster_attribute_image_256x144.gif">Content displayed if web browser does not support HTML5 video element.</video>
+   <video src="/images/visualize_user_agent_or_bootstrap_styles/Wildlife_0m4s_256x144_x264.mp4" type="video/mp4" width="256" height="144" controls="controls" poster="/images/visualize_user_agent_or_bootstrap_styles/poster_attribute_image_256x144.gif">Content displayed if web browser does not support HTML5 video element.</video>
    <div>div</div>
-   <video src="/images/visualize_user_agent_or_bootstrap_styles/Wildlife_256x144.mp4" controls="controls" poster="/images/visualize_user_agent_or_bootstrap_styles/poster_attribute_image_256x144.gif">Content displayed if web browser does not support HTML5 video element.</video>
-   <video src="/images/visualize_user_agent_or_bootstrap_styles/Wildlife_256x144.mp4" type="video/mp4" width="256" height="144" controls="controls">Content displayed if web browser does not support HTML5 video element.</video>
+   <video src="/images/visualize_user_agent_or_bootstrap_styles/Wildlife_0m4s_256x144_x264.mp4" type="video/mp4" width="256" height="144" controls="controls" poster="/images/visualize_user_agent_or_bootstrap_styles/poster_attribute_image_256x144.gif">Content displayed if web browser does not support HTML5 video element.</video>
+   <video src="/images/visualize_user_agent_or_bootstrap_styles/Wildlife_0m4s_256x144_x264.mp4" type="video/mp4" width="256" height="144" controls="controls" poster="/images/visualize_user_agent_or_bootstrap_styles/poster_attribute_image_256x144.gif">Content displayed if web browser does not support HTML5 video element.</video>
    <div>div</div>
    <span>span</span>
-   <video src="/images/visualize_user_agent_or_bootstrap_styles/Wildlife_256x144.mp4">Content displayed if web browser does not support HTML5 video element.</video>
+   <video src="/images/visualize_user_agent_or_bootstrap_styles/Wildlife_0m4s_256x144_x264.mp4" type="video/mp4" width="256" height="144" controls="controls" poster="/images/visualize_user_agent_or_bootstrap_styles/poster_attribute_image_256x144.gif">Content displayed if web browser does not support HTML5 video element.</video>
    <span>span</span>
+
+   <hr />
+
+   <p>Note: The <code>video</code> element coded as (no <code>type</code>, <code>width</code>, and <code>height</code> attributes) <code>&lt;video src=&quot;/images/visualize_user_agent_or_bootstrap_styles/Wildlife_0m4s_256x144_x264.mp4&quot; controls=&quot;controls&quot; poster=&quot;/images/visualize_user_agent_or_bootstrap_styles/poster_attribute_image_256x144.gif&quot;&gt;Content displayed if web browser does not support HTML5 video element.&lt;/video&gt;</code>:</p>
+
+   <video src="/images/visualize_user_agent_or_bootstrap_styles/Wildlife_0m4s_256x144_x264.mp4" controls="controls" poster="/images/visualize_user_agent_or_bootstrap_styles/poster_attribute_image_256x144.gif">Content displayed if web browser does not support HTML5 video element.</video>
+
+   <hr />
+
+   <p>Note: The <code>video</code> element coded as (no <code>poster</code> attribute) <code>&lt;video src=&quot;/images/visualize_user_agent_or_bootstrap_styles/Wildlife_0m4s_256x144_x264.mp4&quot; type=&quot;video/mp4&quot; width=&quot;256&quot; height=&quot;144&quot; controls=&quot;controls&quot;&gt;Content displayed if web browser does not support HTML5 video element.&lt;/video&gt;</code>:</p>
+
+   <video src="/images/visualize_user_agent_or_bootstrap_styles/Wildlife_0m4s_256x144_x264.mp4" type="video/mp4" width="256" height="144" controls="controls">Content displayed if web browser does not support HTML5 video element.</video>
+
+   <hr />
+
+   <p>Note: The <code>video</code> element coded as (no attributes except <code>src</code>) <code>
+&lt;video src=&quot;/images/visualize_user_agent_or_bootstrap_styles/Wildlife_0m4s_256x144_x264.mp4&quot;&gt;Content displayed if web browser does not support HTML5 video element.&lt;/video&gt;</code>:</p>
+
+   <video src="/images/visualize_user_agent_or_bootstrap_styles/Wildlife_0m4s_256x144_x264.mp4">Content displayed if web browser does not support HTML5 video element.</video>
+
+   <hr />
+
+   <p>Note: The <code>video</code> element coded as (with <code>source</code> element having <code>src</code> and <code>type</code> attributes):
+
+   <p>
+<pre>
+&lt;video width=&quot;256&quot; height=&quot;144&quot; controls=&quot;controls&quot; poster=&quot;/images/visualize_user_agent_or_bootstrap_styles/poster_attribute_image_256x144.gif&quot;&gt;
+ &lt;source src=&quot;/images/visualize_user_agent_or_bootstrap_styles/Wildlife_0m4s_256x144_libtheora.ogv&quot; type=&quot;video/ogg&quot;&gt;
+ &lt;source src=&quot;/images/visualize_user_agent_or_bootstrap_styles/Wildlife_0m4s_256x144_VP8.webm&quot; type=&quot;video/webm&quot;&gt;
+ &lt;source src=&quot;/images/visualize_user_agent_or_bootstrap_styles/Wildlife_0m4s_256x144_x264.mp4&quot; type=&quot;video/mp4&quot;&gt;
+ Content displayed if web browser does not support HTML5 video element.
+&lt;/video&gt;
+</pre>
+   </p>
+
+   <video width="256" height="144" controls="controls" poster="/images/visualize_user_agent_or_bootstrap_styles/poster_attribute_image_256x144.gif">
+    <source src="/images/visualize_user_agent_or_bootstrap_styles/Wildlife_0m4s_256x144_libtheora.ogv" type="video/ogg">
+    <source src="/images/visualize_user_agent_or_bootstrap_styles/Wildlife_0m4s_256x144_VP8.webm" type="video/webm">
+    <source src="/images/visualize_user_agent_or_bootstrap_styles/Wildlife_0m4s_256x144_x264.mp4" type="video/mp4">
+    Content displayed if web browser does not support HTML5 video element.
+   </video>
 
    <hr />
 
