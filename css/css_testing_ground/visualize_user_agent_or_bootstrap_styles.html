@@ -112,6 +112,14 @@
    <ol>
     <li><h4><a id="selectStylesToVisualize"></a>Select The User Agent/Bootstrap Styles To Visualize</h4></li>
 
+    <p>User agents have a style sheet built into them whose styles: 1.) define and provide the structure types associated with HTML elements; 2.) are merged with author styles, if present, and user styles, if present, in styling content; and 3.) in the absence of author styles and user styles, are the only (i.e., default) styles applied to content; hence, the term, user agent default styles, which is frequently shortened to user agent styles.</p>
+
+    <p>Of all the valid properties for a given element, user agent styles assign only those required to impart a basic structure type upon an element. In this respect, it can be said that HTML is a web language in which a minimum of styles, defined and provided by user agents, crudely layout (i.e., structure) content, and CSS is a web language in which additional styles, defined and provided by authors and users, refine the layout/presentation (i.e., style) of content.</p>
+
+    <p>The W3C CSS2 Recommendation includes a <a href="http://www.w3.org/TR/CSS2/sample.html">Default style sheet for HTML 4 (w3.org)</a> that user agent vendors are encouraged to implement. User agent vendors, however, are free to create their own user agent styles. User agent styles that differ significantly from the norm have a negative impact on cross-browser compatibility and are denounced by authors and users. Accordingly, the differences between user agent vendor user agent styles have gradually decreased over time.</p>
+
+    <p>By default, this web page is HTML only; meaning, it has no CSS styles attached to it. In other words, by default, this web page provides the visualization of user agent styles. To attach the Bootstrap v3.3.7 or 4.1.3 styles to this web page, use the following selectbox. Once attached, this web page provides the visualization of the selected Bootstrap styles.</p>
+
     <form id='formId'>
      <label>Select the user agent/Bootstrap styles to visualize:
       <select>
@@ -124,12 +132,6 @@
 
     <p>Note: To visually compare user agent/Bootstrap styles side by side, open <a href="/css/css_testing_ground/visualize_user_agent_or_bootstrap_styles.html" target="_blank" rel="noreferrer">this web page (learnwebcoding.com)</a> in multiple web browser tabs, select the user agent/Bootstrap styles to visualize for each tab, and press Ctrl + Tab to toggle between the tabs.</p>
    </ol>
-
-   <p>User agents have a style sheet built into them whose styles: 1.) define and provide the structure types associated with HTML elements; 2.) are merged with author styles, if present, and user styles, if present, in styling content; and 3.) in the absence of author styles and user styles, are the only (i.e., default) styles applied to content; hence, the term, user agent default styles, which is frequently shortened to user agent styles.</p>
-
-   <p>Of all the valid properties for a given element, user agent styles assign only those required to impart a basic structure type upon an element. In this respect, it can be said that HTML is a web language in which a minimum of styles, defined and provided by user agents, crudely layout (i.e., structure) content, and CSS is a web language in which additional styles, defined and provided by authors and users, refine the layout/presentation (i.e., style) of content.</p>
-
-   <p>The W3C CSS2 Recommendation includes a <a href="http://www.w3.org/TR/CSS2/sample.html">Default style sheet for HTML 4 (w3.org)</a> that user agent vendors are encouraged to implement. User agent vendors, however, are free to create their own user agent styles. User agent styles that differ significantly from the norm have a negative impact on cross-browser compatibility and are denounced by authors and users. Accordingly, the differences between user agent vendor user agent styles have gradually decreased over time.</p>
 
    <p>Except where noted, each element is coded as <code>&lt;element&gt;element&lt;/element&gt;</code>. In addition, to visually determine if the user agent/Bootstrap styles an element as; 1.) a flow/block-level or phrasing/inline container, and 2.) with any margin and/or padding, each <code>&lt;element&gt;element&lt;/element&gt;</code> is preceded and followed by <code>&lt;div&gt;div&lt;/div&gt;</code> and <code>&lt;span&gt;span&lt;/span&gt;</code>, typically as:</p>
 
