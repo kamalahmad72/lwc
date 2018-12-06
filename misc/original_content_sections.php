@@ -4,7 +4,7 @@
 /* File: /web_server_root_directory/misc/original_content_sections.php.
  * Purpose: Web page <section></section> sections.
  * Used in: /web_server_root_directory/misc/original_content.php.
- * Last reviewed/updated: 27 Nov 2018.
+ * Last reviewed/updated: 05 Dec 2018.
  * Published: 21 Sep 2016. */
 return
    "<section>
@@ -55,7 +55,7 @@ return
         <li><a href='/css/css_testing_ground/visualize_user_agent_or_bootstrap_styles.html'>Visualize User Agent Or Bootstrap Styles (learnwebcoding.com)</a>
          <div class='note normal'>In Edge, to avoid an apparent load issue related to the <code>template</code> element example, right click and select <kbd>Open in new tab</kbd>.</div>
         </li>
-        <li><a href='/css/css_testing_ground/visualize_bootstrap_33x_media_query_viewport_breakpoints.html'>Visualize Bootstrap v3.3.x Media Query Viewport Breakpoints (learnwebcoding.com)</a></li>
+        <li><a href='/css/css_testing_ground/visualize_bootstrap_media_query_viewport_breakpoints.html'>Visualize Bootstrap Media Query Viewport Breakpoints (learnwebcoding.com)</a></li>
         <li><a href='/css/css_testing_ground/visualize_display_inline_compared_to_display_inline_block.html'>Visualize CSS Style <code>display: inline</code> Compared To <code>display: inline-block</code> (learnwebcoding.com)</a></li>
         <li><a href='/css/css_testing_ground/visualize_em_compared_to_rem.html'>Visualize CSS Unit <code>em</code> Compared To <code>rem</code> (learnwebcoding.com)</a></li>
         <li><a href='/css/css_testing_ground/do_olol_olul_ulol_ulul_style_all_levels_various_list_nesting_combinations.php'>Do the <code>ol ol, ol ul, ul ol, ul ul</code> Descendant Selectors Style All Levels Of Various List Nesting Combinations? (learnwebcoding.com)</a></li>

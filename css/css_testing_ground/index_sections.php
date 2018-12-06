@@ -4,7 +4,7 @@
 /* File: /web_server_root_directory/css/css_testing_ground/index_sections.php.
  * Purpose: Web page <section></section> sections.
  * Used in: /web_server_root_directory/css/css_testing_ground/index.php.
- * Last reviewed/updated: 27 Nov 2018.
+ * Last reviewed/updated: 05 Dec 2018.
  * Published: 21 Sep 2016. */
 return
    "<section>
@@ -42,12 +42,12 @@ return
     <hr />
     <section>
 
-     <h2><a id='bootstrap33xMediaQueryViewportBreakpoints'></a>3. Visualize Bootstrap v3.3.x Media Query Viewport Breakpoints</h2>
+     <h2><a id='bootstrapMediaQueryViewportBreakpoints'></a>3. Visualize Bootstrap Media Query Viewport Breakpoints</h2>
 
-     <p>A visual demonstration of Bootstrap v3.3.x media query viewport breakpoints:</p>
+     <p>A visual demonstration of Bootstrap media query viewport breakpoints:</p>
 
      <ul class='link-list'>
-      <li><a href='/css/css_testing_ground/visualize_bootstrap_33x_media_query_viewport_breakpoints.html'>Visualize Bootstrap v3.3.x Media Query Viewport Breakpoints (learnwebcoding.com)</a></li>
+      <li><a href='/css/css_testing_ground/visualize_bootstrap_media_query_viewport_breakpoints.html'>Visualize Bootstrap Media Query Viewport Breakpoints (learnwebcoding.com)</a></li>
      </ul>
 
     </section>
