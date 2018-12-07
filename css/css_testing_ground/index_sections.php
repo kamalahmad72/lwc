@@ -4,7 +4,7 @@
 /* File: /web_server_root_directory/css/css_testing_ground/index_sections.php.
  * Purpose: Web page <section></section> sections.
  * Used in: /web_server_root_directory/css/css_testing_ground/index.php.
- * Last reviewed/updated: 05 Dec 2018.
+ * Last reviewed/updated: 06 Dec 2018.
  * Published: 21 Sep 2016. */
 return
    "<section>
@@ -33,9 +33,7 @@ return
      <p>A visual demonstration of user agent or Bootstrap styles:</p>
 
      <ul class='link-list'>
-      <li><a href='/css/css_testing_ground/visualize_user_agent_or_bootstrap_styles.html'>Visualize User Agent Or Bootstrap Styles (learnwebcoding.com)</a>
-         <div class='note normal'>In Edge, to avoid an apparent load issue related to the <code>template</code> element example, right click and select <kbd>Open in new tab</kbd>.</div>
-      </li>
+      <li><a href='/css/css_testing_ground/visualize_user_agent_or_bootstrap_styles.html'>Visualize User Agent Or Bootstrap Styles (learnwebcoding.com)</a></li>
      </ul>
 
     </section>
