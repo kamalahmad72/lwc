@@ -4,7 +4,7 @@
 /* File: /web_server_root_directory/javascript/javascript_web_browser_detection_update_sections.php.
  * Purpose: Web page <section></section> sections.
  * Used in: /web_server_root_directory/javascript/javascript_web_browser_detection_update.php.
- * Last reviewed/updated: 05 Dec 2018.
+ * Last reviewed/updated: 09 Dec 2018.
  * Published: 21 Sep 2016. */
 return
    "<section>
