@@ -39,6 +39,7 @@ wp 4.9.8 (02Aug18) includes three themes; 1.) Twenty Seventeen v1.7 (default), 2
 wp 4.9.9 (13Dec18) includes three themes; 1.) Twenty Seventeen v1.7 (default), 2.) Twenty Sixteen v1.5, 3.) Twenty Fifteen v2.0.
 wp 5.0.0 (06Dec18) includes three themes; 1.) Twenty Nineteen v1.0 (default), 2.) Twenty Seventeen v1.8, 2.) Twenty Sixteen v1.6.
 wp 5.0.1 (13Dec18) includes three themes; 1.) Twenty Nineteen v1.0 (default), 2.) Twenty Seventeen v1.8, 2.) Twenty Sixteen v1.6.
+wp 5.0.2 (19Dec18) includes three themes; 1.) Twenty Nineteen v1.1 (default), 2.) Twenty Seventeen v1.9, 2.) Twenty Sixteen v1.7.
 
 -------------------
 WP Alternate Themes
