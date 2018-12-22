@@ -17,13 +17,13 @@
      background-color: #000;
      color: #fff;
    }
-   .bar-33x-sm-767px {
+   .bar-3x-sm-767px {
      width: 767px;
    }
-   .bar-33x-md-991px {
+   .bar-3x-md-991px {
      width: 991px;
    }
-   .bar-33x-lg-1199px {
+   .bar-3x-lg-1199px {
      width: 1199px;
    }
    .bar-4x-sm-575px {
@@ -53,45 +53,55 @@
 
   <h1>Visualize Bootstrap Media Query Viewport Breakpoints</h1>
 
-<!-- In Bootstrap 3.3.x and 4.x bootstrap.css, to get the media query viewport breakpoints, look for the @media (min-width: #px) { .container { width (3.3.x)/max-width (4.x): #px } } media query section. In Bootstrap 3.3.7, this starts at bootstrap.css line 1590. In Bootstrap 3.4.0, this starts at bootstrap.css line 1589. In Bootstrap 4.0.0, this starts at bootstrap.css line 564. In Bootstrap 4.1.3, this starts at bootstrap.css line 558. In Bootstrap 4.2.1, this starts at bootstrap.css line 546. -->
+<!-- In Bootstrap 3.x and 4.x bootstrap.css, to get the media query viewport breakpoints, look for the @media (min-width: #px) { .container { width (3.1.x - 3.4.x)/max-width (3.0.x/4.x): #px } } media query section.
+In Bootstrap 3.0.0, this is at bootstrap.css lines 916, 1070, and 1233.
+In Bootstrap 3.1.0, this section starts at bootstrap.css line 740.
+In Bootstrap 3.2.0, this section starts at bootstrap.css line 1399.
+In Bootstrap 3.3.0, this section starts at bootstrap.css line 1396.
+In Bootstrap 3.3.7, this section starts at bootstrap.css line 1590.
+In Bootstrap 3.4.0, this section starts at bootstrap.css line 1589.
+In Bootstrap 4.0.0, this section starts at bootstrap.css line 564.
+In Bootstrap 4.1.3, this section starts at bootstrap.css line 558.
+In Bootstrap 4.2.1, this section starts at bootstrap.css line 546.
+-->
 
   <ol>
-   <li><a href="#bs33x">Visualize Bootstrap 3.3.x And 3.4.x Media Query Viewport Breakpoints</a></li>
+   <li><a href="#bs3x">Visualize Bootstrap 3.x Media Query Viewport Breakpoints</a></li>
    <li><a href="#bs4x">Visualize Bootstrap 4.x Media Query Viewport Breakpoints</a></li>
    <li><a href="#resources">Resources And Additional Information</a></li>
   </ol>
 
   <hr>
 
-  <h3><a id="bs33x"></a>1. Visualize Bootstrap 3.3.x And 3.4.x Media Query Viewport Breakpoints</h3>
+  <h3><a id="bs3x"></a>1. Visualize Bootstrap 3.x Media Query Viewport Breakpoints</h3>
 
-  <p>1.) Extra small screen. Phone. <code>xs</code>. No media query required. Styles applied to content at all viewport widths.</p>
+  <p>1.) Extra small screen (phone). <code>xs</code>. No media query required. Styles applied to content at all viewport widths.</p>
 
-  <p>2.) Small screen. Tablet. <code>sm</code>. <code>@media (min-width: 768px) { ... }</code>. Styles applied to content when viewport width is 768+ pixels.<br />
-  <span class="bar-common bar-33x-sm-767px">Width 767px.</span></p>
+  <p>2.) Small screen (tablet). <code>sm</code>. <code>@media (min-width: 768px) { ... }</code>. Styles applied to content when viewport width is 768+ pixels.<br />
+  <span class="bar-common bar-3x-sm-767px">Width 767px.</span></p>
 
-  <p>3.) Medium screen. Desktop. <code>md</code>. <code>@media (min-width: 992px) { ... }</code>. Styles applied to content when viewport width is 992+ pixels.<br />
-  <span class="bar-common bar-33x-md-991px">Width 991px.</span></p>
+  <p>3.) Medium screen (desktop). <code>md</code>. <code>@media (min-width: 992px) { ... }</code>. Styles applied to content when viewport width is 992+ pixels.<br />
+  <span class="bar-common bar-3x-md-991px">Width 991px.</span></p>
 
-  <p>4.) Large screen. Large desktop. <code>lg</code>. <code>@media (min-width: 1200px) { ... }</code>. Styles applied to content when viewport width is 1200+ pixels.<br />
-  <span class="bar-common bar-33x-lg-1199px">Width 1199px.</span></p>
+  <p>4.) Large screen (large desktop). <code>lg</code>. <code>@media (min-width: 1200px) { ... }</code>. Styles applied to content when viewport width is 1200+ pixels.<br />
+  <span class="bar-common bar-3x-lg-1199px">Width 1199px.</span></p>
 
   <hr />
 
   <h3><a id="bs4x"></a>2. Visualize Bootstrap 4.x Media Query Viewport Breakpoints</h3>
 
-  <p>1.) Extra small screen. Portrait phone. <code>xs</code>. No media query required. Styles applied to content at all viewport widths.</p>
+  <p>1.) Extra small screen (portrait phone). <code>xs</code>. No media query required. Styles applied to content at all viewport widths.</p>
 
-  <p>2.) Small screen. Landscape phone. <code>sm</code>. <code>@media (min-width: 576px) { ... }</code>. Styles applied to content when viewport width is 576+ pixels.<br />
+  <p>2.) Small screen (landscape phone). <code>sm</code>. <code>@media (min-width: 576px) { ... }</code>. Styles applied to content when viewport width is 576+ pixels.<br />
   <span class="bar-common bar-4x-sm-575px">Width 575px.</span></p>
 
-  <p>3.) Medium screen. Tablet. <code>md</code>. <code>@media (min-width: 768px) { ... }</code>. Styles applied to content when viewport width is 768+ pixels.<br />
+  <p>3.) Medium screen (tablet). <code>md</code>. <code>@media (min-width: 768px) { ... }</code>. Styles applied to content when viewport width is 768+ pixels.<br />
   <span class="bar-common bar-4x-md-767px">Width 767px.</span></p>
 
-  <p>4.) Large screen. Desktop. <code>lg</code>. <code>@media (min-width: 992px) { ... }</code>. Styles applied to content when viewport width is 992+ pixels.<br />
+  <p>4.) Large screen (desktop). <code>lg</code>. <code>@media (min-width: 992px) { ... }</code>. Styles applied to content when viewport width is 992+ pixels.<br />
   <span class="bar-common bar-4x-lg-991px">Width 991px.</span></p>
 
-  <p>5.) Extra large screen. Large desktop. <code>xl</code>. <code>@media (min-width: 1200px) { ... }</code>. Styles applied to content when viewport width is 1200+ pixels.<br />
+  <p>5.) Extra large screen (large desktop). <code>xl</code>. <code>@media (min-width: 1200px) { ... }</code>. Styles applied to content when viewport width is 1200+ pixels.<br />
   <span class="bar-common bar-4x-xl-1199px">Width 1199px.</span></p>
 
   <hr />
@@ -106,7 +116,7 @@
    <li><a href="https://getbootstrap.com/docs/4.2/layout/overview/#responsive-breakpoints">Bootstrap Documentation 4.2: Responsive Breakpoints (getbootstrap.com)</a></li>
   </ul>
 
-  <p>Last reviewed/updated: 21 Dec 2018 | Published: 08 Jul 2015 | Status: Active</p>
+  <p>Last reviewed/updated: 22 Dec 2018 | Published: 08 Jul 2015 | Status: Active</p>
 
   <p><a href="http://www.learnwebcoding.com/">Learn Web Coding</a></p>
 
