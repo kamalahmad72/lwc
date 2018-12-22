@@ -4,7 +4,7 @@
 /* File: /web_server_root_directory/javascript/javascript_web_browser_detection_update_sections.php.
  * Purpose: Web page <section></section> sections.
  * Used in: /web_server_root_directory/javascript/javascript_web_browser_detection_update.php.
- * Last reviewed/updated: 13 Dec 2018.
+ * Last reviewed/updated: 21 Dec 2018.
  * Published: 21 Sep 2016. */
 return
    "<section>
@@ -40,7 +40,7 @@ return
      <p>The JavaScript has the following caveats:</p>
 
      <ul>
-      <li>Because FF16+ major releases (e.g., FF63) and point releases (e.g., FF63.0.1) have identical user-agent string values, it does not accurately detect/report on the latest FF point releases.</li>
+      <li>Because FF16+ major releases (e.g., FF63) and minor and dot releases (e.g., FF63.0.1) have identical user-agent string values, it does not accurately detect/report on the latest FF minor and dot releases.</li>
       <li>Because the OP5 - 12.17 user-agent string value can be changed to mimic the user-agent string value of other web browsers, it does not accurately detect/report on OP9 - 12.17 (Mask As Internet Explorer) and OP10.50 - 12.17 (Mask As Firefox).</li><!-- E.g., OP12.17 64-bit (Mask As Internet Explorer) is reported as 'The web browser is Internet Explorer 9.0 for Windows 7' and OP12.17 64-bit (Mask As Firefox) is reported as 'The web browser is Firefox 4.0'. -->
       <li>Because beta, release candidate, and other non-official versions of web browsers are risky to use, and because they often have the same user-agent string value as the official versions, it does not detect/report on beta, release candidate, and other non-official versions of the supported web browsers.</li>
       <li>It requires a web browser that supports JavaScript and has JavaScript support enabled.</li>

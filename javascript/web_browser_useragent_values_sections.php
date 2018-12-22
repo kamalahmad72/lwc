@@ -5151,6 +5151,12 @@ return
      <p>Opera 57.0.3098.102 64-bit<br />
      mozilla/5.0 (windows nt 6.1; win64; x64) applewebkit/537.36 (khtml, like gecko) chrome/70.0.3538.102 safari/537.36 opr/57.0.3098.102</p>
 
+     <p>Opera 57.0.3098.106 32-bit<br />
+     mozilla/5.0 (windows nt 6.1; wow64) applewebkit/537.36 (khtml, like gecko) chrome/70.0.3538.102 safari/537.36 opr/57.0.3098.106</p>
+
+     <p>Opera 57.0.3098.106 64-bit<br />
+     mozilla/5.0 (windows nt 6.1; win64; x64) applewebkit/537.36 (khtml, like gecko) chrome/70.0.3538.102 safari/537.36 opr/57.0.3098.106</p>
+
     </section>
     <hr />
     <section>
@@ -5538,6 +5544,12 @@ return
 
      <p>Vivaldi 2.2.1388.34 64-bit<br />
      mozilla/5.0 (windows nt 6.1; win64; x64) applewebkit/537.36 (khtml, like gecko) chrome/71.0.3578.85 safari/537.36 vivaldi/2.2.1388.34</p>
+
+     <p>Vivaldi 2.2.1388.37 32-bit<br />
+     mozilla/5.0 (windows nt 6.1; wow64) applewebkit/537.36 (khtml, like gecko) chrome/71.0.3578.98 safari/537.36 vivaldi/2.2.1388.37</p>
+
+     <p>Vivaldi 2.2.1388.37 64-bit<br />
+     mozilla/5.0 (windows nt 6.1; win64; x64) applewebkit/537.36 (khtml, like gecko) chrome/71.0.3578.98 safari/537.36 vivaldi/2.2.1388.37</p>
 
     </section>
     <hr />

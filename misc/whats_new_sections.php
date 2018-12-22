@@ -4,7 +4,7 @@
 /* File: /web_server_root_directory/misc/whats_new_sections.php.
  * Purpose: Web page <section></section> sections.
  * Used in: /web_server_root_directory/misc/whats_new.php.
- * Last reviewed/updated: 18 Dec 2018.
+ * Last reviewed/updated: 21 Dec 2018.
  * Published: 21 Sep 2016. */
 return
    "<!-- This web page does not have an h2-h6 element in the section element. To avoid W3C Markup Validation Service (http://validator.w3.org/) warning, not error (Warning: Section lacks heading. Consider using h2-h6 elements to add identifying headings to all sections.), comment out the section element. Same for index.php, sitemap.php, glossary.php, and whats_new.php.
@@ -12,9 +12,10 @@ return
 -->
 <!-- Resources are \"Added\". Instructional pages are \"Published\". Always keep when a page is \"Added/Published\". When a page is \"Major update\" remove prior \"Updated/Major update\". When a page is \"Updated\" remove prior \"Updated\". When a page is \"Updated\" keep prior \"Major update\". When a page is \"Updated/Major update\" remove prior \"Renamed\". When a page is \"Renamed\" without being \"Updated\" keep prior \"Updated/Major update\". When a page is \"Renamed\" and \"Updated\" remove prior \"Updated\" and keep prior \"Major update\". When a page is \"Renamed\" rename all refs to the page (including Updated/Major update/Added/Published) to the new name. When a page is \"Deleted\" remove prior \"Published\", remove prior \"Updated\, and mention page \"Deleted.\". When a page is \"Moved to discontinued\" keep prior \"Published\", remove prior \"Updated\", and do not mention page \"Moved to discontinued\". -->
      <ul class='link-list'>
+      <li><a href='/css/css_testing_ground/visualize_user_agent_or_bootstrap_styles.html'>Visualize User Agent Or Bootstrap Styles (learnwebcoding.com)</a>: Updated: 21 Dec 2018.</li>
+      <li><a href='/css/css_testing_ground/visualize_bootstrap_media_query_viewport_breakpoints.html'>Visualize Bootstrap Media Query Viewport Breakpoints (learnwebcoding.com)</a>: Updated: 21 Dec 2018.</li>
+      <li><a href='/javascript/web_browser_useragent_values.php'>Web Browser User-Agent String Values (learnwebcoding.com)</a> and <a href='/javascript/javascript_web_browser_detection_update.php'>JavaScript Web Browser Detection With Link To Download Update (learnwebcoding.com)</a>: Updated: 21 Dec 2018.</li>
       <li><a href='/javascript/angularjs_shopping_cart_spa.php'>AngularJS Shopping Cart Single Page Application (learnwebcoding.com)</a> Updated: 18 Dec 2018.</li>
-      <li><a href='/javascript/web_browser_useragent_values.php'>Web Browser User-Agent String Values (learnwebcoding.com)</a> and <a href='/javascript/javascript_web_browser_detection_update.php'>JavaScript Web Browser Detection With Link To Download Update (learnwebcoding.com)</a>: Updated: 13 Dec 2018.</li>
-      <li><a href='/css/css_testing_ground/visualize_user_agent_or_bootstrap_styles.html'>Visualize User Agent Or Bootstrap Styles (learnwebcoding.com)</a>: Updated: 06 Dec 2018.</li>
       <li><a href='/css/css_testing_ground/index.php'>CSS Testing Ground (learnwebcoding.com)</a>: Updated: 06 Dec 2018.</li>
       <li><a href='/css/index.php'>CSS (learnwebcoding.com)</a> Landing Page: Updated: 06 Dec 2018.</li>
       <li><a href='/misc/original_content.php'>Original Content (learnwebcoding.com)</a>: Updated: 06 Dec 2018.</li>
