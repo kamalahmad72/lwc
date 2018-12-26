@@ -4,7 +4,7 @@
 /* File: /web_server_root_directory/html/template_explained_sections.php.
  * Purpose: Web page <section></section> sections.
  * Used in: /web_server_root_directory/html/template_explained.php.
- * Last reviewed/updated: 29 Nov 2018.
+ * Last reviewed/updated: 25 Dec 2018.
  * Published: 21 Sep 2016. */
 return
    "<section>
@@ -97,20 +97,21 @@ selector { property-one: value-one; property-two: value-two; property-three: val
 
      <h2><a id='bootstrap'></a>2. Bootstrap Usage</h2>
 
-     <p><a href='http://getbootstrap.com/'>Bootstrap (getbootstrap.com)</a> is a responsive/mobile first HTML, CSS, and JS framework. The LWC Home Template uses three Bootstrap components, all of which are used sitewide at LWC Home/Blog/Forums:</p>
+     <p><a href='http://getbootstrap.com/'>Bootstrap (getbootstrap.com)</a> is a responsive/mobile first HTML, CSS, and JS framework. The LWC Home Template uses three Bootstrap 3.4.x components, all of which are used sitewide at LWC Home/Blog/Forums:</p>
 
      <ul>
-      <li>The <a href='http://getbootstrap.com/css/#grid'>Bootstrap grid system (getbootstrap.com)</a> for LWC content.</li>
-      <li>The <a href='http://getbootstrap.com/components/#navbar'>Bootstrap navbar (getbootstrap.com)</a> for the <a href='#lwcBootstrapNavbar'>LWC Bootstrap navbar (below)</a>.</li>
-      <li>The <a href='http://getbootstrap.com/css/#responsive-utilities'>Bootstrap responsive utilities (getbootstrap.com)</a> for the <a href='#lwcBootstrapNavbar'>LWC Bootstrap navbar (below)</a>.</li>
+      <li><a href='https://getbootstrap.com/docs/3.4/css/#grid'>Grid system (getbootstrap.com)</a> for LWC content.</li>
+      <li><a href='https://getbootstrap.com/docs/3.4/components/#navbar'>Navbar (getbootstrap.com)</a> for the <a href='#lwcBootstrapNavbar'>LWC Bootstrap navbar (below)</a>.</li>
+      <li><a href='https://getbootstrap.com/docs/3.4/css/#responsive-utilities'>Responsive utilities (getbootstrap.com)</a> for the <a href='#lwcBootstrapNavbar'>LWC Bootstrap navbar (below)</a>.</li>
      </ul>
 
      <h3><a id='customizingBootstrapStyleSheet'></a>2.1. Customizing Bootstrap And Then Editing The Bootstrap Style Sheet</h3>
 
      <p>Bootstrap styles can interfere with author styles, which leaves four options; 1.) use the Bootstrap styles, 2.) eliminate the Bootstrap styles, 3.) supplement/override the Bootstrap styles, or 4.) some combination of 1 through 3.</p>
 
-     <p>The Bootstrap v3.3.7 non-minified style sheet packaged with bootstrap-3.3.7-dist.zip is <a href='/stylesheets/bootstrap/v337_dist/bootstrap.css'><span class='filename'>bootstrap.css</span> (learnwebcoding.com)</a>, which is 146,010 bytes, 6,758 lines, and has <a href='/stylesheets/bootstrap/v337_dist/bootstrap_distribution_css_validation_test.html'>25 errors and 125 
-warnings (learnwebcoding.com)</a> per the <a href='http://jigsaw.w3.org/css-validator/'>W3C CSS Validation Service (jigsaw.w3.org)</a>. <a href='http://getbootstrap.com/customize/'>Customize Bootstrap (getbootstrap.com)</a> allows you to create a Bootstrap implementation that incorporates only the Bootstrap components that you select. This lightens Bootstrap and can eliminate some troublesome/invalid Bootstrap styles. To lighten Bootstrap and to eliminate some troublesome/invalid Bootstrap styles, Bootstrap was customized with the following components selected:</p>
+     <p>The Bootstrap 3.4.0 non-minified style sheet packaged with bootstrap-3.4.0-dist.zip is <a href='/stylesheets/bootstrap/v340_dist/bootstrap.css'><span class='filename'>bootstrap.css</span> (learnwebcoding.com)</a>, which is 145,933 bytes, 6,834 lines, and has <a href='/stylesheets/bootstrap/v340_dist/bootstrap_distribution_css_validation_test.html'>3 errors and 158 warnings (learnwebcoding.com)</a> per the <a href='http://jigsaw.w3.org/css-validator/'>W3C CSS Validation Service (jigsaw.w3.org)</a>. The <a href='https://getbootstrap.com/docs/3.4/customize/'>Bootstrap Customizer (getbootstrap.com)</a> allows you to create a Bootstrap implementation that incorporates only the Bootstrap Less files and the Bootstrap jQuery plugins that you select. This lightens Bootstrap and can eliminate some troublesome/invalid Bootstrap styles. To lighten Bootstrap and to eliminate some troublesome/invalid Bootstrap styles, Bootstrap was customized with the following Less files and jQuery plugins selected:</p>
+
+     <div class='note normal'>The <a href='https://getbootstrap.com/docs/3.4/customize/'>Bootstrap Customizer (getbootstrap.com)</a> is for Bootstrap 3.x, not 4.x.</div>
 
      <ol>
       <li>Less files:
@@ -119,13 +120,13 @@ warnings (learnwebcoding.com)</a> per the <a href='http://jigsaw.w3.org/css-vali
         <li>Under Common CSS, check:
          <ol>
           <li><kbd>Grid system</kbd>.</li>
-          <li><kbd>Forms</kbd> (auto checked by Navbar).</li>
+          <li><kbd>Forms</kbd> (auto checked by Navbar below).</li>
           <li><kbd>Responsive utilities</kbd> (required for the Navbar show/hide content to work).</li>
          </ol>
         </li>
         <li>Under Components, check:
          <ol>
-          <li><kbd>Navs</kbd> (auto checked by Navbar).</li>
+          <li><kbd>Navs</kbd> (auto checked by Navbar below).</li>
           <li><kbd>Navbar</kbd>.</li>
          </ol>
         </li>
@@ -155,11 +156,11 @@ warnings (learnwebcoding.com)</a> per the <a href='http://jigsaw.w3.org/css-vali
       <li>Scroll to the bottom of the web page and click <kbd>Compile and Download</kbd>.</li>
      </ol>
 
-     <p>The customized Bootstrap <a href='/stylesheets/bootstrap/v337_cust/bootstrap.css'><span class='filename'>bootstrap.css</span> (learnwebcoding.com)</a> was 52,350 bytes, 2,652 lines, and had <a href='/stylesheets/bootstrap/v337_cust/customized_bootstrap_css_validation_test.html'>12 errors and 59 warnings (learnwebcoding.com)</a> per the W3C CSS Validation Service. To further lighten Bootstrap and to further eliminate some troublesome/invalid Bootstrap styles, <span class='filename'>bootstrap.css</span> was manually edited to remove the known unnecessary Bootstrap style rules, not to change any Bootstrap style rules. The manually edited <a href='/stylesheets/bootstrap/v337_cust_then_edit_01/bootstrap.css'><span class='filename'>bootstrap.css (learnwebcoding.com)</span></a> was 34,982 bytes, 1,703 lines, and had <a href='/stylesheets/bootstrap/v337_cust_then_edit_01/customized_bootstrap_then_edited_01_css_validation_test.html'>6 errors and 20 warnings (learnwebcoding.com)</a> per the W3C CSS Validation Service. Then <span class='filename'>bootstrap.css</span> was manually edited a second time to determine if the lines reported in the errors could be commented out without any apparent adverse affect. The lines were commented without any apparent adverse affect and the final non-minified <a href='/stylesheets/bootstrap/v337_cust_then_edit_02/bootstrap.css'><span class='filename'>bootstrap.css</span> (learnwebcoding.com)</a> is 35,501 bytes, 1,706 lines, and is <a href='/stylesheets/bootstrap/v337_cust_then_edit_02/customized_bootstrap_then_edited_02_css_validation_test.html'>valid CSS Level 3 with 20 warnings (learnwebcoding.com)</a> per the W3C CSS Validation Service. As a result of customizing Bootstrap and then manually editing, the Bootstrap style sheet was reduced in size by over 75%, is valid CSS Level 3 (with warnings) per the W3C CSS Validation Service, and only 14 style rules <!-- Excluding the LWC navbar styles. -->were required to supplement/override the remaining troublesome Bootstrap styles.</p>
+     <p>The customized Bootstrap <a href='/stylesheets/bootstrap/v340_cust/bootstrap.css'><span class='filename'>bootstrap.css</span> (learnwebcoding.com)</a> is 52,174 bytes, 2,654 lines, and has <a href='/stylesheets/bootstrap/v340_cust/customized_bootstrap_css_validation_test.html'>1 error and 66 warnings (learnwebcoding.com)</a> per the W3C CSS Validation Service. To further lighten Bootstrap and to further eliminate some troublesome/invalid Bootstrap styles, <span class='filename'>bootstrap.css</span> was manually edited to remove the known unnecessary Bootstrap style rules, not to change any Bootstrap style rules. The manually edited <a href='/stylesheets/bootstrap/v340_cust_then_edit/bootstrap.css'><span class='filename'>bootstrap.css (learnwebcoding.com)</span></a> is 35,032 bytes, 1,711 lines, and is <a href='/stylesheets/bootstrap/v340_cust_then_edit/customized_bootstrap_then_edited_css_validation_test.html'>valid CSS Level 3 with 23 warnings (learnwebcoding.com)</a> per the W3C CSS Validation Service. As a result of customizing Bootstrap and then manually editing, the Bootstrap style sheet was reduced in size by over 75%, is valid CSS Level 3 (with warnings) per the W3C CSS Validation Service, and only 14 style rules <!-- Excluding the LWC navbar styles. -->were required to supplement/override the remaining troublesome Bootstrap styles.</p>
 
      <h3><a id='customizingBootstrapJavaScript'></a>2.2. Customizing Bootstrap And The Bootstrap JavaScript</h3>
 
-     <p>The Bootstrap v3.3.7 non-minified JavaScript packaged with bootstrap-3.3.7-dist.zip is <a href='/javascripts/bootstrap/v337_dist/bootstrap.js'><span class='filename'>bootstrap.js</span> (learnwebcoding.com)</a>, which is 69,707 bytes and 2,378 lines. The customized Bootstrap <a href='/javascripts/bootstrap/v337_cust/bootstrap.js'><span class='filename'>bootstrap.js</span> (learnwebcoding.com)</a> was 11,558 bytes and 400 lines. As a result of customizing Bootstrap, the Bootstrap JavaScript was reduced in size by over 80%.</p>
+     <p>The Bootstrap 3.4.0 non-minified JavaScript packaged with bootstrap-3.4.0-dist.zip is <a href='/javascripts/bootstrap/v340_dist/bootstrap.js'><span class='filename'>bootstrap.js</span> (learnwebcoding.com)</a>, which is 70,815 bytes and 2,409 lines. The customized Bootstrap <a href='/javascripts/bootstrap/v340_cust/bootstrap.js'><span class='filename'>bootstrap.js</span> (learnwebcoding.com)</a> is 11,464 bytes and 400 lines. As a result of customizing Bootstrap, the Bootstrap JavaScript was reduced in size by over 80%.</p>
 
     </section>
     <hr />
@@ -3316,7 +3317,7 @@ a:focus { outline: thin dotted invert; } /* From normal hyperlinks above. */
 
      <h4><a id='formButtonsBootstrapColors'></a>25.1.1. Bootstrap Button Colors</h4>
 
-     <p>For those interested in adding color to the buttons below, the following are the Bootstrap v3.3.6+ button style rules for the <code>color</code>, <code>background-color</code>, and <code>border-color</code> properties in the default, hover, and active states. For an example of the Bootstrap buttons, see <a href='http://getbootstrap.com/css/#buttons-options'>Bootstrap buttons options (getbootstrap.com)</a>:
+     <p>For those interested in adding color to the buttons below, the following are the Bootstrap 3.3.6+ button style rules for the <code>color</code>, <code>background-color</code>, and <code>border-color</code> properties in the default, hover, and active states. For an example of the Bootstrap buttons, see <a href='http://getbootstrap.com/css/#buttons-options'>Bootstrap buttons options (getbootstrap.com)</a>:
 
      <table>
       <caption>Bootstrap 3.3.6+ Button Style Rules For The <code>color</code>, <code>background-color</code>, and <code>border-color</code> Properties In The Default, Hover, And Active States</caption>

@@ -1,9 +1,9 @@
 /* ------------------------------ ST EDIT. INTRODUCTION. ------------------------------ */
 
-/* File: /web_server_root_directory/stylesheets/zz_bootstrap_no_min/zz_bootstrap_as_pseudo_namespace_for_phpbb/bootstrap_as_pseudo_namespace_for_phpbb.scss for creating /web_server_root_directory/stylesheets/bootstrap/bootstrap_as_pseudo_namespace_for_phpbb.css.
- * Purpose: Style sheet for Bootstrap v3.3.7 content at LWC Forums. For the style sheet for Bootstrap v3.3.7 content at LWC Home/Blog, see bootstrap.css.
+/* File: /web_server_root_directory/stylesheets/bootstrap/bootstrap_as_pseudo_namespace_for_phpbb.css.
+ * Purpose: Style sheet for Bootstrap content at LWC Forums. The style sheet for Bootstrap content at LWC Home/Blog is /web_server_root_directory/stylesheets/bootstrap/bootstrap.css.
  * Used in: All LWC Forums web pages.
- * Last reviewed/updated: 10 Mar 2018.
+ * Last reviewed/updated: 25 Dec 2018.
  * Published: 28 Jul 2016.
  * Web browser support: IE10+, ED12+, FF6+, CH30+, OP17+, which corresponds to the web browsers that LWC Home/Blog/Forums supports, which includes all of the code (PHP, HTML, CSS, JavaScript, etc) at LWC Home/Blog/Forums.
  * NOTE:
@@ -21,19 +21,20 @@
  *     a.) Assign HTML class="bootstrap" attribute to a parent element of the LWC Home Bootstrap navbar HTML code inserted into Simplicity overall_header.html.
  *     b.) Load this style sheet (ie, bootstrap_as_pseudo_namespace_for_phpbb.css) in Simplicity overall_header.html.
  * 3.) To create this sheet (ie, bootstrap_as_pseudo_namespace_for_phpbb.css):
- *     a.) Copy customized and then edited Bootstrap style sheet from /web_server_root_directory/stylesheets/bootstrap/v33x_cust_then_edit_02/bootstrap.css to /web_server_root_directory/stylesheets/zz_bootstrap_no_min/zz_bootstrap_as_pseudo_namespace_for_phpbb/bootstrap.scss, overwriting any existing bootstrap.scss file.
+ *     a.) Copy customized and then edited Bootstrap style sheet from /web_server_root_directory/stylesheets/bootstrap/v3x_cust_then_edit/bootstrap.css to /web_server_root_directory/stylesheets/zz_bootstrap_no_min/zz_bootstrap_as_pseudo_namespace_for_phpbb/bootstrap.scss, overwriting any existing bootstrap.scss file.
  *         NOTE: File extension changed from .css to .scss.
- *         NOTE: In /web_server_root_directory/stylesheets/zz_bootstrap_no_min/zz_bootstrap_as_pseudo_namespace_for_phpbb/ there is already a bootstrap_as_pseudo_namespace_for_phpbb.scss file and a config.rb file. Delete any existing bootstrap.css file.
+ *         NOTE: The /web_server_root_directory/stylesheets/zz_bootstrap_no_min/zz_bootstrap_as_pseudo_namespace_for_phpbb/ folder is simply a working directory (the working directory), not a destination directory, for generating bootstrap_as_pseudo_namespace_for_phpbb.css so as to avoid overwriting bootstrap.css.
+ *         NOTE: In the working directory, there should already be a bootstrap_as_pseudo_namespace_for_phpbb.scss file and a config.rb file. Delete any existing bootstrap.css.
  *         NOTE: In config.rb, if necessary, suppress line comments by uncommenting out line_comments = false.
- *         NOTE: The /web_server_root_directory/stylesheets/zz_bootstrap_no_min/zz_bootstrap_as_pseudo_namespace_for_phpbb/ folder is simply a working directory, not a destination directory, for generating bootstrap_as_pseudo_namespace_for_phpbb.css so as to avoid overwriting bootstrap.css.
- *     b.) Point Start Command Prompt with Ruby to /web_server_root_directory/stylesheets/zz_bootstrap_no_min/zz_bootstrap_as_pseudo_namespace_for_phpbb/ and issue compass watch command. Compass takes the bootstrap_as_pseudo_namespace_for_phpbb.scss and bootstrap.scss files and writes the bootstrap_as_pseudo_namespace_for_phpbb.css and bootstrap.css files. Close Start Command Prompt with Ruby.
- *     c.) Delete bootstrap.css and bootstrap.scss.
- *     d.) In bootstrap_as_pseudo_namespace_for_phpbb.css, Compass has collated the comments. Move the ST EDIT. SUPPLEMENT/OVERRIDE BOOTSTRAP STYLES. comment and the ST EDIT. ADD LWC NAVBAR STYLES. comment (not the line level comments underneath these comments) to the correct location near the bottom of the file.
- *     e.) In bootstrap_as_pseudo_namespace_for_phpbb.css, delete the .bootstrap { remaining Compass collated comments } style rule.
+ *     b.) Point Start Command Prompt with Ruby to /web_server_root_directory/stylesheets/zz_bootstrap_no_min/zz_bootstrap_as_pseudo_namespace_for_phpbb/ (the working directory) and issue compass watch command. Compass takes the bootstrap_as_pseudo_namespace_for_phpbb.scss and bootstrap.scss files and writes the bootstrap_as_pseudo_namespace_for_phpbb.css and bootstrap.css files. Close Start Command Prompt with Ruby.
+ *     c.) In /web_server_root_directory/stylesheets/zz_bootstrap_no_min/zz_bootstrap_as_pseudo_namespace_for_phpbb/ (the working directory): 1.) delete bootstrap.css, bootstrap.scss, and /.sass-cache/; 2.) the file of interest is bootstrap_as_pseudo_namespace_for_phpbb.css; and 3.) keep bootstrap_as_pseudo_namespace_for_phpbb.scss and config.rb for next time.
+ *     d.) In bootstrap_as_pseudo_namespace_for_phpbb.css, Compass has collated the comments. Copy the ST EDIT. SUPPLEMENT/OVERRIDE BOOTSTRAP STYLES. comment and the ST EDIT. ADD LWC NAVBAR STYLES. comment, not the line level comments underneath these comments, to the correct location near the bottom of the file.
+ *     e.) In bootstrap_as_pseudo_namespace_for_phpbb.css, delete the .bootstrap { Compass collated comments } style rule.
  *     f.) Copy  /web_server_root_directory/stylesheets/zz_bootstrap_no_min/zz_bootstrap_as_pseudo_namespace_for_phpbb/bootstrap_as_pseudo_namespace_for_phpbb.css to /web_server_root_directory/stylesheets/zz_bootstrap_min/bootstrap_as_pseudo_namespace_for_phpbb.scss, overwriting any existing bootstrap_as_pseudo_namespace_for_phpbb.scss file.
  *         NOTE: File extension changed from .css to .scss.
- *         NOTE: In /web_server_root_directory/stylesheets/zz_bootstrap_min/, there is already a config.rb file. Delete any existing bootstrap_as_pseudo_namespace_for_phpbb.css file.
+ *         NOTE: In /web_server_root_directory/stylesheets/zz_bootstrap_min/, there should already be a config.rb file. Delete any existing bootstrap_as_pseudo_namespace_for_phpbb.css file.
  *         NOTE: In config.rb, if necessary, turn on compression by adding output_style = :compressed.
+ *         NOTE: In config.rb, if necessary, comment out line_comments = false.
  *     g.) Point Start Command Prompt with Ruby to /web_server_root_directory/stylesheets/zz_bootstrap_min/ and issue compass watch command. Compass takes the bootstrap_as_pseudo_namespace_for_phpbb.scss file and writes the bootstrap_as_pseudo_namespace_for_phpbb.css file. Close Start Command Prompt with Ruby.
  *     h.) Copy /web_server_root_directory/stylesheets/zz_bootstrap_min/bootstrap_as_pseudo_namespace_for_phpbb.css to online as /web_server_root_directory/stylesheets/bootstrap/bootstrap_as_pseudo_namespace_for_phpbb.css.
  *         NOTE: This style sheet (ie, bootstrap_as_pseudo_namespace_for_phpbb.css) contains all of, and only, the style rules in /web_server_root_directory/stylesheets/bootstrap/bootstrap.css as descendant selectors of the bootstrap selector.

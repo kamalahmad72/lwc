@@ -1,8 +1,8 @@
 /* ------------------------------ ST EDIT. INTRODUCTION. ------------------------------ */
-/* File: /web_server_root_directory/stylesheets/zz_bootstrap_no_min/zz_bootstrap_as_pseudo_namespace_for_phpbb/bootstrap_as_pseudo_namespace_for_phpbb.scss for creating /web_server_root_directory/stylesheets/bootstrap/bootstrap_as_pseudo_namespace_for_phpbb.css.
- * Purpose: Style sheet for Bootstrap v3.3.7 content at LWC Forums. For the style sheet for Bootstrap v3.3.7 content at LWC Home/Blog, see bootstrap.css.
+/* File: /web_server_root_directory/stylesheets/bootstrap/bootstrap_as_pseudo_namespace_for_phpbb.css.
+ * Purpose: Style sheet for Bootstrap content at LWC Forums. The style sheet for Bootstrap content at LWC Home/Blog is /web_server_root_directory/stylesheets/bootstrap/bootstrap.css.
  * Used in: All LWC Forums web pages.
- * Last reviewed/updated: 10 Mar 2018.
+ * Last reviewed/updated: 25 Dec 2018.
  * Published: 28 Jul 2016.
  * Web browser support: IE10+, ED12+, FF6+, CH30+, OP17+, which corresponds to the web browsers that LWC Home/Blog/Forums supports, which includes all of the code (PHP, HTML, CSS, JavaScript, etc) at LWC Home/Blog/Forums.
  * NOTE:
@@ -20,19 +20,20 @@
  *     a.) Assign HTML class="bootstrap" attribute to a parent element of the LWC Home Bootstrap navbar HTML code inserted into Simplicity overall_header.html.
  *     b.) Load this style sheet (ie, bootstrap_as_pseudo_namespace_for_phpbb.css) in Simplicity overall_header.html.
  * 3.) To create this sheet (ie, bootstrap_as_pseudo_namespace_for_phpbb.css):
- *     a.) Copy customized and then edited Bootstrap style sheet from /web_server_root_directory/stylesheets/bootstrap/v33x_cust_then_edit_02/bootstrap.css to /web_server_root_directory/stylesheets/zz_bootstrap_no_min/zz_bootstrap_as_pseudo_namespace_for_phpbb/bootstrap.scss, overwriting any existing bootstrap.scss file.
+ *     a.) Copy customized and then edited Bootstrap style sheet from /web_server_root_directory/stylesheets/bootstrap/v3x_cust_then_edit/bootstrap.css to /web_server_root_directory/stylesheets/zz_bootstrap_no_min/zz_bootstrap_as_pseudo_namespace_for_phpbb/bootstrap.scss, overwriting any existing bootstrap.scss file.
  *         NOTE: File extension changed from .css to .scss.
- *         NOTE: In /web_server_root_directory/stylesheets/zz_bootstrap_no_min/zz_bootstrap_as_pseudo_namespace_for_phpbb/ there is already a bootstrap_as_pseudo_namespace_for_phpbb.scss file and a config.rb file. Delete any existing bootstrap.css file.
+ *         NOTE: The /web_server_root_directory/stylesheets/zz_bootstrap_no_min/zz_bootstrap_as_pseudo_namespace_for_phpbb/ folder is simply a working directory (the working directory), not a destination directory, for generating bootstrap_as_pseudo_namespace_for_phpbb.css so as to avoid overwriting bootstrap.css.
+ *         NOTE: In the working directory, there should already be a bootstrap_as_pseudo_namespace_for_phpbb.scss file and a config.rb file. Delete any existing bootstrap.css.
  *         NOTE: In config.rb, if necessary, suppress line comments by uncommenting out line_comments = false.
- *         NOTE: The /web_server_root_directory/stylesheets/zz_bootstrap_no_min/zz_bootstrap_as_pseudo_namespace_for_phpbb/ folder is simply a working directory, not a destination directory, for generating bootstrap_as_pseudo_namespace_for_phpbb.css so as to avoid overwriting bootstrap.css.
- *     b.) Point Start Command Prompt with Ruby to /web_server_root_directory/stylesheets/zz_bootstrap_no_min/zz_bootstrap_as_pseudo_namespace_for_phpbb/ and issue compass watch command. Compass takes the bootstrap_as_pseudo_namespace_for_phpbb.scss and bootstrap.scss files and writes the bootstrap_as_pseudo_namespace_for_phpbb.css and bootstrap.css files. Close Start Command Prompt with Ruby.
- *     c.) Delete bootstrap.css and bootstrap.scss.
- *     d.) In bootstrap_as_pseudo_namespace_for_phpbb.css, Compass has collated the comments. Move the ST EDIT. SUPPLEMENT/OVERRIDE BOOTSTRAP STYLES. comment and the ST EDIT. ADD LWC NAVBAR STYLES. comment (not the line level comments underneath these comments) to the correct location near the bottom of the file.
- *     e.) In bootstrap_as_pseudo_namespace_for_phpbb.css, delete the .bootstrap { remaining Compass collated comments } style rule.
+ *     b.) Point Start Command Prompt with Ruby to /web_server_root_directory/stylesheets/zz_bootstrap_no_min/zz_bootstrap_as_pseudo_namespace_for_phpbb/ (the working directory) and issue compass watch command. Compass takes the bootstrap_as_pseudo_namespace_for_phpbb.scss and bootstrap.scss files and writes the bootstrap_as_pseudo_namespace_for_phpbb.css and bootstrap.css files. Close Start Command Prompt with Ruby.
+ *     c.) In /web_server_root_directory/stylesheets/zz_bootstrap_no_min/zz_bootstrap_as_pseudo_namespace_for_phpbb/ (the working directory): 1.) delete bootstrap.css, bootstrap.scss, and /.sass-cache/; 2.) the file of interest is bootstrap_as_pseudo_namespace_for_phpbb.css; and 3.) keep bootstrap_as_pseudo_namespace_for_phpbb.scss and config.rb for next time.
+ *     d.) In bootstrap_as_pseudo_namespace_for_phpbb.css, Compass has collated the comments. Copy the ST EDIT. SUPPLEMENT/OVERRIDE BOOTSTRAP STYLES. comment and the ST EDIT. ADD LWC NAVBAR STYLES. comment, not the line level comments underneath these comments, to the correct location near the bottom of the file.
+ *     e.) In bootstrap_as_pseudo_namespace_for_phpbb.css, delete the .bootstrap { Compass collated comments } style rule.
  *     f.) Copy  /web_server_root_directory/stylesheets/zz_bootstrap_no_min/zz_bootstrap_as_pseudo_namespace_for_phpbb/bootstrap_as_pseudo_namespace_for_phpbb.css to /web_server_root_directory/stylesheets/zz_bootstrap_min/bootstrap_as_pseudo_namespace_for_phpbb.scss, overwriting any existing bootstrap_as_pseudo_namespace_for_phpbb.scss file.
  *         NOTE: File extension changed from .css to .scss.
- *         NOTE: In /web_server_root_directory/stylesheets/zz_bootstrap_min/, there is already a config.rb file. Delete any existing bootstrap_as_pseudo_namespace_for_phpbb.css file.
+ *         NOTE: In /web_server_root_directory/stylesheets/zz_bootstrap_min/, there should already be a config.rb file. Delete any existing bootstrap_as_pseudo_namespace_for_phpbb.css file.
  *         NOTE: In config.rb, if necessary, turn on compression by adding output_style = :compressed.
+ *         NOTE: In config.rb, if necessary, comment out line_comments = false.
  *     g.) Point Start Command Prompt with Ruby to /web_server_root_directory/stylesheets/zz_bootstrap_min/ and issue compass watch command. Compass takes the bootstrap_as_pseudo_namespace_for_phpbb.scss file and writes the bootstrap_as_pseudo_namespace_for_phpbb.css file. Close Start Command Prompt with Ruby.
  *     h.) Copy /web_server_root_directory/stylesheets/zz_bootstrap_min/bootstrap_as_pseudo_namespace_for_phpbb.css to online as /web_server_root_directory/stylesheets/bootstrap/bootstrap_as_pseudo_namespace_for_phpbb.css.
  *         NOTE: This style sheet (ie, bootstrap_as_pseudo_namespace_for_phpbb.css) contains all of, and only, the style rules in /web_server_root_directory/stylesheets/bootstrap/bootstrap.css as descendant selectors of the bootstrap selector.
@@ -58,8 +59,8 @@
   position: absolute;
   width: 1px;
   height: 1px;
-  margin: -1px;
   padding: 0;
+  margin: -1px;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
@@ -77,10 +78,10 @@
   cursor: pointer;
 }
 .bootstrap .container {
+  padding-right: 15px;
+  padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 @media (min-width: 768px) {
   .bootstrap .container {
@@ -98,20 +99,28 @@
   }
 }
 .bootstrap .container-fluid {
+  padding-right: 15px;
+  padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 .bootstrap .row {
-  margin-left: -15px;
   margin-right: -15px;
+  margin-left: -15px;
+}
+.bootstrap .row-no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+.bootstrap .row-no-gutters [class*="col-"] {
+  padding-right: 0;
+  padding-left: 0;
 }
 .bootstrap .col-xs-1, .bootstrap .col-sm-1, .bootstrap .col-md-1, .bootstrap .col-lg-1, .bootstrap .col-xs-2, .bootstrap .col-sm-2, .bootstrap .col-md-2, .bootstrap .col-lg-2, .bootstrap .col-xs-3, .bootstrap .col-sm-3, .bootstrap .col-md-3, .bootstrap .col-lg-3, .bootstrap .col-xs-4, .bootstrap .col-sm-4, .bootstrap .col-md-4, .bootstrap .col-lg-4, .bootstrap .col-xs-5, .bootstrap .col-sm-5, .bootstrap .col-md-5, .bootstrap .col-lg-5, .bootstrap .col-xs-6, .bootstrap .col-sm-6, .bootstrap .col-md-6, .bootstrap .col-lg-6, .bootstrap .col-xs-7, .bootstrap .col-sm-7, .bootstrap .col-md-7, .bootstrap .col-lg-7, .bootstrap .col-xs-8, .bootstrap .col-sm-8, .bootstrap .col-md-8, .bootstrap .col-lg-8, .bootstrap .col-xs-9, .bootstrap .col-sm-9, .bootstrap .col-md-9, .bootstrap .col-lg-9, .bootstrap .col-xs-10, .bootstrap .col-sm-10, .bootstrap .col-md-10, .bootstrap .col-lg-10, .bootstrap .col-xs-11, .bootstrap .col-sm-11, .bootstrap .col-md-11, .bootstrap .col-lg-11, .bootstrap .col-xs-12, .bootstrap .col-sm-12, .bootstrap .col-md-12, .bootstrap .col-lg-12 {
   position: relative;
   min-height: 1px;
-  padding-left: 15px;
   padding-right: 15px;
+  padding-left: 15px;
 }
 .bootstrap .col-xs-1, .bootstrap .col-xs-2, .bootstrap .col-xs-3, .bootstrap .col-xs-4, .bootstrap .col-xs-5, .bootstrap .col-xs-6, .bootstrap .col-xs-7, .bootstrap .col-xs-8, .bootstrap .col-xs-9, .bootstrap .col-xs-10, .bootstrap .col-xs-11, .bootstrap .col-xs-12 {
   float: left;
@@ -785,8 +794,7 @@
   margin-left: 2px;
   vertical-align: middle;
   border-top: 4px dashed;
-  /* ST edit. Comment out W3C CSS Validation error: Value Error : border-top \000009 is not a color value : 4px solid \000009. */
-  /* border-top: 4px solid \9; */
+  border-top: 4px solid \9;
   border-right: 4px solid transparent;
   border-left: 4px solid transparent;
 }
@@ -807,17 +815,17 @@
   min-width: 160px;
   padding: 5px 0;
   margin: 2px 0 0;
-  list-style: none;
   font-size: 14px;
   text-align: left;
+  list-style: none;
   background-color: #ffffff;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
   border: 1px solid #cccccc;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
 }
 .bootstrap .dropdown-menu.pull-right {
   right: 0;
@@ -833,15 +841,15 @@
   display: block;
   padding: 3px 20px;
   clear: both;
-  font-weight: normal;
+  font-weight: 400;
   line-height: 1.42857143;
   color: #333333;
   white-space: nowrap;
 }
 .bootstrap .dropdown-menu > li > a:hover,
 .bootstrap .dropdown-menu > li > a:focus {
-  text-decoration: none;
   color: #262626;
+  text-decoration: none;
   background-color: #f5f5f5;
 }
 .bootstrap .dropdown-menu > .active > a,
@@ -849,8 +857,8 @@
 .bootstrap .dropdown-menu > .active > a:focus {
   color: #ffffff;
   text-decoration: none;
-  outline: 0;
   background-color: #337ab7;
+  outline: 0;
 }
 .bootstrap .dropdown-menu > .disabled > a,
 .bootstrap .dropdown-menu > .disabled > a:hover,
@@ -860,11 +868,10 @@
 .bootstrap .dropdown-menu > .disabled > a:hover,
 .bootstrap .dropdown-menu > .disabled > a:focus {
   text-decoration: none;
+  cursor: not-allowed;
   background-color: transparent;
   background-image: none;
-  /* ST edit. Comment out W3C CSS Validation errors: 1.) attempt to find a semi-colon before the property name. add it; 2.) Property progid doesn't exist : DXImageTransform; and 3.) Parse Error DXImageTransform.Microsoft.gradient(enabled = false);. */
-  /* filter: progid:DXImageTransform.Microsoft.gradient(enabled = false); */
-  cursor: not-allowed;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
 .bootstrap .open > .dropdown-menu {
   display: block;
@@ -873,12 +880,12 @@
   outline: 0;
 }
 .bootstrap .dropdown-menu-right {
-  left: auto;
   right: 0;
+  left: auto;
 }
 .bootstrap .dropdown-menu-left {
-  left: 0;
   right: auto;
+  left: 0;
 }
 .bootstrap .dropdown-header {
   display: block;
@@ -890,10 +897,10 @@
 }
 .bootstrap .dropdown-backdrop {
   position: fixed;
-  left: 0;
+  top: 0;
   right: 0;
   bottom: 0;
-  top: 0;
+  left: 0;
   z-index: 990;
 }
 .bootstrap .pull-right > .dropdown-menu {
@@ -902,11 +909,10 @@
 }
 .bootstrap .dropup .caret,
 .bootstrap .navbar-fixed-bottom .dropdown .caret {
+  content: "";
   border-top: 0;
   border-bottom: 4px dashed;
-  /* ST edit. Comment out W3C CSS Validation error: Value Error : border-bottom \000009 is not a color value : 4px solid \000009. */
-  /* border-bottom: 4px solid \9; */
-  content: "";
+  border-bottom: 4px solid \9;
 }
 .bootstrap .dropup .dropdown-menu,
 .bootstrap .navbar-fixed-bottom .dropdown .dropdown-menu {
@@ -916,17 +922,17 @@
 }
 @media (min-width: 768px) {
   .bootstrap .navbar-right .dropdown-menu {
-    left: auto;
     right: 0;
+    left: auto;
   }
   .bootstrap .navbar-right .dropdown-menu-left {
-    left: 0;
     right: auto;
+    left: 0;
   }
 }
 .bootstrap .nav {
-  margin-bottom: 0;
   padding-left: 0;
+  margin-bottom: 0;
   list-style: none;
 }
 .bootstrap .nav > li {
@@ -950,8 +956,8 @@
 .bootstrap .nav > li.disabled > a:focus {
   color: #777777;
   text-decoration: none;
-  background-color: transparent;
   cursor: not-allowed;
+  background-color: transparent;
 }
 .bootstrap .nav .open > a,
 .bootstrap .nav .open > a:hover,
@@ -985,9 +991,9 @@
   }
 }
 .bootstrap .navbar-collapse {
-  overflow-x: visible;
   padding-right: 15px;
   padding-left: 15px;
+  overflow-x: visible;
   border-top: 1px solid transparent;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
@@ -1015,9 +1021,16 @@
   .bootstrap .navbar-fixed-top .navbar-collapse,
   .bootstrap .navbar-static-top .navbar-collapse,
   .bootstrap .navbar-fixed-bottom .navbar-collapse {
-    padding-left: 0;
     padding-right: 0;
+    padding-left: 0;
   }
+}
+.bootstrap .navbar-fixed-top,
+.bootstrap .navbar-fixed-bottom {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1030;
 }
 .bootstrap .navbar-fixed-top .navbar-collapse,
 .bootstrap .navbar-fixed-bottom .navbar-collapse {
@@ -1028,6 +1041,21 @@
   .bootstrap .navbar-fixed-bottom .navbar-collapse {
     max-height: 200px;
   }
+}
+@media (min-width: 768px) {
+  .bootstrap .navbar-fixed-top,
+  .bootstrap .navbar-fixed-bottom {
+    border-radius: 0;
+  }
+}
+.bootstrap .navbar-fixed-top {
+  top: 0;
+  border-width: 0 0 1px;
+}
+.bootstrap .navbar-fixed-bottom {
+  bottom: 0;
+  margin-bottom: 0;
+  border-width: 1px 0 0;
 }
 .bootstrap .container > .navbar-header,
 .bootstrap .container-fluid > .navbar-header,
@@ -1054,34 +1082,12 @@
     border-radius: 0;
   }
 }
-.bootstrap .navbar-fixed-top,
-.bootstrap .navbar-fixed-bottom {
-  position: fixed;
-  right: 0;
-  left: 0;
-  z-index: 1030;
-}
-@media (min-width: 768px) {
-  .bootstrap .navbar-fixed-top,
-  .bootstrap .navbar-fixed-bottom {
-    border-radius: 0;
-  }
-}
-.bootstrap .navbar-fixed-top {
-  top: 0;
-  border-width: 0 0 1px;
-}
-.bootstrap .navbar-fixed-bottom {
-  bottom: 0;
-  margin-bottom: 0;
-  border-width: 1px 0 0;
-}
 .bootstrap .navbar-brand {
   float: left;
+  height: 50px;
   padding: 15px 15px;
   font-size: 18px;
   line-height: 20px;
-  height: 50px;
 }
 .bootstrap .navbar-brand:hover,
 .bootstrap .navbar-brand:focus {
@@ -1099,8 +1105,8 @@
 .bootstrap .navbar-toggle {
   position: relative;
   float: right;
-  margin-right: 15px;
   padding: 9px 10px;
+  margin-right: 15px;
   margin-top: 8px;
   margin-bottom: 8px;
   background-color: transparent;
@@ -1171,13 +1177,13 @@
 }
 .bootstrap .navbar-nav > li > .dropdown-menu {
   margin-top: 0;
-  border-top-right-radius: 0;
   border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 .bootstrap .navbar-fixed-bottom .navbar-nav > li > .dropdown-menu {
   margin-bottom: 0;
-  border-top-right-radius: 4px;
   border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -1200,8 +1206,8 @@
 @media (min-width: 768px) {
   .bootstrap .navbar-text {
     float: left;
-    margin-left: 15px;
     margin-right: 15px;
+    margin-left: 15px;
   }
 }
 @media (min-width: 768px) {
@@ -1251,25 +1257,11 @@
   color: #cccccc;
   background-color: transparent;
 }
-.bootstrap .navbar-default .navbar-toggle {
-  border-color: #dddddd;
-}
-.bootstrap .navbar-default .navbar-toggle:hover,
-.bootstrap .navbar-default .navbar-toggle:focus {
-  background-color: #dddddd;
-}
-.bootstrap .navbar-default .navbar-toggle .icon-bar {
-  background-color: #888888;
-}
-.bootstrap .navbar-default .navbar-collapse,
-.bootstrap .navbar-default .navbar-form {
-  border-color: #e7e7e7;
-}
 .bootstrap .navbar-default .navbar-nav > .open > a,
 .bootstrap .navbar-default .navbar-nav > .open > a:hover,
 .bootstrap .navbar-default .navbar-nav > .open > a:focus {
-  background-color: #e7e7e7;
   color: #555555;
+  background-color: #e7e7e7;
 }
 @media (max-width: 767px) {
   .bootstrap .navbar-default .navbar-nav .open .dropdown-menu > li > a {
@@ -1292,6 +1284,20 @@
     color: #cccccc;
     background-color: transparent;
   }
+}
+.bootstrap .navbar-default .navbar-toggle {
+  border-color: #dddddd;
+}
+.bootstrap .navbar-default .navbar-toggle:hover,
+.bootstrap .navbar-default .navbar-toggle:focus {
+  background-color: #dddddd;
+}
+.bootstrap .navbar-default .navbar-toggle .icon-bar {
+  background-color: #888888;
+}
+.bootstrap .navbar-default .navbar-collapse,
+.bootstrap .navbar-default .navbar-form {
+  border-color: #e7e7e7;
 }
 .bootstrap .navbar-default .navbar-link {
   color: #777777;
@@ -1347,25 +1353,11 @@
   color: #444444;
   background-color: transparent;
 }
-.bootstrap .navbar-inverse .navbar-toggle {
-  border-color: #333333;
-}
-.bootstrap .navbar-inverse .navbar-toggle:hover,
-.bootstrap .navbar-inverse .navbar-toggle:focus {
-  background-color: #333333;
-}
-.bootstrap .navbar-inverse .navbar-toggle .icon-bar {
-  background-color: #ffffff;
-}
-.bootstrap .navbar-inverse .navbar-collapse,
-.bootstrap .navbar-inverse .navbar-form {
-  border-color: #101010;
-}
 .bootstrap .navbar-inverse .navbar-nav > .open > a,
 .bootstrap .navbar-inverse .navbar-nav > .open > a:hover,
 .bootstrap .navbar-inverse .navbar-nav > .open > a:focus {
-  background-color: #080808;
   color: #ffffff;
+  background-color: #080808;
 }
 @media (max-width: 767px) {
   .bootstrap .navbar-inverse .navbar-nav .open .dropdown-menu > .dropdown-header {
@@ -1394,6 +1386,20 @@
     color: #444444;
     background-color: transparent;
   }
+}
+.bootstrap .navbar-inverse .navbar-toggle {
+  border-color: #333333;
+}
+.bootstrap .navbar-inverse .navbar-toggle:hover,
+.bootstrap .navbar-inverse .navbar-toggle:focus {
+  background-color: #333333;
+}
+.bootstrap .navbar-inverse .navbar-toggle .icon-bar {
+  background-color: #ffffff;
+}
+.bootstrap .navbar-inverse .navbar-collapse,
+.bootstrap .navbar-inverse .navbar-form {
+  border-color: #101010;
 }
 .bootstrap .navbar-inverse .navbar-link {
   color: #9d9d9d;
@@ -1432,8 +1438,8 @@
 .bootstrap .navbar-header:after,
 .bootstrap .navbar-collapse:before,
 .bootstrap .navbar-collapse:after {
-  content: " ";
   display: table;
+  content: " ";
 }
 .bootstrap .clearfix:after,
 .bootstrap .container:after,
@@ -1448,8 +1454,8 @@
 }
 .bootstrap .center-block {
   display: block;
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
 }
 .bootstrap .pull-right {
   float: right !important;

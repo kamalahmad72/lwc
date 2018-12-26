@@ -1,12 +1,12 @@
 /* ------------------------------ ST EDIT. INTRODUCTION. ------------------------------ */
 
-/* File: /public_html/stylesheets/bootstrap/bootstrap.css.
- * Purpose: Style sheet for Bootstrap content at LWC Home/Blog. For the style sheet for Bootstrap content at LWC Forums, see bootstrap_as_pseudo_namespace_for_phpbb.css.
+/* File: /web_server_root_directory/stylesheets/bootstrap/bootstrap.css.
+ * Purpose: Style sheet for Bootstrap content at LWC Home/Blog. The style sheet for Bootstrap content at LWC Forums is /web_server_root_directory/stylesheets/bootstrap/bootstrap_as_pseudo_namespace_for_phpbb.css.
  * Used in: All LWC Home/Blog web pages except LWC Home specialty web pages.
- * Last reviewed/updated: 10 Mar 2018.
+ * Last reviewed/updated: 25 Dec 2018.
  * Published: 27 Jul 2016.
  * Web browser support: IE10+, ED12+, FF6+, CH30+, OP17+, which corresponds to the web browsers that LWC Home/Blog/Forums supports, which includes all of the code (PHP, HTML, CSS, JavaScript, etc) at LWC Home/Blog/Forums.
- * NOTE: Generated from Bootstrap v3.3.7 (http://getbootstrap.com) using the Bootstrap Customizer (http://getbootstrap.com/customize/?id=7d7d2a4d1d6992c48c5fc5502b3e3c8f) with config saved to config.json and https://gist.github.com/7d7d2a4d1d6992c48c5fc5502b3e3c8f. Then manually edited to; 1.) remove troublesome/invalid/unnecessary Bootstrap styles (customize_bootstrap_then_edit_01.css), 2.) supplement/override Bootstrap styles (see style rules bottom) (customize_bootstrap_then_edit_01.css), 3.) add LWC navbar styles (see style rules bottom) (customize_bootstrap_then_edit_01.css), and 4.) comment out remaining invalid Bootstrap styles (see comments below) (customize_bootstrap_then_edit_02.css). Otherwise, no Bootstrap style rules changed.*/
+ * NOTE: Generated from Bootstrap v3.4.0 (https://getbootstrap.com/docs/3.4/) using the Bootstrap Customizer (https://getbootstrap.com/docs/3.4/customize/) with config saved to config.json. Then manually edited to; 1.) remove troublesome/invalid/unnecessary Bootstrap styles (customize_bootstrap_then_edit_01.css), 2.) supplement/override Bootstrap styles (see ST EDIT. SUPPLEMENT/OVERRIDE BOOTSTRAP STYLES. section near bottom below) (customize_bootstrap_then_edit_01.css), and 3.) add LWC navbar styles (see ST EDIT. ADD LWC NAVBAR STYLES. section at bottom below) (customize_bootstrap_then_edit_01.css). Throughout, no Bootstrap style rules changed. */
 
 button::-moz-focus-inner,
 input::-moz-focus-inner {
@@ -28,8 +28,8 @@ input::-moz-focus-inner {
   position: absolute;
   width: 1px;
   height: 1px;
-  margin: -1px;
   padding: 0;
+  margin: -1px;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
@@ -47,10 +47,10 @@ input::-moz-focus-inner {
   cursor: pointer;
 }
 .container {
+  padding-right: 15px;
+  padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 @media (min-width: 768px) {
   .container {
@@ -68,20 +68,28 @@ input::-moz-focus-inner {
   }
 }
 .container-fluid {
+  padding-right: 15px;
+  padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 .row {
-  margin-left: -15px;
   margin-right: -15px;
+  margin-left: -15px;
+}
+.row-no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+.row-no-gutters [class*="col-"] {
+  padding-right: 0;
+  padding-left: 0;
 }
 .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
   position: relative;
   min-height: 1px;
-  padding-left: 15px;
   padding-right: 15px;
+  padding-left: 15px;
 }
 .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
   float: left;
@@ -740,13 +748,13 @@ tbody.collapse.in {
   overflow: hidden;
   -webkit-transition-property: height, visibility;
   -o-transition-property: height, visibility;
-     transition-property: height, visibility;
+  transition-property: height, visibility;
   -webkit-transition-duration: 0.35s;
   -o-transition-duration: 0.35s;
-     transition-duration: 0.35s;
+  transition-duration: 0.35s;
   -webkit-transition-timing-function: ease;
   -o-transition-timing-function: ease;
-     transition-timing-function: ease;
+  transition-timing-function: ease;
 }
 .caret {
   display: inline-block;
@@ -755,8 +763,7 @@ tbody.collapse.in {
   margin-left: 2px;
   vertical-align: middle;
   border-top: 4px dashed;
-/* ST edit. Comment out W3C CSS Validation error: Value Error : border-top \000009 is not a color value : 4px solid \000009. */
-/* border-top: 4px solid \9; */
+  border-top: 4px solid \9;
   border-right: 4px solid transparent;
   border-left: 4px solid transparent;
 }
@@ -777,17 +784,17 @@ tbody.collapse.in {
   min-width: 160px;
   padding: 5px 0;
   margin: 2px 0 0;
-  list-style: none;
   font-size: 14px;
   text-align: left;
+  list-style: none;
   background-color: #ffffff;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
   border: 1px solid #cccccc;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-  -webkit-background-clip: padding-box;
-          background-clip: padding-box;
 }
 .dropdown-menu.pull-right {
   right: 0;
@@ -803,15 +810,15 @@ tbody.collapse.in {
   display: block;
   padding: 3px 20px;
   clear: both;
-  font-weight: normal;
+  font-weight: 400;
   line-height: 1.42857143;
   color: #333333;
   white-space: nowrap;
 }
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus {
-  text-decoration: none;
   color: #262626;
+  text-decoration: none;
   background-color: #f5f5f5;
 }
 .dropdown-menu > .active > a,
@@ -819,8 +826,8 @@ tbody.collapse.in {
 .dropdown-menu > .active > a:focus {
   color: #ffffff;
   text-decoration: none;
-  outline: 0;
   background-color: #337ab7;
+  outline: 0;
 }
 .dropdown-menu > .disabled > a,
 .dropdown-menu > .disabled > a:hover,
@@ -830,11 +837,10 @@ tbody.collapse.in {
 .dropdown-menu > .disabled > a:hover,
 .dropdown-menu > .disabled > a:focus {
   text-decoration: none;
+  cursor: not-allowed;
   background-color: transparent;
   background-image: none;
-/* ST edit. Comment out W3C CSS Validation errors: 1.) attempt to find a semi-colon before the property name. add it; 2.) Property progid doesn't exist : DXImageTransform; and 3.) Parse Error DXImageTransform.Microsoft.gradient(enabled = false);. */
-/* filter: progid:DXImageTransform.Microsoft.gradient(enabled = false); */
-  cursor: not-allowed;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
 .open > .dropdown-menu {
   display: block;
@@ -843,12 +849,12 @@ tbody.collapse.in {
   outline: 0;
 }
 .dropdown-menu-right {
-  left: auto;
   right: 0;
+  left: auto;
 }
 .dropdown-menu-left {
-  left: 0;
   right: auto;
+  left: 0;
 }
 .dropdown-header {
   display: block;
@@ -860,10 +866,10 @@ tbody.collapse.in {
 }
 .dropdown-backdrop {
   position: fixed;
-  left: 0;
+  top: 0;
   right: 0;
   bottom: 0;
-  top: 0;
+  left: 0;
   z-index: 990;
 }
 .pull-right > .dropdown-menu {
@@ -872,11 +878,10 @@ tbody.collapse.in {
 }
 .dropup .caret,
 .navbar-fixed-bottom .dropdown .caret {
+  content: "";
   border-top: 0;
   border-bottom: 4px dashed;
-/* ST edit. Comment out W3C CSS Validation error: Value Error : border-bottom \000009 is not a color value : 4px solid \000009. */
-/* border-bottom: 4px solid \9; */
-  content: "";
+  border-bottom: 4px solid \9;
 }
 .dropup .dropdown-menu,
 .navbar-fixed-bottom .dropdown .dropdown-menu {
@@ -886,17 +891,17 @@ tbody.collapse.in {
 }
 @media (min-width: 768px) {
   .navbar-right .dropdown-menu {
-    left: auto;
     right: 0;
+    left: auto;
   }
   .navbar-right .dropdown-menu-left {
-    left: 0;
     right: auto;
+    left: 0;
   }
 }
 .nav {
-  margin-bottom: 0;
   padding-left: 0;
+  margin-bottom: 0;
   list-style: none;
 }
 .nav > li {
@@ -920,8 +925,8 @@ tbody.collapse.in {
 .nav > li.disabled > a:focus {
   color: #777777;
   text-decoration: none;
-  background-color: transparent;
   cursor: not-allowed;
+  background-color: transparent;
 }
 .nav .open > a,
 .nav .open > a:hover,
@@ -955,12 +960,12 @@ tbody.collapse.in {
   }
 }
 .navbar-collapse {
-  overflow-x: visible;
   padding-right: 15px;
   padding-left: 15px;
+  overflow-x: visible;
   border-top: 1px solid transparent;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
-          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
   -webkit-overflow-scrolling: touch;
 }
 .navbar-collapse.in {
@@ -971,7 +976,7 @@ tbody.collapse.in {
     width: auto;
     border-top: 0;
     -webkit-box-shadow: none;
-            box-shadow: none;
+    box-shadow: none;
   }
   .navbar-collapse.collapse {
     display: block !important;
@@ -985,9 +990,16 @@ tbody.collapse.in {
   .navbar-fixed-top .navbar-collapse,
   .navbar-static-top .navbar-collapse,
   .navbar-fixed-bottom .navbar-collapse {
-    padding-left: 0;
     padding-right: 0;
+    padding-left: 0;
   }
+}
+.navbar-fixed-top,
+.navbar-fixed-bottom {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1030;
 }
 .navbar-fixed-top .navbar-collapse,
 .navbar-fixed-bottom .navbar-collapse {
@@ -998,6 +1010,21 @@ tbody.collapse.in {
   .navbar-fixed-bottom .navbar-collapse {
     max-height: 200px;
   }
+}
+@media (min-width: 768px) {
+  .navbar-fixed-top,
+  .navbar-fixed-bottom {
+    border-radius: 0;
+  }
+}
+.navbar-fixed-top {
+  top: 0;
+  border-width: 0 0 1px;
+}
+.navbar-fixed-bottom {
+  bottom: 0;
+  margin-bottom: 0;
+  border-width: 1px 0 0;
 }
 .container > .navbar-header,
 .container-fluid > .navbar-header,
@@ -1024,34 +1051,12 @@ tbody.collapse.in {
     border-radius: 0;
   }
 }
-.navbar-fixed-top,
-.navbar-fixed-bottom {
-  position: fixed;
-  right: 0;
-  left: 0;
-  z-index: 1030;
-}
-@media (min-width: 768px) {
-  .navbar-fixed-top,
-  .navbar-fixed-bottom {
-    border-radius: 0;
-  }
-}
-.navbar-fixed-top {
-  top: 0;
-  border-width: 0 0 1px;
-}
-.navbar-fixed-bottom {
-  bottom: 0;
-  margin-bottom: 0;
-  border-width: 1px 0 0;
-}
 .navbar-brand {
   float: left;
+  height: 50px;
   padding: 15px 15px;
   font-size: 18px;
   line-height: 20px;
-  height: 50px;
 }
 .navbar-brand:hover,
 .navbar-brand:focus {
@@ -1069,8 +1074,8 @@ tbody.collapse.in {
 .navbar-toggle {
   position: relative;
   float: right;
-  margin-right: 15px;
   padding: 9px 10px;
+  margin-right: 15px;
   margin-top: 8px;
   margin-bottom: 8px;
   background-color: transparent;
@@ -1112,7 +1117,7 @@ tbody.collapse.in {
     background-color: transparent;
     border: 0;
     -webkit-box-shadow: none;
-            box-shadow: none;
+    box-shadow: none;
   }
   .navbar-nav .open .dropdown-menu > li > a,
   .navbar-nav .open .dropdown-menu .dropdown-header {
@@ -1141,13 +1146,13 @@ tbody.collapse.in {
 }
 .navbar-nav > li > .dropdown-menu {
   margin-top: 0;
-  border-top-right-radius: 0;
   border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 .navbar-fixed-bottom .navbar-nav > li > .dropdown-menu {
   margin-bottom: 0;
-  border-top-right-radius: 4px;
   border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -1170,8 +1175,8 @@ tbody.collapse.in {
 @media (min-width: 768px) {
   .navbar-text {
     float: left;
-    margin-left: 15px;
     margin-right: 15px;
+    margin-left: 15px;
   }
 }
 @media (min-width: 768px) {
@@ -1221,25 +1226,11 @@ tbody.collapse.in {
   color: #cccccc;
   background-color: transparent;
 }
-.navbar-default .navbar-toggle {
-  border-color: #dddddd;
-}
-.navbar-default .navbar-toggle:hover,
-.navbar-default .navbar-toggle:focus {
-  background-color: #dddddd;
-}
-.navbar-default .navbar-toggle .icon-bar {
-  background-color: #888888;
-}
-.navbar-default .navbar-collapse,
-.navbar-default .navbar-form {
-  border-color: #e7e7e7;
-}
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
-  background-color: #e7e7e7;
   color: #555555;
+  background-color: #e7e7e7;
 }
 @media (max-width: 767px) {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
@@ -1262,6 +1253,20 @@ tbody.collapse.in {
     color: #cccccc;
     background-color: transparent;
   }
+}
+.navbar-default .navbar-toggle {
+  border-color: #dddddd;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #dddddd;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #888888;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #e7e7e7;
 }
 .navbar-default .navbar-link {
   color: #777777;
@@ -1317,25 +1322,11 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   color: #444444;
   background-color: transparent;
 }
-.navbar-inverse .navbar-toggle {
-  border-color: #333333;
-}
-.navbar-inverse .navbar-toggle:hover,
-.navbar-inverse .navbar-toggle:focus {
-  background-color: #333333;
-}
-.navbar-inverse .navbar-toggle .icon-bar {
-  background-color: #ffffff;
-}
-.navbar-inverse .navbar-collapse,
-.navbar-inverse .navbar-form {
-  border-color: #101010;
-}
 .navbar-inverse .navbar-nav > .open > a,
 .navbar-inverse .navbar-nav > .open > a:hover,
 .navbar-inverse .navbar-nav > .open > a:focus {
-  background-color: #080808;
   color: #ffffff;
+  background-color: #080808;
 }
 @media (max-width: 767px) {
   .navbar-inverse .navbar-nav .open .dropdown-menu > .dropdown-header {
@@ -1364,6 +1355,20 @@ fieldset[disabled] .navbar-default .btn-link:focus {
     color: #444444;
     background-color: transparent;
   }
+}
+.navbar-inverse .navbar-toggle {
+  border-color: #333333;
+}
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:focus {
+  background-color: #333333;
+}
+.navbar-inverse .navbar-toggle .icon-bar {
+  background-color: #ffffff;
+}
+.navbar-inverse .navbar-collapse,
+.navbar-inverse .navbar-form {
+  border-color: #101010;
 }
 .navbar-inverse .navbar-link {
   color: #9d9d9d;
@@ -1402,8 +1407,8 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .navbar-header:after,
 .navbar-collapse:before,
 .navbar-collapse:after {
-  content: " ";
   display: table;
+  content: " ";
 }
 .clearfix:after,
 .container:after,
@@ -1418,8 +1423,8 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 }
 .center-block {
   display: block;
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
 }
 .pull-right {
   float: right !important;
@@ -1607,69 +1612,69 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 
 /* ST edit. NOTE: To supplement/override Bootstrap .container-fluid style rules for LWC Home template print icon dropdown, see lwc_print_with_images.css and lwc_print_without_images.css. */
 
-/* ST edit. Line 70. Content. NOTE: In LWC Home template, apparently this line causes selectbox dropdowns to loose right border in FF39 and SM2.33.1.*/
+/* ST edit. Line 70. Content. NOTE: In LWC Home template, apparently this line causes selectbox dropdowns to loose right border in FF39.0 and SM2.33.1.*/
 .container-fluid {
   max-width: 1170px;
 }
-/* ST edit. Line 770. Bootstrap navbar More dropdown. */
+/* ST edit. Line 777. Bootstrap navbar More dropdown. */
 .dropdown-menu {
   min-width: 0;
   border: 0;
   padding: 0;
 }
-/* ST edit. Line 802. Bootstrap navbar More dropdown hyperlinks. */
+/* ST edit. Line 809. Bootstrap navbar More dropdown hyperlinks. */
 .dropdown-menu > li > a {
   line-height: 20px;
   background-color: #000;
   color: #fff;
   padding: 10px 15px;
 }
-/* ST edit. Line 811. Bootstrap navbar More dropdown hyperlinks. */
+/* ST edit. Line 818. Bootstrap navbar More dropdown hyperlinks. */
 .dropdown-menu > li > a:hover {
   background-color: #333;
   color: #fff;
 }
-/* ST edit. Line 812. Bootstrap navbar More dropdown hyperlinks. */
+/* ST edit. Line 819. Bootstrap navbar More dropdown hyperlinks. */
 .dropdown-menu > li > a:focus {
   outline: 0;
 }
-/* ST edit. Line 941. Bootstrap navbar. */
+/* ST edit. Line 946. Bootstrap navbar. */
 .navbar {
   min-height: 0; /* Fix for Bootstrap/phpBB .navbar class selector style conflict, which becomes non-issue if pseudo-namespace Bootstrap styles for phpBB. */
   margin-bottom: 0;
   border: 0;
 }
-/* ST edit. Line 1049. LWC logo in Bootstrap navbar. */
+/* ST edit. Line 1054. LWC logo in Bootstrap navbar. */
 .navbar-brand {
   font-family: "courier new", courier, monospace;
   font-size: 1.5em;
   font-weight: bold;
 }
-/* ST edit. Line 1285. Bootstrap navbar. */
+/* ST edit. Line 1290. Bootstrap navbar. */
 .navbar-inverse {
   background-color: #000;
 }
-/* ST edit. Line 1289. LWC logo in Bootstrap navbar. */
+/* ST edit. Line 1294. LWC logo in Bootstrap navbar. */
 .navbar-inverse .navbar-brand {
   color: #fff;
 }
-/* ST edit. Line 1293. LWC logo in Bootstrap navbar. */
+/* ST edit. Line 1298. LWC logo in Bootstrap navbar. */
 .navbar-inverse .navbar-brand:focus {
   outline: 0;
 }
-/* ST edit. Line 1300. Bootstrap navbar hyperlinks. */
+/* ST edit. Line 1305. Bootstrap navbar hyperlinks. */
 .navbar-inverse .navbar-nav > li > a {
   color: #fff;
 }
-/* ST edit. Line 1303. Bootstrap navbar hyperlinks. */
+/* ST edit. Line 1308. Bootstrap navbar hyperlinks. */
 .navbar-inverse .navbar-nav > li > a:hover {
   background-color: #333;
 }
-/* ST edit. Line 1304. Bootstrap navbar hyperlinks. */
+/* ST edit. Line 1309. Bootstrap navbar hyperlinks. */
 .navbar-inverse .navbar-nav > li > a:focus {
   outline: 0;
 }
-/* ST edit. Line 1335. Bootstrap navbar More dropdown. More itself, not the dropdown. */
+/* ST edit. Line 1326. Bootstrap navbar More dropdown. More itself, not the dropdown. */
 .navbar-inverse .navbar-nav > .open > a:hover {
   background-color: #333;
 }

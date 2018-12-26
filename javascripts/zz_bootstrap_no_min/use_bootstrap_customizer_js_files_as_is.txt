@@ -1,0 +1,1 @@
+Use the Bootstrap Customizer bootstrap.js and bootstrap.min.js files as is. In other words, do not modify the Bootstrap Customizer bootstrap.js and bootstrap.min.js files in any way, including do not add comments, etc.
