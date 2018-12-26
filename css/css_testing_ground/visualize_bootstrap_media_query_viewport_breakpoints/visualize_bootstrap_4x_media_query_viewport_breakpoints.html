@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>Visualize Bootstrap 4.x Media Query Viewport Breakpoints</title>
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Steve Taylor" />
+  <meta name="Keywords" content="visualize, Bootstrap, 4.x, media query, viewport, breakpoints" />
+  <meta name="Description" content="A visual demonstration of Bootstrap 4.x media query viewport breakpoints." />
+  <style>
+   body {
+     margin: 0;
+     padding: 0;
+   }
+   .bar-common {
+     display: inline-block;
+     padding: 3px 0;
+     background-color: #000;
+     color: #fff;
+   }
+   .bar-4x-sm-575px {
+     width: 575px;
+   }
+   .bar-4x-md-767px {
+     width: 767px;
+   }
+   .bar-4x-lg-991px {
+     width: 991px;
+   }
+   .bar-4x-xl-1199px {
+     width: 1199px;
+   }
+   code {
+     font-family: "courier new", courier, monospace;
+     background-color: #eee;
+     border-radius: 3px;
+     padding: 1px 4px 0;
+   }
+   .align-right {
+     text-align: right;
+   }
+  </style>
+ </head>
+ <body>
+
+  <h1>Visualize Bootstrap 4.x Media Query Viewport Breakpoints</h1>
+
+  <p>1.) Extra small screen (portrait phone). <code>xs</code>. No media query required. Styles applied to content at all viewport widths.</p>
+
+  <p>2.) Small screen (landscape phone). <code>sm</code>. <code>@media (min-width: 576px) { ... }</code>. Styles applied to content when viewport width is 576+ pixels.<br />
+  <span class="bar-common bar-4x-sm-575px">Width 575px.</span></p>
+
+  <p>3.) Medium screen (tablet). <code>md</code>. <code>@media (min-width: 768px) { ... }</code>. Styles applied to content when viewport width is 768+ pixels.<br />
+  <span class="bar-common bar-4x-md-767px">Width 767px.</span></p>
+
+  <p>4.) Large screen (desktop). <code>lg</code>. <code>@media (min-width: 992px) { ... }</code>. Styles applied to content when viewport width is 992+ pixels.<br />
+  <span class="bar-common bar-4x-lg-991px">Width 991px.</span></p>
+
+  <p>5.) Extra large screen (large desktop). <code>xl</code>. <code>@media (min-width: 1200px) { ... }</code>. Styles applied to content when viewport width is 1200+ pixels.<br />
+  <span class="bar-common bar-4x-xl-1199px">Width 1199px.</span></p>
+
+  <p>Last reviewed/updated: 25 Dec 2018 | Published: 25 Dec 2018 | Status: Active</p>
+
+  <p><a href="http://www.learnwebcoding.com/">Learn Web Coding</a></p>
+
+  <p><a href="https://validator.w3.org/check?uri=referer"><img src="/images/HTML5_Logo_48.gif" alt="Valid HTML5" /></a>&nbsp;<a href="https://jigsaw.w3.org/css-validator/check?uri=referer&amp;profile=css3"><img src="/images/valid-css.gif" alt="Valid CSS Level 3" /></a></p>
+
+ </body>
+</html>
