@@ -18,6 +18,7 @@ phpBB 3.2.1		(16Jul17) includes one style prosilver v3.2.1 (default).
 phpBB 3.2.2		(07Jan18) includes one style prosilver v3.2.2 (default).
 phpBB 3.2.3		(13Sep18) includes one style prosilver v3.2.3 (default).
 phpBB 3.2.4		(16Nov18) includes one style prosilver v3.2.4 (default).
+phpBB 3.2.5		(22Dec18) includes one style prosilver v3.2.5 (default).
 
 ------------------
 phpBB child styles
